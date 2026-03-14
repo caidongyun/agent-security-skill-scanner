@@ -1,10 +1,44 @@
-# Skill Security Scanner
+# Agent Security Skill Scanner
 
-> 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用
+> AI Agent 技能安全扫描器 - 保障 Agent 生态系统安全
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/openclaw/openclaw/releases)
+[![Version](https://img.shields.io/badge/version-2.0.1-blue.svg)](https://gitee.com/caidongyun/agent-security-skill-scanner)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-8%20passed-green.svg)](tests/)
+[![Python](https://img.shields.io/badge/python-3.8+-yellow.svg)](https://www.python.org/)
+
+---
+
+## 为什么需要 Skill Scanner？
+
+随着 AI Agent 的快速发展，各类 Skills（技能）大量涌现，但安全风险也随之增加：
+
+- 恶意技能窃取敏感数据
+- 后门代码潜伏在合法技能中
+- 权限滥用导致数据泄露
+- 供应链攻击防不胜防
+
+**Agent Security Skill Scanner** 为您的 AI Agent 生态系统提供主动防御。
+
+---
+
+## 核心功能
+
+### 恶意代码检测
+- `eval()` / `exec()` 危险函数
+- 动态代码执行 (`__import__`, `compile`)
+- Base64 混淆代码
+- 系统命令执行 (`os.system`, `subprocess`)
+
+### 权限滥用检测
+- 过度文件系统访问
+- 网络请求 unrestricted
+- 环境变量窃取
+- 敏感路径访问 (/etc/, ~/.ssh/)
+
+### 风险评分
+- 综合风险评分 (0-100)
+- 五级风险等级: CRITICAL / HIGH / MEDIUM / LOW / SAFE
+- 自动化处置建议: REJECT / REVIEW / ALLOW
 
 ---
 
@@ -16,64 +50,57 @@
 ./install.sh
 ```
 
-### 使用
+### 基本使用
 
 ```bash
 # 扫描单个技能
-python cli.py scan skills/suspicious-skill/
+python cli.py scan <skill_directory>
 
 # 批量扫描
-python cli.py scan-all skills/
-
-# 生成报告
-python cli.py report --format json --output report.json
+python cli.py scan-all <skills_directory>
 ```
 
 ---
 
-## 功能特性
+## 检测规则
 
-- ✅ 恶意代码检测 (eval/exec/system)
-- ✅ 后门模式识别
-- ✅ 权限审查
-- ✅ IOC 检测 (IP/域名/Hash)
-- ✅ 威胁情报集成
-- ✅ 漏洞探索
-- ✅ 趋势分析
+| 规则ID | 类型 | 风险等级 | 说明 |
+|--------|------|----------|------|
+| EVAL_USAGE | 代码执行 | HIGH | 使用 eval() |
+| EXEC_USAGE | 代码执行 | HIGH | 使用 exec() |
+| SYSTEM_COMMAND | 命令执行 | CRITICAL | 系统命令 |
+| BASE64_DECODE | 混淆 | MEDIUM | Base64 解码 |
+| SENSITIVE_FILE | 文件访问 | HIGH | 敏感文件 |
+| ENV_ACCESS | 凭据窃取 | MEDIUM | 环境变量 |
 
 ---
 
-## 情报探索
-
-### 威胁情报收集
+## Python API
 
 ```python
-from intelligence import ThreatCollector
+from cli import scan_skill
 
-collector = ThreatCollector()
-threats = collector.collect()
-print(f"发现 {len(threats)} 个威胁")
-```
+results = scan_skill("skills/my-skill/")
+score = results['overall']['score']
 
-### 漏洞探索
-
-```python
-from intelligence import VulnExplorer
-
-explorer = VulnExplorer()
-vulns = explorer.explore("openclaw")
-for vuln in vulns:
-    print(f"{vuln['id']}: {vuln['title']}")
+if score >= 60:
+    print("此技能存在安全风险，建议审查")
+else:
+    print("此技能通过安全检查")
 ```
 
 ---
 
-## 测试
+## 许可证
 
-```bash
-python -m unittest discover -v tests/
-```
+MIT License - 见 LICENSE 文件
 
 ---
 
-*版本：v1.0.0 | 2026-03-12*
+## 相关链接
+
+- Gitee: https://gitee.com/caidongyun/agent-security-skill-scanner
+
+---
+
+*版本：v2.0.1 | 2026-03-14*
