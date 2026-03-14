@@ -59,10 +59,9 @@ python cli.py scan <skill_directory>
 |------|------|------|
 | **GitHub** | ✅ 已发布 | https://github.com/caidongyun/agent-security-skill-scanner |
 | **Gitee** | ✅ 已发布 | https://gitee.com/caidongyun/agent-security-skill-scanner |
-| **PyPI** | ⏳ 准备中 | https://pypi.org/project/agent-security-scanner/ |
-| **npm** | ⏳ 准备中 | https://www.npmjs.com/package/agent-security-rules |
 | **ClawHub** | ⏳ 配置完成 | OpenClaw 内置市场 |
-| **Hugging Face** | ⏳ 计划中 | https://huggingface.co/caidongyun |
+
+> **注**: PyPI、npm、Hugging Face 等平台正在内部测试中，暂不对外公开。
 
 ---
 
