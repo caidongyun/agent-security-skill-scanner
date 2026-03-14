@@ -56,13 +56,12 @@ result = scan_skill(target)
 
 ### 多语言命名习惯
 
-| 语言 | 命名方式 | 示例 |
-|------|---------|------|
-| Python | snake_case | `agent_security_skill_scanner` |
-| JavaScript | camelCase | `agentSecuritySkillScanner` |
-| Go/Rust | snake_case | `agent_security_skill_scanner` |
-| Java | PascalCase | `AgentSecuritySkillScanner` |
-| Shell | kebab-case | `agent-security-skill-scanner` |
+| 语言 | 名称 | 说明 |
+|------|------|------|
+| **英文** | Agent Security Skill Scanner | 官方全称 |
+| **英文简称** | Skill Scanner | 简短称呼 |
+| **中文** | 技能安全扫描器 | 官方中文名 |
+| **中文简称** | 技能扫描器 | 简短称呼 |
 
 ---
 
