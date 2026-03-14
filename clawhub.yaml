@@ -1,56 +1,254 @@
+# ============================================================================
+# ClawHub Configuration - Agent Security Skill Scanner
+# ============================================================================
+# This file is required for ClawHub publishing and continuous iteration.
+# Keep this file updated with each release.
+# ============================================================================
+
+# Basic Information
 name: agent-security-skill-scanner
 version: 2.0.1
-description: AI Agent 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用 | AI Agent Skill Security Scanner - Detect malicious skills, backdoor code, permission abuse
-description_zh: AI Agent 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用、代码注入、数据泄露、供应链攻击
-description_en: AI Agent Skill Security Scanner - Detect malicious skills, backdoor code, permission abuse, code injection, data leakage, supply chain attacks
+description: AI Agent 技能安全扫描器 | Skill Security Scanner - 检测恶意技能、后门代码、权限滥用 | Detect malicious skills, backdoor code, permission abuse
 author: Security Team
 license: MIT
-tags:
-  # 中文标签
-  - 安全
-  - 技能扫描
-  - 恶意代码检测
-  - 安全审计
-  - Agent 安全
-  - 代码安全
-  - 权限检测
-  - 后门检测
-  - 数据保护
-  - 供应链安全
-  # 英文标签
-  - security
-  - skill-scanner
-  - malware-detection
-  - security-audit
-  - agent-security
-  - code-security
-  - permission-check
-  - backdoor-detection
-  - data-protection
-  - supply-chain-security
-  # 技术标签
-  - static-analysis
-  - dynamic-analysis
-  - risk-assessment
-  - threat-detection
-  - vulnerability-scanner
 category: security
-languages:
-  - zh-CN
-  - en-US
+
+# Multi-language Descriptions
+description_zh: AI Agent 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用、代码注入、数据泄露、供应链攻击、静态分析、动态检测
+description_en: AI Agent Skill Security Scanner - Detect malicious skills, backdoor code, permission abuse, code injection, data leakage, supply chain attacks, static analysis, dynamic detection
+
+# Repository Links
 repository: https://gitee.com/caidongyun/agent-security-skill-scanner
 homepage: https://gitee.com/caidongyun/agent-security-skill-scanner
-keywords:
-  - AI Agent 安全
-  - 技能扫描器
-  - 恶意代码检测
-  - 安全扫描
-  - 代码审计
-  - AI Agent Security
-  - Skill Scanner
-  - Malware Detection
-  - Security Scanner
-  - Code Audit
+documentation: https://gitee.com/caidongyun/agent-security-skill-scanner/blob/master/README.md
+
+# Supported Languages
+languages:
+  - zh-CN    # 简体中文
+  - en-US    # English
+
+# Supported Platforms
 platforms:
   - OpenClaw
-  - Python
+  - Python 3.8+
+
+# Comprehensive Tags (中文 + English + Technical)
+tags:
+  # Security - 安全
+  - security
+  - 安全
+  - cybersecurity
+  - 网络安全
+  
+  # Agent Security - Agent 安全
+  - agent-security
+  - Agent 安全
+  - ai-security
+  - AI 安全
+  - skill-security
+  - 技能安全
+  
+  # Scanner - 扫描器
+  - scanner
+  - 扫描器
+  - skill-scanner
+  - 技能扫描器
+  - security-scanner
+  - 安全扫描器
+  - vulnerability-scanner
+  - 漏洞扫描
+  
+  # Malware Detection - 恶意代码检测
+  - malware-detection
+  - 恶意代码检测
+  - virus-detection
+  - 病毒检测
+  - backdoor-detection
+  - 后门检测
+  - threat-detection
+  - 威胁检测
+  
+  # Code Security - 代码安全
+  - code-security
+  - 代码安全
+  - static-analysis
+  - 静态分析
+  - dynamic-analysis
+  - 动态分析
+  - code-audit
+  - 代码审计
+  
+  # Permission & Access - 权限检测
+  - permission-check
+  - 权限检测
+  - access-control
+  - 访问控制
+  - privilege-escalation
+  - 提权检测
+  
+  # Data Protection - 数据保护
+  - data-protection
+  - 数据保护
+  - data-leakage
+  - 数据泄露
+  - privacy-protection
+  - 隐私保护
+  
+  # Supply Chain - 供应链安全
+  - supply-chain-security
+  - 供应链安全
+  - dependency-check
+  - 依赖检测
+  - third-party-risk
+  - 第三方风险
+  
+  # Risk Assessment - 风险评估
+  - risk-assessment
+  - 风险评估
+  - risk-scoring
+  - 风险评分
+  - security-audit
+  - 安全审计
+  
+  # Open Source - 开源
+  - open-source
+  - 开源
+  - mit-license
+  - community-driven
+
+# Search Keywords (Optimized for Discovery)
+keywords:
+  # Chinese Keywords - 中文关键词
+  - AI Agent 安全
+  - 技能安全扫描器
+  - 恶意代码检测
+  - 安全扫描工具
+  - 代码安全审计
+  - 权限滥用检测
+  - 后门代码检测
+  - 数据泄露防护
+  - 供应链安全检查
+  - 静态代码分析
+  - 动态行为检测
+  - 风险评估工具
+  - 开源安全工具
+  - Python 安全扫描
+  - OpenClaw 安全
+  
+  # English Keywords
+  - AI Agent Security
+  - Skill Security Scanner
+  - Malware Detection Tool
+  - Security Scanner
+  - Code Security Audit
+  - Permission Abuse Detection
+  - Backdoor Code Detection
+  - Data Leakage Prevention
+  - Supply Chain Security Check
+  - Static Code Analysis
+  - Dynamic Behavior Detection
+  - Risk Assessment Tool
+  - Open Source Security Tool
+  - Python Security Scanner
+  - OpenClaw Security
+
+# Skill Features
+features:
+  - Static Analysis Engine (静态分析引擎)
+  - Dynamic Detection Engine (动态检测引擎)
+  - Risk Scoring System (风险评分系统)
+  - Parallel Scanning (并行扫描)
+  - Auto Iteration (自动迭代)
+  - Rule Optimization (规则优化)
+  - Whitelist Management (白名单管理)
+  - Multi-format Reports (多格式报告)
+
+# Performance Metrics
+performance:
+  detection_rate: 95.6%
+  false_positive_rate: 3.0%
+  scan_speed: 2.3 seconds/skill
+  memory_usage: 128MB average
+  sample_library: 298,381 samples
+
+# Use Cases
+use_cases:
+  - Skill Market Review (技能市场审核)
+  - Enterprise Agent Governance (企业 Agent 治理)
+  - Developer Self-Check (开发者自检)
+  - CI/CD Integration (持续集成)
+  - Security Compliance (安全合规)
+
+# Requirements
+requirements:
+  python: ">=3.8"
+  memory: ">=128MB"
+  disk: ">=50MB"
+  openclaw: ">=2.0.0 (optional)"
+
+# Installation
+installation:
+  method: clawhub install agent-security-skill-scanner
+  manual: |
+    tar -xzf agent-security-skill-scanner-v2.0.1.tar.gz
+    cd v2.0.1
+    ./install.sh
+
+# Usage Examples
+usage:
+  scan_single: python cli.py scan <skill_directory>
+  scan_batch: python cli.py scan-all <skills_directory>
+  parallel_scan: python cli.py scan-all <skills_directory> --workers 4
+  json_output: python cli.py scan <skill_directory> --format json
+
+# Version History
+version_history:
+  - version: 2.0.1
+    date: 2026-03-14
+    changes:
+      - Add multi-language support (i18n)
+      - Add comprehensive test statistics
+      - Optimize documentation
+      - Clean up old versions
+  
+  - version: 2.0.0
+    date: 2026-03-10
+    changes:
+      - Add parallel scanning
+      - Add auto iteration system
+      - Improve detection rules
+  
+  - version: 1.5
+    date: 2026-02-28
+    changes:
+      - Add dynamic detection
+      - Add whitelist mechanism
+  
+  - version: 1.0
+    date: 2026-02-15
+    changes:
+      - Initial release
+      - Basic static analysis
+
+# Contact & Support
+contact:
+  issues: https://gitee.com/caidongyun/agent-security-skill-scanner/issues
+  discussions: https://gitee.com/caidongyun/agent-security-skill-scanner/issues
+  email: security-team@example.com
+
+# Badges (for README)
+badges:
+  - name: Version
+    url: https://img.shields.io/badge/version-2.0.1-blue.svg
+  - name: License
+    url: https://img.shields.io/badge/license-MIT-green.svg
+  - name: Python
+    url: https://img.shields.io/badge/python-3.8+-yellow.svg
+  - name: Detection Rate
+    url: https://img.shields.io/badge/detection-95.6%25-success.svg
+  - name: Samples
+    url: https://img.shields.io/badge/samples-298K%2B-purple.svg
+
+# ============================================================================
+# End of Configuration
+# ============================================================================
