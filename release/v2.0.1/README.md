@@ -8,6 +8,22 @@
 
 ---
 
+## 🌐 开源仓库
+
+本项目在两个平台同步维护，内容完全一致：
+
+| 平台 | 仓库地址 | 适用地区 |
+|------|---------|---------|
+| **Gitee (中国)** | https://gitee.com/caidongyun/agent-security-skill-scanner | 中国大陆用户推荐 |
+| **GitHub (国际)** | https://github.com/caidongyun/agent-security-skill-scanner | 海外用户推荐 |
+
+**说明**:
+- 两个仓库保持同步更新
+- 版本一致 (当前 v2.0.1)
+- 可根据网络情况选择访问
+
+---
+
 ## 📊 核心能力统计
 
 | 指标 | 数值 |
