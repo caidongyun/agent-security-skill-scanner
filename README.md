@@ -91,24 +91,6 @@ else:
 
 ---
 
-## 配置文件
-
-`skill.yaml` - Skill 元数据配置：
-
-```yaml
-name: my-skill
-version: 1.0.0
-description: 技能描述
-maintainer: example@email.com
-permissions:
-  - filesystem
-  - network
-risks:
-  - medium
-```
-
----
-
 ## 许可证
 
 MIT License - 见 LICENSE 文件
