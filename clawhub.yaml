@@ -1,13 +1,56 @@
 name: agent-security-skill-scanner
 version: 2.0.1
-description: AI Agent 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用
+description: AI Agent 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用 | AI Agent Skill Security Scanner - Detect malicious skills, backdoor code, permission abuse
+description_zh: AI Agent 技能安全扫描器 - 检测恶意技能、后门代码、权限滥用、代码注入、数据泄露、供应链攻击
+description_en: AI Agent Skill Security Scanner - Detect malicious skills, backdoor code, permission abuse, code injection, data leakage, supply chain attacks
 author: Security Team
 license: MIT
 tags:
+  # 中文标签
+  - 安全
+  - 技能扫描
+  - 恶意代码检测
+  - 安全审计
+  - Agent 安全
+  - 代码安全
+  - 权限检测
+  - 后门检测
+  - 数据保护
+  - 供应链安全
+  # 英文标签
   - security
-  - skill-analysis
+  - skill-scanner
   - malware-detection
+  - security-audit
   - agent-security
+  - code-security
+  - permission-check
+  - backdoor-detection
+  - data-protection
+  - supply-chain-security
+  # 技术标签
+  - static-analysis
+  - dynamic-analysis
+  - risk-assessment
+  - threat-detection
+  - vulnerability-scanner
 category: security
-repository: https://github.com/caidongyun/agent-security-skill-scanner
+languages:
+  - zh-CN
+  - en-US
+repository: https://gitee.com/caidongyun/agent-security-skill-scanner
 homepage: https://gitee.com/caidongyun/agent-security-skill-scanner
+keywords:
+  - AI Agent 安全
+  - 技能扫描器
+  - 恶意代码检测
+  - 安全扫描
+  - 代码审计
+  - AI Agent Security
+  - Skill Scanner
+  - Malware Detection
+  - Security Scanner
+  - Code Audit
+platforms:
+  - OpenClaw
+  - Python
