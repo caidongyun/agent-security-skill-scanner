@@ -1,0 +1,41 @@
+{
+  "name": "agent-security-rules",
+  "version": "2.0.1-beta",
+  "description": "AI Agent Security Detection Rules - Beta Version. Detect malicious skills, backdoor code, permission abuse.",
+  "main": "detection_rules.json",
+  "types": "detection_rules.json",
+  "files": [
+    "detection_rules.json",
+    "public.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caidongyun/agent-security-skill-scanner.git"
+  },
+  "keywords": [
+    "security",
+    "agent",
+    "rules",
+    "detection",
+    "malware",
+    "ai-security",
+    "skill-scanner",
+    "beta",
+    "安全",
+    "恶意代码检测"
+  ],
+  "author": "Security Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caidongyun/agent-security-skill-scanner/issues"
+  },
+  "homepage": "https://github.com/caidongyun/agent-security-skill-scanner#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
