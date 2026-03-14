@@ -1,0 +1,62 @@
+# Pre-commit Configuration for Agent Security Skill Scanner
+# 防止大文件和敏感信息提交
+
+repos:
+  # 1. 检查大文件
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: check-added-large-files
+        args: ['--maxkb=1000']  # 限制 1MB
+        name: Check for large files
+      
+      # 2. 检测私钥
+      - id: detect-private-key
+        name: Detect private keys
+      
+      # 3. 检测 AWS 凭据
+      - id: detect-aws-credentials
+        args: ['--allow-missing-credentials']
+        name: Detect AWS credentials
+      
+      # 4. 防止直接提交到 master
+      - id: no-commit-to-branch
+        args: ['--branch', 'master']
+        name: Prevent direct commits to master
+      
+      # 5. 检查敏感文件
+      - id: check-merge-conflict
+        name: Check merge conflicts
+      
+      # 6. 检查文件末尾换行
+      - id: end-of-file-fixer
+        name: Fix end of files
+      
+      # 7. 移除 trailing whitespace
+      - id: trailing-whitespace
+        name: Remove trailing whitespace
+
+  # 2. 敏感信息扫描 (git-secrets 替代)
+  - repo: https://github.com/Yelp/detect-secrets
+    rev: v1.4.0
+    hooks:
+      - id: detect-secrets
+        args: ['--baseline', '.secrets.baseline']
+        exclude: package.lock.json
+
+  # 3. Python 代码检查
+  - repo: https://github.com/psf/black
+    rev: 23.3.0
+    hooks:
+      - id: black
+        language_version: python3
+
+  # 4. JSON 格式化
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v3.0.0
+    hooks:
+      - id: prettier
+        types: [json]
+
+# 跳过某些文件
+exclude: ^(node_modules/|\.git/|\.venv/|build/|dist/)

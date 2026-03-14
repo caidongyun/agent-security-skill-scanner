@@ -1,0 +1,74 @@
+# Gitleaks Configuration for Agent Security Skill Scanner
+# 敏感信息检测规则
+
+[allowlist]
+description = "Global Allowlist"
+paths = [
+  '''node_modules/''',
+  '''.git/''',
+  '''build/''',
+  '''dist/''',
+  '''.venv/''',
+  '''tests/samples/'''
+]
+
+# 检测规则
+[[rules]]
+id = "aws-access-key"
+description = "AWS Access Key"
+regex = '''(A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}'''
+tags = ["aws", "credentials"]
+
+[[rules]]
+id = "aws-secret-key"
+description = "AWS Secret Key"
+regex = '''(?i)aws(.{0,20})?(?-i)['\"][0-9a-zA-Z\/+]{40}['\"]'''
+tags = ["aws", "credentials"]
+
+[[rules]]
+id = "github-token"
+description = "GitHub Token"
+regex = '''ghp_[0-9a-zA-Z]{36}'''
+tags = ["github", "token"]
+
+[[rules]]
+id = "gitlab-token"
+description = "GitLab Token"
+regex = '''glpat-[0-9a-zA-Z\-]{20}'''
+tags = ["gitlab", "token"]
+
+[[rules]]
+id = "npm-token"
+description = "NPM Token"
+regex = '''//registry.npmjs.org/:_authToken=[0-9a-zA-Z\-]{36}'''
+tags = ["npm", "token"]
+
+[[rules]]
+id = "pypi-token"
+description = "PyPI Token"
+regex = '''pypi-[0-9a-zA-Z\-]{36}'''
+tags = ["pypi", "token"]
+
+[[rules]]
+id = "private-key"
+description = "Private Key"
+regex = '''-----BEGIN (RSA|DSA|EC|OPENSSH) PRIVATE KEY-----'''
+tags = ["key", "private"]
+
+[[rules]]
+id = "generic-api-key"
+description = "Generic API Key"
+regex = '''(?i)(api[_-]?key|apikey|api_secret)['\"]?\s*[:=]\s*['\"][0-9a-zA-Z]{16,}['\"]'''
+tags = ["api", "key"]
+
+[[rules]]
+id = "password-in-code"
+description = "Password in Code"
+regex = '''(?i)(password|passwd|pwd)['\"]?\s*[:=]\s*['\"][^'\"]{8,}['\"]'''
+tags = ["password", "credentials"]
+
+[[rules]]
+id = "database-url"
+description = "Database URL"
+regex = '''(?i)(postgres|mysql|mongodb|redis)://[^:]+:[^@]+@[^/]+/[^?]+'''
+tags = ["database", "credentials"]
