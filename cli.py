@@ -23,16 +23,54 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
+def load_skill_whitelist():
+    """加载技能白名单"""
+    import json
+    from pathlib import Path
+    
+    whitelist_file = Path(__file__).parent / 'data' / 'whitelist' / 'false_positive_whitelist.json'
+    if whitelist_file.exists():
+        with open(whitelist_file) as f:
+            data = json.load(f)
+            return data.get('whitelist_skills', [])
+    return []
+
+def is_whitelisted_skill(skill_name: str) -> tuple:
+    """检查技能是否在白名单中"""
+    whitelist = load_skill_whitelist()
+    for item in whitelist:
+        if item['name'] == skill_name:
+            return True, item.get('reason', '白名单')
+    return False, None
+
 def scan_skill(skill_path: str, output_format: str = 'text') -> dict:
     """扫描单个 Skill"""
+    from pathlib import Path
+    
     logger.info(f"Scanning skill: {skill_path}")
+    
+    # 检查是否在白名单
+    skill_name = Path(skill_path).name
+    whitelisted, reason = is_whitelisted_skill(skill_name)
     
     results = {
         'skill_path': skill_path,
+        'skill_name': skill_name,
+        'whitelisted': whitelisted,
+        'whitelist_reason': reason,
         'metadata': None,
         'malware': None,
         'overall': None
     }
+    
+    # 如果在白名单，直接返回安全
+    if whitelisted:
+        results['overall'] = {
+            'score': 0,
+            'level': 'SAFE',
+            'verdict': f'WHITELISTED: {reason}'
+        }
+        return results
     
     # 1. 元数据检查
     logger.info("Running metadata analysis...")
@@ -156,24 +194,31 @@ def main():
         print(f"Scanning {len(skill_dirs)} skills...\n")
         
         all_results = []
+        whitelisted_count = 0
         for skill_dir in skill_dirs:
             results = scan_skill(str(skill_dir))
             all_results.append(results)
             
             # 打印简要报告
             overall = results['overall']
-            emoji = "🔴" if overall['score'] >= 60 else "🟡" if overall['score'] >= 40 else "🟢"
-            print(f"{emoji} {skill_dir.name}: {overall['score']}/100 ({overall['level']})")
+            if results.get('whitelisted'):
+                emoji = "✅"
+                print(f"{emoji} {skill_dir.name}: 0/100 (WHITELISTED)")
+                whitelisted_count += 1
+            else:
+                emoji = "🔴" if overall['score'] >= 60 else "🟡" if overall['score'] >= 40 else "🟢"
+                print(f"{emoji} {skill_dir.name}: {overall['score']}/100 ({overall['level']})")
         
         # 汇总
         print("\n" + "=" * 70)
         print("Summary:")
         print("=" * 70)
         print(f"Total Skills: {len(all_results)}")
-        print(f"Critical: {sum(1 for r in all_results if r['overall']['score'] >= 80)}")
-        print(f"High: {sum(1 for r in all_results if 60 <= r['overall']['score'] < 80)}")
-        print(f"Medium: {sum(1 for r in all_results if 40 <= r['overall']['score'] < 60)}")
-        print(f"Low/Safe: {sum(1 for r in all_results if r['overall']['score'] < 40)}")
+        print(f"Whitelisted: {whitelisted_count}")
+        print(f"Critical: {sum(1 for r in all_results if not r.get('whitelisted') and r['overall']['score'] >= 80)}")
+        print(f"High: {sum(1 for r in all_results if not r.get('whitelisted') and 60 <= r['overall']['score'] < 80)}")
+        print(f"Medium: {sum(1 for r in all_results if not r.get('whitelisted') and 40 <= r['overall']['score'] < 60)}")
+        print(f"Low/Safe: {sum(1 for r in all_results if not r.get('whitelisted') and r['overall']['score'] < 40)}")
         print("=" * 70 + "\n")
     
     else:

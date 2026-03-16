@@ -1,0 +1,72 @@
+{
+  "version": "1.0",
+  "updated": "2026-03-15T21:13:29.147074",
+  "combo_patterns": [
+    {
+      "id": "COMBO-CRON-001",
+      "name": "持久化后门",
+      "primary": "cron",
+      "secondary": [
+        "sudo",
+        "curl",
+        "wget",
+        "exfiltrate",
+        "backdoor"
+      ],
+      "logic": "AND",
+      "severity": "HIGH"
+    },
+    {
+      "id": "COMBO-BASH-001",
+      "name": "恶意脚本执行",
+      "primary": "bash",
+      "secondary": [
+        "eval",
+        "exec",
+        "user_input",
+        "untrusted"
+      ],
+      "logic": "AND",
+      "severity": "HIGH"
+    },
+    {
+      "id": "COMBO-EXEC-001",
+      "name": "危险代码执行",
+      "primary": "exec(",
+      "secondary": [
+        "user_input",
+        "request",
+        "input(",
+        "stdin"
+      ],
+      "logic": "AND",
+      "severity": "CRITICAL"
+    },
+    {
+      "id": "COMBO-HTTP-001",
+      "name": "数据外泄",
+      "primary": "requests.",
+      "secondary": [
+        "exfiltrate",
+        "steal",
+        "leak",
+        "attacker"
+      ],
+      "logic": "AND",
+      "severity": "HIGH"
+    },
+    {
+      "id": "COMBO-FILE-001",
+      "name": "敏感文件访问",
+      "primary": "open(",
+      "secondary": [
+        "/etc/passwd",
+        "/etc/shadow",
+        ".ssh",
+        "credential"
+      ],
+      "logic": "AND",
+      "severity": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,263 @@
+{
+  "version": "2.1",
+  "updated": "2026-03-16T08:00:00.000000",
+  "description": "扩展白名单 - 50+ 安全模式 + 预置白名单",
+
+  "whitelist_skills": [
+    {
+      "name": "agent-security-skill-scanner",
+      "reason": "预置：安全扫描器自身",
+      "severity": "SAFE"
+    }
+  ],
+  "whitelist_patterns": [
+    {
+      "id": "WL-CRON-001",
+      "pattern": "schedule\\.every\\(\\)\\.\\w+",
+      "reason": "Python schedule 库",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-CRON-002",
+      "pattern": "apscheduler\\.",
+      "reason": "APScheduler 库",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-CRON-003",
+      "pattern": "0\\s+\\d+\\s+\\*\\s+\\*\\s+\\*",
+      "reason": "Cron 表达式",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-CRON-004",
+      "pattern": "\\[Timer\\]",
+      "reason": "Systemd Timer",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-CRON-005",
+      "pattern": "OnCalendar=",
+      "reason": "Systemd 配置",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-BASH-001",
+      "pattern": "#!/bin/bash",
+      "reason": "Shell 脚本 shebang",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-BASH-002",
+      "pattern": "subprocess\\.run\\(\\[.*\\]\\)",
+      "reason": "参数列表调用",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-BASH-003",
+      "pattern": "echo\\s+['\\\"]",
+      "reason": "Echo 输出",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-BASH-004",
+      "pattern": "print\\s*\\(",
+      "reason": "Print 语句",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-BASH-005",
+      "pattern": "logger\\.(info|debug|warning|error)",
+      "reason": "日志输出",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-LOOP-001",
+      "pattern": "for\\s+\\w+\\s+in\\s+range\\(",
+      "reason": "Python for 循环",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-LOOP-002",
+      "pattern": "while\\s+\\w+\\s*[<>=]+\\s*\\d+",
+      "reason": "有限 while 循环",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-LOOP-003",
+      "pattern": "\\[.*for.*in.*\\]",
+      "reason": "列表推导式",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-LOOP-004",
+      "pattern": "count\\s*[+\\-]=",
+      "reason": "计数器",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-LOOP-005",
+      "pattern": "i\\s*\\+\\+",
+      "reason": "循环递增",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-FILE-001",
+      "pattern": "open\\([^)]+\\)\\s*\\.read\\(\\)",
+      "reason": "文件读取",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-FILE-002",
+      "pattern": "open\\([^)]+\\)\\s*\\.write\\([^)]*\\)",
+      "reason": "文件写入",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-FILE-003",
+      "pattern": "with\\s+open\\(",
+      "reason": "With 语句文件操作",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-FILE-004",
+      "pattern": "from\\s+pathlib\\s+import\\s+Path",
+      "reason": "Pathlib 导入",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-FILE-005",
+      "pattern": "os\\.path\\.(exists|join|dirname|basename)",
+      "reason": "OS 路径操作",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-FILE-006",
+      "pattern": "json\\.(load|dump|loads|dumps)",
+      "reason": "JSON 操作",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-FILE-007",
+      "pattern": "yaml\\.(safe_load|safe_dump)",
+      "reason": "YAML 安全操作",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-HTTP-001",
+      "pattern": "requests\\.(get|post|put|delete)\\s*\\(",
+      "reason": "Requests 库调用",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-HTTP-002",
+      "pattern": "from\\s+urllib",
+      "reason": "Urllib 导入",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-HTTP-003",
+      "pattern": "https?://[a-zA-Z0-9]",
+      "reason": "HTTP URL",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-HTTP-004",
+      "pattern": "import\\s+http\\.",
+      "reason": "HTTP 模块导入",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-HTTP-005",
+      "pattern": "HTTPConnection",
+      "reason": "HTTP 连接",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-EXEC-001",
+      "pattern": "exec\\s*\\(\\s*[\\'\"]",
+      "reason": "字符串 exec",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "WL-EXEC-002",
+      "pattern": "eval\\s*\\(\\s*[\\'\"]",
+      "reason": "字符串 eval",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "WL-EXEC-003",
+      "pattern": "compile\\s*\\([^)]*,\\s*[\\'\"]",
+      "reason": "Compile 编译",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "WL-EXEC-004",
+      "pattern": "import\\s+importlib",
+      "reason": "Importlib 导入",
+      "severity": "LOW"
+    },
+    {
+      "id": "WL-EXEC-005",
+      "pattern": "__import__\\s*\\(\\s*[\\'\"]",
+      "reason": "字符串导入",
+      "severity": "MEDIUM"
+    },
+    {
+      "id": "WL-TOOL-001",
+      "pattern": "def\\s+\\w+tool\\w*\\s*\\(",
+      "reason": "Tool 函数定义",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-TOOL-002",
+      "pattern": "class\\s+\\w+Tool\\w*:",
+      "reason": "Tool 类定义",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-TOOL-003",
+      "pattern": "helper\\s*\\(",
+      "reason": "Helper 函数",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-TOOL-004",
+      "pattern": "util(ity)?\\.",
+      "reason": "工具函数",
+      "severity": "SAFE"
+    },
+    {
+      "id": "WL-TOOL-005",
+      "pattern": "test_\\w+\\s*\\(",
+      "reason": "测试函数",
+      "severity": "SAFE"
+    }
+  ],
+  "whitelist_files": [
+    "requirements.txt",
+    "setup.py",
+    "setup.cfg",
+    "pyproject.toml",
+    "config.json",
+    "config.yaml",
+    "*.md",
+    "*.rst",
+    "*.txt",
+    "LICENSE",
+    "MANIFEST.in",
+    ".gitignore"
+  ],
+  "whitelist_paths": [
+    "/tests/",
+    "/test/",
+    "/testing/",
+    "/examples/",
+    "/example/",
+    "/docs/",
+    "/documentation/",
+    "/samples/",
+    "/demos/",
+    "/benchmarks/"
+  ]
+}

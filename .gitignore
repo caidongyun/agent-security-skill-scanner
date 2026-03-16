@@ -18,3 +18,11 @@ samples/
 # 临时文件
 *.tmp
 *.bak
+
+# 发布不需要的文件
+iteration*.log
+iteration*.json
+iteration.pid
+reports/
+scripts/daemon.sh
+
