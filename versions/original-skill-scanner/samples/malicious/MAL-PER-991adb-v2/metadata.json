@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-PER-991adb-v2",
+  "attack_type": "persistence",
+  "severity": "high",
+  "language": "Unknown",
+  "behaviors": [
+    "file_write",
+    "system_modification"
+  ],
+  "indicators": [
+    "generic_malicious"
+  ],
+  "confidence": 0.88,
+  "tags": [
+    "persistence",
+    "backdoor",
+    "startup"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Persistence - \u53d8\u4f532",
+  "description": "persistence \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #2",
+  "test_cases": [
+    "PE-TP-02"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-PER-991adb",
+  "generated_at": "2026-03-22T10:28:00.419922"
+}

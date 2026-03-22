@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-RES-2bd4f8-v4",
+  "attack_type": "resource_exhaustion",
+  "severity": "medium",
+  "language": "Python",
+  "behaviors": [
+    "resource_consumption",
+    "loop"
+  ],
+  "indicators": [
+    "generic_malicious"
+  ],
+  "confidence": 0.93,
+  "tags": [
+    "dos",
+    "resource",
+    "exhaustion"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Resource Exhaustion - \u53d8\u4f534",
+  "description": "resource_exhaustion \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #4",
+  "test_cases": [
+    "RE-TP-04"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-RES-2bd4f8",
+  "generated_at": "2026-03-22T10:28:00.417522"
+}

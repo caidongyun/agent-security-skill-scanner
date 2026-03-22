@@ -1,0 +1,25 @@
+title: 内存耗尽攻击
+id: RE-SIGMA-002
+status: stable
+level: high
+description: 检测内存耗尽攻击攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.resource_exhaustion
+  - security.RE-SIGMA-002
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*data.append*"
+    CommandLine1: "*malloc*"
+    CommandLine2: "*allocate memory*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

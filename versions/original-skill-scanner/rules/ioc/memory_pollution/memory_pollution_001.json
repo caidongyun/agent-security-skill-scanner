@@ -1,0 +1,29 @@
+{
+  "id": "ME-IOC-001",
+  "type": "ioc",
+  "category": "memory_pollution",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "remember this",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "store in memory",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "add to context",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "medium",
+  "description": "记忆注入攻击的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.178686",
+  "ttps": [
+    "MITRE ATT&CK: MEMORY_POLLUTION"
+  ]
+}

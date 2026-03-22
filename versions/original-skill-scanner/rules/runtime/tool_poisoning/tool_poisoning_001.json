@@ -1,0 +1,29 @@
+{
+  "id": "TO-RUNTIME-001",
+  "name": "Base64 解码检测",
+  "category": "tool_poisoning",
+  "severity": "high",
+  "description": "检测 base64 解码命令和函数",
+  "patterns": [
+    "base64\\s+-d",
+    "base64\\s+-D",
+    "b64decode",
+    "atob\\s*\\(",
+    "frombase64"
+  ],
+  "risk_score": 85,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.167058",
+  "action": "alert",
+  "test_cases": {
+    "positive": [
+      "echo test | base64 -d",
+      "base64.b64decode(data)",
+      "atob(encoded)"
+    ],
+    "negative": [
+      "base64.b64encode(data)",
+      "tobase64"
+    ]
+  }
+}

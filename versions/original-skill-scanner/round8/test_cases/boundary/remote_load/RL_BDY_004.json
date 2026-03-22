@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_BDY_004",
+  "attack_type": "remote_load",
+  "sample_type": "boundary",
+  "content": "# Boundary case: remote_load variant 4\nmodule = importlib.import_module(user_input)\n",
+  "content_hash": "ed65690597d6866c",
+  "expected_result": null,
+  "metadata": {
+    "variant": "boundary",
+    "difficulty": "ambiguous",
+    "created_at": "2026-03-19T07:37:00.582465",
+    "generator_version": "1.0.0"
+  }
+}

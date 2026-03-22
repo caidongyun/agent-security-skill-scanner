@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RE_POS_018",
+  "attack_type": "resource_exhaustion",
+  "sample_type": "positive",
+  "content": "# Attack sample: resource_exhaustion variant 18\nfiles = []\nwhile True:\n    files.append(open(f'/tmp/f{i}', 'w'))\n",
+  "content_hash": "c5db96ca0c5debf0",
+  "expected_result": true,
+  "metadata": {
+    "variant": "polymorphic",
+    "difficulty": "hard",
+    "created_at": "2026-03-19T07:37:00.582915",
+    "generator_version": "1.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RE_POS_006",
+  "attack_type": "resource_exhaustion",
+  "sample_type": "positive",
+  "content": "# Attack sample: resource_exhaustion variant 6\ndef recursive_bomb(n=10000):\n    return recursive_bomb(n-1) + recursive_bomb(n-1)\n",
+  "content_hash": "70637fe2529ca400",
+  "expected_result": true,
+  "metadata": {
+    "variant": "base",
+    "difficulty": "easy",
+    "created_at": "2026-03-19T07:37:00.582856",
+    "generator_version": "1.0.0"
+  }
+}

@@ -1,0 +1,27 @@
+[Unit]
+Description=🧠 灵顺 V5 安全研究守护进程
+After=network.target
+Documentation=https://github.com/openclaw/openclaw
+
+[Service]
+Type=forking
+User=cdy
+Group=cdy
+WorkingDirectory=/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode
+ExecStart=/usr/bin/python3 /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/lingshun_daemon.py start
+ExecStop=/usr/bin/python3 /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/lingshun_daemon.py stop
+ExecReload=/usr/bin/python3 /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/lingshun_daemon.py restart
+PIDFile=/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/.lingshun_daemon.pid
+Restart=on-failure
+RestartSec=10
+StandardOutput=append:/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/logs/lingshun_daemon.log
+StandardError=append:/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/logs/lingshun_daemon.log
+
+# 安全限制
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode
+
+[Install]
+WantedBy=multi-user.target

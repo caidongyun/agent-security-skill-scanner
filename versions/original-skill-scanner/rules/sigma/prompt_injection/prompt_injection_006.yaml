@@ -1,0 +1,25 @@
+title: 上下文污染
+id: PR-SIGMA-006
+status: stable
+level: high
+description: 检测上下文污染攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.prompt_injection
+  - security.PR-SIGMA-006
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*new context*"
+    CommandLine1: "*reset memory*"
+    CommandLine2: "*clear history*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

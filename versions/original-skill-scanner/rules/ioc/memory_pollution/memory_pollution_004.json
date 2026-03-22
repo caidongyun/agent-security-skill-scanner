@@ -1,0 +1,29 @@
+{
+  "id": "ME-IOC-004",
+  "type": "ioc",
+  "category": "memory_pollution",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "session hijack",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "token steal",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "cookie theft",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "high",
+  "description": "会话劫持的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.179964",
+  "ttps": [
+    "MITRE ATT&CK: MEMORY_POLLUTION"
+  ]
+}

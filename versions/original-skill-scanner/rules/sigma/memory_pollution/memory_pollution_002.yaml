@@ -1,0 +1,25 @@
+title: 上下文覆盖
+id: ME-SIGMA-002
+status: stable
+level: high
+description: 检测上下文覆盖攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.memory_pollution
+  - security.ME-SIGMA-002
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*override context*"
+    CommandLine1: "*replace memory*"
+    CommandLine2: "*overwrite history*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

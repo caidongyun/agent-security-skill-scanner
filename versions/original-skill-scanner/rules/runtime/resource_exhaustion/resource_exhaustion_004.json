@@ -1,0 +1,16 @@
+{
+  "id": "RE-RUNTIME-004",
+  "name": "网络带宽耗尽",
+  "category": "resource_exhaustion",
+  "severity": "high",
+  "description": "检测网络带宽耗尽攻击",
+  "patterns": [
+    "flood network",
+    "bandwidth exhaust",
+    "ddos"
+  ],
+  "risk_score": 95,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.177663",
+  "action": "block"
+}

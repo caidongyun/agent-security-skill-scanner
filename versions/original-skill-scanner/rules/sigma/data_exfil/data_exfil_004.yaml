@@ -1,0 +1,25 @@
+title: DNS 隧道外传
+id: DA-SIGMA-004
+status: stable
+level: high
+description: 检测DNS 隧道外传攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.data_exfil
+  - security.DA-SIGMA-004
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*dns.exfil*"
+    CommandLine1: "*nslookup*"
+    CommandLine2: "*dig @*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

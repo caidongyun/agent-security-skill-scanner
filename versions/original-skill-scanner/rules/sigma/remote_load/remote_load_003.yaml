@@ -1,0 +1,25 @@
+title: eval 代码执行
+id: RE-SIGMA-003
+status: stable
+level: high
+description: 检测eval 代码执行攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.remote_load
+  - security.RE-SIGMA-003
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*eval(*"
+    CommandLine1: "*exec(*"
+    CommandLine2: "*compile(*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

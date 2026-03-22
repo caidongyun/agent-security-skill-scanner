@@ -1,0 +1,28 @@
+{
+  "sample_id": "MAL-DAT-fe8535-v2",
+  "attack_type": "data_exfil",
+  "severity": "critical",
+  "language": "Python",
+  "behaviors": [
+    "file_access",
+    "network_request",
+    "data_exfiltration"
+  ],
+  "indicators": [
+    "generic_malicious"
+  ],
+  "confidence": 0.88,
+  "tags": [
+    "exfiltration",
+    "network",
+    "data_theft"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Data Exfil - \u53d8\u4f532",
+  "description": "data_exfil \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #2",
+  "test_cases": [
+    "DA-TP-02"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-DAT-fe8535",
+  "generated_at": "2026-03-22T10:28:00.415473"
+}

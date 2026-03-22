@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_NEG_010",
+  "attack_type": "remote_load",
+  "sample_type": "negative",
+  "content": "# Normal sample: remote_load variant 10\nimport json\nconfig = json.load(open('config.json'))\n",
+  "content_hash": "37c056002182d000",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.582405",
+    "generator_version": "1.0.0"
+  }
+}

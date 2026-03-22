@@ -1,0 +1,28 @@
+{
+  "sample_id": "MAL-DAT-c0ddb8-v3",
+  "attack_type": "data_exfil",
+  "severity": "critical",
+  "language": "Python",
+  "behaviors": [
+    "file_access",
+    "network_request",
+    "data_exfiltration"
+  ],
+  "indicators": [
+    "code_execution"
+  ],
+  "confidence": 0.96,
+  "tags": [
+    "exfiltration",
+    "network",
+    "data_theft"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Data Exfil - \u53d8\u4f533",
+  "description": "data_exfil \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #3",
+  "test_cases": [
+    "DA-TP-03"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-DAT-c0ddb8",
+  "generated_at": "2026-03-22T10:28:00.415684"
+}

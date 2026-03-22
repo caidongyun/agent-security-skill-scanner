@@ -1,0 +1,16 @@
+{
+  "id": "RE-RUNTIME-001",
+  "name": "CPU 耗尽攻击",
+  "category": "resource_exhaustion",
+  "severity": "high",
+  "description": "检测CPU 耗尽攻击攻击",
+  "patterns": [
+    "while True",
+    "for(;;)",
+    "loop indefinitely"
+  ],
+  "risk_score": 80,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.176373",
+  "action": "alert"
+}

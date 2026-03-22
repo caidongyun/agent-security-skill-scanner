@@ -21,6 +21,17 @@
 
 ## 🎯 核心特性
 
+### 0. 完整版本整合
+
+整合了 **4 个**原始项目的优势：
+
+| 来源 | 贡献 | 位置 |
+|------|------|------|
+| **original-skill-scanner** | 原始技能扫描器核心 | `versions/original-skill-scanner/` |
+| **t14g2-v1** | Round 30 自治系统 (350+ 规则，850+ 样本) | `versions/t14g2-v1/` |
+| **ubuntu-v1** | Ubuntu 参考版本特性 | `versions/ubuntu-v1/` |
+| **master** | 主分支核心功能 | `versions/master/` |
+
 ### 1. 多 Agent 架构
 
 ```
@@ -41,6 +52,7 @@
 
 | 来源 | 贡献 | 状态 |
 |------|------|------|
+| **original-skill-scanner** | 原始技能扫描器核心 | ✅ 已整合 |
 | **t14g2-v1** | Round 30 自治系统，350+ 规则 | ✅ 已整合 |
 | **ubuntu-v1** | Ubuntu 优化特性 | ⏳ 分析中 |
 | **master** | 核心稳定功能 | ✅ 已整合 |
@@ -99,13 +111,15 @@ agent-security-multi-agent/
 │   └── knowledge/
 │       └── knowledge_graph.py       # 知识图谱
 │
-├── 🔄 版本整合
+├── 🔄 版本整合 (4 个原始项目)
 │   ├── versions/
-│   │   ├── t14g2-v1/                # t14g2 版本
+│   │   ├── original-skill-scanner/  # 原始技能扫描器 ✅
+│   │   ├── t14g2-v1/                # t14g2 版本 (Round 30)
 │   │   ├── ubuntu-v1/               # Ubuntu 版本
 │   │   └── master/                  # 主分支
 │   └── merge/
-│       └── merge_strategy.md        # 合并策略
+│       ├── merge_strategy.md        # 合并策略
+│       └── version_comparison.md    # 版本对比
 │
 └── ⚙️ 配置
     ├── config.yaml                  # 系统配置
@@ -168,12 +182,12 @@ python3 research/paper_analyzer.py analyze ./papers/
 
 ## 📊 版本整合策略
 
-### Phase 1: 基础整合 (已完成)
+### Phase 0: 原始项目整合 (已完成)
 
+- ✅ 整合 original-skill-scanner 原始核心
+- ✅ 整合 t14g2-v1 Round 30 自治系统
+- ✅ 整合 master 主分支功能
 - ✅ 创建新仓库
-- ✅ 整合 t14g2-v1 核心
-- ✅ 整合 master 稳定功能
-- ✅ 添加多 Agent 框架
 
 ### Phase 2: 特性融合 (进行中)
 

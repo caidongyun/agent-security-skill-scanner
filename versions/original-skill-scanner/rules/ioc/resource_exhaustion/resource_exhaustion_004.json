@@ -1,0 +1,31 @@
+{
+  "id": "RE-IOC-004",
+  "name": "网络带宽耗尽",
+  "risk_score": 75,
+  "type": "ioc",
+  "category": "resource_exhaustion",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "flood network",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "bandwidth exhaust",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "ddos",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "high",
+  "description": "网络带宽耗尽的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.177806",
+  "ttps": [
+    "MITRE ATT&CK: RESOURCE_EXHAUSTION"
+  ]
+}

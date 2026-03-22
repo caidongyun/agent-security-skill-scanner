@@ -1,0 +1,33 @@
+{
+  "id": "RL-DLP-003",
+  "name": "eval \u4ee3\u7801\u6267\u884c",
+  "category": "remote_load",
+  "type": "dlp",
+  "severity": "high",
+  "description": "\u9632\u6b62eval \u4ee3\u7801\u6267\u884c\u5bfc\u81f4\u7684\u6570\u636e\u6cc4\u9732",
+  "patterns": [
+    "eval(",
+    "exec(",
+    "compile("
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.170085",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ],
+  "test_cases": {
+    "positive": [
+      "eval(",
+      "exec("
+    ],
+    "negative": []
+  }
+}

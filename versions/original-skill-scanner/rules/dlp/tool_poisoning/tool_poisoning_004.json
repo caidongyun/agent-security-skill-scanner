@@ -1,0 +1,33 @@
+{
+  "id": "TO-DLP-004",
+  "name": "\u5de5\u5177\u4f9d\u8d56\u6c61\u67d3",
+  "category": "tool_poisoning",
+  "type": "dlp",
+  "severity": "high",
+  "description": "\u9632\u6b62\u5de5\u5177\u4f9d\u8d56\u6c61\u67d3\u5bfc\u81f4\u7684\u6570\u636e\u6cc4\u9732",
+  "patterns": [
+    "poisoned_dependency",
+    "tampered_import",
+    "malicious_module"
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.168424",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ],
+  "test_cases": {
+    "positive": [
+      "poisoned_dependency",
+      "tampered_import"
+    ],
+    "negative": []
+  }
+}

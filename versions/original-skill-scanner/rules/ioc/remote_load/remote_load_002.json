@@ -1,0 +1,31 @@
+{
+  "id": "RL-IOC-002",
+  "name": "动态导入执行",
+  "risk_score": 85,
+  "type": "ioc",
+  "category": "remote_load",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "__import__",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "importlib.import_module",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "exec(",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "high",
+  "description": "动态导入执行的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.169761",
+  "ttps": [
+    "MITRE ATT&CK: REMOTE_LOAD"
+  ]
+}

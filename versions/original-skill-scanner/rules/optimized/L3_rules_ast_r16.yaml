@@ -1,0 +1,31 @@
+rule_count: 2
+rules:
+- action: alert
+  condition:
+    ast_obfuscation_score:
+      min: 50
+  id: R16-AST-REM-001
+  metadata:
+    attack_type: remote_load
+    rule_type: ast_obfuscation
+    severity: high
+    tier: L3
+    version: '16.0'
+  name: '[AST] remote_load 混淆检测'
+- action: alert
+  condition:
+    ast_suspicious_nodes:
+      contains:
+      - dynamic_exec
+      - dangerous_func:eval
+      - dangerous_func:exec
+  id: R16-AST-REM-002
+  metadata:
+    attack_type: remote_load
+    rule_type: ast_dynamic_exec
+    severity: critical
+    tier: L3
+    version: '16.0'
+  name: '[AST] remote_load 动态执行检测'
+tier: L3
+version: '16.0'

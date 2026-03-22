@@ -1,0 +1,25 @@
+title: 动态导入执行
+id: RE-SIGMA-002
+status: stable
+level: high
+description: 检测动态导入执行攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.remote_load
+  - security.RE-SIGMA-002
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*__import__*"
+    CommandLine1: "*importlib.import_module*"
+    CommandLine2: "*exec(*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

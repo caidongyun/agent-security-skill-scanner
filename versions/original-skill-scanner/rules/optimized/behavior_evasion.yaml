@@ -1,0 +1,213 @@
+attack_type: evasion
+category: behavior
+generated_at: '2026-03-22T15:26:59.423771'
+rule_count: 13
+rules:
+- action: alert
+  condition:
+    behaviors:
+    - file_create
+    patterns:
+    - \.[^/]+
+    - /tmp/\.
+    - /var/tmp/\.
+  description: 检测创建隐藏文件的行为
+  id: BEH-FILE-003
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 隐藏文件创建
+- action: alert
+  condition:
+    behaviors:
+    - symlink_create
+    patterns:
+    - os.symlink
+    - ln -s
+  description: 检测创建符号链接的行为
+  id: BEH-FILE-007
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 符号链接攻击
+- action: alert
+  condition:
+    behaviors:
+    - file_delete
+    - file_write
+    patterns:
+    - rm.*log
+    - truncate.*history
+    targets:
+    - /var/log/
+    - ~/.bash_history
+  description: 检测修改或删除日志文件的行为
+  id: BEH-FILE-009
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 日志文件篡改
+- action: alert
+  condition:
+    behaviors:
+    - proxy_config
+    patterns:
+    - proxy.*tor
+    - socks.*chain
+    - proxychains
+  description: 检测使用代理链隐藏来源的行为
+  id: BEH-NET-006
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 代理链检测
+- action: alert
+  condition:
+    behaviors:
+    - encrypted_connection
+    patterns:
+    - ssl.wrap_socket
+    - tls.connect
+    - https.*tunnel
+  description: 检测建立加密通信通道的行为
+  id: BEH-NET-007
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 加密通道建立
+- action: alert
+  condition:
+    behaviors:
+    - reflection
+    patterns:
+    - getattr(
+    - setattr(
+    - __import__
+  description: 检测使用反射动态调用方法的行为
+  id: BEH-CODE-004
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 反射调用
+- action: alert
+  condition:
+    behaviors:
+    - jit_compilation
+    patterns:
+    - numba.jit
+    - cython.compile
+  description: 检测使用 JIT 编译执行代码的行为
+  id: BEH-CODE-005
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: JIT 编译执行
+- action: alert
+  condition:
+    behaviors:
+    - memory_execution
+    patterns:
+    - ctypes.CFUNCTYPE
+    - mmap.*exec
+    - VirtualAlloc
+  description: 检测在内存中执行代码的行为
+  id: BEH-CODE-007
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 内存代码执行
+- action: alert
+  condition:
+    behaviors:
+    - environment_detection
+    patterns:
+    - /.dockerenv
+    - SANDBOX
+    - vmcheck
+  description: 检测尝试识别沙箱环境的行为
+  id: BEH-EVA-001
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 沙箱环境检测
+- action: alert
+  condition:
+    behaviors:
+    - debugger_detection
+    patterns:
+    - ptrace
+    - IsDebuggerPresent
+    - anti_debug
+  description: 检测尝试识别调试器的行为
+  id: BEH-EVA-002
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 调试器检测
+- action: alert
+  condition:
+    behaviors:
+    - delayed_execution
+    patterns:
+    - time.sleep(.*[3-9][0-9]{2,})
+    - setTimeout.*60000
+  description: 检测使用延迟执行绕过分析的行为
+  id: BEH-EVA-003
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 延迟执行
+- action: alert
+  condition:
+    behaviors:
+    - conditional_trigger
+    patterns:
+    - if hostname.*target
+    - if user.*admin
+  description: 检测基于特定条件触发的行为
+  id: BEH-EVA-004
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 条件触发
+- action: alert
+  condition:
+    behaviors:
+    - code_obfuscation
+    patterns:
+    - base64.b64decode.*exec
+    - eval(atob(
+    - rot13
+  description: 检测使用代码混淆的行为
+  id: BEH-EVA-005
+  metadata:
+    attack_type: evasion
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 代码混淆
+version: '11.0'

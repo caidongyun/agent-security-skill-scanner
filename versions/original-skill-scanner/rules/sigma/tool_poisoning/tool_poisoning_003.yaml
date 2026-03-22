@@ -1,0 +1,25 @@
+title: 工具输出伪造
+id: TO-SIGMA-003
+status: stable
+level: medium
+description: 检测工具输出伪造攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.tool_poisoning
+  - security.TO-SIGMA-003
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*fake_output*"
+    CommandLine1: "*spoofed_result*"
+    CommandLine2: "*fabricated_response*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

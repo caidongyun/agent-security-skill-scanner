@@ -1,0 +1,25 @@
+title: 指令覆盖攻击
+id: PR-SIGMA-001
+status: stable
+level: high
+description: 检测指令覆盖攻击攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.prompt_injection
+  - security.PR-SIGMA-001
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*ignore previous*"
+    CommandLine1: "*forget all*"
+    CommandLine2: "*disregard instructions*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

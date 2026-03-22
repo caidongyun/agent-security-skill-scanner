@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-TOO-6e3ac6-v3",
+  "attack_type": "tool_poisoning",
+  "severity": "high",
+  "language": "Java/Maven",
+  "behaviors": [
+    "file_execution",
+    "network_request"
+  ],
+  "indicators": [
+    "curl | bash"
+  ],
+  "confidence": 0.95,
+  "tags": [
+    "npm",
+    "package",
+    "supply_chain"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Tool Poisoning - \u53d8\u4f533",
+  "description": "tool_poisoning \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #3",
+  "test_cases": [
+    "TO-TP-03"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-TOO-6e3ac6",
+  "generated_at": "2026-03-22T10:28:00.414008"
+}

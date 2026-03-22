@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-SUP-96d43a-v2",
+  "attack_type": "supply_chain",
+  "severity": "critical",
+  "language": "Unknown",
+  "behaviors": [
+    "dependency_installation",
+    "code_execution"
+  ],
+  "indicators": [
+    "generic_malicious"
+  ],
+  "confidence": 0.91,
+  "tags": [
+    "dependency",
+    "package",
+    "third_party"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Supply Chain - \u53d8\u4f532",
+  "description": "supply_chain \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #2",
+  "test_cases": [
+    "SU-TP-02"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-SUP-96d43a",
+  "generated_at": "2026-03-22T10:28:00.418716"
+}

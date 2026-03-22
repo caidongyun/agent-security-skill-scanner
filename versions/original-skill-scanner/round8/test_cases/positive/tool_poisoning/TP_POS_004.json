@@ -1,0 +1,14 @@
+{
+  "test_case_id": "TP_POS_004",
+  "attack_type": "tool_poisoning",
+  "sample_type": "positive",
+  "content": "# Attack sample: tool_poisoning variant 4\ndef unsafe_tool(cmd):\n    os.popen(cmd).read()\n",
+  "content_hash": "1fc1ba85accd736d",
+  "expected_result": true,
+  "metadata": {
+    "variant": "base",
+    "difficulty": "easy",
+    "created_at": "2026-03-19T07:37:00.582132",
+    "generator_version": "1.0.0"
+  }
+}

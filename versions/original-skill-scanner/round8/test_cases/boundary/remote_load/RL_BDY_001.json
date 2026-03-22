@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_BDY_001",
+  "attack_type": "remote_load",
+  "sample_type": "boundary",
+  "content": "# Boundary case: remote_load variant 1\nif config.get('remote', False):\n    load_remote()\n",
+  "content_hash": "c6887d78ffba073f",
+  "expected_result": null,
+  "metadata": {
+    "variant": "boundary",
+    "difficulty": "ambiguous",
+    "created_at": "2026-03-19T07:37:00.582456",
+    "generator_version": "1.0.0"
+  }
+}

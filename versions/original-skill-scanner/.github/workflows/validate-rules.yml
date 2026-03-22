@@ -1,0 +1,98 @@
+name: Validate Rules
+
+on:
+  pull_request:
+    paths:
+      - 'rules/**/*.yaml'
+      - 'rules/**/*.json'
+  push:
+    branches: [main]
+    paths:
+      - 'rules/**/*.yaml'
+      - 'rules/**/*.json'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        pip install pyyaml
+    
+    - name: Validate rule syntax
+      run: |
+        python3 -c "
+import yaml
+import sys
+from pathlib import Path
+
+errors = []
+for rule_file in Path('rules').glob('**/*.yaml'):
+    try:
+        with open(rule_file) as f:
+            data = yaml.safe_load(f)
+        if 'rules' not in data:
+            errors.append(f'{rule_file}: missing rules key')
+    except Exception as e:
+        errors.append(f'{rule_file}: {e}')
+
+if errors:
+    for err in errors:
+        print(f'❌ {err}')
+    sys.exit(1)
+else:
+    print('✅ All rules valid')
+"
+    
+    - name: Run quality validation
+      run: |
+        python3 quality_validator.py --round auto
+    
+    - name: Check detection rate
+      run: |
+        python3 -c "
+import json
+with open('round_quality/validation_results.json') as f:
+    data = json.load(f)
+dr = data['metrics']['detection_rate']
+if dr < 0.98:
+    print(f'❌ Detection rate {dr:.1%} < 98%')
+    exit(1)
+else:
+    print(f'✅ Detection rate {dr:.1%} >= 98%')
+"
+    
+    - name: Check false positive rate
+      run: |
+        python3 -c "
+import json
+with open('round_quality/validation_results.json') as f:
+    data = json.load(f)
+fpr = data['metrics']['false_positive_rate']
+if fpr > 0.02:
+    print(f'❌ False positive rate {fpr:.1%} > 2%')
+    exit(1)
+else:
+    print(f'✅ False positive rate {fpr:.1%} <= 2%')
+"
+    
+    - name: Benchmark performance
+      run: |
+        python3 round15/validate_quality.py --benchmark-only
+    
+    - name: Upload results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: validation-results
+        path: |
+          round_quality/
+          round15/results/

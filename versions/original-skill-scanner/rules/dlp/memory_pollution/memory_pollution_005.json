@@ -1,0 +1,26 @@
+{
+  "id": "ME-DLP-005",
+  "name": "持久化污染",
+  "category": "memory_pollution",
+  "type": "dlp",
+  "severity": "high",
+  "description": "防止持久化污染导致的数据泄露",
+  "patterns": [
+    "persistent injection",
+    "long-term poison",
+    "embed in memory"
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.180329",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ]
+}

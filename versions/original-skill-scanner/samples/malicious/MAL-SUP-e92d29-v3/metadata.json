@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-SUP-e92d29-v3",
+  "attack_type": "supply_chain",
+  "severity": "critical",
+  "language": "Shell",
+  "behaviors": [
+    "dependency_installation",
+    "code_execution"
+  ],
+  "indicators": [
+    "curl | bash"
+  ],
+  "confidence": 0.9,
+  "tags": [
+    "dependency",
+    "package",
+    "third_party"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Supply Chain - \u53d8\u4f533",
+  "description": "supply_chain \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #3",
+  "test_cases": [
+    "SU-TP-03"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-SUP-e92d29",
+  "generated_at": "2026-03-22T10:28:00.418908"
+}

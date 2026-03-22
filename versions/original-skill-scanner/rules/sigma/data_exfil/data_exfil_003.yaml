@@ -1,0 +1,25 @@
+title: HTTP 数据外传
+id: DA-SIGMA-003
+status: stable
+level: high
+description: 检测HTTP 数据外传攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.data_exfil
+  - security.DA-SIGMA-003
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*requests.post*"
+    CommandLine1: "*urllib.request.urlopen*"
+    CommandLine2: "*http.client*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

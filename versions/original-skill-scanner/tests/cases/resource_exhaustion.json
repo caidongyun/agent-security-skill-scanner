@@ -1,0 +1,80 @@
+[
+  {
+    "id": "RE-F01",
+    "name": "无限循环检测",
+    "category": "resource_exhaustion",
+    "description": "检测无限循环攻击",
+    "input": {
+      "content": "while True:\n    pass"
+    },
+    "expected": {
+      "detected": true,
+      "risk_score": 80
+    }
+  },
+  {
+    "id": "RE-F02",
+    "name": "内存耗尽攻击",
+    "category": "resource_exhaustion",
+    "description": "检测内存耗尽攻击",
+    "input": {
+      "content": "data = []\nwhile True:\n    data.append('x' * 1000000)"
+    },
+    "expected": {
+      "detected": true,
+      "risk_score": 85
+    }
+  },
+  {
+    "id": "RE-F03",
+    "name": "递归爆炸",
+    "category": "resource_exhaustion",
+    "description": "检测递归爆炸攻击",
+    "input": {
+      "content": "def recurse():\n    return recurse()\nrecurse()"
+    },
+    "expected": {
+      "detected": true,
+      "risk_score": 90
+    }
+  },
+  {
+    "id": "RE-F04",
+    "name": "正则爆炸",
+    "category": "resource_exhaustion",
+    "description": "检测正则表达式拒绝服务",
+    "input": {
+      "content": "import re\npattern = '(a+)+$'\nre.match(pattern, 'a' * 30)"
+    },
+    "expected": {
+      "detected": true,
+      "risk_score": 75
+    }
+  },
+  {
+    "id": "RE-B01",
+    "name": "正常循环",
+    "category": "resource_exhaustion",
+    "description": "正常循环不应触发",
+    "input": {
+      "content": "for i in range(100):\n    print(i)"
+    },
+    "expected": {
+      "detected": false,
+      "risk_score": 0
+    }
+  },
+  {
+    "id": "RE-B02",
+    "name": "有限内存分配",
+    "category": "resource_exhaustion",
+    "description": "有限内存分配不应触发",
+    "input": {
+      "content": "data = [1, 2, 3, 4, 5]"
+    },
+    "expected": {
+      "detected": false,
+      "risk_score": 0
+    }
+  }
+]

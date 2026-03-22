@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RE_NEG_017",
+  "attack_type": "resource_exhaustion",
+  "sample_type": "negative",
+  "content": "# Normal sample: resource_exhaustion variant 17\ndef read_file(path):\n    with open(path) as f:\n        return f.read()\n",
+  "content_hash": "b4d36d4bbc5a9c84",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.582977",
+    "generator_version": "1.0.0"
+  }
+}

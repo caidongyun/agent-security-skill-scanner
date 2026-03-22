@@ -1,0 +1,14 @@
+{
+  "test_case_id": "MP_NEG_006",
+  "attack_type": "memory_pollution",
+  "sample_type": "negative",
+  "content": "# Normal sample: memory_pollution variant 6\ndef update_preference(name, value):\n    preferences[name] = value\n",
+  "content_hash": "4ed20fc88a4f7e06",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.583112",
+    "generator_version": "1.0.0"
+  }
+}
