@@ -1,6 +1,6 @@
-# 🤖 Agent Security Multi-Agent Research System
+# 🤖 Agent Security Skill Scanner V3
 
-**版本**: v2.0 (Multi-Agent)  
+**版本**: v3.0 (Multi-Agent)  
 **状态**: 🚀 研发中  
 **创建日期**: 2026-03-22  
 **来源**: 整合多个版本的集大成者
@@ -9,7 +9,7 @@
 
 ## 📖 简介
 
-**Agent Security Multi-Agent** 是一个基于多 Agent 协作的智能体安全研究与检测系统，整合了：
+**Agent Security Skill Scanner V3** 是一个基于多 Agent 协作的智能体安全研究与检测系统，整合了：
 
 - 🔍 **t14g2-v1**: Round 30 完成的自治系统 (350+ 规则，850+ 样本)
 - 🐧 **ubuntu-v1**: Ubuntu 参考版本特性
@@ -242,8 +242,8 @@ python3 research/paper_analyzer.py analyze ./papers/
 
 ## 📈 对比优势
 
-| 特性 | t14g2-v1 | ubuntu-v1 | master | **Multi-Agent** |
-|------|----------|-----------|--------|-----------------|
+| 特性 | t14g2-v1 | ubuntu-v1 | master | **V3 (Multi-Agent)** |
+|------|----------|-----------|--------|---------------------|
 | 检测率 | 99.5% | 98% | 99% | **99.5%+** |
 | 规则数 | 350+ | 200+ | 300+ | **400+** |
 | 样本数 | 850+ | 500+ | 700+ | **1000+** |
@@ -337,4 +337,11 @@ MIT License
 
 ---
 
-**🚀 项目已创建，开始使用 research-dev-agent 进行规划研发！**
+**🚀 V3 项目已创建，开始使用 research-dev-agent 进行规划研发！**
+
+---
+
+## 📁 仓库位置
+
+**本地位置**: `~/.openclaw/workspace/agent-security-skill-scanner-V3/`  
+**Gitee 远程**: https://gitee.com/caidongyun/agent-security-skill-scanner-master
