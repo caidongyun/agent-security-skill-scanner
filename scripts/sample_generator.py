@@ -31,6 +31,14 @@ async def main():
                        help='输出目录')
     parser.add_argument('--coverage', action='store_true',
                        help='生成规则覆盖样本')
+    parser.add_argument('--intel', action='store_true',
+                       help='基于威胁情报生成样本')
+    parser.add_argument('--apt', action='store_true',
+                       help='生成 APT 风格样本')
+    parser.add_argument('--apt-group', type=str, default='generic',
+                       help='APT 组织名称')
+    parser.add_argument('--cve', type=str, nargs='+',
+                       help='CVE ID 列表')
     parser.add_argument('--stats', action='store_true',
                        help='显示生成统计')
     
@@ -51,7 +59,8 @@ async def main():
         print(f"按攻击类型:")
         for attack, count in result.data['by_attack_type'].items():
             print(f"  {attack}: {count}")
-        print(f"最后生成：{result.data['last_generated']}")
+        print(f"最后生成：{result.data.get('last_generated', 'N/A')}")
+        print(f"情报驱动：{result.data.get('intel_driven', False)}")
         return
     
     # 解析语言列表
@@ -68,14 +77,56 @@ async def main():
     
     print(f"\n🚀 开始生成样本")
     print("=" * 50)
-    print(f"语言：{languages}")
-    print(f"攻击类型：{attack_types}")
-    print(f"每种组合数量：{args.count}")
     
-    if args.coverage:
+    if args.intel:
+        # 基于威胁情报生成
+        print(f"模式：威胁情报驱动")
+        print(f"情报源：{args.attack_types if args.attack_types != 'all' else 'all'}")
+        print(f"数量：{args.count}")
+        
+        result = await generator.execute(Task(
+            type="generate_from_intel",
+            parameters={
+                "source": "all" if args.attack_types == 'all' else args.attack_types[0],
+                "count": args.count,
+                "language": languages[0] if languages else "python"
+            }
+        ))
+    
+    elif args.apt:
+        # 生成 APT 风格样本
+        print(f"模式：APT 风格")
+        print(f"APT 组织：{args.apt_group}")
+        print(f"数量：{args.count}")
+        
+        result = await generator.execute(Task(
+            type="generate_apt",
+            parameters={
+                "count": args.count,
+                "apt_group": args.apt_group,
+                "language": languages[0] if languages else "python"
+            }
+        ))
+    
+    elif args.cve:
+        # 生成 CVE 利用样本
+        print(f"模式：CVE 利用")
+        print(f"CVE 列表：{args.cve}")
+        
+        result = await generator.execute(Task(
+            type="generate_cve",
+            parameters={
+                "cve_ids": args.cve,
+                "language": languages[0] if languages else "python"
+            }
+        ))
+    
+    elif args.coverage:
         # 生成规则覆盖样本
-        print("\n📋 生成规则覆盖样本...")
-        # TODO: 从规则文件加载规则
+        print(f"模式：规则覆盖")
+        print(f"语言：{languages}")
+        print(f"攻击类型：{attack_types}")
+        
         result = await generator.execute(Task(
             type="generate_batch",
             parameters={
@@ -85,8 +136,13 @@ async def main():
                 "output_dir": args.output
             }
         ))
+    
     else:
         # 批量生成
+        print(f"语言：{languages}")
+        print(f"攻击类型：{attack_types}")
+        print(f"每种组合数量：{args.count}")
+        
         result = await generator.execute(Task(
             type="generate_batch",
             parameters={
