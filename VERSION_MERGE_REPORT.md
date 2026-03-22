@@ -1,7 +1,9 @@
 # 📦 版本整合报告
 
 **时间**: 2026-03-22 21:57  
-**目标**: 整合 4 个原始项目到 Multi-Agent 新仓库
+**目标**: 整合 4 个原始项目到 V3 新仓库
+
+**仓库名称**: agent-security-skill-scanner-V3
 
 ---
 
@@ -115,6 +117,9 @@ versions/t14g2-v1/
 ### Phase 0: 原始项目归档 (已完成 ✅)
 
 ```bash
+# 创建 V3 目录
+mkdir -p ~/.openclaw/workspace/agent-security-skill-scanner-V3
+
 # 创建 versions 目录
 mkdir -p versions/
 
@@ -167,10 +172,10 @@ ln -s original-skill-scanner versions/t14g2-v1
 
 ---
 
-## 📁 新仓库结构
+## 📁 V3 仓库结构
 
 ```
-agent-security-multi-agent/
+agent-security-skill-scanner-V3/
 ├── 📖 文档
 │   ├── README.md                    # 项目说明
 │   ├── ARCHITECTURE.md              # 多 Agent 架构
@@ -235,7 +240,7 @@ agent-security-multi-agent/
 | - t14g2-v1 | ✅ | 100% |
 | - ubuntu-v1 | ✅ | 100% |
 | - master | ✅ | 100% |
-| **Multi-Agent 框架** | ⏳ | 40% |
+| **V3 Multi-Agent 框架** | ⏳ | 40% |
 | - Agent 基类 | ✅ | 100% |
 | - Orchestrator | ✅ | 100% |
 | - Detector | ✅ | 100% |
@@ -255,7 +260,7 @@ agent-security-multi-agent/
 
 ```bash
 # 1. 分析各版本差异
-cd ~/.openclaw/workspace/agent-security-multi-agent
+cd ~/.openclaw/workspace/agent-security-skill-scanner-V3
 python3 -m research_dev_agent analyze-repos \
   --repos versions/original-skill-scanner,versions/t14g2-v1,versions/ubuntu-v1,versions/master \
   --output reports/version_analysis.md
@@ -292,7 +297,7 @@ python3 -m research_dev_agent design \
 
 **已关联**:
 ```bash
-cd ~/.openclaw/workspace/agent-security-multi-agent
+cd ~/.openclaw/workspace/agent-security-skill-scanner-V3
 git remote add origin https://gitee.com/caidongyun/agent-security-skill-scanner-master.git
 git push -u origin main
 ```
@@ -301,7 +306,7 @@ git push -u origin main
 
 ## ✅ 整合完成清单
 
-- [x] 创建新仓库 `agent-security-multi-agent/`
+- [x] 创建新仓库 `agent-security-skill-scanner-V3/`
 - [x] 归档 4 个原始项目到 `versions/`
 - [x] 设计 Multi-Agent 架构
 - [x] 制定 15 轮研发计划
@@ -318,6 +323,6 @@ git push -u origin main
 
 ---
 
-**🎉 4 个原始项目已成功整合到 Multi-Agent 新仓库！**
+**🎉 4 个原始项目已成功整合到 V3 新仓库！**
 
 **状态**: Phase 0 完成，Phase 1 进行中
