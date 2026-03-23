@@ -93,7 +93,6 @@ class DetectionEngine:
                 # YARA 规则检测 (简化版)
                 raw = rule.get("_raw", "")
                 # 提取字符串
-                import re
                 strings = re.findall(r'\$[a-z] = "([^"]+)"', raw, re.IGNORECASE)
                 for string in strings:
                     if string.lower() in code.lower():

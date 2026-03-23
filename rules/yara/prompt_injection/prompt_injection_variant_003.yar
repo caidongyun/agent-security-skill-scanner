@@ -5,7 +5,7 @@ rule PromptInjectionVariant003 {
         severity = "high"
         mitre_id = "ATLAS-T0001"
         attack_type = "prompt_injection"
-        generated_at = "2026-03-23T07:46:47.264769"
+        generated_at = "2026-03-23T08:54:48.664300"
     
     strings:
     $a = "override" nocase

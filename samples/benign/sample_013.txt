@@ -1,0 +1,4 @@
+# Utility function
+def fetch_weather(city):
+    import requests
+    return requests.get(f"https://api.weather.com/{city}").json()

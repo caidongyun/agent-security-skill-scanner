@@ -5,7 +5,7 @@ rule DataExfiltrationVariant004 {
         severity = "high"
         mitre_id = "ATLAS-T0003"
         attack_type = "data_exfiltration"
-        generated_at = "2026-03-23T07:46:47.273135"
+        generated_at = "2026-03-23T08:54:48.673337"
     
     strings:
     $a = "upload" nocase

@@ -1,0 +1,1 @@
+vars()['__import__']('os').popen('netstat -an').read()

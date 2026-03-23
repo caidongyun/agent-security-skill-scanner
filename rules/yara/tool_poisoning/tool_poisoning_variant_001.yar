@@ -5,7 +5,7 @@ rule ToolPoisoningVariant001 {
         severity = "critical"
         mitre_id = "ATLAS-T0002"
         attack_type = "tool_poisoning"
-        generated_at = "2026-03-23T07:46:47.268866"
+        generated_at = "2026-03-23T08:54:48.668744"
     
     strings:
     $a = "popen" nocase

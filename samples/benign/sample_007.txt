@@ -1,0 +1,3 @@
+def get_random_quote():
+    import httpx
+    return httpx.get("https://api.quotes.com/random").text

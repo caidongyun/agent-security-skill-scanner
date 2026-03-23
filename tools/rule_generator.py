@@ -52,11 +52,25 @@ class AttackPatternLibrary:
                 r"forget\s+(all\s+)?(previous|your)\s+(instructions|rules)",
                 r"act\s+as\s+(unrestricted|unfiltered|unlimited)",
                 r"(disable|turn\s+off)\s+(safety|security|filters)",
+                r"no\s+(restrictions|rules|limits)",
+                r"unrestricted\s+(mode|access)",
+                r"no\s+(ethical|safety)\s+constraints",
+                r"answer\s+(freely|without\s+filter)",
+                r"tell\s+me\s+(the\s+truth|how\s+to)",
+                r"what\s+would\s+you\s+do",
+                r"complete\s+this\s+sentence",
+                r"translate\s+this",
+                r"write\s+a\s+story",
+                r"roleplay|role-play|role play",
+                r"pretend\s+you\s+are",
+                r"imagine\s+you\s+are",
             ],
             "keywords": [
                 "ignore", "disregard", "bypass", "override",
                 "forget", "unrestricted", "unfiltered", "unlimited",
-                "disable", "enable", "jailbreak", "break"
+                "disable", "enable", "jailbreak", "break",
+                "no restrictions", "developer mode", "system message",
+                "act as", "pretend", "imagine", "roleplay"
             ]
         },
         
@@ -430,7 +444,7 @@ def main():
     all_yara_rules = []
     
     # 为每种攻击类型生成规则
-    for attack_type in attack_types[:3]:  # 演示：只生成前 3 种
+    for attack_type in attack_types:  # 生成所有 6 种
         print(f"\n生成 {attack_type} 规则...")
         
         # 生成 Sigma 规则

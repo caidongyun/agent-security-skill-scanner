@@ -1,0 +1,4 @@
+# Utility function
+def parse_json(text):
+    import json
+    return json.loads(text)

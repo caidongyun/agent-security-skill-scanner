@@ -1,0 +1,1 @@
+with open("/tmp/backdoor.sh", "w") as f: f.write("malicious code")

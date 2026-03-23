@@ -5,7 +5,7 @@ rule DataExfiltrationVariant001 {
         severity = "high"
         mitre_id = "ATLAS-T0003"
         attack_type = "data_exfiltration"
-        generated_at = "2026-03-23T07:46:47.273117"
+        generated_at = "2026-03-23T08:54:48.673320"
     
     strings:
     $a = "steal" nocase

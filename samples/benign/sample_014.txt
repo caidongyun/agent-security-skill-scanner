@@ -1,0 +1,4 @@
+# Utility function
+def validate_email(email):
+    import re
+    return bool(re.match(r".+@.+", email))
