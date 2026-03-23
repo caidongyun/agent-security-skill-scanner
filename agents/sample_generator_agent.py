@@ -431,7 +431,7 @@ done
             elif task.type == "load_intel":
                 return await self._load_intel(task)
             elif task.type == "stats":
-                return Result(success=True, data=self.stats)
+                return Result(task_id='sg', agent_id='SampleGeneratorAgent', uccess=True, data=self.stats)
             else:
                 return Result(
                     success=False,

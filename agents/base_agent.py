@@ -3,10 +3,20 @@ Agent Security Multi-Agent System - Agent 基类
 """
 
 from abc import ABC, abstractmethod
+from enum import Enum
 from typing import Any, Dict, List, Optional
 from dataclasses import dataclass, field
 from datetime import datetime
 import uuid
+
+
+class AgentStatus(Enum):
+    """Agent 状态枚举"""
+    IDLE = "idle"
+    BUSY = "busy"
+    ERROR = "error"
+    READY = "ready"
+    STOPPED = "stopped"
 
 
 @dataclass
@@ -37,13 +47,24 @@ class Result:
 class BaseAgent(ABC):
     """Agent 基类"""
     
-    def __init__(self, agent_id: Optional[str] = None, config: Optional[Dict] = None):
+    def __init__(self, name: Optional[str] = None, description: str = "", 
+                 capabilities: List[str] = None, agent_id: Optional[str] = None, 
+                 config: Optional[Dict] = None):
+        # 支持多种初始化方式
+        if name and not agent_id:
+            agent_id = name
         self.agent_id = agent_id or f"{self.__class__.__name__}-{uuid.uuid4().hex[:8]}"
+        self.name = name or self.__class__.__name__
+        self.description = description
+        self.capabilities = capabilities or []
         self.config = config or {}
         self.status = "idle"  # idle, busy, error
         self.current_task: Optional[Task] = None
         self.completed_tasks = 0
         self.failed_tasks = 0
+        self._tasks_completed = 0
+        # 兼容新旧接口
+        self._status = AgentStatus.IDLE
     
     @abstractmethod
     def execute(self, task: Task) -> Result:
