@@ -34,13 +34,11 @@ class AnalyzerAgent(BaseAgent):
             elif task.type == "semantic":
                 return await self._semantic_analysis(task)
             else:
-                return Result(
-                    success=False,
+                return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                     error=f"未知任务类型：{task.type}"
                 )
         except Exception as e:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=str(e)
             )
     
@@ -48,11 +46,11 @@ class AnalyzerAgent(BaseAgent):
         """代码分析"""
         target = task.parameters.get("target")
         if not target:
-            return Result(success=False, error="缺少目标文件")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error="缺少目标文件")
         
         file_path = Path(target)
         if not file_path.exists():
-            return Result(success=False, error=f"文件不存在：{target}")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error=f"文件不存在：{target}")
         
         # 读取代码
         with open(file_path, 'r', encoding='utf-8') as f:
@@ -76,8 +74,7 @@ class AnalyzerAgent(BaseAgent):
             parameters={"code": code, "file_type": file_path.suffix}
         ))
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'file': str(file_path),
                 'ast': ast_result.data,
@@ -118,8 +115,7 @@ class AnalyzerAgent(BaseAgent):
                         elif isinstance(node.func, ast.Attribute):
                             calls.append(node.func.attr)
                 
-                return Result(
-                    success=True,
+                return Result(task_id=task.id, agent_id=self.agent_id, success=True,
                     data={
                         'imports': imports,
                         'functions': functions,
@@ -129,12 +125,11 @@ class AnalyzerAgent(BaseAgent):
                     }
                 )
             else:
-                return Result(
-                    success=True,
+                return Result(task_id=task.id, agent_id=self.agent_id, success=True,
                     data={'warning': f'未支持的文件类型：{file_type}'}
                 )
         except Exception as e:
-            return Result(success=False, error=f"AST 解析失败：{e}")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error=f"AST 解析失败：{e}")
     
     async def _build_cfg(self, task: Task) -> Result:
         """控制流图构建"""
@@ -142,8 +137,7 @@ class AnalyzerAgent(BaseAgent):
         file_type = task.parameters.get("file_type", ".py")
         
         if file_type != ".py":
-            return Result(
-                success=True,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=True,
                 data={'warning': f'未支持的文件类型：{file_type}'}
             )
         
@@ -166,8 +160,7 @@ class AnalyzerAgent(BaseAgent):
                 elif isinstance(node, (ast.Try, ast.Raise)):
                     exceptions += 1
             
-            return Result(
-                success=True,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=True,
                 data={
                     'branches': branches,
                     'loops': loops,
@@ -177,7 +170,7 @@ class AnalyzerAgent(BaseAgent):
                 }
             )
         except Exception as e:
-            return Result(success=False, error=f"CFG 构建失败：{e}")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error=f"CFG 构建失败：{e}")
     
     async def _semantic_analysis(self, task: Task) -> Result:
         """语义分析"""
@@ -185,8 +178,7 @@ class AnalyzerAgent(BaseAgent):
         file_type = task.parameters.get("file_type", ".py")
         
         if file_type != ".py":
-            return Result(
-                success=True,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=True,
                 data={'warning': f'未支持的文件类型：{file_type}'}
             )
         
@@ -221,12 +213,11 @@ class AnalyzerAgent(BaseAgent):
             # 计算混淆分数
             features['obfuscation_score'] = self._calculate_obfuscation(code)
             
-            return Result(
-                success=True,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=True,
                 data=features
             )
         except Exception as e:
-            return Result(success=False, error=f"语义分析失败：{e}")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error=f"语义分析失败：{e}")
     
     def _calculate_obfuscation(self, code: str) -> float:
         """计算混淆分数"""

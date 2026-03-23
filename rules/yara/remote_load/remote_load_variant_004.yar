@@ -12,6 +12,33 @@ rule RemoteLoadVariant004 {
     $b = "url" nocase
     $c = "http" nocase
     
-    condition:
-        any of them
+    
+    $new1 = "attacker" nocase
+    $new2 = "malicious" nocase
+
+    $rl_urllib = "urllib" nocase
+
+    $rl_urlopen = "urlopen" nocase
+
+    $rl_payload = "payload" nocase
+
+    $rl_evil_com = "evil.com" nocase
+
+    \ignor = "ignore all" nocase
+
+    \safet = "safety" nocase
+
+    \secur = "security level" nocase
+
+    \__imp = "__import__" nocase
+
+    \conte = "content_filter" nocase
+
+    \trust = "trusted" nocase
+
+    \eval = "eval" nocase
+
+    \getat = "getattr" nocase
+condition:
+        any of them or $new1 or $new2
 }

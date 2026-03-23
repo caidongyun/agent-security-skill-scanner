@@ -12,6 +12,27 @@ rule ToolPoisoningVariant003 {
     $b = "exec" nocase
     $c = "compile" nocase
     
-    condition:
-        any of them
+    
+    $new1 = "attacker" nocase
+    $new2 = "malicious" nocase
+
+    $tp_os_syste = "os.system" nocase
+
+    $tp_rm _rf = "rm -rf" nocase
+
+    \ignor = "ignore all" nocase
+
+    \safet = "safety" nocase
+
+    \secur = "security level" nocase
+
+    \__imp = "__import__" nocase
+
+    \conte = "content_filter" nocase
+
+    \trust = "trusted" nocase
+
+    \getat = "getattr" nocase
+condition:
+        any of them or $new1 or $new2
 }

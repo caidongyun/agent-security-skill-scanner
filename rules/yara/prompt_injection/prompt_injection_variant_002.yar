@@ -12,6 +12,33 @@ rule PromptInjectionVariant002 {
     $b = "override" nocase
     $c = "forget" nocase
     
-    condition:
-        any of them
+    
+    $new1 = "attacker" nocase
+    $new2 = "malicious" nocase
+
+    $pi_devel = "developer mode" nocase
+
+    $pi_no_et = "no ethical" nocase
+
+    $pi_no_ru = "no rules" nocase
+
+    $pi_unres = "unrestricted" nocase
+
+    $pi_no_sa = "no safety" nocase
+
+    \ignor = "ignore all" nocase
+
+    \secur = "security level" nocase
+
+    \__imp = "__import__" nocase
+
+    \conte = "content_filter" nocase
+
+    \trust = "trusted" nocase
+
+    \eval = "eval" nocase
+
+    \getat = "getattr" nocase
+condition:
+        any of them or $new1 or $new2
 }

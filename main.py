@@ -81,7 +81,7 @@ class V3Scanner:
         
         if detector_result.success:
             results['detections'] = detector_result.data.get('results', [])
-            print(f"  ✅ 检测完成: {len(results['detections'])} 个结果")
+            print(f"  ✅ 检测完成: {len(results.get('detections', []))} 个结果")
         
         # 2. 分析阶段
         if options.get('deep_analysis', True):
@@ -103,8 +103,10 @@ class V3Scanner:
         ))
         
         if rule_result.success:
-            results['rule_matches'] = rule_result.data.get('matched_rules', [])
-            print(f"  ✅ 匹配完成: {len(results['rule_matches'])} 条规则")
+            matched = rule_result.data.get('matched_rules', 0)
+            results['rule_matches'] = matched if isinstance(matched, list) else matched
+            matched = rule_result.data.get('matched_rules', 0)
+        print(f"  ✅ 匹配完成: {matched} 条规则")
         
         # 4. 威胁情报
         if options.get('intel_check', True):
@@ -242,11 +244,11 @@ async def main():
         print("📊 扫描结果摘要")
         print("=" * 50)
         print(f"目标: {results['target']}")
-        print(f"检测数: {len(results['detections'])}")
+        print(f"检测数: {len(results.get('detections', []))}")
         if results.get('analysis'):
             print(f"风险评分: {results['analysis'].get('risk_score', 0):.2f}")
         if results.get('rule_matches'):
-            print(f"规则匹配: {len(results['rule_matches'])} 条")
+            print(f"规则匹配: {results.get('rule_matches', 0)} 条")
         if results.get('intel'):
             print(f"威胁评分: {results['intel'].get('threat_score', 0):.2f}")
         print("=" * 50)

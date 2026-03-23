@@ -15,7 +15,7 @@ from agents.base_agent import BaseAgent, Task, Result, AgentStatus
 class RuleAgent(BaseAgent):
     """规则 Agent - 规则管理"""
     
-    def __init__(self, rules_path: str = "./rules/optimized/"):
+    def __init__(self, rules_path: str = "./rules/"):
         super().__init__(
             name="RuleAgent",
             description="规则管理 - 加载/匹配/生成/优化",
@@ -31,6 +31,7 @@ class RuleAgent(BaseAgent):
             print(f"⚠️ 规则目录不存在：{self.rules_path}")
             return
         
+        # 加载 YAML 规则
         for rule_file in self.rules_path.glob("*.yaml"):
             try:
                 with open(rule_file, 'r', encoding='utf-8') as f:
@@ -41,6 +42,23 @@ class RuleAgent(BaseAgent):
                         self.rules.append(rules)
             except Exception as e:
                 print(f"⚠️ 加载规则失败 {rule_file}: {e}")
+        
+        # 加载 YARA 规则
+        import re
+        for rule_file in self.rules_path.rglob("*.yar"):
+            try:
+                with open(rule_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                    rule_names = re.findall(r'rule\s+(\w+)', content)
+                    for name in rule_names:
+                        self.rules.append({
+                            'name': name,
+                            'type': 'yara',
+                            'file': str(rule_file),
+                            'content': content[:500]
+                        })
+            except Exception as e:
+                print(f"⚠️ 加载YARA规则失败 {rule_file}: {e}")
         
         print(f"✅ 已加载 {len(self.rules)} 条规则")
     
@@ -59,11 +77,15 @@ class RuleAgent(BaseAgent):
                 return await self._search_rules(task)
             else:
                 return Result(
+                    task_id=task.id,
+                    agent_id=self.agent_id,
                     success=False,
                     error=f"未知任务类型：{task.type}"
                 )
         except Exception as e:
             return Result(
+                task_id=task.id,
+                agent_id=self.agent_id,
                 success=False,
                 error=str(e)
             )
@@ -75,7 +97,7 @@ class RuleAgent(BaseAgent):
         tier = task.parameters.get("tier", "all")
         
         if not code and not target:
-            return Result(success=False, error="缺少代码或目标文件")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error="缺少代码或目标文件")
         
         # 读取代码
         if not code and target:
@@ -84,7 +106,7 @@ class RuleAgent(BaseAgent):
                 with open(file_path, 'r', encoding='utf-8') as f:
                     code = f.read()
             else:
-                return Result(success=False, error=f"文件不存在：{target}")
+                return Result(task_id=task.id, agent_id=self.agent_id, success=False, error=f"文件不存在：{target}")
         
         # 过滤规则
         rules_to_match = self.rules
@@ -105,8 +127,7 @@ class RuleAgent(BaseAgent):
                     'match_details': match_result['details']
                 })
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'total_rules': len(rules_to_match),
                 'matched_rules': len(matches),
@@ -120,6 +141,22 @@ class RuleAgent(BaseAgent):
         
         rule_type = rule.get('type', 'regex')
         pattern = rule.get('pattern')
+        
+        # YARA 规则特殊处理
+        if rule_type == 'yara':
+            content = rule.get('content', '')
+            # 提取 YARA 规则中的字符串
+            yara_strings = re.findall(r'\$[\w]+ = "([^"]+)"', content)
+            if yara_strings:
+                found = [s for s in yara_strings if s.lower() in code.lower()]
+                return {
+                    'matched': len(found) > 0,
+                    'details': {
+                        'count': len(found),
+                        'keywords': found
+                    }
+                }
+            return {'matched': False}
         
         if not pattern:
             return {'matched': False}
@@ -160,7 +197,7 @@ class RuleAgent(BaseAgent):
         tier = task.parameters.get("tier", "L1")
         
         if not samples:
-            return Result(success=False, error="缺少样本")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error="缺少样本")
         
         # 从样本中提取共同特征
         common_patterns = self._extract_common_patterns(samples)
@@ -182,8 +219,7 @@ class RuleAgent(BaseAgent):
             }
             generated_rules.append(rule)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'generated_count': len(generated_rules),
                 'rules': generated_rules
@@ -240,8 +276,7 @@ class RuleAgent(BaseAgent):
                 tier_groups[tier] = []
             tier_groups[tier].append(rule)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'original_count': len(self.rules),
                 'optimized_count': len(unique_rules),
@@ -255,7 +290,7 @@ class RuleAgent(BaseAgent):
         rule = task.parameters.get("rule")
         
         if not rule:
-            return Result(success=False, error="缺少规则")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error="缺少规则")
         
         errors = []
         warnings = []
@@ -284,8 +319,7 @@ class RuleAgent(BaseAgent):
         if rule.get('severity') not in valid_severities:
             warnings.append(f"建议的严重程度：{valid_severities}")
         
-        return Result(
-            success=len(errors) == 0,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=len(errors) == 0,
             data={
                 'valid': len(errors) == 0,
                 'errors': errors,
@@ -312,8 +346,7 @@ class RuleAgent(BaseAgent):
         if tier:
             results = [r for r in results if r.get('tier') == tier]
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'count': len(results),
                 'rules': results

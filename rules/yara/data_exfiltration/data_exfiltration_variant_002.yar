@@ -12,6 +12,28 @@ rule DataExfiltrationVariant002 {
     $b = "send" nocase
     $c = "upload" nocase
     
-    condition:
-        any of them
+    
+    $d = "attacker" nocase
+    $e = "evil" nocase
+    $f = "exfil" nocase
+    $g = "stolen" nocase
+    $h = "secrets" nocase
+
+    \ignor = "ignore all" nocase
+
+    \safet = "safety" nocase
+
+    \secur = "security level" nocase
+
+    \__imp = "__import__" nocase
+
+    \conte = "content_filter" nocase
+
+    \trust = "trusted" nocase
+
+    \eval = "eval" nocase
+
+    \getat = "getattr" nocase
+condition:
+        any of them or $d or $e or $f or $g or $h
 }

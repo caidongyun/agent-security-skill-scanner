@@ -12,6 +12,22 @@ rule DataExfiltrationVariant005 {
     $b = "external" nocase
     $c = "attacker" nocase
     
-    condition:
+    
+    \ignor = "ignore all" nocase
+
+    \safet = "safety" nocase
+
+    \secur = "security level" nocase
+
+    \__imp = "__import__" nocase
+
+    \conte = "content_filter" nocase
+
+    \trust = "trusted" nocase
+
+    \eval = "eval" nocase
+
+    \getat = "getattr" nocase
+condition:
         any of them
 }

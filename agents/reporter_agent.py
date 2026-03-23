@@ -40,13 +40,11 @@ class ReporterAgent(BaseAgent):
             elif task.type == "visualize":
                 return await self._generate_visualization(task)
             else:
-                return Result(
-                    success=False,
+                return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                     error=f"未知任务类型：{task.type}"
                 )
         except Exception as e:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=str(e)
             )
     
@@ -92,8 +90,7 @@ class ReporterAgent(BaseAgent):
             'format': report_format
         })
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'report_file': str(output_path),
                 'format': report_format,
@@ -261,7 +258,7 @@ class ReporterAgent(BaseAgent):
             'average_detection_rate': 0
         }
         
-        return Result(success=True, data=stats)
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True, data=stats)
     
     async def _generate_summary(self, task: Task) -> Result:
         """生成摘要"""
@@ -269,8 +266,7 @@ class ReporterAgent(BaseAgent):
         
         summary = self._generate_summary_data(scan_results)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data=summary
         )
     
@@ -280,8 +276,7 @@ class ReporterAgent(BaseAgent):
         export_format = task.parameters.get("format", "pdf")
         
         # 简化的导出逻辑
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'exported': True,
                 'format': export_format,
@@ -295,8 +290,7 @@ class ReporterAgent(BaseAgent):
         viz_type = task.parameters.get("type", "chart")
         
         # 简化的可视化逻辑
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'type': viz_type,
                 'data': self._generate_summary_data(scan_results),

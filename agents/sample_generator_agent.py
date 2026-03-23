@@ -433,13 +433,11 @@ done
             elif task.type == "stats":
                 return Result(task_id='sg', agent_id='SampleGeneratorAgent', uccess=True, data=self.stats)
             else:
-                return Result(
-                    success=False,
+                return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                     error=f"未知任务类型：{task.type}"
                 )
         except Exception as e:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=str(e)
             )
     
@@ -451,22 +449,19 @@ done
         output_dir = task.parameters.get("output_dir")
         
         if language not in self.languages:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=f"不支持的语言：{language}"
             )
         
         if attack_type not in self.attack_types:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=f"不支持的攻击类型：{attack_type}"
             )
         
         # 获取模板
         templates = self.templates.get(language, {}).get(attack_type, [])
         if not templates:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=f"没有 {language}/{attack_type} 的模板"
             )
         
@@ -503,8 +498,7 @@ done
         
         self.stats['last_generated'] = datetime.now().isoformat()
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'generated_count': len(generated),
                 'samples': generated,
@@ -534,8 +528,7 @@ done
                 if result.success:
                     all_generated.extend(result.data['samples'])
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'total_generated': len(all_generated),
                 'by_language': {lang: sum(1 for s in all_generated if s['language'] == lang) 
@@ -551,8 +544,7 @@ done
         rules = task.parameters.get("rules", [])
         
         if not rules:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error="需要提供规则列表"
             )
         
@@ -582,8 +574,7 @@ done
                 if result.success:
                     generated.extend(result.data['samples'])
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'total_generated': len(generated),
                 'rules_covered': len(rules),
@@ -598,8 +589,7 @@ done
         mutation_strategies = task.parameters.get("strategies", ["rename", "reorder", "obfuscate"])
         
         if not base_sample:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error="需要提供基础样本"
             )
         
@@ -628,8 +618,7 @@ done
             
             self.stats['total_generated'] += 1
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'variant_count': len(variants),
                 'variants': variants
@@ -759,16 +748,14 @@ done
             intel_file = Path(intel_file)
         
         if not intel_file.exists():
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=f"情报文件不存在：{intel_file}"
             )
         
         with open(intel_file, 'r', encoding='utf-8') as f:
             self.intel_data = json.load(f)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'loaded': True,
                 'iocs_count': len(self.intel_data.get('iocs', [])),
@@ -809,8 +796,7 @@ done
             github_samples = await self._generate_from_github(count // 3, language)
             generated.extend(github_samples)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'generated_count': len(generated),
                 'samples': generated,
@@ -1369,8 +1355,7 @@ if __name__ == "__main__":
             
             self.stats['total_generated'] += 1
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'generated_count': len(generated),
                 'samples': generated,
@@ -1503,8 +1488,7 @@ if __name__ == "__main__":
             if result.success:
                 generated.extend(result.data['samples'])
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'generated_count': len(generated),
                 'cve_samples': generated

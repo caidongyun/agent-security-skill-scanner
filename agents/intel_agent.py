@@ -40,13 +40,11 @@ class IntelAgent(BaseAgent):
             elif task.type == "analyze":
                 return await self._analyze_threat(task)
             else:
-                return Result(
-                    success=False,
+                return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                     error=f"未知任务类型：{task.type}"
                 )
         except Exception as e:
-            return Result(
-                success=False,
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False,
                 error=str(e)
             )
     
@@ -72,8 +70,7 @@ class IntelAgent(BaseAgent):
         # 保存到文件
         self._save_intel(collected)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data=collected
         )
     
@@ -136,8 +133,7 @@ class IntelAgent(BaseAgent):
                 continue
             results.append(ioc)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'count': len(results),
                 'iocs': results
@@ -158,8 +154,7 @@ class IntelAgent(BaseAgent):
                 continue
             results.append(tech)
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'count': len(results),
                 'techniques': results
@@ -171,7 +166,7 @@ class IntelAgent(BaseAgent):
         intel_data = task.parameters.get("intel_data")
         
         if not intel_data:
-            return Result(success=False, error="缺少情报数据")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error="缺少情报数据")
         
         # 更新 IOC 缓存
         if 'iocs' in intel_data:
@@ -188,8 +183,7 @@ class IntelAgent(BaseAgent):
             'updated_at': asyncio.get_event_loop().time()
         })
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'updated': True,
                 'ioc_count': len(self.ioc_cache),
@@ -202,7 +196,7 @@ class IntelAgent(BaseAgent):
         target = task.parameters.get("target")
         
         if not target:
-            return Result(success=False, error="缺少目标")
+            return Result(task_id=task.id, agent_id=self.agent_id, success=False, error="缺少目标")
         
         # 读取目标内容
         if isinstance(target, str):
@@ -226,8 +220,7 @@ class IntelAgent(BaseAgent):
         # 威胁评分
         threat_score = len(matches) * 0.2
         
-        return Result(
-            success=True,
+        return Result(task_id=task.id, agent_id=self.agent_id, success=True,
             data={
                 'target': target if isinstance(target, str) else '<content>',
                 'ioc_matches': len(matches),
