@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-03-30 22:30:02",
+  "total_samples": 559,
+  "detected": 24,
+  "missed": 535,
+  "detection_rate": 4.293381037567084,
+  "total_time_seconds": 0.03353166580200195,
+  "avg_time_ms": 0.08822428537382743,
+  "p95_time_ms": 0.28048898093402386,
+  "p99_time_ms": 0.3940039314329624,
+  "throughput_samples_per_sec": 16670.8091181866,
+  "rule_stats": {
+    "ResourceExhaustion_Network_Flood": 5,
+    "ResourceExhaustion_File_Descriptor": 3,
+    "ResourceExhaustion_API_Abuse": 8,
+    "ResourceExhaustion_Recursive": 13,
+    "ResourceExhaustion_Array_Allocation": 1,
+    "ResourceExhaustion_Token_Consumption": 7,
+    "ResourceExhaustion_Concurrent_Flood": 3,
+    "ResourceExhaustion_GraphQL_Deep": 3,
+    "ResourceExhaustion_Loop_Allocation": 2,
+    "ResourceExhaustion_WebSocket_Flood": 2,
+    "ResourceExhaustion_Thread_Pool": 2,
+    "ResourceExhaustion_Slowloris": 1,
+    "ResourceExhaustion_Memory_Allocation": 2
+  },
+  "status": "NEEDS_IMPROVEMENT"
+}
