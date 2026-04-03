@@ -1,0 +1,95 @@
+{
+  "timestamp": "2026-03-30T10:04:44.860085",
+  "scanner_version": "v2.0 (Intent-Aware)",
+  "rules_count": 167,
+  "total_samples": 1294,
+  "malicious_samples": 996,
+  "benign_samples": 198,
+  "detected_malicious": 563,
+  "false_positives": 0,
+  "false_negatives": 433,
+  "detection_rate": 56.52610441767069,
+  "false_positive_rate": 0.0,
+  "precision": 100.0,
+  "recall": 56.52610441767069,
+  "f1_score": 72.22578576010262,
+  "performance": {
+    "avg_scan_time_ms": 2.917547199236002,
+    "p50_ms": 2.138809999451041,
+    "p99_ms": 12.02091807499528,
+    "samples_per_second": 858.8329808815198
+  },
+  "intent_detection": {
+    "whitelisted": 195,
+    "intent_malicious": 78,
+    "intent_benign": 961,
+    "intent_suspicious": 255
+  },
+  "by_attack_type": {
+    "credential_theft": {
+      "total": 99,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "prompt_injection": {
+      "total": 100,
+      "detected": 72,
+      "rate": 72.0
+    },
+    "resource_exhaustion": {
+      "total": 100,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "remote_load": {
+      "total": 99,
+      "detected": 78,
+      "rate": 78.78787878787878
+    },
+    "supply_chain_attack": {
+      "total": 100,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "common_pattern": {
+      "total": 99,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "false_prone": {
+      "total": 100,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "persistence": {
+      "total": 99,
+      "detected": 76,
+      "rate": 76.76767676767676
+    },
+    "data_exfiltration": {
+      "total": 99,
+      "detected": 99,
+      "rate": 100.0
+    },
+    "evasion": {
+      "total": 100,
+      "detected": 80,
+      "rate": 80.0
+    },
+    "normal_script": {
+      "total": 99,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "tool_poisoning": {
+      "total": 100,
+      "detected": 78,
+      "rate": 78.0
+    },
+    "memory_pollution": {
+      "total": 100,
+      "detected": 80,
+      "rate": 80.0
+    }
+  }
+}

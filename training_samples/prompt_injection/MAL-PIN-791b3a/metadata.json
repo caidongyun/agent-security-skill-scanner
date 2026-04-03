@@ -1,0 +1,71 @@
+{
+  "id": "BENCH-PIN-791b3a",
+  "version": "2.0",
+  "sample_id": "MAL-PIN-791b3a",
+  "name": "提示词注入 - HARD",
+  "description": "",
+  "attack_type": "prompt_injection",
+  "severity": "high",
+  "category": "AI 攻击",
+  "language": "go",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "AI 攻击",
+    "mitre_atlas": [
+      "ATLAS-T0001"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T17:59:19.148620"
+  },
+  "behaviors": [
+    "text_injection",
+    "instruction_override"
+  ],
+  "indicators": [
+    "ignore previous",
+    "system prompt override",
+    "debug mode"
+  ],
+  "tags": [
+    "llm",
+    "injection",
+    "override"
+  ],
+  "mitigation_indicators": [
+    "输入验证",
+    "提示词隔离",
+    "输出过滤"
+  ],
+  "false_positive_scenarios": [
+    "用户正常的指令",
+    "格式化字符串"
+  ],
+  "detection_difficulty": {
+    "score": 3,
+    "level": "L3",
+    "description": "高度混淆，需要高级分析",
+    "indicators_count": 1
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L3",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T17:59:19.148639",
+    "updated_at": "2026-03-29T17:59:19.148641",
+    "payload_file": "prompt_injection/MAL-PIN-791b3a/payload.go"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "BENCH-TOO-65454d",
+  "version": "2.0",
+  "sample_id": "MAL-TOO-65454d",
+  "name": "工具投毒 - EASY",
+  "description": "",
+  "attack_type": "tool_poisoning",
+  "severity": "critical",
+  "category": "工具滥用",
+  "language": "go",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "工具滥用",
+    "mitre_atlas": [
+      "ATLAS-T0002"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T19:54:17.477945"
+  },
+  "behaviors": [
+    "file_execution",
+    "network_request",
+    "data_exfiltration"
+  ],
+  "indicators": [
+    "postinstall script",
+    "child_process.exec",
+    "curl | bash"
+  ],
+  "tags": [
+    "npm",
+    "nodejs",
+    "install_hook"
+  ],
+  "mitigation_indicators": [
+    "检查 postinstall 脚本",
+    "使用 npm audit",
+    "锁定依赖版本"
+  ],
+  "false_positive_scenarios": [
+    "正常的 postinstall 构建脚本",
+    "npm 包的正常生命周期"
+  ],
+  "detection_difficulty": {
+    "score": 1,
+    "level": "L1",
+    "description": "明显的恶意特征，易于检测",
+    "indicators_count": 3
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L1",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T19:54:17.477954",
+    "updated_at": "2026-03-29T19:54:17.477955",
+    "payload_file": "tool_poisoning/MAL-TOO-65454d/payload.go"
+  }
+}

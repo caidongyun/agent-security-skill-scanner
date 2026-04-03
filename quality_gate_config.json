@@ -1,0 +1,126 @@
+{
+  "_comment": "质量门禁配置文件 - Quality Gate Configuration",
+  "_version": "1.0.0",
+  "_created": "2026-03-28",
+  
+  "quality_thresholds": {
+    "detection_rate": {
+      "min": 0.80,
+      "description": "最低检测率 (Recall) ≥80%",
+      "critical": true
+    },
+    "false_positive_rate": {
+      "max": 0.10,
+      "description": "最高误报率 <10%",
+      "critical": true
+    },
+    "f1_score": {
+      "min": 0.85,
+      "description": "最低 F1 Score ≥85%",
+      "critical": true
+    },
+    "precision": {
+      "min": 0.80,
+      "description": "最低精确率 ≥80%",
+      "critical": false
+    }
+  },
+  
+  "performance_thresholds": {
+    "single_rule_scan_ms": {
+      "max": 10,
+      "description": "单规则平均扫描时间 <10ms",
+      "critical": true
+    },
+    "batch_1000_rules_ms": {
+      "max": 100,
+      "description": "千规则扫描时间 <100ms",
+      "critical": true
+    },
+    "memory_usage_mb": {
+      "max": 512,
+      "description": "最大内存使用 <512MB",
+      "critical": false
+    }
+  },
+  
+  "rule_quality_checks": {
+    "syntax_validation": {
+      "enabled": true,
+      "description": "YARA/Sigma 规则语法验证",
+      "critical": true
+    },
+    "min_strings": {
+      "count": 2,
+      "description": "每条规则最少字符串数",
+      "critical": false
+    },
+    "max_strings": {
+      "count": 20,
+      "description": "每条规则最多字符串数",
+      "critical": false
+    },
+    "required_sections": {
+      "sections": ["meta", "strings", "condition"],
+      "description": "规则必需段落",
+      "critical": true
+    },
+    "duplicate_detection": {
+      "enabled": true,
+      "max_similarity": 0.95,
+      "description": "检测重复规则 (相似度>95%)",
+      "critical": false
+    }
+  },
+  
+  "sample_quality_checks": {
+    "min_code_lines": {
+      "count": 10,
+      "description": "样本最少代码行数",
+      "critical": false
+    },
+    "max_code_lines": {
+      "count": 5000,
+      "description": "样本最多代码行数",
+      "critical": false
+    },
+    "min_complexity": {
+      "score": 5,
+      "description": "样本最低复杂度",
+      "critical": false
+    },
+    "valid_syntax": {
+      "enabled": true,
+      "description": "代码语法必须有效",
+      "critical": true
+    }
+  },
+  
+  "gate_decisions": {
+    "pass": {
+      "requirements": "所有 critical 检查通过",
+      "action": "允许发布新版本"
+    },
+    "fail": {
+      "requirements": "任一 critical 检查失败",
+      "action": "阻止发布，需要修复"
+    },
+    "review": {
+      "requirements": "仅 non-critical 检查失败",
+      "action": "需要人工审查后决定"
+    }
+  },
+  
+  "reporting": {
+    "format": "json",
+    "include_details": true,
+    "save_history": true,
+    "history_dir": "reports/quality_gate_history"
+  },
+  
+  "notifications": {
+    "on_failure": true,
+    "on_review": true,
+    "channels": ["log", "file"]
+  }
+}

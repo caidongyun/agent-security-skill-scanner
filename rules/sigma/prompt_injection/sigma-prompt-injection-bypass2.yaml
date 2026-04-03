@@ -1,0 +1,23 @@
+author: Additional Bypass Rules
+date: 2026/03/23
+description: 检测 Prompt 注入绕过模式 - 扩展
+detection:
+  condition: selection
+  selection:
+    keyword: (?:memory\s+patch|disregard\s+all\s+safety|security\s+test|new\s+instruction|ignore\s+all\s+content|pretend\s+you\s+are\s+a|imagine\s+you\s+are\s+a|hacker\s+ai|malicious\s+ai)
+falsepositives:
+- Legitimate security research
+fields:
+- input
+- output
+id: sigma-prompt-injection-bypass-2
+level: high
+logsource:
+  category: application
+  service: ai-agent
+modified: 2026/03/23
+status: stable
+tags:
+- attack.prompt_injection
+- ai-security
+title: Detect Prompt Injection Bypass - Extended

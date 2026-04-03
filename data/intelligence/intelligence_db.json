@@ -1,0 +1,907 @@
+{
+  "cve": [],
+  "mitre_atlas": [],
+  "github_advisories": [
+    {
+      "id": "GHSA-r7mc-x6x7-cqxx",
+      "source": "GitHub Advisory",
+      "summary": "pyLoad SETTINGS Permission Users Can Achieve Remote Code Execution via Unrestricted Reconnect Script Configuration",
+      "severity": "high",
+      "published_at": "2026-03-20T21:50:30Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555376"
+    },
+    {
+      "id": "GHSA-ph9w-r52h-28p7",
+      "source": "GitHub Advisory",
+      "summary": "langflow: /profile_pictures/{folder_name}/{file_name} endpoint file reading",
+      "severity": "high",
+      "published_at": "2026-03-20T20:56:14Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555394"
+    },
+    {
+      "id": "GHSA-7grx-3xcx-2xv5",
+      "source": "GitHub Advisory",
+      "summary": "langflow has Unauthenticated IDOR on Image Downloads",
+      "severity": "high",
+      "published_at": "2026-03-20T20:47:10Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555397"
+    },
+    {
+      "id": "GHSA-v856-2rf8-9f28",
+      "source": "GitHub Advisory",
+      "summary": "pydicom has a path traversal in FileSet/DICOMDIR ReferencedFileID allows file access outside the File-set root",
+      "severity": "high",
+      "published_at": "2026-03-20T15:57:01Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555399"
+    },
+    {
+      "id": "GHSA-w5g8-5849-vj76",
+      "source": "GitHub Advisory",
+      "summary": "NiceGUI's unvalidated chunk size parameter in media routes can cause memory exhaustion",
+      "severity": "medium",
+      "published_at": "2026-03-19T18:48:27Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555401"
+    },
+    {
+      "id": "GHSA-cxqh-p2w9-fmr7",
+      "source": "GitHub Advisory",
+      "summary": "PyMuPDF has a path traversal in _main_.py",
+      "severity": "medium",
+      "published_at": "2026-03-19T18:31:18Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555403"
+    },
+    {
+      "id": "GHSA-2mhw-8qcg-gr96",
+      "source": "GitHub Advisory",
+      "summary": "skia-python vendors vulnerable libfreetype because of pinned cibuildwheel version",
+      "severity": "high",
+      "published_at": "2026-03-19T18:10:25Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555405"
+    },
+    {
+      "id": "GHSA-q485-cg9q-xq2r",
+      "source": "GitHub Advisory",
+      "summary": "Improper Authentication and Origin Validation Error in pyload-ng",
+      "severity": "medium",
+      "published_at": "2026-03-19T17:55:53Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555407"
+    },
+    {
+      "id": "GHSA-37g4-qqqv-7m99",
+      "source": "GitHub Advisory",
+      "summary": "Intake has a Command Injection via shell() Expansion in Parameter Defaults",
+      "severity": "high",
+      "published_at": "2026-03-19T17:46:54Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555408"
+    },
+    {
+      "id": "GHSA-g2j9-7rj2-gm6c",
+      "source": "GitHub Advisory",
+      "summary": "Langflow has an Arbitrary File Write (RCE) via v2 API",
+      "severity": "critical",
+      "published_at": "2026-03-19T17:46:43Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555410"
+    },
+    {
+      "id": "GHSA-f4rq-2259-hv29",
+      "source": "GitHub Advisory",
+      "summary": "Denial of service via non-terminating SYLT frame parsing loop in tinytag",
+      "severity": "medium",
+      "published_at": "2026-03-19T17:25:59Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555412"
+    },
+    {
+      "id": "GHSA-f964-whrq-44h8",
+      "source": "GitHub Advisory",
+      "summary": "ormar Pydantic Validation Bypass via __pk_only__ and __excluded__ Kwargs Injection in Model Constructor",
+      "severity": "high",
+      "published_at": "2026-03-19T16:27:43Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555414"
+    },
+    {
+      "id": "GHSA-469j-vmhf-r6v7",
+      "source": "GitHub Advisory",
+      "summary": "NLTK has a Downloader Path Traversal Vulnerability (AFO) - Arbitrary File Overwrite",
+      "severity": "high",
+      "published_at": "2026-03-19T12:42:42Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555416"
+    },
+    {
+      "id": "GHSA-jm6w-m3j8-898g",
+      "source": "GitHub Advisory",
+      "summary": "Unauthenticated remote shutdown in nltk.app.wordnet_app",
+      "severity": "high",
+      "published_at": "2026-03-19T12:42:20Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555418"
+    },
+    {
+      "id": "GHSA-fhff-qmm8-h2fp",
+      "source": "GitHub Advisory",
+      "summary": "Arbitrary file write via tar traversal in mlflow",
+      "severity": "high",
+      "published_at": "2026-03-19T00:30:20Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555421"
+    },
+    {
+      "id": "GHSA-gfwx-w7gr-fvh7",
+      "source": "GitHub Advisory",
+      "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in nltk",
+      "severity": "medium",
+      "published_at": "2026-03-18T20:23:33Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555423"
+    },
+    {
+      "id": "GHSA-3rcm-vjrc-p45j",
+      "source": "GitHub Advisory",
+      "summary": "JustHTML has a Sanitizer Bypass (in Markdown)",
+      "severity": "medium",
+      "published_at": "2026-03-18T20:19:56Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555428"
+    },
+    {
+      "id": "GHSA-qvc2-mg72-jjhx",
+      "source": "GitHub Advisory",
+      "summary": "JustHTML Affected by Mutation XSS via Literal Text Serialization in Raw Text Elements (style/script)",
+      "severity": "medium",
+      "published_at": "2026-03-18T20:19:47Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555430"
+    },
+    {
+      "id": "GHSA-rf74-v2fm-23pw",
+      "source": "GitHub Advisory",
+      "summary": "Natural Language Toolkit (NLTK) has unbounded recursion in JSONTaggedDecoder.decode_obj() may cause DoS",
+      "severity": "medium",
+      "published_at": "2026-03-18T20:17:43Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555432"
+    },
+    {
+      "id": "GHSA-54jj-px8x-5w5q",
+      "source": "GitHub Advisory",
+      "summary": "DeepDiff has Memory Exhaustion DoS through SAFE_TO_IMPORT",
+      "severity": "high",
+      "published_at": "2026-03-18T20:10:08Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555435"
+    },
+    {
+      "id": "GHSA-pxrr-hq57-q35p",
+      "source": "GitHub Advisory",
+      "summary": "dynaconf Affected by Remote Code Execution (RCE) via Insecure Template Evaluation in @jinja Resolver",
+      "severity": "high",
+      "published_at": "2026-03-18T20:08:06Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555437"
+    },
+    {
+      "id": "GHSA-gjgx-rvqr-6w6v",
+      "source": "GitHub Advisory",
+      "summary": "Mesop Affected by Unauthenticated Remote Code Execution via Test Suite Route /exec-py",
+      "severity": "critical",
+      "published_at": "2026-03-18T20:05:00Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555439"
+    },
+    {
+      "id": "GHSA-8qvf-mr4w-9x2c",
+      "source": "GitHub Advisory",
+      "summary": "Mesop has a Path Traversal utilizing `FileStateSessionBackend` leads to Application Denial of Service and File Write/Deletion",
+      "severity": "critical",
+      "published_at": "2026-03-18T20:01:21Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555441"
+    },
+    {
+      "id": "GHSA-2gmv-2r3v-jxj2",
+      "source": "GitHub Advisory",
+      "summary": "Stored XSS in PySpector HTML Report Generation leads to Javascript Code Execution",
+      "severity": "medium",
+      "published_at": "2026-03-18T16:33:46Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555444"
+    },
+    {
+      "id": "GHSA-v3xv-8vc3-h2m6",
+      "source": "GitHub Advisory",
+      "summary": "PySpector has a Plugin Sandbox Bypass leads to Arbitrary Code Execution",
+      "severity": "high",
+      "published_at": "2026-03-18T16:33:34Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555446"
+    },
+    {
+      "id": "GHSA-qpxp-75px-xjcp",
+      "source": "GitHub Advisory",
+      "summary": "pypdf has inefficient decoding of array-based streams",
+      "severity": "medium",
+      "published_at": "2026-03-18T16:17:31Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555449"
+    },
+    {
+      "id": "GHSA-vg28-83rp-8xx4",
+      "source": "GitHub Advisory",
+      "summary": "Frigte has broken access control viewer user can delete admin and other users account",
+      "severity": "high",
+      "published_at": "2026-03-18T14:25:15Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555452"
+    },
+    {
+      "id": "GHSA-c8rr-9gxc-jprv",
+      "source": "GitHub Advisory",
+      "summary": "UltraJSON has an integer overflow handling large indent leads to buffer overflow or infinite loop",
+      "severity": "high",
+      "published_at": "2026-03-18T13:01:24Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555454"
+    },
+    {
+      "id": "GHSA-wgvc-ghv9-3pmm",
+      "source": "GitHub Advisory",
+      "summary": "UltraJSON has a Memory Leak parsing large integers allows DoS ",
+      "severity": "high",
+      "published_at": "2026-03-18T13:01:15Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555457"
+    },
+    {
+      "id": "GHSA-rf6x-r45m-xv3w",
+      "source": "GitHub Advisory",
+      "summary": "Langflow is Missing Ownership Verification in API Key Deletion (IDOR)",
+      "severity": "high",
+      "published_at": "2026-03-18T12:58:35Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555460"
+    },
+    {
+      "id": "GHSA-xfhr-q72q-jcrj",
+      "source": "GitHub Advisory",
+      "summary": "Improper S3 ownership verification in Bedrock AgentCore Starter Toolkit",
+      "severity": "medium",
+      "published_at": "2026-03-17T20:34:21Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555462"
+    },
+    {
+      "id": "GHSA-2cpp-j2fc-qhp7",
+      "source": "GitHub Advisory",
+      "summary": "AWS API MCP File Access Restriction Bypass",
+      "severity": "medium",
+      "published_at": "2026-03-17T20:33:15Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555465"
+    },
+    {
+      "id": "GHSA-vwmf-pq79-vjvx",
+      "source": "GitHub Advisory",
+      "summary": "Unauthenticated Remote Code Execution in Langflow via Public Flow Build Endpoint",
+      "severity": "critical",
+      "published_at": "2026-03-17T20:05:05Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555468"
+    },
+    {
+      "id": "GHSA-jr27-m4p2-rc6r",
+      "source": "GitHub Advisory",
+      "summary": "Denial of Service in pyasn1 via Unbounded Recursion",
+      "severity": "high",
+      "published_at": "2026-03-17T16:17:33Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555471"
+    },
+    {
+      "id": "GHSA-v7cf-c9rm-wm3j",
+      "source": "GitHub Advisory",
+      "summary": "Uncontrolled recursion DoS in JustHTML() via deeply nested HTML",
+      "severity": "high",
+      "published_at": "2026-03-17T14:07:38Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555474"
+    },
+    {
+      "id": "GHSA-8x34-9q3v-h7g8",
+      "source": "GitHub Advisory",
+      "summary": "Apache Airflow: Execution API HITL Endpoints Missing Per-Task Authorization",
+      "severity": "high",
+      "published_at": "2026-03-17T12:30:20Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555479"
+    },
+    {
+      "id": "GHSA-4fhm-p86v-hwpx",
+      "source": "GitHub Advisory",
+      "summary": "Apache Airflow: Path of session token in cookie does not consider base_url - session hijacking via co-hosted applications",
+      "severity": "high",
+      "published_at": "2026-03-17T12:30:20Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555482"
+    },
+    {
+      "id": "GHSA-x3fv-96qh-67m7",
+      "source": "GitHub Advisory",
+      "summary": "Apache Airflow: DAG authorization bypass",
+      "severity": "medium",
+      "published_at": "2026-03-17T12:30:20Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555485"
+    },
+    {
+      "id": "GHSA-4m3h-wp5w-5hqh",
+      "source": "GitHub Advisory",
+      "summary": "Apache Airflow: Wildcard DagVersion Listing Bypasses Per‑DAG RBAC and Leaks Metadata",
+      "severity": "high",
+      "published_at": "2026-03-17T12:30:19Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555488"
+    },
+    {
+      "id": "GHSA-r5pr-887v-m2w9",
+      "source": "GitHub Advisory",
+      "summary": "Stored XSS in Memray-generated HTML reports via unescaped command-line metadata",
+      "severity": "low",
+      "published_at": "2026-03-16T16:41:58Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555491"
+    },
+    {
+      "id": "GHSA-vx5f-957p-qpvm",
+      "source": "GitHub Advisory",
+      "summary": "Glances Central Browser Autodiscovery Leaks Reusable Credentials to Zeroconf-Spoofed Servers",
+      "severity": "high",
+      "published_at": "2026-03-16T16:36:06Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555494"
+    },
+    {
+      "id": "GHSA-r297-p3v4-wp8m",
+      "source": "GitHub Advisory",
+      "summary": "Glances's Browser API Exposes Reusable Downstream Credentials via `/api/4/serverslist`",
+      "severity": "critical",
+      "published_at": "2026-03-16T16:35:01Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555498"
+    },
+    {
+      "id": "GHSA-hhcg-r27j-fhv9",
+      "source": "GitHub Advisory",
+      "summary": "Glances's REST/WebUI Lacks Host Validation and Remains Exposed to DNS Rebinding",
+      "severity": "medium",
+      "published_at": "2026-03-16T16:34:23Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555501"
+    },
+    {
+      "id": "GHSA-49g7-2ww7-3vf5",
+      "source": "GitHub Advisory",
+      "summary": "Glances has a SQL Injection in DuckDB Export via Unparameterized DDL Statements",
+      "severity": "high",
+      "published_at": "2026-03-16T16:34:03Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555505"
+    },
+    {
+      "id": "GHSA-9jfm-9rc6-2hfq",
+      "source": "GitHub Advisory",
+      "summary": "Glances's Default CORS Configuration Allows Cross-Origin Credential Theft",
+      "severity": "high",
+      "published_at": "2026-03-16T16:32:22Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555508"
+    },
+    {
+      "id": "GHSA-cvwp-r2g2-j824",
+      "source": "GitHub Advisory",
+      "summary": "Glances has Incomplete Secrets Redaction: /api/v4/args Endpoint Leaks Password Hash and SNMP Credentials",
+      "severity": "high",
+      "published_at": "2026-03-16T16:26:54Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555511"
+    },
+    {
+      "id": "GHSA-vcv2-q258-wrg7",
+      "source": "GitHub Advisory",
+      "summary": "Glances has a Command Injection via Process Names in Action Command Templates",
+      "severity": "high",
+      "published_at": "2026-03-16T16:26:22Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555515"
+    },
+    {
+      "id": "GHSA-wvxv-4j8q-4wjq",
+      "source": "GitHub Advisory",
+      "summary": "Glances exposes the REST API without authentication",
+      "severity": "high",
+      "published_at": "2026-03-16T16:23:56Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555518"
+    },
+    {
+      "id": "GHSA-hqmj-h5c6-369m",
+      "source": "GitHub Advisory",
+      "summary": "ONNX Untrusted Model Repository Warnings Suppressed by silent=True in onnx.hub.load() — Silent Supply-Chain Attack",
+      "severity": "high",
+      "published_at": "2026-03-16T16:23:28Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555522"
+    },
+    {
+      "id": "GHSA-5pwr-322w-8jr4",
+      "source": "GitHub Advisory",
+      "summary": "pyOpenSSL DTLS cookie callback buffer overflow",
+      "severity": "high",
+      "published_at": "2026-03-16T16:22:29Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555525"
+    },
+    {
+      "id": "GHSA-m344-f55w-2m6j",
+      "source": "GitHub Advisory",
+      "summary": "Authlib: Fail-Open Cryptographic Verification in OIDC Hash Binding",
+      "severity": "high",
+      "published_at": "2026-03-16T16:15:06Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555529"
+    },
+    {
+      "id": "GHSA-6mj8-jmp2-g8q7",
+      "source": "GitHub Advisory",
+      "summary": "Vanna has a SQL injection in the remove_training_data function",
+      "severity": "medium",
+      "published_at": "2026-03-16T15:30:46Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555532"
+    },
+    {
+      "id": "GHSA-xch3-2f9x-wh9f",
+      "source": "GitHub Advisory",
+      "summary": "MLflow has a command injection in mlflow/sagemaker/__init__.py",
+      "severity": "high",
+      "published_at": "2026-03-16T15:30:41Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555536"
+    },
+    {
+      "id": "GHSA-7432-952r-cw78",
+      "source": "GitHub Advisory",
+      "summary": "Authlib Vulnerable to JWE RSA1_5 Bleichenbacher Padding Oracle",
+      "severity": "high",
+      "published_at": "2026-03-16T15:17:28Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555542"
+    },
+    {
+      "id": "GHSA-wvwj-cvrp-7pv5",
+      "source": "GitHub Advisory",
+      "summary": "Authlib JWS JWK Header Injection: Signature Verification Bypass",
+      "severity": "critical",
+      "published_at": "2026-03-16T15:17:15Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555546"
+    },
+    {
+      "id": "GHSA-vp96-hxj8-p424",
+      "source": "GitHub Advisory",
+      "summary": "pyOpenSSL allows TLS connection bypass via unhandled callback exception in set_tlsext_servername_callback",
+      "severity": "low",
+      "published_at": "2026-03-16T15:15:43Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555552"
+    },
+    {
+      "id": "GHSA-5h2m-4q8j-pqpj",
+      "source": "GitHub Advisory",
+      "summary": "FastMCP OAuth Proxy token reuse across MCP servers",
+      "severity": "high",
+      "published_at": "2026-03-16T15:14:55Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555556"
+    },
+    {
+      "id": "GHSA-5cxw-w2xg-2m8h",
+      "source": "GitHub Advisory",
+      "summary": "fickling's `platform` module subprocess invocation evades `check_safety()` with `LIKELY_SAFE`",
+      "severity": "medium",
+      "published_at": "2026-03-13T20:58:10Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555560"
+    },
+    {
+      "id": "GHSA-r48f-3986-4f9c",
+      "source": "GitHub Advisory",
+      "summary": "fickling modules linecache, difflib and gc are missing from the unsafe modules blocklist",
+      "severity": "medium",
+      "published_at": "2026-03-13T20:57:40Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555564"
+    },
+    {
+      "id": "GHSA-44vg-5wv2-h2hg",
+      "source": "GitHub Advisory",
+      "summary": "SimpleEval: Objects (including modules) can leak dangerous modules through to direct access inside the sandbox",
+      "severity": "high",
+      "published_at": "2026-03-13T20:56:26Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555568"
+    },
+    {
+      "id": "GHSA-752w-5fwx-jx9f",
+      "source": "GitHub Advisory",
+      "summary": "PyJWT accepts unknown `crit` header extensions",
+      "severity": "high",
+      "published_at": "2026-03-13T20:05:04Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555572"
+    },
+    {
+      "id": "GHSA-cwxj-rr6w-m6w7",
+      "source": "GitHub Advisory",
+      "summary": "Scrapy: Arbitrary Module Import via Referrer-Policy Header in RefererMiddleware",
+      "severity": "high",
+      "published_at": "2026-03-13T20:02:36Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555576"
+    },
+    {
+      "id": "GHSA-f38f-5xpm-9r7c",
+      "source": "GitHub Advisory",
+      "summary": "CairoSVG vulnerable to Exponential DoS via recursive <use> element amplification",
+      "severity": "high",
+      "published_at": "2026-03-13T18:57:31Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555580"
+    },
+    {
+      "id": "GHSA-4g4c-mfqg-pj8r",
+      "source": "GitHub Advisory",
+      "summary": "Magic Wormhole: \"wormhole receive\" allows arbitrary local file overwrite",
+      "severity": "high",
+      "published_at": "2026-03-13T15:40:20Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555584"
+    },
+    {
+      "id": "GHSA-3936-cmfr-pm3m",
+      "source": "GitHub Advisory",
+      "summary": "Black: Arbitrary file writes from unsanitized user input in cache file name",
+      "severity": "high",
+      "published_at": "2026-03-12T18:33:10Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555588"
+    },
+    {
+      "id": "GHSA-p2m9-wcp5-6qw3",
+      "source": "GitHub Advisory",
+      "summary": "multipart vulnerable to ReDoS in `parse_options_header()`",
+      "severity": "high",
+      "published_at": "2026-03-12T18:32:18Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555593"
+    },
+    {
+      "id": "GHSA-gg5m-55jj-8m5g",
+      "source": "GitHub Advisory",
+      "summary": "Graphiti vulnerable to Cypher Injection via unsanitized node_labels in search filters",
+      "severity": "high",
+      "published_at": "2026-03-12T17:26:16Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555597"
+    },
+    {
+      "id": "GHSA-pf93-j98v-25pv",
+      "source": "GitHub Advisory",
+      "summary": "ha-mcp has XSS via Unescaped HTML in OAuth Consent Form",
+      "severity": "medium",
+      "published_at": "2026-03-12T14:23:44Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555601"
+    },
+    {
+      "id": "GHSA-fmfg-9g7c-3vq7",
+      "source": "GitHub Advisory",
+      "summary": "ha-mcp OAuth 2.1 DCR mode enables network reconnaissance via an error oracle",
+      "severity": "medium",
+      "published_at": "2026-03-12T14:23:37Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555606"
+    },
+    {
+      "id": "GHSA-rcp6-88mm-9vgf",
+      "source": "GitHub Advisory",
+      "summary": "Copyparty has unexpected JavaScript execution via crafted URL to folder with `.prologue.html`",
+      "severity": "low",
+      "published_at": "2026-03-12T14:22:53Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555610"
+    },
+    {
+      "id": "GHSA-67rw-2x62-mqqm",
+      "source": "GitHub Advisory",
+      "summary": "Copyparty ftp/sftp: Sharing a single file did not fully restrict source-folder access",
+      "severity": "low",
+      "published_at": "2026-03-12T14:22:46Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555614"
+    },
+    {
+      "id": "GHSA-qjxf-f2mg-c6mc",
+      "source": "GitHub Advisory",
+      "summary": "Tornado is vulnerable to DoS due to too many multipart parts",
+      "severity": "high",
+      "published_at": "2026-03-12T14:19:52Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555619"
+    },
+    {
+      "id": "GHSA-jx93-g359-86wm",
+      "source": "GitHub Advisory",
+      "summary": "SGLang's encoder parallel disaggregation system is vulnerable to unauthenticated remote code execution through the disaggregation module",
+      "severity": "critical",
+      "published_at": "2026-03-12T12:30:29Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555623"
+    },
+    {
+      "id": "GHSA-hvwj-8w5g-28rg",
+      "source": "GitHub Advisory",
+      "summary": "SGLangs `replay_request_dump.py` contains an insecure pickle.load() without validation and proper deserialization",
+      "severity": "high",
+      "published_at": "2026-03-12T12:30:29Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555628"
+    },
+    {
+      "id": "GHSA-rgq9-fqf5-fv58",
+      "source": "GitHub Advisory",
+      "summary": "SGLang's multimodal generation module is vulnerable to unauthenticated remote code execution through the ZMQ broker",
+      "severity": "critical",
+      "published_at": "2026-03-12T12:30:29Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555634"
+    },
+    {
+      "id": "GHSA-78cv-mqj4-43f7",
+      "source": "GitHub Advisory",
+      "summary": "Tornado has incomplete validation of cookie attributes",
+      "severity": "medium",
+      "published_at": "2026-03-11T22:17:00Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555639"
+    },
+    {
+      "id": "GHSA-hqmh-ppp3-xvm7",
+      "source": "GitHub Advisory",
+      "summary": "pypdf: manipulated stream length values can exhaust RAM",
+      "severity": "medium",
+      "published_at": "2026-03-11T00:14:02Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555644"
+    },
+    {
+      "id": "GHSA-ffv6-jj46-x367",
+      "source": "GitHub Advisory",
+      "summary": "django-unicorn affected by component state manipulation via unvalidated attribute access",
+      "severity": "medium",
+      "published_at": "2026-03-11T00:11:08Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555649"
+    },
+    {
+      "id": "GHSA-xjgw-4wvw-rgm4",
+      "source": "GitHub Advisory",
+      "summary": "MCP Atlassian has an arbitrary file write leading to arbitrary code execution via unconstrained download_path in confluence_download_attachment",
+      "severity": "critical",
+      "published_at": "2026-03-10T18:56:07Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555654"
+    },
+    {
+      "id": "GHSA-7r34-79r5-rcc9",
+      "source": "GitHub Advisory",
+      "summary": "MCP Atlassian has SSRF via unvalidated X-Atlassian-Jira-Url / X-Atlassian-Confluence-Url headers",
+      "severity": "high",
+      "published_at": "2026-03-10T18:48:46Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555659"
+    },
+    {
+      "id": "GHSA-hhfx-wfvq-7g9c",
+      "source": "GitHub Advisory",
+      "summary": "Azure MCP Server has Server-Side Request Forgery issue that allows authorized attacker to elevate privileges over a network",
+      "severity": "high",
+      "published_at": "2026-03-10T18:31:21Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555664"
+    },
+    {
+      "id": "GHSA-m6hv-x64c-27mm",
+      "source": "GitHub Advisory",
+      "summary": "copyparty: volflag `nohtml` did not block javascript in svg files",
+      "severity": "medium",
+      "published_at": "2026-03-10T01:20:19Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555668"
+    },
+    {
+      "id": "GHSA-v359-jj2v-j536",
+      "source": "GitHub Advisory",
+      "summary": "vLLM has SSRF Protection Bypass",
+      "severity": "medium",
+      "published_at": "2026-03-09T19:55:32Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555673"
+    },
+    {
+      "id": "GHSA-x46r-mf5g-xpr6",
+      "source": "GitHub Advisory",
+      "summary": "Glances has SQL Injection via Process Names in TimescaleDB Export",
+      "severity": "high",
+      "published_at": "2026-03-09T19:51:35Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555678"
+    },
+    {
+      "id": "GHSA-gh4x-f7cq-wwx6",
+      "source": "GitHub Advisory",
+      "summary": "Glances Exposes Unauthenticated Configuration Secrets",
+      "severity": "high",
+      "published_at": "2026-03-09T19:50:00Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555683"
+    },
+    {
+      "id": "GHSA-9r5j-7r2x-rv4g",
+      "source": "GitHub Advisory",
+      "summary": "Apache Airflow Providers Http has Unsafe Pickle Deserializatio leading to RCE via HttpOperator",
+      "severity": "high",
+      "published_at": "2026-03-09T12:31:38Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555689"
+    },
+    {
+      "id": "GHSA-rv5f-ccpm-xjj4",
+      "source": "GitHub Advisory",
+      "summary": "Apache Airflow AWS Auth Manager has Host Header Injection Leading to SAML Authentication Bypass",
+      "severity": "medium",
+      "published_at": "2026-03-09T12:31:38Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555694"
+    },
+    {
+      "id": "GHSA-qr2g-p6q7-w82m",
+      "source": "GitHub Advisory",
+      "summary": "x402 SDK Security Advisory",
+      "severity": "high",
+      "published_at": "2026-03-07T02:37:47Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555699"
+    },
+    {
+      "id": "GHSA-g9rg-8vq5-mpwm",
+      "source": "GitHub Advisory",
+      "summary": "mcp-memory-service's Wildcard CORS with Credentials Enables Cross-Origin Memory Theft",
+      "severity": "high",
+      "published_at": "2026-03-07T02:12:26Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555704"
+    },
+    {
+      "id": "GHSA-5r2p-pjr8-7fh7",
+      "source": "GitHub Advisory",
+      "summary": "SageMaker Python SDK replaced eval() with safe parser in JumpStart search functionality",
+      "severity": "high",
+      "published_at": "2026-03-05T22:01:09Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555709"
+    },
+    {
+      "id": "GHSA-87x4-j8vh-p5qf",
+      "source": "GitHub Advisory",
+      "summary": "Plane is Vulnerable to Unauthenticated Workspace Member Information Disclosure",
+      "severity": "high",
+      "published_at": "2026-03-05T21:48:11Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555714"
+    },
+    {
+      "id": "GHSA-fpx8-73gf-7x73",
+      "source": "GitHub Advisory",
+      "summary": "Plane has SSRF via Incomplete IP Validation in Webhook URL Serializer",
+      "severity": "high",
+      "published_at": "2026-03-05T21:43:15Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555720"
+    },
+    {
+      "id": "GHSA-73hc-m4hx-79pj",
+      "source": "GitHub Advisory",
+      "summary": "mcp-memory-service Vulnerable to System Information Disclosure via Health Endpoint",
+      "severity": "medium",
+      "published_at": "2026-03-05T21:42:10Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555725"
+    },
+    {
+      "id": "GHSA-v2xr-wvrv-p969",
+      "source": "GitHub Advisory",
+      "summary": "RAGAS has an Arbitrary File Read vulnerability",
+      "severity": "high",
+      "published_at": "2026-03-05T21:30:46Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555731"
+    },
+    {
+      "id": "GHSA-g48c-2wqr-h844",
+      "source": "GitHub Advisory",
+      "summary": "LangGraph checkpoint loading has unsafe msgpack deserialization",
+      "severity": "medium",
+      "published_at": "2026-03-05T20:19:49Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555738"
+    },
+    {
+      "id": "GHSA-7rgv-gqhr-fxg3",
+      "source": "GitHub Advisory",
+      "summary": "xgrammar vulnerable to DoS via multi-layer nesting",
+      "severity": "high",
+      "published_at": "2026-03-05T18:20:08Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555744"
+    },
+    {
+      "id": "GHSA-5wmx-573v-2qwq",
+      "source": "GitHub Advisory",
+      "summary": "Python-Markdown has an Uncaught Exception",
+      "severity": "medium",
+      "published_at": "2026-03-05T15:30:36Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555749"
+    },
+    {
+      "id": "GHSA-2jpr-83rg-v67j",
+      "source": "GitHub Advisory",
+      "summary": "django-allauth has an open redirect vulnerability",
+      "severity": "medium",
+      "published_at": "2026-03-05T06:30:27Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555755"
+    },
+    {
+      "id": "GHSA-w75w-9qv4-j5xj",
+      "source": "GitHub Advisory",
+      "summary": "dbt-common's commonprefix() doesn't protect against path traversal",
+      "severity": "low",
+      "published_at": "2026-03-05T00:59:10Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555761"
+    },
+    {
+      "id": "GHSA-6px9-j4qr-xfjw",
+      "source": "GitHub Advisory",
+      "summary": "pyLoad has an Arbitrary File Write via Path Traversal in edit_package()",
+      "severity": "high",
+      "published_at": "2026-03-05T00:32:19Z",
+      "ecosystem": "",
+      "collected_at": "2026-03-23T13:53:52.555766"
+    }
+  ],
+  "last_update": "2026-03-23T13:53:52.555768"
+}

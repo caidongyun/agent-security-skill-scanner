@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RE_POS_009",
+  "attack_type": "resource_exhaustion",
+  "sample_type": "positive",
+  "content": "# Attack sample: resource_exhaustion variant 9\n[list(range(10**9)) for _ in range(100)]\n",
+  "content_hash": "18fd9ad476a1a991",
+  "expected_result": true,
+  "metadata": {
+    "variant": "obfuscated",
+    "difficulty": "medium",
+    "created_at": "2026-03-19T07:37:00.582878",
+    "generator_version": "1.0.0"
+  }
+}

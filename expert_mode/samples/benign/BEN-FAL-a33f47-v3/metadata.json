@@ -1,0 +1,25 @@
+{
+  "sample_id": "BEN-FAL-a33f47-v3",
+  "sample_type": "false_prone",
+  "severity": "none",
+  "language": "Python",
+  "behaviors": [
+    "encoding",
+    "system_access"
+  ],
+  "indicators": [],
+  "confidence": 1.0,
+  "tags": [
+    "benign",
+    "false_prone",
+    "legitimate"
+  ],
+  "name": "\u767d\u6837\u672c-False Prone - \u53d8\u4f533",
+  "description": "false_prone \u7684\u826f\u6027\u6837\u672c\u53d8\u4f53 #3",
+  "test_cases": [
+    "FA-TN-03"
+  ],
+  "status": "ready",
+  "variant_of": "BEN-FAL-a33f47",
+  "generated_at": "2026-03-22T10:28:00.422662"
+}

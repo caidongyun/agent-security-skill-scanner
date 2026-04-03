@@ -1,0 +1,6417 @@
+{
+  "version": "2.0",
+  "total": 562,
+  "rules": [
+    {
+      "id": "MALWARE-001",
+      "name": "eval/exec滥用",
+      "category": "malware",
+      "severity": "CRITICAL",
+      "patterns": [
+        "eval\\s*\\([^)]+\\)",
+        "exec\\s*\\([^)]+\\)"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MALWARE-002",
+      "name": "动态导入",
+      "category": "malware",
+      "severity": "HIGH",
+      "patterns": [
+        "__import__\\s*\\([^)]+\\)",
+        "importlib\\.import_module"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MALWARE-003",
+      "name": "网络请求无限制",
+      "category": "malware",
+      "severity": "HIGH",
+      "patterns": [
+        "requests\\.(get|post)",
+        "verify\\s*=\\s*False"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MALWARE-004",
+      "name": "数据窃取模式",
+      "category": "malware",
+      "severity": "CRITICAL",
+      "patterns": [
+        "os\\.environ",
+        "\\.send\\(",
+        "smtplib"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "BACKDOOR-001",
+      "name": "隐藏后门",
+      "category": "backdoor",
+      "severity": "CRITICAL",
+      "patterns": [
+        "subprocess.*shell=True",
+        "pty\\.spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "BACKDOOR-002",
+      "name": "持久化",
+      "category": "backdoor",
+      "severity": "HIGH",
+      "patterns": [
+        "cron",
+        "systemd",
+        "registry"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-001",
+      "name": "sudo滥用",
+      "category": "privilege",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo\\s+",
+        "os\\.setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-010",
+      "name": "tooluse",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "tooluse"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-011",
+      "name": "files",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "files"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-012",
+      "name": "loop",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "loop"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-013",
+      "name": "infinite",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "infinite"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-014",
+      "name": "bash",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "bash"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-015",
+      "name": "pollution",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "pollution"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-016",
+      "name": "commands",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "commands"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-017",
+      "name": "runner",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "runner"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-018",
+      "name": "executing",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "executing"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-019",
+      "name": "memory",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "memory"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-020",
+      "name": "automator",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "automator"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-021",
+      "name": "automation",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "automation"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-022",
+      "name": "exhaustion",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "exhaustion"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-023",
+      "name": "resource",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "resource"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-024",
+      "name": "accessing",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "accessing"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-025",
+      "name": "long",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "long"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-026",
+      "name": "abuse",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "abuse"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-027",
+      "name": "multi",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "multi"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-028",
+      "name": "sites",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "sites"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-029",
+      "name": "outside",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "outside"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-030",
+      "name": "corruption",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "corruption"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-031",
+      "name": "token",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "token"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-032",
+      "name": "playwright",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "playwright"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-033",
+      "name": "hook",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "hook"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-034",
+      "name": "system",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "system"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-035",
+      "name": "shell",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "shell"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-036",
+      "name": "context",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "context"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-037",
+      "name": "optimizer",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "optimizer"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-038",
+      "name": "detection",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "detection"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-039",
+      "name": "term",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "term"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-040",
+      "name": "browser",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "browser"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-041",
+      "name": "inspector",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "inspector"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-042",
+      "name": "write",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "write"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-043",
+      "name": "attack",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "attack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-044",
+      "name": "workflow",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "workflow"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-045",
+      "name": "manager",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "manager"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-046",
+      "name": "batch",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "batch"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-047",
+      "name": "analyzer",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "analyzer"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-048",
+      "name": "helper",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "helper"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-049",
+      "name": "sensitive",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "sensitive"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-050",
+      "name": "maximizer",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "maximizer"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-051",
+      "name": "description",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "description"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-052",
+      "name": "processor",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "processor"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-053",
+      "name": "posttooluse",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "posttooluse"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-054",
+      "name": "tool",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "tool"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-055",
+      "name": "project",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "project"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-056",
+      "name": "reading",
+      "category": "privilege",
+      "severity": "medium",
+      "patterns": [
+        "reading"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CRED-001",
+      "name": "API密钥",
+      "category": "credential",
+      "severity": "HIGH",
+      "patterns": [
+        "api[_-]?key",
+        "secret",
+        "password"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-001",
+      "name": "Ignore Previous",
+      "category": "prompt_injection",
+      "severity": "CRITICAL",
+      "patterns": [
+        "ignore\\s+previous",
+        "forget\\s+all"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-002",
+      "name": "Base64混淆",
+      "category": "prompt_injection",
+      "severity": "CRITICAL",
+      "patterns": [
+        "base64\\.b64decode",
+        "b64decode"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-003",
+      "name": "Unicode混淆",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "\\\\u[0-9a-f]{4}"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-004",
+      "name": "System Prompt泄露",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "SYSTEM_PROMPT",
+        "system_prompt"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-005",
+      "name": "指令注入",
+      "category": "prompt_injection",
+      "severity": "CRITICAL",
+      "patterns": [
+        "<\\s*/\\s*instruction"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-006",
+      "name": "DAN越狱",
+      "category": "prompt_injection",
+      "severity": "CRITICAL",
+      "patterns": [
+        "dan.*jailbreak",
+        "do.*anything.*now"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-007",
+      "name": "角色扮演注入",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "you.*are.*now",
+        "pretend.*to.*be"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-008",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-009",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-010",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-011",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-012",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-013",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-014",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-015",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-016",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-017",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-018",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-019",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-020",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-021",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-022",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-023",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-024",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-025",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-026",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-027",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-028",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-029",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-030",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-031",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-032",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-033",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-034",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-035",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-036",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-037",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-038",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-039",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-040",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-041",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-042",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-043",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-044",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-045",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-046",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-047",
+      "name": "Auto-prompt_injection",
+      "category": "prompt_injection",
+      "severity": "HIGH",
+      "patterns": [
+        "ignore previous",
+        "forget all",
+        "disregard",
+        "new instruction",
+        "role hijack"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "THIRD-001",
+      "name": "远程内容获取",
+      "category": "third_party_content",
+      "severity": "MEDIUM",
+      "patterns": [
+        "fetch\\s*\\([^)]*https?://",
+        "requests\\.get\\s*\\([^)]*https?://"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "THIRD-002",
+      "name": "curl bash",
+      "category": "third_party_content",
+      "severity": "HIGH",
+      "patterns": [
+        "curl\\s+\\|\\s*bash",
+        "wget\\s+.*\\|\\s*bash"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "THIRD-003",
+      "name": "动态代码执行",
+      "category": "third_party_content",
+      "severity": "HIGH",
+      "patterns": [
+        "eval\\s*\\(\\s*__import__",
+        "exec\\s*\\(\\s*__import__"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "THIRD-004",
+      "name": "动态脚本",
+      "category": "third_party_content",
+      "severity": "MEDIUM",
+      "patterns": [
+        "script\\.src=",
+        "<script"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-001",
+      "name": "Auto-Credential Theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-002",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-003",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-004",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-005",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-006",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-007",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-008",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-009",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-010",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-011",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-012",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-013",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-014",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-015",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-016",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-017",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-018",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-019",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-020",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-021",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-022",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-023",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-024",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-025",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-026",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-027",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-028",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-029",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-030",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-031",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-032",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-033",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-034",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-035",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-036",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-037",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-038",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-039",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-040",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CREDEN-041",
+      "name": "Auto-credential_theft",
+      "category": "credential_theft",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key",
+        "password",
+        "secret",
+        "token",
+        ".env"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-001",
+      "name": "Auto-Command Execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "pty.spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-002",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-003",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-004",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-005",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-006",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-007",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-008",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-009",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-010",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-011",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-012",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-013",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-014",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-015",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-016",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-017",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-018",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-019",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-020",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-021",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-022",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-023",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-024",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-025",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-026",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-027",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-028",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-029",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-030",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-031",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-032",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-033",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-034",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-035",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-036",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-037",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-038",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-039",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-040",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "COMMAN-041",
+      "name": "Auto-command_execution",
+      "category": "command_execution",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess",
+        "shell=true",
+        "os.system",
+        "exec(",
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "DATA E-001",
+      "name": "Auto-Data Exfiltration",
+      "category": "data_exfiltration",
+      "severity": "HIGH",
+      "patterns": [
+        "exfiltrat",
+        "send data",
+        "upload",
+        "curl.*http"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-001",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-002",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-003",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-004",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-005",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-006",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-007",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-008",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-009",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-010",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-011",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-012",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-013",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-014",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-015",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-016",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-017",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-018",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-019",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-020",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-021",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-022",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-023",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-024",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-025",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-026",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-027",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-028",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-029",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-030",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-031",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-032",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-033",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-034",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-035",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-036",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-037",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-038",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-039",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIVIL-040",
+      "name": "Auto-privilege_abuse",
+      "category": "privilege_abuse",
+      "severity": "HIGH",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-001",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-002",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-003",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-004",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-005",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-006",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-007",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-008",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-009",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-010",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-011",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-012",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-013",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-014",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-015",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-016",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-017",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-018",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-019",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-020",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-021",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-022",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-023",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-024",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-025",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-026",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-027",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-028",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-029",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-030",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-031",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-032",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-033",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-034",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-035",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-036",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-037",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-038",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-039",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPPLY-040",
+      "name": "Auto-supply_chain",
+      "category": "supply_chain",
+      "severity": "HIGH",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-001",
+      "name": "pip安装",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "pip install",
+        "pip3 install",
+        "pip install -r"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-002",
+      "name": "npm安装",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "npm install",
+        "yarn add",
+        "pnpm add"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-003",
+      "name": "动态导入",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "__import__",
+        "importlib.import_module",
+        "import from"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-004",
+      "name": "代码执行",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "eval",
+        "exec",
+        "compile("
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-005",
+      "name": "远程加载",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "curl",
+        "wget",
+        "fetch"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-010",
+      "name": "fns",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "fns"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-011",
+      "name": "abuse",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "abuse"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-012",
+      "name": "extended",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "extended"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-013",
+      "name": "extend",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "extend"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-014",
+      "name": "detection",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "detection"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-015",
+      "name": "axios",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "axios"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-016",
+      "name": "react",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "react"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-017",
+      "name": "npm",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "npm"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-018",
+      "name": "utils",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "utils"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-019",
+      "name": "supply",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "supply"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-020",
+      "name": "description",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "description"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-021",
+      "name": "name",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "name"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-022",
+      "name": "node",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "node"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-023",
+      "name": "postinstall",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "postinstall"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-024",
+      "name": "dependency",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "dependency"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-025",
+      "name": "package",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "package"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-026",
+      "name": "malicious",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "malicious"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-027",
+      "name": "date",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "date"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-028",
+      "name": "plus",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "plus"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-029",
+      "name": "python",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "python"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-030",
+      "name": "profiler",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "profiler"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-031",
+      "name": "utilz",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "utilz"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-032",
+      "name": "preinstall",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "preinstall"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-033",
+      "name": "typosquatting",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "typosquatting"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-034",
+      "name": "script",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "script"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-035",
+      "name": "lodash",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "lodash"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-036",
+      "name": "injection",
+      "category": "supply_chain",
+      "severity": "medium",
+      "patterns": [
+        "injection"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-100",
+      "name": "指令覆盖",
+      "category": "prom",
+      "severity": "medium",
+      "patterns": [
+        "ignore previous",
+        "disregard",
+        "override"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-101",
+      "name": "角色劫持",
+      "category": "prom",
+      "severity": "medium",
+      "patterns": [
+        "you are now",
+        "act as",
+        "pretend"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PROMPT-102",
+      "name": "系统提示",
+      "category": "prom",
+      "severity": "medium",
+      "patterns": [
+        "system",
+        "prompt",
+        "instruction"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CRED-100",
+      "name": "API密钥",
+      "category": "cred",
+      "severity": "medium",
+      "patterns": [
+        "api",
+        "key",
+        "secret",
+        "token",
+        "password"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CRED-101",
+      "name": "环境变量",
+      "category": "cred",
+      "severity": "medium",
+      "patterns": [
+        "environ",
+        "env",
+        "getenv"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CRED-102",
+      "name": "配置文件",
+      "category": "cred",
+      "severity": "medium",
+      "patterns": [
+        "config",
+        "credential",
+        "auth"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-100",
+      "name": "权限提升",
+      "category": "priv",
+      "severity": "medium",
+      "patterns": [
+        "sudo",
+        "chmod",
+        "chown",
+        "setuid",
+        "root"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "PRIV-101",
+      "name": "系统操作",
+      "category": "priv",
+      "severity": "medium",
+      "patterns": [
+        "os.chmod",
+        "os.chown",
+        "os.setuid",
+        "subprocess"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-100",
+      "name": "依赖安装",
+      "category": "supp",
+      "severity": "medium",
+      "patterns": [
+        "pip install",
+        "npm install",
+        "import",
+        "require"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "SUPP-101",
+      "name": "外部代码",
+      "category": "supp",
+      "severity": "medium",
+      "patterns": [
+        "eval(",
+        "exec(",
+        "__import__",
+        "importlib"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-001",
+      "name": "generate_token",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "generate_token"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-002",
+      "name": "secrets",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "secrets"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-003",
+      "name": "_execute",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "_execute"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-004",
+      "name": "system_data",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "system_data"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-005",
+      "name": "executor",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "executor"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-006",
+      "name": "eval_result",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "eval_result"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-007",
+      "name": "exec",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "exec"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-008",
+      "name": "evaluator",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "evaluator"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-009",
+      "name": "api_key",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "api_key"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-010",
+      "name": "scannerevaluator",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "scannerevaluator"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-011",
+      "name": "filesystemeventhandler",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "filesystemeventhandler"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-012",
+      "name": "ntoken",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "ntoken"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-013",
+      "name": "evaluate_token_strength",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "evaluate_token_strength"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-014",
+      "name": "collect_system_data",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "collect_system_data"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-015",
+      "name": "evaluate",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "evaluate"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-016",
+      "name": "passwordhardeningscanner",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "passwordhardeningscanner"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-017",
+      "name": "evaluation",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "evaluation"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-018",
+      "name": "execute_task",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "execute_task"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-019",
+      "name": "parallelexecutor",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "parallelexecutor"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-020",
+      "name": "password",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "password"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-021",
+      "name": "authentication",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "authentication"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-022",
+      "name": "token",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "token"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-023",
+      "name": "generate_token_batch",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "generate_token_batch"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-024",
+      "name": "wget",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "wget"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-025",
+      "name": "auth",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "auth"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-026",
+      "name": "shell_exec",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "shell_exec"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-027",
+      "name": "requests",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "requests"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-028",
+      "name": "_evaluate_sample",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "_evaluate_sample"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-029",
+      "name": "fetch",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "fetch"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-030",
+      "name": "your_token_here",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "your_token_here"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-031",
+      "name": "system",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "system"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-032",
+      "name": "popen",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "popen"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-033",
+      "name": "secret",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "secret"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-034",
+      "name": "execute",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "execute"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-035",
+      "name": "token_hex",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "token_hex"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-036",
+      "name": "https",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "https"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-037",
+      "name": "tokens",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "tokens"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-038",
+      "name": "iam_password_policy",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "iam_password_policy"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-039",
+      "name": "curl",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "curl"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-040",
+      "name": "spawn",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "spawn"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-041",
+      "name": "token_generator",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "token_generator"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-042",
+      "name": "token_urlsafe",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "token_urlsafe"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-043",
+      "name": "http",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "http"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-044",
+      "name": "credential",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "credential"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-045",
+      "name": "check_auth",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "check_auth"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-046",
+      "name": "subprocess",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "subprocess"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALHIGH-047",
+      "name": "shell",
+      "category": "real_world_detection",
+      "severity": "HIGH",
+      "patterns": [
+        "shell"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-048",
+      "name": "config_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "config_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-049",
+      "name": "writefile",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "writefile"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-050",
+      "name": "report_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "report_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-051",
+      "name": "log_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "log_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-052",
+      "name": "read",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "read"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-053",
+      "name": "readfile",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "readfile"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-054",
+      "name": "file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-055",
+      "name": "importerror",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "importerror"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-056",
+      "name": "thread",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "thread"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-057",
+      "name": "filenotfounderror",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "filenotfounderror"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-058",
+      "name": "threads",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "threads"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-059",
+      "name": "threading",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "threading"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-060",
+      "name": "node_modules",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "node_modules"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-061",
+      "name": "profile",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "profile"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-062",
+      "name": "file_path",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "file_path"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-063",
+      "name": "configfilehandler",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "configfilehandler"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-064",
+      "name": "output_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "output_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-065",
+      "name": "files",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "files"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-066",
+      "name": "knowledge_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "knowledge_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-067",
+      "name": "remove",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "remove"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-068",
+      "name": "_mfa_delete",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "_mfa_delete"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-069",
+      "name": "scan_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "scan_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-070",
+      "name": "files_scanned",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "files_scanned"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-071",
+      "name": "ct_log_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "ct_log_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-072",
+      "name": "package",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "package"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-073",
+      "name": "import",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "import"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-074",
+      "name": "load_targets_from_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "load_targets_from_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-075",
+      "name": "history_file",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "history_file"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-076",
+      "name": "copy",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "copy"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-077",
+      "name": "readlines",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "readlines"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-078",
+      "name": "write",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "write"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-079",
+      "name": "__file__",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "__file__"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-080",
+      "name": "read_text",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "read_text"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "REALMED-081",
+      "name": "profile_name",
+      "category": "real_world_detection",
+      "severity": "MEDIUM",
+      "patterns": [
+        "profile_name"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-001",
+      "name": "eval执行",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\beval\\s*\\(",
+        "\\bexec\\s*\\(",
+        "\\bcompile\\s*\\("
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-002",
+      "name": "subprocess",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bsubprocess\\b",
+        "\\bos\\.system\\b",
+        "\\bos\\.popen\\b",
+        "\\bpty\\.spawn\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-003",
+      "name": "网络请求",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\brequests\\.",
+        "\\burllib\\.",
+        "\\bhttp\\.",
+        "\\bcurl\\b",
+        "\\bwget\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-004",
+      "name": "文件操作",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bopen\\s*\\(",
+        "\\bos\\.read\\b",
+        "\\bos\\.write\\b",
+        "\\bos\\.remove\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-005",
+      "name": "凭据处理",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bpassword\\b",
+        "\\bsecret\\b",
+        "\\btoken\\b",
+        "\\bapi_key\\b",
+        "\\bcredential\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-006",
+      "name": "动态导入",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\b__import__\\b",
+        "\\bimportlib\\b",
+        "\\bgetattr\\s*\\([^)]*__"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-007",
+      "name": "Shell 命令",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bshell\\s*=\\s*True\\b",
+        "\\bshell=True\\b",
+        "\\|.*bash\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-008",
+      "name": "环境变量",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bos\\.environ\\b",
+        "\\bos\\.getenv\\b",
+        "\\bgetenv\\s*\\("
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-009",
+      "name": "序列化",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bpickle\\b",
+        "\\bmarshal\\b",
+        "\\byaml\\.load\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "CODE-010",
+      "name": "反射",
+      "category": "code_pattern_detection",
+      "severity": "medium",
+      "patterns": [
+        "\\bgetattr\\b",
+        "\\bsetattr\\b",
+        "\\bdelattr\\b",
+        "\\bhasattr\\b"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MD-001",
+      "name": "权限声明",
+      "category": "markdown_skill_detection",
+      "severity": "medium",
+      "patterns": [
+        "permissions:",
+        "file\\.read",
+        "file\\.write",
+        "exec"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MD-002",
+      "name": "工具调用",
+      "category": "markdown_skill_detection",
+      "severity": "medium",
+      "patterns": [
+        "tools:",
+        "commands:",
+        "shell:",
+        "bash:"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MD-003",
+      "name": "敏感操作",
+      "category": "markdown_skill_detection",
+      "severity": "medium",
+      "patterns": [
+        "sudo",
+        "root",
+        "admin",
+        "system"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MD-004",
+      "name": "网络访问",
+      "category": "markdown_skill_detection",
+      "severity": "medium",
+      "patterns": [
+        "http://",
+        "https://",
+        "curl",
+        "wget",
+        "requests"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "MD-005",
+      "name": "凭据处理",
+      "category": "markdown_skill_detection",
+      "severity": "medium",
+      "patterns": [
+        "api.?key",
+        "password",
+        "secret",
+        "token",
+        "credential"
+      ],
+      "source": "gitee"
+    },
+    {
+      "id": "sigma-data-exfiltration-005",
+      "name": "Detect Data Exfiltration - Variant 005",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-002",
+      "name": "Detect Data Exfiltration - Variant 002",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-001",
+      "name": "Detect Data Exfiltration - Variant 001",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-004",
+      "name": "Detect Data Exfiltration - Variant 004",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-003",
+      "name": "Detect Data Exfiltration - Variant 003",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-002",
+      "name": "Detect Memory Pollution - From Sample 2",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-003",
+      "name": "Detect Memory Pollution - From Sample 3",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-007",
+      "name": "Detect Memory Pollution - From Sample 7",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-005",
+      "name": "Detect Memory Pollution - From Sample 5",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-004",
+      "name": "Detect Memory Pollution - From Sample 4",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-006",
+      "name": "Detect Memory Pollution - From Sample 6",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-sample-001",
+      "name": "Detect Memory Pollution - From Sample 1",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-sample-006",
+      "name": "Detect Resource Exhaustion - From Sample 6",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-sample-002",
+      "name": "Detect Resource Exhaustion - From Sample 2",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-sample-004",
+      "name": "Detect Resource Exhaustion - From Sample 4",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-sample-003",
+      "name": "Detect Resource Exhaustion - From Sample 3",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-sample-001",
+      "name": "Detect Resource Exhaustion - From Sample 1",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-sample-005",
+      "name": "Detect Resource Exhaustion - From Sample 5",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-001",
+      "name": "Detect Data Exfiltration - From Sample 1",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-004",
+      "name": "Detect Data Exfiltration - From Sample 4",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-005",
+      "name": "Detect Data Exfiltration - From Sample 5",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-008",
+      "name": "Detect Data Exfiltration - From Sample 8",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-007",
+      "name": "Detect Data Exfiltration - From Sample 7",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-002",
+      "name": "Detect Data Exfiltration - From Sample 2",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-006",
+      "name": "Detect Data Exfiltration - From Sample 6",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-data-exfiltration-sample-003",
+      "name": "Detect Data Exfiltration - From Sample 3",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-001",
+      "name": "Detect Prompt Injection - Variant 001",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-003",
+      "name": "Detect Prompt Injection - Variant 003",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-005",
+      "name": "Detect Prompt Injection - Variant 005",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-004",
+      "name": "Detect Prompt Injection - Variant 004",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-bypass-2",
+      "name": "Detect Prompt Injection Bypass - Extended",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-bypass",
+      "name": "Detect Prompt Injection Bypass",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-002",
+      "name": "Detect Prompt Injection - Variant 002",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-009",
+      "name": "Detect Tool Poisoning - From Sample 9",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-002",
+      "name": "Detect Tool Poisoning - From Sample 2",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-001",
+      "name": "Detect Tool Poisoning - From Sample 1",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-005",
+      "name": "Detect Tool Poisoning - From Sample 5",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-014",
+      "name": "Detect Tool Poisoning - From Sample 14",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-011",
+      "name": "Detect Tool Poisoning - From Sample 11",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-010",
+      "name": "Detect Tool Poisoning - From Sample 10",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-003",
+      "name": "Detect Tool Poisoning - From Sample 3",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-012",
+      "name": "Detect Tool Poisoning - From Sample 12",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-004",
+      "name": "Detect Tool Poisoning - From Sample 4",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-008",
+      "name": "Detect Tool Poisoning - From Sample 8",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-007",
+      "name": "Detect Tool Poisoning - From Sample 7",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-006",
+      "name": "Detect Tool Poisoning - From Sample 6",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-015",
+      "name": "Detect Tool Poisoning - From Sample 15",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-sample-013",
+      "name": "Detect Tool Poisoning - From Sample 13",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-001",
+      "name": "Detect Resource Exhaustion - Variant 001",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-005",
+      "name": "Detect Resource Exhaustion - Variant 005",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-004",
+      "name": "Detect Resource Exhaustion - Variant 004",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-003",
+      "name": "Detect Resource Exhaustion - Variant 003",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-resource-exhaustion-002",
+      "name": "Detect Resource Exhaustion - Variant 002",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-002",
+      "name": "Detect Remote Load - Variant 002",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-005",
+      "name": "Detect Remote Load - Variant 005",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-001",
+      "name": "Detect Remote Load - Variant 001",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-003",
+      "name": "Detect Remote Load - Variant 003",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-004",
+      "name": "Detect Remote Load - Variant 004",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-001",
+      "name": "Detect Memory Pollution - Variant 001",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-004",
+      "name": "Detect Memory Pollution - Variant 004",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-003",
+      "name": "Detect Memory Pollution - Variant 003",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-005",
+      "name": "Detect Memory Pollution - Variant 005",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-memory-pollution-002",
+      "name": "Detect Memory Pollution - Variant 002",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-014",
+      "name": "Detect Prompt Injection - From Sample 14",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-003",
+      "name": "Detect Prompt Injection - From Sample 3",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-005",
+      "name": "Detect Prompt Injection - From Sample 5",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-015",
+      "name": "Detect Prompt Injection - From Sample 15",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-002",
+      "name": "Detect Prompt Injection - From Sample 2",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-011",
+      "name": "Detect Prompt Injection - From Sample 11",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-013",
+      "name": "Detect Prompt Injection - From Sample 13",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-010",
+      "name": "Detect Prompt Injection - From Sample 10",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-007",
+      "name": "Detect Prompt Injection - From Sample 7",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-prompt-injection-sample-006",
+      "name": "Detect Prompt Injection - From Sample 6",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-sample-003",
+      "name": "Detect Remote Load - From Sample 3",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-sample-001",
+      "name": "Detect Remote Load - From Sample 1",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-sample-005",
+      "name": "Detect Remote Load - From Sample 5",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-sample-006",
+      "name": "Detect Remote Load - From Sample 6",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-sample-004",
+      "name": "Detect Remote Load - From Sample 4",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-remote-load-sample-002",
+      "name": "Detect Remote Load - From Sample 2",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-005",
+      "name": "Detect Tool Poisoning - Variant 005",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-002",
+      "name": "Detect Tool Poisoning - Variant 002",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-003",
+      "name": "Detect Tool Poisoning - Variant 003",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-001",
+      "name": "Detect Tool Poisoning - Variant 001",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "sigma-tool-poisoning-004",
+      "name": "Detect Tool Poisoning - Variant 004",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "sigma"
+    },
+    {
+      "id": "rag-sigma-004",
+      "name": "RAG Adversarial Embedding Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-019",
+      "name": "RAG Vector Space Roaming Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-010",
+      "name": "RAG Query Rewriting Attack Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-015",
+      "name": "RAG Data Source Spoofing Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-020",
+      "name": "RAG Cascading Attack Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection | count() > 10"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-008",
+      "name": "RAG Document Chunk Poisoning Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-006",
+      "name": "RAG Retrieval Result Tampering Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-009",
+      "name": "RAG Metadata Injection Detection",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-018",
+      "name": "RAG Timestamp Forgery Detection",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-002",
+      "name": "RAG Context Contamination Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-003",
+      "name": "RAG Retrieval Hijacking Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-012",
+      "name": "RAG Covert Channel Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-005",
+      "name": "RAG Knowledge Base Poisoning Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-014",
+      "name": "RAG Model Behavior Manipulation Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-013",
+      "name": "RAG Access Control Bypass Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-017",
+      "name": "RAG Multilingual Evasion Detection",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-011",
+      "name": "RAG Retrieval Frequency Abuse Detection",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection | count() > 50"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-001",
+      "name": "RAG Vector Injection Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-016",
+      "name": "RAG Multi-turn Conversation Poisoning Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection | count() > 5"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "rag-sigma-007",
+      "name": "RAG Vector Similarity Attack Detection",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "CI-SIGMA-003",
+      "name": "反引号命令注入",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "CI-SIGMA-002",
+      "name": "exec 函数代码注入",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "CI-SIGMA-001",
+      "name": "eval 函数代码注入",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "CI-SIGMA-004",
+      "name": "模板注入攻击",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "CI-SIGMA-005",
+      "name": "pickle 反序列化注入",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "PR-SIGMA-002",
+      "name": "系统提示泄露",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "PR-SIGMA-003",
+      "name": "角色扮演攻击",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "PR-SIGMA-006",
+      "name": "上下文污染",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "PR-SIGMA-005",
+      "name": "多语言注入",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "PR-SIGMA-001",
+      "name": "指令覆盖攻击",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "RE-SIGMA-002",
+      "name": "内存耗尽攻击",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "RE-SIGMA-004",
+      "name": "网络带宽耗尽",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "RE-SIGMA-001",
+      "name": "CPU 耗尽攻击",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "RE-SIGMA-005",
+      "name": "进程创建炸弹",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "RE-SIGMA-003",
+      "name": "磁盘填充攻击",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "ME-SIGMA-005",
+      "name": "持久化污染",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "ME-SIGMA-002",
+      "name": "上下文覆盖",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "ME-SIGMA-001",
+      "name": "记忆注入攻击",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "ME-SIGMA-003",
+      "name": "虚假历史注入",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "ME-SIGMA-004",
+      "name": "会话劫持",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "DA-SIGMA-001",
+      "name": "敏感数据外传",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "DA-SIGMA-005",
+      "name": "文件内容窃取",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "DA-SIGMA-002",
+      "name": "base64 编码外传",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "DA-SIGMA-003",
+      "name": "HTTP 数据外传",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "DA-SIGMA-004",
+      "name": "DNS 隧道外传",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "DA-SIGMA-006",
+      "name": "环境变量窃取",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "TO-SIGMA-003",
+      "name": "工具输出伪造",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "TO-SIGMA-004",
+      "name": "工具依赖污染",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "TO-SIGMA-005",
+      "name": "工具配置篡改",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "TO-SIGMA-001",
+      "name": "恶意工具替换",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "TO-SIGMA-002",
+      "name": "工具参数篡改",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "0b6e2f54-7c1d-4e4b-2a9f-5d1c8e6b0a4d",
+      "name": "Create or Modify System Process - Systemd Service Persistence",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_systemctl_create or selection_service_file or selection_echo_service or selection_user_service"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "9a5d1e43-6b0c-4d3a-1f8e-4c0b7d5a9f3c",
+      "name": "Unsecured Credentials - Password File Access",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_etc_shadow or selection_ssh_keys or selection_gnupg or selection_history or selection_env_creds"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "1e7b3c65-8f2a-4b5e-3d0c-6a2f9e5b7c1d",
+      "name": "Valid Accounts - Privileged Account Login Detection",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection_root_login or selection_admin_login or selection_su_usage"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "4f0c6d98-1a5b-4c8f-6e3d-9b5a2c0f4e8b",
+      "name": "Exploit Public-Facing Application - Web Shell Detection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection_webshell_common or selection_webshell_files or selection_web_directory"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "3a9d5e87-0b4c-4d7a-5f2e-8c4b1a7d9e3f",
+      "name": "Create Account - Unauthorized Local Account Creation",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_useradd or selection_adduser or selection_dscl or selection_usermod or selection_passwd_add"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "6b2e8f10-3c7d-4e0b-8a5f-1d7c4e2b6f0d",
+      "name": "Network Service Discovery - Port Scanning and Reconnaissance",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection_nmap_scan or selection_masscan or selection_nc_scan or selection_ssh_scan"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "8f4c0d32-5a9b-4c2f-0e7d-3b9a6c4f8e2b",
+      "name": "Rootkit - Kernel Module Manipulation",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection_insmod or selection_modprobe or selection_rmmod or selection_ko_install or selection_dev_hidden"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "7e3b9c21-4f8a-4b1e-9d6c-2a8f5b3e7d1a",
+      "name": "Process Injection - ptrace Based Injection",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection_ptrace_attach or selection_ld_preload or selection_memfd or selection_proc_injection"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "1c7f3a65-8d2e-4f5c-3b0a-6e2d9f7c1b5e",
+      "name": "Indicator Removal - Log Tampering and Clearing",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_log_clear or selection_log_delete or selection_syslog_clear or selection_history_clear"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "6d2a8b10-3e7f-4a0d-8c5b-1f7e4d0a2b6c",
+      "name": "Scheduled Task/Job - Cron Job Persistence",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_crontab_edit or selection_cron_direct or selection_echo_cron or selection_systemd_timer"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "4b0e6f98-1c5d-4e8b-6a3f-9d5c2b8e0f4a",
+      "name": "Command and Scripting Interpreter - Bash Reverse Shell",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection_bash_reverse or selection_nc_reverse or selection_python_reverse or selection_perl_reverse or selection_ruby_reverse"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "2f8c4d76-9a3b-4c6f-4e1d-7b3a0f6c8d2e",
+      "name": "Valid Accounts - Concurrent Session Anomaly",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection_concurrent or selection_same_user_diff_ip"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "5a1d7e09-2b6c-4d9a-7f4e-0c6b3d1a5e9c",
+      "name": "Server Software Component - SSH Authorized Keys Modification",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_auth_keys_mod or selection_echo_keys or selection_ssh_keygen"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "0d6a2b54-7e1f-4a4d-2c9b-5f1e8d4a6b0c",
+      "name": "Valid Accounts - Unusual Login Time and Location",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection_off_hours or selection_geo_anomaly or selection_new_device"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "2d8a4b76-9e3f-4a6d-4c1b-7f3e0a8d2c6f",
+      "name": "Remote Services - SSH Tunneling and Port Forwarding",
+      "category": "unknown",
+      "severity": "medium",
+      "patterns": [
+        "selection_ssh_tunnel or selection_ssh_proxy or selection_nc_tunnel"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "7a3f9e21-4b8c-4d1a-9f6e-2c8b5a1d3e7f",
+      "name": "Linux SUID Binary Abuse - DirtyPipe Style Exploitation",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection_suid_exploit or selection_dirty_pipe or selection_suid_targets"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "8b4e0f32-5c9d-4e2b-0a7f-3d9c6b2e4f8a",
+      "name": "Sudo Configuration Abuse and NOPASSWD Exploitation",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_sudoers_mod or selection_nopasswd or selection_sudo_exploit or selection_sudo_cache"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "5c1f7a09-2d6e-4f9c-7b4a-0e6d3c9f1a5b",
+      "name": "Command and Scripting Interpreter - Suspicious Script Execution",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_tmp_scripts or selection_base64_decode or selection_curl_bash or selection_encoded_command"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "9c5f1a43-6d0e-4f3c-1b8a-4e0d7c3f5a9b",
+      "name": "Valid Accounts - Brute Force and Credential Stuffing Attack",
+      "category": "unknown",
+      "severity": "high",
+      "patterns": [
+        "selection_ssh_failed or selection_multiple_failures or selection_ssh_bruteforce"
+      ],
+      "source": "t14g2"
+    },
+    {
+      "id": "3e9b5c87-0f4a-4b7e-5d2c-8a4f1b9e3d7a",
+      "name": "Hijack Execution Flow - LD Library Hijacking",
+      "category": "unknown",
+      "severity": "critical",
+      "patterns": [
+        "selection_ld_preload_set or selection_ld_library_path or selection_so_hijack or selection_rpath_hijack"
+      ],
+      "source": "t14g2"
+    }
+  ]
+}

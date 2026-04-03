@@ -1,0 +1,33 @@
+{
+  "id": "DA-DLP-006",
+  "name": "\u73af\u5883\u53d8\u91cf\u7a83\u53d6",
+  "category": "data_exfil",
+  "type": "dlp",
+  "severity": "medium",
+  "description": "\u9632\u6b62\u73af\u5883\u53d8\u91cf\u7a83\u53d6\u5bfc\u81f4\u7684\u6570\u636e\u6cc4\u9732",
+  "patterns": [
+    "os.environ",
+    "process.env",
+    "getenv("
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.173400",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ],
+  "test_cases": {
+    "positive": [
+      "os.environ",
+      "process.env"
+    ],
+    "negative": []
+  }
+}

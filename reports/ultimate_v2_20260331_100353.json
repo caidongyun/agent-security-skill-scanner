@@ -1,0 +1,348 @@
+{
+  "timestamp": "2026-03-31T10:04:35.083592",
+  "summary": {
+    "total": 57757,
+    "malicious": 57757,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 15.708,
+    "avg_time_ms": 1.331
+  },
+  "by_language": {
+    "unknown": {
+      "total": 57757,
+      "malicious": 57757
+    }
+  },
+  "by_risk_level": {
+    "medium": 25702,
+    "low": 30950,
+    "high": 1105
+  },
+  "by_detection_layers": {
+    "yara": 57757
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-0e357d/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.924,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-13a2a6/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 16.371,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-c46ce5/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 20.656,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-fc92c1/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 2.02,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-d128e7/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.45,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-037c0d/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 1.165,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-23d73d/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.321,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-9f9416/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.375,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-ec1c87/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.308,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-714a41/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Agent_Env_Theft",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.391,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

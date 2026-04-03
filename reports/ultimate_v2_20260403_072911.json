@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-04-03T07:29:11.937812",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.445
+  },
+  "by_language": {
+    "bash": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "medium": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-794665/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "PRIV_054",
+        "PROMPT_002",
+        "SUPP_021",
+        "SUPP_029",
+        "CRED_101",
+        "SUPP_100",
+        "REALMED_073"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:PRIV_054",
+        "🟡 YARA:PROMPT_002",
+        "🟡 YARA:SUPP_021",
+        "🟡 YARA:SUPP_029",
+        "🟡 YARA:CRED_101"
+      ],
+      "scan_time_ms": 0.445,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

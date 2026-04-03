@@ -1,0 +1,71 @@
+{
+  "id": "BENCH-REX-cb260a",
+  "version": "2.0",
+  "sample_id": "MAL-REX-cb260a",
+  "name": "资源耗尽 - HARD",
+  "description": "",
+  "attack_type": "resource_exhaustion",
+  "severity": "medium",
+  "category": "拒绝服务",
+  "language": "bash",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "拒绝服务",
+    "mitre_atlas": [
+      "ATLAS-T0006"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T21:10:54.352075"
+  },
+  "behaviors": [
+    "resource_consumption",
+    "process_spawn"
+  ],
+  "indicators": [
+    "os.fork()",
+    "infinite loop",
+    "memory allocation"
+  ],
+  "tags": [
+    "dos",
+    "resource",
+    "fork"
+  ],
+  "mitigation_indicators": [
+    "资源限制",
+    "超时设置",
+    "进程数限制"
+  ],
+  "false_positive_scenarios": [
+    "正常的批处理作业",
+    "大数据处理"
+  ],
+  "detection_difficulty": {
+    "score": 3,
+    "level": "L3",
+    "description": "高度混淆，需要高级分析",
+    "indicators_count": 1
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L3",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T21:10:54.352084",
+    "updated_at": "2026-03-29T21:10:54.352085",
+    "payload_file": "resource_exhaustion/MAL-REX-cb260a/payload.bash"
+  }
+}

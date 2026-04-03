@@ -1,0 +1,14 @@
+{
+  "test_case_id": "TP_NEG_000",
+  "attack_type": "tool_poisoning",
+  "sample_type": "negative",
+  "content": "# Normal sample: tool_poisoning variant 0\ndef safe_calc(a, b):\n    return a + b\n",
+  "content_hash": "1998c4c38a468efc",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.582194",
+    "generator_version": "1.0.0"
+  }
+}

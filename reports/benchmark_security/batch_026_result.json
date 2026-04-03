@@ -1,0 +1,22 @@
+{
+  "batch": 26,
+  "total_batches": 556,
+  "samples": 100,
+  "scanners": {
+    "ultimate_v2": {
+      "scanner": "ultimate_v2",
+      "total": 89,
+      "malicious": 89,
+      "benign": 0,
+      "detection_rate": 1.0,
+      "time": 0.01880004908889532,
+      "avg_time": 0.06586516853932585,
+      "by_language": {
+        "unknown": {
+          "total": 89,
+          "malicious": 89
+        }
+      }
+    }
+  }
+}

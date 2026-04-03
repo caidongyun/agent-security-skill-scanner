@@ -1,0 +1,372 @@
+{
+  "timestamp": "2026-03-31T19:28:23.183055",
+  "summary": {
+    "total": 5339,
+    "malicious": 5339,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.491,
+    "avg_time_ms": 0.35
+  },
+  "by_language": {
+    "python": {
+      "total": 1056,
+      "malicious": 1056
+    },
+    "bash": {
+      "total": 1081,
+      "malicious": 1081
+    },
+    "javascript": {
+      "total": 1074,
+      "malicious": 1074
+    },
+    "yaml": {
+      "total": 1024,
+      "malicious": 1024
+    },
+    "go": {
+      "total": 1104,
+      "malicious": 1104
+    }
+  },
+  "by_risk_level": {
+    "medium": 5339
+  },
+  "by_detection_layers": {
+    "yara": 5339
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-cffc6f/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.376,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-fd4354/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 15.709,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-c953aa/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.477,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-c84400/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.355,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-ebc545/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.643,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-6ce18c/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.339,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-36875e/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.506,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-365ebb/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.257,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-f9a9d1/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.467,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/persistence/MAL-PER-73a124/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 55.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_Persist_SystemdService",
+        "Shell_Persist_SystemdMalicious",
+        "PERS_CronJob",
+        "PERS_SystemdService",
+        "Agent_Persistence_Systemd",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Persistence"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_Persist_SystemdService",
+        "🟡 YARA:Shell_Persist_SystemdMalicious",
+        "🟡 YARA:PERS_CronJob",
+        "🟡 YARA:PERS_SystemdService",
+        "🟡 YARA:Agent_Persistence_Systemd"
+      ],
+      "scan_time_ms": 0.176,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,288 @@
+{
+  "timestamp": "2026-03-31T12:10:54.731152",
+  "summary": {
+    "total": 4225,
+    "malicious": 4225,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.848,
+    "avg_time_ms": 0.848
+  },
+  "by_language": {
+    "javascript": {
+      "total": 1048,
+      "malicious": 1048
+    },
+    "go": {
+      "total": 1085,
+      "malicious": 1085
+    },
+    "python": {
+      "total": 1054,
+      "malicious": 1054
+    },
+    "bash": {
+      "total": 1038,
+      "malicious": 1038
+    }
+  },
+  "by_risk_level": {
+    "low": 4225
+  },
+  "by_detection_layers": {
+    "yara": 4225
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-22f26b/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 0.294,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-0037a8/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 10.558,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-e1a3ee/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 10.331,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-26b3a0/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 26.981,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-599e1c/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 21.61,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-000891/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 20.767,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-fe692a/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 0.783,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-169e75/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 2.41,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-849296/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 0.407,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/resource_exhaustion/MAL-REX-f7df1b/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_CodeExecution_ExecMethods",
+        "Agent_Resource_Exhaustion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_CodeExecution_ExecMethods",
+        "🟡 YARA:Agent_Resource_Exhaustion"
+      ],
+      "scan_time_ms": 1.872,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[Unit]
+Description=Agent Security Scanner Progress Reporter
+Documentation=https://github.com/agent-security-skill-scanner
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master
+ExecStart=/usr/bin/python3 /home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/scripts/progress_reporter.py
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

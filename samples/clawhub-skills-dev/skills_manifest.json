@@ -1,0 +1,83 @@
+{
+  "generated_at": "2026-04-02T16:42:37.692015",
+  "purpose": "automated_development_research",
+  "total_skills": 12,
+  "by_category": {
+    "analysis": 2,
+    "planning": 2,
+    "development": 2,
+    "testing": 2,
+    "documentation": 1,
+    "deployment": 1,
+    "optimization": 1,
+    "monitoring": 1
+  },
+  "by_priority": {
+    "P0": 5,
+    "P1": 5,
+    "P2": 2
+  },
+  "skills": [
+    {
+      "id": "requirement-analyzer",
+      "category": "analysis",
+      "priority": "P0"
+    },
+    {
+      "id": "priority-ranker",
+      "category": "analysis",
+      "priority": "P1"
+    },
+    {
+      "id": "task-decomposer",
+      "category": "planning",
+      "priority": "P0"
+    },
+    {
+      "id": "resource-allocator",
+      "category": "planning",
+      "priority": "P1"
+    },
+    {
+      "id": "code-generator",
+      "category": "development",
+      "priority": "P0"
+    },
+    {
+      "id": "test-generator",
+      "category": "development",
+      "priority": "P1"
+    },
+    {
+      "id": "quality-gate",
+      "category": "testing",
+      "priority": "P0"
+    },
+    {
+      "id": "performance-profiler",
+      "category": "testing",
+      "priority": "P2"
+    },
+    {
+      "id": "doc-generator",
+      "category": "documentation",
+      "priority": "P1"
+    },
+    {
+      "id": "release-automator",
+      "category": "deployment",
+      "priority": "P1"
+    },
+    {
+      "id": "feedback-optimizer",
+      "category": "optimization",
+      "priority": "P0"
+    },
+    {
+      "id": "anomaly-detector",
+      "category": "monitoring",
+      "priority": "P2"
+    }
+  ],
+  "download_command": "python3 skills/clawhub-integration/download_for_analysis.py --skills requirement-analyzer,priority-ranker,task-decomposer,resource-allocator,code-generator,test-generator,quality-gate,performance-profiler,doc-generator,release-automator,feedback-optimizer,anomaly-detector"
+}

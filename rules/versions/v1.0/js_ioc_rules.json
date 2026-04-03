@@ -1,0 +1,92 @@
+{
+  "name": "JavaScript IOC Indicators",
+  "version": "1.0",
+  "date": "2026-03-24",
+  "description": "Indicators of Compromise for JavaScript malicious scripts",
+  "indicators": [
+    {
+      "type": "api_call",
+      "value": "eval()",
+      "severity": "high",
+      "description": "Dynamic code execution"
+    },
+    {
+      "type": "api_call",
+      "value": "child_process.exec()",
+      "severity": "critical",
+      "description": "System command execution"
+    },
+    {
+      "type": "api_call",
+      "value": "child_process.spawn()",
+      "severity": "critical",
+      "description": "Process creation"
+    },
+    {
+      "type": "api_call",
+      "value": "fs.readFileSync()",
+      "severity": "medium",
+      "description": "File read operation"
+    },
+    {
+      "type": "api_call",
+      "value": "fs.writeFileSync()",
+      "severity": "high",
+      "description": "File write operation"
+    },
+    {
+      "type": "api_call",
+      "value": "http.get()",
+      "severity": "medium",
+      "description": "HTTP request"
+    },
+    {
+      "type": "api_call",
+      "value": "http.post()",
+      "severity": "high",
+      "description": "HTTP POST (potential data exfil)"
+    },
+    {
+      "type": "pattern",
+      "value": "_0x[a-fA-F0-9]+",
+      "severity": "medium",
+      "description": "Hex variable naming (obfuscation)"
+    },
+    {
+      "type": "pattern",
+      "value": "atob(",
+      "severity": "medium",
+      "description": "Base64 decode (potential obfuscation)"
+    },
+    {
+      "type": "pattern",
+      "value": "__proto__",
+      "severity": "medium",
+      "description": "Prototype pollution attempt"
+    },
+    {
+      "type": "file_path",
+      "value": "/etc/passwd",
+      "severity": "high",
+      "description": "Sensitive file access"
+    },
+    {
+      "type": "file_path",
+      "value": ".ssh/id_rsa",
+      "severity": "critical",
+      "description": "SSH private key access"
+    },
+    {
+      "type": "file_path",
+      "value": ".bashrc",
+      "severity": "high",
+      "description": "Persistence mechanism"
+    },
+    {
+      "type": "network",
+      "value": "http://evil.com",
+      "severity": "critical",
+      "description": "Known malicious domain (example)"
+    }
+  ]
+}

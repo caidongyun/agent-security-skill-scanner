@@ -1,0 +1,37 @@
+title: JavaScript Malicious Activity Detection
+status: stable
+level: high
+description: Detects JavaScript malicious activities including command execution, code injection, and data exfiltration
+author: Scanner V3
+date: 2026-03-24
+tags:
+  - attack.execution
+  - attack.t1059
+  - attack.t1059.007
+logsource:
+  category: process
+  product: nodejs
+detection:
+  selection_command_exec:
+    command_line|contains:
+      - "require('child_process')"
+      - 'require("child_process")'
+      - 'exec('
+      - 'execSync('
+  selection_code_inject:
+    command_line|contains:
+      - 'eval('
+      - 'new Function('
+      - 'setTimeout('
+      - 'setInterval('
+  selection_remote_exec:
+    command_line|contains:
+      - 'http.get('
+      - 'https.get('
+      - 'fetch('
+      - 'axios.get('
+  condition: selection_command_exec or selection_code_inject or selection_remote_exec
+falsepositives:
+  - Legitimate development tools
+  - Build scripts
+level: high

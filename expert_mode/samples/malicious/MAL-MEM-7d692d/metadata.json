@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-MEM-7d692d",
+  "attack_type": "memory_pollution",
+  "severity": "medium",
+  "language": "Unknown",
+  "behaviors": [
+    "file_write",
+    "data_injection"
+  ],
+  "indicators": [
+    "generic_malicious"
+  ],
+  "confidence": 0.92,
+  "tags": [
+    "memory",
+    "injection",
+    "pollution"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Memory Pollution - \u53d8\u4f531",
+  "description": "memory_pollution \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #1",
+  "test_cases": [
+    "ME-TP-01"
+  ],
+  "status": "ready",
+  "variant_of": null,
+  "generated_at": "2026-03-22T10:28:00.417716"
+}

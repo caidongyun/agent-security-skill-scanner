@@ -1,0 +1,131 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scanner-v3-worker
+  labels:
+    app: scanner-v3
+    component: worker
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: scanner-v3
+      component: worker
+  template:
+    metadata:
+      labels:
+        app: scanner-v3
+        component: worker
+    spec:
+      containers:
+      - name: scanner-worker
+        image: scanner-v3:latest
+        command: ["python3", "round18/batch_scanner.py"]
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        volumeMounts:
+        - name: samples
+          mountPath: /app/samples
+          readOnly: true
+        - name: cache
+          mountPath: /app/cache
+        - name: results
+          mountPath: /app/results
+      volumes:
+      - name: samples
+        persistentVolumeClaim:
+          claimName: scanner-samples-pvc
+      - name: cache
+        emptyDir: {}
+      - name: results
+        persistentVolumeClaim:
+          claimName: scanner-results-pvc
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scanner-v3-web
+  labels:
+    app: scanner-v3
+    component: web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: scanner-v3
+      component: web
+  template:
+    metadata:
+      labels:
+        app: scanner-v3
+        component: web
+    spec:
+      containers:
+      - name: scanner-web
+        image: scanner-v3:latest
+        command: ["python3", "round19/web_dashboard.py", "8080"]
+        ports:
+        - containerPort: 8080
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "100m"
+          limits:
+            memory: "256Mi"
+            cpu: "200m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 30
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scanner-v3-web-service
+spec:
+  selector:
+    app: scanner-v3
+    component: web
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: scanner-v3-worker-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: scanner-v3-worker
+  minReplicas: 3
+  maxReplicas: 10
+  metrics:
+  - type: Resource
+    resource:
+      name: cpu
+      target:
+        type: Utilization
+        averageUtilization: 70
+  - type: Resource
+    resource:
+      name: memory
+      target:
+        type: Utilization
+        averageUtilization: 80

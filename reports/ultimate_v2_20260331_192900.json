@@ -1,0 +1,333 @@
+{
+  "timestamp": "2026-03-31T19:29:03.244392",
+  "summary": {
+    "total": 5338,
+    "malicious": 5338,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.388,
+    "avg_time_ms": 0.27
+  },
+  "by_language": {
+    "go": {
+      "total": 1068,
+      "malicious": 1068
+    },
+    "bash": {
+      "total": 1067,
+      "malicious": 1067
+    },
+    "javascript": {
+      "total": 1062,
+      "malicious": 1062
+    },
+    "python": {
+      "total": 1057,
+      "malicious": 1057
+    },
+    "yaml": {
+      "total": 1084,
+      "malicious": 1084
+    }
+  },
+  "by_risk_level": {
+    "low": 3187,
+    "medium": 2151
+  },
+  "by_detection_layers": {
+    "yara": 5338
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-a9d4e2/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.31,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-715a21/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.124,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-5421a0/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.229,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-269006/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.286,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-eca5af/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.277,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-d71358/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.171,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-6619d1/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.251,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-3210b2/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.254,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-7eda29/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.235,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/remote_load/MAL-RLO-3ebe0e/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 45.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "JS_Cloud_DockerSocket",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Shell_Cloud_DockerSocket"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:JS_Cloud_DockerSocket",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🟡 YARA:Shell_Cloud_DockerSocket"
+      ],
+      "scan_time_ms": 0.184,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "round": 3,
+  "timestamp": "2026-04-02T21:07:48.445501",
+  "baseline": {
+    "detection_rate": 0.95,
+    "false_positive_rate": 0.15
+  },
+  "target": {
+    "detection_rate": 0.97,
+    "false_positive_rate": 0.1
+  },
+  "strategies": {
+    "detection_rate": [
+      {
+        "name": "ML \u8f85\u52a9",
+        "method": "\u826f\u6027\u6837\u672c\u8bad\u7ec3",
+        "improvement": "+1%"
+      },
+      {
+        "name": "\u96c6\u6210\u5b66\u4e60",
+        "method": "\u591a\u6a21\u578b\u6295\u7968",
+        "improvement": "+0.5%"
+      },
+      {
+        "name": "AST \u5206\u6790",
+        "method": "\u62bd\u8c61\u8bed\u6cd5\u6811",
+        "improvement": "+0.5%"
+      }
+    ],
+    "false_positive_rate": [
+      {
+        "name": "\u884c\u4e3a\u89c4\u5219",
+        "method": "\u8fd0\u884c\u65f6\u5206\u6790",
+        "improvement": "-3%"
+      },
+      {
+        "name": "\u4e0a\u4e0b\u6587\u589e\u5f3a",
+        "method": "\u8c03\u7528\u94fe\u5206\u6790",
+        "improvement": "-2%"
+      }
+    ]
+  },
+  "status": "planning",
+  "eta": "7 \u5929"
+}

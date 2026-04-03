@@ -1,0 +1,106 @@
+{
+  "timestamp": "2026-04-02T20:03:18.629217",
+  "benchmark_result": {
+    "detection_rate": 0.9106672474228943,
+    "false_positive_rate": 0.2674359944507504,
+    "total_samples": 64171,
+    "correct": 55523,
+    "false_positives": 4241,
+    "false_negatives": 4307
+  },
+  "improvement_plan": {
+    "detection_rate": {
+      "current": 91.06672474228942,
+      "target": 99,
+      "gap": 7.9332752577105765,
+      "strategies": [
+        {
+          "name": "规则库扩充",
+          "method": "+500 条规则",
+          "improvement": "+3%"
+        },
+        {
+          "name": "新攻击模式覆盖",
+          "method": "MITRE ATLAS 映射",
+          "improvement": "+2%"
+        },
+        {
+          "name": "集成学习",
+          "method": "多模型投票",
+          "improvement": "+1.5%"
+        },
+        {
+          "name": "深度学习辅助",
+          "method": "AST 分析",
+          "improvement": "+0.5%"
+        }
+      ]
+    },
+    "false_positive_rate": {
+      "current": 26.743599445075038,
+      "target": 1,
+      "gap": 25.743599445075038,
+      "top_fp_types": [
+        {
+          "type": "shell_reverseshell_python",
+          "count": 8545
+        },
+        {
+          "type": "remote_load",
+          "count": 5411
+        },
+        {
+          "type": "evasion",
+          "count": 5380
+        },
+        {
+          "type": "memory_pollution",
+          "count": 5350
+        },
+        {
+          "type": "resource_exhaustion",
+          "count": 5350
+        }
+      ],
+      "strategies": [
+        {
+          "name": "组合条件",
+          "method": "单特征→多特征组合",
+          "improvement": "-30%"
+        },
+        {
+          "name": "上下文感知",
+          "method": "添加路径/环境变量检查",
+          "improvement": "-25%"
+        },
+        {
+          "name": "白名单机制",
+          "method": "系统路径/已知良性",
+          "improvement": "-20%"
+        },
+        {
+          "name": "机器学习过滤",
+          "method": "良性样本训练",
+          "improvement": "-15%"
+        },
+        {
+          "name": "精细调优",
+          "method": "阈值优化",
+          "improvement": "-10%"
+        }
+      ]
+    }
+  },
+  "executed_optimizations": [
+    "Shell_ReverseShell_Python 组合条件",
+    "Remote_Load 上下文要求",
+    "Evasion 特征覆盖",
+    "+500 条新规则",
+    "白名单机制"
+  ],
+  "next_steps": [
+    "运行验证扫描",
+    "对比优化效果",
+    "准备轮次 2 优化"
+  ]
+}

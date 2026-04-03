@@ -1,0 +1,99 @@
+attack_type: data_exfil
+category: behavior
+generated_at: '2026-03-22T15:26:59.417504'
+rule_count: 5
+rules:
+- action: alert
+  condition:
+    behaviors:
+    - file_read
+    patterns:
+    - open(.*ssh)
+    - read(.*credential)
+    - cat.*passwd
+    targets:
+    - ~/.ssh/id_rsa
+    - ~/.aws/credentials
+    - ~/.bashrc
+    - /etc/passwd
+    - /etc/shadow
+  description: 检测尝试读取敏感配置文件的行为
+  id: BEH-FILE-001
+  metadata:
+    attack_type: data_exfil
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 敏感文件读取
+- action: alert
+  condition:
+    behaviors:
+    - directory_scan
+    patterns:
+    - os.walk(.*ssh)
+    - glob(.*credential)
+    targets:
+    - ~/.ssh/
+    - ~/.aws/
+    - /etc/
+    - /root/
+  description: 检测遍历敏感目录的行为
+  id: BEH-FILE-005
+  metadata:
+    attack_type: data_exfil
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 敏感目录遍历
+- action: alert
+  condition:
+    behaviors:
+    - file_read
+    - network_request
+    patterns:
+    - open.*read.*requests.post
+    - cat.*curl
+    sequence: true
+  description: 检测读取文件后网络外传的行为
+  id: BEH-FILE-010
+  metadata:
+    attack_type: data_exfil
+    rule_type: behavior
+    severity: critical
+    version: '11.0'
+  name: 文件内容外传
+- action: alert
+  condition:
+    behaviors:
+    - network_request
+    indicators:
+    - network_exfil
+    patterns:
+    - requests.post.*http
+    - curl.*-d
+    - wget.*--post
+  description: 检测向可疑域名发送数据的行为
+  id: BEH-NET-001
+  metadata:
+    attack_type: data_exfil
+    rule_type: behavior
+    severity: critical
+    version: '11.0'
+  name: 可疑外传请求
+- action: alert
+  condition:
+    behaviors:
+    - dns_query
+    patterns:
+    - nslookup.*\.
+    - dig.*\.
+    - socket.gethostbyname.*exfil
+  description: 检测使用 DNS 进行数据外传的行为
+  id: BEH-NET-002
+  metadata:
+    attack_type: data_exfil
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: DNS 隧道检测
+version: '11.0'

@@ -1,0 +1,33 @@
+{
+  "id": "DA-DLP-003",
+  "name": "HTTP \u6570\u636e\u5916\u4f20",
+  "category": "data_exfil",
+  "type": "dlp",
+  "severity": "high",
+  "description": "\u9632\u6b62HTTP \u6570\u636e\u5916\u4f20\u5bfc\u81f4\u7684\u6570\u636e\u6cc4\u9732",
+  "patterns": [
+    "requests.post",
+    "urllib.request.urlopen",
+    "http.client"
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.172126",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ],
+  "test_cases": {
+    "positive": [
+      "requests.post",
+      "urllib.request.urlopen"
+    ],
+    "negative": []
+  }
+}

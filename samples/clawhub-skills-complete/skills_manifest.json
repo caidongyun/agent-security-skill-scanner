@@ -1,0 +1,208 @@
+{
+  "generated_at": "2026-04-02T17:06:38.457222",
+  "purpose": "automated_development_research_complete",
+  "total_skills": 31,
+  "by_category": {
+    "decision": 3,
+    "orchestration": 3,
+    "agent": 3,
+    "constraint": 6,
+    "development": 5,
+    "research": 4,
+    "automation": 4,
+    "learning": 3
+  },
+  "by_priority": {
+    "P0": 17,
+    "P1": 14
+  },
+  "skills": [
+    {
+      "id": "requirement-analyzer",
+      "category": "decision",
+      "priority": "P0",
+      "desc": "需求分析"
+    },
+    {
+      "id": "task-planner",
+      "category": "decision",
+      "priority": "P0",
+      "desc": "任务规划"
+    },
+    {
+      "id": "priority-scheduler",
+      "category": "decision",
+      "priority": "P0",
+      "desc": "优先级调度"
+    },
+    {
+      "id": "task-queue",
+      "category": "orchestration",
+      "priority": "P0",
+      "desc": "任务队列"
+    },
+    {
+      "id": "dependency-manager",
+      "category": "orchestration",
+      "priority": "P0",
+      "desc": "依赖管理"
+    },
+    {
+      "id": "health-monitor",
+      "category": "orchestration",
+      "priority": "P0",
+      "desc": "健康监控"
+    },
+    {
+      "id": "research-analyzer",
+      "category": "agent",
+      "priority": "P0",
+      "desc": "研究分析"
+    },
+    {
+      "id": "code-reviewer",
+      "category": "agent",
+      "priority": "P1",
+      "desc": "代码审查"
+    },
+    {
+      "id": "test-optimizer",
+      "category": "agent",
+      "priority": "P1",
+      "desc": "测试优化"
+    },
+    {
+      "id": "quality-gate",
+      "category": "constraint",
+      "priority": "P0",
+      "desc": "质量门禁"
+    },
+    {
+      "id": "constraint-checker",
+      "category": "constraint",
+      "priority": "P0",
+      "desc": "约束验证"
+    },
+    {
+      "id": "verification-agent",
+      "category": "constraint",
+      "priority": "P1",
+      "desc": "形式化验证"
+    },
+    {
+      "id": "risk-assessor",
+      "category": "constraint",
+      "priority": "P0",
+      "desc": "风险评估"
+    },
+    {
+      "id": "compliance-checker",
+      "category": "constraint",
+      "priority": "P1",
+      "desc": "合规检查"
+    },
+    {
+      "id": "audit-trail",
+      "category": "constraint",
+      "priority": "P1",
+      "desc": "审计追踪"
+    },
+    {
+      "id": "code-generator",
+      "category": "development",
+      "priority": "P0",
+      "desc": "代码生成"
+    },
+    {
+      "id": "test-generator",
+      "category": "development",
+      "priority": "P0",
+      "desc": "测试生成"
+    },
+    {
+      "id": "doc-generator",
+      "category": "development",
+      "priority": "P1",
+      "desc": "文档生成"
+    },
+    {
+      "id": "refactor-assistant",
+      "category": "development",
+      "priority": "P1",
+      "desc": "重构助手"
+    },
+    {
+      "id": "debug-helper",
+      "category": "development",
+      "priority": "P1",
+      "desc": "调试助手"
+    },
+    {
+      "id": "literature-reviewer",
+      "category": "research",
+      "priority": "P1",
+      "desc": "文献综述"
+    },
+    {
+      "id": "data-analyzer",
+      "category": "research",
+      "priority": "P0",
+      "desc": "数据分析"
+    },
+    {
+      "id": "experiment-runner",
+      "category": "research",
+      "priority": "P0",
+      "desc": "实验执行"
+    },
+    {
+      "id": "result-interpreter",
+      "category": "research",
+      "priority": "P1",
+      "desc": "结果解释"
+    },
+    {
+      "id": "workflow-automator",
+      "category": "automation",
+      "priority": "P0",
+      "desc": "工作流自动化"
+    },
+    {
+      "id": "pipeline-builder",
+      "category": "automation",
+      "priority": "P0",
+      "desc": "流水线构建"
+    },
+    {
+      "id": "deployment-manager",
+      "category": "automation",
+      "priority": "P1",
+      "desc": "部署管理"
+    },
+    {
+      "id": "monitoring-agent",
+      "category": "automation",
+      "priority": "P0",
+      "desc": "监控 Agent"
+    },
+    {
+      "id": "knowledge-curator",
+      "category": "learning",
+      "priority": "P1",
+      "desc": "知识管理"
+    },
+    {
+      "id": "pattern-learner",
+      "category": "learning",
+      "priority": "P1",
+      "desc": "模式学习"
+    },
+    {
+      "id": "experience-database",
+      "category": "learning",
+      "priority": "P1",
+      "desc": "经验数据库"
+    }
+  ],
+  "download_command": "python3 skills/clawhub-integration/download_for_analysis.py --batch samples/clawhub-skills-complete/skills_manifest.json"
+}

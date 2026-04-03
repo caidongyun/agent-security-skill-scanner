@@ -1,0 +1,26 @@
+author: Consistent Generator
+date: 2026/03/23
+description: Detect resource_exhaustion (generated from sample)
+detection:
+  condition: selection
+  selection:
+    keyword: 'while\s+True\s*:'
+falsepositives:
+- Legitimate use of similar patterns
+fields:
+- code
+- input
+- output
+id: sigma-resource-exhaustion-sample-004
+level: high
+logsource:
+  category: application
+  service: ai-agent
+modified: 2026/03/23
+status: stable
+tags:
+- attack.resource_exhaustion
+- ai-security
+- skill-scanner
+- from-sample
+title: Detect Resource Exhaustion - From Sample 4

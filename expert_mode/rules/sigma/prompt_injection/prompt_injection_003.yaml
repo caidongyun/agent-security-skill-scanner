@@ -1,0 +1,25 @@
+title: 角色扮演攻击
+id: PR-SIGMA-003
+status: stable
+level: medium
+description: 检测角色扮演攻击攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.prompt_injection
+  - security.PR-SIGMA-003
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*act as*"
+    CommandLine1: "*pretend to be*"
+    CommandLine2: "*role play*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

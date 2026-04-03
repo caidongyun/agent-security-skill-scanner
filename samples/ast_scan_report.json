@@ -1,0 +1,28 @@
+[
+  {
+    "file": "agent-security-skill-scanner-V3/samples/high_fidelity/HF-ad921d604863/malicious_code.py",
+    "ast_hash": "6311c467d57146ae0a7937e43907cdb1",
+    "obfuscation": {
+      "obfuscation_detected": false,
+      "confidence": 0.0,
+      "findings": []
+    },
+    "behaviors": [
+      {
+        "category": "system",
+        "action": "import os",
+        "line": 6,
+        "risk": "low"
+      },
+      {
+        "category": "system",
+        "action": "import subprocess",
+        "line": 6,
+        "risk": "low"
+      }
+    ],
+    "risk_score": 8.0,
+    "malicious": false,
+    "scanned_at": "2026-03-24T14:47:48.259951"
+  }
+]

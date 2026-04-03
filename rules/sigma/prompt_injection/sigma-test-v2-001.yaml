@@ -1,0 +1,5 @@
+id: sigma-test-v2-001
+name: Test Rule
+condition: contains "malicious"
+severity: high
+attack_type: prompt_injection

@@ -1,0 +1,293 @@
+# PowerShell 检测规则 (YARA)
+# Round 22 - Scanner V3
+# 生成时间：2026-03-24
+
+rule PowerShell_RemoteCodeExecution_DownloadString {
+    meta:
+        description = "Detects PowerShell remote code execution via DownloadString"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $iex = "IEX"
+        $download = "DownloadString"
+        $webclient = "WebClient"
+    condition:
+        ($iex or "Invoke-Expression") and $download and $webclient
+}
+
+rule PowerShell_RemoteCodeExecution_EncodedCommand {
+    meta:
+        description = "Detects PowerShell encoded command execution"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $encoded = "-EncodedCommand"
+        $encoded2 = "-Enc"
+        $base64 = "FromBase64String"
+    condition:
+        ($encoded or $encoded2) and $base64
+}
+
+rule PowerShell_CodeInjection_InvokeExpression {
+    meta:
+        description = "Detects PowerShell command injection via Invoke-Expression"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $iex = "Invoke-Expression"
+        $iex2 = "IEX"
+        $var = "$"
+    condition:
+        ($iex or $iex2) and $var
+}
+
+rule PowerShell_DataExfiltration_WebRequest {
+    meta:
+        description = "Detects PowerShell data exfiltration via Invoke-WebRequest"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1041"
+    strings:
+        $getcontent = "Get-Content"
+        $pipe = "|"
+        $iwr = "Invoke-WebRequest"
+        $iwr2 = "IWR"
+        $post = "POST"
+    condition:
+        $getcontent and $pipe and ($iwr or $iwr2) and $post
+}
+
+rule PowerShell_Persistence_RunKey {
+    meta:
+        description = "Detects PowerShell persistence via Registry Run key"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1053"
+    strings:
+        $newitem = "New-Item"
+        $runkey = "CurrentVersion\\Run"
+        $hkcu = "HKCU"
+        $hklm = "HKLM"
+    condition:
+        $newitem and $runkey and ($hkcu or $hklm)
+}
+
+rule PowerShell_Persistence_ScheduledTask {
+    meta:
+        description = "Detects PowerShell persistence via Scheduled Task"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1053"
+    strings:
+        $task = "ScheduledTask"
+        $trigger = "Trigger"
+        $action = "Action"
+        $register = "Register-ScheduledTask"
+    condition:
+        $task and $trigger and $register
+}
+
+rule PowerShell_CredentialTheft_GetCredential {
+    meta:
+        description = "Detects PowerShell credential theft via Get-Credential"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1078"
+    strings:
+        $getcred = "Get-Credential"
+        $password = "Password"
+        $network = "GetNetworkCredential"
+    condition:
+        $getcred and ($password or $network)
+}
+
+rule PowerShell_CredentialTheft_PasswordSearch {
+    meta:
+        description = "Detects PowerShell password file search"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1005"
+    strings:
+        $select = "Select-String"
+        $sls = "SlS"
+        $password = "password"
+        $passw = "passw"
+    condition:
+        ($select or $sls) and ($password or $passw)
+}
+
+rule PowerShell_Obfuscation_Base64 {
+    meta:
+        description = "Detects PowerShell obfuscation via Base64"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $frombase64 = "FromBase64String"
+        $convert = "Convert"
+        $iex = "IEX"
+        $pipe = "|"
+    condition:
+        $frombase64 and ($iex or $pipe)
+}
+
+rule PowerShell_Obffuscation_XOR {
+    meta:
+        description = "Detects PowerShell obfuscation via XOR"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $xor = "-bxor"
+        $xor2 = "-xor"
+        $hex = "0x"
+    condition:
+        ($xor or $xor2) and $hex
+}
+
+rule PowerShell_Obffuscation_StringConcat {
+    meta:
+        description = "Detects PowerShell obfuscation via string concatenation"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $concat = "+"
+        $var1 = "$"
+        $var2 = "$"
+        $exec = "&"
+    condition:
+        $var1 and $var2 and $concat and $exec
+}
+
+rule PowerShell_Reflection_AssemblyLoad {
+    meta:
+        description = "Detects PowerShell reflection assembly load"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1055"
+    strings:
+        $assembly = "Assembly"
+        $load = "Load"
+        $reflection = "Reflection"
+    condition:
+        $assembly and $load and ($reflection or "[")
+}
+
+rule PowerShell_Injection_AddType {
+    meta:
+        description = "Detects PowerShell code injection via Add-Type"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1055"
+    strings:
+        $addtype = "Add-Type"
+        $typedef = "TypeDefinition"
+        $member = "MemberDefinition"
+        $dllimport = "DllImport"
+    condition:
+        $addtype and ($typedef or $member or $dllimport)
+}
+
+rule PowerShell_AntiForensics_ClearEventLog {
+    meta:
+        description = "Detects PowerShell event log clearing"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1070"
+    strings:
+        $clear = "Clear-EventLog"
+        $remove = "Remove-EventLog"
+        $logname = "LogName"
+    condition:
+        $clear or $remove
+}
+
+rule PowerShell_AntiForensics_DisableLogging {
+    meta:
+        description = "Detects PowerShell logging disable"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1070"
+    strings:
+        $scriptblock = "ScriptBlockLogging"
+        $enable = "EnableScriptBlockLogging"
+        $value0 = "0"
+    condition:
+        $scriptblock and $enable and $value0
+}
+
+rule PowerShell_LateralMovement_InvokeCommand {
+    meta:
+        description = "Detects PowerShell lateral movement via Invoke-Command"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1021"
+    strings:
+        $invoke = "Invoke-Command"
+        $computer = "ComputerName"
+        $session = "PSSession"
+    condition:
+        $invoke and ($computer or $session)
+}
+
+rule PowerShell_Download_WebClient {
+    meta:
+        description = "Detects PowerShell download via WebClient"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1105"
+    strings:
+        $webclient = "WebClient"
+        $download = "Download"
+        $newobject = "New-Object"
+    condition:
+        $newobject and $webclient and $download
+}
+
+rule PowerShell_PrivilegeEscalation_StartProcessRunAs {
+    meta:
+        description = "Detects PowerShell privilege escalation via RunAs"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1548"
+    strings:
+        $start = "Start-Process"
+        $verb = "-Verb"
+        $runas = "RunAs"
+    condition:
+        $start and $verb and $runas
+}
+
+rule PowerShell_Mimikatz {
+    meta:
+        description = "Detects PowerShell Mimikatz usage"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1003"
+    strings:
+        $mimikatz = "Invoke-Mimikatz"
+        $sekurlsa = "sekurlsa"
+        $logon = "logonpasswords"
+    condition:
+        $mimikatz or ($sekurlsa and $logon)
+}
+
+rule PowerShell_ReverseShell {
+    meta:
+        description = "Detects PowerShell reverse shell"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $tcpclient = "TCPClient"
+        $stream = "GetStream"
+        $invoke = "Invoke-Expression"
+        $port = "4444"
+        $port2 = "5555"
+    condition:
+        $tcpclient and $stream and ($invoke or $port or $port2)
+}

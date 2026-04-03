@@ -1,0 +1,13 @@
+{
+  "id": "javascript_data_exfil_001",
+  "language": "javascript",
+  "category": "malicious",
+  "attack_type": "data_exfil",
+  "severity": "critical",
+  "mitre_techniques": [
+    "T1041",
+    "T1048",
+    "T1567"
+  ],
+  "hash": "69a2145119a3"
+}

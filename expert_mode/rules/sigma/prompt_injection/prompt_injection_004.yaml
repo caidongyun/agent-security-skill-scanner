@@ -1,0 +1,25 @@
+title: 分隔符绕过
+id: PR-SIGMA-004
+status: stable
+level: medium
+description: 检测分隔符绕过攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.prompt_injection
+  - security.PR-SIGMA-004
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*"""*"
+    CommandLine1: "*'''*"
+    CommandLine2: "*### END ###*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

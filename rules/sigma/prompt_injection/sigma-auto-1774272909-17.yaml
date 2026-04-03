@@ -1,0 +1,6 @@
+id: sigma-auto-1774272909-17
+name: Auto Rule 17
+type: sigma
+severity: high
+condition: contains any of (keyword17, keyword18, keyword19)
+attack_type: prompt_injection

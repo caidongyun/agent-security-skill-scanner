@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_NEG_002",
+  "attack_type": "remote_load",
+  "sample_type": "negative",
+  "content": "# Normal sample: remote_load variant 2\nimport os\npath = os.path.join('data', 'file.txt')\n",
+  "content_hash": "10de170942268098",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.582382",
+    "generator_version": "1.0.0"
+  }
+}

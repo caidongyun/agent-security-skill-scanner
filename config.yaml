@@ -1,0 +1,101 @@
+# Agent Security Skill Scanner - 配置文件模板
+# 复制为 config.yaml 后使用
+
+# ==================== 扫描器配置 ====================
+scanner:
+  # 单文件最大大小（MB）
+  max_file_size: "10MB"
+  
+  # 扫描速度限制（文件/秒），0 表示无限制
+  rate_limit: 50
+  
+  # 缓存大小（文件数）
+  cache_size: 10000
+  
+  # 并发工作线程数
+  max_workers: 4
+  
+  # 扫描超时（秒）
+  timeout_seconds: 300
+
+# ==================== ML 增强检测 ====================
+ml:
+  # 是否启用 ML 增强检测（需先训练模型）
+  enabled: false
+  
+  # 模型文件路径
+  model_path: "round24/ml/models/scanner_v3_ml_fusion.pkl"
+  
+  # 判定阈值（0.0-1.0）
+  threshold: 0.5
+  
+  # ML 权重（规则权重 = 1.0 - ml_weight）
+  weight: 0.4
+
+# ==================== 检测规则 ====================
+rules:
+  # 规则库根目录
+  base_dir: "rules/"
+  
+  # 各语言规则文件模式
+  python: "scanner_v3/python_*.yaml"
+  javascript: "scanner_v3/js_*.yaml"
+  shell: "scanner_v3/shell_*.yaml"
+  powershell: "scanner_v3/powershell_*.yaml"
+  
+  # 规则类型
+  types:
+    - yara      # YARA 规则
+    - sigma     # Sigma 规则
+    - ioc       # IOC 指标
+    - audit     # 审计规则
+    - runtime   # 运行时规则
+
+# ==================== 供应链安全检测 ====================
+supply_chain:
+  # 是否启用供应链安全检测
+  enabled: true
+  
+  # 检测项
+  checks:
+    - pth_files         # .pth 文件投毒检测
+    - c2_domains        # C2 域名检测
+    - data_exfil        # 数据外传检测
+    - persistence       # 持久化检测
+    - version_check     # 版本检测（如 LiteLLM）
+    - network_tunnel    # 网络隧道检测
+    
+  # 排除路径（正则表达式）
+  exclude_patterns:
+    - "*/test*"
+    - "*/__pycache__/*"
+    - "*/.git/*"
+    - "*/node_modules/*"
+
+# ==================== 输出配置 ====================
+output:
+  # 输出格式：html / json / text
+  format: "html"
+  
+  # 报告保存路径
+  save_path: "reports/"
+  
+  # 是否输出详细信息
+  verbose: true
+  
+  # 是否生成统计图表
+  generate_charts: true
+  
+  # 日志级别：DEBUG / INFO / WARNING / ERROR
+  log_level: "INFO"
+
+# ==================== 性能优化 ====================
+performance:
+  # 是否启用文件缓存
+  enable_cache: true
+  
+  # 是否启用并行扫描
+  enable_parallel: true
+  
+  # 大文件处理策略：skip / scan / warn
+  large_file_strategy: "warn"

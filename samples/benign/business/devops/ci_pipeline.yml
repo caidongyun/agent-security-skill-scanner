@@ -1,0 +1,29 @@
+# Generated: 2026-04-02 12:15:22.314211\n# Type: Benign DevOps Sample\n\n# GitLab CI 配置 - 良性
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script:
+    - npm ci
+    - npm test
+  artifacts:
+    reports:
+      junit: test-results.xml
+
+build:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - dist/
+
+deploy:
+  stage: deploy
+  script:
+    - ./deploy.sh
+  only:
+    - main

@@ -1,0 +1,62 @@
+{
+  "timestamp": "2026-04-03T07:49:37.853043",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.215
+  },
+  "by_language": {
+    "go": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "medium": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/BEN-NOR-ee5369/payload.go",
+      "language": "go",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 50.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "SUPP_021",
+        "SUPP_027",
+        "SUPP_029",
+        "CRED_101",
+        "SUPP_100",
+        "REALMED_052",
+        "REALMED_054",
+        "REALMED_062",
+        "REALMED_064",
+        "REALMED_073"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:SUPP_021",
+        "🟡 YARA:SUPP_027",
+        "🟡 YARA:SUPP_029",
+        "🟡 YARA:CRED_101",
+        "🟡 YARA:SUPP_100"
+      ],
+      "scan_time_ms": 0.215,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

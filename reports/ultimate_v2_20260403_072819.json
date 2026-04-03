@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-04-03T07:28:51.914251",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.453
+  },
+  "by_language": {
+    "javascript": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "low": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-14a71a/payload.javascript",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 33.0,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.453,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

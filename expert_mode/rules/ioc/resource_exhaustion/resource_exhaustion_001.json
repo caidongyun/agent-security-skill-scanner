@@ -1,0 +1,31 @@
+{
+  "id": "RE-IOC-001",
+  "name": "CPU 耗尽攻击",
+  "type": "ioc",
+  "risk_score": 85,
+  "category": "resource_exhaustion",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "while True",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "for(;;)",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "loop indefinitely",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "high",
+  "description": "CPU 耗尽攻击的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.176526",
+  "ttps": [
+    "MITRE ATT&CK: RESOURCE_EXHAUSTION"
+  ]
+}

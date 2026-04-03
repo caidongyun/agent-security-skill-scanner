@@ -1,0 +1,35 @@
+# Lua 混淆脚本检测规则
+# 检测 ptd.txt 中的高强度 Lua VM 混淆特征
+
+id: sigma-lua-obfuscation-001
+name: Detect Obfuscated Lua Script
+type: sigma
+attack_type: malware
+severity: high
+
+description: |
+  检测高强度混淆的 Lua 脚本
+  - 114KB+ 加密常量池
+  - 自定义解密函数 (WU, iU)
+  - FFI 动态 API 调用
+
+condition: |
+  (
+    contains_any (file_name, "ptd.txt", "launch.cmd")
+    and (
+      contains_any (content, "WU({", "iU({", "ffi.cdef", "ffi.cast")
+      or size > 50000
+    )
+  )
+  or (
+    file_extension == "exe"
+    and size matches "2000000 to 5000000"
+    and not has_valid_digital_signature
+  )
+
+metadata:
+  author: AutoResearch
+  date: 2026-03-23
+  tags: ["malware", "lua", "obfuscation"]
+  mitre: T1027
+  confidence: medium

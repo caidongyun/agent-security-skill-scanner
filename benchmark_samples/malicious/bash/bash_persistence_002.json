@@ -1,0 +1,13 @@
+{
+  "id": "bash_persistence_002",
+  "language": "bash",
+  "category": "malicious",
+  "attack_type": "persistence",
+  "severity": "critical",
+  "mitre_techniques": [
+    "T1547",
+    "T1053",
+    "T1543"
+  ],
+  "hash": "b3e4e4bdcbb8"
+}

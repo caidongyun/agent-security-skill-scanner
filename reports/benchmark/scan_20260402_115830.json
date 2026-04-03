@@ -1,0 +1,36 @@
+{
+  "test_date": "2026-04-02T11:58:30.383052",
+  "rules_version": "v3.2.0-multilang",
+  "total_rules": 66,
+  "languages_supported": [
+    "Python",
+    "TypeScript",
+    "Go",
+    "YAML",
+    "PowerShell",
+    "Bash"
+  ],
+  "results": {
+    "detection_rate": 0.9106672474228943,
+    "false_positive_rate": 0.2674359944507504,
+    "total_samples": 64171,
+    "malicious": 48235,
+    "benign": 15936,
+    "correct": 55523,
+    "false_positives": 4241,
+    "false_negatives": 4307
+  },
+  "by_attack_type": {
+    "shell_reverseshell_python": 8545,
+    "ts_environmentvariabletheft": 4309,
+    "memory_pollution": 5350,
+    "remote_load": 5411,
+    "resource_exhaustion": 5350,
+    "yaml_k8s_hostnetwork": 1024,
+    "persistence": 4315,
+    "supply_chain_attack": 4273,
+    "credential_theft": 4266,
+    "impact_datadestruction_rmrecursive": 12,
+    "evasion": 5380
+  }
+}

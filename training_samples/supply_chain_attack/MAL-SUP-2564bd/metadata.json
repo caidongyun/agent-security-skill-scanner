@@ -1,0 +1,72 @@
+{
+  "id": "BENCH-SUP-2564bd",
+  "version": "2.0",
+  "sample_id": "MAL-SUP-2564bd",
+  "name": "供应链攻击 - EASY",
+  "description": "",
+  "attack_type": "supply_chain_attack",
+  "severity": "critical",
+  "category": "供应链",
+  "language": "bash",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "供应链",
+    "mitre_atlas": [
+      "ATLAS-T0007"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T21:09:53.769544"
+  },
+  "behaviors": [
+    "network_request",
+    "file_execution",
+    "dependency_modification"
+  ],
+  "indicators": [
+    "postinstall",
+    "dependency hook",
+    "build script"
+  ],
+  "tags": [
+    "supply_chain",
+    "dependency",
+    "npm"
+  ],
+  "mitigation_indicators": [
+    "依赖扫描",
+    "签名验证",
+    "私有镜像"
+  ],
+  "false_positive_scenarios": [
+    "正常的依赖更新",
+    "版本发布"
+  ],
+  "detection_difficulty": {
+    "score": 1,
+    "level": "L1",
+    "description": "明显的恶意特征，易于检测",
+    "indicators_count": 3
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L1",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T21:09:53.769560",
+    "updated_at": "2026-03-29T21:09:53.769562",
+    "payload_file": "supply_chain_attack/MAL-SUP-2564bd/payload.bash"
+  }
+}

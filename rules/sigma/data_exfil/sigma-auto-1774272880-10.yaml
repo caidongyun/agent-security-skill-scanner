@@ -1,0 +1,6 @@
+id: sigma-auto-1774272880-10
+name: Auto Rule 10
+type: sigma
+severity: high
+condition: contains any of (keyword10, keyword11, keyword12)
+attack_type: data_exfil

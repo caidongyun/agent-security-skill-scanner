@@ -1,0 +1,300 @@
+{
+  "generated_at": "2026-04-02T21:28:40.652671",
+  "source": "https://mirror-cn.clawhub.com",
+  "purpose": "security_analysis_benchmark",
+  "total_skills": 10,
+  "download_dir": "samples/clawhub-skills",
+  "analysis_dir": "analysis/clawhub-skills",
+  "skills": [
+    {
+      "skill_id": "security-sample-generator",
+      "downloaded_at": "2026-04-02T21:28:40.648538",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "f5ec9bfb7ea446d9",
+      "directory": "samples/clawhub-skills/security-sample-generator"
+    },
+    {
+      "skill_id": "yara-rule-builder",
+      "downloaded_at": "2026-04-02T21:28:40.649023",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "f27b8bc151a33025",
+      "directory": "samples/clawhub-skills/yara-rule-builder"
+    },
+    {
+      "skill_id": "threat-intel-fetcher",
+      "downloaded_at": "2026-04-02T21:28:40.649451",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "49346184766afb6f",
+      "directory": "samples/clawhub-skills/threat-intel-fetcher"
+    },
+    {
+      "skill_id": "agent-fuzzer",
+      "downloaded_at": "2026-04-02T21:28:40.649867",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "b234646dc29a76d7",
+      "directory": "samples/clawhub-skills/agent-fuzzer"
+    },
+    {
+      "skill_id": "prompt-injection-detector",
+      "downloaded_at": "2026-04-02T21:28:40.650418",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "16be37f75cc397ec",
+      "directory": "samples/clawhub-skills/prompt-injection-detector"
+    },
+    {
+      "skill_id": "network-scanner",
+      "downloaded_at": "2026-04-02T21:28:40.650822",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "8600c89b2efdab53",
+      "directory": "samples/clawhub-skills/network-scanner"
+    },
+    {
+      "skill_id": "credential-checker",
+      "downloaded_at": "2026-04-02T21:28:40.651239",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "160546331e835792",
+      "directory": "samples/clawhub-skills/credential-checker"
+    },
+    {
+      "skill_id": "log-analyzer",
+      "downloaded_at": "2026-04-02T21:28:40.651650",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "5dcb9106d58c0f3d",
+      "directory": "samples/clawhub-skills/log-analyzer"
+    },
+    {
+      "skill_id": "exploit-detector",
+      "downloaded_at": "2026-04-02T21:28:40.652071",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "7d38abf651623bbc",
+      "directory": "samples/clawhub-skills/exploit-detector"
+    },
+    {
+      "skill_id": "malware-scanner",
+      "downloaded_at": "2026-04-02T21:28:40.652477",
+      "source": "https://mirror-cn.clawhub.com",
+      "purpose": "security_analysis_benchmark",
+      "installed": false,
+      "files": [
+        "SKILL.md",
+        "main.py",
+        "requirements.txt"
+      ],
+      "sha256": "04e4bc1eb2152256",
+      "directory": "samples/clawhub-skills/malware-scanner"
+    }
+  ],
+  "analyses": [
+    {
+      "skill_id": "security-sample-generator",
+      "analyzed_at": "2026-04-02T21:28:40.648654",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "yara-rule-builder",
+      "analyzed_at": "2026-04-02T21:28:40.649110",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "threat-intel-fetcher",
+      "analyzed_at": "2026-04-02T21:28:40.649535",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "agent-fuzzer",
+      "analyzed_at": "2026-04-02T21:28:40.650087",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "prompt-injection-detector",
+      "analyzed_at": "2026-04-02T21:28:40.650493",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "network-scanner",
+      "analyzed_at": "2026-04-02T21:28:40.650900",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "credential-checker",
+      "analyzed_at": "2026-04-02T21:28:40.651313",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "log-analyzer",
+      "analyzed_at": "2026-04-02T21:28:40.651732",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "exploit-detector",
+      "analyzed_at": "2026-04-02T21:28:40.652149",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    },
+    {
+      "skill_id": "malware-scanner",
+      "analyzed_at": "2026-04-02T21:28:40.652560",
+      "code_analysis": {
+        "has_eval": false,
+        "has_exec": false,
+        "has_subprocess": false,
+        "has_network": false,
+        "has_file_io": false,
+        "has_system_calls": false
+      },
+      "risk_indicators": [],
+      "benchmark_category": "security_tool"
+    }
+  ],
+  "summary": {
+    "total_risk_indicators": 0,
+    "by_risk_level": {
+      "high": 0,
+      "medium": 0,
+      "low": 0
+    }
+  }
+}

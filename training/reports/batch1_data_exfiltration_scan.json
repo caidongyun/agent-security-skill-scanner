@@ -1,0 +1,403 @@
+{
+  "timestamp": "2026-03-31T12:10:27.402971",
+  "summary": {
+    "total": 5371,
+    "malicious": 5371,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.543,
+    "avg_time_ms": 0.787
+  },
+  "by_language": {
+    "go": {
+      "total": 1036,
+      "malicious": 1036
+    },
+    "yaml": {
+      "total": 1131,
+      "malicious": 1131
+    },
+    "bash": {
+      "total": 1044,
+      "malicious": 1044
+    },
+    "javascript": {
+      "total": 1061,
+      "malicious": 1061
+    },
+    "python": {
+      "total": 1099,
+      "malicious": 1099
+    }
+  },
+  "by_risk_level": {
+    "medium": 4327,
+    "high": 1044
+  },
+  "by_detection_layers": {
+    "yara": 5371
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-033e01/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.483,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-926f67/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.615,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-58a03a/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 17.641,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-ad094f/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 7.794,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-906b98/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 1.728,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-3d3819/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.428,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-417c69/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.855,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-7c62df/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.437,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-1148b8/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.882,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-b7d4a4/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 61.6,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "CRED_SSHKeyAccess",
+        "CRED_CloudCred",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "Agent_Data_Exfil",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🟡 YARA:CRED_CloudCred"
+      ],
+      "scan_time_ms": 0.909,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

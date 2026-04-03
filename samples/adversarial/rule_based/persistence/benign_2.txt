@@ -1,0 +1,8 @@
+# Benign sample for rule: persistence
+# Generated: 2026-04-02 10:47:53.105257
+
+#!/bin/bash
+# 服务注册 - 良性
+sudo systemctl enable nginx
+sudo systemctl start nginx
+echo "Nginx 服务已启动"

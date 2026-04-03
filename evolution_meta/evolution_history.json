@@ -1,0 +1,83 @@
+[
+  {
+    "timestamp": "2026-03-28T22:35:05.292167",
+    "before": {
+      "detection_rate": 95.3,
+      "false_positive": 0.0,
+      "f1_score": 97.3
+    },
+    "after": {
+      "detection_rate": 95.8,
+      "false_positive": 0.0,
+      "f1_score": 97.8
+    },
+    "improvement": 0.5,
+    "tasks": [
+      {
+        "action": "add_rules",
+        "file": "persistence_rules.yar"
+      },
+      {
+        "action": "add_rules",
+        "file": "data_exfil_rules.yar"
+      }
+    ],
+    "success": true,
+    "significant": true,
+    "regression": false
+  },
+  {
+    "timestamp": "2026-03-28T22:35:10.986634",
+    "before": {
+      "detection_rate": 95.3,
+      "false_positive": 0.0,
+      "f1_score": 97.3
+    },
+    "after": {
+      "detection_rate": 95.8,
+      "false_positive": 0.0,
+      "f1_score": 97.8
+    },
+    "improvement": 0.5,
+    "tasks": [
+      {
+        "action": "add_rules",
+        "file": "persistence_rules.yar"
+      },
+      {
+        "action": "add_rules",
+        "file": "data_exfil_rules.yar"
+      }
+    ],
+    "success": true,
+    "significant": true,
+    "regression": false
+  },
+  {
+    "timestamp": "2026-03-28T22:35:15.532462",
+    "before": {
+      "detection_rate": 95.3,
+      "false_positive": 0.0,
+      "f1_score": 97.3
+    },
+    "after": {
+      "detection_rate": 95.8,
+      "false_positive": 0.0,
+      "f1_score": 97.8
+    },
+    "improvement": 0.5,
+    "tasks": [
+      {
+        "action": "add_rules",
+        "file": "persistence_rules.yar"
+      },
+      {
+        "action": "add_rules",
+        "file": "data_exfil_rules.yar"
+      }
+    ],
+    "success": true,
+    "significant": true,
+    "regression": false
+  }
+]

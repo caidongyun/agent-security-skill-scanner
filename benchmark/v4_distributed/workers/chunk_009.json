@@ -1,0 +1,6985 @@
+{
+  "task_id": "chunk_009",
+  "timestamp": "2026-03-30T15:22:32.942733",
+  "samples_scanned": 996,
+  "detection_rate": 79.01606425702812,
+  "false_positive_rate": 0,
+  "precision": 100.0,
+  "f1_score": 88.27818283791363,
+  "scan_time_sec": 4.292802572250366,
+  "speed": 232.0162605283472,
+  "results": [
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2013830710202456
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1018759105354548
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8375600446015596
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.028684036806225777
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.9424870368093252
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0589759331196547
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1804229579865932
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.817147945985198
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9403240401297808
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.978900982066989
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1475218925625086
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.293295994400978
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.050004106014966965
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4252117834985256
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8649621158838272
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8958699181675911
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1223588846623898
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.13352115638554096
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015910016372799873
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2473789975047112
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0583540424704552
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01670094206929207
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7981010023504496
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9056990966200829
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.083817031234503
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.983234029263258
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0787430219352245
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.270633053034544
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03748107701539993
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.055288827046752
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.63608293607831
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0566110722720623
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0583349503576756
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.15374312736094
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1925061699002981
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9266168344765902
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5844359770417213
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.16397300735116
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7162032201886177
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0704670567065477
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8855508640408516
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1145698372274637
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9129520040005445
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.0652479249984026
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9342220146209002
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8675768040120602
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8654829580336809
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9002280421555042
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8883858099579811
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0612700134515762
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.690544955432415
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0721799917519093
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1638579200953245
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8047291561961174
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8479801472276449
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9368960745632648
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7191830556839705
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04840106703341007
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.935899956151843
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0691598765552044
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0733320377767086
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9848170448094606
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8743840046226978
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.049973139539361
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.196994911879301
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9556119330227375
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0743439197540283
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016269972547888756
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8938261307775974
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9192128200083971
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8832858875393867
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.943449093028903
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5603560023009777
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8666550274938345
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8591911755502224
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8611951489001513
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.044949982315302
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8482898119837046
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9873518720269203
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.061715953052043915
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.013135140761733055
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1470310855656862
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8417479693889618
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.053028808906674385
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.726537011563778
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01737312413752079
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2684091925621033
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0381860192865133
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1951110791414976
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08316594175994396
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9756498038768768
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8993460796773434
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9228649325668812
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.020402880385518
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9824829176068306
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.105662900954485
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0175629761070013
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7595298122614622
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1548660695552826
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.886162044480443
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.006351947784424
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.0808170773088932
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.009653089568019
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01961691305041313
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9515138808637857
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7625249456614256
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8792988955974579
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6965910326689482
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.583965193480253
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8583799935877323
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3678239192813635
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8399451617151499
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2388131581246853
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8224721532315016
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1269630417227745
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016010133549571037
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7426670528948307
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8600619621574879
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9292019531130791
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9315060451626778
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8777759503573179
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8455011304467916
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9349879585206509
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03140908665955067
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9526659268885851
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0695159435272217
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.018595019355416298
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04446390084922314
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.744620967656374
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8802459817379713
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.018003862351179123
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0030099656432867
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8370999712496996
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.022862106561660767
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016920967027544975
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8000260461121798
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6272269897162914
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8146520014852285
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8907399605959654
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7851181328296661
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.8866419084370136
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8597620762884617
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8911208715289831
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.024005072191357613
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2786369770765305
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.220052992925048
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0546478442847729
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.018695136532187462
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.816570922732353
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8484409190714359
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.14328793622553349
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2577190063893795
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8970219641923904
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.9382850732654333
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2126041110605001
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6174879167228937
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04271999932825565
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04077702760696411
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7451629973948002
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05353102460503578
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7439299263060093
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1002440005540848
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.025818917900324
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1154219973832369
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0645659640431404
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0315249674022198
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0529749561101198
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1795819737017155
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.925424974411726
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.032261108979583
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0906248353421688
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.052733976393938
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0331470984965563
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0574329644441605
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0855058208107948
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08192285895347595
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1167139746248722
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8745500817894936
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9038098398596048
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8869930170476437
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4927142076194286
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.024691853672266
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.933950999751687
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1315370686352253
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9855779353529215
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.121527912095189
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.025754027068615
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7954510878771544
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.787546953186393
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0409310925751925
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.440726151689887
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9920258782804012
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3117749951779842
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0934309102594852
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7837549094110727
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.019907020032405853
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.072436036542058
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9368360042572021
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8486721199005842
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.807954791933298
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9170398116111755
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0077590122818947
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2102338261902332
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3286611065268517
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0217510387301445
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.639728831127286
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9212570730596781
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.06555300205945969
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0000660549849272
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.017001992091536522
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.84315100684762
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9256659541279078
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9694979526102543
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3668280337005854
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.020529143512248993
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7837341874837875
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1436641216278076
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.018980983644724
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7780989184975624
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.046637142077088356
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.041593961417675
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9750989265739918
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0496380273252726
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.309816027060151
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0668409522622824
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1708049569278955
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0726610198616982
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9789150208234787
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0931501165032387
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.01098108664155
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.332548912614584
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0190410539507866
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8391888588666916
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9466549381613731
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.02791290171444416
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9578161407262087
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.158902982249856
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9146849624812603
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.131631899625063
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.019946834072470665
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0659890249371529
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.9689070284366608
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2406960595399141
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2905750665813684
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9564391113817692
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015188008546829224
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.00028607994318
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.985559171065688
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9725941345095634
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8675369899719954
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.1209271140396595
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1383048258721828
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3154468033462763
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8976529352366924
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.7186168804764748
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1151309590786695
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3248789366334677
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05294894799590111
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2225070279091597
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8396739140152931
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1666479986160994
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.036108074709773064
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.313582994043827
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.008005976676941
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.995356123894453
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3282899744808674
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0791041422635317
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016081146895885468
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.472406020388007
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9007889311760664
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9055179543793201
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.455518977716565
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9011989459395409
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.002840930595994
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0423141065984964
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2458560522645712
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0826301295310259
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1295478325337172
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.6380870044231415
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8583599701523781
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015279045328497887
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7548599280416965
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8900591637939215
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.7030691485852003
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.110908040776849
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.0165059939026833
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0443481151014566
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8843878749758005
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0541518460959196
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0256029199808836
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0606841426342726
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8774448651820421
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8792390581220388
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3556367959827185
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0062470100820065
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8337680958211422
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.197786070406437
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1568290647119284
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0882210917770863
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9047870989888906
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0219670366495848
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.866073977202177
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8781470824033022
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7588028460741043
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07189507596194744
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.077170018106699
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.178515074774623
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.200161037966609
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9210680145770311
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9619178492575884
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.903974985703826
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8626878261566162
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.9881029836833477
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.027550850063562393
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7948560416698456
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.017493031919002533
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05335104651749134
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.3849218636751175
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0212100353091955
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8690089453011751
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9093550033867359
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.030451850965619
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1684109922498465
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.0968470014631748
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9459441062062979
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8329969607293606
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0365840066224337
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8839680813252926
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.077741013839841
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0815290734171867
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.14790683053433895
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1558129228651524
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.897842925041914
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0477949399501085
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0338581632822752
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1418410576879978
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.267165971919894
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8958799298852682
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.446486847475171
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9126709774136543
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.123983111232519
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.035942928865552
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8611651137471199
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.815640065819025
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7349028494209051
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9806789457798004
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05213799886405468
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.585789050906897
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8587602060288191
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0935398750007153
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.296822076663375
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8518870454281569
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0972470045089722
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1710959952324629
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.92333697527647
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9312559850513935
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.10793306864798069
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0436170268803835
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.2312039509415627
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.409978864714503
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9174300357699394
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.062137143686413765
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04422292113304138
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2112769074738026
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8875338826328516
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9419159032404423
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.147406106814742
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.930509926751256
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.021095085889101
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.541174974292517
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.8745191153138876
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.413345828652382
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4001460298895836
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1528371144086123
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.556905150413513
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.139787957072258
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4859759248793125
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2639600317925215
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.038692960515618324
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04437309689819813
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05759811028838158
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8421799652278423
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3496710453182459
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.040786806493997574
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4196319971233606
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0597869772464037
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.940092934295535
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0314539540559053
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1752689499408007
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9874419774860144
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0430051479488611
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0270060524344444
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.075717017054558
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.042770057916641235
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0472288597375154
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0951438453048468
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0932800360023975
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0470030829310417
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2160309124737978
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9509329684078693
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8794090244919062
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1406039595603943
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1908940505236387
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1423921678215265
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9200409296900034
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.156127080321312
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2060158662497997
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.019317027181386948
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0827660337090492
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.288302036002278
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.02167094498872757
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.8197529502213
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015699071809649467
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5546148642897606
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8803260754793882
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8980641141533852
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9719519875943661
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3855381403118372
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1054528877139091
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.444379057735205
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9904070757329464
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.989255029708147
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.085435040295124
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4972579665482044
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2951979879289865
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9532721489667892
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.374387975782156
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9554321877658367
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0270911045372486
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3788260985165834
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8719001673161983
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 4.023173823952675
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.339402049779892
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04806998185813427
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.046245986595749855
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3277200050652027
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.981008866801858
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.104491064324975
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03205006942152977
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2661649379879236
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1314469631761312
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.924333930015564
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.11919897608459
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7425778787583113
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1470459178090096
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1617590207606554
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.830182133242488
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.190032111480832
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.938975976780057
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.0507109109312296
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3873311690986156
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8390629664063454
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07204501889646053
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.025838147848844528
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0586560238152742
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3467362150549889
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6842940133064985
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.139542018994689
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 3.111253958195448
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5056079030036926
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.513768082484603
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.8291599117219448
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.3421368785202503
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03468501381576061
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.042289961129426956
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07092300802469254
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.962590031325817
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.142576966434717
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016320031136274338
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07212581112980843
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0922929979860783
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2806969936937094
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8762229699641466
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1846718844026327
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1974850203841925
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.897849004715681
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03241095691919327
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0724009480327368
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2399950064718723
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.241177087649703
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.747241036966443
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.7033038679510355
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.019968021661043167
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 6.320110987871885
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8749100379645824
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4126189053058624
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1240181047469378
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2098691444844007
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.277961794286966
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1317119933664799
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1157619301229715
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05785888060927391
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.018524937331676483
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.6316299811005592
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1275450233370066
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.345152035355568
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016872072592377663
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8492020424455404
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.020809005945920944
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9368269238620996
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7249599806964397
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2272708117961884
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.041562994942069
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1572400107979774
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1643231846392155
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0384280253201723
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9526459034532309
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8833459578454494
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9015901014208794
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.824280945584178
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0992411989718676
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1448769364506006
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0892730206251144
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.228444140404463
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9132619015872478
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.8216360844671726
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1461488902568817
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1415209155529737
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2180749326944351
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1866649147123098
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3903069775551558
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2035858817398548
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.163841923698783
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0528490636497736
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 5.203467095270753
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2414578814059496
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1467800941318274
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.048095989972353
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.394659910351038
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8745398372411728
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2118529994040728
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0466731619089842
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0898541659116745
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2498139403760433
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1304090730845928
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2355868238955736
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.8987961336970329
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.129338052123785
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.314834924414754
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08270516991615295
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 6.2866180669516325
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1192640997469425
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0523840319365263
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.019976869225502014
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0475349631160498
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.220479004085064
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.04267499409616
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1169740464538336
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0441779159009457
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1660261079668999
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.334226854145527
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9247639682143927
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0044440645724535
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.125144936144352
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0993811301887035
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.263338839635253
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.224946929141879
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.6644259709864855
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.442995948716998
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.820720059797168
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0861160699278116
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0539861395955086
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04655797965824604
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9525860659778118
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.812954925000668
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1008449364453554
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.4016129318624735
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0773797985166311
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.014577992260456085
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9785040747374296
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9904368780553341
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2530889362096786
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1584578789770603
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9739159140735865
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1625299230217934
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0960949584841728
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.02384521253407
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07313699461519718
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2791890185326338
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.10778196156024933
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.017101876437664032
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0181648433208466
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9988578278571367
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1546649038791656
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.026214100420475
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03662891685962677
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.299927942454815
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.145599039271474
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9356291741132736
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.403447033837438
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.535057883709669
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.5708910543471575
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.784041084349155
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0378160513937473
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0691848583519459
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0709778871387243
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.3468049950897694
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03301212564110756
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.087588956579566
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3733550440520048
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2012931983917952
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.113468177616596
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.052092993631959
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.046933000907302
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.92891207896173
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.280246000736952
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.053320080041885376
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.16876589506864548
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.1354740019887686
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2000398710370064
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8770350832492113
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.872256001457572
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0729010682553053
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.09373598732054234
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8858710061758757
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.124268164858222
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2843189761042595
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04546600393950939
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04555610939860344
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1744219809770584
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9529360104352236
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2053810060024261
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1738608591258526
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.171566080302
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2099291197955608
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.551533842459321
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0959040373563766
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0196059700101614
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04760990850627422
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1357900220900774
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2323311530053616
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0867331400513649
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8852798491716385
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.018534017726778984
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03376300446689129
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1703149434179068
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.02073892392218113
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7881579007953405
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1453879997134209
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9725741110742092
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.106719883158803
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.9053178150206804
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1423618998378515
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.854974104091525
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1811998449265957
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9728339500725269
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1536930687725544
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5570851285010576
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8597220294177532
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1404489632695913
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8801000658422709
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 3.6427308805286884
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0594059713184834
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2862719595432281
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.73734294064343
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.020469073206186295
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0154950432479382
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9000428728759289
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.066063927486539
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8941460400819778
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2960101012140512
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.626380115747452
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.113368060439825
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3054781593382359
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0614399798214436
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1351278517395258
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.811431884765625
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01909583806991577
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6537359226495028
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8430511225014925
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.546304931864142
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9311360772699118
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.033532967790961266
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.027511967346072197
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9892450179904699
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016170088201761246
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.754545072093606
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0062980949878693
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0247319005429745
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.086317002773285
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1636018753051758
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.12170802801847458
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.950010959059
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.930033951997757
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1807039845734835
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.070657977834344
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8538620099425316
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.856787061318755
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.023914966732263565
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2820239644497633
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1649751104414463
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.813825849443674
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8151790611445904
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.034283846616744995
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0795039124786854
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0181688703596592
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.025257933884859085
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1633019894361496
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1226849164813757
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1785700917243958
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.020268140360713005
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1617280542850494
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.12650690041482449
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.090354984626174
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2586400844156742
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.90072918869555
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9743270929902792
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07755495607852936
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.51983604580164
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.873267840594053
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.031067989766597748
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7199401520192623
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1038200464099646
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.891427207738161
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6167720314115286
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07827579975128174
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3937381338328123
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0709678754210472
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4330379199236631
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1454978957772255
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.841438166797161
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.743765108287334
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.866875983774662
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.067030942067504
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9164391085505486
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0122880339622498
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04528486169874668
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.10814308188855648
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0587850119918585
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.6054608430713415
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9120700415223837
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8555748499929905
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0890770461410284
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.4366589281708
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05554407835006714
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01636100932955742
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1541938874870539
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0141968484967947
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.323231030255556
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0505500249564648
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1098110117018223
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0961960069835186
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0196520015597343
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.061374856159090996
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1383448727428913
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.09265309199690819
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.029485207051038742
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.141711138188839
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.777928952127695
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0730419307947159
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.85277415625751
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.931756803765893
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2536009307950735
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8407558780163527
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2341341935098171
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1302789207547903
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.9738218765705824
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7433240320533514
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.920119859278202
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04774914123117924
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1400768999010324
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2535809073597193
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.313839038833976
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.06402004510164261
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0780110973864794
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9406339377164841
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.889848917722702
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.34781308285892
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04902202636003494
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0913359001278877
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8756320457905531
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1392209455370903
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03458489663898945
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3530680444091558
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2908000499010086
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0716801043599844
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.098069129511714
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.036203932017088
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0078998748213053
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.7814510501921177
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.163151115179062
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.411331981420517
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.891467021778226
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1313010472804308
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2617260217666626
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1017661094665527
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.169433118775487
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1352088768035173
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0634041391313076
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2207902036607265
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0154838673770428
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07492001168429852
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.294948160648346
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4873091131448746
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9959270246326923
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0611400939524174
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.2709030415862799
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.247619977220893
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05783885717391968
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2453349772840738
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.036798883229494095
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3151660095900297
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2834571320563555
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.207033034414053
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2008119374513626
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.0814780835062265
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1486939620226622
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0208538733422756
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0779809672385454
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9543399792164564
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2766241561621428
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.017883023247122765
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1056929361075163
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.09820906072855
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8581290021538734
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0679131373763084
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0951429139822721
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.6089171189814806
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0623920243233442
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.539652029052377
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8792481385171413
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2243851087987423
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9396318346261978
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.164348028600216
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.211040886119008
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0856459848582745
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3205510806292295
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1584521271288395
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7328399699181318
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05814898759126663
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2032969389110804
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.103534061461687
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9562019258737564
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.044974032789468765
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.917671110481024
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1882379185408354
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0207240488380194
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01526903361082077
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8937160018831491
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2408660259097815
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.020619016140699387
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0166059732437134
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0088169258087873
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0656878370791674
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.908553833141923
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0800610072910786
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.9295179303735495
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9143438655883074
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08383695967495441
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9325691498816013
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0030409321188927
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1486639268696308
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2245161924511194
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.315917819738388
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.08533594943583
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.4571230858564377
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1380438227206469
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8835969492793083
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1902919504791498
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4056959189474583
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03646896220743656
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9748178999871016
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016221078112721443
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0277270339429379
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0397440530359745
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0585449635982513
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.9711718671023846
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1497761588543653
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04831003025174141
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.924579031765461
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.131501980125904
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1560581624507904
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.838893000036478
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1279848404228687
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9474360849708319
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1139088310301304
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.497357152402401
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6381219029426575
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016470905393362045
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.037674956023693
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0174571070820093
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0659690015017986
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7379640378057957
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8917320519685745
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.9568201173096895
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.915726974606514
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1284761130809784
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05483301356434822
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.507387125864625
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.384196199476719
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.371752005070448
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.6657630912959576
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3984621036797762
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07514096796512604
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3112879823893309
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.049597980454564
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0567409917712212
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9394509252160788
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.5557278897613287
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1782089713960886
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2090720012784004
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01839408650994301
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0788929648697376
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0385830644518137
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2650720309466124
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.488956881687045
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.4013479966670275
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05946098826825619
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9919500444084406
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3674749061465263
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4816781040281057
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.716603921726346
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.13683619908988476
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2152891140431166
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1441849637776613
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0307130869477987
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.1131019089370966
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1027269065380096
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9850680362433195
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01620105467736721
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.2331078071147203
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4630528166890144
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8660941384732723
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8430409729480743
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.192667055875063
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0382260661572218
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8965209126472473
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.7347531393170357
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.337002195417881
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.783914864063263
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.7318880204111338
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.008186049759388
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.7568699810653925
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8920631371438503
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.041528096422553
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7330350130796432
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0699369963258505
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8609350770711899
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.845786977559328
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1072258930653334
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.02319319173693657
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0099441278725863
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0117071215063334
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3482780195772648
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0512409284710884
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.09168102405965328
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0880711488425732
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8678880985826254
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1676899157464504
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.704241080209613
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07140403613448143
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9462339803576469
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9757590014487505
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.125079907476902
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.121181856840849
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8809820283204317
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.9423619378358126
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.312339911237359
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.914455020800233
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0077999904751778
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.119289081543684
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.245957100763917
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0599981546401978
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.553773043677211
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8683890122920275
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0524579081684351
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1062349658459425
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8446639403700829
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.1436750646680593
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0063271038234234
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.043866854161024
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1700140312314034
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0103138629347086
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1805039830505848
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9002778679132462
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8841428682208061
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2280629016458988
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1455279309302568
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1524609290063381
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01646997407078743
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0125190019607544
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.9169750157743692
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1145200114697218
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.729894153773785
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05590496584773064
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.605160025879741
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1100310366600752
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.1831041667610407
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1812751181423664
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8030360117554665
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015338882803916931
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8543417789041996
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.71265590749681
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015188939869403839
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2291850075125694
+    },
+    {
+      "attack_type": "prompt_injection",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0827698279172182
+    }
+  ]
+}

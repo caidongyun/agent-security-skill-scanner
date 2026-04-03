@@ -1,0 +1,505 @@
+{
+  "scan_time": "2026-04-01T18:47:50.694114",
+  "target": "/home/cdy/Desktop/security-benchmark/samples/from-templates",
+  "total_samples": 54,
+  "total_time_seconds": 0.004653300857171416,
+  "avg_time_ms": 0.23381095552058132,
+  "rules_count": 11,
+  "findings": {
+    "malicious": 24,
+    "benign": 30,
+    "unknown": 0,
+    "errors": 0
+  },
+  "by_attack_type": {
+    "code_execution": 24
+  },
+  "results": [
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000004/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.2154228277504444,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00005c/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.1784751657396555,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000014",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000014.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.17047906294465065,
+      "error": null
+    },
+    {
+      "sample_id": "python_hello",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/python_hello.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2433350309729576,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00005d/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.6691520102322102,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000055/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.7768541108816862,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00003c/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.17484696581959724,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000034",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000034.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.18409499898552895,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00002c",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00002c.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.1646578311920166,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00002d/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.25519682094454765,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000054",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000054.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.42502605356276035,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00001c/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.2552678342908621,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00000d/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.10851281695067883,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00004d/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2701350022107363,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00001d",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00001d.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.1927411649376154,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000034/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.4466760437935591,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000054/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.22876798175275326,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00003d",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00003d.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.15932787209749222,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000044",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000044.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.14576292596757412,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000005/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.30960910953581333,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000044/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.19142800010740757,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000055",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000055.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.24715298786759377,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00004c",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00004c.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.1660711131989956,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00005d",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00005d.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.17821392975747585,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000024",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000024.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.11329306289553642,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00002d",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00002d.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.08948799222707748,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000004",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000004.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.44115493074059486,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000035",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000035.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.25749183259904385,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000005",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000005.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2444980200380087,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00004c/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.16798404976725578,
+      "error": null
+    },
+    {
+      "sample_id": "hello",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/hello.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.18144003115594387,
+      "error": null
+    },
+    {
+      "sample_id": "python_calculator",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/python_calculator.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2501280978322029,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000024/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.24100090377032757,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00003d/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.1451720017939806,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000045",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000045.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.3184459637850523,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00000d",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00000d.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2308220136910677,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00000c",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00000c.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.24149194359779358,
+      "error": null
+    },
+    {
+      "sample_id": "read_file",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/read_file.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2238089218735695,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000045/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.1383491326123476,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000015",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000015.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.234880018979311,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00003c",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00003c.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.1520740333944559,
+      "error": null
+    },
+    {
+      "sample_id": "calculate",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/calculate.sh",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2386169508099556,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00000c/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.13766787014901638,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000025/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.25979592464864254,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00001d/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.18801214173436165,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00001c",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00001c.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.19841198809444904,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000015/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.12143701314926147,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00004d",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00004d.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.2788018900901079,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000014/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.2725899685174227,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-00005c",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-00005c.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.13638497330248356,
+      "error": null
+    },
+    {
+      "sample_id": "python_file_reader",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/python_file_reader.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.25041913613677025,
+      "error": null
+    },
+    {
+      "sample_id": "MAL-FP-000025",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated_flat/MAL-FP-000025.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.1755780540406704,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-00002c/payload.py",
+      "verdict": "malicious",
+      "confidence": 0.6,
+      "attack_type": "code_execution",
+      "scan_time_ms": 0.16726297326385975,
+      "error": null
+    },
+    {
+      "sample_id": "payload",
+      "file_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone_generated/MAL-FP-000035/payload.py",
+      "verdict": "benign",
+      "confidence": 0.5,
+      "attack_type": null,
+      "scan_time_ms": 0.17208210192620754,
+      "error": null
+    }
+  ]
+}

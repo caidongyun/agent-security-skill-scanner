@@ -1,0 +1,8 @@
+# Benign sample for rule: evasion
+# Generated: 2026-04-02 10:47:53.105678
+
+#!/bin/bash
+# 授权渗透测试 - 良性
+echo "dGVzdA==" | base64 -d
+printf "\x41\x42\x43"
+echo "渗透测试完成"

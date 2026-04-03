@@ -1,0 +1,18 @@
+[
+  {
+    "id": "DET-20260331-100037",
+    "timestamp": "2026-03-31T10:00:37.861445",
+    "issue_type": "detection_failure",
+    "severity": "high",
+    "description": "检测率 0% 低于目标值 95%",
+    "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates",
+    "sample_language": "multiple",
+    "attack_type": "unknown",
+    "root_cause": "待分析",
+    "suggested_fix": "分析漏报样本，增强 YARA 规则或 AST 检测",
+    "status": "open",
+    "related_files": [
+      "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/rules/scanner_v3/yara"
+    ]
+  }
+]

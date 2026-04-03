@@ -1,0 +1,71 @@
+{
+  "id": "BENCH-EVA-1094df",
+  "version": "2.0",
+  "sample_id": "MAL-EVA-1094df",
+  "name": "绕过检测 - HARD",
+  "description": "",
+  "attack_type": "evasion",
+  "severity": "high",
+  "category": "防御绕过",
+  "language": "python",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "防御绕过",
+    "mitre_atlas": [
+      "ATLAS-T0010"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T21:41:10.943907"
+  },
+  "behaviors": [
+    "code_obfuscation",
+    "dynamic_execution"
+  ],
+  "indicators": [
+    "base64 payload",
+    "marshal.loads",
+    "dynamic execution"
+  ],
+  "tags": [
+    "evasion",
+    "obfuscation",
+    "base64"
+  ],
+  "mitigation_indicators": [
+    "行为检测",
+    "多引擎扫描",
+    "动态分析"
+  ],
+  "false_positive_scenarios": [
+    "代码压缩",
+    "正常的混淆"
+  ],
+  "detection_difficulty": {
+    "score": 3,
+    "level": "L3",
+    "description": "高度混淆，需要高级分析",
+    "indicators_count": 1
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L3",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T21:41:10.943916",
+    "updated_at": "2026-03-29T21:41:10.943917",
+    "payload_file": "evasion/MAL-EVA-1094df/payload.python"
+  }
+}

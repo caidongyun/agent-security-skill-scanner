@@ -1,0 +1,27 @@
+{
+  "scanner": "Round 18 Batch Scanner v1",
+  "completed_at": "2026-03-24T16:20:10.310351",
+  "total_files": 1,
+  "malicious_files": 0,
+  "safe_files": 1,
+  "errors": 0,
+  "detection_rate": "0.0%",
+  "performance": {
+    "total_time_seconds": 0.0,
+    "files_per_second": 1663.7,
+    "avg_time_per_file_ms": 0.601
+  },
+  "results": [
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-V3/samples/high_fidelity/HF-ad921d604863/malicious_code.py",
+      "risk_score": 30,
+      "malicious": false,
+      "findings": [
+        {
+          "type": "import",
+          "module": "subprocess"
+        }
+      ]
+    }
+  ]
+}

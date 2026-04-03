@@ -1,0 +1,33 @@
+{
+  "id": "TO-DLP-003",
+  "name": "\u5de5\u5177\u8f93\u51fa\u4f2a\u9020",
+  "category": "tool_poisoning",
+  "type": "dlp",
+  "severity": "medium",
+  "description": "\u9632\u6b62\u5de5\u5177\u8f93\u51fa\u4f2a\u9020\u5bfc\u81f4\u7684\u6570\u636e\u6cc4\u9732",
+  "patterns": [
+    "fake_output",
+    "spoofed_result",
+    "fabricated_response"
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.168022",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ],
+  "test_cases": {
+    "positive": [
+      "fake_output",
+      "spoofed_result"
+    ],
+    "negative": []
+  }
+}

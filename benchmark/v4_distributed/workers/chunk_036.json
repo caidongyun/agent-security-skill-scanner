@@ -1,0 +1,6999 @@
+{
+  "task_id": "chunk_036",
+  "timestamp": "2026-03-30T15:23:09.231322",
+  "samples_scanned": 998,
+  "detection_rate": 95.59118236472945,
+  "false_positive_rate": 0,
+  "precision": 100.0,
+  "f1_score": 97.74590163934427,
+  "scan_time_sec": 4.0268073081970215,
+  "speed": 247.83902571361142,
+  "results": [
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 6.415158975869417
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.045694876462221146
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.024044886231422424
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04578614607453346
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3873421121388674
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0586549546569586
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.377232139930129
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7619588654488325
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4122480060905218
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6569219771772623
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2309979647397995
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2990460749715567
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.3568438589572906
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 6.825168151408434
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6793189570307732
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5413700602948666
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5666678082197905
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.854513004422188
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.077541012316942
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01566903665661812
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.234395058825612
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6422290354967117
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.8845641538500786
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7007191199809313
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.162866156548262
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.5797920059412718
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3634760398417711
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6037470195442438
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.67009693197906
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4064870774745941
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2242449447512627
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2417878024280071
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7151911053806543
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.5215028543025255
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.02479206584394
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.465607900172472
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.4618709683418274
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8013731352984905
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.520045032724738
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.434004098176956
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.474705059081316
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.6758119240403175
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.486082026734948
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2720748782157898
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7388858143240213
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5698629431426525
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.230326946824789
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.2117421720176935
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3755089603364468
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5250700525939465
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.585111953318119
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.490860970690846
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.0810318160802126
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.3217781241983175
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3722931034862995
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 2.7465198654681444
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1974049266427755
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.098826088011265
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6484259869903326
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.258529955521226
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.9810040034353733
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.687087981030345
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.9198300801217556
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.865843940526247
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4409921132028103
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5164841897785664
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2683989480137825
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.282590001821518
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.6214800998568535
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.09218300692737103
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4677629806101322
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2672269735485315
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015519093722105026
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1714870128780603
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03272108733654022
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.75230105035007
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.9962691478431225
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4988909028470516
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5590130351483822
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.6047290991991758
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.3463039435446262
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8356669936329126
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.9038649518042803
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2444730382412672
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.655374187976122
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4703068882226944
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.999464049935341
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8498240280896425
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4184999745339155
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01536891795694828
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4690549578517675
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.028247971087694
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.543623860925436
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5518800355494022
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6182740218937397
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.340037936344743
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6652920749038458
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.048757091164589
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5298391226679087
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4942821580916643
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3013200368732214
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3637968804687262
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08349609561264515
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4143420848995447
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07717497646808624
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4525139704346657
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.183240165933967
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.7942349445074797
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3785648625344038
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.9720929451286793
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016611069440841675
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.03556697629392147
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.168080933392048
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7593940030783415
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3534380123019218
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.439118990674615
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04584598354995251
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.264010090380907
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5312011819332838
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.745778998360038
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.03190597333014
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8867880571633577
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.836728934198618
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04533515311777592
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.792536048218608
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.534463165327907
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4874500706791878
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.6023349966853857
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9965940155088902
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4980179257690907
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2006808537989855
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.666033873334527
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.017391983419656754
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04069693386554718
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08617108687758446
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.666118882596493
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.048471011221409
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5527610667049885
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.01977686770260334
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9521501380950212
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2595671471208334
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.233142102137208
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9890600815415382
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.240316079929471
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6607990730553865
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.06390013732016087
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.198483096435666
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3942238874733448
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2467079795897007
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4874502085149288
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015698838979005814
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.46895507350564
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6062370743602514
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.015900004655122757
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08495990186929703
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 1.2277730274945498
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5712659806013107
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5018411688506603
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7182570192962885
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.44080208055675
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.016761943697929382
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.765315119177103
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3994849286973476
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.746234018355608
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.08735386654734612
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3654599897563457
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.9521350730210543
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07016095332801342
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.456876914948225
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8473290149122477
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2084510419517756
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.24423298984766
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.488430891185999
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4225977938622236
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6367350947111845
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.330570016056299
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2707530986517668
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.033452874049544334
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3190628960728645
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.219727098941803
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4495281502604485
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6056809108704329
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04546600393950939
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5846969801932573
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6113870553672314
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.224802039563656
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5889189671725035
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.573930960148573
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.04527508281171322
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6745999455451965
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.07086200639605522
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.018734950572252274
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "benign",
+      "is_fp": false,
+      "is_fn": true,
+      "scan_ms": 0.05382089875638485
+    },
+    {
+      "attack_type": "memory_pollution",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.537266816943884
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.3322779927402735
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9434288367629051
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2392289247363806
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2159699108451605
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2993270065635443
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.029960811138153
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9773019701242447
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5768459998071194
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12126797810196877
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6885909028351307
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5190638843923807
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.064336160197854
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.155897043645382
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4329971745610237
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2395340017974377
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1263420823961496
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.16384711489081383
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0703769512474537
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1791858598589897
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.646031090989709
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2677870690822601
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.05691708065569401
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.059470999985933304
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4285690635442734
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8556850738823414
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3650998007506132
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4061622098088264
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4607349187135696
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1741369273513556
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2584200594574213
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.687229076400399
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1399420220404863
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.765535144135356
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1846309062093496
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.032545929774642
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5085390768945217
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8876900430768728
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0749958455562592
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.1293020322918892
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.516730085015297
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9388301987200975
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.66805899143219
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0453399736434221
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7730101719498634
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.092158120125532
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9253448806703091
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0233491193503141
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3235919177532196
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9485587943345308
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1599750723689795
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10024802759289742
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.547738142311573
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9459441062062979
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.370454931631684
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9760700631886721
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.032054889947176
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0890218913555145
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.455558929592371
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1450969614088535
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.6981948651373386
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0279580019414425
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06953999400138855
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 5.123747047036886
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1885177809745073
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1251599062234163
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7983670588582754
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.11118804104626179
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1750131379812956
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1435640044510365
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1983870062977076
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6524079255759716
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4971080236136913
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.056260196492076
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.424320973455906
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2734681367874146
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1084889993071556
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4721359368413687
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.7051068134605885
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1302400380373
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.128806034103036
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12322119437158108
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6538710333406925
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.473026979714632
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2371600605547428
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2059721630066633
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9254349861294031
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0541570372879505
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4579691234976053
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.77300993911922
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06474112160503864
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.05187699571251869
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.58861412294209
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2622668873518705
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.322013955563307
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06048288196325302
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2607339303940535
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.477695932611823
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2602030765265226
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.398617099970579
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.197594916447997
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1760350316762924
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.1630659680813551
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3644779101014137
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.11946400627493858
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0418740566819906
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2373898644000292
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.076949156820774
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3299590684473515
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5232961159199476
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10199099779129028
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.11965904943645
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.18354894220829
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9668220300227404
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5846469216048717
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.9537239354103804
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3832028489559889
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07052300497889519
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1101318523287773
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0798349976539612
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5477069430053234
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.8992059156298637
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2362981215119362
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1722680646926165
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3259260449558496
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0182789992541075
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2740890961140394
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1599750723689795
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9654799941927195
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9302741382271051
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3339958861470222
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3889039400964975
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.507891971617937
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9677698146551847
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.08040992543101311
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.432841902598739
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1140289716422558
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2587602250277996
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4033759254962206
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0144019033759832
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.169642899185419
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5557619519531727
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2682080268859863
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.15125400386750698
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1202709283679724
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0593968909233809
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1291869450360537
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.433077035471797
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1861338280141354
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5460788272321224
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.656746121123433
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9356439113616943
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.942467013373971
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9814710356295109
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0537959169596434
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.436098176985979
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.8541769608855247
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1553559452295303
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2559350579977036
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5685409307479858
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.265843864530325
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3622089065611362
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.948198139667511
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.154149115085602
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06392993964254856
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.341730985790491
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1007138527929783
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.185438061133027
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.04733912646770477
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3658110983669758
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8572778683155775
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4141159374266863
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.781080013141036
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.025317961350083
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6069128178060055
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3764910399913788
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.21232308447361
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0949329007416964
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1346930880099535
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1143241319805384
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3178760893642902
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0530040599405766
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.164283836260438
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0434158612042665
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.609719220548868
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.065753797069192
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.618580125272274
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.384837182238698
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1003989968448877
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.378238830715418
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9124909993261099
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.05551404319703579
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12366194278001785
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6285890489816666
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2410021629184484
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1580809950828552
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06642495281994343
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1872060131281614
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4026359897106886
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4909061137586832
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9717021603137255
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9679051581770182
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5317769031971693
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.09273388423025608
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.175929956138134
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2430161479860544
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.894276985898614
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.720300806686282
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06641494110226631
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.9143549036234617
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.671715173870325
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9105321262031794
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.5887940060347319
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5824970323592424
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.21193805150687695
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.633123029023409
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3649389147758484
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.109519973397255
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.300082938745618
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8528338987380266
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.947996973991394
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.372438881546259
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1402931306511164
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3300240971148014
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.169712981209159
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1093450486660004
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2159200850874186
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9126059487462044
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9780440013855696
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0937410406768322
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9436290711164474
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3064950946718454
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1066959705203772
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0279630552977324
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.383625065907836
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9524158667773008
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9995040018111467
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.193317912518978
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.311615040525794
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.303443918004632
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1061839759349823
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.319593982771039
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9536580182611942
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.108237775042653
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1511091142892838
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9841748978942633
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.04636705853044987
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2471339907497168
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0032809805124998
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9851681534200907
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8355520442128181
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0665599256753922
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.952941995114088
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9214479941874743
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.224060008302331
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4916969016194344
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3379940539598465
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9411838836967945
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2189659755676985
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9553420823067427
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.517700893804431
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1388161219656467
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3187029398977757
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.045269986614585
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5454829446971416
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3400478530675173
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3998799733817577
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1942998971790075
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.989190001040697
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1008740402758121
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0258839465677738
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.218671143054962
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1624088510870934
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1703399252146482
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9466749615967274
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.277861814945936
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06041303277015686
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.204402910545468
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.677695894613862
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12203911319375038
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6083959490060806
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.497222041711211
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2424890883266926
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0910360142588615
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8718799110502005
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.052103005349636
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2098181545734406
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2695600744336843
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.139868050813675
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0798950679600239
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.204008098691702
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.286693150177598
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.065908931195736
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.059416914358735
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2127140071243048
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.085194991901517
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.275721937417984
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9324480779469013
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.909426111727953
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9194440208375454
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2711139861494303
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0751660447567701
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8363331910222769
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.99333212710917
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0331880766898394
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9637470357120037
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0043028742074966
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1188080534338951
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9279001969844103
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0825700592249632
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1627899948507547
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.097097061574459
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1889489833265543
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0102440137416124
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0623219422996044
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.620483050122857
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.010004198178649
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1718728821724653
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2120329774916172
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.167920185253024
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.03496590256691
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0443278588354588
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.73798406124115
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.242259146645665
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12284982949495316
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3081429060548544
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3865150287747383
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2803308200091124
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.195916837081313
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9350238833576441
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.991253113374114
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2207990512251854
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.128446077927947
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9815499652177095
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1216539423912764
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.0672261230647564
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.249874010682106
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5406690072268248
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1195041481405497
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3446409720927477
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1431039310991764
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07468997500836849
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3978208880871534
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.348863985389471
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.347346929833293
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.059001147747039795
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1576698161661625
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.13820896856486797
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8577331211417913
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0674409568309784
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.994513975456357
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4909259993582964
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06404006853699684
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.236474072560668
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0878099128603935
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3657710514962673
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.105196937918663
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9431787766516209
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.265943981707096
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.179280923679471
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4884510096162558
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1917789708822966
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3260219022631645
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06713485345244408
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.381144091486931
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.7974610459059477
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.488931942731142
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.510117134079337
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07002078928053379
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.172013046219945
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2010219506919384
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4051548205316067
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1856330092996359
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1084090005606413
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0257628746330738
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3078220654278994
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0991909075528383
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3930220156908035
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2404110059142113
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2642310466617346
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3001379556953907
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1164031457155943
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.336330944672227
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 4.170058993622661
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4808121379464865
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.456967020407319
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10886392556130886
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.0953790731728077
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.232079928740859
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.252774080261588
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.08198409341275692
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0699559934437275
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.936195021495223
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3749178033322096
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4275358989834785
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.20213983952999115
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4697810877114534
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.0773351639509201
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.123808091506362
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.356323016807437
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1647341307252645
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9977150950580835
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.098881009966135
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.0773048959672451
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.6054199077188969
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9279400110244751
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9141288939863443
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6748559903353453
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4793539885431528
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0482150614261627
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.471284009516239
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.278938027098775
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1515789665281773
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.09236298501491547
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9751780889928341
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2924340553581715
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07728487253189087
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3153910879045725
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1369308922439814
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1230760719627142
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9199350606650114
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9599898476153612
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.086241962388158
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9168088436126709
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.100993948057294
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12027495540678501
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3132481146603823
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0635140351951122
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9424069430679083
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.662421902641654
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3626550789922476
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1313820723444223
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1353290174156427
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9473469108343124
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1848161704838276
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.5613980144262314
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.95165497623384
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06258813664317131
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.130199059844017
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.328936941921711
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.079703914001584
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.955751959234476
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0180589742958546
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2322410475462675
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3682960998266935
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.2084309235215187
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2610137928277254
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06622401997447014
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7128770016133785
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1024069972336292
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.533434959128499
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.422717934474349
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0722908191382885
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0312630329281092
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.6595869567245245
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0075089521706104
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9987330995500088
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.18389499746263027
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.855954924598336
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.263154136016965
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9646189864724874
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2761729303747416
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2980340979993343
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2270348854362965
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4947980418801308
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.059551887214184
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9755389764904976
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1631709057837725
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1038000229746103
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.954700168222189
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.104956889525056
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2540621683001518
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0457208845764399
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06646406836807728
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0519821662455797
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1379129718989134
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2398350518196821
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.121934037655592
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.7058739215135574
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4564960040152073
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.952040009200573
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.2587148919701576
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0031408164650202
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2053700629621744
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1119050905108452
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1949349902570248
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9481990709900856
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.074574887752533
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9911090601235628
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1192788369953632
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.941024161875248
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4195569567382336
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2906148806214333
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.227000029757619
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9173001162707806
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.024315996095538
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0792088471353054
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.033242955803871
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1472709011286497
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.14046300202608109
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2763980086892843
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.867697039619088
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9132418781518936
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0422340128570795
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9158870670944452
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9446220938116312
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.188158057630062
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9674839675426483
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.547457115724683
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1856039054691792
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1434340849518776
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.194184111431241
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.044843975454569
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9511839598417282
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9233420714735985
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1862599533051252
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.962539041414857
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0697159450501204
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1814150493592024
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07118401117622852
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0811970569193363
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9895861148834229
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0424251668155193
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0921530667692423
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2149889953434467
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.470046816393733
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.5466799959540367
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.216511009261012
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9905420485883951
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1209920048713684
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8963960465043783
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10114000178873539
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0321149602532387
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2899888679385185
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9944038465619087
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1371520813554525
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.148769097402692
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1087441127747297
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1217838618904352
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9314159397035837
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2089970987290144
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.363155897706747
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9538289159536362
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2360471300780773
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1344770900905132
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.103027956560254
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.938821118324995
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1748631950467825
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.5499061923474073
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2905299663543701
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1692829430103302
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.311990199610591
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2814380936324596
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.20916201174259186
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.216731034219265
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0049698650836945
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1572709772735834
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.002660021185875
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8624418880790472
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.442791126668453
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1159218847751617
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.3977809362113476
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2948079966008663
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9404330048710108
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2395800333470106
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.005661139264703
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9281848799437284
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.024750992655754
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.106308937072754
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.958648044615984
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1441961396485567
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.582552842795849
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.1564030535519123
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0736531112343073
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2445989307016134
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.5989279858767986
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.23836689069867134
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.066800905391574
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.154499990865588
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.1753079704940319
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.05281902849674225
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2826350070536137
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9501720778644085
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2715139891952276
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4188510831445456
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9255410879850388
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.068522920832038
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1608670465648174
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.254511997103691
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2737589422613382
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9143040515482426
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9809499606490135
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1163440067321062
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.629544982686639
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0195518843829632
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.879103947430849
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06621400825679302
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9542189072817564
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.3306251280009747
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0774200782179832
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9231711737811565
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.234574941918254
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1802329681813717
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3742220364511013
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.217066939920187
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.228308003395796
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.278627896681428
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9596589952707291
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9471209961920977
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0456959027796984
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10272301733493805
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0621269941329956
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0579538065940142
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9227199479937553
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.907676924020052
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.277931896969676
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.914966084063053
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.47022688947618
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9256862103939056
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07034209556877613
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4154488928616047
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.390993060544133
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07153395563364029
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.374848049134016
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.326628029346466
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0613358356058598
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1004180889576674
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2290190681815147
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9524559136480093
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8821090925484896
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2856160067021847
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9654499590396881
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.958157004788518
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.243467140942812
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.036278834566474
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0697857942432165
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9717829525470734
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.11557713150978088
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0476941242814064
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.094087190926075
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.14622509479522705
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1351581197232008
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.162664895877242
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3072211295366287
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.13648602180182934
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1436149943619967
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.081037102267146
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9467049967497587
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10554795153439045
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9509730152785778
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0635037906467915
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.130488933995366
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2013080306351185
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9682560339570045
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.137763960286975
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.10659988038241863
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.225662814453244
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.370584988966584
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.09924592450261116
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.08196313865482807
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9269779548048973
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9820209816098213
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4059369936585426
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9806391317397356
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5650288444012403
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1471710167825222
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.8755460623651743
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.077309949323535
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.229054993018508
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.16935821622610092
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3883139472454786
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1431630700826645
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2099039051681757
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3565380834043026
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3138139620423317
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2794348187744617
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.182468004524708
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1479919776320457
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3628300987184048
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.152116037905216
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.280486049130559
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.5500820484012365
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.521002035588026
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.264426089823246
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0064921118319035
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.0075490940362215
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.052247894927859306
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0267311483621597
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.129738986492157
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.262712921947241
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.4418290704488754
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3989579640328884
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.13450183905661106
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3048920556902885
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1182669550180435
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.143810037523508
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1995700187981129
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0105999428778887
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.18238206394016743
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1375730391591787
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3523760717362165
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3623239938169718
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.383638871833682
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.1539990771561861
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.919429050758481
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2529640700668097
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9240929502993822
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.89483305439353
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.470617812126875
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.256776973605156
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.2170529011636972
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9850470814853907
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.064501168206334
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1024069972336292
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.06745592691004276
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.147101167589426
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.08995900861918926
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0119280777871609
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1813950259238482
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.243316965177655
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1707310806959867
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1307909153401852
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2863170597702265
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.917094923555851
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.322951029986143
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9866999462246895
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.261536031961441
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.15824693441391
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0143721010535955
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0214810501784086
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3991540763527155
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4017580542713404
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.09503890760242939
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1539540719240904
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.096931915730238
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2720550876110792
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1619681026786566
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.12112781405448914
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.400044981390238
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.0532000344246626
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.03389797732234
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9172350876033306
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0926281102001667
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9399920236319304
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.202343963086605
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2410669587552547
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.310847932472825
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0812671389430761
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.2322158329188824
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0330670047551394
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.007654868066311
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.371296053752303
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.127143856137991
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1265119537711143
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.982432160526514
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.3476919159293175
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2810719199478626
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.285785973072052
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9228908456861973
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.4861869644373655
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.056555960327386856
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.202400006353855
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.127890009433031
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9310559835284948
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.193763852119446
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.075491938740015
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.296315971761942
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.167970011010766
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.1339458655565977
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.947993179783225
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1337660253047943
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.8525288216769695
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.115587143227458
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 3.082539886236191
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9247639682143927
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.230668043717742
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0463220532983541
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.043305965140462
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.978820189833641
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.027682028710842
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0011270642280579
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9582221284508705
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.15044212341308594
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.1494059581309557
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.4307629317045212
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.066714921966195
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.1180209219455719
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0127790737897158
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.07936893962323666
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.142287092283368
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.047343946993351
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0360029991716146
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1307249553501606
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9378981776535511
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9428939558565617
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0955741163343191
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2415680103003979
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.0951240547001362
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.9376140553504229
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9168598335236311
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.3217779342085123
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 1.2037470005452633
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.965669983997941
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 2.1297638304531574
+    },
+    {
+      "attack_type": "supply_chain_attack",
+      "verdict": "malicious",
+      "is_fp": false,
+      "is_fn": false,
+      "scan_ms": 0.9263670071959496
+    }
+  ]
+}

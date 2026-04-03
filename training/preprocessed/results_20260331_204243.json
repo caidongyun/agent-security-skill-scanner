@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-03-31T20:42:43.081708",
+  "results": [
+    {
+      "status": "passed",
+      "attack_type": "prompt_injection",
+      "metrics": {
+        "total": 4343,
+        "malicious": 4343,
+        "detection_rate": 100.0
+      },
+      "target": 95.0,
+      "preprocessed": true,
+      "sample_count": 5433
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "needs_optimization": 0
+  }
+}

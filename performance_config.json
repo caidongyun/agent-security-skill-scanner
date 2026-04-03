@@ -1,0 +1,88 @@
+{
+  "_comment": "性能基准配置文件 - Performance Benchmark Configuration",
+  "_version": "1.0.0",
+  "_created": "2026-03-28",
+  
+  "single_rule_performance": {
+    "threshold_ms": 10,
+    "description": "单规则平均扫描时间",
+    "critical": true,
+    "measurement": {
+      "sample_size": 10,
+      "warmup_runs": 3,
+      "test_runs": 5,
+      "statistic": "average"
+    }
+  },
+  
+  "batch_performance": {
+    "threshold_ms": 100,
+    "description": "千规则扫描时间",
+    "critical": true,
+    "rules_per_batch": 1000,
+    "measurement": {
+      "warmup_runs": 1,
+      "test_runs": 3,
+      "statistic": "p95"
+    }
+  },
+  
+  "scalability_tests": {
+    "enabled": true,
+    "rule_counts": [100, 500, 1000, 5000],
+    "measure": ["throughput", "latency", "memory"]
+  },
+  
+  "memory_limits": {
+    "max_mb": 512,
+    "warning_mb": 256,
+    "measurement": "peak_rss"
+  },
+  
+  "concurrency": {
+    "enabled": true,
+    "max_workers": 4,
+    "queue_size": 100
+  },
+  
+  "optimization_targets": {
+    "rule_compilation": {
+      "threshold_ms": 50,
+      "description": "规则编译时间"
+    },
+    "pattern_matching": {
+      "threshold_ms": 5,
+      "description": "单个模式匹配时间"
+    },
+    "file_io": {
+      "threshold_ms": 2,
+      "description": "单个文件读取时间"
+    }
+  },
+  
+  "reporting": {
+    "format": "json",
+    "include_metrics": [
+      "total_time_ms",
+      "avg_time_ms",
+      "min_time_ms",
+      "max_time_ms",
+      "p50_ms",
+      "p95_ms",
+      "p99_ms",
+      "throughput_rules_per_sec",
+      "memory_mb"
+    ],
+    "save_history": true,
+    "history_dir": "reports/performance_history"
+  },
+  
+  "alerts": {
+    "on_threshold_exceeded": true,
+    "channels": ["log", "file"],
+    "severity_levels": {
+      "warning": 1.2,
+      "critical": 1.5
+    }
+  }
+}

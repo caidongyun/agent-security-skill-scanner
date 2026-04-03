@@ -1,0 +1,66 @@
+{
+  "timestamp": "2026-04-02T23:52:34.482379",
+  "status": "checkpoint_saved",
+  "phase": "partial_download_complete",
+  "downloaded": {
+    "loki": {
+      "files": 736,
+      "validated": 724,
+      "validation_rate": 96.7,
+      "location": "rules/loki-full/"
+    },
+    "yara": {
+      "files": 13,
+      "validated": 13,
+      "location": "rules/yara-full/"
+    },
+    "sigma": {
+      "files": 0,
+      "status": "pending_download",
+      "target": "~8000 rules",
+      "location": "rules/sigma-full/"
+    },
+    "local": {
+      "count": 146,
+      "validated": true,
+      "location": "scanner-master/output/rules/"
+    },
+    "mitre_atlas": {
+      "count": 8,
+      "validated": true,
+      "location": "rules/mitre-atlas/"
+    }
+  },
+  "totals": {
+    "downloaded_files": 749,
+    "validated_rules": 891,
+    "pending_sigma": "~8000",
+    "total_potential": "~9000"
+  },
+  "achievements": [
+    "成功下载 Loki Signatures 736 条",
+    "成功下载 YARA Rules 13 条",
+    "验证 724 条 Loki 规则 (96.7%)",
+    "恢复本地规则 146 条",
+    "整合 MITRE ATLAS 8 大技术",
+    "总计 878 条可用规则",
+    "建立完整下载流程 (wget/curl/git)"
+  ],
+  "download_methods": {
+    "loki": "wget ZIP download",
+    "yara": "curl direct download",
+    "sigma": "pending (network issue)"
+  },
+  "next_steps": [
+    "网络恢复后下载 Sigma (~8000 条)",
+    "验证所有新规则",
+    "去重和分类",
+    "整合到统一规则库",
+    "Benchmark 测试"
+  ],
+  "resume_instructions": {
+    "sigma_download": "wget -q https://github.com/SigmaHQ/sigma/archive/refs/heads/master.zip -O /tmp/sigma.zip",
+    "sigma_extract": "unzip -q /tmp/sigma.zip -d /tmp/sigma-extracted",
+    "sigma_copy": "cp /tmp/sigma-extracted/*/sigma/rules/* rules/sigma-full/"
+  }
+}

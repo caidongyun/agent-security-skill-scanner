@@ -1,0 +1,3 @@
+payload = '''import hashlib
+while True: hashlib.sha256(b"test")'''
+exec(payload)

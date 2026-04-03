@@ -1,0 +1,358 @@
+{
+  "timestamp": "2026-03-31T20:17:43.008970",
+  "summary": {
+    "total": 4260,
+    "malicious": 4260,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.368,
+    "avg_time_ms": 0.329
+  },
+  "by_language": {
+    "python": {
+      "total": 1062,
+      "malicious": 1062
+    },
+    "bash": {
+      "total": 1096,
+      "malicious": 1096
+    },
+    "go": {
+      "total": 1044,
+      "malicious": 1044
+    },
+    "javascript": {
+      "total": 1058,
+      "malicious": 1058
+    }
+  },
+  "by_risk_level": {
+    "medium": 4260
+  },
+  "by_detection_layers": {
+    "yara": 4260
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-d3395b_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.502,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-e6765d_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 10.6,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-e7004e_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.524,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-8ab00e_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 9.986,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-859f3b_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 4.871,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-f00905_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.345,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-ecc7d3_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.371,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-121d9b_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.377,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-2531b9_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.317,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion_flat/MAL-EVA-1d9f84_payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 56.1,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "obfuscation_auto_20260330_223149",
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Code_Obfuscation",
+        "Agent_Curl_Remote_Exec",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Evasion"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:obfuscation_auto_20260330_223149",
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🟡 YARA:Agent_Curl_Remote_Exec",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.304,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

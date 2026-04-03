@@ -2,6 +2,7 @@
 // Created: 2026-03-30
 // Target: 95%+ detection rate
 
+
 rule ResourceExhaustion_Token_Consumption {
     meta:
         description = "Detects token consumption attacks (memory exhaustion)"
@@ -13,6 +14,7 @@ rule ResourceExhaustion_Token_Consumption {
         $while_true = /while\s+True:/
         $append = /\.append\s*\(/
         $multiply = /\*\s*\d+/
+        $string_mult = /["'][^"']*["']\s*\*/
     
     condition:
         any of them
@@ -28,9 +30,10 @@ rule ResourceExhaustion_Loop_Allocation {
     strings:
         $for_range = /for\s+\w+\s+in\s+range\s*\(/
         $append = /\.append|\.add|\.insert/
+        $list_dict = /\[\]|\{\}|list\(\)|dict\(\)/
     
     condition:
-        $for_range and $append
+        $for_range and ($append or $list_dict)
 }
 
 rule ResourceExhaustion_API_Abuse {
@@ -42,10 +45,12 @@ rule ResourceExhaustion_API_Abuse {
     
     strings:
         $requests = /requests\.(get|post|put|delete|request)\s*\(/
+        $api_url = /api|\/v\d+|\/endpoint/
         $loop = /for\s+.*\s+in\s+|while/
+        $range = /range\s*\(\s*\d+/
     
     condition:
-        $requests and $loop
+        $requests and ($loop or $range)
 }
 
 rule ResourceExhaustion_Concurrent_Flood {
@@ -58,9 +63,11 @@ rule ResourceExhaustion_Concurrent_Flood {
     strings:
         $async = /async\s+def|asyncio|await/
         $gather = /gather|as_completed|wait/
+        $session = /session|client|Session|Client/
+        $request = /\.get\(|\.post\(|\.request\(/
     
     condition:
-        $async and $gather
+        $async and ($gather or $session)
 }
 
 rule ResourceExhaustion_Thread_Pool {
@@ -73,9 +80,10 @@ rule ResourceExhaustion_Thread_Pool {
     strings:
         $thread = /Thread|Executor|threading|concurrent/
         $submit = /submit|execute|start/
+        $many = /\d{3,}|range\s*\(\s*\d{3,}/
     
     condition:
-        $thread and $submit
+        $thread and ($submit or $many)
 }
 
 rule ResourceExhaustion_WebSocket_Flood {
@@ -88,9 +96,10 @@ rule ResourceExhaustion_WebSocket_Flood {
     strings:
         $websocket = /websocket|WebSocket|ws\.connect|websockets/
         $connect = /connect\s*\(/
+        $loop = /for\s+.*\s+in\s+range|while\s+True/
     
     condition:
-        $websocket and $connect
+        $websocket and ($connect or $loop)
 }
 
 rule ResourceExhaustion_Network_Flood {
@@ -103,9 +112,10 @@ rule ResourceExhaustion_Network_Flood {
     strings:
         $socket = /socket\.(socket|AF_INET|SOCK_STREAM|SOCK_DGRAM)/
         $connect = /connect\s*\(|send\s*\(|sendto\s*\(/
+        $loop = /for\s+.*\s+in\s+range\s*\(\s*\d{3,}/
     
     condition:
-        $socket and $connect
+        $socket and ($connect or $loop)
 }
 
 rule ResourceExhaustion_Slowloris {
@@ -117,10 +127,12 @@ rule ResourceExhaustion_Slowloris {
     
     strings:
         $http = /HTTP\/1\.[01]|GET\s+\/|POST\s+\//
+        $header = /\r\n|\\r\\n/
         $sleep = /sleep\s*\(\s*\d+/
+        $infinite = /while\s+True:/
     
     condition:
-        $http and $sleep
+        $http and ($sleep or $infinite)
 }
 
 rule ResourceExhaustion_Recursive {
@@ -131,11 +143,11 @@ rule ResourceExhaustion_Recursive {
         type = "resource_exhaustion"
     
     strings:
-        $recursive = /def\s+\w+\s*\([^)]*\):/
-        $self_call = /\w+\s*\(\s*\w+\s*\)/
+        $recursive = /def\s+\w+\s*\([^)]*\):[^#]*\w+\s*\(/
+        $no_base = /if|else|return/
     
     condition:
-        $recursive and $self_call
+        $recursive
 }
 
 rule ResourceExhaustion_File_Descriptor {
@@ -148,9 +160,11 @@ rule ResourceExhaustion_File_Descriptor {
     strings:
         $open = /open\s*\(/
         $file = /\/dev\/|\/tmp\/|\.txt|\.log|\.dat/
+        $loop = /for\s+.*\s+in\s+range\s*\(\s*\d{3,}/
+        $no_close = /(?!close)/
     
     condition:
-        $open and $file
+        $open and ($file or $loop)
 }
 
 rule ResourceExhaustion_Memory_Allocation {
@@ -163,9 +177,11 @@ rule ResourceExhaustion_Memory_Allocation {
     strings:
         $multiply = /\*\s*\d{5,}/
         $string = /["'][^"']*["']/
+        $array = /\[.*\]|list\(|array\(/
+        $alloc = /bytes|bytearray|memoryview/
     
     condition:
-        $multiply and $string
+        ($multiply and $string) or $alloc
 }
 
 rule ResourceExhaustion_CPU_Bound {
@@ -178,37 +194,8 @@ rule ResourceExhaustion_CPU_Bound {
     strings:
         $math = /math\.|\*\*|sqrt|factorial/
         $loop = /for\s+.*\s+in\s+range\s*\(\s*\d{5,}/
+        $crypto = /hashlib|sha256|md5|encrypt|decrypt/
     
     condition:
-        $math and $loop
-}
-
-rule ResourceExhaustion_Array_Allocation {
-    meta:
-        description = "Detects large array allocation attacks (numpy/matrix)"
-        severity = "high"
-        week = 3
-        type = "resource_exhaustion"
-    
-    strings:
-        $numpy = /numpy|np\./
-        $zeros = /zeros|ones|empty|full/
-    
-    condition:
-        $numpy and $zeros
-}
-
-rule ResourceExhaustion_GraphQL_Deep {
-    meta:
-        description = "Detects GraphQL deep query attacks"
-        severity = "medium"
-        week = 3
-        type = "resource_exhaustion"
-    
-    strings:
-        $graphql = /query\s*=|mutation\s*=|{/
-        $nested = /users|posts|comments|author/
-    
-    condition:
-        $graphql and $nested
+        ($math or $crypto) and $loop
 }

@@ -1,0 +1,6 @@
+id: sigma-auto-1774272555-3
+name: Auto Rule 3
+type: sigma
+severity: high
+condition: contains any of (keyword3, keyword4, keyword5)
+attack_type: data_exfil

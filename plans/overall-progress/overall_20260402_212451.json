@@ -1,0 +1,46 @@
+{
+  "updated_at": "2026-04-02T21:07:48.445701",
+  "goal": {
+    "detection_rate": 0.99,
+    "false_positive_rate": 0.01
+  },
+  "progress": [
+    {
+      "round": 1,
+      "status": "completed",
+      "result": {
+        "detection_rate": 0.911,
+        "false_positive_rate": 0.267
+      }
+    },
+    {
+      "round": 2,
+      "status": "verification",
+      "target": {
+        "detection_rate": 0.95,
+        "false_positive_rate": 0.15
+      },
+      "eta": "3-5 \u5929"
+    },
+    {
+      "round": 3,
+      "status": "planning",
+      "target": {
+        "detection_rate": 0.97,
+        "false_positive_rate": 0.1
+      },
+      "eta": "7 \u5929",
+      "strategy": "practical (no ML)",
+      "focus": "\u89c4\u5219\u4f18\u5316 + \u767d\u540d\u5355"
+    },
+    {
+      "round": 4,
+      "status": "planned",
+      "target": {
+        "detection_rate": 0.98,
+        "false_positive_rate": 0.05
+      },
+      "eta": "14 \u5929"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-03-31T07:52:31.055999",
+  "total_samples": 128,
+  "malicious_count": 109,
+  "benign_count": 19,
+  "detection_rate": 0.8515625,
+  "detection_rate_percent": "85.2%",
+  "scan_time_seconds": 1.227,
+  "avg_time_ms": 0.312,
+  "throughput_samples_per_sec": 104.3,
+  "top_matched_rules": {
+    "EXFIL_HTTPS_Covert": 58,
+    "Malicious_Remote_Code_Execution": 33,
+    "JS_CodeInjection_Eval": 31,
+    "obfuscation_auto_20260330_223149": 31,
+    "JS_Exfil_FileRead": 25,
+    "JS_CodeExecution_ChildProcess_Exec": 25,
+    "JS_RemoteCodeExecution_DynamicImport": 20,
+    "JS_Persist_FileWrite": 15,
+    "Shell_CodeInjection_EvalVariant": 15,
+    "Agent_Curl_Remote_Exec": 11,
+    "Agent_Credential_Theft": 11,
+    "Malicious_Code_Obfuscation": 11,
+    "JS_Obfuscation_DynamicEval": 10,
+    "EXFIL_Chunked_Transfer": 10,
+    "Shell_CodeInjection_CommandSubstitution": 10,
+    "Agent_Env_Theft": 10,
+    "JS_RemoteCodeExecution_HttpEval": 10,
+    "Malicious_Credential_Theft": 6,
+    "CRED_ShadowFileAccess": 5,
+    "Shell_Cred_HashDump": 5
+  }
+}

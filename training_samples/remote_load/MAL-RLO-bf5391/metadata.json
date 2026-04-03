@@ -1,0 +1,72 @@
+{
+  "id": "BENCH-RLO-bf5391",
+  "version": "2.0",
+  "sample_id": "MAL-RLO-bf5391",
+  "name": "远程加载 - MEDIUM",
+  "description": "",
+  "attack_type": "remote_load",
+  "severity": "critical",
+  "category": "远程代码执行",
+  "language": "yaml",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "远程代码执行",
+    "mitre_atlas": [
+      "ATLAS-T0005"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T17:30:01.552157"
+  },
+  "behaviors": [
+    "network_request",
+    "file_execution",
+    "remote_code"
+  ],
+  "indicators": [
+    "curl | bash",
+    "wget | bash",
+    "remote code execution"
+  ],
+  "tags": [
+    "curl",
+    "bash",
+    "remote"
+  ],
+  "mitigation_indicators": [
+    "禁用远程脚本执行",
+    "使用本地镜像",
+    "检查签名"
+  ],
+  "false_positive_scenarios": [
+    "CI/CD 拉取脚本",
+    "容器镜像拉取"
+  ],
+  "detection_difficulty": {
+    "score": 2,
+    "level": "L2",
+    "description": "有一定混淆，需要行为分析",
+    "indicators_count": 2
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L2",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T17:30:01.552166",
+    "updated_at": "2026-03-29T17:30:01.552167",
+    "payload_file": "remote_load/MAL-RLO-bf5391/payload.yaml"
+  }
+}

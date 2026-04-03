@@ -1,0 +1,462 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-04-01T23:14:57.958736",
+  "sources": [
+    "MITRE ATLAS",
+    "OWASP LLM Top 10",
+    "Industry False Positives"
+  ],
+  "total_samples": 75,
+  "samples": [
+    {
+      "file": "OWASP-DAT-019_python.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-019_python.txt"
+    },
+    {
+      "file": "OWASP-DAT-020_yaml.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-020_yaml.txt"
+    },
+    {
+      "file": "OWASP-DAT-022_python.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-022_python.txt"
+    },
+    {
+      "file": "OWASP-DAT-017_yaml.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-017_yaml.txt"
+    },
+    {
+      "file": "OWASP-DAT-016_python.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-016_python.txt"
+    },
+    {
+      "file": "OWASP-DAT-023_yaml.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-023_yaml.txt"
+    },
+    {
+      "file": "OWASP-DAT-018_bash.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-018_bash.txt"
+    },
+    {
+      "file": "OWASP-DAT-024_bash.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-024_bash.txt"
+    },
+    {
+      "file": "OWASP-DAT-021_bash.txt",
+      "attack_type": "data_exfiltration",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-021_bash.txt"
+    },
+    {
+      "file": "OWASP-EVA-056_yaml.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-056_yaml.txt"
+    },
+    {
+      "file": "OWASP-EVA-058_python.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-058_python.txt"
+    },
+    {
+      "file": "OWASP-EVA-055_python.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-055_python.txt"
+    },
+    {
+      "file": "OWASP-EVA-054_bash.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-054_bash.txt"
+    },
+    {
+      "file": "FP-EVA-015.txt",
+      "attack_type": "evasion",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/FP-EVA-015.txt"
+    },
+    {
+      "file": "OWASP-EVA-053_yaml.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-053_yaml.txt"
+    },
+    {
+      "file": "FP-EVA-014.txt",
+      "attack_type": "evasion",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/FP-EVA-014.txt"
+    },
+    {
+      "file": "OWASP-EVA-052_python.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-052_python.txt"
+    },
+    {
+      "file": "OWASP-EVA-060_bash.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-060_bash.txt"
+    },
+    {
+      "file": "OWASP-EVA-059_yaml.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-059_yaml.txt"
+    },
+    {
+      "file": "OWASP-EVA-057_bash.txt",
+      "attack_type": "evasion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-057_bash.txt"
+    },
+    {
+      "file": "OWASP-PRO-001_python.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-001_python.txt"
+    },
+    {
+      "file": "OWASP-PRO-015_bash.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-015_bash.txt"
+    },
+    {
+      "file": "OWASP-PRO-012_bash.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-012_bash.txt"
+    },
+    {
+      "file": "OWASP-PRO-011_yaml.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-011_yaml.txt"
+    },
+    {
+      "file": "FP-PRO-008.txt",
+      "attack_type": "prompt_injection",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/FP-PRO-008.txt"
+    },
+    {
+      "file": "OWASP-PRO-013_python.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-013_python.txt"
+    },
+    {
+      "file": "OWASP-PRO-014_yaml.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-014_yaml.txt"
+    },
+    {
+      "file": "OWASP-PRO-007_python.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-007_python.txt"
+    },
+    {
+      "file": "OWASP-PRO-005_yaml.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-005_yaml.txt"
+    },
+    {
+      "file": "OWASP-PRO-009_bash.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-009_bash.txt"
+    },
+    {
+      "file": "OWASP-PRO-006_bash.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-006_bash.txt"
+    },
+    {
+      "file": "OWASP-PRO-004_python.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-004_python.txt"
+    },
+    {
+      "file": "FP-PRO-009.txt",
+      "attack_type": "prompt_injection",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/FP-PRO-009.txt"
+    },
+    {
+      "file": "OWASP-PRO-003_bash.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-003_bash.txt"
+    },
+    {
+      "file": "OWASP-PRO-008_yaml.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-008_yaml.txt"
+    },
+    {
+      "file": "OWASP-PRO-002_yaml.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-002_yaml.txt"
+    },
+    {
+      "file": "OWASP-PRO-010_python.txt",
+      "attack_type": "prompt_injection",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-010_python.txt"
+    },
+    {
+      "file": "OWASP-RES-046_python.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-046_python.txt"
+    },
+    {
+      "file": "FP-RES-010.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/FP-RES-010.txt"
+    },
+    {
+      "file": "OWASP-RES-043_python.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-043_python.txt"
+    },
+    {
+      "file": "FP-RES-011.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/FP-RES-011.txt"
+    },
+    {
+      "file": "OWASP-RES-048_bash.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-048_bash.txt"
+    },
+    {
+      "file": "OWASP-RES-051_bash.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-051_bash.txt"
+    },
+    {
+      "file": "OWASP-RES-050_yaml.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-050_yaml.txt"
+    },
+    {
+      "file": "OWASP-RES-049_python.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-049_python.txt"
+    },
+    {
+      "file": "OWASP-RES-044_yaml.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-044_yaml.txt"
+    },
+    {
+      "file": "OWASP-RES-045_bash.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-045_bash.txt"
+    },
+    {
+      "file": "OWASP-RES-047_yaml.txt",
+      "attack_type": "resource_exhaustion",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-047_yaml.txt"
+    },
+    {
+      "file": "FP-REM-004.txt",
+      "attack_type": "remote_load",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/remote_load/FP-REM-004.txt"
+    },
+    {
+      "file": "FP-REM-005.txt",
+      "attack_type": "remote_load",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/remote_load/FP-REM-005.txt"
+    },
+    {
+      "file": "OWASP-MEM-040_python.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-040_python.txt"
+    },
+    {
+      "file": "OWASP-MEM-042_bash.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-042_bash.txt"
+    },
+    {
+      "file": "OWASP-MEM-038_yaml.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-038_yaml.txt"
+    },
+    {
+      "file": "OWASP-MEM-041_yaml.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-041_yaml.txt"
+    },
+    {
+      "file": "OWASP-MEM-036_bash.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-036_bash.txt"
+    },
+    {
+      "file": "OWASP-MEM-034_python.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-034_python.txt"
+    },
+    {
+      "file": "OWASP-MEM-035_yaml.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-035_yaml.txt"
+    },
+    {
+      "file": "OWASP-MEM-039_bash.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-039_bash.txt"
+    },
+    {
+      "file": "FP-MEM-012.txt",
+      "attack_type": "memory_pollution",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/FP-MEM-012.txt"
+    },
+    {
+      "file": "FP-MEM-013.txt",
+      "attack_type": "memory_pollution",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/FP-MEM-013.txt"
+    },
+    {
+      "file": "OWASP-MEM-037_python.txt",
+      "attack_type": "memory_pollution",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-037_python.txt"
+    },
+    {
+      "file": "FP-DAT-007.txt",
+      "attack_type": "data_exfil",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfil/FP-DAT-007.txt"
+    },
+    {
+      "file": "FP-DAT-006.txt",
+      "attack_type": "data_exfil",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfil/FP-DAT-006.txt"
+    },
+    {
+      "file": "OWASP-TOO-032_yaml.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-032_yaml.txt"
+    },
+    {
+      "file": "OWASP-TOO-028_python.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-028_python.txt"
+    },
+    {
+      "file": "OWASP-TOO-030_bash.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-030_bash.txt"
+    },
+    {
+      "file": "OWASP-TOO-026_yaml.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-026_yaml.txt"
+    },
+    {
+      "file": "FP-TOO-002.txt",
+      "attack_type": "tool_poisoning",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/FP-TOO-002.txt"
+    },
+    {
+      "file": "OWASP-TOO-033_bash.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-033_bash.txt"
+    },
+    {
+      "file": "OWASP-TOO-029_yaml.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-029_yaml.txt"
+    },
+    {
+      "file": "OWASP-TOO-025_python.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-025_python.txt"
+    },
+    {
+      "file": "OWASP-TOO-031_python.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-031_python.txt"
+    },
+    {
+      "file": "FP-TOO-003.txt",
+      "attack_type": "tool_poisoning",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/FP-TOO-003.txt"
+    },
+    {
+      "file": "FP-TOO-001.txt",
+      "attack_type": "tool_poisoning",
+      "source": "False Positive",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/FP-TOO-001.txt"
+    },
+    {
+      "file": "OWASP-TOO-027_bash.txt",
+      "attack_type": "tool_poisoning",
+      "source": "OWASP LLM Top 10",
+      "path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-027_bash.txt"
+    }
+  ]
+}

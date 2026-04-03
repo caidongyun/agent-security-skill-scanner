@@ -1,0 +1,356 @@
+{
+  "timestamp": "2026-03-31T08:48:28.399216",
+  "summary": {
+    "total": 109,
+    "malicious": 109,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.019,
+    "avg_time_ms": 0.355
+  },
+  "by_language": {
+    "javascript": {
+      "total": 105,
+      "malicious": 105
+    },
+    "python": {
+      "total": 4,
+      "malicious": 4
+    }
+  },
+  "by_risk_level": {
+    "medium": 69,
+    "low": 35,
+    "high": 5
+  },
+  "by_detection_layers": {
+    "yara": 109
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/data_exfiltration_01_v05.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "JS_Exfil_FileRead",
+        "CRED_SSHKeyAccess",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.518,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/data_exfiltration_01_v01.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "JS_Exfil_FileRead",
+        "CRED_SSHKeyAccess",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.276,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/data_exfiltration_01_v03.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "JS_Exfil_FileRead",
+        "CRED_SSHKeyAccess",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.205,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/data_exfiltration_01_v04.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "JS_Exfil_FileRead",
+        "CRED_SSHKeyAccess",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.625,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/data_exfiltration_01_v02.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 60.0,
+      "risk_level": "high",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "JS_Exfil_FileRead",
+        "CRED_SSHKeyAccess",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft",
+        "PERS_SSH_AuthorizedKeys"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:CRED_SSHKeyAccess",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Credential_Theft"
+      ],
+      "scan_time_ms": 0.289,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/high_fidelity/HF-ad921d604863/malicious_code.py",
+      "language": "python",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Remote_Code_Execution",
+        "Malicious_Credential_Theft",
+        "Shell_ReverseShell_Python",
+        "CRED_EnvVarTheft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Credential_Theft"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Remote_Code_Execution",
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🔴 YARA:critical:Shell_ReverseShell_Python",
+        "🟡 YARA:CRED_EnvVarTheft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert"
+      ],
+      "scan_time_ms": 0.786,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/persistence_01_v01.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 53.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_CodeInjection_CommandSubstitution",
+        "JS_Exfil_FileRead",
+        "JS_Persist_FileWrite",
+        "BASH_EvalInjection",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Shell_CodeInjection_EvalVariant"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_CodeInjection_CommandSubstitution",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:JS_Persist_FileWrite",
+        "🟡 YARA:BASH_EvalInjection",
+        "🟡 YARA:Agent_Env_Theft"
+      ],
+      "scan_time_ms": 0.488,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/persistence_01_v04.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 53.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_CodeInjection_CommandSubstitution",
+        "JS_Exfil_FileRead",
+        "JS_Persist_FileWrite",
+        "BASH_EvalInjection",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Shell_CodeInjection_EvalVariant"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_CodeInjection_CommandSubstitution",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:JS_Persist_FileWrite",
+        "🟡 YARA:BASH_EvalInjection",
+        "🟡 YARA:Agent_Env_Theft"
+      ],
+      "scan_time_ms": 0.241,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/persistence_01_v02.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 53.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_CodeInjection_CommandSubstitution",
+        "JS_Exfil_FileRead",
+        "JS_Persist_FileWrite",
+        "BASH_EvalInjection",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Shell_CodeInjection_EvalVariant"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_CodeInjection_CommandSubstitution",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:JS_Persist_FileWrite",
+        "🟡 YARA:BASH_EvalInjection",
+        "🟡 YARA:Agent_Env_Theft"
+      ],
+      "scan_time_ms": 0.25,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/persistence_01_v03.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 53.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Shell_CodeInjection_CommandSubstitution",
+        "JS_Exfil_FileRead",
+        "JS_Persist_FileWrite",
+        "BASH_EvalInjection",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Shell_CodeInjection_EvalVariant"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Shell_CodeInjection_CommandSubstitution",
+        "🔴 YARA:critical:JS_Exfil_FileRead",
+        "🟡 YARA:JS_Persist_FileWrite",
+        "🟡 YARA:BASH_EvalInjection",
+        "🟡 YARA:Agent_Env_Theft"
+      ],
+      "scan_time_ms": 0.173,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

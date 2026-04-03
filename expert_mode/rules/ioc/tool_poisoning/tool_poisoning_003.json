@@ -1,0 +1,29 @@
+{
+  "id": "TO-IOC-003",
+  "type": "ioc",
+  "category": "tool_poisoning",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "fake_output",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "spoofed_result",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "fabricated_response",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "medium",
+  "description": "工具输出伪造的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.168090",
+  "ttps": [
+    "MITRE ATT&CK: TOOL_POISONING"
+  ]
+}

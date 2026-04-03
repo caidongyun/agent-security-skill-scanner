@@ -1,0 +1,35 @@
+# C2 通信检测规则
+# 检测 FakeGit 相关的可疑网络通信
+
+id: sigma-c2-communication-001
+name: Detect FakeGit C2 Communication
+type: sigma
+attack_type: command_and_control
+severity: critical
+
+description: |
+  检测 FakeGit 攻击的 C2 通信特征
+  - 硬编码 C2 IP: 213.176.73.162
+  - 空 User-Agent 请求
+  - multipart/form-data 格式上传
+
+condition: |
+  (
+    network_connection to "213.176.73.162"
+    and contains_any (http_path, "/api/", "NTE3")
+  )
+  or (
+    http_user_agent == ""
+    and http_method == "POST"
+    and contains_any (content_type, "multipart/form-data")
+  )
+  or (
+    dns_query matches "ip-api.com"
+    and http_user_agent == ""
+  )
+
+metadata:
+  author: AutoResearch
+  date: 2026-03-23
+  mitre: T1071, T1041
+  confidence: high

@@ -1,0 +1,8 @@
+# Benign sample for rule: agent_curl_remote_exec
+# Generated: 2026-04-02 10:47:53.104956
+
+#!/bin/bash
+# 系统更新脚本 - 良性
+curl -O https://releases.ubuntu.com/22.04/ubuntu-22.04.iso
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+echo "下载完成"

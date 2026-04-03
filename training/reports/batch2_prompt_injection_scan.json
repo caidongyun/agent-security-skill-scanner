@@ -1,0 +1,268 @@
+{
+  "timestamp": "2026-03-31T12:10:32.152561",
+  "summary": {
+    "total": 4343,
+    "malicious": 4343,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.816,
+    "avg_time_ms": 0.79
+  },
+  "by_language": {
+    "python": {
+      "total": 1120,
+      "malicious": 1120
+    },
+    "bash": {
+      "total": 1075,
+      "malicious": 1075
+    },
+    "go": {
+      "total": 1089,
+      "malicious": 1089
+    },
+    "javascript": {
+      "total": 1059,
+      "malicious": 1059
+    }
+  },
+  "by_risk_level": {
+    "low": 4343
+  },
+  "by_detection_layers": {
+    "yara": 4343
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-d4ba10/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 0.688,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-de5369/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 10.723,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-6ccadd/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 0.324,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-cf577d/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 0.382,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-52c01a/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 15.837,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-c4c07c/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 0.434,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-a3b5b2/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 16.258,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-5b9c50/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 7.021,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-2698f4/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 0.614,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/prompt_injection/MAL-PIN-42cccb/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection"
+      ],
+      "scan_time_ms": 0.742,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

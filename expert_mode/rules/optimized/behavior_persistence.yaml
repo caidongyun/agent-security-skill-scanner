@@ -1,0 +1,154 @@
+attack_type: persistence
+category: behavior
+generated_at: '2026-03-22T15:26:59.420170'
+rule_count: 9
+rules:
+- action: alert
+  condition:
+    behaviors:
+    - file_write
+    patterns:
+    - write(.*bashrc)
+    - append(.*crontab)
+    targets:
+    - ~/.bashrc
+    - ~/.bash_profile
+    - /etc/crontab
+    - /etc/systemd/
+  description: 检测修改系统配置文件的行为
+  id: BEH-FILE-002
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 配置文件修改
+- action: alert
+  condition:
+    behaviors:
+    - permission_change
+    patterns:
+    - chmod 777
+    - chmod +x
+    - os.chmod
+  description: 检测修改文件权限的行为
+  id: BEH-FILE-006
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 文件权限修改
+- action: alert
+  condition:
+    behaviors:
+    - network_request
+    patterns:
+    - beacon
+    - interval.*request
+    - heartbeat.*http
+  description: 检测命令与控制服务器通信模式
+  id: BEH-NET-005
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: critical
+    version: '11.0'
+  name: C2 通信模式
+- action: alert
+  condition:
+    behaviors:
+    - p2p_connection
+    patterns:
+    - bittorrent
+    - dht
+    - peer_discovery
+  description: 检测 P2P 网络通信行为
+  id: BEH-NET-008
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: low
+    version: '11.0'
+  name: P2P 通信
+- action: alert
+  condition:
+    behaviors:
+    - startup_modification
+    patterns:
+    - ~/.bashrc
+    - ~/.profile
+    - systemctl enable
+  description: 检测注册开机启动的行为
+  id: BEH-PERS-001
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 启动项注册
+- action: alert
+  condition:
+    behaviors:
+    - cron_modification
+    patterns:
+    - crontab -e
+    - schedule.every
+    - 'at '
+  description: 检测创建定时任务的行为
+  id: BEH-PERS-002
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 定时任务创建
+- action: alert
+  condition:
+    behaviors:
+    - service_installation
+    patterns:
+    - systemd.Service
+    - /etc/systemd/system/
+    - service install
+  description: 检测安装系统服务的行为
+  id: BEH-PERS-003
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 系统服务安装
+- action: alert
+  condition:
+    behaviors:
+    - registry_modification
+    patterns:
+    - reg add
+    - winreg.OpenKey
+    - HKCU\\Run
+  description: 检测修改系统注册表的行为
+  id: BEH-PERS-004
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: high
+    version: '11.0'
+  name: 注册表修改
+- action: alert
+  condition:
+    behaviors:
+    - extension_installation
+    patterns:
+    - chrome-extension
+    - webextension
+    - browser.install
+  description: 检测安装浏览器扩展的行为
+  id: BEH-PERS-005
+  metadata:
+    attack_type: persistence
+    rule_type: behavior
+    severity: medium
+    version: '11.0'
+  name: 浏览器扩展安装
+version: '11.0'

@@ -1,0 +1,35 @@
+{
+  "updated_at": "2026-04-02T20:09:23.472237",
+  "goal": {
+    "detection_rate": 0.99,
+    "false_positive_rate": 0.01
+  },
+  "progress": [
+    {
+      "round": 1,
+      "status": "completed",
+      "result": {
+        "detection_rate": 0.9106672474228943,
+        "false_positive_rate": 0.2674359944507504
+      }
+    },
+    {
+      "round": 2,
+      "status": "in_progress",
+      "target": {
+        "detection_rate": 0.95,
+        "false_positive_rate": 0.15
+      },
+      "eta": "7 天"
+    },
+    {
+      "round": 3,
+      "status": "planned",
+      "target": {
+        "detection_rate": 0.97,
+        "false_positive_rate": 0.1
+      },
+      "eta": "14 天"
+    }
+  ]
+}

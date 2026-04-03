@@ -1,0 +1,104 @@
+{
+  "timestamp": "2026-03-30T07:57:01.211634",
+  "total_samples": 135,
+  "malicious_samples": 95,
+  "benign_samples": 40,
+  "detected_malicious": 36,
+  "false_positives": 0,
+  "detection_rate": 0.379,
+  "false_positive_rate": 0.0,
+  "precision": 1.0,
+  "recall": 0.379,
+  "f1_score": 0.55,
+  "by_attack_type": {
+    "persistence": {
+      "total": 20,
+      "detected": 3,
+      "rate": 0.15
+    },
+    "privilege_escalation": {
+      "total": 10,
+      "detected": 5,
+      "rate": 0.5
+    },
+    "data_exfil": {
+      "total": 20,
+      "detected": 3,
+      "rate": 0.15
+    },
+    "resource_exhaustion": {
+      "total": 5,
+      "detected": 5,
+      "rate": 1.0
+    },
+    "supply_chain": {
+      "total": 5,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "code_execution": {
+      "total": 20,
+      "detected": 10,
+      "rate": 0.5
+    },
+    "network_call": {
+      "total": 5,
+      "detected": 5,
+      "rate": 1.0
+    },
+    "obfuscation": {
+      "total": 5,
+      "detected": 5,
+      "rate": 1.0
+    },
+    "credential_theft": {
+      "total": 5,
+      "detected": 0,
+      "rate": 0.0
+    }
+  },
+  "by_difficulty": {},
+  "by_language": {
+    "powershell": {
+      "malicious": {
+        "total": 15,
+        "detected": 0
+      },
+      "benign": {
+        "total": 10,
+        "false_positives": 0
+      }
+    },
+    "python": {
+      "malicious": {
+        "total": 45,
+        "detected": 31
+      },
+      "benign": {
+        "total": 10,
+        "false_positives": 0
+      }
+    },
+    "javascript": {
+      "malicious": {
+        "total": 15,
+        "detected": 5
+      },
+      "benign": {
+        "total": 10,
+        "false_positives": 0
+      }
+    },
+    "bash": {
+      "malicious": {
+        "total": 20,
+        "detected": 0
+      },
+      "benign": {
+        "total": 10,
+        "false_positives": 0
+      }
+    }
+  },
+  "yara_rules_used": 0
+}

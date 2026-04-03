@@ -1,0 +1,12 @@
+{
+  "task": "优化误报率",
+  "status": "in_progress",
+  "target": "FP < 20%",
+  "current": "FP 26.7%",
+  "optimizations": [
+    "Shell_ReverseShell_Python 组合条件",
+    "Remote_Load 上下文要求",
+    "Evasion 特征覆盖"
+  ],
+  "next_step": "验证优化效果"
+}

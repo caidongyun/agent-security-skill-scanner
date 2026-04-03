@@ -1,0 +1,23 @@
+author: Round 18 Bypass Rule
+date: 2026/03/23
+description: 检测 Prompt 注入绕过模式
+detection:
+  condition: selection
+  selection:
+    keyword: (?:ignore\s+(?:all\s+)?(?:content\s+)?polic(?:y|ies)|disregard\s+(?:all\s+)?safety\s+rules|bypass\s+(?:all\s+)?security\s+filters?|override\s+(?:your\s+)?system\s+prompt|security\s+level\s*set\s*to\s*0|all\s+safety\s+filters\s+are\s+disabled|pretend\s+you\s+are|imagine\s+you\s+are|roleplay\s+as|unrestricted)
+falsepositives:
+- Legitimate security research
+fields:
+- input
+- output
+id: sigma-prompt-injection-bypass
+level: high
+logsource:
+  category: application
+  service: ai-agent
+modified: 2026/03/23
+status: stable
+tags:
+- attack.prompt_injection
+- ai-security
+title: Detect Prompt Injection Bypass

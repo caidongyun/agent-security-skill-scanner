@@ -1,0 +1,33 @@
+{
+  "strategy": "cascade",
+  "levels": [
+    {
+      "name": "L1_Critical",
+      "file": "l1_critical.yar",
+      "action": "alert",
+      "description": "极高置信度，直接告警"
+    },
+    {
+      "name": "L2_High",
+      "file": "l2_high.yar",
+      "action": "alert_review",
+      "description": "高置信度，告警 + 人工审查"
+    },
+    {
+      "name": "L3_Medium",
+      "file": "l3_medium.yar",
+      "action": "review",
+      "description": "中置信度，仅审查"
+    },
+    {
+      "name": "L4_Low",
+      "file": "l4_low.yar",
+      "action": "log",
+      "description": "低置信度，仅日志"
+    }
+  ],
+  "optimization_goal": {
+    "detection_rate": 100,
+    "false_positive_rate": 1
+  }
+}

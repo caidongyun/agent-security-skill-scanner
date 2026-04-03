@@ -1,0 +1,36 @@
+{
+  "version": "v1.0",
+  "created_at": "2026-03-28T21:05:00+08:00",
+  "description": "初始版本 - 建立规则版本管理体系",
+  "rule_count": 12,
+  "quality_metrics": {
+    "detection_rate_target": 0.80,
+    "false_positive_rate_target": 0.10,
+    "f1_score_target": 0.85
+  },
+  "performance_metrics": {
+    "single_rule_scan_ms_target": 10,
+    "batch_1000_rules_ms_target": 100
+  },
+  "files": [
+    "js_ioc_rules.json",
+    "js_sigma_rules.yaml",
+    "js_yara_rules.yaml",
+    "powershell_sigma_rules.yaml",
+    "powershell_yara_rules.yaml",
+    "shell_ioc_rules.json",
+    "shell_sigma_rules.yaml",
+    "shell_yara_rules.yaml",
+    "generator.py"
+  ],
+  "subdirectories": [
+    "sigma",
+    "yara",
+    "audit",
+    "runtime",
+    "scanner_v3"
+  ],
+  "changelog": "CHANGELOG.md",
+  "parent_version": null,
+  "status": "active"
+}

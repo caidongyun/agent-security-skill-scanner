@@ -1,0 +1,274 @@
+{
+  "timestamp": "2026-03-31T19:29:10.752086",
+  "summary": {
+    "total": 5290,
+    "malicious": 4267,
+    "detection_rate": "80.7%"
+  },
+  "performance": {
+    "scan_time_seconds": 1.024,
+    "avg_time_ms": 0.755
+  },
+  "by_language": {
+    "javascript": {
+      "total": 1043,
+      "malicious": 1043
+    },
+    "python": {
+      "total": 1077,
+      "malicious": 1077
+    },
+    "go": {
+      "total": 1051,
+      "malicious": 1051
+    },
+    "yaml": {
+      "total": 1023,
+      "malicious": 0
+    },
+    "bash": {
+      "total": 1096,
+      "malicious": 1096
+    }
+  },
+  "by_risk_level": {
+    "low": 4267,
+    "safe": 1023
+  },
+  "by_detection_layers": {
+    "yara": 4267,
+    "none": 1023
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-a921b1/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.653,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-358da5/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.274,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-0c794f/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.322,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-ed0fd7/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.251,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-a390b6/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.356,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-7f8411/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.231,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-9a1bb1/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.249,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-3d4fa2/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.14,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-2acf2b/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 0.115,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/false_prone/BEN-FAP-2becfa/payload.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.3,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Code_Obfuscation"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Malicious_Code_Obfuscation"
+      ],
+      "scan_time_ms": 1.171,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

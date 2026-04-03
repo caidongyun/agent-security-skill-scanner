@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-REM-3d6a36-v2",
+  "attack_type": "remote_load",
+  "severity": "critical",
+  "language": "Shell",
+  "behaviors": [
+    "network_request",
+    "code_execution"
+  ],
+  "indicators": [
+    "wget download"
+  ],
+  "confidence": 0.94,
+  "tags": [
+    "download",
+    "execute",
+    "network"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Remote Load - \u53d8\u4f532",
+  "description": "remote_load \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #2",
+  "test_cases": [
+    "RE-TP-02"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-REM-3d6a36",
+  "generated_at": "2026-03-22T10:28:00.414623"
+}

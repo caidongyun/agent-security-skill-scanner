@@ -1,0 +1,42 @@
+{
+  "timestamp": "2026-04-02T23:50:55.534889",
+  "status": "partial_download_successful",
+  "downloaded": {
+    "loki": {
+      "count": 736,
+      "validated": 724,
+      "rate": 96.7
+    },
+    "yara": {
+      "count": 13
+    },
+    "sigma": {
+      "count": 0,
+      "status": "downloading"
+    },
+    "local": {
+      "count": 146
+    },
+    "mitre": {
+      "count": 8
+    }
+  },
+  "totals": {
+    "downloaded": 749,
+    "validated": 878,
+    "pending_sigma": "~8000"
+  },
+  "achievements": [
+    "下载 Loki 736 条 (96.7% 验证通过)",
+    "下载 YARA 13 条",
+    "恢复本地规则 146 条",
+    "整合 MITRE ATLAS 8 技术",
+    "总计 878 条可用规则"
+  ],
+  "next_steps": [
+    "继续下载 Sigma (~8000 条)",
+    "验证所有新规则",
+    "去重分类",
+    "Benchmark 测试"
+  ]
+}

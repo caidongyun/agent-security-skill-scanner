@@ -1,0 +1,27 @@
+{
+  "sample_id": "MAL-EVA-c32d6a-v3",
+  "attack_type": "evasion",
+  "severity": "high",
+  "language": "Python",
+  "behaviors": [
+    "environment_detection",
+    "conditional_execution"
+  ],
+  "indicators": [
+    "generic_malicious"
+  ],
+  "confidence": 0.98,
+  "tags": [
+    "evasion",
+    "anti_sandbox",
+    "detection"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Evasion - \u53d8\u4f533",
+  "description": "evasion \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #3",
+  "test_cases": [
+    "EV-TP-03"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-EVA-c32d6a",
+  "generated_at": "2026-03-22T10:28:00.420706"
+}

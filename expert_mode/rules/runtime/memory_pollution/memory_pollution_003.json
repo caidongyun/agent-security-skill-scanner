@@ -1,0 +1,16 @@
+{
+  "id": "ME-RUNTIME-003",
+  "name": "虚假历史注入",
+  "category": "memory_pollution",
+  "severity": "high",
+  "description": "检测虚假历史注入攻击",
+  "patterns": [
+    "fake history",
+    "fabricated log",
+    "spoofed record"
+  ],
+  "risk_score": 85,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.179396",
+  "action": "alert"
+}

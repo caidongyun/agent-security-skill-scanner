@@ -1,0 +1,71 @@
+{
+  "id": "BENCH-EVA-21407b",
+  "version": "2.0",
+  "sample_id": "MAL-EVA-21407b",
+  "name": "绕过检测 - EASY",
+  "description": "",
+  "attack_type": "evasion",
+  "severity": "high",
+  "category": "防御绕过",
+  "language": "bash",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "防御绕过",
+    "mitre_atlas": [
+      "ATLAS-T0010"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T21:25:01.885023"
+  },
+  "behaviors": [
+    "code_obfuscation",
+    "dynamic_execution"
+  ],
+  "indicators": [
+    "base64 payload",
+    "marshal.loads",
+    "dynamic execution"
+  ],
+  "tags": [
+    "evasion",
+    "obfuscation",
+    "base64"
+  ],
+  "mitigation_indicators": [
+    "行为检测",
+    "多引擎扫描",
+    "动态分析"
+  ],
+  "false_positive_scenarios": [
+    "代码压缩",
+    "正常的混淆"
+  ],
+  "detection_difficulty": {
+    "score": 1,
+    "level": "L1",
+    "description": "明显的恶意特征，易于检测",
+    "indicators_count": 3
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L1",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T21:25:01.885033",
+    "updated_at": "2026-03-29T21:25:01.885034",
+    "payload_file": "evasion/MAL-EVA-21407b/payload.bash"
+  }
+}

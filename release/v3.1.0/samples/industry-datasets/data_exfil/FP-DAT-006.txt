@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+# Normal log upload to cloud
+import requests
+requests.post('https://logs.example.com/upload', files={'log': open('app.log')})

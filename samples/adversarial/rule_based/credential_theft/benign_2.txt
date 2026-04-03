@@ -1,0 +1,8 @@
+# Benign sample for rule: credential_theft
+# Generated: 2026-04-02 10:47:53.105148
+
+#!/bin/bash
+# SSH 密钥备份 - 良性
+cp ~/.ssh/id_rsa ~/.ssh/id_rsa.backup
+chmod 600 ~/.ssh/id_rsa.backup
+echo "SSH 密钥已备份"

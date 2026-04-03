@@ -1,0 +1,85 @@
+rules:
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''eval\s*\('' or ''exec\s*\('' or ''os\.system\s*\('''
+  id: sigma_remote_code_execution
+  level: critical
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - remote_code_execution
+  title: Remote Code Execution
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''requests\.post\s*\('' or ''urllib\.request'' or ''http\.post\s*\('''
+  id: sigma_data_exfiltration
+  level: critical
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - data_exfiltration
+  title: Data Exfiltration
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''os\.environ'' or ''process\.env'' or ''\.getenv\s*\('''
+  id: sigma_credential_theft
+  level: critical
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - credential_theft
+  title: Credential Theft
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''ignore\s+(previous|all)'' or ''disregard\s+'' or ''forget\s+(your|all)'''
+  id: sigma_hidden_instructions
+  level: high
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - hidden_instructions
+  title: Hidden Instructions
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''base64'' or ''atob\s*\('' or ''btoa\s*\('''
+  id: sigma_code_obfuscation
+  level: high
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - code_obfuscation
+  title: Code Obfuscation
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''modify\s+'' or ''alter\s+'' or ''hook\s+'''
+  id: sigma_behavior_manipulation
+  level: high
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - behavior_manipulation
+  title: Behavior Manipulation
+- author: Auto-generated
+  date: '2026-03-23'
+  detection:
+    condition: '''memory\s*\.'' or ''context\s*\.'' or ''history\s*\.'''
+  id: sigma_context_leakage
+  level: high
+  logsource:
+    category: any
+  status: stable
+  tags:
+  - context_leakage
+  title: Context Leakage

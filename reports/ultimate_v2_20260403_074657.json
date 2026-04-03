@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-04-03T07:46:57.840699",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.188
+  },
+  "by_language": {
+    "yaml": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "medium": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/normal_script/BEN-NOR-6fd545/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 42.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "PRIV_019",
+        "PRIV_023",
+        "SUPP_021",
+        "CRED_100"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:PRIV_019",
+        "🟡 YARA:PRIV_023",
+        "🟡 YARA:SUPP_021",
+        "🟡 YARA:CRED_100"
+      ],
+      "scan_time_ms": 0.188,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

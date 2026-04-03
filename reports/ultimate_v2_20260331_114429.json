@@ -1,0 +1,336 @@
+{
+  "timestamp": "2026-03-31T11:44:33.065838",
+  "summary": {
+    "total": 5371,
+    "malicious": 5371,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.529,
+    "avg_time_ms": 0.768
+  },
+  "by_language": {
+    "unknown": {
+      "total": 5371,
+      "malicious": 5371
+    }
+  },
+  "by_risk_level": {
+    "medium": 5371
+  },
+  "by_detection_layers": {
+    "yara": 5371
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-04c235/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.438,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-f67062/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 16.076,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-3b307a/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.438,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-8afcb2/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 8.725,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-fd330f/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.676,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-02066b/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.505,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-2d3d7d/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.301,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-c754a6/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 1.223,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-2a2aba/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.43,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-673a5c/payload.yaml",
+      "language": "unknown",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 57.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Credential_Theft",
+        "Malicious_Code_Obfuscation",
+        "Agent_Data_Exfiltration",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Credential_Theft",
+        "🟡 YARA:Malicious_Code_Obfuscation",
+        "🔴 YARA:critical:Agent_Data_Exfiltration",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.283,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

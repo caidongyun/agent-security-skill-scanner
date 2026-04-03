@@ -1,0 +1,6 @@
+id: sigma-auto-1774273300-19
+name: Auto Rule 19
+type: sigma
+severity: high
+condition: contains any of (keyword19, keyword20, keyword21)
+attack_type: data_exfil

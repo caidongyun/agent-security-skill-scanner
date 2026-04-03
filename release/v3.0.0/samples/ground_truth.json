@@ -1,0 +1,3780 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-04-01T23:18:18.199800",
+  "samples": [
+    {
+      "sample_id": "MAL-TOO-83ecf9",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-83ecf9.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-2555ef",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-2555ef.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-72fa4a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-72fa4a.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-9dca8c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-9dca8c.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-c5a637",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-c5a637.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-b68e4d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-b68e4d.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-325939",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-325939.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-10dede",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-10dede.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-2733b7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-2733b7.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-724eef",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-724eef.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-d0fab4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-d0fab4.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-2f0a93",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-2f0a93.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-f16f03",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-f16f03.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "platform_docker_escape_1774272977",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/platform_docker_escape_1774272977.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-3455ba",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-3455ba.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-65c4b6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-65c4b6.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "platform_windows_privilege_escalation_1774272977",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/platform_windows_privilege_escalation_1774272977.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-d7713e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-d7713e.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-71fb11",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-71fb11.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-129bc7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-129bc7.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-5dbb3a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-5dbb3a.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-9ad9a8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-9ad9a8.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-8b7801",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-8b7801.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-418a10",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-418a10.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-13a362",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-13a362.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-31c9ac",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-31c9ac.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-0e251e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-0e251e.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-70bb45",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-70bb45.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-8ab65c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-8ab65c.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-2fc1ae",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-2fc1ae.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-1320cb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-1320cb.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "platform_linux_privilege_escalation_1774272977",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/platform_linux_privilege_escalation_1774272977.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-62fda4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-62fda4.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-004bf5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-004bf5.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "platform_kubernetes_attack_1774272977",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/platform_kubernetes_attack_1774272977.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-b89c60",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-b89c60.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-0d4445",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-0d4445.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-c0d192",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-c0d192.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-d569b1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-d569b1.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-fc4477",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-fc4477.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "platform_cloud_aws_1774272977",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/platform_cloud_aws_1774272977.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-d96b60",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-d96b60.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-5d1de9",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-5d1de9.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-285946",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-285946.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-68a50d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-68a50d.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-d16955",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-d16955.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-db826a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-db826a.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-d7691f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-d7691f.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-a86874",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-a86874.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-ab92cd",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-ab92cd.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-ab444e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-ab444e.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-f2d01a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-f2d01a.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-7ccf1b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-7ccf1b.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-2764d1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-2764d1.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-TOO-220bc2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/tool_poisoning/MAL-TOO-220bc2.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning"
+    },
+    {
+      "sample_id": "MAL-RLO-7db8b8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-7db8b8.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-107562",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-107562.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-741f1f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-741f1f.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-22bbfc",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-22bbfc.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-a0e36f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-a0e36f.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_002",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/sample_002.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-e85d22",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-e85d22.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-0c1d70",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-0c1d70.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_003",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/sample_003.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-f536b5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-f536b5.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-9eefbd",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-9eefbd.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-988248",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-988248.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-a88dd4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-a88dd4.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-fba101",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-fba101.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_006",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/sample_006.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-be1a12",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-be1a12.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-e11f3d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-e11f3d.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-649ca3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-649ca3.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-c2face",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-c2face.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-27b590",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-27b590.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-a44550",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-a44550.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-9d9922",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-9d9922.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-319e72",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-319e72.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-feb97e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-feb97e.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-8cb58c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-8cb58c.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-b3a268",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-b3a268.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-f07a56",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-f07a56.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-6831d3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-6831d3.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-6e3190",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-6e3190.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-be8ceb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-be8ceb.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-b8d225",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-b8d225.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-006d11",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-006d11.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-aab1b0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-aab1b0.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-11f905",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-11f905.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-689c73",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-689c73.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-47d581",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-47d581.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-8ec46a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-8ec46a.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-052a0e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-052a0e.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-62ac7a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-62ac7a.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-74dd0f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-74dd0f.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_004",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/sample_004.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-59f4dd",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-59f4dd.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_001",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/sample_001.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-60e776",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-60e776.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-a5d7be",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-a5d7be.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-b21bb5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-b21bb5.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-4a4d4e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-4a4d4e.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-0d5ad3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-0d5ad3.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-794c12",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-794c12.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-7cbfdb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-7cbfdb.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_005",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/sample_005.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-18a47a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-18a47a.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-b47d3a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-b47d3a.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-b43e08",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-b43e08.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-ebe8c6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-ebe8c6.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "MAL-RLO-c7a2b2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/remote_load/MAL-RLO-c7a2b2.txt",
+      "label": "malicious",
+      "attack_type": "remote_load"
+    },
+    {
+      "sample_id": "sample_008",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_008.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-4c8259",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-4c8259.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_002",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_002.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-4487f7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-4487f7.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-034a30",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-034a30.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-472618",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-472618.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-059b59",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-059b59.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-ba4924",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-ba4924.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-7aeb72",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-7aeb72.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_003",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_003.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-5e7167",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-5e7167.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-02f7da",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-02f7da.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-8e6bac",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-8e6bac.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-119564",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-119564.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-1d9b2c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-1d9b2c.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_006",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_006.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-77123f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-77123f.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-b66962",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-b66962.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-f9e632",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-f9e632.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-0113fa",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-0113fa.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-d5b622",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-d5b622.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-a79d2a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-a79d2a.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-e7aad8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-e7aad8.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-251b7e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-251b7e.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-2c5a46",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-2c5a46.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-cd68e1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-cd68e1.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-a43346",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-a43346.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-5233c2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-5233c2.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-696adb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-696adb.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-d24432",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-d24432.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-98ef9e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-98ef9e.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-b4fc93",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-b4fc93.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-e909a4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-e909a4.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-a7169c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-a7169c.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-135667",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-135667.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_004",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_004.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-d2effc",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-d2effc.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-9f8518",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-9f8518.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-3ad25c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-3ad25c.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_001",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_001.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-0a30c3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-0a30c3.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-627552",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-627552.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_007",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_007.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-6138ea",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-6138ea.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "sample_005",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/sample_005.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-cabca1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-cabca1.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-b8acc1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-b8acc1.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-dbcc06",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-dbcc06.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-a1647b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-a1647b.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-bb03e5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-bb03e5.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-cd52ab",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-cd52ab.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-b135cc",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-b135cc.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-1df1be",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-1df1be.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-70d1cb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-70d1cb.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-2467f0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-2467f0.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-722888",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-722888.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-7f18e5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-7f18e5.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-DEX-b9abec",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/data_exfiltration/MAL-DEX-b9abec.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration"
+    },
+    {
+      "sample_id": "MAL-PIN-88f091",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-88f091.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_008",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_008.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_002",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_002.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-7b0153",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-7b0153.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-e25802",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-e25802.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-afc747",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-afc747.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_010",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_010.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-a0ff3b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-a0ff3b.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-e3003c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-e3003c.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_003",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_003.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-1678ff",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-1678ff.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-27e3a7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-27e3a7.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-1bb0fb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-1bb0fb.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-dc2070",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-dc2070.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-b4be3d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-b4be3d.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_006",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_006.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-4df13b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-4df13b.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-522fb7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-522fb7.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-e97195",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-e97195.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-c0e4d1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-c0e4d1.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-6dea6b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-6dea6b.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-0208eb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-0208eb.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-fb1e60",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-fb1e60.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_012",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_012.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-67fe19",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-67fe19.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-ab01a6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-ab01a6.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-db46d4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-db46d4.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-d2bb94",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-d2bb94.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_011",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_011.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-c72ebc",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-c72ebc.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-bd50ee",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-bd50ee.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-26c7ae",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-26c7ae.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-b206e2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-b206e2.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-90daa6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-90daa6.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-05f393",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-05f393.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-8017aa",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-8017aa.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-bd3b9c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-bd3b9c.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-975e88",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-975e88.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-bbbaf9",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-bbbaf9.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-0c1597",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-0c1597.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_009",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_009.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-edbc51",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-edbc51.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_004",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_004.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-01e909",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-01e909.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-0183f2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-0183f2.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_001",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_001.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-cb185e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-cb185e.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-c1db16",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-c1db16.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-4e9f29",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-4e9f29.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-5846f5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-5846f5.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_007",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_007.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-c5f0f8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-c5f0f8.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_014",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_014.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-bd126c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-bd126c.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-e036ce",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-e036ce.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_015",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_015.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-34e3d3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-34e3d3.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_005",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_005.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-263f91",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-263f91.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-5d95f5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-5d95f5.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-7d34df",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-7d34df.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-af86ee",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-af86ee.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-fa0329",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-fa0329.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "MAL-PIN-48c7e0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/MAL-PIN-48c7e0.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "sample_013",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/prompt_injection/sample_013.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection"
+    },
+    {
+      "sample_id": "api_abuse_007",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_007.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_002",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/sample_002.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-16d0b2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-16d0b2.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-044b02",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-044b02.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-3f757e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-3f757e.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-72455e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-72455e.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-b4568e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-b4568e.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-316652",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-316652.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-7d192a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-7d192a.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-4f4efd",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-4f4efd.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-28ff3a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-28ff3a.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-d01823",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-d01823.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_003",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/sample_003.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-86257a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-86257a.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-7002b8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-7002b8.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-254f59",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-254f59.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-9b66dc",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-9b66dc.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_010",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_010.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_010",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_010.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-c3f8ff",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-c3f8ff.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_012",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_012.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_011",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_011.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_006",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/sample_006.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-20c39b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-20c39b.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_009",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_009.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-d50ab2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-d50ab2.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-f38401",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-f38401.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-783b79",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-783b79.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-d50238",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-d50238.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-4ee1eb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-4ee1eb.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-466871",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-466871.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-3a8f76",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-3a8f76.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_013",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_013.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_009",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_009.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-4fb86d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-4fb86d.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-26b8ff",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-26b8ff.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-d44907",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-d44907.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_012",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_012.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-7620e4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-7620e4.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-c47511",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-c47511.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_014",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_014.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-729611",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-729611.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-cb3670",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-cb3670.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_008",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_008.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-13fdd3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-13fdd3.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-edf064",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-edf064.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-330f86",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-330f86.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-55ac5d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-55ac5d.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_004",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/sample_004.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "api_abuse_008",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/api_abuse_008.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-b0d685",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-b0d685.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-0fbbd3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-0fbbd3.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-69336a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-69336a.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_001",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/sample_001.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-260414",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-260414.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_007",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_007.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-321622",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-321622.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-d4bd77",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-d4bd77.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_011",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_011.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-2adeb1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-2adeb1.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-2c9353",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-2c9353.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-6fa4e3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-6fa4e3.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "concurrent_attack_013",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/concurrent_attack_013.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-10766d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-10766d.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_005",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/sample_005.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-1b0b67",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-1b0b67.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-6581ca",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-6581ca.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-a23dca",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-a23dca.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-7553e3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-7553e3.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-bf4e1e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-bf4e1e.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "MAL-REX-f8c936",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/resource_exhaustion/MAL-REX-f8c936.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion"
+    },
+    {
+      "sample_id": "sample_002",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_002.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-9160e8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-9160e8.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-6310f8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-6310f8.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-6cc1b7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-6cc1b7.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "sample_003",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_003.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-8f4c49",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-8f4c49.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-869780",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-869780.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-a1339f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-a1339f.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-35ad16",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-35ad16.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-827148",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-827148.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-d03fee",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-d03fee.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-2894ea",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-2894ea.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-a378ea",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-a378ea.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-ea348d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-ea348d.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "sample_006",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_006.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-d1c4a3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-d1c4a3.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-a54842",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-a54842.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-3d3cbf",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-3d3cbf.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-6d190a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-6d190a.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-24bd19",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-24bd19.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-bd2484",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-bd2484.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-851c57",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-851c57.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-c38ed8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-c38ed8.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-6c1070",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-6c1070.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-46f5d5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-46f5d5.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-b9a34c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-b9a34c.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-fd8cd0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-fd8cd0.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-6288c5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-6288c5.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-248ffe",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-248ffe.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-c2d172",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-c2d172.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-58317b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-58317b.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-ffb928",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-ffb928.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-ca94f9",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-ca94f9.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-5dd396",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-5dd396.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "sample_004",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_004.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-e51b4d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-e51b4d.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-2b3a0e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-2b3a0e.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-64fef4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-64fef4.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "sample_001",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_001.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-c85aee",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-c85aee.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-d5a41e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-d5a41e.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-1fe542",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-1fe542.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "sample_007",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_007.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-082dd4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-082dd4.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-731f85",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-731f85.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "sample_005",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/sample_005.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-62847a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-62847a.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-f8ff38",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-f8ff38.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-611a97",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-611a97.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-88d719",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-88d719.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-088590",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-088590.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-c3eda5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-c3eda5.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-32377a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-32377a.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-531433",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-531433.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-cee197",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-cee197.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-f715c4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-f715c4.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-MPO-bcbafd",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/memory_pollution/MAL-MPO-bcbafd.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution"
+    },
+    {
+      "sample_id": "MAL-SUP-4bdc1f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-4bdc1f.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-1fbb32",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-1fbb32.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-665d8f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-665d8f.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-e5c9d4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-e5c9d4.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-c0d621",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-c0d621.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-b8af3f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-b8af3f.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-9d7596",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-9d7596.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-ae491a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-ae491a.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-d14a12",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-d14a12.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-6d0d90",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-6d0d90.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-d1be47",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-d1be47.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-617153",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-617153.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-e99944",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-e99944.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-aaff40",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-aaff40.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-d5776b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-d5776b.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-194cca",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-194cca.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-6c0b7d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-6c0b7d.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-92deda",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-92deda.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-3b9165",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-3b9165.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-08b953",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-08b953.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-7b1e7e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-7b1e7e.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-37c7a0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-37c7a0.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-60ddc4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-60ddc4.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-76aa5f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-76aa5f.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-a3bd19",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-a3bd19.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-354064",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-354064.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-f6a35c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-f6a35c.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-fa80e5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-fa80e5.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-e7b2ec",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-e7b2ec.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-c11a1e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-c11a1e.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-fcdaa7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-fcdaa7.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-81028a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-81028a.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-6bb525",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-6bb525.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-fc868c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-fc868c.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-5b34c2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-5b34c2.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-084fc4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-084fc4.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-a886c3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-a886c3.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-668697",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-668697.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-c85e6c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-c85e6c.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-b52867",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-b52867.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-cba6a6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-cba6a6.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-1c8f91",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-1c8f91.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-bbe652",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-bbe652.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-b4d79f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-b4d79f.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-8118da",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-8118da.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-74023a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-74023a.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-6240ed",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-6240ed.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-1ad9e4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-1ad9e4.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-4adf2b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-4adf2b.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-SUP-bee140",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/supply_chain/MAL-SUP-bee140.txt",
+      "label": "malicious",
+      "attack_type": "supply_chain"
+    },
+    {
+      "sample_id": "MAL-CRT-8b658f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-8b658f.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-e9608e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-e9608e.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-285256",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-285256.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-45d1a3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-45d1a3.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-124a7b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-124a7b.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-7cb173",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-7cb173.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-b5d755",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-b5d755.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-7ed72b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-7ed72b.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-8ef83d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-8ef83d.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-2c2559",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-2c2559.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-032d1b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-032d1b.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-08e3c6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-08e3c6.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-ceec8e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-ceec8e.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-fbfb59",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-fbfb59.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-3b1be8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-3b1be8.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-d367a4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-d367a4.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-e77e76",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-e77e76.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-eb6080",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-eb6080.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-8bb6ff",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-8bb6ff.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-0c9238",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-0c9238.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-40d727",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-40d727.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-fe9428",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-fe9428.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-7580f8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-7580f8.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-4a6e8c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-4a6e8c.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-3d47e2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-3d47e2.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-503b3f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-503b3f.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-299a23",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-299a23.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-4da348",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-4da348.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-edd402",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-edd402.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-1efaac",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-1efaac.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-99a88a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-99a88a.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-d338b0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-d338b0.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-d3b6d2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-d3b6d2.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-d0e1dc",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-d0e1dc.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-e26947",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-e26947.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-828bce",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-828bce.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-d68ceb",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-d68ceb.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-402839",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-402839.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-0ef038",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-0ef038.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-399de1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-399de1.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-0dc50a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-0dc50a.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-a67e67",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-a67e67.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-5a1bc5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-5a1bc5.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-90d14c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-90d14c.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-ae092a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-ae092a.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-cfec63",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-cfec63.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-63c670",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-63c670.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-0d360d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-0d360d.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-9865c4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-9865c4.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-CRT-9ead7b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/credential_theft/MAL-CRT-9ead7b.txt",
+      "label": "malicious",
+      "attack_type": "credential_theft"
+    },
+    {
+      "sample_id": "MAL-PER-2e8f43",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-2e8f43.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-8dec1e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-8dec1e.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-1d2b7e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-1d2b7e.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-53f8d5",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-53f8d5.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-bd4066",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-bd4066.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-cfc7ce",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-cfc7ce.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-74a48d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-74a48d.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-3f13a6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-3f13a6.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-d6d4c8",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-d6d4c8.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-e2b33b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-e2b33b.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-15e59c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-15e59c.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-ca0ee7",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-ca0ee7.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-b7efb4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-b7efb4.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-bcb87e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-bcb87e.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-b7b7ce",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-b7b7ce.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-95f6fa",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-95f6fa.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-513d1e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-513d1e.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-4c6862",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-4c6862.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-8480ac",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-8480ac.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-7931b6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-7931b6.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-ff41fe",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-ff41fe.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-2a57a2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-2a57a2.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-99b188",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-99b188.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-359032",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-359032.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-2e89e0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-2e89e0.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-015415",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-015415.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-b47090",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-b47090.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-8d0bd2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-8d0bd2.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-5617d4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-5617d4.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-bb4150",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-bb4150.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-8a385a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-8a385a.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-437d05",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-437d05.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-c2fe8a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-c2fe8a.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-8958e1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-8958e1.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-176d41",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-176d41.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-954109",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-954109.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-170ba0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-170ba0.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-801b14",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-801b14.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-0c95aa",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-0c95aa.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-744dd1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-744dd1.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-66fbc4",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-66fbc4.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-f1cb9e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-f1cb9e.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-d4af0e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-d4af0e.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-44b439",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-44b439.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-b4363c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-b4363c.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-bb4417",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-bb4417.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-388d34",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-388d34.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-8bd08d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-8bd08d.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-7b53ff",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-7b53ff.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-PER-59174b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/persistence/MAL-PER-59174b.txt",
+      "label": "malicious",
+      "attack_type": "persistence"
+    },
+    {
+      "sample_id": "MAL-EVA-064f43",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-064f43.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-446b16",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-446b16.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-61f77a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-61f77a.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-9aac65",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-9aac65.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-699c8c",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-699c8c.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-a3077b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-a3077b.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-dd756f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-dd756f.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-22c82b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-22c82b.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-0db1d6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-0db1d6.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-b3103b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-b3103b.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-04d30f",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-04d30f.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-2a1410",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-2a1410.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-e02cc9",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-e02cc9.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-419417",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-419417.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-c6ee42",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-c6ee42.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-5a0843",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-5a0843.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-726249",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-726249.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-34dae0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-34dae0.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-9ba86e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-9ba86e.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-d30b1e",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-d30b1e.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-ab6655",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-ab6655.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-f0e8c0",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-f0e8c0.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-3d95e1",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-3d95e1.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-41dbc3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-41dbc3.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-500b78",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-500b78.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-a0df67",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-a0df67.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-527784",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-527784.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-df7eb6",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-df7eb6.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-102f5b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-102f5b.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-d88d99",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-d88d99.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-d3e033",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-d3e033.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-f53c00",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-f53c00.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-ceeb3d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-ceeb3d.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-4d728a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-4d728a.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-08fb55",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-08fb55.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-3e0f3d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-3e0f3d.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-0b9c4b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-0b9c4b.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-0600f2",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-0600f2.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-122c07",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-122c07.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-258f92",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-258f92.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-93fb2b",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-93fb2b.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-21e09a",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-21e09a.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-2f3e6d",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-2f3e6d.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-d3b188",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-d3b188.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-860db9",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-860db9.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-49e347",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-49e347.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "MAL-EVA-aeaae3",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/malicious/evasion/MAL-EVA-aeaae3.txt",
+      "label": "malicious",
+      "attack_type": "evasion"
+    },
+    {
+      "sample_id": "OWASP-TOO-032_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-032_yaml.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-028_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-028_python.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-030_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-030_bash.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-026_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-026_yaml.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-033_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-033_bash.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-029_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-029_yaml.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-025_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-025_python.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-031_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-031_python.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-TOO-027_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/tool_poisoning/OWASP-TOO-027_bash.txt",
+      "label": "malicious",
+      "attack_type": "tool_poisoning",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-056_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-056_yaml.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-058_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-058_python.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-055_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-055_python.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-054_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-054_bash.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-053_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-053_yaml.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-052_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-052_python.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-060_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-060_bash.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-059_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-059_yaml.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-EVA-057_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/evasion/OWASP-EVA-057_bash.txt",
+      "label": "malicious",
+      "attack_type": "evasion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-046_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-046_python.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-043_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-043_python.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-048_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-048_bash.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-051_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-051_bash.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-050_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-050_yaml.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-049_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-049_python.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-044_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-044_yaml.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-045_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-045_bash.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-RES-047_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/resource_exhaustion/OWASP-RES-047_yaml.txt",
+      "label": "malicious",
+      "attack_type": "resource_exhaustion",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-019_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-019_python.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-020_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-020_yaml.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-022_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-022_python.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-017_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-017_yaml.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-016_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-016_python.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-023_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-023_yaml.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-018_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-018_bash.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-024_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-024_bash.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-DAT-021_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/data_exfiltration/OWASP-DAT-021_bash.txt",
+      "label": "malicious",
+      "attack_type": "data_exfiltration",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-001_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-001_python.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-015_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-015_bash.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-012_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-012_bash.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-011_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-011_yaml.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-013_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-013_python.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-014_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-014_yaml.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-007_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-007_python.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-005_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-005_yaml.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-009_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-009_bash.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-006_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-006_bash.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-004_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-004_python.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-003_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-003_bash.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-008_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-008_yaml.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-002_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-002_yaml.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-PRO-010_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/prompt_injection/OWASP-PRO-010_python.txt",
+      "label": "malicious",
+      "attack_type": "prompt_injection",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-040_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-040_python.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-042_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-042_bash.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-038_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-038_yaml.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-041_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-041_yaml.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-036_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-036_bash.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-034_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-034_python.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-035_yaml",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-035_yaml.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-039_bash",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-039_bash.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    },
+    {
+      "sample_id": "OWASP-MEM-037_python",
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/industry-datasets/memory_pollution/OWASP-MEM-037_python.txt",
+      "label": "malicious",
+      "attack_type": "memory_pollution",
+      "source": "industry"
+    }
+  ]
+}

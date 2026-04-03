@@ -1,0 +1,84 @@
+{
+  "round": 3,
+  "phase": "务实优化 (无 ML)",
+  "timestamp": "2026-04-02T21:24:51.310176",
+  "duration": "7 天",
+  "baseline": {
+    "detection_rate": 0.95,
+    "false_positive_rate": 0.15
+  },
+  "target": {
+    "detection_rate": 0.97,
+    "false_positive_rate": 0.1
+  },
+  "strategies": {
+    "detection_rate": [
+      {
+        "name": "规则库扩充",
+        "method": "+500 条规则",
+        "improvement": "+1.5%"
+      },
+      {
+        "name": "特征工程",
+        "method": "改进字符串匹配",
+        "improvement": "+0.5%"
+      }
+    ],
+    "false_positive_rate": [
+      {
+        "name": "白名单增强",
+        "method": "扩充到 50+ 路径",
+        "improvement": "-3%"
+      },
+      {
+        "name": "组合条件",
+        "method": "多特征组合",
+        "improvement": "-2%"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "day": 1,
+      "focus": "规则库扩充",
+      "deliverable": "+500 条规则"
+    },
+    {
+      "day": 2,
+      "focus": "特征工程优化",
+      "deliverable": "改进匹配算法"
+    },
+    {
+      "day": 3,
+      "focus": "白名单扩充",
+      "deliverable": "50+ 路径白名单"
+    },
+    {
+      "day": 4,
+      "focus": "组合条件优化",
+      "deliverable": "多特征组合规则"
+    },
+    {
+      "day": 5,
+      "focus": "阈值调优",
+      "deliverable": "精细化阈值配置"
+    },
+    {
+      "day": 6,
+      "focus": "集成测试",
+      "deliverable": "测试报告"
+    },
+    {
+      "day": 7,
+      "focus": "验证报告",
+      "deliverable": "优化总结"
+    }
+  ],
+  "advantages": [
+    "简单可靠，无需 ML 依赖",
+    "易于维护和调试",
+    "规则可解释",
+    "部署简单",
+    "用户友好"
+  ]
+}

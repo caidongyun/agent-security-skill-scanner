@@ -1,0 +1,34 @@
+{
+  "phases": [
+    {
+      "phase": 1,
+      "weeks": 2,
+      "dr_target": 0.95,
+      "fp_target": 0.15,
+      "focus": "组合条件 + 规则扩充"
+    },
+    {
+      "phase": 2,
+      "weeks": 4,
+      "dr_target": 0.97,
+      "fp_target": 0.05,
+      "focus": "白名单 + 上下文"
+    },
+    {
+      "phase": 3,
+      "weeks": 8,
+      "dr_target": 0.985,
+      "fp_target": 0.02,
+      "focus": "ML + 集成"
+    },
+    {
+      "phase": 4,
+      "weeks": 12,
+      "dr_target": 0.99,
+      "fp_target": 0.01,
+      "focus": "深度学习"
+    }
+  ],
+  "recommendation": "分阶段实施，每阶段验证效果",
+  "updated_at": "2026-04-02T19:53:22.769716"
+}

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Normal container image pull
+docker pull nginx:latest
+docker run nginx

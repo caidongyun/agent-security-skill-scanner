@@ -1,0 +1,526 @@
+{
+  "version": "1.0",
+  "updated": "2026-03-18 22:49",
+  "large_files": [
+    {
+      "path": "knowledge_base.json",
+      "size_mb": 3.72
+    },
+    {
+      "path": "kb_index.json",
+      "size_mb": 3.86
+    },
+    {
+      "path": "migrate.log",
+      "size_mb": 1.61
+    },
+    {
+      "path": "KB_SUMMARY.md",
+      "size_mb": 1.18
+    },
+    {
+      "path": "shards/kb_index_shards.json",
+      "size_mb": 3.14
+    },
+    {
+      "path": "shards/knowledge_base/fixes.json",
+      "size_mb": 1.34
+    },
+    {
+      "path": "file_backups/kb_index_20260318_171214.json",
+      "size_mb": 3.86
+    },
+    {
+      "path": "file_backups/knowledge_base_20260318_171214.json",
+      "size_mb": 3.72
+    }
+  ],
+  "processed": [
+    {
+      "path": "knowledge_base.json",
+      "size": 3898248,
+      "size_mb": 3.72,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risk, risks, severity, round...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risk",
+            "risks",
+            "severity",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_index.json",
+      "size": 4047622,
+      "size_mb": 3.86,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: round_32, round_16, round_10, round_26, round_27...",
+      "index": [
+        {
+          "extracted_keys": [
+            "round_32",
+            "round_16",
+            "round_10",
+            "round_26",
+            "round_27",
+            "round_36",
+            "round_42",
+            "round_39",
+            "round_06",
+            "round_02"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "migrate.log",
+      "size": 1689440,
+      "size_mb": 1.61,
+      "type": "log",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "文本文件，约 3316 行",
+      "index": [
+        {
+          "line_count_estimate": 3316
+        }
+      ]
+    },
+    {
+      "path": "KB_SUMMARY.md",
+      "size": 1241506,
+      "size_mb": 1.18,
+      "type": "markdown",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "Markdown 文档 - 📊 知识库摘要报告",
+      "index": [
+        {
+          "titles": [
+            "📊 知识库摘要报告",
+            "分类统计"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "shards/kb_index_shards.json",
+      "size": 3297421,
+      "size_mb": 3.14,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: path, timestamp, name, shards_created, type...",
+      "index": [
+        {
+          "extracted_keys": [
+            "path",
+            "timestamp",
+            "name",
+            "shards_created",
+            "type"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "shards/knowledge_base/lessons.json",
+      "size": 628426,
+      "size_mb": 0.6,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: lesson, lessons, round...",
+      "index": [
+        {
+          "extracted_keys": [
+            "lesson",
+            "lessons",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "shards/knowledge_base/test_cases.json",
+      "size": 564840,
+      "size_mb": 0.54,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: desc, type, round, test_cases...",
+      "index": [
+        {
+          "extracted_keys": [
+            "desc",
+            "type",
+            "round",
+            "test_cases"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "shards/knowledge_base/risks.json",
+      "size": 739484,
+      "size_mb": 0.71,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risk, risks, severity, round...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risk",
+            "risks",
+            "severity",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "shards/knowledge_base/fixes.json",
+      "size": 1409915,
+      "size_mb": 1.34,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: desc, fixes, type, round...",
+      "index": [
+        {
+          "extracted_keys": [
+            "desc",
+            "fixes",
+            "type",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "shards/knowledge_base/patterns.json",
+      "size": 555570,
+      "size_mb": 0.53,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: pattern, patterns, round...",
+      "index": [
+        {
+          "extracted_keys": [
+            "pattern",
+            "patterns",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "file_backups/kb_index_20260318_171214.json",
+      "size": 4047622,
+      "size_mb": 3.86,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: round_32, round_16, round_10, round_26, round_27...",
+      "index": [
+        {
+          "extracted_keys": [
+            "round_32",
+            "round_16",
+            "round_10",
+            "round_26",
+            "round_27",
+            "round_36",
+            "round_42",
+            "round_39",
+            "round_06",
+            "round_02"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "file_backups/knowledge_base_20260318_171214.json",
+      "size": 3898248,
+      "size_mb": 3.72,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risk, risks, severity, round...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risk",
+            "risks",
+            "severity",
+            "round"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_05.json",
+      "size": 397986,
+      "size_mb": 0.38,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0374, risks_0503, risks_0092, risks_0113, risks_0188...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0374",
+            "risks_0503",
+            "risks_0092",
+            "risks_0113",
+            "risks_0188",
+            "risks_0426",
+            "risks_0093",
+            "risks_0360",
+            "risks_0632",
+            "risks_0007"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_04.json",
+      "size": 402451,
+      "size_mb": 0.38,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0067, risks_0143, risks_0049, risks_0562, risks_0528...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0067",
+            "risks_0143",
+            "risks_0049",
+            "risks_0562",
+            "risks_0528",
+            "risks_0563",
+            "risks_0233",
+            "risks_0415",
+            "risks_0428",
+            "risks_0303"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_09.json",
+      "size": 411581,
+      "size_mb": 0.39,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0492, risks_0347, risks_0539, risks_0386, risks_0042...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0492",
+            "risks_0347",
+            "risks_0539",
+            "risks_0386",
+            "risks_0042",
+            "risks_0413",
+            "risks_0144",
+            "risks_0038",
+            "risks_0142",
+            "risks_0273"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_07.json",
+      "size": 407005,
+      "size_mb": 0.39,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0494, risks_0340, risks_0065, risks_0172, risks_0287...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0494",
+            "risks_0340",
+            "risks_0065",
+            "risks_0172",
+            "risks_0287",
+            "risks_0485",
+            "risks_0261",
+            "risks_0031",
+            "risks_0166",
+            "risks_0443"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_01.json",
+      "size": 196696,
+      "size_mb": 0.19,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0351, risks_0316, risks_0447, risks_0131, risks_0371...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0351",
+            "risks_0316",
+            "risks_0447",
+            "risks_0131",
+            "risks_0371",
+            "risks_0284",
+            "risks_0458",
+            "risks_0201",
+            "risks_0025",
+            "risks_0050"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_00.json",
+      "size": 406378,
+      "size_mb": 0.39,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0378, risks_0410, risks_0357, risks_0312, risks_0279...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0378",
+            "risks_0410",
+            "risks_0357",
+            "risks_0312",
+            "risks_0279",
+            "risks_0193",
+            "risks_0460",
+            "risks_0380",
+            "risks_0118",
+            "risks_0367"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_02.json",
+      "size": 394589,
+      "size_mb": 0.38,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0507, risks_0420, risks_0187, risks_0199, risks_0487...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0507",
+            "risks_0420",
+            "risks_0187",
+            "risks_0199",
+            "risks_0487",
+            "risks_0023",
+            "risks_0138",
+            "risks_0170",
+            "risks_0408",
+            "risks_0053"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_03.json",
+      "size": 405506,
+      "size_mb": 0.39,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0554, risks_0048, risks_0153, risks_0239, risks_0521...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0554",
+            "risks_0048",
+            "risks_0153",
+            "risks_0239",
+            "risks_0521",
+            "risks_0538",
+            "risks_0123",
+            "risks_0479",
+            "risks_0514",
+            "risks_0061"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_06.json",
+      "size": 402602,
+      "size_mb": 0.38,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0294, risks_0238, risks_0184, risks_0317, risks_0090...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0294",
+            "risks_0238",
+            "risks_0184",
+            "risks_0317",
+            "risks_0090",
+            "risks_0484",
+            "risks_0451",
+            "risks_0435",
+            "risks_0462",
+            "risks_0281"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "kb_data/shard_08.json",
+      "size": 403266,
+      "size_mb": 0.38,
+      "type": "json",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "JSON 文件，包含键: risks_0354, risks_0495, risks_0452, risks_0436, risks_0035...",
+      "index": [
+        {
+          "extracted_keys": [
+            "risks_0354",
+            "risks_0495",
+            "risks_0452",
+            "risks_0436",
+            "risks_0035",
+            "risks_0455",
+            "risks_0419",
+            "risks_0550",
+            "risks_0043",
+            "risks_0361"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "logs/joint_research.log",
+      "size": 183520,
+      "size_mb": 0.18,
+      "type": "log",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "文本文件，约 728 行",
+      "index": [
+        {
+          "line_count_estimate": 728
+        }
+      ]
+    },
+    {
+      "path": "logs/lingshun_daemon.log",
+      "size": 185890,
+      "size_mb": 0.18,
+      "type": "log",
+      "processed_at": "2026-03-18 22:49",
+      "summary": "文本文件，约 1383 行",
+      "index": [
+        {
+          "line_count_estimate": 1383
+        }
+      ]
+    }
+  ]
+}

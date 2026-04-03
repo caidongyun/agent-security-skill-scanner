@@ -1,0 +1,17 @@
+# MITRE ATLAS Sample: Memory Pollution
+# Technique ID: ATLAS-003
+# Tactic: Persistence
+# Generated: 2026-04-02T21:41:34.651234
+
+"""
+This sample demonstrates the Memory Pollution technique.
+Reference: https://atlas.mitre.org/techniques/ATLAS-003
+"""
+
+# Sample content for testing
+technique_name = "Memory Pollution"
+atlas_id = "ATLAS-003"
+tactic = "Persistence"
+
+# Test markers
+# MITRE_ATLAS_TEST: ATLAS-003

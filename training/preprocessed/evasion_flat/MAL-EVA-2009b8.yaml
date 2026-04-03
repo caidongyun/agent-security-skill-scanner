@@ -1,0 +1,11 @@
+# MAL-EVA-2009b8 - YAML 配置文件
+# 难度：L3 | 语言：YAML
+
+# 配置示例
+version: "1.0"
+config:
+  name: evasion
+  enabled: true
+  settings:
+    key1: value1
+    key2: value2

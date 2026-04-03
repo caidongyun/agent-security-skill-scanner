@@ -1,0 +1,33 @@
+generated_at: '2026-03-22T19:27:45.319105'
+rule_count: 2
+rules:
+- action: alert
+  condition:
+    behaviors:
+    - subprocess_spawn
+    - network_request
+    sequence: false
+  id: R13-L3-TOO-000
+  metadata:
+    attack_type: tool_poisoning
+    rule_type: l3_behavior
+    severity: critical
+    tier: L3
+    version: '13.0'
+  name: '[L3] tool_poisoning 行为检测 #0'
+- action: alert
+  condition:
+    behaviors:
+    - subprocess_spawn
+    - network_request
+    sequence: false
+  id: R13-L3-REM-000
+  metadata:
+    attack_type: remote_load
+    rule_type: l3_behavior
+    severity: critical
+    tier: L3
+    version: '13.0'
+  name: '[L3] remote_load 行为检测 #0'
+tier: L3
+version: '13.0'

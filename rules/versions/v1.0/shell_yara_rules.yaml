@@ -1,0 +1,259 @@
+# Shell/Bash 检测规则 (YARA)
+# Round 21 - Scanner V3
+# 生成时间：2026-03-24
+
+rule Shell_RemoteCodeExecution_CurlBash {
+    meta:
+        description = "Detects Shell remote code execution via curl|bash"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $curl = "curl "
+        $pipe = "|"
+        $bash = "bash"
+        $sh = "sh"
+    condition:
+        $curl and $pipe and ($bash or $sh)
+}
+
+rule Shell_RemoteCodeExecution_WgetBash {
+    meta:
+        description = "Detects Shell remote code execution via wget|bash"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $wget = "wget "
+        $pipe = "|"
+        $bash = "bash"
+        $sh = "sh"
+    condition:
+        $wget and $pipe and ($bash or $sh)
+}
+
+rule Shell_CodeInjection_Eval {
+    meta:
+        description = "Detects Shell command injection via eval"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $eval = "eval "
+        $var = "$"
+    condition:
+        $eval and $var
+}
+
+rule Shell_DataExfiltration_Netcat {
+    meta:
+        description = "Detects Shell data exfiltration via netcat"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1041"
+    strings:
+        $cat = "cat "
+        $pipe = "|"
+        $nc = "nc "
+        $nc2 = "netcat "
+    condition:
+        $cat and $pipe and ($nc or $nc2)
+}
+
+rule Shell_DataExfiltration_CurlPost {
+    meta:
+        description = "Detects Shell data exfiltration via curl POST"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1041"
+    strings:
+        $curl = "curl"
+        $post = "-X POST"
+        $data = "-d "
+    condition:
+        $curl and $post and $data
+}
+
+rule Shell_Persistence_Bashrc {
+    meta:
+        description = "Detects Shell persistence via .bashrc modification"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1053"
+    strings:
+        $echo = "echo"
+        $append = ">>"
+        $bashrc = ".bashrc"
+    condition:
+        $echo and $append and $bashrc
+}
+
+rule Shell_Persistence_Crontab {
+    meta:
+        description = "Detects Shell persistence via crontab"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1053"
+    strings:
+        $echo = "echo"
+        $pipe = "|"
+        $crontab = "crontab"
+    condition:
+        $echo and $pipe and $crontab
+}
+
+rule Shell_CredentialTheft_SSH {
+    meta:
+        description = "Detects Shell SSH key theft"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1005"
+    strings:
+        $cat = "cat"
+        $ssh = ".ssh/"
+        $id_rsa = "id_rsa"
+    condition:
+        $cat and $ssh and $id_rsa
+}
+
+rule Shell_Obfuscation_Base64 {
+    meta:
+        description = "Detects Shell obfuscation via Base64"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $base64 = "base64"
+        $decode = "-d"
+        $pipe = "|"
+        $exec = "bash"
+    condition:
+        $base64 and $decode and $pipe and $exec
+}
+
+rule Shell_Obfuscation_Hex {
+    meta:
+        description = "Detects Shell obfuscation via hex encoding"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $printf = "printf"
+        $hex = "\\x"
+    condition:
+        $printf and $hex
+}
+
+rule Shell_PrivilegeEscalation_SudoRecon {
+    meta:
+        description = "Detects Shell privilege escalation reconnaissance"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1548"
+    strings:
+        $sudo = "sudo"
+        $list = "-l"
+    condition:
+        $sudo and $list
+}
+
+rule Shell_PrivilegeEscalation_SUID {
+    meta:
+        description = "Detects Shell SUID file discovery"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1548"
+    strings:
+        $find = "find"
+        $perm = "-perm"
+        $suid = "4000"
+    condition:
+        $find and $perm and $suid
+}
+
+rule Shell_AntiForensics_HistoryClear {
+    meta:
+        description = "Detects Shell history clearing"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1070"
+    strings:
+        $history = "history"
+        $clear = "-c"
+        $unset = "unset"
+        $histfile = "HISTFILE"
+    condition:
+        ($history and $clear) or ($unset and $histfile)
+}
+
+rule Shell_AntiForensics_LogDeletion {
+    meta:
+        description = "Detects Shell log deletion"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1070"
+    strings:
+        $rm = "rm"
+        $varlog = "/var/log/"
+        $auth = "auth.log"
+        $null = "/dev/null"
+    condition:
+        ($rm and $varlog) or ($null and $auth)
+}
+
+rule Shell_Destructive_RmRecursive {
+    meta:
+        description = "Detects destructive rm -rf commands"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1005"
+    strings:
+        $rm = "rm"
+        $recursive = "-r"
+        $force = "-f"
+    condition:
+        $rm and $recursive and $force
+}
+
+rule Shell_Download_Wget {
+    meta:
+        description = "Detects Shell download via wget"
+        author = "Scanner V3"
+        severity = "low"
+        mitre = "T1105"
+    strings:
+        $wget = "wget"
+        $output = "-O "
+        $quiet = "-q"
+    condition:
+        $wget
+}
+
+rule Shell_Download_Curl {
+    meta:
+        description = "Detects Shell download via curl"
+        author = "Scanner V3"
+        severity = "low"
+        mitre = "T1105"
+    strings:
+        $curl = "curl"
+        $output = "-o "
+        $silent = "-s"
+    condition:
+        $curl
+}
+
+rule Shell_Network_Ncat {
+    meta:
+        description = "Detects Shell network connection via ncat"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1041"
+    strings:
+        $nc = "nc "
+        $nc2 = "ncat "
+        $port = "4444"
+        $port2 = "5555"
+    condition:
+        ($nc or $nc2) and ($port or $port2)
+}

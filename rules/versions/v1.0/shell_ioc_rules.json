@@ -1,0 +1,128 @@
+{
+  "name": "Shell/Bash IOC Indicators",
+  "version": "1.0",
+  "date": "2026-03-24",
+  "description": "Indicators of Compromise for Shell/Bash malicious scripts",
+  "indicators": [
+    {
+      "type": "command",
+      "value": "curl ... | bash",
+      "severity": "critical",
+      "description": "Remote code execution via curl pipe to bash"
+    },
+    {
+      "type": "command",
+      "value": "wget ... | bash",
+      "severity": "critical",
+      "description": "Remote code execution via wget pipe to bash"
+    },
+    {
+      "type": "command",
+      "value": "eval $",
+      "severity": "critical",
+      "description": "Command injection via eval with variable"
+    },
+    {
+      "type": "command",
+      "value": "cat ... | nc ",
+      "severity": "high",
+      "description": "Data exfiltration via netcat"
+    },
+    {
+      "type": "command",
+      "value": "echo ... >> ~/.bashrc",
+      "severity": "high",
+      "description": "Persistence via .bashrc modification"
+    },
+    {
+      "type": "command",
+      "value": "cat ... .ssh/id_rsa",
+      "severity": "critical",
+      "description": "SSH private key theft"
+    },
+    {
+      "type": "command",
+      "value": "base64 -d | bash",
+      "severity": "high",
+      "description": "Obfuscated command execution"
+    },
+    {
+      "type": "command",
+      "value": "sudo -l",
+      "severity": "medium",
+      "description": "Privilege escalation reconnaissance"
+    },
+    {
+      "type": "command",
+      "value": "find ... -perm -4000",
+      "severity": "medium",
+      "description": "SUID binary discovery"
+    },
+    {
+      "type": "command",
+      "value": "history -c",
+      "severity": "medium",
+      "description": "Anti-forensics - clear history"
+    },
+    {
+      "type": "command",
+      "value": "rm -rf /var/log",
+      "severity": "high",
+      "description": "Log deletion"
+    },
+    {
+      "type": "path",
+      "value": "/etc/passwd",
+      "severity": "medium",
+      "description": "Sensitive file access"
+    },
+    {
+      "type": "path",
+      "value": "/etc/shadow",
+      "severity": "high",
+      "description": "Password file access"
+    },
+    {
+      "type": "path",
+      "value": ".ssh/id_rsa",
+      "severity": "critical",
+      "description": "SSH private key access"
+    },
+    {
+      "type": "path",
+      "value": ".bashrc",
+      "severity": "medium",
+      "description": "Persistence mechanism"
+    },
+    {
+      "type": "path",
+      "value": "/etc/crontab",
+      "severity": "medium",
+      "description": "Cron persistence"
+    },
+    {
+      "type": "network",
+      "value": "nc ... 4444",
+      "severity": "high",
+      "description": "Reverse shell port"
+    },
+    {
+      "type": "network",
+      "value": "nc ... 5555",
+      "severity": "high",
+      "description": "Reverse shell port"
+    },
+    {
+      "type": "encoding",
+      "value": "base64 -d",
+      "severity": "medium",
+      "description": "Base64 decoding (potential obfuscation)"
+    },
+    {
+      "type": "encoding",
+      "value": "\\x",
+      "severity": "medium",
+      "description": "Hex encoding (potential obfuscation)"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "test_case_id": "MP_NEG_014",
+  "attack_type": "memory_pollution",
+  "sample_type": "negative",
+  "content": "# Normal sample: memory_pollution variant 14\ndef get_user_context(user_id):\n    return user_contexts.get(user_id, {})\n",
+  "content_hash": "e66422aaf0f652b9",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.583139",
+    "generator_version": "1.0.0"
+  }
+}

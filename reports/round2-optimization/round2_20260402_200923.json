@@ -1,0 +1,56 @@
+{
+  "round": 2,
+  "timestamp": "2026-04-02T20:09:23.472026",
+  "baseline": {
+    "detection_rate": 0.9106672474228943,
+    "false_positive_rate": 0.2674359944507504
+  },
+  "target": {
+    "detection_rate": 0.95,
+    "false_positive_rate": 0.15
+  },
+  "optimizations": {
+    "detection_rate": [
+      {
+        "strategy": "规则库扩充",
+        "method": "+300 条规则",
+        "improvement": "+1.5%"
+      },
+      {
+        "strategy": "攻击模式增强",
+        "method": "新增 10 种攻击类型",
+        "improvement": "+1%"
+      },
+      {
+        "strategy": "特征工程优化",
+        "method": "改进字符串匹配",
+        "improvement": "+0.5%"
+      }
+    ],
+    "false_positive_rate": [
+      {
+        "strategy": "白名单机制",
+        "method": "系统路径 + 已知良性",
+        "improvement": "-8%"
+      },
+      {
+        "strategy": "上下文感知",
+        "method": "环境变量 + 调用链",
+        "improvement": "-5%"
+      },
+      {
+        "strategy": "阈值优化",
+        "method": "动态调整匹配阈值",
+        "improvement": "-2%"
+      }
+    ]
+  },
+  "executed": [
+    "白名单机制 (10 路径)",
+    "上下文感知增强",
+    "+300 条规则扩充",
+    "阈值优化 (3 类规则)"
+  ],
+  "status": "in_progress",
+  "next_step": "验证扫描 (3-5 天)"
+}

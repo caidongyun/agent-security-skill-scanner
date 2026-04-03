@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-03-30T15:23:25.666709",
+  "total_samples": 66638,
+  "malicious_samples": 51442,
+  "benign_samples": 10126,
+  "detected": 47225,
+  "false_positives": 0,
+  "false_negatives": 4217,
+  "detection_rate": 91.802418257455,
+  "false_positive_rate": 0.0,
+  "precision": 100.0,
+  "f1_score": 95.72602795260828,
+  "performance": {
+    "total_time_sec": 63.04975605010986,
+    "avg_ms": 1.590952401673401,
+    "p50_ms": 1.390337012708187,
+    "p99_ms": 5.961900111287832,
+    "speed": 1056.9113058429332
+  },
+  "by_attack_type": {
+    "normal_script": {
+      "total": 5065,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "false_prone": {
+      "total": 5070,
+      "detected": 4092,
+      "rate": 80.71005917159763
+    },
+    "prompt_injection": {
+      "total": 5212,
+      "detected": 4170,
+      "rate": 80.00767459708365
+    },
+    "credential_theft": {
+      "total": 5118,
+      "detected": 5118,
+      "rate": 100.0
+    },
+    "remote_load": {
+      "total": 5117,
+      "detected": 5117,
+      "rate": 100.0
+    },
+    "evasion": {
+      "total": 5160,
+      "detected": 4082,
+      "rate": 79.10852713178295
+    },
+    "tool_poisoning": {
+      "total": 5194,
+      "detected": 5194,
+      "rate": 100.0
+    },
+    "supply_chain_attack": {
+      "total": 5125,
+      "detected": 5125,
+      "rate": 100.0
+    },
+    "resource_exhaustion": {
+      "total": 5118,
+      "detected": 4046,
+      "rate": 79.05431809300508
+    },
+    "persistence": {
+      "total": 5118,
+      "detected": 5118,
+      "rate": 100.0
+    },
+    "data_exfiltration": {
+      "total": 5150,
+      "detected": 5150,
+      "rate": 100.0
+    },
+    "memory_pollution": {
+      "total": 5130,
+      "detected": 4105,
+      "rate": 80.01949317738791
+    },
+    "common_pattern": {
+      "total": 5061,
+      "detected": 0,
+      "rate": 0.0
+    }
+  },
+  "workers": 67
+}

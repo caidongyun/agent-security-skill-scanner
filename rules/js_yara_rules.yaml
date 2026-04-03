@@ -1,0 +1,180 @@
+# JavaScript 检测规则 (YARA)
+# Round 20 - Scanner V3
+# 生成时间：2026-03-24
+
+rule JS_CommandExecution_ChildProcess {
+    meta:
+        description = "Detects JavaScript command execution using child_process"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059"
+    strings:
+        $require = "require('child_process')"
+        $require2 = "require(\"child_process\")"
+        $exec = "exec("
+        $execSync = "execSync("
+        $spawn = "spawn("
+    condition:
+        ($require or $require2) and ($exec or $execSync or $spawn)
+}
+
+rule JS_CodeInjection_Eval {
+    meta:
+        description = "Detects JavaScript code injection using eval"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1059.007"
+    strings:
+        $eval = "eval("
+        $function = "new Function("
+        $function2 = "Function("
+    condition:
+        $eval or $function or $function2
+}
+
+rule JS_RemoteCodeExecution {
+    meta:
+        description = "Detects JavaScript remote code execution"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1059.007"
+    strings:
+        $http = "http.get("
+        $https = "https.get("
+        $fetch = "fetch("
+        $eval = "eval("
+        $then = ".then("
+    condition:
+        ($http or $https or $fetch) and $eval
+}
+
+rule JS_DataExfiltration {
+    meta:
+        description = "Detects JavaScript data exfiltration"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1041"
+    strings:
+        $readFile = "readFileSync("
+        $readFile2 = "readFile("
+        $passwd = "/etc/passwd"
+        $ssh = ".ssh/"
+        $http = "http.post("
+        $axios = "axios.post("
+    condition:
+        ($readFile or $readFile2) and ($passwd or $ssh) and ($http or $axios)
+}
+
+rule JS_Obffuscation_HexVariables {
+    meta:
+        description = "Detects JavaScript obfuscation using hex variables"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $hex = /\b_0x[a-fA-F0-9]{2,}\b/
+    condition:
+        $hex
+}
+
+rule JS_Obffuscation_Base64 {
+    meta:
+        description = "Detects JavaScript obfuscation using Base64"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1027"
+    strings:
+        $atob = "atob("
+        $btoa = "btoa("
+        $eval = "eval("
+    condition:
+        $atob and $eval
+}
+
+rule JS_Persistence_Bashrc {
+    meta:
+        description = "Detects JavaScript persistence via .bashrc"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1053"
+    strings:
+        $bashrc = ".bashrc"
+        $writeFile = "writeFileSync("
+        $appendFile = "appendFileSync("
+        $curl = "curl "
+    condition:
+        ($writeFile or $appendFile) and $bashrc and $curl
+}
+
+rule JS_CredentialTheft_Env {
+    meta:
+        description = "Detects JavaScript credential theft from environment"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1057"
+    strings:
+        $processEnv = "process.env"
+        $stringify = "JSON.stringify"
+        $http = "http.post("
+        $axios = "axios.post("
+    condition:
+        $processEnv and $stringify and ($http or $axios)
+}
+
+rule JS_CredentialTheft_SSH {
+    meta:
+        description = "Detects JavaScript SSH key theft"
+        author = "Scanner V3"
+        severity = "critical"
+        mitre = "T1005"
+    strings:
+        $ssh = ".ssh/"
+        $id_rsa = "id_rsa"
+        $readFile = "readFileSync("
+        $http = "http.post("
+    condition:
+        $ssh and $id_rsa and $readFile and $http
+}
+
+rule JS_PrototypePollution {
+    meta:
+        description = "Detects JavaScript prototype pollution"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1059.007"
+    strings:
+        $proto = "__proto__"
+        $prototype = ".prototype"
+    condition:
+        $proto or $prototype
+}
+
+rule JS_Reconnaissance_SystemInfo {
+    meta:
+        description = "Detects JavaScript system reconnaissance"
+        author = "Scanner V3"
+        severity = "medium"
+        mitre = "T1082"
+    strings:
+        $os = "require('os')"
+        $platform = "os.platform()"
+        $hostname = "os.hostname()"
+        $userInfo = "os.userInfo()"
+        $http = "http.post("
+    condition:
+        $os and ($platform or $hostname or $userInfo) and $http
+}
+
+rule JS_FileManipulation_Delete {
+    meta:
+        description = "Detects JavaScript destructive file operations"
+        author = "Scanner V3"
+        severity = "high"
+        mitre = "T1005"
+    strings:
+        $unlink = "unlinkSync("
+        $rm = "rmSync("
+        $recursive = "recursive: true"
+    condition:
+        ($unlink or $rm) and $recursive
+}

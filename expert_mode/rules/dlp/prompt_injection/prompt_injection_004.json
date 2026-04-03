@@ -1,0 +1,26 @@
+{
+  "id": "PR-DLP-004",
+  "name": "分隔符绕过",
+  "category": "prompt_injection",
+  "type": "dlp",
+  "severity": "medium",
+  "description": "防止分隔符绕过导致的数据泄露",
+  "patterns": [
+    "\"\"\"",
+    "'''",
+    "### END ###"
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.175147",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ]
+}

@@ -1,0 +1,53 @@
+exclude_from_loading:
+- kb_index.json (3.9MB - 太大)
+- kb_index_shards.json (3.2MB - 太大)
+- KB_SUMMARY.md (1.2MB - 太大)
+files:
+- name: lessons.json
+  size_bytes: 628426
+  size_mb: 0.6
+  summary:
+    error: parse failed
+- name: index.json
+  size_bytes: 727
+  size_mb: 0.0
+  summary:
+    error: parse failed
+- name: test_cases.json
+  size_bytes: 564840
+  size_mb: 0.54
+  summary:
+    error: parse failed
+- name: risks.json
+  size_bytes: 739484
+  size_mb: 0.71
+  summary:
+    error: parse failed
+- name: experiments.json
+  size_bytes: 23
+  size_mb: 0.0
+  summary:
+    error: unknown structure
+- name: fixes.json
+  size_bytes: 1409915
+  size_mb: 1.34
+  summary:
+    error: parse failed
+- name: patterns.json
+  size_bytes: 555570
+  size_mb: 0.53
+  summary:
+    error: parse failed
+index_version: '1.0'
+last_updated: '2026-03-18'
+load_strategy:
+  description: 使用 kb_index_light.yaml 获取元数据
+  do_not_load:
+  - kb_index.json
+  - kb_index_shards.json
+  - KB_SUMMARY.md
+  if_needed_load:
+  - shards/knowledge_base/index.json (727 bytes - 安全)
+  - shards/knowledge_base/experiments.json (23 bytes - 安全)
+total_files: 7
+total_size_mb: 3.72

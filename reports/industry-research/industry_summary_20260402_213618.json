@@ -1,0 +1,121 @@
+{
+  "timestamp": "2026-04-02T21:36:18.510856",
+  "purpose": "行业规则库汇总 - 研究用",
+  "repositories": {
+    "yara_rules": {
+      "name": "YARA Rules Repository",
+      "source": "https://github.com/Yara-Rules/rules",
+      "category": "malware_detection",
+      "rules_count": "~5000",
+      "quality": "high",
+      "license": "Apache-2.0",
+      "focus": [
+        "malware",
+        "exploits",
+        "suspicious_patterns"
+      ]
+    },
+    "sigma_rules": {
+      "name": "Sigma Rules",
+      "source": "https://github.com/SigmaHQ/sigma",
+      "category": "siem_detection",
+      "rules_count": "~8000",
+      "quality": "high",
+      "license": "LGPL-2.1",
+      "focus": [
+        "log_analysis",
+        "threat_detection",
+        "incident_response"
+      ]
+    },
+    "loki_rules": {
+      "name": "Loki Signatures",
+      "source": "https://github.com/Neo23x0/signature-base",
+      "category": "incident_response",
+      "rules_count": "~2000",
+      "quality": "very_high",
+      "license": "custom",
+      "focus": [
+        "apt_detection",
+        "malware_iocs",
+        "forensics"
+      ]
+    },
+    "threat_intel": {
+      "name": "Threat Intelligence Rules",
+      "source": "https://github.com/microsoft/threatintelligence",
+      "category": "threat_hunting",
+      "rules_count": "~1500",
+      "quality": "high",
+      "license": "MIT",
+      "focus": [
+        "ioc_matching",
+        "apt_groups",
+        "campaigns"
+      ]
+    },
+    "mitre_atlas": {
+      "name": "MITRE ATLAS",
+      "source": "https://atlas.mitre.org/",
+      "category": "attack_framework",
+      "rules_count": "~200 techniques",
+      "quality": "very_high",
+      "license": "custom",
+      "focus": [
+        "ai_threats",
+        "llm_attacks",
+        "agent_security"
+      ]
+    },
+    "agent_security": {
+      "name": "Agent Security Rules (自建)",
+      "source": "本地规则库",
+      "category": "agent_detection",
+      "rules_count": "146",
+      "quality": "verified",
+      "license": "internal",
+      "focus": [
+        "prompt_injection",
+        "tool_poisoning",
+        "memory_pollution"
+      ]
+    }
+  },
+  "total_potential_rules": "~17,000+",
+  "recommended_for_research": [
+    "yara_rules",
+    "sigma_rules",
+    "loki_rules",
+    "mitre_atlas"
+  ],
+  "integration_priority": [
+    {
+      "name": "MITRE ATLAS",
+      "reason": "AI/Agent 威胁框架",
+      "priority": "P0"
+    },
+    {
+      "name": "Loki Signatures",
+      "reason": "APT 检测高质量",
+      "priority": "P1"
+    },
+    {
+      "name": "YARA Rules",
+      "reason": "恶意软件检测",
+      "priority": "P2"
+    },
+    {
+      "name": "Sigma Rules",
+      "reason": "日志分析",
+      "priority": "P3"
+    }
+  ],
+  "action_items": [
+    "下载 MITRE ATLAS 规则 (AI/Agent 相关)",
+    "同步 Loki Signatures (APT 检测)",
+    "筛选 YARA Rules (恶意软件)",
+    "研究 Sigma Rules (日志分析)",
+    "整合到本地规则库",
+    "建立规则质量验证流程"
+  ]
+}

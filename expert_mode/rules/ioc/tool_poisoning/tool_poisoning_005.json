@@ -1,0 +1,29 @@
+{
+  "id": "TO-IOC-005",
+  "type": "ioc",
+  "category": "tool_poisoning",
+  "indicators": [
+    {
+      "type": "pattern",
+      "value": "modified_config",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "altered_settings",
+      "confidence": 0.8
+    },
+    {
+      "type": "pattern",
+      "value": "tampered_options",
+      "confidence": 0.8
+    }
+  ],
+  "severity": "medium",
+  "description": "工具配置篡改的威胁指标",
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.168894",
+  "ttps": [
+    "MITRE ATT&CK: TOOL_POISONING"
+  ]
+}

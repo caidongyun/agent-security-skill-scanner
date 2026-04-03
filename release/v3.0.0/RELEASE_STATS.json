@@ -1,0 +1,16 @@
+{
+  "version": "3.0.0",
+  "release_date": "2026-04-02T07:25:02.373402",
+  "packages": {
+    "malicious_samples": 559,
+    "industry_samples": 75,
+    "rules": {
+      "count": 4779,
+      "size_bytes": 1648078,
+      "source": "rules/scanner_v3/yara/all_rules_v421.yar"
+    }
+  },
+  "total_files": 829,
+  "output_directory": "release/v3.0.0",
+  "manifest": "release/v3.0.0/MANIFEST.json"
+}

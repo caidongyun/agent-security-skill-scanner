@@ -1,0 +1,28 @@
+{
+  "sample_id": "MAL-TOO-50a2a2-v2",
+  "attack_type": "tool_poisoning",
+  "severity": "high",
+  "language": "Python",
+  "behaviors": [
+    "file_execution",
+    "network_request"
+  ],
+  "indicators": [
+    "curl | bash",
+    "code_execution"
+  ],
+  "confidence": 0.88,
+  "tags": [
+    "npm",
+    "package",
+    "supply_chain"
+  ],
+  "name": "\u6076\u610f\u6837\u672c-Tool Poisoning - \u53d8\u4f532",
+  "description": "tool_poisoning \u653b\u51fb\u7684\u53d8\u4f53\u6837\u672c #2",
+  "test_cases": [
+    "TO-TP-02"
+  ],
+  "status": "ready",
+  "variant_of": "MAL-TOO-50a2a2",
+  "generated_at": "2026-03-22T10:28:00.413786"
+}

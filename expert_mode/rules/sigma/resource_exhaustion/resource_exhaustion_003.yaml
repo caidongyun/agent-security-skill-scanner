@@ -1,0 +1,25 @@
+title: 磁盘填充攻击
+id: RE-SIGMA-003
+status: stable
+level: high
+description: 检测磁盘填充攻击攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.resource_exhaustion
+  - security.RE-SIGMA-003
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*disk.fill*"
+    CommandLine1: "*write large file*"
+    CommandLine2: "*dd if=/dev*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

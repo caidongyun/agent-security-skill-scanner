@@ -1,0 +1,124 @@
+{
+  "total_samples": 228,
+  "malicious_samples": 171,
+  "benign_samples": 57,
+  "detected_malicious": 63,
+  "false_positives": 7,
+  "detection_rate": 0.3684210526315789,
+  "false_positive_rate": 0.12280701754385964,
+  "precision": 0.9,
+  "recall": 0.3684210526315789,
+  "f1_score": 0.5228215767634855,
+  "by_attack_type": {
+    "defense_evasion": {
+      "total": 9,
+      "detected": 6,
+      "rate": 0.6666666666666666
+    },
+    "persistence": {
+      "total": 36,
+      "detected": 12,
+      "rate": 0.3333333333333333
+    },
+    "privilege_escalation": {
+      "total": 9,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "credential_access": {
+      "total": 9,
+      "detected": 3,
+      "rate": 0.3333333333333333
+    },
+    "network_call": {
+      "total": 9,
+      "detected": 6,
+      "rate": 0.6666666666666666
+    },
+    "supply_chain": {
+      "total": 9,
+      "detected": 3,
+      "rate": 0.3333333333333333
+    },
+    "lateral_movement": {
+      "total": 9,
+      "detected": 6,
+      "rate": 0.6666666666666666
+    },
+    "data_exfil": {
+      "total": 36,
+      "detected": 12,
+      "rate": 0.3333333333333333
+    },
+    "impact": {
+      "total": 9,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "code_execution": {
+      "total": 36,
+      "detected": 15,
+      "rate": 0.4166666666666667
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "total": 57,
+      "detected": 36,
+      "rate": 0.631578947368421
+    },
+    "medium": {
+      "total": 57,
+      "detected": 21,
+      "rate": 0.3684210526315789
+    },
+    "hard": {
+      "total": 57,
+      "detected": 6,
+      "rate": 0.10526315789473684
+    }
+  },
+  "by_language": {
+    "python": {
+      "malicious": {
+        "total": 81,
+        "detected": 48
+      },
+      "benign": {
+        "total": 20,
+        "false_positives": 5
+      }
+    },
+    "bash": {
+      "malicious": {
+        "total": 36,
+        "detected": 3
+      },
+      "benign": {
+        "total": 17,
+        "false_positives": 2
+      }
+    },
+    "powershell": {
+      "malicious": {
+        "total": 27,
+        "detected": 9
+      },
+      "benign": {
+        "total": 0,
+        "false_positives": 0
+      }
+    },
+    "javascript": {
+      "malicious": {
+        "total": 27,
+        "detected": 3
+      },
+      "benign": {
+        "total": 20,
+        "false_positives": 0
+      }
+    }
+  },
+  "timestamp": "2026-03-28T17:45:36.460753"
+}

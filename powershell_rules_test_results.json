@@ -1,0 +1,40 @@
+{
+  "malicious": {
+    "total": 15,
+    "detected": 15,
+    "not_detected": [],
+    "detection_rate": 100.0,
+    "matches_by_rule": {
+      "PS_Persistence_StartupFolder": 5,
+      "PS_DownloadCradle_InvokeWebRequest": 5,
+      "PS_CredentialTheft_GetCredential": 5,
+      "PS_Exfiltration_WebUpload": 5,
+      "PS_Exfiltration_ConvertToJson": 5,
+      "PS_HighConfidence_CredentialDump": 5,
+      "PS_DownloadCradle_IEX": 5,
+      "PS_DownloadCradle_WebClient": 5,
+      "PS_HighConfidence_DownloadCradle": 5
+    }
+  },
+  "benign": {
+    "total": 10,
+    "detected": 0,
+    "not_detected": [
+      "powershell_benign_006.ps1",
+      "powershell_benign_005.ps1",
+      "powershell_benign_008.ps1",
+      "powershell_benign_002.ps1",
+      "powershell_benign_001.ps1",
+      "powershell_benign_007.ps1",
+      "powershell_benign_003.ps1",
+      "powershell_benign_009.ps1",
+      "powershell_benign_004.ps1",
+      "powershell_benign_000.ps1"
+    ],
+    "detection_rate": 0.0,
+    "matches_by_rule": {}
+  },
+  "detection_rate": 100.0,
+  "false_positive_rate": 0.0,
+  "target_met": true
+}

@@ -1,0 +1,19 @@
+[Unit]
+Description=Scanner V3 Web Dashboard
+After=network.target
+
+[Service]
+Type=simple
+User=cdy
+WorkingDirectory=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-V3/web-dashboard
+ExecStart=/usr/bin/python3 /home/cdy/.openclaw/workspace/agent-security-skill-scanner-V3/web-dashboard/server_v3.py
+Restart=always
+RestartSec=5
+StandardOutput=append:/tmp/scanner-web.log
+StandardError=append:/tmp/scanner-web.log
+
+# 默认本地监听，取消下面注释开启远程
+# ExecStart=/usr/bin/python3 /home/cdy/.openclaw/workspace/agent-security-skill-scanner-V3/web-dashboard/server_v3.py --remote
+
+[Install]
+WantedBy=multi-user.target

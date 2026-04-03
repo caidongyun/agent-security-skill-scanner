@@ -1,0 +1,25 @@
+{
+  "sample_id": "BEN-COM-8b318e-v3",
+  "sample_type": "common_pattern",
+  "severity": "none",
+  "language": "Python",
+  "behaviors": [
+    "network_request",
+    "file_io"
+  ],
+  "indicators": [],
+  "confidence": 1.0,
+  "tags": [
+    "benign",
+    "common_pattern",
+    "legitimate"
+  ],
+  "name": "\u767d\u6837\u672c-Common Pattern - \u53d8\u4f533",
+  "description": "common_pattern \u7684\u826f\u6027\u6837\u672c\u53d8\u4f53 #3",
+  "test_cases": [
+    "CO-TN-03"
+  ],
+  "status": "ready",
+  "variant_of": "BEN-COM-8b318e",
+  "generated_at": "2026-03-22T10:28:00.421961"
+}

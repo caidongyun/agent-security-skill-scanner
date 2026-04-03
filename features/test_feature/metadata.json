@@ -1,0 +1,25 @@
+{
+  "name": "test_feature",
+  "created_at": "2026-04-02T16:54:42.573837",
+  "analysis": {
+    "type": "testing",
+    "complexity": "low",
+    "dependencies": [],
+    "acceptance_criteria": [
+      "Tests pass",
+      "Code runs"
+    ]
+  },
+  "design": {
+    "modules": [
+      "main",
+      "utils",
+      "tests"
+    ],
+    "interfaces": [
+      "cli",
+      "api"
+    ],
+    "data_flow": "input -> process -> output"
+  }
+}

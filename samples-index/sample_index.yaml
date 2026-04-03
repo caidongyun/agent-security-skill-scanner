@@ -1,0 +1,28 @@
+created_at: '2026-03-31T08:56:58.518643'
+sample_count: 55730
+statistics:
+  benign_count: 25715
+  by_attack_type:
+    benign: 20
+    credential_theft: 4312
+    data_exfiltration: 4242
+    memory_pollution: 4278
+    normal_script: 4218
+    prompt_injection: 4346
+    remote_loading: 3
+    resource_exhaustion: 4247
+    supply_chain_attack: 4275
+    tool_poisoning: 4312
+    unknown: 21477
+  by_language:
+    bash: 13836
+    go: 13890
+    javascript: 13806
+    python: 14198
+  by_source_dir:
+    /home/cdy/.openclaw/workspace/skills/agent-security-benchmark/samples: 200
+    /home/cdy/Desktop/security-benchmark/github-samples: 17
+    /home/cdy/Desktop/security-benchmark/samples/from-templates: 55513
+  malicious_count: 30015
+  total_samples: 55730
+version: '1.0'

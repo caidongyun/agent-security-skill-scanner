@@ -1,0 +1,26 @@
+{
+  "id": "TO-RUNTIME-004",
+  "name": "Pickle 反序列化检测",
+  "category": "tool_poisoning",
+  "severity": "critical",
+  "description": "检测 pickle 反序列化",
+  "patterns": [
+    "pickle\\.loads?",
+    "pickle\\.load",
+    "unpickle"
+  ],
+  "risk_score": 95,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.167058",
+  "action": "block",
+  "test_cases": {
+    "positive": [
+      "pickle.loads(data)",
+      "pickle.load(file)"
+    ],
+    "negative": [
+      "pickle.dumps(data)",
+      "pickle.dump(obj, file)"
+    ]
+  }
+}

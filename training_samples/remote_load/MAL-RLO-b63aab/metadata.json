@@ -1,0 +1,72 @@
+{
+  "id": "BENCH-RLO-b63aab",
+  "version": "2.0",
+  "sample_id": "MAL-RLO-b63aab",
+  "name": "远程加载 - EASY",
+  "description": "",
+  "attack_type": "remote_load",
+  "severity": "critical",
+  "category": "远程代码执行",
+  "language": "python",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "远程代码执行",
+    "mitre_atlas": [
+      "ATLAS-T0005"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T18:48:53.369240"
+  },
+  "behaviors": [
+    "network_request",
+    "file_execution",
+    "remote_code"
+  ],
+  "indicators": [
+    "curl | bash",
+    "wget | bash",
+    "remote code execution"
+  ],
+  "tags": [
+    "curl",
+    "bash",
+    "remote"
+  ],
+  "mitigation_indicators": [
+    "禁用远程脚本执行",
+    "使用本地镜像",
+    "检查签名"
+  ],
+  "false_positive_scenarios": [
+    "CI/CD 拉取脚本",
+    "容器镜像拉取"
+  ],
+  "detection_difficulty": {
+    "score": 1,
+    "level": "L1",
+    "description": "明显的恶意特征，易于检测",
+    "indicators_count": 3
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L1",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T18:48:53.369248",
+    "updated_at": "2026-03-29T18:48:53.369249",
+    "payload_file": "remote_load/MAL-RLO-b63aab/payload.python"
+  }
+}

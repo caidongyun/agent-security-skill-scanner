@@ -1,0 +1,25 @@
+title: 恶意工具替换
+id: TO-SIGMA-001
+status: stable
+level: high
+description: 检测恶意工具替换攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.tool_poisoning
+  - security.TO-SIGMA-001
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*tool_wrapper*"
+    CommandLine1: "*malicious_tool*"
+    CommandLine2: "*fake_implementation*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

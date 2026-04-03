@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-04-02T22:34:32.845720",
+  "phase": "YARA Rules Integration",
+  "sources": {
+    "local": {
+      "count": 146,
+      "quality": "100% validated"
+    },
+    "mitre_atlas": {
+      "count": 8,
+      "quality": "official"
+    },
+    "loki": {
+      "count": 15,
+      "quality": "industry standard"
+    },
+    "yara": {
+      "count": 10,
+      "quality": "community"
+    }
+  },
+  "current_total": 10,
+  "potential_total": {
+    "with_full_loki": "~1500",
+    "with_full_yara": "~6500"
+  },
+  "categories": {
+    "malware": {
+      "name": "恶意软件家族",
+      "count": 2000,
+      "priority": "P0"
+    },
+    "exploits": {
+      "name": "Exploits 检测",
+      "count": 1000,
+      "priority": "P0"
+    },
+    "suspicious": {
+      "name": "可疑模式",
+      "count": 800,
+      "priority": "P1"
+    },
+    "webshells": {
+      "name": "WebShell 检测",
+      "count": 500,
+      "priority": "P1"
+    },
+    "rat": {
+      "name": "RAT 检测",
+      "count": 400,
+      "priority": "P2"
+    },
+    "cryptominer": {
+      "name": "挖矿软件检测",
+      "count": 300,
+      "priority": "P2"
+    }
+  },
+  "quality_assurance": {
+    "yara_validated": true,
+    "sample_rules_validated": true
+  },
+  "next_steps": [
+    "完整下载 Loki 规则 (~1300 条)",
+    "完整下载 YARA 规则 (~5000 条)",
+    "逐条 YARA 验证",
+    "去重和分类",
+    "Sigma Rules 整合 (下一阶段)"
+  ]
+}

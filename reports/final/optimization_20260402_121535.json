@@ -1,0 +1,38 @@
+{
+  "report_date": "2026-04-02T12:15:35.153956",
+  "project": "agent-security-skill-scanner-master",
+  "version": "v3.2.0-multilang",
+  "summary": {
+    "languages_supported": 6,
+    "total_rules": 81,
+    "total_samples": 609,
+    "sample_breakdown": {
+      "benign": 44,
+      "market": 6,
+      "development": 0,
+      "malicious": 559
+    }
+  },
+  "benchmark_results": {
+    "detection_rate": 0.911,
+    "false_positive_rate": 0.267,
+    "total_tested": 64171
+  },
+  "optimization_completed": [
+    "TypeScript 规则支持 (10 条)",
+    "Go 规则支持 (10 条)",
+    "YAML/K8s规则支持 (10 条)",
+    "PowerShell 规则支持 (8 条)",
+    "良性样本库建设 (46 个)",
+    "市场采样启动 (60 个)",
+    "评审 Agent 开发",
+    "误报根因分析"
+  ],
+  "next_steps": [
+    "误报率优化 (26.7% → <15%)",
+    "良性样本扩展 (46 → 100)",
+    "检测率恢复 (91.1% → >95%)",
+    "规则审核 (500 条)",
+    "生产环境试点"
+  ]
+}

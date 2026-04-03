@@ -1,0 +1,138 @@
+{
+  "round": 3,
+  "phase": "深度优化",
+  "timestamp": "2026-04-02T21:14:26.434355",
+  "duration": "7 天",
+  "baseline": {
+    "detection_rate": 0.95,
+    "false_positive_rate": 0.15,
+    "total_rules": 4686,
+    "sample_size": 64171
+  },
+  "target": {
+    "detection_rate": 0.97,
+    "false_positive_rate": 0.1,
+    "improvement_dr": "+2%",
+    "improvement_fp": "-5%"
+  },
+  "tasks": [
+    {
+      "day": 1,
+      "focus": "机器学习辅助准备",
+      "activities": [
+        "收集 1000+ 良性样本",
+        "标注训练数据集",
+        "准备特征工程"
+      ],
+      "deliverables": [
+        "训练数据集",
+        "特征列表"
+      ],
+      "owner": "automation"
+    },
+    {
+      "day": 2,
+      "focus": "模型训练",
+      "activities": [
+        "训练分类模型",
+        "交叉验证",
+        "性能调优"
+      ],
+      "deliverables": [
+        "训练好的模型",
+        "验证报告"
+      ],
+      "owner": "automation"
+    },
+    {
+      "day": 3,
+      "focus": "集成学习部署",
+      "activities": [
+        "多模型投票机制",
+        "集成到扫描流程",
+        "性能测试"
+      ],
+      "deliverables": [
+        "集成系统",
+        "性能报告"
+      ],
+      "owner": "automation"
+    },
+    {
+      "day": 4,
+      "focus": "AST 分析实施",
+      "activities": [
+        "AST 解析器集成",
+        "语法规则编写",
+        "测试验证"
+      ],
+      "deliverables": [
+        "AST 分析模块",
+        "测试报告"
+      ],
+      "owner": "automation"
+    },
+    {
+      "day": 5,
+      "focus": "行为规则增强",
+      "activities": [
+        "运行时行为分析",
+        "调用链追踪",
+        "规则优化"
+      ],
+      "deliverables": [
+        "行为规则库",
+        "分析工具"
+      ],
+      "owner": "automation"
+    },
+    {
+      "day": 6,
+      "focus": "上下文感知增强",
+      "activities": [
+        "环境变量分析",
+        "执行上下文追踪",
+        "白名单扩充"
+      ],
+      "deliverables": [
+        "上下文分析模块",
+        "白名单库"
+      ],
+      "owner": "automation"
+    },
+    {
+      "day": 7,
+      "focus": "验证与报告",
+      "activities": [
+        "Benchmark 扫描",
+        "效果对比",
+        "生成报告"
+      ],
+      "deliverables": [
+        "验证报告",
+        "优化总结"
+      ],
+      "owner": "automation"
+    }
+  ],
+  "risk_mitigation": [
+    {
+      "risk": "模型训练失败",
+      "mitigation": "准备备用规则集"
+    },
+    {
+      "risk": "性能下降",
+      "mitigation": "缓存机制 + 并行处理"
+    },
+    {
+      "risk": "过拟合",
+      "mitigation": "交叉验证 + 正则化"
+    }
+  ],
+  "success_criteria": [
+    "检测率 >= 97%",
+    "误报率 <= 10%",
+    "性能下降 < 20%",
+    "通过 Benchmark 验证"
+  ]
+}

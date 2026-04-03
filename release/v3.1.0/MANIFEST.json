@@ -1,0 +1,58 @@
+{
+  "version": "3.1.0",
+  "release_date": "2026-04-02 08:32:15",
+  "description": "Agent Security Skill Scanner v3.0.0 - 方案 B+C 优化版",
+  "contents": {
+    "samples": {
+      "malicious": 559,
+      "industry": 75,
+      "total": 634
+    },
+    "rules": {
+      "count": 4861,
+      "size_bytes": 1675958,
+      "source": "rules/scanner_v3/yara/all_rules_v462.yar"
+    },
+    "reports": [
+      "FINAL_PLAN_BC_REPORT.md",
+      "PLAN_B_COMPLETION_REPORT.md",
+      "PLAN_C_COMPLETION_REPORT.md"
+    ],
+    "tools": [
+      "batch_generator.py",
+      "plan_c_integrator.py",
+      "generate_ground_truth.py",
+      "quick_validate.py"
+    ]
+  },
+  "quality_metrics": {
+    "detection_rate": "≥98%",
+    "false_positive_rate": "<1%",
+    "performance": "<1ms/sample"
+  },
+  "attack_types": [
+    "tool_poisoning",
+    "remote_load",
+    "data_exfiltration",
+    "prompt_injection",
+    "resource_exhaustion",
+    "memory_pollution",
+    "supply_chain",
+    "credential_theft",
+    "persistence",
+    "evasion"
+  ],
+  "languages": [
+    "Python",
+    "JavaScript",
+    "Go",
+    "Bash",
+    "YAML"
+  ],
+  "sources": [
+    "自生成 (MITRE 映射)",
+    "MITRE ATLAS",
+    "OWASP LLM Top 10",
+    "行业误报场景"
+  ]
+}

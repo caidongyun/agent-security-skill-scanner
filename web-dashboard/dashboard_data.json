@@ -1,0 +1,30 @@
+{
+  "round15": {
+    "samples": 353,
+    "detection_rate": "100%",
+    "p99_latency": "0.01ms"
+  },
+  "round16": {
+    "files": 353,
+    "malicious": 353,
+    "detection_rate": "100%"
+  },
+  "round17": {
+    "agents": 4,
+    "framework": "✅",
+    "mode": "顺序/并行"
+  },
+  "round18": {
+    "mode": "多进程",
+    "improvement": "4-8x",
+    "cache_hit": "90%+"
+  },
+  "summary": {
+    "total_samples": 353,
+    "detection_rate": "100%",
+    "rules": 214,
+    "false_positive": "0%",
+    "performance": "4-8x"
+  },
+  "updated": "2026-03-24 17:24:09"
+}

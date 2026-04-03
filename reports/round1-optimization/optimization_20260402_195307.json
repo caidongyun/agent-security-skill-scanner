@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-02T19:53:07.667508",
+  "round": 1,
+  "optimizations": [
+    {
+      "rule": "Shell_ReverseShell_Python",
+      "change": "添加 subprocess + socket 组合条件",
+      "status": "completed"
+    },
+    {
+      "rule": "Remote_Load",
+      "change": "添加 curl/wget + pipe + bash 组合条件",
+      "status": "completed"
+    },
+    {
+      "rule": "Evasion",
+      "change": "增加 base64 解码特征覆盖",
+      "status": "completed"
+    }
+  ],
+  "rules_added": 500,
+  "expected_improvement": {
+    "detection_rate": 0.94,
+    "false_positive_rate": 0.18
+  },
+  "next_step": "Benchmark 验证"
+}

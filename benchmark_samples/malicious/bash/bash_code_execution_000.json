@@ -1,0 +1,13 @@
+{
+  "id": "bash_code_execution_000",
+  "language": "bash",
+  "category": "malicious",
+  "attack_type": "code_execution",
+  "severity": "critical",
+  "mitre_techniques": [
+    "T1059",
+    "T1204",
+    "T1203"
+  ],
+  "hash": "d5388f22329a"
+}

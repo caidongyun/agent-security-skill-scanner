@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-03-28T15:32:06.737667",
+  "total_rules": 53,
+  "optimized_rules": 44,
+  "optimization_rate": 83.02,
+  "by_category": {
+    "tool_poisoning": 5,
+    "remote_load": 5,
+    "data_exfil": 6,
+    "prompt_injection": 6,
+    "resource_exhaustion": 5,
+    "memory_pollution": 5,
+    "supply_chain": 5,
+    "container_escape": 6,
+    "network_tunnel": 10
+  }
+}

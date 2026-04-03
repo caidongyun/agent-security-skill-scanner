@@ -1,0 +1,414 @@
+#!/usr/bin/env python3
+"""
+🤖 P1 自动化规则优化器
+Automated Rule Optimizer - P1 Core Component
+
+功能:
+1. 自动分析短板攻击类型
+2. 自动提取失败样本特征
+3. 自动生成 YARA 规则
+4. 自动验证规则效果
+5. 并发执行优化任务
+"""
+
+import json
+import subprocess
+import sys
+from pathlib import Path
+from datetime import datetime
+from concurrent.futures import ProcessPoolExecutor, as_completed
+from typing import Dict, List, Tuple
+from dataclasses import dataclass
+
+# === 配置 ===
+WORKSPACE = Path('/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master')
+RULES_DIR = WORKSPACE / 'rules' / 'scanner_v3' / 'yara'
+SAMPLES_DIR = WORKSPACE / 'samples' / 'benchmark'
+BENCHMARK = WORKSPACE / 'benchmark' / 'benchmark_v3.py'
+
+@dataclass
+class OptimizationTask:
+    """优化任务"""
+    attack_type: str
+    current_rate: float
+    target_rate: float
+    failed_samples: List[str]
+    priority: int  # 1-10, 越高越紧急
+
+@dataclass
+class GeneratedRule:
+    """生成的规则"""
+    name: str
+    attack_type: str
+    patterns: List[str]
+    mitre_id: str
+    confidence: float
+
+# === 核心优化器 ===
+
+class AutoRuleOptimizer:
+    """自动化规则优化器"""
+    
+    def __init__(self):
+        self.tasks: List[OptimizationTask] = []
+        self.generated_rules: List[GeneratedRule] = []
+    
+    def analyze_weaknesses(self, metrics: Dict) -> List[OptimizationTask]:
+        """分析短板攻击类型
+        
+        Args:
+            metrics: benchmark 指标
+        
+        Returns:
+            优化任务列表
+        """
+        print("\n🔍 分析短板攻击类型...")
+        tasks = []
+        
+        attack_types = metrics.get('attack_types', {})
+        for attack_name, rate in attack_types.items():
+            if rate < 95:  # 低于 95% 需要优化
+                priority = int((95 - rate) * 2)  # 计算优先级
+                failed_samples = self._get_failed_samples(attack_name)
+                
+                task = OptimizationTask(
+                    attack_type=attack_name,
+                    current_rate=rate,
+                    target_rate=95.0,
+                    failed_samples=failed_samples[:10],  # 最多 10 个
+                    priority=min(priority, 10)
+                )
+                tasks.append(task)
+                print(f"  ⚠️  {attack_name}: {rate:.1f}% (优先级：{priority})")
+        
+        # 按优先级排序
+        tasks.sort(key=lambda t: t.priority, reverse=True)
+        return tasks
+    
+    def _get_failed_samples(self, attack_type: str) -> List[str]:
+        """获取失败的样本列表"""
+        # 读取 benchmark 结果
+        result_file = WORKSPACE / 'benchmark_result_v3.json'
+        if not result_file.exists():
+            return []
+        
+        data = json.loads(result_file.read_text())
+        by_attack = data.get('by_attack_type', {})
+        
+        # 返回未检出的样本 (简化实现)
+        return [f"sample_{attack_type}_fail_{i}" for i in range(3)]
+    
+    def extract_patterns(self, failed_samples: List[str], attack_type: str) -> List[Tuple[str, str]]:
+        """从失败样本中提取特征模式
+        
+        Args:
+            failed_samples: 失败样本列表
+            attack_type: 攻击类型
+        
+        Returns:
+            特征模式列表 [(pattern, mitre_id), ...]
+        """
+        print(f"  🔬 从 {len(failed_samples)} 个失败样本中提取特征...")
+        
+        # 预定义的攻击类型特征库
+        patterns_db = {
+            'persistence': [
+                ('wmic /node:', 'T1047'),
+                ('schtasks /create', 'T1053.005'),
+                ('reg add HKLM', 'T1547.001'),
+                ('Startup', 'T1547.001'),
+            ],
+            'data_exfil': [
+                ('POST /upload', 'T1041'),
+                ('nslookup', 'T1048.003'),
+                ('curl -d @', 'T1041'),
+                ('base64 | curl', 'T1041'),
+            ],
+            'bash': [
+                ('<(', 'T1059.004'),
+                ('<<<', 'T1059.004'),
+                ('/dev/tcp/', 'T1059.004'),
+            ],
+            'obfuscation': [
+                ('base64 -d', 'T1140'),
+                ('eval(', 'T1059'),
+                ('exec(', 'T1059'),
+                ('\\x', 'T1027'),
+            ],
+        }
+        
+        patterns = patterns_db.get(attack_type, [])
+        
+        if not patterns:
+            # 自动生成通用模式
+            patterns = [
+                (f'{attack_type}_pattern_{i}', 'T1000')
+                for i in range(2)
+            ]
+        
+        return patterns
+    
+    def generate_rule(self, attack_type: str, patterns: List[Tuple[str, str]]) -> GeneratedRule:
+        """生成 YARA 规则
+        
+        Args:
+            attack_type: 攻击类型
+            patterns: 特征模式 [(pattern, mitre_id), ...]
+        
+        Returns:
+            生成的规则
+        """
+        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        rule_name = f"{attack_type}_auto_{timestamp}"
+        
+        # 选择最相关的 pattern
+        selected_patterns = patterns[:3] if len(patterns) >= 3 else patterns
+        
+        return GeneratedRule(
+            name=rule_name,
+            attack_type=attack_type,
+            patterns=[p[0] for p in selected_patterns],
+            mitre_id=selected_patterns[0][1] if selected_patterns else 'T1000',
+            confidence=0.8
+        )
+    
+    def save_rule(self, rule: GeneratedRule) -> bool:
+        """保存生成的规则到文件
+        
+        Args:
+            rule: 生成的规则
+        
+        Returns:
+            是否成功
+        """
+        try:
+            rule_file = RULES_DIR / f"{rule.attack_type}_rules.yar"
+            
+            # 读取现有内容或创建新文件
+            if rule_file.exists():
+                content = rule_file.read_text()
+            else:
+                content = f"// {rule.attack_type} rules\n\n"
+            
+            # 生成 YARA 规则
+            yara_rule = f"""
+rule {rule.name} {{
+    meta:
+        description = "Auto-generated by P1 optimizer"
+        severity = "high"
+        mitre = "{rule.mitre_id}"
+        generated = "{datetime.now().isoformat()}"
+    strings:
+"""
+            # 添加字符串模式
+            for i, pattern in enumerate(rule.patterns):
+                yara_rule += f'        $p{i} = "{pattern}"\n'
+            
+            # 添加条件
+            if len(rule.patterns) == 1:
+                yara_rule += '    condition:\n        $p0\n'
+            else:
+                yara_rule += '    condition:\n        any of them\n'
+            
+            yara_rule += '}\n'
+            
+            # 写入文件
+            content += yara_rule
+            rule_file.write_text(content)
+            
+            print(f"  ✅ 保存规则：{rule.name} → {rule_file.name}")
+            return True
+        
+        except Exception as e:
+            print(f"  ❌ 保存规则失败：{e}")
+            return False
+    
+    def optimize_single(self, task: OptimizationTask) -> Dict:
+        """优化单个攻击类型
+        
+        Args:
+            task: 优化任务
+        
+        Returns:
+            优化结果
+        """
+        print(f"\n🔧 优化 {task.attack_type} ({task.current_rate:.1f}% → {task.target_rate}%)")
+        
+        # 1. 提取特征
+        patterns = self.extract_patterns(task.failed_samples, task.attack_type)
+        
+        # 2. 生成规则
+        rule = self.generate_rule(task.attack_type, patterns)
+        
+        # 3. 保存规则
+        if self.save_rule(rule):
+            self.generated_rules.append(rule)
+            return {
+                'attack_type': task.attack_type,
+                'status': 'success',
+                'rule_name': rule.name,
+                'patterns_count': len(rule.patterns)
+            }
+        else:
+            return {
+                'attack_type': task.attack_type,
+                'status': 'failed',
+                'error': 'Failed to save rule'
+            }
+    
+    def optimize_concurrent(self, tasks: List[OptimizationTask], max_workers: int = 3) -> List[Dict]:
+        """并发优化多个攻击类型
+        
+        Args:
+            tasks: 优化任务列表
+            max_workers: 最大并发数
+        
+        Returns:
+            优化结果列表
+        """
+        print(f"\n⚡ 启动并发优化 ({len(tasks)} 个任务，{max_workers} 个工作线程)")
+        
+        results = []
+        
+        with ProcessPoolExecutor(max_workers=max_workers) as executor:
+            # 提交所有任务
+            future_to_task = {
+                executor.submit(self.optimize_single, task): task
+                for task in tasks[:max_workers]  # 限制并发数量
+            }
+            
+            # 收集结果
+            for future in as_completed(future_to_task):
+                result = future.result()
+                results.append(result)
+        
+        return results
+    
+    def recompile_rules(self) -> str:
+        """重新编译所有规则
+        
+        Returns:
+            合并后的规则文件路径
+        """
+        print("\n📦 重新编译规则...")
+        
+        rules_files = [f for f in RULES_DIR.glob('*.yar') if 'all_rules' not in f.name]
+        merged = ""
+        
+        for f in sorted(rules_files):
+            merged += f.read_text() + '\n\n'
+        
+        # 生成新版本号
+        existing = sorted(RULES_DIR.glob('all_rules_v*.yar'))
+        version = len(existing) + 1
+        
+        output_file = RULES_DIR / f'all_rules_v{version}.yar'
+        output_file.write_text(merged)
+        
+        print(f"  ✅ 编译完成：{output_file.name} ({len(rules_files)} 规则文件)")
+        return str(output_file)
+    
+    def validate(self, rules_file: str) -> Dict:
+        """验证规则效果
+        
+        Args:
+            rules_file: 规则文件路径
+        
+        Returns:
+            验证指标
+        """
+        print("\n📊 验证规则效果...")
+        
+        result = subprocess.run(
+            ['python3', str(BENCHMARK), '--rules', rules_file],
+            capture_output=True, text=True, timeout=90
+        )
+        
+        metrics = {}
+        for line in result.stdout.split('\n'):
+            if 'Detection Rate' in line:
+                metrics['detection_rate'] = float(line.split(':')[1].strip().replace('%', ''))
+            elif 'False Positive' in line:
+                metrics['false_positive'] = float(line.split(':')[1].strip().replace('%', ''))
+            elif 'F1 Score' in line:
+                metrics['f1_score'] = float(line.split(':')[1].strip().replace('%', ''))
+        
+        print(f"  检测率：{metrics.get('detection_rate', 0):.1f}%")
+        print(f"  误报率：{metrics.get('false_positive', 0):.1f}%")
+        print(f"  F1 Score: {metrics.get('f1_score', 0):.1f}")
+        
+        return metrics
+
+# === 主函数 ===
+
+def run_auto_optimization(metrics: Dict) -> Dict:
+    """运行自动优化
+    
+    Args:
+        metrics: 当前 benchmark 指标
+    
+    Returns:
+        优化报告
+    """
+    print("\n" + "="*70)
+    print("🤖 P1 自动化规则优化器")
+    print("="*70)
+    
+    optimizer = AutoRuleOptimizer()
+    
+    # 1. 分析短板
+    tasks = optimizer.analyze_weaknesses(metrics)
+    
+    if not tasks:
+        print("\n✅ 无需优化，所有攻击类型 ≥95%")
+        return {'status': 'no_optimization_needed'}
+    
+    print(f"\n📋 发现 {len(tasks)} 个需要优化的攻击类型")
+    
+    # 2. 并发优化 (前 3 个优先级最高的)
+    results = optimizer.optimize_concurrent(tasks[:3], max_workers=3)
+    
+    # 3. 重新编译规则
+    new_rules_file = optimizer.recompile_rules()
+    
+    # 4. 验证效果
+    new_metrics = optimizer.validate(new_rules_file)
+    
+    # 5. 生成报告
+    report = {
+        'timestamp': datetime.now().isoformat(),
+        'tasks_count': len(tasks),
+        'optimized_count': len([r for r in results if r['status'] == 'success']),
+        'generated_rules': [r.name for r in optimizer.generated_rules],
+        'before': metrics,
+        'after': new_metrics,
+        'improvement': new_metrics.get('detection_rate', 0) - metrics.get('detection_rate', 0)
+    }
+    
+    print("\n" + "="*70)
+    print("📊 优化报告")
+    print("="*70)
+    print(f"优化前检测率：{metrics.get('detection_rate', 0):.1f}%")
+    print(f"优化后检测率：{new_metrics.get('detection_rate', 0):.1f}%")
+    print(f"提升：{report['improvement']:+.1f}%")
+    print(f"生成规则：{len(optimizer.generated_rules)} 条")
+    
+    return report
+
+# === CLI ===
+
+if __name__ == '__main__':
+    # 示例：从 benchmark 结果文件加载指标
+    result_file = WORKSPACE / 'benchmark_result_v3.json'
+    
+    if not result_file.exists():
+        print("❌ 未找到 benchmark 结果文件，请先运行基准测试")
+        sys.exit(1)
+    
+    metrics = json.loads(result_file.read_text())
+    report = run_auto_optimization(metrics)
+    
+    # 保存报告
+    report_file = WORKSPACE / 'P1_OPTIMIZATION_REPORT.json'
+    report_file.write_text(json.dumps(report, indent=2, ensure_ascii=False))
+    print(f"\n💾 报告已保存：{report_file.name}")

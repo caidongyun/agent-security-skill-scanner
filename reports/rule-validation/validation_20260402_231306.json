@@ -1,0 +1,90 @@
+{
+  "timestamp": "2026-04-02T23:13:06.348897",
+  "source": {
+    "loki_files": 736,
+    "yara_files": 13,
+    "total_files": 749
+  },
+  "validation_result": {
+    "valid": 724,
+    "invalid": 25,
+    "validation_rate": 96.66221628838451
+  },
+  "errors": {
+    "by_type": {
+      "rules/loki-full/gen_vcruntime140_dll_sideloading.yar(12)": 1,
+      "rules/loki-full/generic_anomalies.yar(523)": 1,
+      "rules/loki-full/yara-rules_vuln_drivers_strict_renamed.yar(11991)": 1,
+      "rules/loki-full/general_cloaking.yar(63)": 1,
+      "rules/loki-full/gen_fake_amsi_dll.yar(60)": 1,
+      "rules/loki-full/expl_connectwise_screenconnect_vuln_feb24.yar(327)": 1,
+      "rules/loki-full/thor_inverse_matches.yar(578)": 1,
+      "rules/loki-full/yara_mixed_ext_vars.yar(587)": 1,
+      "rules/loki-full/configured_vulns_ext_vars.yar(217)": 1,
+      "rules/loki-full/expl_citrix_netscaler_adc_exploitation_cve_2023_3519.yar(21)": 1,
+      "rules/loki-full/gen_webshells_ext_vars.yar(97)": 1,
+      "rules/loki-full/gen_susp_obfuscation.yar(57)": 1,
+      "rules/loki-full/gen_mal_3cx_compromise_mar23.yar(367)": 1,
+      "rules/yara-full/malware_index.yar(410)": 1,
+      "rules/yara-full/maldocs_index.yar(24)": 1,
+      "rules/yara-full/cve_rules_index.yar(18)": 1,
+      "rules/yara-full/index_w_mobile.yar(484)": 1,
+      "rules/yara-full/exploit_kits_index.yar(15)": 1,
+      "rules/yara-full/email_index.yar(15)": 1,
+      "rules/yara-full/capabilities_index.yar(5)": 1,
+      "rules/yara-full/webshells_index.yar(13)": 1,
+      "rules/yara-full/packers_index.yar(10)": 1,
+      "rules/yara-full/antidebug_antivm_index.yar(5)": 1,
+      "rules/yara-full/crypto_index.yar(5)": 1,
+      "rules/yara-full/index.yar(484)": 1
+    },
+    "samples": [
+      {
+        "file": "gen_vcruntime140_dll_sideloading.yar",
+        "error": "rules/loki-full/gen_vcruntime140_dll_sideloading.yar(12): undefined identifier \"filename\""
+      },
+      {
+        "file": "generic_anomalies.yar",
+        "error": "rules/loki-full/generic_anomalies.yar(523): undefined identifier \"extension\""
+      },
+      {
+        "file": "yara-rules_vuln_drivers_strict_renamed.yar",
+        "error": "rules/loki-full/yara-rules_vuln_drivers_strict_renamed.yar(11991): undefined identifier \"filename\""
+      },
+      {
+        "file": "general_cloaking.yar",
+        "error": "rules/loki-full/general_cloaking.yar(63): undefined identifier \"filepath\""
+      },
+      {
+        "file": "gen_fake_amsi_dll.yar",
+        "error": "rules/loki-full/gen_fake_amsi_dll.yar(60): undefined identifier \"filename\""
+      },
+      {
+        "file": "expl_connectwise_screenconnect_vuln_feb24.yar",
+        "error": "rules/loki-full/expl_connectwise_screenconnect_vuln_feb24.yar(327): undefined identifier \"filepath\""
+      },
+      {
+        "file": "thor_inverse_matches.yar",
+        "error": "rules/loki-full/thor_inverse_matches.yar(578): undefined identifier \"filepath\""
+      },
+      {
+        "file": "yara_mixed_ext_vars.yar",
+        "error": "rules/loki-full/yara_mixed_ext_vars.yar(587): undefined identifier \"filename\""
+      },
+      {
+        "file": "configured_vulns_ext_vars.yar",
+        "error": "rules/loki-full/configured_vulns_ext_vars.yar(217): undefined identifier \"filepath\""
+      },
+      {
+        "file": "expl_citrix_netscaler_adc_exploitation_cve_2023_3519.yar",
+        "error": "rules/loki-full/expl_citrix_netscaler_adc_exploitation_cve_2023_3519.yar(21): undefined identifier \"filepath\""
+      }
+    ]
+  },
+  "next_steps": [
+    "修复无效规则",
+    "去重和分类",
+    "整合到统一规则库",
+    "Benchmark 测试"
+  ]
+}

@@ -1,0 +1,6 @@
+# 灵顺优化器 - 每 30 分钟运行一次
+*/30 * * * * cd /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode && /usr/bin/python3 lingshun_optimizer.py --run-once >> /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/logs/optimizer.log 2>&1
+
+# 每天凌晨 6 点复活检查
+0 6 * * * cd /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode && /usr/bin/python3 lingshun_optimizer.py --run-once >> /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/expert_mode/logs/optimizer_morning.log 2>&1
+

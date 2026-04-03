@@ -1,0 +1,6 @@
+id: sigma-auto-1774272685-2
+name: Auto Rule 2
+type: sigma
+severity: high
+condition: contains any of (keyword2, keyword3, keyword4)
+attack_type: tool_poisoning

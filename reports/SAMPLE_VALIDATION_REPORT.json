@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-04-01T23:17:44.096733",
+  "scheme_b": {
+    "total": 560,
+    "by_type": {
+      "tool_poisoning": 56,
+      "remote_load": 56,
+      "data_exfiltration": 58,
+      "prompt_injection": 65,
+      "resource_exhaustion": 71,
+      "memory_pollution": 57,
+      "supply_chain": 50,
+      "credential_theft": 50,
+      "persistence": 50,
+      "evasion": 47
+    }
+  },
+  "scheme_c": {
+    "total": 255,
+    "by_type": {
+      "tool_poisoning": 52,
+      "evasion": 31,
+      "resource_exhaustion": 31,
+      "data_exfiltration": 29,
+      "remote_load": 22,
+      "prompt_injection": 17,
+      "credential_theft": 20,
+      "persistence": 20,
+      "supply_chain": 20,
+      "memory_pollution": 11,
+      "data_exfil": 2
+    }
+  },
+  "grand_total": 815
+}

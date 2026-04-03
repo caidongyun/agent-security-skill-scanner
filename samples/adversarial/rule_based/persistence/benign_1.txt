@@ -1,0 +1,8 @@
+# Benign sample for rule: persistence
+# Generated: 2026-04-02 10:47:53.105217
+
+#!/bin/bash
+# 开发环境初始化 - 良性
+echo "export PATH=$HOME/.local/bin:$PATH" >> ~/.bashrc
+echo "alias ll='ls -la'" >> ~/.bashrc
+source ~/.bashrc

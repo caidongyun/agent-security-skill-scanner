@@ -1,0 +1,13 @@
+{
+  "id": "bash_privilege_escalation_003",
+  "language": "bash",
+  "category": "malicious",
+  "attack_type": "privilege_escalation",
+  "severity": "critical",
+  "mitre_techniques": [
+    "T1068",
+    "T1548",
+    "T1134"
+  ],
+  "hash": "091764b4c597"
+}

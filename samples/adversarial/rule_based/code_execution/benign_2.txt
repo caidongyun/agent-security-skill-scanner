@@ -1,0 +1,11 @@
+# Benign sample for rule: code_execution
+# Generated: 2026-04-02 10:47:53.105437
+
+#!/usr/bin/env python3
+# 插件加载器 - 良性
+plugin_code = """
+def plugin_func():
+    return "Plugin loaded"
+"""
+exec(plugin_code)
+print(plugin_func())

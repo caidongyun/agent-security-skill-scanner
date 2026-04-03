@@ -1,0 +1,11 @@
+{
+  "high_fp_rules": [
+    "shell_reverseshell_python",
+    "remote_load",
+    "evasion",
+    "memory_pollution",
+    "resource_exhaustion"
+  ],
+  "fp_threshold": 0.05,
+  "dr_threshold": 0.98
+}

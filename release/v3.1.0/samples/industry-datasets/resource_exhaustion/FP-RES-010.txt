@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+# Normal batch data processing
+for i in range(10000):
+    process_data(i)

@@ -1,0 +1,25 @@
+title: 系统提示泄露
+id: PR-SIGMA-002
+status: stable
+level: high
+description: 检测系统提示泄露攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.prompt_injection
+  - security.PR-SIGMA-002
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*print system prompt*"
+    CommandLine1: "*show instructions*"
+    CommandLine2: "*reveal config*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

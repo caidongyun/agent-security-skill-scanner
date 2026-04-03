@@ -1,0 +1,24 @@
+# Generated: 2026-04-02 11:55:15.209907
+# Type: Benign DevOps Sample
+
+# Docker Compose - 良性
+version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      - db
+  
+  db:
+    image: postgres:14
+    environment:
+      - POSTGRES_PASSWORD=secret
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

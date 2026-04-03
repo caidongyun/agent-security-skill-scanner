@@ -1,0 +1,6 @@
+id: sigma-auto-1774274097-28
+name: Auto Rule 28
+type: sigma
+severity: high
+condition: contains any of (keyword28, keyword29, keyword30)
+attack_type: data_exfil

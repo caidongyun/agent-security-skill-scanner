@@ -1,0 +1,62 @@
+{
+  "goal": {
+    "detection_rate": 0.99,
+    "false_positive_rate": 0.01
+  },
+  "current": {
+    "detection_rate": 0.9106672474228943,
+    "false_positive_rate": 0.2674359944507504
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "fp_target": 0.18,
+      "dr_target": 0.94,
+      "focus": "组合条件 + 规则扩充"
+    },
+    {
+      "round": 2,
+      "fp_target": 0.12,
+      "dr_target": 0.955,
+      "focus": "上下文感知"
+    },
+    {
+      "round": 3,
+      "fp_target": 0.08,
+      "dr_target": 0.965,
+      "focus": "特征工程"
+    },
+    {
+      "round": 4,
+      "fp_target": 0.05,
+      "dr_target": 0.975,
+      "focus": "白名单机制"
+    },
+    {
+      "round": 5,
+      "fp_target": 0.03,
+      "dr_target": 0.98,
+      "focus": "ML 辅助"
+    },
+    {
+      "round": 6,
+      "fp_target": 0.02,
+      "dr_target": 0.985,
+      "focus": "集成学习"
+    },
+    {
+      "round": 7,
+      "fp_target": 0.015,
+      "dr_target": 0.99,
+      "focus": "精细调优"
+    },
+    {
+      "round": 8,
+      "fp_target": 0.01,
+      "dr_target": 0.992,
+      "focus": "持续优化"
+    }
+  ],
+  "timeline": "8-14 周",
+  "difficulty": "业界顶尖"
+}

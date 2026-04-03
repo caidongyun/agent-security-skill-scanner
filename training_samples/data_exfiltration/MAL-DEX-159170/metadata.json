@@ -1,0 +1,72 @@
+{
+  "id": "BENCH-DEX-159170",
+  "version": "2.0",
+  "sample_id": "MAL-DEX-159170",
+  "name": "数据外传 - EASY",
+  "description": "",
+  "attack_type": "data_exfiltration",
+  "severity": "critical",
+  "category": "数据窃取",
+  "language": "go",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "数据窃取",
+    "mitre_atlas": [
+      "ATLAS-T0003"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T20:49:43.120619"
+  },
+  "behaviors": [
+    "file_access",
+    "network_request",
+    "data_exfiltration"
+  ],
+  "indicators": [
+    "~/.ssh/id_rsa",
+    "base64 encoding",
+    "requests.post"
+  ],
+  "tags": [
+    "ssh",
+    "exfiltration",
+    "network"
+  ],
+  "mitigation_indicators": [
+    "网络流量监控",
+    "敏感文件加密",
+    "最小权限原则"
+  ],
+  "false_positive_scenarios": [
+    "正常的日志上传",
+    "备份到云存储"
+  ],
+  "detection_difficulty": {
+    "score": 1,
+    "level": "L1",
+    "description": "明显的恶意特征，易于检测",
+    "indicators_count": 3
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L1",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T20:49:43.120628",
+    "updated_at": "2026-03-29T20:49:43.120629",
+    "payload_file": "data_exfiltration/MAL-DEX-159170/payload.go"
+  }
+}

@@ -1,0 +1,32 @@
+# FakeGit 恶意仓库检测规则
+# 来源: 腾讯安全威胁情报中心 (2026-03-23)
+
+id: sigma-fakegit-001
+name: Detect FakeGit Malicious Repository Pattern
+type: sigma
+attack_type: supply_chain_attack
+severity: critical
+
+description: |
+  检测 FakeGit 供应链攻击的恶意仓库特征
+  - 恶意载荷隐藏在 .agents 隐藏目录
+  - AI 生成的粗糙 README 文档
+  - 伪装成热门 AI/开发工具
+
+condition: |
+  (
+    contains_any (file_path, ".agents/", "one-xhs-spider", "kimi-voxel", "ai-specs", "flow2api")
+    and contains_any (file_path, ".zip", ".exe", "ptd.txt", "Launch.cmd")
+  )
+  or (
+    contains_any (content, "Double-click on the application file", "This may be named https://raw.githubusercontent.com")
+    and size < 5000
+  )
+
+metadata:
+  author: AutoResearch
+  date: 2026-03-23
+  source: Tencent Security Intelligence
+  technique: Supply Chain Attack
+  mitre: T1195
+  confidence: high

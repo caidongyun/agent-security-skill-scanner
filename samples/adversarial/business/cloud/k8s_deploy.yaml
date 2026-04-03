@@ -1,0 +1,15 @@
+# Business scenario: cloud
+# Generated: 2026-04-02 10:47:53.106219
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 3
+  template:
+    spec:
+      containers:
+      - name: app
+        image: myapp:latest
+        command: ["/bin/sh", "-c", "echo Hello"]

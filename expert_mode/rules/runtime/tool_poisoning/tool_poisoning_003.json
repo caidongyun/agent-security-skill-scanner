@@ -1,0 +1,27 @@
+{
+  "id": "TO-RUNTIME-003",
+  "name": "动态导入检测",
+  "category": "tool_poisoning",
+  "severity": "high",
+  "description": "检测动态导入和模块加载",
+  "patterns": [
+    "__import__\\s*\\(",
+    "importlib\\.import_module",
+    "import_module\\s*\\(",
+    "__import__\\("
+  ],
+  "risk_score": 80,
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.167058",
+  "action": "alert",
+  "test_cases": {
+    "positive": [
+      "__import__('os')",
+      "importlib.import_module('os')"
+    ],
+    "negative": [
+      "import os",
+      "from os import path"
+    ]
+  }
+}

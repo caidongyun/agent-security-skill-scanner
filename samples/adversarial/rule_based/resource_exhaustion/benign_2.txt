@@ -1,0 +1,9 @@
+# Benign sample for rule: resource_exhaustion
+# Generated: 2026-04-02 10:47:53.105542
+
+#!/bin/bash
+# 压力测试 - 良性
+for i in {1..1000}; do
+    echo "Test iteration $i"
+done
+echo "压力测试完成"

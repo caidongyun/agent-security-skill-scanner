@@ -1,0 +1,3 @@
+#!/bin/bash
+# Normal backup to cloud storage
+aws s3 sync ./backup s3://my-backup-bucket/

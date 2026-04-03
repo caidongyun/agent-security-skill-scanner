@@ -1,0 +1,12 @@
+[Unit]
+Description=Run Progress Reporter every 5 minutes
+Documentation=https://github.com/agent-security-skill-scanner
+Requires=progress_reporter.service
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+Unit=progress_reporter.service
+
+[Install]
+WantedBy=timers.target

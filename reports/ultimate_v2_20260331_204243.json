@@ -1,0 +1,288 @@
+{
+  "timestamp": "2026-03-31T20:42:45.191884",
+  "summary": {
+    "total": 4276,
+    "malicious": 4276,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.302,
+    "avg_time_ms": 0.266
+  },
+  "by_language": {
+    "go": {
+      "total": 1087,
+      "malicious": 1087
+    },
+    "python": {
+      "total": 1037,
+      "malicious": 1037
+    },
+    "bash": {
+      "total": 1072,
+      "malicious": 1072
+    },
+    "javascript": {
+      "total": 1080,
+      "malicious": 1080
+    }
+  },
+  "by_risk_level": {
+    "low": 4276
+  },
+  "by_detection_layers": {
+    "yara": 4276
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-fa9fd5.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 5.378,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-655c94.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.37,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-29fb79.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.307,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-d33bdb.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.259,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-e35725.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.298,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-8bce74.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.175,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-f0c247.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.322,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-c08eac.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.224,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-9adf9c.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.314,
+      "detection_layers": [
+        "yara"
+      ]
+    },
+    {
+      "sample_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/training/preprocessed/memory_pollution_flat/MAL-MPO-c1b68a.bash",
+      "language": "bash",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 39.6,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "Agent_Prompt_Injection",
+        "Agent_Memory_Pollution"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:Agent_Prompt_Injection",
+        "🟡 YARA:Agent_Memory_Pollution"
+      ],
+      "scan_time_ms": 0.261,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "total_files": 128,
+  "malicious_files": 99,
+  "safe_files": 29,
+  "detection_rate": 0.7734375,
+  "scan_time_seconds": 0.2578094005584717,
+  "by_language": {
+    "python": {
+      "total": 13,
+      "malicious": 4,
+      "avg_risk": 9.846153846153847
+    },
+    "javascript": {
+      "total": 115,
+      "malicious": 95,
+      "avg_risk": 17.347826086956523
+    }
+  },
+  "by_risk_level": {
+    "critical": 1,
+    "high": 26,
+    "medium": 51,
+    "low": 21,
+    "safe": 29
+  },
+  "top_threats": [
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/generated/python/tool_poisoning/tool_poisoning_001.py",
+      "language": "python",
+      "is_malicious": true,
+      "risk_score": 54,
+      "risk_level": "critical",
+      "behaviors": [
+        "high:subprocess.call(",
+        "high:os.system(",
+        "high:backdoor",
+        "high:payload",
+        "high:curl ",
+        "high:whoami",
+        "high:evil",
+        "med:import os",
+        "med:import subprocess"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 0.8287429809570312,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/high_fidelity/HF-ad921d604863/malicious_code.py",
+      "language": "python",
+      "is_malicious": true,
+      "risk_score": 42,
+      "risk_level": "high",
+      "behaviors": [
+        "high:subprocess.run(",
+        "high:AWS_SECRET",
+        "high:payload",
+        "high:wget",
+        "high:attacker",
+        "med:import os"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 0.6413459777832031,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/remote_code_execution_00_v02.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 37,
+      "risk_level": "high",
+      "behaviors": [
+        "high:eval(",
+        "high:malware",
+        "high:require('http'",
+        "high:evil"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 1.3458728790283203,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/remote_code_execution_00_v04.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 37,
+      "risk_level": "high",
+      "behaviors": [
+        "high:eval(",
+        "high:malware",
+        "high:require('http'",
+        "high:evil"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 1.19781494140625,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/remote_code_execution_00_v03.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 37,
+      "risk_level": "high",
+      "behaviors": [
+        "high:eval(",
+        "high:malware",
+        "high:require('http'",
+        "high:evil"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 1.3031959533691406,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/remote_code_execution_00_v05.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 37,
+      "risk_level": "high",
+      "behaviors": [
+        "high:eval(",
+        "high:malware",
+        "high:require('http'",
+        "high:evil"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 1.2214183807373047,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/remote_code_execution_00_v01.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 37,
+      "risk_level": "high",
+      "behaviors": [
+        "high:eval(",
+        "high:malware",
+        "high:require('http'",
+        "high:evil"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 1.0297298431396484,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/command_execution_00_v03.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 36,
+      "risk_level": "high",
+      "behaviors": [
+        "high:exec(",
+        "high:child_process",
+        "high:whoami",
+        "med:child_process"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 28.24258804321289,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/command_execution_00_v01.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 36,
+      "risk_level": "high",
+      "behaviors": [
+        "high:exec(",
+        "high:child_process",
+        "high:whoami",
+        "med:child_process"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 0.9934902191162109,
+      "detection_method": "smart"
+    },
+    {
+      "file_path": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/samples/js_malicious/command_execution_00_v05.js",
+      "language": "javascript",
+      "is_malicious": true,
+      "risk_score": 36,
+      "risk_level": "high",
+      "behaviors": [
+        "high:exec(",
+        "high:child_process",
+        "high:whoami",
+        "med:child_process"
+      ],
+      "mitre_techniques": [],
+      "details": "Detected by: smart",
+      "scan_time_ms": 2.3107528686523438,
+      "detection_method": "smart"
+    }
+  ],
+  "timestamp": "2026-03-31T07:47:50.533215"
+}

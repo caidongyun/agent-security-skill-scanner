@@ -1,0 +1,25 @@
+title: 远程模块加载
+id: RE-SIGMA-004
+status: stable
+level: high
+description: 检测远程模块加载攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.remote_load
+  - security.RE-SIGMA-004
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*pip install git+*"
+    CommandLine1: "*npm install http*"
+    CommandLine2: "*requirements.txt http*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

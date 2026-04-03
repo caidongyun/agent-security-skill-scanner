@@ -1,0 +1,4 @@
+#!/usr/bin/env python3
+import json
+data = {'key': 'value'}
+json.dumps(data)

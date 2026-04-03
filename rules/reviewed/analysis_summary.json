@@ -1,0 +1,562 @@
+{
+  "total_analyzed": 10,
+  "by_recommendation": {
+    "optimize": 10
+  },
+  "by_fp_risk": {
+    "\u4f4e": 10
+  },
+  "avg_confidence": 75.0,
+  "rules": [
+    {
+      "rule_name": "Impact_Cloud_DeleteBuckets",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact Cloud DeleteBuckets \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact Cloud DeleteBuckets \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact Cloud DeleteBuckets \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact Cloud DeleteBuckets \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927068"
+    },
+    {
+      "rule_name": "Impact_Cloud_TerminateInstances",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact Cloud TerminateInstances \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact Cloud TerminateInstances \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact Cloud TerminateInstances \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact Cloud TerminateInstances \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927284"
+    },
+    {
+      "rule_name": "Impact_DataDestruction_Btrfs",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Btrfs \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Btrfs \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Btrfs \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Btrfs \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927411"
+    },
+    {
+      "rule_name": "Impact_DataDestruction_DD",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact DataDestruction DD \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact DataDestruction DD \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact DataDestruction DD \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact DataDestruction DD \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927531"
+    },
+    {
+      "rule_name": "Impact_DataDestruction_RMRecursive",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact DataDestruction RMRecursive \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact DataDestruction RMRecursive \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact DataDestruction RMRecursive \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact DataDestruction RMRecursive \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927649"
+    },
+    {
+      "rule_name": "Impact_DataDestruction_Shred",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Shred \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Shred \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Shred \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact DataDestruction Shred \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927767"
+    },
+    {
+      "rule_name": "Impact_ForkBomb",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact ForkBomb \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact ForkBomb \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact ForkBomb \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact ForkBomb \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.927879"
+    },
+    {
+      "rule_name": "Impact_LogClearing",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact LogClearing \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact LogClearing \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact LogClearing \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact LogClearing \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.928004"
+    },
+    {
+      "rule_name": "Impact_Ransomware_FileEncryption",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact Ransomware FileEncryption \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact Ransomware FileEncryption \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact Ransomware FileEncryption \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact Ransomware FileEncryption \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.928122"
+    },
+    {
+      "rule_name": "Impact_Ransomware_RansomNote",
+      "analyses": [
+        {
+          "model": "mock-1",
+          "intent": "\u68c0\u6d4b Impact Ransomware RansomNote \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-2",
+          "intent": "\u68c0\u6d4b Impact Ransomware RansomNote \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-3",
+          "intent": "\u68c0\u6d4b Impact Ransomware RansomNote \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        },
+        {
+          "model": "mock-4",
+          "intent": "\u68c0\u6d4b Impact Ransomware RansomNote \u76f8\u5173\u884c\u4e3a",
+          "fp_risk": "\u4f4e",
+          "fn_risk": "\u4e2d",
+          "suggestions": [
+            "\u89c4\u5219\u8d28\u91cf\u826f\u597d"
+          ],
+          "confidence_score": 75,
+          "recommendation": "optimize"
+        }
+      ],
+      "consensus": {
+        "avg_confidence": 75.0,
+        "fp_risk_consensus": "\u4f4e",
+        "recommendation": "optimize"
+      },
+      "analyzed_at": "2026-04-02T11:37:38.928275"
+    }
+  ]
+}

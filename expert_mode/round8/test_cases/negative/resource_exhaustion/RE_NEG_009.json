@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RE_NEG_009",
+  "attack_type": "resource_exhaustion",
+  "sample_type": "negative",
+  "content": "# Normal sample: resource_exhaustion variant 9\ndef sort_data(data):\n    return sorted(data)\n",
+  "content_hash": "921424a6beb5ae5a",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.582951",
+    "generator_version": "1.0.0"
+  }
+}

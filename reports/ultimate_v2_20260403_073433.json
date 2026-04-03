@@ -1,0 +1,65 @@
+{
+  "timestamp": "2026-04-03T07:34:33.966103",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.579
+  },
+  "by_language": {
+    "go": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "medium": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/data_exfiltration/MAL-DEX-e435c0/payload.go",
+      "language": "go",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 50.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "PRIV_043",
+        "SUPP_029",
+        "CRED_100",
+        "CRED_101",
+        "CRED_102",
+        "SUPP_100",
+        "REALHIGH_027",
+        "REALHIGH_043",
+        "REALHIGH_044",
+        "REALMED_052",
+        "REALMED_073",
+        "MD_004",
+        "MD_005"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:PRIV_043",
+        "🟡 YARA:SUPP_029",
+        "🟡 YARA:CRED_100",
+        "🟡 YARA:CRED_101",
+        "🟡 YARA:CRED_102"
+      ],
+      "scan_time_ms": 0.579,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

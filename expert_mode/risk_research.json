@@ -1,0 +1,564 @@
+{
+  "risks": {
+    "discovered": [
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 3
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "MEDIUM",
+        "discovered_at": 4
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 6
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 2
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "HIGH",
+        "discovered_at": 4
+      },
+      {
+        "name": "内存马特征",
+        "severity": "MEDIUM",
+        "discovered_at": 7
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "MEDIUM",
+        "discovered_at": 12
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "HIGH",
+        "discovered_at": 17
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "HIGH",
+        "discovered_at": 20
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "LOW",
+        "discovered_at": 23
+      },
+      {
+        "name": "内存马特征",
+        "severity": "MEDIUM",
+        "discovered_at": 35
+      },
+      {
+        "name": "内存马特征",
+        "severity": "LOW",
+        "discovered_at": 39
+      },
+      {
+        "name": "内存马特征",
+        "severity": "HIGH",
+        "discovered_at": 50
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 52
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 60
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "LOW",
+        "discovered_at": 67
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 72
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 77
+      },
+      {
+        "name": "内存马特征",
+        "severity": "LOW",
+        "discovered_at": 88
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "MEDIUM",
+        "discovered_at": 96
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "HIGH",
+        "discovered_at": 102
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "LOW",
+        "discovered_at": 103
+      },
+      {
+        "name": "命令注入",
+        "severity": "HIGH",
+        "category": "injection",
+        "discovered_at": 1
+      },
+      {
+        "name": "容器逃逸",
+        "severity": "HIGH",
+        "category": "container",
+        "discovered_at": 4
+      },
+      {
+        "name": "数据泄露",
+        "severity": "MEDIUM",
+        "category": "dlp",
+        "discovered_at": 8
+      },
+      {
+        "name": "横向移动",
+        "severity": "MEDIUM",
+        "category": "lateral",
+        "discovered_at": 10
+      },
+      {
+        "name": "持久化",
+        "severity": "HIGH",
+        "category": "persistence",
+        "discovered_at": 12
+      },
+      {
+        "name": "内存马",
+        "severity": "HIGH",
+        "category": "memory",
+        "discovered_at": 26
+      }
+    ],
+    "in_research": [],
+    "mitigated": [
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 6,
+        "mitigation": {
+          "risk": "新型容器逃逸技术",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 1,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 8,
+          "passed": 8
+        },
+        "mitigated_at": 1
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "HIGH",
+        "discovered_at": 4,
+        "mitigation": {
+          "risk": "AI Prompt 注入",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 2,
+          "version": 1,
+          "effectiveness": 88,
+          "test_cases": 9,
+          "passed": 8
+        },
+        "mitigated_at": 2
+      },
+      {
+        "name": "内存马特征",
+        "severity": "HIGH",
+        "discovered_at": 50,
+        "mitigation": {
+          "risk": "内存马特征",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 3,
+          "version": 1,
+          "effectiveness": 70,
+          "test_cases": 10,
+          "passed": 7
+        },
+        "mitigated_at": 3
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "HIGH",
+        "discovered_at": 102,
+        "mitigation": {
+          "risk": "供应链攻击向量",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 4,
+          "version": 1,
+          "effectiveness": 87,
+          "test_cases": 8,
+          "passed": 7
+        },
+        "mitigated_at": 4
+      },
+      {
+        "name": "命令注入",
+        "severity": "HIGH",
+        "category": "injection",
+        "discovered_at": 1,
+        "mitigation": {
+          "risk": "命令注入",
+          "strategy": [
+            "输入验证",
+            "沙箱执行"
+          ],
+          "round": 5,
+          "version": 1,
+          "effectiveness": 80,
+          "test_cases": 10,
+          "passed": 8
+        },
+        "mitigated_at": 5
+      },
+      {
+        "name": "容器逃逸",
+        "severity": "HIGH",
+        "category": "container",
+        "discovered_at": 4,
+        "mitigation": {
+          "risk": "容器逃逸",
+          "strategy": [
+            "沙箱隔离",
+            "Syscall过滤"
+          ],
+          "round": 7,
+          "version": 1,
+          "effectiveness": 72,
+          "test_cases": 11,
+          "passed": 8
+        },
+        "mitigated_at": 7
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 52,
+        "mitigation": {
+          "risk": "新型容器逃逸技术",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 8,
+          "version": 1,
+          "effectiveness": 81,
+          "test_cases": 11,
+          "passed": 9
+        },
+        "mitigated_at": 8
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "HIGH",
+        "discovered_at": 4,
+        "mitigation": {
+          "risk": "AI Prompt 注入",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 9,
+          "version": 1,
+          "effectiveness": 70,
+          "test_cases": 10,
+          "passed": 7
+        },
+        "mitigated_at": 9
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 72,
+        "mitigation": {
+          "risk": "新型容器逃逸技术",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 10,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 14,
+          "passed": 14
+        },
+        "mitigated_at": 10
+      },
+      {
+        "name": "持久化",
+        "severity": "HIGH",
+        "category": "persistence",
+        "discovered_at": 12,
+        "mitigation": {
+          "risk": "持久化",
+          "strategy": [
+            "配置校验",
+            "启动监控"
+          ],
+          "round": 12,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 12,
+          "passed": 12
+        },
+        "mitigated_at": 12
+      },
+      {
+        "name": "内存马特征",
+        "severity": "LOW",
+        "discovered_at": 39,
+        "mitigation": {
+          "risk": "内存马特征",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 13,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 9,
+          "passed": 9
+        },
+        "mitigated_at": 13
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 77,
+        "mitigation": {
+          "risk": "供应链攻击向量",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 14,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 13,
+          "passed": 13
+        },
+        "mitigated_at": 14
+      },
+      {
+        "name": "持久化",
+        "severity": "HIGH",
+        "category": "persistence",
+        "discovered_at": 12,
+        "mitigation": {
+          "risk": "持久化",
+          "strategy": [
+            "启动监控",
+            "文件完整性"
+          ],
+          "round": 15,
+          "version": 1,
+          "effectiveness": 77,
+          "test_cases": 9,
+          "passed": 7
+        },
+        "mitigated_at": 15
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 77,
+        "mitigation": {
+          "risk": "供应链攻击向量",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 16,
+          "version": 1,
+          "effectiveness": 75,
+          "test_cases": 8,
+          "passed": 6
+        },
+        "mitigated_at": 16
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "LOW",
+        "discovered_at": 103,
+        "mitigation": {
+          "risk": "AI Prompt 注入",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 17,
+          "version": 1,
+          "effectiveness": 70,
+          "test_cases": 10,
+          "passed": 7
+        },
+        "mitigated_at": 17
+      },
+      {
+        "name": "AI Prompt 注入",
+        "severity": "LOW",
+        "discovered_at": 103,
+        "mitigation": {
+          "risk": "AI Prompt 注入",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 18,
+          "version": 1,
+          "effectiveness": 90,
+          "test_cases": 11,
+          "passed": 10
+        },
+        "mitigated_at": 18
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 2,
+        "mitigation": {
+          "risk": "供应链攻击向量",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 20,
+          "version": 1,
+          "effectiveness": 90,
+          "test_cases": 10,
+          "passed": 9
+        },
+        "mitigated_at": 20
+      },
+      {
+        "name": "供应链攻击向量",
+        "severity": "LOW",
+        "discovered_at": 2,
+        "mitigation": {
+          "risk": "供应链攻击向量",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 22,
+          "version": 1,
+          "effectiveness": 90,
+          "test_cases": 11,
+          "passed": 10
+        },
+        "mitigated_at": 22
+      },
+      {
+        "name": "命令注入",
+        "severity": "HIGH",
+        "category": "injection",
+        "discovered_at": 1,
+        "mitigation": {
+          "risk": "命令注入",
+          "strategy": [
+            "输入验证",
+            "命令白名单"
+          ],
+          "round": 23,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 11,
+          "passed": 11
+        },
+        "mitigated_at": 23
+      },
+      {
+        "name": "内存马特征",
+        "severity": "LOW",
+        "discovered_at": 39,
+        "mitigation": {
+          "risk": "内存马特征",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 25,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 11,
+          "passed": 11
+        },
+        "mitigated_at": 25
+      },
+      {
+        "name": "内存马",
+        "severity": "HIGH",
+        "category": "memory",
+        "discovered_at": 26,
+        "mitigation": {
+          "risk": "内存马",
+          "strategy": [
+            "签名检测",
+            "行为监控"
+          ],
+          "round": 27,
+          "version": 1,
+          "effectiveness": 91,
+          "test_cases": 12,
+          "passed": 11
+        },
+        "mitigated_at": 27
+      },
+      {
+        "name": "新型容器逃逸技术",
+        "severity": "HIGH",
+        "discovered_at": 52,
+        "mitigation": {
+          "risk": "新型容器逃逸技术",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 28,
+          "version": 1,
+          "effectiveness": 78,
+          "test_cases": 14,
+          "passed": 11
+        },
+        "mitigated_at": 28
+      },
+      {
+        "name": "内存马特征",
+        "severity": "LOW",
+        "discovered_at": 88,
+        "mitigation": {
+          "risk": "内存马特征",
+          "strategy": [
+            "基础防护"
+          ],
+          "round": 30,
+          "version": 1,
+          "effectiveness": 100,
+          "test_cases": 8,
+          "passed": 8
+        },
+        "mitigated_at": 30
+      }
+    ]
+  },
+  "metrics": {
+    "risk_coverage": 82,
+    "mitigation_rate": 82,
+    "research_rounds": 30
+  },
+  "round": 30
+}

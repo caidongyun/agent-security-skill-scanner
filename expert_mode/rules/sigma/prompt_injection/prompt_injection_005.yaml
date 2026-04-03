@@ -1,0 +1,25 @@
+title: 多语言注入
+id: PR-SIGMA-005
+status: stable
+level: high
+description: 检测多语言注入攻击
+author: Agent Security Skill Scanner
+date: 2026-03-17
+tags:
+  - attack.prompt_injection
+  - security.PR-SIGMA-005
+logsource:
+  category: process_creation
+  product: linux
+detection:
+  selection:
+    CommandLine0: "*translate to*"
+    CommandLine1: "*ignore and*"
+    CommandLine2: "*execute this*"
+  condition: selection
+falsepositives:
+  - Legitimate administrative scripts
+fields:
+  - CommandLine
+  - ParentCommandLine
+  - User

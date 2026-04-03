@@ -1,0 +1,33 @@
+{
+  "id": "DA-DLP-002",
+  "name": "base64 \u7f16\u7801\u5916\u4f20",
+  "category": "data_exfil",
+  "type": "dlp",
+  "severity": "high",
+  "description": "\u9632\u6b62base64 \u7f16\u7801\u5916\u4f20\u5bfc\u81f4\u7684\u6570\u636e\u6cc4\u9732",
+  "patterns": [
+    "base64.b64encode",
+    "base64_encode",
+    "| base64"
+  ],
+  "actions": [
+    "block",
+    "alert",
+    "log"
+  ],
+  "enabled": true,
+  "created_at": "2026-03-17T22:50:32.171723",
+  "data_types": [
+    "credentials",
+    "secrets",
+    "tokens",
+    "keys"
+  ],
+  "test_cases": {
+    "positive": [
+      "base64.b64encode",
+      "base64_encode"
+    ],
+    "negative": []
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "test_case_id": "RE_BDY_007",
+  "attack_type": "resource_exhaustion",
+  "sample_type": "boundary",
+  "content": "# Boundary case: resource_exhaustion variant 7\nfor i in range(10000): process(i)\n",
+  "content_hash": "21fc8224b46dafce",
+  "expected_result": null,
+  "metadata": {
+    "variant": "boundary",
+    "difficulty": "ambiguous",
+    "created_at": "2026-03-19T07:37:00.583013",
+    "generator_version": "1.0.0"
+  }
+}

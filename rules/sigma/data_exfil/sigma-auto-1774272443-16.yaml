@@ -1,0 +1,6 @@
+id: sigma-auto-1774272443-16
+name: Auto Rule 16
+type: sigma
+severity: high
+condition: contains any of (keyword16, keyword17, keyword18)
+attack_type: data_exfil

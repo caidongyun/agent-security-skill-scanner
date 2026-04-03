@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+# Normal cache operation
+cache.set('user_123', {'name': 'John', 'role': 'admin'})

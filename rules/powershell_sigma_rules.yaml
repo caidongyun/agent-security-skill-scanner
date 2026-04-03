@@ -1,0 +1,54 @@
+title: PowerShell Malicious Activity Detection
+status: stable
+level: high
+description: Detects PowerShell malicious activities including remote code execution, data exfiltration, persistence, and credential theft
+author: Scanner V3
+date: 2026-03-24
+tags:
+  - attack.execution
+  - attack.t1059
+  - attack.t1041
+  - attack.t1053
+  - attack.t1078
+logsource:
+  category: process
+  product: powershell
+detection:
+  selection_remote_exec_iex:
+    command_line|contains:
+      - 'IEX'
+      - 'Invoke-Expression'
+      - 'DownloadString'
+      - 'WebClient'
+  selection_remote_exec_encoded:
+    command_line|contains:
+      - '-EncodedCommand'
+      - 'FromBase64String'
+  selection_data_exfil:
+    command_line|contains:
+      - 'Get-Content'
+      - '|'
+      - 'Invoke-WebRequest'
+      - 'POST'
+  selection_persistence:
+    command_line|contains:
+      - 'New-Item'
+      - 'CurrentVersion\\Run'
+      - 'ScheduledTask'
+  selection_credential_theft:
+    command_line|contains:
+      - 'Get-Credential'
+      - 'Select-String'
+      - 'password'
+  selection_obfuscation:
+    command_line|contains:
+      - 'FromBase64String'
+      - '-bxor'
+      - '-xor'
+  condition: selection_remote_exec_iex or selection_remote_exec_encoded or selection_data_exfil or selection_persistence or selection_credential_theft or selection_obfuscation
+falsepositives:
+  - Legitimate system administration scripts
+  - DevOps automation scripts
+  - CI/CD pipelines using PowerShell
+  - Encoded commands for legitimate purposes (avoid false positives by checking context)
+level: high

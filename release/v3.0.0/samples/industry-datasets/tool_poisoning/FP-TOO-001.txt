@@ -1,0 +1,4 @@
+#!/bin/bash
+# Normal npm postinstall script
+echo 'Installing dependencies...'
+npm run build

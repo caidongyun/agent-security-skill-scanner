@@ -1,0 +1,8 @@
+# Benign sample for rule: code_execution
+# Generated: 2026-04-02 10:47:53.105392
+
+#!/usr/bin/env python3
+# Jupyter 代码执行 - 良性
+code = "print('Hello World')"
+exec(code)
+eval("1 + 1")

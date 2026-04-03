@@ -1,0 +1,97 @@
+version: '3.8'
+
+services:
+  # Scanner V3 Web Dashboard
+  scanner-web:
+    build:
+      context: ..
+      dockerfile: round20/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../samples:/app/samples:ro
+      - ../rules:/app/rules:ro
+      - scanner-cache:/app/cache
+      - scanner-logs:/app/logs
+    environment:
+      - SCANNER_V3_PATH=/app
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import requests; requests.get('http://localhost:8080')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Scanner Worker (批量扫描)
+  scanner-worker:
+    build:
+      context: ..
+      dockerfile: round20/Dockerfile
+    command: python3 round18/batch_scanner.py
+    volumes:
+      - ../samples:/app/samples:ro
+      - ../rules:/app/rules:ro
+      - scanner-cache:/app/cache
+      - scanner-results:/app/results
+    environment:
+      - SCANNER_V3_PATH=/app
+    deploy:
+      replicas: 2
+    restart: unless-stopped
+
+  # Prometheus (监控)
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+    restart: unless-stopped
+
+  # Grafana (可视化)
+  grafana:
+    image: grafana/grafana:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana-dashboard.json:/etc/grafana/provisioning/dashboards/dashboard.json
+    environment:
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    restart: unless-stopped
+
+  # Elasticsearch (日志)
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.11.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    volumes:
+      - elasticsearch-data:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    restart: unless-stopped
+
+  # Kibana (日志可视化)
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.11.0
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    restart: unless-stopped
+    depends_on:
+      - elasticsearch
+
+volumes:
+  scanner-cache:
+  scanner-logs:
+  scanner-results:
+  prometheus-data:
+  grafana-data:
+  elasticsearch-data:

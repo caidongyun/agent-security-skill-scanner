@@ -1,0 +1,272 @@
+{
+  "timestamp": "2026-04-01T22:11:08.962767",
+  "rule_file": "merged_rules.yar",
+  "malicious": {
+    "total": 15,
+    "detected": 12,
+    "samples": [
+      {
+        "file": "sample_001.txt",
+        "detected": true,
+        "rules": [
+          "Malicious_Remote_Code_Execution",
+          "Malicious_Hidden_Instructions"
+        ]
+      },
+      {
+        "file": "sample_002.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_003.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_004.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_005.txt",
+        "detected": true,
+        "rules": [
+          "Malicious_Remote_Code_Execution"
+        ]
+      },
+      {
+        "file": "sample_006.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_007.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_008.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_009.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_010.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_011.txt",
+        "detected": false,
+        "rules": []
+      },
+      {
+        "file": "sample_012.txt",
+        "detected": true,
+        "rules": [
+          "Agent_Prompt_Injection"
+        ]
+      },
+      {
+        "file": "sample_013.txt",
+        "detected": false,
+        "rules": []
+      },
+      {
+        "file": "sample_014.txt",
+        "detected": false,
+        "rules": []
+      },
+      {
+        "file": "sample_015.txt",
+        "detected": true,
+        "rules": [
+          "Malicious_Remote_Code_Execution",
+          "Agent_Prompt_Injection"
+        ]
+      }
+    ]
+  },
+  "benign": {
+    "total": 30,
+    "false_positives": 0,
+    "samples": [
+      {
+        "file": "sample_001.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_002.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_003.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_004.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_005.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_006.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_007.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_008.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_009.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_010.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_011.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_012.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_013.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_014.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_015.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_016.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_017.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_018.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_019.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_020.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_021.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_022.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_023.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_024.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_025.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_026.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_027.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_028.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_029.txt",
+        "false_positive": false,
+        "rules": []
+      },
+      {
+        "file": "sample_030.txt",
+        "false_positive": false,
+        "rules": []
+      }
+    ]
+  },
+  "metrics": {
+    "detection_rate": "80.0%",
+    "false_positive_rate": "0.0%",
+    "pass": false
+  }
+}

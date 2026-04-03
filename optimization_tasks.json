@@ -1,0 +1,42 @@
+[
+  {
+    "type": "data_exfiltration",
+    "priority": 10
+  },
+  {
+    "type": "evasion",
+    "priority": 10
+  },
+  {
+    "type": "supply_chain_attack",
+    "priority": 10
+  },
+  {
+    "type": "prompt_injection",
+    "priority": 10
+  },
+  {
+    "type": "persistence",
+    "priority": 10
+  },
+  {
+    "type": "resource_exhaustion",
+    "priority": 10
+  },
+  {
+    "type": "remote_load",
+    "priority": 10
+  },
+  {
+    "type": "memory_pollution",
+    "priority": 10
+  },
+  {
+    "type": "credential_theft",
+    "priority": 10
+  },
+  {
+    "type": "tool_poisoning",
+    "priority": 10
+  }
+]

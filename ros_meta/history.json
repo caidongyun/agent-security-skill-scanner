@@ -1,0 +1,2846 @@
+[
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:30",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:30",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:35",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:35",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:35",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:40",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:40",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:40",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:45",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:45",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:45",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:50",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:50",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:50",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:55",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:55",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 07:55",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:00",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:00",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:00",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "network_call": 100.0,
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0,
+        "obfuscation": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:05",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "supply_chain": 100.0,
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "supply_chain": 100.0,
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:05",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "supply_chain": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:05",
+    "before": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "after": {
+      "detection_rate": 100.0,
+      "false_positive": 50.0,
+      "f1_score": 90.5,
+      "attack_types": {
+        "credential_theft": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0
+      }
+    },
+    "tasks": [],
+    "execution": {
+      "success": [],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a[]"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:10",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:10",
+    "before": {
+      "detection_rate": 0.0,
+      "false_positive": 0.0,
+      "f1_score": 0.0,
+      "attack_types": {
+        "network_call": 0.0,
+        "credential_theft": 0.0,
+        "obfuscation": 0.0,
+        "resource_exhaustion": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "network_call",
+        "target_file": "network_call_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "network_call_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "network_call",
+          "target_file": "network_call_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['network_call', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:10",
+    "before": {
+      "detection_rate": 0.0,
+      "false_positive": 0.0,
+      "f1_score": 0.0,
+      "attack_types": {
+        "obfuscation": 0.0,
+        "resource_exhaustion": 0.0,
+        "network_call": 0.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "obfuscation",
+        "target_file": "obfuscation_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "resource_exhaustion",
+        "target_file": "resource_exhaustion_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "obfuscation_rules.yar",
+        "resource_exhaustion_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": 0.0,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "obfuscation",
+          "target_file": "obfuscation_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "resource_exhaustion",
+          "target_file": "resource_exhaustion_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['obfuscation', 'resource_exhaustion']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:15",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:15",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "supply_chain": 0.0,
+        "credential_theft": 0.0,
+        "resource_exhaustion": 0.0,
+        "network_call": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:15",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "network_call": 0.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0,
+        "obfuscation": 0.0,
+        "resource_exhaustion": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "network_call",
+        "target_file": "network_call_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "network_call_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "network_call",
+          "target_file": "network_call_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['network_call', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:20",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:20",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "resource_exhaustion": 0.0,
+        "credential_theft": 0.0,
+        "network_call": 0.0,
+        "supply_chain": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "resource_exhaustion",
+        "target_file": "resource_exhaustion_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "resource_exhaustion_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "resource_exhaustion",
+          "target_file": "resource_exhaustion_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['resource_exhaustion', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:20",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "network_call": 0.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0,
+        "resource_exhaustion": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "network_call",
+        "target_file": "network_call_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "network_call_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "network_call",
+          "target_file": "network_call_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['network_call', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:25",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:25",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "obfuscation": 0.0,
+        "credential_theft": 0.0,
+        "network_call": 0.0,
+        "supply_chain": 0.0,
+        "resource_exhaustion": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "obfuscation",
+        "target_file": "obfuscation_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "obfuscation_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "obfuscation",
+          "target_file": "obfuscation_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['obfuscation', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:25",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "network_call": 0.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0,
+        "resource_exhaustion": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "network_call",
+        "target_file": "network_call_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "network_call_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "network_call",
+          "target_file": "network_call_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['network_call', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:30",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:30",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "obfuscation": 0.0,
+        "supply_chain": 0.0,
+        "network_call": 0.0,
+        "resource_exhaustion": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "obfuscation",
+        "target_file": "obfuscation_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "obfuscation_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "obfuscation",
+          "target_file": "obfuscation_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['obfuscation', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:30",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "supply_chain": 0.0,
+        "obfuscation": 0.0,
+        "credential_theft": 0.0,
+        "network_call": 0.0,
+        "resource_exhaustion": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "obfuscation",
+        "target_file": "obfuscation_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "obfuscation_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "obfuscation",
+          "target_file": "obfuscation_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'obfuscation']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:35",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "resource_exhaustion": 100.0,
+        "network_call": 100.0,
+        "obfuscation": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:35",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:35",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:40",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "obfuscation": 100.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:40",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "supply_chain": 0.0,
+        "credential_theft": 0.0,
+        "obfuscation": 0.0,
+        "network_call": 0.0,
+        "resource_exhaustion": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "credential_theft_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'credential_theft']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:40",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "resource_exhaustion": 0.0,
+        "supply_chain": 0.0,
+        "network_call": 0.0,
+        "credential_theft": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "resource_exhaustion",
+        "target_file": "resource_exhaustion_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "resource_exhaustion_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "resource_exhaustion",
+          "target_file": "resource_exhaustion_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['resource_exhaustion', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:45",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "credential_theft": 0.0,
+        "supply_chain": 0.0,
+        "resource_exhaustion": 0.0,
+        "network_call": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:45",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "supply_chain": 0.0,
+        "network_call": 0.0,
+        "obfuscation": 0.0,
+        "resource_exhaustion": 0.0,
+        "credential_theft": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "network_call",
+        "target_file": "network_call_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "network_call_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "network_call",
+          "target_file": "network_call_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'network_call']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:45",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "resource_exhaustion": 0.0,
+        "supply_chain": 0.0,
+        "credential_theft": 0.0,
+        "network_call": 0.0,
+        "obfuscation": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "resource_exhaustion",
+        "target_file": "resource_exhaustion_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "resource_exhaustion_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "resource_exhaustion",
+          "target_file": "resource_exhaustion_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['resource_exhaustion', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:50",
+    "before": {
+      "detection_rate": 37.9,
+      "false_positive": 0.0,
+      "f1_score": 55.0,
+      "attack_types": {
+        "obfuscation": 100.0,
+        "network_call": 100.0,
+        "resource_exhaustion": 100.0,
+        "credential_theft": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "credential_theft",
+        "target_file": "credential_theft_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "credential_theft_rules.yar",
+        "supply_chain_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -37.9,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "credential_theft",
+          "target_file": "credential_theft_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['credential_theft', 'supply_chain']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:50",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "supply_chain": 0.0,
+        "obfuscation": 0.0,
+        "credential_theft": 0.0,
+        "network_call": 0.0,
+        "resource_exhaustion": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "supply_chain",
+        "target_file": "supply_chain_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "obfuscation",
+        "target_file": "obfuscation_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "supply_chain_rules.yar",
+        "obfuscation_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "supply_chain",
+          "target_file": "supply_chain_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "obfuscation",
+          "target_file": "obfuscation_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['supply_chain', 'obfuscation']"
+      ]
+    },
+    "quick_mode": true
+  },
+  {
+    "cycle": 51,
+    "timestamp": "2026-04-03 08:50",
+    "before": {
+      "detection_rate": 7.4,
+      "false_positive": 0.0,
+      "f1_score": 13.7,
+      "attack_types": {
+        "resource_exhaustion": 0.0,
+        "obfuscation": 0.0,
+        "credential_theft": 0.0,
+        "network_call": 0.0,
+        "supply_chain": 0.0
+      }
+    },
+    "after": {
+      "attack_types": {}
+    },
+    "tasks": [
+      {
+        "attack_type": "resource_exhaustion",
+        "target_file": "resource_exhaustion_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      },
+      {
+        "attack_type": "obfuscation",
+        "target_file": "obfuscation_rules.yar",
+        "current": 0.0,
+        "target": 95,
+        "patterns": []
+      }
+    ],
+    "execution": {
+      "success": [
+        "resource_exhaustion_rules.yar",
+        "obfuscation_rules.yar"
+      ],
+      "failed": []
+    },
+    "reflection": {
+      "improvement": -7.4,
+      "success": false,
+      "tasks": [
+        {
+          "attack_type": "resource_exhaustion",
+          "target_file": "resource_exhaustion_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        },
+        {
+          "attack_type": "obfuscation",
+          "target_file": "obfuscation_rules.yar",
+          "current": 0.0,
+          "target": 95,
+          "patterns": []
+        }
+      ],
+      "lessons": [
+        "\u9700\u8981\u8c03\u6574\uff1a['resource_exhaustion', 'obfuscation']"
+      ]
+    },
+    "quick_mode": true
+  }
+]

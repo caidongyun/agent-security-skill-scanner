@@ -1,0 +1,13 @@
+{
+  "id": "powershell_code_execution_001",
+  "language": "powershell",
+  "category": "malicious",
+  "attack_type": "code_execution",
+  "severity": "critical",
+  "mitre_techniques": [
+    "T1059",
+    "T1204",
+    "T1203"
+  ],
+  "hash": "0a96eeda85f1"
+}

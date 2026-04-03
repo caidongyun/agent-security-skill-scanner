@@ -1,0 +1,6 @@
+id: sigma-auto-1774273049-21
+name: Auto Rule 21
+type: sigma
+severity: high
+condition: contains any of (keyword21, keyword22, keyword23)
+attack_type: data_exfil

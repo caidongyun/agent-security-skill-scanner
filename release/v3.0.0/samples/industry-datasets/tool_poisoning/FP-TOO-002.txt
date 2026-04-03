@@ -1,0 +1,4 @@
+#!/bin/bash
+# Normal Docker build process
+docker build -t myapp .
+docker-compose up -d

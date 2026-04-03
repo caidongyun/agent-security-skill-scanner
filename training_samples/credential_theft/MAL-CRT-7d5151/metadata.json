@@ -1,0 +1,72 @@
+{
+  "id": "BENCH-CRT-7d5151",
+  "version": "2.0",
+  "sample_id": "MAL-CRT-7d5151",
+  "name": "凭证窃取 - EASY",
+  "description": "",
+  "attack_type": "credential_theft",
+  "severity": "critical",
+  "category": "凭证窃取",
+  "language": "javascript",
+  "encoding": "utf-8",
+  "ground_truth": {
+    "is_malicious": true,
+    "attack_category": "凭证窃取",
+    "mitre_atlas": [
+      "ATLAS-T0008"
+    ],
+    "expected_detection": true,
+    "confidence": 0.95
+  },
+  "source": {
+    "type": "template_generator",
+    "generator": "template_generator.py",
+    "generated_at": "2026-03-29T21:19:59.151896"
+  },
+  "behaviors": [
+    "file_access",
+    "env_access",
+    "data_exfiltration"
+  ],
+  "indicators": [
+    "~/.aws/credentials",
+    "process.env",
+    "SSH key access"
+  ],
+  "tags": [
+    "credentials",
+    "aws",
+    "ssh"
+  ],
+  "mitigation_indicators": [
+    "密钥管理服务",
+    "环境变量加密",
+    "最小暴露"
+  ],
+  "false_positive_scenarios": [
+    "正常的配置管理",
+    "密钥轮换"
+  ],
+  "detection_difficulty": {
+    "score": 1,
+    "level": "L1",
+    "description": "明显的恶意特征，易于检测",
+    "indicators_count": 3
+  },
+  "quality": {
+    "diversity_score": 0.9,
+    "difficulty_level": "L1",
+    "is_deduped": false,
+    "validation_status": "generated"
+  },
+  "variants": {
+    "parent_id": null,
+    "variant_of": [],
+    "mutation_type": null
+  },
+  "metadata": {
+    "created_at": "2026-03-29T21:19:59.151910",
+    "updated_at": "2026-03-29T21:19:59.151911",
+    "payload_file": "credential_theft/MAL-CRT-7d5151/payload.javascript"
+  }
+}

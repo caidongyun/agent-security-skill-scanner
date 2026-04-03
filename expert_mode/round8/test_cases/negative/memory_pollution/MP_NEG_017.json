@@ -1,0 +1,14 @@
+{
+  "test_case_id": "MP_NEG_017",
+  "attack_type": "memory_pollution",
+  "sample_type": "negative",
+  "content": "# Normal sample: memory_pollution variant 17\ndef add_to_history(role, content):\n    history.append({'role': role, 'content': content})\n",
+  "content_hash": "4944d50614f54050",
+  "expected_result": false,
+  "metadata": {
+    "variant": "standard",
+    "difficulty": "normal",
+    "created_at": "2026-03-19T07:37:00.583150",
+    "generator_version": "1.0.0"
+  }
+}
