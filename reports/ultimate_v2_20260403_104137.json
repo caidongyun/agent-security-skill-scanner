@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-04-03T10:41:38.012807",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.222
+  },
+  "by_language": {
+    "go": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "medium": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/tool_poisoning/MAL-TOO-8225f7/payload.go",
+      "language": "go",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配 + 高风险",
+      "decision_confidence": 0.98,
+      "risk_score": 51.0,
+      "risk_level": "medium",
+      "yara_matched": true,
+      "yara_rules": [
+        "sigma_memory_pollution_sample_007",
+        "sigma_data_exfiltration_sample_008",
+        "sigma_prompt_injection_sample_014",
+        "sigma_prompt_injection_sample_010",
+        "sigma_remote_load_sample_003",
+        "sigma_tool_poisoning_004"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🟡 YARA:sigma_memory_pollution_sample_007",
+        "🔴 YARA:critical:sigma_data_exfiltration_sample_008",
+        "🟡 YARA:sigma_prompt_injection_sample_014",
+        "🟡 YARA:sigma_prompt_injection_sample_010",
+        "🟡 YARA:sigma_remote_load_sample_003"
+      ],
+      "scan_time_ms": 0.222,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}

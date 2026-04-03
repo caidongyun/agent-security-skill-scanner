@@ -1,16 +1,23 @@
 {
-  "timestamp": "2026-04-03T09:51:05.089279",
+  "timestamp": "2026-04-03T10:43:47.679695",
   "metrics": {
-    "detection_rate": 100.0,
+    "detection_rate": 99.8,
     "false_positive_rate": 0.0,
     "precision": 100.0,
-    "f1_score": 100.0,
-    "total_samples": 100,
-    "tp": 50,
-    "fn": 0,
-    "tn": 50,
+    "f1_score": 99.89989989989989,
+    "total_samples": 1000,
+    "tp": 499,
+    "fn": 1,
+    "tn": 500,
     "fp": 0
   },
-  "detailed_results": [],
+  "detailed_results": [
+    {
+      "sample": "MAL-TOO-9008e0",
+      "attack_type": "tool_poisoning",
+      "difficulty": "L2",
+      "result": "FN"
+    }
+  ],
   "benchmark": null
 }

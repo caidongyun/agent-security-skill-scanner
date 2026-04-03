@@ -140849,6 +140849,906 @@
       "confidence": 0.6,
       "timestamp": "2026-04-03T09:50:01.933063",
       "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T09:55:01.637417",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T09:55:01.637439",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T09:55:01.637443",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T09:55:01.637445",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T09:55:01.637451",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T09:55:01.637455",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T09:55:01.637458",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T09:55:01.637462",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T09:55:01.637465",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T09:55:01.637469",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:00:02.237826",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:00:02.237849",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:00:02.237854",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:00:02.237856",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:00:02.237861",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:00:02.237865",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:00:02.237867",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:00:02.237871",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:00:02.237873",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:00:02.237876",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:05:01.832682",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:05:01.832704",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:05:01.832708",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:05:01.832710",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:05:01.832715",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:05:01.832718",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:05:01.832721",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:05:01.832725",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:05:01.832727",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:05:01.832736",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:10:01.428787",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:10:01.428809",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:10:01.428814",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:10:01.428816",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:10:01.428822",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:10:01.428825",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:10:01.428827",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:10:01.428830",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:10:01.428833",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:10:01.428836",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:15:02.017090",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:15:02.017113",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:15:02.017117",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:15:02.017120",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:15:02.017132",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:15:02.017136",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:15:02.017138",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:15:02.017141",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:15:02.017147",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:15:02.017150",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:20:01.615444",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:20:01.615466",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:20:01.615471",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:20:01.615473",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:20:01.615478",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:20:01.615482",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:20:01.615484",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:20:01.615487",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:20:01.615496",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:20:01.615499",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:25:02.213456",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:25:02.213478",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:25:02.213482",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:25:02.213485",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:25:02.213490",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:25:02.213494",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:25:02.213496",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:25:02.213499",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:25:02.213502",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:25:02.213505",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:30:01.816159",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:30:01.816186",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:30:01.816191",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:30:01.816193",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:30:01.816199",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:30:01.816203",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:30:01.816206",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:30:01.816210",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:30:01.816213",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:30:01.816216",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:35:01.416951",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:35:01.416976",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:35:01.416980",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:35:01.416983",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:35:01.416988",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:35:01.416991",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:35:01.417000",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:35:01.417003",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:35:01.417006",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:35:01.417009",
+      "action_taken": null
+    },
+    {
+      "id": "explore_1",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "persistence 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:40:02.010212",
+      "action_taken": null
+    },
+    {
+      "id": "explore_2",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "data_exfil 检测率 90% < 95%",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:40:02.010235",
+      "action_taken": null
+    },
+    {
+      "id": "explore_3",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少容器逃逸检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:40:02.010239",
+      "action_taken": null
+    },
+    {
+      "id": "explore_4",
+      "source": "rule_analysis",
+      "type": "optimization",
+      "description": "缺少云环境攻击检测",
+      "confidence": 0.8,
+      "timestamp": "2026-04-03T10:40:02.010242",
+      "action_taken": null
+    },
+    {
+      "id": "explore_5",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：Base64 编码绕过检测",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:40:02.010247",
+      "action_taken": null
+    },
+    {
+      "id": "explore_6",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：进程替换未被识别",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:40:02.010250",
+      "action_taken": null
+    },
+    {
+      "id": "explore_7",
+      "source": "sample_analysis",
+      "type": "new_pattern",
+      "description": "新攻击模式：DNS 隧道检测不足",
+      "confidence": 0.7,
+      "timestamp": "2026-04-03T10:40:02.010252",
+      "action_taken": null
+    },
+    {
+      "id": "explore_8",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:40:02.010256",
+      "action_taken": null
+    },
+    {
+      "id": "explore_9",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "GitHub: 发现新型供应链攻击",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:40:02.010259",
+      "action_taken": null
+    },
+    {
+      "id": "explore_10",
+      "source": "threat_intel",
+      "type": "new_attack",
+      "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
+      "confidence": 0.6,
+      "timestamp": "2026-04-03T10:40:02.010261",
+      "action_taken": null
     }
   ],
   "assessments": [
@@ -184671,7 +185571,287 @@
         "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
         "抓住机会：集成 MITRE ATLAS 新威胁情报"
       ]
+    },
+    {
+      "timestamp": "2026-04-03T09:55:01.555515",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:00:02.156114",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:05:01.750184",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:10:01.345943",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:15:01.936720",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:20:01.533798",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:25:02.130226",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:30:01.732906",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:35:01.331263",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
+    },
+    {
+      "timestamp": "2026-04-03T10:40:01.932619",
+      "strengths": [
+        "检测率优秀 (95.8%)",
+        "误报率为 0 (完美)",
+        "规则库丰富 (257条)"
+      ],
+      "weaknesses": [
+        "检测率未达 98% 目标 (95.8%)",
+        "persistence 检测率偏低",
+        "data_exfil 检测率偏低"
+      ],
+      "opportunities": [
+        "集成 MITRE ATLAS 新威胁情报",
+        "从 GitHub 挖掘新攻击模式",
+        "优化现有规则提升检测率",
+        "添加 AST 静态分析能力"
+      ],
+      "threats": [
+        "新攻击手法不断出现",
+        "对抗样本可能绕过检测",
+        "规则库膨胀影响性能"
+      ],
+      "action_plan": [
+        "优化短板：检测率未达 98% 目标 (95.8%), persistence 检测率偏低",
+        "抓住机会：集成 MITRE ATLAS 新威胁情报"
+      ]
     }
   ],
-  "last_updated": "2026-04-03T09:50:02.571169"
+  "last_updated": "2026-04-03T10:40:02.622210"
 }

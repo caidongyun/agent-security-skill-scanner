@@ -23,11 +23,19 @@ class ScannerAutoRD:
         self.quality_config = {
             'min_dr': 98.0,        # 最低检测率 (提升到 98%)
             'max_fp': 2.0,         # 最高误报率 (降低到 2%)
-            'min_samples': 100,    # 最少测试样本数
+            'min_samples': 1000,   # 最少测试样本数 (扩大到 1000)
             'min_precision': 95.0, # 最低精确率
             'min_f1': 95.0,        # 最低 F1 分数
             'require_industry': True,  # 需要行业信息
             'require_model_analysis': True  # 需要模型分析
+        }
+        
+        # 测试样本配置
+        self.test_config = {
+            'mal_samples': 500,    # 恶意样本数 (扩大到 500)
+            'ben_samples': 500,    # 良性样本数 (扩大到 500)
+            'stratified': True,    # 分层抽样
+            'by_attack_type': True # 按攻击类型分布
         }
         
     def log(self, msg):
@@ -255,22 +263,62 @@ class ScannerAutoRD:
         
         return None
     
+    def stratified_sample(self, samples, n, by_attack_type=True):
+        """分层抽样 - 确保各攻击类型都有代表"""
+        if not by_attack_type or n >= len(samples):
+            return samples[:n]
+        
+        # 按攻击类型分组
+        attack_groups = {}
+        for sample in samples:
+            try:
+                with open(sample / "metadata.json") as f:
+                    meta = json.load(f)
+                attack_type = meta.get('attack_type', 'unknown')
+                if attack_type not in attack_groups:
+                    attack_groups[attack_type] = []
+                attack_groups[attack_type].append(sample)
+            except:
+                if 'unknown' not in attack_groups:
+                    attack_groups['unknown'] = []
+                attack_groups['unknown'].append(sample)
+        
+        # 按比例抽样
+        sampled = []
+        samples_per_type = max(10, n // len(attack_groups))  # 每类至少 10 个
+        
+        for attack_type, group in sorted(attack_groups.items(), key=lambda x: -len(x[1])):
+            # 大类多采样，小类少采样
+            count = min(len(group), max(samples_per_type, len(group) // 10))
+            sampled.extend(group[:count])
+            
+            if len(sampled) >= n:
+                break
+        
+        return sampled[:n]
+    
     def validate(self):
-        """验证测试 (增强版)"""
+        """验证测试 (大规模分层抽样)"""
         self.log("\n" + "=" * 60)
-        self.log("Step 3: 验证测试 (增强版)")
+        self.log("Step 3: 验证测试 (大规模分层抽样)")
         self.log("=" * 60)
         
         samples_dir = self.benchmark_dir / "samples/from-templates"
         
-        # 扩大测试样本 (100+ 样本)
-        mal_samples = list(samples_dir.glob("**/MAL*"))[:50]
-        ben_samples = list(samples_dir.glob("**/BEN*"))[:50]
+        # 获取所有样本
+        all_mal = list(samples_dir.glob("**/MAL*"))
+        all_ben = list(samples_dir.glob("**/BEN*"))
+        
+        self.log(f"总样本库：{len(all_mal)} 恶意 + {len(all_ben)} 良性 = {len(all_mal)+len(all_ben)} 个")
+        
+        # 分层抽样 (1000 样本：500+500)
+        mal_samples = self.stratified_sample(all_mal, self.test_config['mal_samples'], self.test_config['by_attack_type'])
+        ben_samples = self.stratified_sample(all_ben, self.test_config['ben_samples'], self.test_config['by_attack_type'])
         
         tp, fn, tn, fp = 0, 0, 0, 0
         detailed_results = []
         
-        self.log(f"测试恶意样本 ({len(mal_samples)} 个)...")
+        self.log(f"测试恶意样本 ({len(mal_samples)} 个，分层抽样)...")
         for i, sample in enumerate(mal_samples):
             result = subprocess.run(
                 [str(self.scanner_dir / "scan.sh"), str(sample.absolute())],
@@ -308,10 +356,11 @@ class ScannerAutoRD:
                 except:
                     fn += 1
             
-            if (i + 1) % 10 == 0:
-                self.log(f"  进度：{i+1}/{len(mal_samples)}")
+            # 每 50 个报告一次进度 (避免日志过多)
+            if (i + 1) % 50 == 0:
+                self.log(f"  进度：{i+1}/{len(mal_samples)} (TP={tp}, FN={fn})")
         
-        self.log(f"测试良性样本 ({len(ben_samples)} 个)...")
+        self.log(f"测试良性样本 ({len(ben_samples)} 个，分层抽样)...")
         for i, sample in enumerate(ben_samples):
             result = subprocess.run(
                 [str(self.scanner_dir / "scan.sh"), str(sample.absolute())],
@@ -337,8 +386,9 @@ class ScannerAutoRD:
                 except:
                     tn += 1
             
-            if (i + 1) % 10 == 0:
-                self.log(f"  进度：{i+1}/{len(ben_samples)}")
+            # 每 50 个报告一次进度
+            if (i + 1) % 50 == 0:
+                self.log(f"  进度：{i+1}/{len(ben_samples)} (TN={tn}, FP={fp})")
         
         # 计算指标
         dr = tp / (tp + fn) * 100 if (tp + fn) > 0 else 0
@@ -346,10 +396,17 @@ class ScannerAutoRD:
         precision = tp / (tp + fp) * 100 if (tp + fp) > 0 else 0
         f1 = 2 * dr * precision / (dr + precision) if (dr + precision) > 0 else 0
         
-        self.log(f"\n测试结果:")
+        # 统计攻击类型覆盖
+        attack_types_tested = set()
+        for result in detailed_results:
+            if 'attack_type' in result:
+                attack_types_tested.add(result['attack_type'])
+        
+        self.log(f"\n测试结果 (分层抽样):")
         self.log(f"  恶意样本：{tp}/{tp+fn}")
         self.log(f"  良性样本：{tn}/{tn+fp}")
         self.log(f"  总样本数：{tp+fn+tn+fp}")
+        self.log(f"  攻击类型覆盖：{len(attack_types_tested)} 类")
         self.log(f"  检测率 (DR): {dr:.1f}%")
         self.log(f"  误报率 (FP): {fpr:.1f}%")
         self.log(f"  精确率 (Precision): {precision:.1f}%")

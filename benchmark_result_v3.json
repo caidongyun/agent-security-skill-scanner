@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T09:50:03.229531",
+  "timestamp": "2026-04-03T10:40:03.206341",
   "total_samples": 135,
   "malicious_samples": 95,
   "benign_samples": 40,
@@ -11,7 +11,7 @@
   "recall": 0.074,
   "f1_score": 0.137,
   "by_attack_type": {
-    "supply_chain": {
+    "obfuscation": {
       "total": 5,
       "detected": 0,
       "rate": 0.0
@@ -21,7 +21,7 @@
       "detected": 0,
       "rate": 0.0
     },
-    "obfuscation": {
+    "resource_exhaustion": {
       "total": 5,
       "detected": 0,
       "rate": 0.0
@@ -30,21 +30,6 @@
       "total": 20,
       "detected": 7,
       "rate": 0.35
-    },
-    "data_exfil": {
-      "total": 20,
-      "detected": 0,
-      "rate": 0.0
-    },
-    "persistence": {
-      "total": 20,
-      "detected": 0,
-      "rate": 0.0
-    },
-    "resource_exhaustion": {
-      "total": 5,
-      "detected": 0,
-      "rate": 0.0
     },
     "credential_theft": {
       "total": 5,
@@ -55,10 +40,35 @@
       "total": 5,
       "detected": 0,
       "rate": 0.0
+    },
+    "data_exfil": {
+      "total": 20,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "supply_chain": {
+      "total": 5,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "persistence": {
+      "total": 20,
+      "detected": 0,
+      "rate": 0.0
     }
   },
   "by_difficulty": {},
   "by_language": {
+    "python": {
+      "malicious": {
+        "total": 45,
+        "detected": 2
+      },
+      "benign": {
+        "total": 10,
+        "false_positives": 0
+      }
+    },
     "powershell": {
       "malicious": {
         "total": 15,
@@ -83,16 +93,6 @@
       "malicious": {
         "total": 20,
         "detected": 5
-      },
-      "benign": {
-        "total": 10,
-        "false_positives": 0
-      }
-    },
-    "python": {
-      "malicious": {
-        "total": 45,
-        "detected": 2
       },
       "benign": {
         "total": 10,
