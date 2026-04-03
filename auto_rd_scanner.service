@@ -22,9 +22,9 @@ CPUQuota=50%
 
 # 安全设置
 NoNewPrivileges=true
-ProtectSystem=strict
+ProtectSystem=full
 ProtectHome=read-only
-ReadWritePaths=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master
+ReadWritePaths=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master /tmp
 
 # 日志
 StandardOutput=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd_scanner.log
