@@ -1,0 +1,19 @@
+[Unit]
+Description=Rules Directory Watchdog - Monitor and protect rules directory
+After=network.target
+
+[Service]
+Type=simple
+User=cdy
+WorkingDirectory=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master
+ExecStart=/bin/bash -c 'while true; do inotifywait -q -e modify,create,delete /home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/rules/scanner_v3/yara/ 2>/dev/null && echo "[$(date)] ⚠️ 规则目录发生变化！" >> /home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/rules_watchdog.log; sleep 60; done'
+Restart=always
+RestartSec=10
+StandardOutput=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/rules_watchdog.log
+StandardError=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/rules_watchdog.log
+
+# 环境变量
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+
+[Install]
+WantedBy=multi-user.target

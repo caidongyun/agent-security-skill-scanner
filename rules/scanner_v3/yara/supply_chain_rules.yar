@@ -1,2 +1,0 @@
-// supply_chain rules
-

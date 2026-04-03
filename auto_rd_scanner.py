@@ -32,10 +32,10 @@ class ScannerAutoRD:
         
         # 测试样本配置
         self.test_config = {
-            'mal_samples': 500,    # 恶意样本数 (扩大到 500)
-            'ben_samples': 500,    # 良性样本数 (扩大到 500)
-            'stratified': True,    # 分层抽样
-            'by_attack_type': True # 按攻击类型分布
+            'mal_samples': -1,     # 恶意样本数 (-1=全量测试)
+            'ben_samples': -1,     # 良性样本数 (-1=全量测试)
+            'stratified': False,   # 全量测试不需要抽样
+            'by_attack_type': True # 按攻击类型统计
         }
         
     def log(self, msg):
@@ -311,9 +311,20 @@ class ScannerAutoRD:
         
         self.log(f"总样本库：{len(all_mal)} 恶意 + {len(all_ben)} 良性 = {len(all_mal)+len(all_ben)} 个")
         
-        # 分层抽样 (1000 样本：500+500)
-        mal_samples = self.stratified_sample(all_mal, self.test_config['mal_samples'], self.test_config['by_attack_type'])
-        ben_samples = self.stratified_sample(all_ben, self.test_config['ben_samples'], self.test_config['by_attack_type'])
+        # 全量测试 or 抽样测试
+        if self.test_config['mal_samples'] == -1:
+            mal_samples = all_mal  # 全量测试
+            self.log("🔥 全量测试：所有恶意样本")
+        else:
+            mal_samples = self.stratified_sample(all_mal, self.test_config['mal_samples'], self.test_config['by_attack_type'])
+            self.log(f"📊 抽样测试：{len(mal_samples)}/{len(all_mal)} 恶意样本")
+        
+        if self.test_config['ben_samples'] == -1:
+            ben_samples = all_ben  # 全量测试
+            self.log("🔥 全量测试：所有良性样本")
+        else:
+            ben_samples = self.stratified_sample(all_ben, self.test_config['ben_samples'], self.test_config['by_attack_type'])
+            self.log(f"📊 抽样测试：{len(ben_samples)}/{len(all_ben)} 良性样本")
         
         tp, fn, tn, fp = 0, 0, 0, 0
         detailed_results = []

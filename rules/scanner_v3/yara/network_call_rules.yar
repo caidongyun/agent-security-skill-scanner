@@ -1,2 +1,0 @@
-// network_call rules
-
