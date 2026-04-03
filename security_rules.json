@@ -1,0 +1,31 @@
+{
+  "rules": [
+    {
+      "id": "rule_001",
+      "name": "\u7981\u6b62\u5371\u9669\u547d\u4ee4\u6267\u884c",
+      "description": "\u7981\u6b62\u6267\u884c rm -rf \u7b49\u5371\u9669\u547d\u4ee4",
+      "pattern": "rm\\s+-rf\\s+/",
+      "risk_level": "critical",
+      "action": "deny",
+      "enabled": true
+    },
+    {
+      "id": "rule_002",
+      "name": "\u7981\u6b62\u654f\u611f\u6587\u4ef6\u8bbf\u95ee",
+      "description": "\u7981\u6b62\u8bbf\u95ee/etc/passwd \u7b49\u654f\u611f\u6587\u4ef6",
+      "pattern": "/etc/(passwd|shadow|sudoers)",
+      "risk_level": "high",
+      "action": "deny",
+      "enabled": true
+    },
+    {
+      "id": "rule_003",
+      "name": "\u8b66\u544a\uff1a\u7f51\u7edc\u8bf7\u6c42",
+      "description": "\u7f51\u7edc\u8bf7\u6c42\u9700\u8981\u8bb0\u5f55\u65e5\u5fd7",
+      "pattern": "(requests|urllib|socket)\\.",
+      "risk_level": "medium",
+      "action": "warn",
+      "enabled": true
+    }
+  ]
+}

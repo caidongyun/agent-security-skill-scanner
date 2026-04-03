@@ -63,7 +63,7 @@ show_help() {
 # 默认参数
 SCANNER="$DEFAULT_SCANNER"
 SCAN_PATH="$SAMPLES_DIR"
-WORKERS=4
+WORKERS=16  # 增加到 16 个 worker，提升扫描速度
 EXTRA_ARGS=""
 
 # 解析参数
