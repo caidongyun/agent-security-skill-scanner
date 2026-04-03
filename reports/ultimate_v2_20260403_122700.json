@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T12:25:30.878963",
+  "timestamp": "2026-04-03T12:27:01.050631",
   "summary": {
     "total": 1,
     "malicious": 1,
@@ -7,10 +7,10 @@
   },
   "performance": {
     "scan_time_seconds": 0.001,
-    "avg_time_ms": 0.221
+    "avg_time_ms": 0.214
   },
   "by_language": {
-    "javascript": {
+    "python": {
       "total": 1,
       "malicious": 1
     }
@@ -23,8 +23,8 @@
   },
   "top_threats": [
     {
-      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion/MAL-EVA-c75e63/payload.javascript",
-      "language": "javascript",
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/evasion/MAL-EVA-b80365/payload.python",
+      "language": "python",
       "is_malicious": true,
       "decision_reason": "✅ YARA 规则匹配",
       "decision_confidence": 0.92,
@@ -40,7 +40,7 @@
       "behaviors": [
         "🔴 YARA:critical:sigma_data_exfiltration_sample_008"
       ],
-      "scan_time_ms": 0.221,
+      "scan_time_ms": 0.214,
       "detection_layers": [
         "yara"
       ]
