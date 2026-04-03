@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03T11:05:03.873247",
+  "timestamp": "2026-04-03T11:30:03.175496",
   "total_samples": 135,
   "malicious_samples": 95,
   "benign_samples": 40,
@@ -11,7 +11,32 @@
   "recall": 0.074,
   "f1_score": 0.137,
   "by_attack_type": {
+    "obfuscation": {
+      "total": 5,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "data_exfil": {
+      "total": 20,
+      "detected": 0,
+      "rate": 0.0
+    },
     "network_call": {
+      "total": 5,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "privilege_escalation": {
+      "total": 10,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "code_execution": {
+      "total": 20,
+      "detected": 7,
+      "rate": 0.35
+    },
+    "credential_theft": {
       "total": 5,
       "detected": 0,
       "rate": 0.0
@@ -21,33 +46,8 @@
       "detected": 0,
       "rate": 0.0
     },
-    "credential_theft": {
-      "total": 5,
-      "detected": 0,
-      "rate": 0.0
-    },
-    "code_execution": {
-      "total": 20,
-      "detected": 7,
-      "rate": 0.35
-    },
     "persistence": {
       "total": 20,
-      "detected": 0,
-      "rate": 0.0
-    },
-    "privilege_escalation": {
-      "total": 10,
-      "detected": 0,
-      "rate": 0.0
-    },
-    "data_exfil": {
-      "total": 20,
-      "detected": 0,
-      "rate": 0.0
-    },
-    "obfuscation": {
-      "total": 5,
       "detected": 0,
       "rate": 0.0
     },
@@ -59,20 +59,10 @@
   },
   "by_difficulty": {},
   "by_language": {
-    "bash": {
+    "python": {
       "malicious": {
-        "total": 20,
-        "detected": 5
-      },
-      "benign": {
-        "total": 10,
-        "false_positives": 0
-      }
-    },
-    "javascript": {
-      "malicious": {
-        "total": 15,
-        "detected": 0
+        "total": 45,
+        "detected": 2
       },
       "benign": {
         "total": 10,
@@ -89,10 +79,20 @@
         "false_positives": 0
       }
     },
-    "python": {
+    "bash": {
       "malicious": {
-        "total": 45,
-        "detected": 2
+        "total": 20,
+        "detected": 5
+      },
+      "benign": {
+        "total": 10,
+        "false_positives": 0
+      }
+    },
+    "javascript": {
+      "malicious": {
+        "total": 15,
+        "detected": 0
       },
       "benign": {
         "total": 10,

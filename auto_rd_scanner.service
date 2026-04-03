@@ -1,24 +1,34 @@
 [Unit]
-Description=Scanner Autonomous R&D Daemon
+Description=Scanner Autonomous R&D System
+Documentation=file:///home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/AUTO_RD_README.md
 After=network.target
 
 [Service]
-Type=simple
+Type=oneshot
 User=cdy
 WorkingDirectory=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master
 ExecStart=/usr/bin/python3 /home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/auto_rd_scanner.py
-Restart=always
-RestartSec=300
-StandardOutput=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd.log
-StandardError=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd.log
+ExecStopPost=/bin/rm -f /tmp/auto_rd_scanner.lock
 
-# 环境变量
+# 环境配置
 Environment="PYTHONUNBUFFERED=1"
 Environment="PATH=/usr/local/bin:/usr/bin:/bin"
 
 # 资源限制
 LimitNOFILE=65535
 Nice=10
+MemoryMax=2G
+CPUQuota=50%
+
+# 安全设置
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master
+
+# 日志
+StandardOutput=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd_scanner.log
+StandardError=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd_scanner.log
 
 [Install]
 WantedBy=multi-user.target

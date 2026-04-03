@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-04-03 11:05:03",
+  "timestamp": "2026-04-03 11:30:03",
   "passed": 7,
   "total": 7,
   "pass_rate": 100.0,
@@ -7,22 +7,22 @@
     {
       "name": "单条规则检测",
       "passed": true,
-      "duration": 0.005806446075439453,
+      "duration": 0.0050127506256103516,
       "message": "✅ 检测到恶意模式",
       "details": null
     },
     {
       "name": "良性样本不误报",
       "passed": true,
-      "duration": 0.004191160202026367,
+      "duration": 0.0034122467041015625,
       "message": "✅ 无误报",
       "details": null
     },
     {
       "name": "规则语法检查",
       "passed": true,
-      "duration": 0.04013347625732422,
-      "message": "✅ 5 个文件通过",
+      "duration": 0.03455352783203125,
+      "message": "✅ 7 个文件通过",
       "details": {
         "errors": []
       }
@@ -30,28 +30,28 @@
     {
       "name": "完整循环流程",
       "passed": true,
-      "duration": 0.23195123672485352,
+      "duration": 0.18507027626037598,
       "message": "✅ 循环正常",
       "details": null
     },
     {
       "name": "benchmark 集成",
       "passed": true,
-      "duration": 0.09233331680297852,
+      "duration": 0.0728006362915039,
       "message": "✅ benchmark 正常",
       "details": null
     },
     {
       "name": "版本对比测试",
       "passed": true,
-      "duration": 0.0009131431579589844,
+      "duration": 0.0006353855133056641,
       "message": "✅ 50 轮记录",
       "details": null
     },
     {
       "name": "大批量样本压力测试",
       "passed": true,
-      "duration": 0.08662080764770508,
+      "duration": 0.07102394104003906,
       "message": "✅ 135 个样本，0.1秒",
       "details": null
     }
