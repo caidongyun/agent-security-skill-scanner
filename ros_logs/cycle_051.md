@@ -1,6 +1,6 @@
 # ROS Cycle #51
 
-**时间**: 2026-04-03 08:50
+**时间**: 2026-04-03 09:50
 **状态**: 已优化
 **模式**: 快速
 
@@ -9,8 +9,8 @@
 - 提升：-7.4%
 
 ## 任务
-- resource_exhaustion
-- obfuscation
+- network_call
+- supply_chain
 
 ## 反思
-需要调整：['resource_exhaustion', 'obfuscation']
+需要调整：['network_call', 'supply_chain']
