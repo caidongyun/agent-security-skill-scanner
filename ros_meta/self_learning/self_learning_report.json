@@ -1,6 +1,6 @@
 {
   "assessment": {
-    "timestamp": "2026-04-03T10:40:01.932619",
+    "timestamp": "2026-04-03T10:45:01.512227",
     "strengths": [
       "检测率优秀 (95.8%)",
       "误报率为 0 (完美)",
@@ -34,7 +34,7 @@
       "type": "optimization",
       "description": "persistence 检测率 90% < 95%",
       "confidence": 0.8,
-      "timestamp": "2026-04-03T10:40:02.010212",
+      "timestamp": "2026-04-03T10:45:01.595293",
       "action_taken": null
     },
     {
@@ -43,7 +43,7 @@
       "type": "optimization",
       "description": "data_exfil 检测率 90% < 95%",
       "confidence": 0.8,
-      "timestamp": "2026-04-03T10:40:02.010235",
+      "timestamp": "2026-04-03T10:45:01.595316",
       "action_taken": null
     },
     {
@@ -52,7 +52,7 @@
       "type": "optimization",
       "description": "缺少容器逃逸检测",
       "confidence": 0.8,
-      "timestamp": "2026-04-03T10:40:02.010239",
+      "timestamp": "2026-04-03T10:45:01.595320",
       "action_taken": null
     },
     {
@@ -61,7 +61,7 @@
       "type": "optimization",
       "description": "缺少云环境攻击检测",
       "confidence": 0.8,
-      "timestamp": "2026-04-03T10:40:02.010242",
+      "timestamp": "2026-04-03T10:45:01.595322",
       "action_taken": null
     },
     {
@@ -70,7 +70,7 @@
       "type": "new_pattern",
       "description": "新攻击模式：Base64 编码绕过检测",
       "confidence": 0.7,
-      "timestamp": "2026-04-03T10:40:02.010247",
+      "timestamp": "2026-04-03T10:45:01.595327",
       "action_taken": null
     },
     {
@@ -79,7 +79,7 @@
       "type": "new_pattern",
       "description": "新攻击模式：进程替换未被识别",
       "confidence": 0.7,
-      "timestamp": "2026-04-03T10:40:02.010250",
+      "timestamp": "2026-04-03T10:45:01.595331",
       "action_taken": null
     },
     {
@@ -88,7 +88,7 @@
       "type": "new_pattern",
       "description": "新攻击模式：DNS 隧道检测不足",
       "confidence": 0.7,
-      "timestamp": "2026-04-03T10:40:02.010252",
+      "timestamp": "2026-04-03T10:45:01.595333",
       "action_taken": null
     },
     {
@@ -97,7 +97,7 @@
       "type": "new_attack",
       "description": "MITRE ATLAS: 新增 AI 模型投毒攻击",
       "confidence": 0.6,
-      "timestamp": "2026-04-03T10:40:02.010256",
+      "timestamp": "2026-04-03T10:45:01.595337",
       "action_taken": null
     },
     {
@@ -106,7 +106,7 @@
       "type": "new_attack",
       "description": "GitHub: 发现新型供应链攻击",
       "confidence": 0.6,
-      "timestamp": "2026-04-03T10:40:02.010259",
+      "timestamp": "2026-04-03T10:45:01.595340",
       "action_taken": null
     },
     {
@@ -115,7 +115,7 @@
       "type": "new_attack",
       "description": "CVE-2026-XXXX: 新的 LLM 注入漏洞",
       "confidence": 0.6,
-      "timestamp": "2026-04-03T10:40:02.010261",
+      "timestamp": "2026-04-03T10:45:01.595344",
       "action_taken": null
     }
   ],

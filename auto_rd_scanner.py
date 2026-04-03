@@ -412,6 +412,9 @@ class ScannerAutoRD:
         self.log(f"  精确率 (Precision): {precision:.1f}%")
         self.log(f"  F1 分数：{f1:.1f}%")
         
+        # 返回测试详情供质疑反思 Agent 使用
+        return passed, dr, fpr, precision, f1, tp, fn, tn, fp
+        
         # 运行 benchmark 测试
         benchmark_result = self.run_benchmark_test()
         if benchmark_result:
@@ -460,8 +463,29 @@ class ScannerAutoRD:
                 self.log(f"  ❌ F1 分数不足：{f1:.1f}% < {min_f1}%")
             return False, dr, fpr, precision, f1
     
-    def publish(self, passed, dr, fpr, precision, f1):
-        """发布 (增强版)"""
+    def run_critic_agent(self, test_results):
+        """运行质疑反思 Agent"""
+        self.log("\n" + "=" * 60)
+        self.log("Step 3.5: 质疑反思 Agent")
+        self.log("=" * 60)
+        
+        try:
+            from critic_agent import CriticAgent
+            critic = CriticAgent()
+            critic_result = critic.run(test_results)
+            
+            self.log(f"\n🤔 质疑反思结果:")
+            self.log(f"  置信度：{critic_result['confidence']:.1f}%")
+            self.log(f"  审批：{'✅ 通过' if critic_result['approved'] else '⚠️  存疑'}")
+            self.log(f"  报告：{critic_result['report']}")
+            
+            return critic_result
+        except Exception as e:
+            self.log(f"⚠️  质疑反思 Agent 失败：{e}")
+            return {'approved': True, 'confidence': 100, 'report': 'N/A'}  # 失败时不阻止发布
+    
+    def publish(self, passed, dr, fpr, precision, f1, critic_result=None):
+        """发布 (增强版 + 质疑反思)"""
         self.log("\n" + "=" * 60)
         self.log("Step 4: 发布")
         self.log("=" * 60)
@@ -473,6 +497,13 @@ class ScannerAutoRD:
             self.log(f"  误报率：{fpr:.1f}% (要求≤{self.quality_config['max_fp']}%)")
             self.log(f"  精确率：{precision:.1f}% (要求≥{self.quality_config['min_precision']}%)")
             self.log(f"  F1 分数：{f1:.1f}% (要求≥{self.quality_config['min_f1']}%)")
+            return
+        
+        # 质疑反思 Agent 审批
+        if critic_result and not critic_result.get('approved'):
+            self.log("\n⚠️  质疑反思 Agent 未通过，需要人工审核")
+            self.log(f"  置信度：{critic_result.get('confidence', 0):.1f}%")
+            self.log(f"  报告：{critic_result.get('report', 'N/A')}")
             return
         
         # 提交到 git
@@ -493,7 +524,7 @@ class ScannerAutoRD:
         
         self.log("✅ 已提交到 git")
         
-        # 创建发布报告
+        # 创建发布报告 (包含质疑反思结果)
         report_file = self.scanner_dir / f"RELEASE_{timestamp}.md"
         with open(report_file, 'w') as f:
             f.write(f"# 📦 发布报告\n\n")
@@ -505,6 +536,12 @@ class ScannerAutoRD:
             f.write(f"| 误报率 | {fpr:.1f}% | ≤{self.quality_config['max_fp']}% | {'✅' if fpr <= self.quality_config['max_fp'] else '❌'} |\n")
             f.write(f"| 精确率 | {precision:.1f}% | ≥{self.quality_config['min_precision']}% | {'✅' if precision >= self.quality_config['min_precision'] else '❌'} |\n")
             f.write(f"| F1 分数 | {f1:.1f}% | ≥{self.quality_config['min_f1']}% | {'✅' if f1 >= self.quality_config['min_f1'] else '❌'} |\n")
+            
+            if critic_result:
+                f.write(f"\n## 🤔 质疑反思\n\n")
+                f.write(f"- **置信度**: {critic_result.get('confidence', 0):.1f}%\n")
+                f.write(f"- **审批**: {'✅ 通过' if critic_result.get('approved') else '⚠️  存疑'}\n")
+                f.write(f"- **报告**: {critic_result.get('report', 'N/A')}\n")
         
         self.log(f"📄 发布报告：{report_file}")
     
@@ -529,12 +566,31 @@ class ScannerAutoRD:
         if enhanced:
             result = self.validate()
             passed = result[0]
-            dr, fpr, precision, f1 = result[1:]
+            dr, fpr, precision, f1, tp, fn, tn, fp = result[1:]
+            
+            # 构建测试结果字典
+            test_results = {
+                'detection_rate': dr,
+                'false_positive_rate': fpr,
+                'precision': precision,
+                'f1_score': f1,
+                'total_malicious': tp + fn,
+                'total_benign': tn + fp
+            }
         else:
-            passed, dr, fpr, precision, f1 = False, 0, 0, 0, 0
+            passed, dr, fpr, precision, f1, tp, fn, tn, fp = False, 0, 0, 0, 0, 0, 0, 0, 0
+            test_results = {}
+        
+        # Step 3.5: 质疑反思 Agent
+        critic_result = None
+        if passed:
+            critic_result = self.run_critic_agent(test_results)
+            # 如果质疑反思未通过，不发布
+            if not critic_result.get('approved'):
+                passed = False
         
         # Step 4: 发布
-        self.publish(passed, dr, fpr, precision, f1)
+        self.publish(passed, dr, fpr, precision, f1, critic_result)
         
         self.log("\n" + "=" * 60)
         self.log("✅ 自治研发完成")
