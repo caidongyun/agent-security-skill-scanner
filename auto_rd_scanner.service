@@ -1,0 +1,24 @@
+[Unit]
+Description=Scanner Autonomous R&D Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=cdy
+WorkingDirectory=/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master
+ExecStart=/usr/bin/python3 /home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/auto_rd_scanner.py
+Restart=always
+RestartSec=300
+StandardOutput=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd.log
+StandardError=append:/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/logs/auto_rd.log
+
+# 环境变量
+Environment="PYTHONUNBUFFERED=1"
+Environment="PATH=/usr/local/bin:/usr/bin:/bin"
+
+# 资源限制
+LimitNOFILE=65535
+Nice=10
+
+[Install]
+WantedBy=multi-user.target
