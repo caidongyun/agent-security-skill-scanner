@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-04-03T13:26:44.952313",
+  "summary": {
+    "total": 1,
+    "malicious": 1,
+    "detection_rate": "100.0%"
+  },
+  "performance": {
+    "scan_time_seconds": 0.001,
+    "avg_time_ms": 0.197
+  },
+  "by_language": {
+    "yaml": {
+      "total": 1,
+      "malicious": 1
+    }
+  },
+  "by_risk_level": {
+    "low": 1
+  },
+  "by_detection_layers": {
+    "yara": 1
+  },
+  "top_threats": [
+    {
+      "sample_path": "/home/cdy/Desktop/security-benchmark/samples/from-templates/supply_chain_attack/MAL-SUP-8c5ff9/payload.yaml",
+      "language": "yaml",
+      "is_malicious": true,
+      "decision_reason": "✅ YARA 规则匹配",
+      "decision_confidence": 0.92,
+      "risk_score": 36.0,
+      "risk_level": "low",
+      "yara_matched": true,
+      "yara_rules": [
+        "sigma_data_exfiltration_sample_008"
+      ],
+      "ast_obfuscation": false,
+      "js_malicious": false,
+      "intent_detected": null,
+      "behaviors": [
+        "🔴 YARA:critical:sigma_data_exfiltration_sample_008"
+      ],
+      "scan_time_ms": 0.197,
+      "detection_layers": [
+        "yara"
+      ]
+    }
+  ]
+}
