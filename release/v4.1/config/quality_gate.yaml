@@ -1,0 +1,161 @@
+# 扫描器优化质量门禁配置
+
+## 核心指标
+
+```yaml
+metrics:
+  # 检测率 (DR) - 恶意样本检出比例
+  detection_rate:
+    min: 99.0      # 最低 99%
+    target: 100.0  # 目标 100%
+    critical: 98.0 # 低于此值紧急告警
+  
+  # 误报率 (FPR) - 良性样本误报比例
+  false_positive_rate:
+    max: 10.0      # 最高 10%
+    target: 5.0    # 目标 5%
+    critical: 15.0 # 高于此值紧急告警
+  
+  # 扫描速度
+  throughput:
+    min: 4000      # 最低 4000 样本/秒
+    target: 8000   # 目标 8000 样本/秒
+    critical: 3000 # 低于此值紧急告警
+  
+  # 精确率
+  precision:
+    min: 95.0      # 最低 95%
+    target: 98.0   # 目标 98%
+
+# 按攻击类型指标 (允许部分攻击类型低于总体)
+by_attack_type:
+  minimum_dr: 90.0  # 每个攻击类型最低 90%
+  exceptions:
+    - name: false_prone
+      max_dr: 5.0   # false_prone 应该误报
+    - name: normal_script
+      max_dr: 5.0   # normal_script 应该误报
+    - name: common_pattern
+      max_dr: 10.0  # common_pattern 应该误报
+```
+
+## 测试要求
+
+```yaml
+tests:
+  # 全量样本测试
+  full_sample_test:
+    script: ros-03-full-sample-test.sh
+    required: true
+    timeout: 300  # 5 分钟
+  
+  # TDD 样本测试
+  tdd_sample_test:
+    script: ros-07-tdd-sample-test.sh
+    required: true
+    timeout: 180  # 3 分钟
+  
+  # 性能基准测试
+  benchmark_test:
+    script: benchmark_full_scan.py
+    required: true
+    timeout: 120  # 2 分钟
+  
+  # 回归测试
+  regression_test:
+    script: test.sh
+    required: true
+    timeout: 300
+```
+
+## 自动化规则
+
+```yaml
+automation:
+  # 自动合并条件 (全部满足)
+  auto_merge:
+    enabled: true
+    conditions:
+      - "detection_rate >= 99.0"
+      - "false_positive_rate <= 10.0"
+      - "throughput >= 4000"
+      - "all_tests_passed == true"
+  
+  # 人工审核触发条件 (任一满足)
+  human_review:
+    conditions:
+      - "false_positive_rate > 10.0"
+      - "detection_rate < 99.0"
+      - "throughput < 4000"
+      - "new_whitelist_rules > 0"
+      - "deleted_rules > 10"
+  
+  # 自动回滚条件 (任一满足)
+  auto_rollback:
+    conditions:
+      - "detection_rate < 98.0"
+      - "false_positive_rate > 15.0"
+      - "throughput < 3000"
+      - "any_test_failed == true"
+```
+
+## 监控告警
+
+```yaml
+monitoring:
+  # 监控频率
+  check_interval: 300  # 5 分钟
+  
+  # 告警渠道
+  notifications:
+    - type: feishu
+      webhook: ${FEISHU_WEBHOOK}
+      levels: [warning, critical]
+    - type: email
+      recipient: ${ALERT_EMAIL}
+      levels: [critical]
+  
+  # 告警阈值
+  alerts:
+    - name: DR 下降
+      condition: "detection_rate < 99.0"
+      level: warning
+    - name: DR 严重下降
+      condition: "detection_rate < 98.0"
+      level: critical
+    - name: FPR 超标
+      condition: "false_positive_rate > 10.0"
+      level: warning
+    - name: FPR 严重超标
+      condition: "false_positive_rate > 15.0"
+      level: critical
+    - name: 速度不足
+      condition: "throughput < 4000"
+      level: warning
+    - name: 速度严重不足
+      condition: "throughput < 3000"
+      level: critical
+```
+
+## 版本管理
+
+```yaml
+versioning:
+  # Git 标签格式
+  tag_format: "scanner-v{major}.{minor}.{patch}"
+  
+  # 提交信息规范
+  commit_message:
+    format: "[Scanner] {type}: {description}"
+    types:
+      - optimization  # 性能优化
+      - rule_add      # 新增规则
+      - rule_remove   # 删除规则
+      - bugfix        # Bug 修复
+      - whitelist     # 白名单更新
+  
+  # 发布频率
+  release:
+    min_interval: 3600  # 最少间隔 1 小时
+    max_changes: 20     # 最多 20 条规则变更/次
+```
