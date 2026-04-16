@@ -1,4 +1,4 @@
-# Agent Security Skill Scanner v6.1.3
+# Agent Security Skill Scanner v6.1.8
 
 [![npm version](https://badge.fury.io/js/@caidongyun%2Fsecurity-scanner.svg)](https://www.npmjs.com/package/@caidongyun/security-scanner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -340,7 +340,7 @@ python3 scanner.py /path/to/skills/ --llm-threshold 0.8
 ## 🔗 相关链接
 
 - **Gitee 仓库**: https://gitee.com/caidongyun/agent-security-skill-scanner
-- **npm 包**: https://www.npmjs.com/package/@openclaw/security-scanner
+- **npm 包**: https://www.npmjs.com/package/@caidongyun/security-scanner
 - **Issue 反馈**: https://gitee.com/caidongyun/agent-security-skill-scanner/issues
 - **ClawHub**: https://clawhub.ai
 
