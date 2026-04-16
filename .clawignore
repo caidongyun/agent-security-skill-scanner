@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# Testing
+scan_report.json
+*.log
+tests/
+benchmark_samples/
+reports/
+
+# Documentation (keep essential)
+RELEASE_NOTES.md
+V6_1_0_FINAL_REPORT.md
+OPTIMIZATION_*.md
+DETECTION_*.md
+*.md.backup
+*.md.old
+RELEASE_NOTES_v6.1.0.md
+RELEASE_NOTES_v6.1.2.md
+RELEASE_NOTES_v6.1.3.md
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Rules source files (exclude individual, keep only if needed)
+rules/powershell_rules.json
+rules/javascript_rules.json
+rules/bash_rules.json
+rules/python_advanced_rules.json
+
+# Large rule files - use remote fetch instead
+rules/dist/
+
+# Source engines (optional - can be fetched from repo)
+src/
+
+# Large files
+*.zip
+*.tar.gz
+*.tgz
