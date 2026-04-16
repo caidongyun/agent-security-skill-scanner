@@ -1,8 +1,28 @@
-# v6.1.0 发布说明
+# v6.1.3 发布说明
 
 **发布日期**: 2026-04-16  
-**版本**: 6.1.0  
-**上一版本**: 6.0.0publish  
+**版本**: 6.1.3  
+**上一版本**: 6.1.2
+
+---
+
+## 🎉 重大更新
+
+### 1. npm 包名变更
+- **新包名**: `@caidongyun/security-scanner`
+- **旧包名**: `@openclaw/security-scanner` (已废弃)
+- **安装命令**: `npm install -g @caidongyun/security-scanner`
+
+### 2. 开源仓库发布
+- **Gitee**: https://gitee.com/caidongyun/agent-security-skill-scanner
+- **GitHub**: https://github.com/caidongyun/agent-security-skill-scanner
+- **npm**: https://www.npmjs.com/package/@caidongyun/security-scanner
+
+### 3. 安装方式扩展
+- npm 安装 (推荐)
+- Gitee 源码安装
+- GitHub 源码安装
+- 直接下载运行  
 
 ---
 

@@ -1,6 +1,6 @@
-# Agent Security Skill Scanner v6.1.2
+# Agent Security Skill Scanner v6.1.3
 
-[![npm version](https://badge.fury.io/js/@openclaw%2Fsecurity-scanner.svg)](https://www.npmjs.com/package/@openclaw/security-scanner)
+[![npm version](https://badge.fury.io/js/@caidongyun%2Fsecurity-scanner.svg)](https://www.npmjs.com/package/@caidongyun/security-scanner)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Detection Rate](https://img.shields.io/badge/Detection-100%25-brightgreen.svg)](https://gitee.com/caidongyun/agent-security-skill-scanner)
 
@@ -93,9 +93,50 @@
 
 ## 📦 安装
 
-### npm 安装 (推荐)
+### 方式 1: npm 安装 (推荐)
 ```bash
-npm install -g @openclaw/security-scanner
+# 全局安装
+npm install -g @caidongyun/security-scanner
+
+# 或项目内安装
+npm install @caidongyun/security-scanner
+```
+
+### 方式 2: Gitee 源码安装
+```bash
+# 克隆仓库
+git clone https://gitee.com/caidongyun/agent-security-skill-scanner.git
+cd agent-security-skill-scanner
+
+# 安装依赖
+pip3 install -r requirements.txt
+
+# 全局使用 (可选)
+ln -s $(pwd)/scan /usr/local/bin/security-scanner
+```
+
+### 方式 3: GitHub 源码安装
+```bash
+# 克隆仓库
+git clone https://github.com/caidongyun/agent-security-skill-scanner.git
+cd agent-security-skill-scanner
+
+# 安装依赖
+pip3 install -r requirements.txt
+
+# 全局使用 (可选)
+ln -s $(pwd)/scan /usr/local/bin/security-scanner
+```
+
+### 方式 4: 直接下载
+```bash
+# 下载扫描器
+curl -O https://gitee.com/caidongyun/agent-security-skill-scanner/raw/master/scanner.py
+curl -O https://gitee.com/caidongyun/agent-security-skill-scanner/raw/master/scan
+chmod +x scan
+
+# 运行
+./scan /path/to/skills
 ```
 
 ### pip 安装
@@ -159,7 +200,7 @@ python3 scanner.py /path/to/skills/ --llm --llm-threshold 0.5
 security-scanner /path/to/skills/
 
 # 或直接使用
-npx @openclaw/security-scanner /path/to/skills/
+npx @caidongyun/security-scanner /path/to/skills/
 ```
 
 ---
@@ -196,6 +237,16 @@ time python3 scanner.py /path/to/large_dataset/ --workers 8
 扫描速度：~300,000 it/s
 内存占用：~80MB
 ```
+
+---
+
+## 🔗 相关仓库
+
+| 平台 | 仓库地址 |
+|------|----------|
+| **Gitee** | https://gitee.com/caidongyun/agent-security-skill-scanner |
+| **GitHub** | https://github.com/caidongyun/agent-security-skill-scanner |
+| **npm** | https://www.npmjs.com/package/@caidongyun/security-scanner |
 
 ---
 
