@@ -1,0 +1,88 @@
+[
+  {
+    "id": "PY-ADV-001",
+    "name": "Python Prompt Injection 高级检测",
+    "category": "prompt_injection",
+    "severity": "HIGH",
+    "patterns": [
+      "ignore.*previous.*instruction",
+      "bypass.*safety",
+      "override.*system.*prompt",
+      "you.*are.*now.*DAN",
+      "Developer.*Mode",
+      "role.*play.*as.*malicious",
+      "inject.*this.*prompt"
+    ],
+    "description": "Python Prompt Injection 高级攻击模式",
+    "mitre_atlas": ["T0009"],
+    "risk_score": 85
+  },
+  {
+    "id": "PY-ADV-002",
+    "name": "Python Memory Pollution 检测",
+    "category": "memory_pollution",
+    "severity": "HIGH",
+    "patterns": [
+      "context.*pollution",
+      "inject.*memory",
+      "corrupt.*context",
+      "poison.*vector.*database",
+      "RAG.*injection",
+      "embedding.*poison"
+    ],
+    "description": "Python 记忆污染/RAG 投毒",
+    "mitre_atlas": ["T0015"],
+    "risk_score": 85
+  },
+  {
+    "id": "PY-ADV-003",
+    "name": "Python Evasion 技术检测",
+    "category": "evasion",
+    "severity": "MEDIUM",
+    "patterns": [
+      "base64\\.b64decode.*exec",
+      "chr\\(\\)\\s*\\+\\s*chr\\(",
+      "eval\\(.*compile\\(",
+      "getattr\\(.*__builtins__",
+      "importlib\\.import_module",
+      "sys\\.modules\\[.*\\]\\s*="
+    ],
+    "description": "Python 代码混淆绕过技术",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 80
+  },
+  {
+    "id": "PY-ADV-004",
+    "name": "Python 供应链攻击检测",
+    "category": "supply_chain",
+    "severity": "CRITICAL",
+    "patterns": [
+      "pip.*install.*git\\+",
+      "requirements.*git.*http",
+      "setup\\.py.*install.*url",
+      "pip.*install.*\\.",
+      "python.*-c.*import.*urllib",
+      "subprocess.*pip.*install"
+    ],
+    "description": "Python 供应链投毒攻击",
+    "mitre_atlas": ["T0011"],
+    "risk_score": 90
+  },
+  {
+    "id": "PY-ADV-005",
+    "name": "Python 反序列化攻击",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "pickle\\.loads\\(",
+      "yaml\\.load\\(.*Loader.*Unsafe",
+      "yaml\\.unsafe_load\\(",
+      "marshal\\.loads\\(",
+      "shelve\\.open\\(",
+      "__reduce__"
+    ],
+    "description": "Python 反序列化远程代码执行",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 95
+  }
+]

@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+.venv
+
+# Testing
+scan_report.json
+*.log
+tests/
+benchmark_samples/
+reports/
+
+# Documentation (keep essential, remove detailed)
+RELEASE_NOTES.md
+V6_1_0_FINAL_REPORT.md
+OPTIMIZATION_*.md
+DETECTION_*.md
+*.md.backup
+*.md.old
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Rules source (keep only merged)
+rules/powershell_rules.json
+rules/javascript_rules.json
+rules/bash_rules.json
+rules/python_advanced_rules.json

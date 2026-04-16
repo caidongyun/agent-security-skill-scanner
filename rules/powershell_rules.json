@@ -1,0 +1,251 @@
+[
+  {
+    "id": "PS-001",
+    "name": "PowerShell 远程代码下载执行",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "IEX\\s*\\(",
+      "Invoke-Expression\\s*\\(",
+      "DownloadString\\s*\\(",
+      "Net\\.WebClient\\)",
+      "powershell\\s+-c",
+      "powershell\\s+-ExecutionPolicy\\s+Bypass"
+    ],
+    "description": "PowerShell 远程下载并执行恶意代码",
+    "mitre_atlas": ["T0009", "T0027"],
+    "risk_score": 95
+  },
+  {
+    "id": "PS-002",
+    "name": "PowerShell 凭据窃取",
+    "category": "credential_theft",
+    "severity": "CRITICAL",
+    "patterns": [
+      "Get-Credential",
+      "Get-ADUser",
+      "Get-ADAccount",
+      "Invoke-Mimikatz",
+      "sekurlsa::logonpasswords",
+      "lsadump::sam"
+    ],
+    "description": "PowerShell 凭据窃取操作",
+    "mitre_atlas": ["T0004", "T0006"],
+    "risk_score": 90
+  },
+  {
+    "id": "PS-003",
+    "name": "PowerShell 数据外传",
+    "category": "data_exfiltration",
+    "severity": "HIGH",
+    "patterns": [
+      "Invoke-WebRequest.*-Method\\s+Post",
+      "Invoke-RestMethod.*-Method\\s+Post",
+      "Start-BitsTransfer.*-TransferType\\s+Upload",
+      "WebClient.*UploadString",
+      "WebClient.*UploadFile",
+      "ConvertTo-Json.*-Uri"
+    ],
+    "description": "PowerShell 数据外传操作",
+    "mitre_atlas": ["T0010"],
+    "risk_score": 85
+  },
+  {
+    "id": "PS-004",
+    "name": "PowerShell 持久化",
+    "category": "persistence",
+    "severity": "HIGH",
+    "patterns": [
+      "Startup.*\\.ps1",
+    "Copy-Item.*Startup",
+    "New-Item.*Startup",
+    "Set-ItemProperty.*Run",
+    "schtasks.*Create",
+    "Register-ScheduledTask",
+    "WMI.*__FilterToConsumerBinding"
+    ],
+    "description": "PowerShell 持久化机制",
+    "mitre_atlas": ["T0022"],
+    "risk_score": 80
+  },
+  {
+    "id": "PS-005",
+    "name": "PowerShell 混淆执行",
+    "category": "evasion",
+    "severity": "MEDIUM",
+    "patterns": [
+      "-EncodedCommand",
+      "-e\\s+[A-Za-z0-9+/=]{20,}",
+      "FromBase64String",
+      "ConvertFrom-Base64",
+      "Xor.*byte\\[\\]",
+      "Replace.*[A-Za-z]{5,}"
+    ],
+    "description": "PowerShell 混淆执行绕过检测",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 75
+  },
+  {
+    "id": "PS-006",
+    "name": "PowerShell 下载执行器",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "Iwr.*-Uri.*\\|.*Invoke-Expression",
+      "Invoke-WebRequest.*\\|.*IEX",
+      "DownloadFile.*\\.exe",
+      "Start-Process.*\\.exe",
+      "Invoke-Command.*-ScriptBlock"
+    ],
+    "description": "PowerShell 下载器执行恶意软件",
+    "mitre_atlas": ["T0009", "T0027"],
+    "risk_score": 90
+  },
+  {
+    "id": "PS-007",
+    "name": "PowerShell 内存注入",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "VirtualAlloc",
+      "CreateThread",
+      "WaitForSingleObject",
+      "GetProcAddress",
+      "LoadLibrary",
+      "\\\\[Reflection\\\\.Assembly]::Load"
+    ],
+    "description": "PowerShell 内存注入技术",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 95
+  },
+  {
+    "id": "PS-008",
+    "name": "PowerShell 注册表操作",
+    "category": "persistence",
+    "severity": "MEDIUM",
+    "patterns": [
+      "Set-ItemProperty.*HK",
+      "New-ItemProperty.*HK",
+      "HKLM.*\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run",
+      "HKCU.*\\\\Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Run"
+    ],
+    "description": "PowerShell 注册表持久化",
+    "mitre_atlas": ["T0022"],
+    "risk_score": 70
+  },
+  {
+    "id": "PS-009",
+    "name": "PowerShell WMI 滥用",
+    "category": "persistence",
+    "severity": "HIGH",
+    "patterns": [
+      "Get-WmiObject.*Win32",
+      "Invoke-WmiMethod",
+      "Win32_Process.*Create",
+      "Win32_Service.*Create",
+      "__EventConsumer",
+      "__EventFilter"
+    ],
+    "description": "PowerShell WMI 滥用",
+    "mitre_atlas": ["T0022", "T0027"],
+    "risk_score": 80
+  },
+  {
+    "id": "PS-010",
+    "name": "PowerShell 网络侦察",
+    "category": "reconnaissance",
+    "severity": "MEDIUM",
+    "patterns": [
+      "Get-NetIPAddress",
+      "Get-NetConnectionProfile",
+      "Test-NetConnection",
+      "netsh.*show",
+      "ipconfig.*all",
+      "Get-ADComputer"
+    ],
+    "description": "PowerShell 网络侦察",
+    "mitre_atlas": ["T0001", "T0005"],
+    "risk_score": 65
+  },
+  {
+    "id": "PS-011",
+    "name": "PowerShell 进程注入",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "Inject-Code",
+      "Get-Process.*-Id",
+      "OpenProcess",
+      "WriteProcessMemory",
+      "CreateRemoteThread"
+    ],
+    "description": "PowerShell 进程注入",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 95
+  },
+  {
+    "id": "PS-012",
+    "name": "PowerShell 文件操作",
+    "category": "collection",
+    "severity": "MEDIUM",
+    "patterns": [
+      "Get-ChildItem.*-Recurse",
+      "Get-Content.*-Path",
+      "Copy-Item.*\\\\AppData",
+      "Compress-Archive.*-DestinationPath",
+      "Send-MailMessage.*-Attachments"
+    ],
+    "description": "PowerShell 文件收集操作",
+    "mitre_atlas": ["T0003"],
+    "risk_score": 60
+  },
+  {
+    "id": "PS-013",
+    "name": "PowerShell 权限提升",
+    "category": "privilege_escalation",
+    "severity": "HIGH",
+    "patterns": [
+      "Enable-Privilege",
+      "AdjustTokenPrivileges",
+      "SeDebugPrivilege",
+      "SeLoadDriverPrivilege",
+      "Start-Process.*-Verb\\s+RunAs"
+    ],
+    "description": "PowerShell 权限提升",
+    "mitre_atlas": ["T0012"],
+    "risk_score": 85
+  },
+  {
+    "id": "PS-014",
+    "name": "PowerShell 日志清除",
+    "category": "defense_evasion",
+    "severity": "HIGH",
+    "patterns": [
+      "Clear-EventLog",
+      "wevtutil.*cl",
+      "Remove-Item.*\\\\Logs",
+      "Set-ItemProperty.*NoControl",
+      "Disable-NetAdapter"
+    ],
+    "description": "PowerShell 日志清除",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 80
+  },
+  {
+    "id": "PS-015",
+    "name": "PowerShell 反分析",
+    "category": "defense_evasion",
+    "severity": "MEDIUM",
+    "patterns": [
+      "Get-Process.*vmware",
+      "Get-Service.*vbox",
+      "IsDebuggerPresent",
+      "Debugger\\.IsAttached",
+      "VirtualBox",
+      "VMware"
+    ],
+    "description": "PowerShell 反虚拟机/调试器检测",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 70
+  }
+]

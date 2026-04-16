@@ -1,0 +1,192 @@
+[
+  {
+    "id": "JS-001",
+    "name": "JavaScript 代码执行检测",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "eval\\s*\\(",
+      "new\\s+Function\\s*\\(",
+      "execSync\\s*\\(",
+      "exec\\s*\\(",
+      "child_process",
+      "spawn\\s*\\(",
+      "vm\\.runInContext",
+      "vm\\.Script"
+    ],
+    "description": "JavaScript 动态代码执行",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 95
+  },
+  {
+    "id": "JS-002",
+    "name": "JavaScript 远程代码加载",
+    "category": "remote_load",
+    "severity": "CRITICAL",
+    "patterns": [
+      "https?://[^\\s]+\\.js",
+      "download.*\\.js",
+      "fetch\\(.*then.*eval",
+      "XMLHttpRequest.*eval",
+      "axios.*then.*Function"
+    ],
+    "description": "JavaScript 远程加载并执行",
+    "mitre_atlas": ["T0009"],
+    "risk_score": 90
+  },
+  {
+    "id": "JS-003",
+    "name": "JavaScript 数据外传",
+    "category": "data_exfiltration",
+    "severity": "HIGH",
+    "patterns": [
+      "fetch.*POST",
+      "XMLHttpRequest.*POST",
+      "axios\\.post",
+      "navigator\\.sendBeacon",
+      "Image.*src.*http"
+    ],
+    "description": "JavaScript 数据外传",
+    "mitre_atlas": ["T0010"],
+    "risk_score": 85
+  },
+  {
+    "id": "JS-004",
+    "name": "JavaScript 凭据窃取",
+    "category": "credential_theft",
+    "severity": "CRITICAL",
+    "patterns": [
+      "document\\.cookie",
+      "localStorage\\.getItem",
+      "sessionStorage\\.getItem",
+      "password.*value",
+      "credential.*steal"
+    ],
+    "description": "JavaScript 凭据窃取",
+    "mitre_atlas": ["T0004"],
+    "risk_score": 90
+  },
+  {
+    "id": "JS-005",
+    "name": "JavaScript 原型链污染",
+    "category": "memory_pollution",
+    "severity": "HIGH",
+    "patterns": [
+      "__proto__\\s*=",
+      "prototype\\s*=",
+      "constructor\\.prototype",
+      "Object\\.defineProperty.*__proto__"
+    ],
+    "description": "JavaScript 原型链污染",
+    "mitre_atlas": ["T0015"],
+    "risk_score": 85
+  },
+  {
+    "id": "JS-006",
+    "name": "JavaScript 命令注入",
+    "category": "command_injection",
+    "severity": "CRITICAL",
+    "patterns": [
+      "exec\\s*\\(.*\\$",
+      "execSync\\s*\\(.*\\+",
+      "spawn\\s*\\(.*process\\.env",
+      "\\`.*\\$\\{.*\\}\\`"
+    ],
+    "description": "JavaScript 命令注入",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 95
+  },
+  {
+    "id": "JS-007",
+    "name": "JavaScript 文件操作",
+    "category": "collection",
+    "severity": "MEDIUM",
+    "patterns": [
+      "fs\\.readFileSync",
+      "fs\\.writeFileSync",
+      "fs\\.readdirSync",
+      "require\\('fs'\\)",
+      "path\\.join.*\\.\\."
+    ],
+    "description": "JavaScript 敏感文件操作",
+    "mitre_atlas": ["T0003"],
+    "risk_score": 70
+  },
+  {
+    "id": "JS-008",
+    "name": "JavaScript 网络扫描",
+    "category": "reconnaissance",
+    "severity": "MEDIUM",
+    "patterns": [
+      "net\\.createServer",
+      "net\\.connect",
+      "dgram\\.createSocket",
+      "os\\.networkInterfaces"
+    ],
+    "description": "JavaScript 网络侦察",
+    "mitre_atlas": ["T0001"],
+    "risk_score": 65
+  },
+  {
+    "id": "JS-009",
+    "name": "JavaScript 持久化",
+    "category": "persistence",
+    "severity": "HIGH",
+    "patterns": [
+      "npm.*install.*global",
+      "process\\.on\\('uncaughtException'",
+      "setInterval.*restart",
+      "auto.*start"
+    ],
+    "description": "JavaScript 持久化机制",
+    "mitre_atlas": ["T0022"],
+    "risk_score": 80
+  },
+  {
+    "id": "JS-010",
+    "name": "JavaScript 混淆执行",
+    "category": "evasion",
+    "severity": "MEDIUM",
+    "patterns": [
+      "atob\\s*\\(",
+      "btoa\\s*\\(",
+      "Buffer\\.from.*base64",
+      "String\\.fromCharCode",
+      "unescape\\s*\\("
+    ],
+    "description": "JavaScript 混淆绕过",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 75
+  },
+  {
+    "id": "JS-011",
+    "name": "JavaScript 进程注入",
+    "category": "code_execution",
+    "severity": "CRITICAL",
+    "patterns": [
+      "dlopen",
+      "ffi-napi",
+      "ref-napi",
+      "native-addon"
+    ],
+    "description": "JavaScript 原生模块注入",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 90
+  },
+  {
+    "id": "JS-012",
+    "name": "JavaScript 环境变量窃取",
+    "category": "credential_theft",
+    "severity": "HIGH",
+    "patterns": [
+      "process\\.env",
+      "dotenv\\.config",
+      "\\.env.*read",
+      "AWS_SECRET",
+      "API_KEY.*process"
+    ],
+    "description": "JavaScript 环境变量窃取",
+    "mitre_atlas": ["T0004"],
+    "risk_score": 85
+  }
+]

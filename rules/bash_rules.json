@@ -1,0 +1,191 @@
+[
+  {
+    "id": "BASH-001",
+    "name": "Bash 远程代码执行",
+    "category": "remote_load",
+    "severity": "CRITICAL",
+    "patterns": [
+      "curl.*\\|.*bash",
+      "wget.*\\|.*bash",
+      "curl.*\\|.*sh",
+      "wget.*\\|.*sh",
+      "bash.*<\\(.*curl",
+      "sh.*<\\(.*wget"
+    ],
+    "description": "Bash 远程下载并执行",
+    "mitre_atlas": ["T0009"],
+    "risk_score": 95
+  },
+  {
+    "id": "BASH-002",
+    "name": "Bash 命令注入",
+    "category": "command_injection",
+    "severity": "CRITICAL",
+    "patterns": [
+      "eval\\s+\\$",
+      "exec\\s+\\$",
+      "\\$\\(.*\\).*\\|",
+      "`.*`.*\\|",
+      "xargs.*-I"
+    ],
+    "description": "Bash 命令注入",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 90
+  },
+  {
+    "id": "BASH-003",
+    "name": "Bash 数据外传",
+    "category": "data_exfiltration",
+    "severity": "HIGH",
+    "patterns": [
+      "curl.*-d.*@",
+      "curl.*--data.*@",
+      "wget.*--post-file",
+      "scp.*user@",
+      "rsync.*user@"
+    ],
+    "description": "Bash 数据外传",
+    "mitre_atlas": ["T0010"],
+    "risk_score": 85
+  },
+  {
+    "id": "BASH-004",
+    "name": "Bash 凭据窃取",
+    "category": "credential_theft",
+    "severity": "CRITICAL",
+    "patterns": [
+      "cat.*\\.ssh/",
+      "cat.*\\.aws/",
+      "cat.*\\.bash_history",
+      "grep.*password",
+      "grep.*credential"
+    ],
+    "description": "Bash 凭据窃取",
+    "mitre_atlas": ["T0004"],
+    "risk_score": 90
+  },
+  {
+    "id": "BASH-005",
+    "name": "Bash 持久化",
+    "category": "persistence",
+    "severity": "HIGH",
+    "patterns": [
+      "\\.bashrc.*echo",
+      "\\.profile.*echo",
+      "crontab.*-e",
+      "/etc/cron\\.",
+      "systemctl.*enable"
+    ],
+    "description": "Bash 持久化机制",
+    "mitre_atlas": ["T0022"],
+    "risk_score": 80
+  },
+  {
+    "id": "BASH-006",
+    "name": "Bash 权限提升",
+    "category": "privilege_escalation",
+    "severity": "HIGH",
+    "patterns": [
+      "sudo.*-i",
+      "sudo.*su",
+      "setuid",
+      "setgid",
+      "chmod.*u\\+s",
+      "chmod.*g\\+s"
+    ],
+    "description": "Bash 权限提升",
+    "mitre_atlas": ["T0012"],
+    "risk_score": 85
+  },
+  {
+    "id": "BASH-007",
+    "name": "Bash 网络侦察",
+    "category": "reconnaissance",
+    "severity": "MEDIUM",
+    "patterns": [
+      "nmap\\s",
+      "netstat\\s",
+      "ss\\s",
+      "ifconfig",
+      "ip addr"
+    ],
+    "description": "Bash 网络侦察",
+    "mitre_atlas": ["T0001"],
+    "risk_score": 65
+  },
+  {
+    "id": "BASH-008",
+    "name": "Bash 文件收集",
+    "category": "collection",
+    "severity": "MEDIUM",
+    "patterns": [
+      "find.*-name.*\\.ssh",
+      "find.*-name.*\\.aws",
+      "tar.*cvf.*@",
+      "zip.*-r.*@"
+    ],
+    "description": "Bash 文件收集",
+    "mitre_atlas": ["T0003"],
+    "risk_score": 70
+  },
+  {
+    "id": "BASH-009",
+    "name": "Bash 反分析",
+    "category": "defense_evasion",
+    "severity": "MEDIUM",
+    "patterns": [
+      "history.*-c",
+      "unset.*HISTFILE",
+      "shred.*-u",
+      "rm.*-rf.*/var/log"
+    ],
+    "description": "Bash 反分析/日志清除",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 75
+  },
+  {
+    "id": "BASH-010",
+    "name": "Bash 混淆执行",
+    "category": "evasion",
+    "severity": "MEDIUM",
+    "patterns": [
+      "base64.*-d.*\\|.*bash",
+      "openssl.*enc.*-d",
+      "xxd.*-r.*-p",
+      "printf.*\\\\x"
+    ],
+    "description": "Bash 混淆绕过",
+    "mitre_atlas": ["T0008"],
+    "risk_score": 75
+  },
+  {
+    "id": "BASH-011",
+    "name": "Bash 供应链攻击",
+    "category": "supply_chain",
+    "severity": "CRITICAL",
+    "patterns": [
+      "npm.*install.*git\\+",
+      "pip.*install.*git\\+",
+      "git.*clone.*http",
+      "curl.*setup\\.sh"
+    ],
+    "description": "Bash 供应链投毒",
+    "mitre_atlas": ["T0011"],
+    "risk_score": 90
+  },
+  {
+    "id": "BASH-012",
+    "name": "Bash 反向 Shell",
+    "category": "reverse_shell",
+    "severity": "CRITICAL",
+    "patterns": [
+      "bash.*-i.*>&.*tcp",
+      "nc.*-e.*bash",
+      "nc.*-e.*sh",
+      "python.*-c.*socket"
+    ],
+    "description": "Bash 反向 Shell",
+    "mitre_atlas": ["T0027"],
+    "risk_score": 95
+  }
+]
