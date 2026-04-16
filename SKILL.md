@@ -1,7 +1,8 @@
 ---
 name: agent-security-skill-scanner
+title: Agent Security Scanner
 description: Scan AI agent skills for security threats - detects prompt injection, credential theft, data exfiltration, command injection, and 616+ attack patterns. 100% detection rate across PowerShell, Python, JavaScript, and Bash.
-version: 6.1.3
+version: 6.1.6
 ---
 
 # Agent Security Skill Scanner v6.1.3
