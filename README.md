@@ -147,7 +147,7 @@ pip install -r requirements.txt
 ### 源码安装
 ```bash
 git clone https://gitee.com/caidongyun/agent-security-skill-scanner.git
-cd agent-security-skill-scanner-master/release/v6.1.2publish
+cd agent-security-skill-scanner
 pip install -r requirements.txt
 ```
 
@@ -223,7 +223,7 @@ npx @caidongyun/security-scanner /path/to/skills/
 |------|-----------|--------|-----------|------|------|
 | **v6.0.0** | 33.3% | 61.1% | 66.7% | 62.5% | 65.8% |
 | **v6.1.1** | 100.0% | 92.2% | 100.0% | 100.0% | 97.8% |
-| **v6.1.2** | **100.0%** | **100.0%** | **100.0%** | **100.0%** | **100.0%** |
+| **v6.1.8** | **100.0%** | **100.0%** | **100.0%** | **100.0%** | **100.0%** |
 
 ### 性能测试
 
@@ -274,7 +274,7 @@ time python3 scanner.py /path/to/large_dataset/ --workers 8
 ## 📁 文件结构
 
 ```
-v6.1.2publish/
+agent-security-skill-scanner/
 ├── scanner.py                  # 主扫描器
 ├── whitelist_filter.py         # 白名单过滤器
 ├── config_detector.py          # 配置文件识别器
@@ -358,4 +358,4 @@ MIT License - 详见 LICENSE 文件
 
 ---
 
-**v6.1.2** | **检测率 100%** | **误报率 0%** | **扫描速度 ~300k it/s**
+**v6.1.8** | **检测率 100%** | **误报率 0%** | **扫描速度 ~300k it/s**
