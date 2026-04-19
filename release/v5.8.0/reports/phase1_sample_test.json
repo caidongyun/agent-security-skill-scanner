@@ -1,0 +1,1203 @@
+{
+  "test_time": "2026-04-13T22:52:48.632334",
+  "total_patterns": 113,
+  "total_samples": 100,
+  "files_with_hits": 100,
+  "total_hits": 1348,
+  "detection_rate": "100.00%",
+  "avg_hits_per_file": "13.48",
+  "sample_results": [
+    {
+      "file": "skillscanner/scanner.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "auto-research-orchestrator/research_cycle.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "auto-research-orchestrator/rate_limiter.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0103",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 14
+    },
+    {
+      "file": "agent-security-benchmark/view_results.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "llm-optimizer/test_simple.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "llm-optimizer/examples.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 12
+    },
+    {
+      "file": "llm-optimizer/optimizer.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "llm-optimizer/test_enhanced.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 12
+    },
+    {
+      "file": "skill-scanner/skill_scanner.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0071",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0103",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 15
+    },
+    {
+      "file": "skill-scanner/streamlit_ui.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "security-sample-generator/sample_generator.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0071",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0089",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 15
+    },
+    {
+      "file": "security-sample-generator/malicious_skill_analyzer.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "security-sample-generator/malicious_skill_downloader.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0103",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 14
+    },
+    {
+      "file": "security-sample-generator/batch_generator.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "security-sample-generator/auto_rd_orchestrator.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0071",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 14
+    },
+    {
+      "file": "security-sample-generator/batch_download_malicious_skills.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "security-sample-generator/malicious_skill_downloader_v2.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    },
+    {
+      "file": "security-sample-generator/attack_pattern_extractor.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0094",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0103",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 15
+    },
+    {
+      "file": "security-sample-generator/auto_rd_daemon.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0071",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 14
+    },
+    {
+      "file": "security-sample-generator/malicious_skill_downloader_v3.py",
+      "hits": [
+        {
+          "pattern_id": "V580-P0057",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0074",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0119",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0121",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0122",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0124",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0128",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0130",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0132",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0133",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0134",
+          "severity": "CRITICAL"
+        },
+        {
+          "pattern_id": "V580-P0135",
+          "severity": "HIGH"
+        },
+        {
+          "pattern_id": "V580-P0137",
+          "severity": "CRITICAL"
+        }
+      ],
+      "hit_count": 13
+    }
+  ]
+}

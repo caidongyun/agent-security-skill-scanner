@@ -1,0 +1,447 @@
+{
+  "timestamp": "2026-04-14 15:15:55",
+  "config": {
+    "limit_per_type": 500,
+    "attack_types_tested": [
+      "data_exfiltration",
+      "normal_script",
+      "evasion",
+      "false_prone_generated",
+      "supply_chain_attack",
+      "prompt_injection",
+      "persistence",
+      "resource_exhaustion",
+      "remote_load",
+      "memory_pollution",
+      "credential_theft",
+      "tool_poisoning",
+      "common_pattern",
+      "false_prone"
+    ]
+  },
+  "overall": {
+    "total_samples": 6600,
+    "total_detected": 4607,
+    "overall_detection_rate": 69.8030303030303
+  },
+  "by_attack_type": {
+    "common_pattern": {
+      "total": 500,
+      "detected": 0,
+      "missed": 500,
+      "detection_rate": 0.0,
+      "elapsed": 0.11557722091674805,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-79ab5e/payload.javascript",
+          "sample_id": "BEN-COP-79ab5e",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-daca08/payload.go",
+          "sample_id": "BEN-COP-daca08",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-5feadf/payload.go",
+          "sample_id": "BEN-COP-5feadf",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-c05d9c/payload.go",
+          "sample_id": "BEN-COP-c05d9c",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-997d24/payload.python",
+          "sample_id": "BEN-COP-997d24",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-4eb209/payload.python",
+          "sample_id": "BEN-COP-4eb209",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-c1563f/payload.go",
+          "sample_id": "BEN-COP-c1563f",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-7d0a9e/payload.bash",
+          "sample_id": "BEN-COP-7d0a9e",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-374751/payload.python",
+          "sample_id": "BEN-COP-374751",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-7d7b32/payload.javascript",
+          "sample_id": "BEN-COP-7d7b32",
+          "score": 0
+        }
+      ]
+    },
+    "credential_theft": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.10063648223876953,
+      "false_negatives": []
+    },
+    "data_exfiltration": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.06023406982421875,
+      "false_negatives": []
+    },
+    "evasion": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.07128667831420898,
+      "false_negatives": []
+    },
+    "false_prone": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.05918264389038086,
+      "false_negatives": []
+    },
+    "false_prone_generated": {
+      "total": 100,
+      "detected": 51,
+      "missed": 49,
+      "detection_rate": 51.0,
+      "elapsed": 0.008711099624633789,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000004/payload.py",
+          "sample_id": "MAL-FP-000004",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000047/payload.bash",
+          "sample_id": "MAL-FP-000047",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000056/payload.bash",
+          "sample_id": "MAL-FP-000056",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000026/payload.bash",
+          "sample_id": "MAL-FP-000026",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000046/payload.bash",
+          "sample_id": "MAL-FP-000046",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-00000b/payload.bash",
+          "sample_id": "MAL-FP-00000b",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-00001b/payload.bash",
+          "sample_id": "MAL-FP-00001b",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000063/payload.bash",
+          "sample_id": "MAL-FP-000063",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000017/payload.bash",
+          "sample_id": "MAL-FP-000017",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-00000c/payload.py",
+          "sample_id": "MAL-FP-00000c",
+          "score": 0
+        }
+      ]
+    },
+    "memory_pollution": {
+      "total": 500,
+      "detected": 56,
+      "missed": 444,
+      "detection_rate": 11.200000000000001,
+      "elapsed": 0.11315345764160156,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-c953cc/payload.bash",
+          "sample_id": "MAL-MPO-c953cc",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-49b7d6/payload.yaml",
+          "sample_id": "MAL-MPO-49b7d6",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-537987/payload.bash",
+          "sample_id": "MAL-MPO-537987",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-c079b5/payload.go",
+          "sample_id": "MAL-MPO-c079b5",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-de1f6f/payload.yaml",
+          "sample_id": "MAL-MPO-de1f6f",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-1d4a6c/payload.bash",
+          "sample_id": "MAL-MPO-1d4a6c",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-b5de0b/payload.bash",
+          "sample_id": "MAL-MPO-b5de0b",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-3965e2/payload.bash",
+          "sample_id": "MAL-MPO-3965e2",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-1440de/payload.javascript",
+          "sample_id": "MAL-MPO-1440de",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/memory_pollution/MAL-MPO-aa7de9/payload.javascript",
+          "sample_id": "MAL-MPO-aa7de9",
+          "score": 0
+        }
+      ]
+    },
+    "normal_script": {
+      "total": 500,
+      "detected": 0,
+      "missed": 500,
+      "detection_rate": 0.0,
+      "elapsed": 0.09662413597106934,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-ee5369/payload.go",
+          "sample_id": "BEN-NOR-ee5369",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-7e6b2a/payload.javascript",
+          "sample_id": "BEN-NOR-7e6b2a",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-690f33/payload.javascript",
+          "sample_id": "BEN-NOR-690f33",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-cb9f44/payload.bash",
+          "sample_id": "BEN-NOR-cb9f44",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-6fd545/payload.yaml",
+          "sample_id": "BEN-NOR-6fd545",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-e11ea9/payload.javascript",
+          "sample_id": "BEN-NOR-e11ea9",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-8dcc76/payload.javascript",
+          "sample_id": "BEN-NOR-8dcc76",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-9c3206/payload.bash",
+          "sample_id": "BEN-NOR-9c3206",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-bfc297/payload.python",
+          "sample_id": "BEN-NOR-bfc297",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/normal_script/BEN-NOR-d2b179/payload.yaml",
+          "sample_id": "BEN-NOR-d2b179",
+          "score": 0
+        }
+      ]
+    },
+    "persistence": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.08002805709838867,
+      "false_negatives": []
+    },
+    "prompt_injection": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.04602503776550293,
+      "false_negatives": []
+    },
+    "remote_load": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.03473949432373047,
+      "false_negatives": []
+    },
+    "resource_exhaustion": {
+      "total": 500,
+      "detected": 394,
+      "missed": 106,
+      "detection_rate": 78.8,
+      "elapsed": 0.05225038528442383,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-26dcda/payload.yaml",
+          "sample_id": "MAL-REX-26dcda",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-0f2842/payload.yaml",
+          "sample_id": "MAL-REX-0f2842",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-d08abe/payload.yaml",
+          "sample_id": "MAL-REX-d08abe",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-800165/payload.yaml",
+          "sample_id": "MAL-REX-800165",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-80649a/payload.yaml",
+          "sample_id": "MAL-REX-80649a",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-17b8dc/payload.yaml",
+          "sample_id": "MAL-REX-17b8dc",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-700163/payload.yaml",
+          "sample_id": "MAL-REX-700163",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-2979a3/payload.yaml",
+          "sample_id": "MAL-REX-2979a3",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-c1e694/payload.yaml",
+          "sample_id": "MAL-REX-c1e694",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-4bf95e/payload.yaml",
+          "sample_id": "MAL-REX-4bf95e",
+          "score": 0
+        }
+      ]
+    },
+    "supply_chain_attack": {
+      "total": 500,
+      "detected": 106,
+      "missed": 394,
+      "detection_rate": 21.2,
+      "elapsed": 0.08406972885131836,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-345e32/payload.javascript",
+          "sample_id": "MAL-SUP-345e32",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-9fdc7c/payload.javascript",
+          "sample_id": "MAL-SUP-9fdc7c",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-204111/payload.go",
+          "sample_id": "MAL-SUP-204111",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-d975f3/payload.javascript",
+          "sample_id": "MAL-SUP-d975f3",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-0c3620/payload.go",
+          "sample_id": "MAL-SUP-0c3620",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-fbb32a/payload.go",
+          "sample_id": "MAL-SUP-fbb32a",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-47086b/payload.bash",
+          "sample_id": "MAL-SUP-47086b",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-16a6b8/payload.javascript",
+          "sample_id": "MAL-SUP-16a6b8",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-2d89d5/payload.go",
+          "sample_id": "MAL-SUP-2d89d5",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/supply_chain_attack/MAL-SUP-58a9d0/payload.python",
+          "sample_id": "MAL-SUP-58a9d0",
+          "score": 0
+        }
+      ]
+    },
+    "tool_poisoning": {
+      "total": 500,
+      "detected": 500,
+      "missed": 0,
+      "detection_rate": 100.0,
+      "elapsed": 0.061879873275756836,
+      "false_negatives": []
+    }
+  }
+}

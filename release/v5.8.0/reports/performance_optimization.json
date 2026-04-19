@@ -1,0 +1,40 @@
+{
+  "optimization_time": "2026-04-13T23:15:30.235767",
+  "before": {
+    "speed": 53,
+    "note": "未优化 (每次重新编译正则)"
+  },
+  "after": {
+    "best_speed": 699.0,
+    "best_workers": 4,
+    "improvement_factor": 13.2,
+    "test_results": [
+      {
+        "workers": 1,
+        "speed": 50.0,
+        "time_seconds": 10.01
+      },
+      {
+        "workers": 4,
+        "speed": 699.0,
+        "time_seconds": 0.72
+      },
+      {
+        "workers": 8,
+        "speed": 692.0,
+        "time_seconds": 0.72
+      },
+      {
+        "workers": 16,
+        "speed": 695.0,
+        "time_seconds": 0.72
+      }
+    ]
+  },
+  "improvements": [
+    "✅ 预编译正则 (启动时一次性编译)",
+    "✅ 结果缓存 (相同文件不重复扫描)",
+    "✅ 并行扫描 (多进程/多线程)",
+    "✅ 最佳配置：4 workers"
+  ]
+}

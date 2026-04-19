@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-04-14 09:16:39",
+  "config": {
+    "limit_per_type": 100,
+    "attack_types_tested": [
+      "prompt_injection"
+    ]
+  },
+  "overall": {
+    "total_samples": 100,
+    "total_detected": 0,
+    "overall_detection_rate": 0.0
+  },
+  "by_attack_type": {
+    "prompt_injection": {
+      "total": 100,
+      "detected": 0,
+      "missed": 100,
+      "detection_rate": 0.0,
+      "elapsed": 0.0010116100311279297,
+      "false_negatives": []
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-04-16T10:18:01.364962",
+  "config": {
+    "skill_count": 1,
+    "workers": 8
+  },
+  "performance": {
+    "total_duration": 5.842715263366699,
+    "init_duration": 0.06723666191101074,
+    "skills_per_second": 0.1711533002934287,
+    "avg_ms_per_skill": 5842.025518417358
+  },
+  "summary": {
+    "total": 1,
+    "successful": 1,
+    "failed": 0,
+    "high_risk": 0,
+    "medium_risk": 0,
+    "low_risk": 0,
+    "safe": 1
+  },
+  "results": [
+    {
+      "skill": "samples",
+      "path": "/home/cdy/Desktop/security-benchmark/samples",
+      "duration": 5.842025518417358,
+      "files_scanned": 122,
+      "total_files": 122,
+      "core_files": 8,
+      "findings_count": 0,
+      "findings": [],
+      "risk_level": "SAFE",
+      "score": 0,
+      "warning": null
+    }
+  ]
+}

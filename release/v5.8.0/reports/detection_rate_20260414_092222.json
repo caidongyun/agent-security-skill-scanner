@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-04-14 09:22:22",
+  "config": {
+    "limit_per_type": 100,
+    "attack_types_tested": [
+      "false_prone_generated"
+    ]
+  },
+  "overall": {
+    "total_samples": 100,
+    "total_detected": 75,
+    "overall_detection_rate": 75.0
+  },
+  "by_attack_type": {
+    "false_prone_generated": {
+      "total": 100,
+      "detected": 75,
+      "missed": 25,
+      "detection_rate": 75.0,
+      "elapsed": 0.012985944747924805,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000042/payload.bash",
+          "sample_id": "MAL-FP-000042",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000047/payload.bash",
+          "sample_id": "MAL-FP-000047",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000017/payload.bash",
+          "sample_id": "MAL-FP-000017",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000022/payload.bash",
+          "sample_id": "MAL-FP-000022",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-00005a/payload.bash",
+          "sample_id": "MAL-FP-00005a",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-00002a/payload.bash",
+          "sample_id": "MAL-FP-00002a",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000007/payload.bash",
+          "sample_id": "MAL-FP-000007",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-00005f/payload.bash",
+          "sample_id": "MAL-FP-00005f",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000057/payload.bash",
+          "sample_id": "MAL-FP-000057",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/false_prone_generated/MAL-FP-000052/payload.bash",
+          "sample_id": "MAL-FP-000052",
+          "score": 0
+        }
+      ]
+    }
+  }
+}

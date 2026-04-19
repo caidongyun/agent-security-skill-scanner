@@ -1,0 +1,78 @@
+created_at: '2026-04-13T23:06:57.081358'
+rules:
+- ast_check: true
+  confidence: 95
+  description: 使用 exec() 可能导致代码注入
+  id: BANDIT-101
+  name: exec_used
+  pattern: \bexec\s*\([^)]*\)
+  severity: CRITICAL
+  source: bandit
+- ast_check: true
+  confidence: 95
+  description: 使用 eval() 可能导致代码注入
+  id: BANDIT-102
+  name: eval_used
+  pattern: \beval\s*\([^)]*\)
+  severity: CRITICAL
+  source: bandit
+- ast_check: true
+  confidence: 90
+  description: os.system() 可能导致 shell 注入
+  id: BANDIT-601
+  name: os_system_used
+  pattern: \bos\.system\s*\([^)]*\)
+  severity: CRITICAL
+  source: bandit
+- confidence: 85
+  description: subprocess 调用可能执行系统命令
+  id: BANDIT-602
+  name: subprocess_without_shell
+  pattern: \bsubprocess\.(call|run|Popen)\s*\([^)]*\)
+  severity: HIGH
+  source: bandit
+- confidence: 90
+  description: 使用 shell=True 可能导致注入
+  id: BANDIT-603
+  name: shell_injection
+  pattern: \bshell\s*=\s*True\b
+  severity: CRITICAL
+  source: bandit
+- confidence: 85
+  description: 硬编码密码
+  id: BANDIT-105
+  name: hardcoded_password
+  pattern: \b(password|passwd|pwd)\s*=\s*["\'][^"\']+["\']
+  severity: HIGH
+  source: bandit
+- confidence: 80
+  description: 硬编码密钥
+  id: BANDIT-106
+  name: hardcoded_secret
+  pattern: \b(secret|api_key|apikey|token)\s*=\s*["\'][^"\']+["\']
+  severity: HIGH
+  source: bandit
+- confidence: 85
+  description: SQL 语句字符串拼接可能导致注入
+  id: BANDIT-608
+  name: sql_injection
+  pattern: (SELECT|INSERT|UPDATE|DELETE).*\+
+  severity: CRITICAL
+  source: bandit
+- confidence: 80
+  description: 使用弱哈希算法
+  id: BANDIT-303
+  name: weak_cryptographic_hash
+  pattern: \b(MD5|SHA1|md5|sha1)\s*\(
+  severity: MEDIUM
+  source: bandit
+- confidence: 75
+  description: 使用不安全的临时目录
+  id: BANDIT-108
+  name: insecure_temp_file
+  pattern: /tmp/|/var/tmp/
+  severity: LOW
+  source: bandit
+source: Bandit
+total_rules: 10
+version: v5.8.0-Enhanced

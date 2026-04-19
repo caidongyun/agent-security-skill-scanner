@@ -1,0 +1,43 @@
+{
+  "total": 99308,
+  "malicious": 62276,
+  "benign": 37032,
+  "detection_rate": 62.709952873887296,
+  "by_language": {
+    "python": {
+      "total": 50294,
+      "malicious": 31115
+    },
+    "javascript": {
+      "total": 27721,
+      "malicious": 20975
+    },
+    "shell": {
+      "total": 16699,
+      "malicious": 8589
+    },
+    "powershell": {
+      "total": 1,
+      "malicious": 0
+    },
+    "yaml": {
+      "total": 4114,
+      "malicious": 1131
+    },
+    "go": {
+      "total": 479,
+      "malicious": 466
+    },
+    "unknown": {
+      "total": 0,
+      "malicious": 0
+    }
+  },
+  "by_risk_level": {
+    "critical": 2002,
+    "high": 6915,
+    "medium": 18586,
+    "low": 33313,
+    "safe": 38492
+  }
+}

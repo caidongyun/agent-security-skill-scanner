@@ -1,0 +1,567 @@
+{
+  "report_time": "2026-04-08T21:10:58.467653",
+  "sample_mode": "random",
+  "sample_size": 20,
+  "context_aware_enabled": true,
+  "stats": {
+    "total": 20,
+    "our_malicious": 16,
+    "official_malicious": 1,
+    "agreement": 5,
+    "disagreement": 15,
+    "our_false_positive": 15,
+    "our_false_negative": 0,
+    "context_aware_used": 20,
+    "context_aware_improved": 3
+  },
+  "results": [
+    {
+      "skill_name": "notebooklm-audio-generator",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/shiyanch/notebooklm-audio-generator",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "clicky-analytics",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/djedi/clicky-analytics",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 2,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "cloud-support",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/krishnakumarmahadevan-cmd/cloud-support",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "prompting",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ivangdavila/prompting",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 0.9999999999999999,
+        "malicious_files": 1,
+        "suspicious_files": 1,
+        "safe_files": 5,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "conventional-git",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/samber/conventional-git",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "short-video-copywriter",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/user520512/short-video-copywriter",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 0.8799999999999999,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 5,
+        "was_improved": true,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "cyber-kill-chain",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/krishnakumarmahadevan-cmd/cyber-kill-chain",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "story-to-prompts",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ggke/story-to-prompts",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 0.6,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "upwork",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ivangdavila/upwork",
+      "our_result": {
+        "is_malicious": false,
+        "risk_score": 0.1,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 7,
+        "was_improved": false,
+        "verdict": "SAFE"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": true,
+        "our_verdict": "SAFE",
+        "official_verdict": "SAFE",
+        "disagreement_type": "none"
+      }
+    },
+    {
+      "skill_name": "gitops",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/kcns008/kubernetes/skills/gitops",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 4,
+        "suspicious_files": 2,
+        "safe_files": 0,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "tapo",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/mihai-dinculescu/tapo",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 3,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "pigxserver-skill",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/zhibuyu/pigxserver-skill",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "extracted",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/snail3d/clawd/skills/extracted",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 2,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": true,
+        "source": "security_scan",
+        "verdict": "MALICIOUS"
+      },
+      "comparison": {
+        "agree": true,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "MALICIOUS",
+        "disagreement_type": "none"
+      }
+    },
+    {
+      "skill_name": "prompt-optimizer-chinese",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/whantt/prompt-optimizer-chinese",
+      "our_result": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "was_improved": false,
+        "verdict": "SAFE"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": true,
+        "our_verdict": "SAFE",
+        "official_verdict": "SAFE",
+        "disagreement_type": "none"
+      }
+    },
+    {
+      "skill_name": "defi-wallet-monitor",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/d2758695161/defi-wallet-monitor",
+      "our_result": {
+        "is_malicious": false,
+        "risk_score": 0.30000000000000004,
+        "malicious_files": 0,
+        "suspicious_files": 1,
+        "safe_files": 1,
+        "was_improved": false,
+        "verdict": "SUSPICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": true,
+        "our_verdict": "SUSPICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "none"
+      }
+    },
+    {
+      "skill_name": "sequential-thinking",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/aiwithabidi/sequential-thinking",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 0.9999999999999999,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "daily-briefing-pay",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/yipintangzsp/daily-briefing-pay",
+      "our_result": {
+        "is_malicious": false,
+        "risk_score": 0.1,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "was_improved": false,
+        "verdict": "SAFE"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": true,
+        "our_verdict": "SAFE",
+        "official_verdict": "SAFE",
+        "disagreement_type": "none"
+      }
+    },
+    {
+      "skill_name": "baby-compliance-privacy",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/rijoyai/baby-compliance-privacy",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 1,
+        "suspicious_files": 1,
+        "safe_files": 7,
+        "was_improved": false,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "crypto-levels-1-0-3",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/tariqsumatri82/crypto-levels-1-0-3",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 9,
+        "suspicious_files": 0,
+        "safe_files": 8,
+        "was_improved": true,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    },
+    {
+      "skill_name": "openclaw-auto-research",
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/lixiang1076/openclaw-auto-research",
+      "our_result": {
+        "is_malicious": true,
+        "risk_score": 1.0,
+        "malicious_files": 9,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "was_improved": true,
+        "verdict": "MALICIOUS"
+      },
+      "official_result": {
+        "is_malicious": false,
+        "source": "manual_check",
+        "verdict": "SAFE"
+      },
+      "comparison": {
+        "agree": false,
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "disagreement_type": "our_false_positive"
+      }
+    }
+  ],
+  "analysis": {
+    "agreement_rate": 25.0,
+    "our_precision": 6.25,
+    "our_recall": 100.0,
+    "context_aware_improvement": 15.0,
+    "top_disagreements": [
+      {
+        "skill_name": "notebooklm-audio-generator",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "clicky-analytics",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "cloud-support",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "prompting",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "conventional-git",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "short-video-copywriter",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "cyber-kill-chain",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "story-to-prompts",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "gitops",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      },
+      {
+        "skill_name": "tapo",
+        "our_verdict": "MALICIOUS",
+        "official_verdict": "SAFE",
+        "type": "our_false_positive"
+      }
+    ]
+  }
+}

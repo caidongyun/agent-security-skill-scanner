@@ -1,0 +1,2612 @@
+{
+  "scan_time": "2026-04-08T21:45:03.815491",
+  "sample_size": 100,
+  "stats": {
+    "total": 100,
+    "safe": 66,
+    "suspicious": 15,
+    "malicious": 19
+  },
+  "results": [
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/harrylabsj/focus-master",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/km2411/ai-workforce",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 20,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/richardx0319/xiaohongshu-auto-publish-macos",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 70,
+        "malicious_files": 0,
+        "suspicious_files": 1,
+        "safe_files": 2,
+        "verdict": "SUSPICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/happyzengfen/fengxinzi-moltbook",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/fortunto2/solo-audit",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/do0388309/aiparse-ocr",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 1,
+        "suspicious_files": 1,
+        "safe_files": 2,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/lunara9897-jpg/lunara-voice/plugin/skills/lunara-voice",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/tobewin/china-idcard",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/rsoutar/claw-screener",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 10,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 21,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/zanderone1980/cord-sentinel",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/brandons7/scanwow-sync",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 5,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/xiejianjun000/ren-zhengfei-perspective",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 8,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/xiaoyinqu/gemini-models",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 10,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/josephflu/domain-name-checker",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 85,
+        "malicious_files": 2,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/gztanht/whale-shark",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 10,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/binance-skills-hub/binance-algo",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 2,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/tadasgedgaudas/appkittie-mcp-skills/app-marketing-context",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/driftsbot/experience-vrindavan-stain-ritual",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/mingo-318/annotation-visualizer",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 5,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/iammiracle/cocreator-content-research",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 15,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 5,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ivangdavila/learning",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/jolestar/webmcp-bridge",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 9,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/danyangliu-sandwichlab/global-ads-helper",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/clawberrypi/xmtp-agent-swarm/skills/agent-swarm",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 70,
+        "malicious_files": 0,
+        "suspicious_files": 2,
+        "safe_files": 73,
+        "verdict": "SUSPICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/markma84/memory-treasure",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/nexaiguy/nex-voice",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 10,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": true,
+        "is_security_audit": false,
+        "has_legitimate_curl": true,
+        "recommendation": "降低风险"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/wayne19820905/openclaw-troubleshoot",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/nabssku/spongo",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/neroagent/session-wrap-up-premium",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/lc0rp/create-plugin",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 30,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ramitphi/on-chain-analyitcs",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/peandrover/language-learning-video",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ckchzh/perf-analyzer",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/mok888/spf-unified-workflow/skills/requesting-code-review",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/mumuli2021/lottery-predictor-v3-6",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 19,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/karanuppal/openclaw-credential-vault",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 2,
+        "suspicious_files": 0,
+        "safe_files": 0,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/fangshan101-coder/fanli-wang",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/wpank/professional-communication",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 30,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 7,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/nicoxia/config-validator-zh-cn",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 10,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/alondotsh/alon-search-skill-plus",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/cwyhkyochen-a11y/sparkle-vpn",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 9,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/gora050/gist",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/flaggdavid-source/amarin-memory",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/1kalin/afrexai-employee-handbook",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/leebellon/wishfinity",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/lijie420461340/proposal-writer",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/membranedev/qualaroo",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/chinfi-codex/market-stock-snapshot",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 10,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 17,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/mupengi-bot/mufi-email-manager",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 12,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/ipedrax/multiple-personas",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 11,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/gora050/mason",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/sonpiaz/affiliate-skills/skills/landing/grand-slam-offer",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/hanjing5024064/customer-pulse",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 5,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 9,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/krisyejh/wan-image-video-generation-editting",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 1,
+        "safe_files": 6,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/daimingvip-a11y/veterinary-clinic-bundle/skills/vet-churn-predict",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/zhaobudaoyuema/prompt-token-counter",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 25,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 25,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/luoqianchenguni-max/a2a-market-order-state-machine",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/scotteverduim/aura-video",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 1,
+        "safe_files": 9,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/romainsantoli-web/firm-auth-compliance-pack",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/aqbjqtd/subtitle-generator",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 85,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 11,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/mdomerofski/decision-dynamo",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 5,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/siddylcon/ai-for-video-editing",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/day253/day253-volcengine-agent-tts-to-tos",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/yhlorra/yh-minimax-multimodal-toolkit",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 7,
+        "suspicious_files": 2,
+        "safe_files": 8,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/captainsvbot/autonomous-github-team",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/yewubin-jpg/claude-code-memory-yewubin",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 11,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/shianaixuexi-cell/simple-memory-skill",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 12,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/sonpiaz/affiliate-skills/skills/automation/paid-ad-copy-writer",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/nidhov01/05",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 5,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": true,
+        "is_security_audit": false,
+        "has_legitimate_curl": true,
+        "recommendation": "降低风险"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/phernandez/memory-reflect",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/wondershare-boop/tomoviee-text-to-video",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 3,
+        "suspicious_files": 0,
+        "safe_files": 6,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/hongruiji/boc-deploy-tools",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 95,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/nikitadmitryuk/tms",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 5,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/tomstools11/blog-writer",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 12,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/daimingvip-a11y/veterinary-clinic-bundle/skills/vet-phone-ai",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/diagnostikon/kalshi-f1-points-model-trader",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/bytesagain1/repo-bundler",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 90,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/liuji10000qian-svg/tldr-xiaren-test-v2",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/qianzitech/translate-manual",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 35,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 5,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/fluidiguana/todoist-v1",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/yufish-w/travel-route-planner",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/sishierdianyijiuwu/apple-search-adser",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 8,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/romainsantoli-web/firm-saas-pack",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/alirezarezvani/agent-workflow-designer",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 2,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/chensyrick-dev/home-insurance-advisor",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/urbantech/ainative-agent-framework",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 85,
+        "malicious_files": 1,
+        "suspicious_files": 0,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (security_audit)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/rogerhyj/help-you-with-apclassroom-mcqs",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 17,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/thierrypdamiba/content-claw",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 42,
+        "malicious_files": 0,
+        "suspicious_files": 1,
+        "safe_files": 55,
+        "verdict": "SUSPICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/xyny89/agentic-browser-0-1-2",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 4,
+        "suspicious_files": 2,
+        "safe_files": 5,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/sheepxux/sopaper-evidence",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 70,
+        "malicious_files": 0,
+        "suspicious_files": 3,
+        "safe_files": 46,
+        "verdict": "SUSPICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": true,
+        "has_legitimate_curl": false,
+        "recommendation": "降低风险"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/maverick-software/plugin-architecture",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 4,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/xuya227939/x-research-kit",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/lindy-dev/bigin-crm-skill",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 4,
+        "suspicious_files": 0,
+        "safe_files": 19,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "MALICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "MALICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/liushuangfa666/mem-rag-milvus",
+      "base_scan": {
+        "is_malicious": true,
+        "risk_score": 100,
+        "malicious_files": 2,
+        "suspicious_files": 1,
+        "safe_files": 1,
+        "verdict": "MALICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "官方 Skill 或安全审计类 (development)",
+        "confidence": 80
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/cmfinlan/audio-speaker-tools",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 7,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/claudiodrusus/markdown-to-html",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 5,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/royxiao08/ai-daily-digest",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 3,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/andyylin/durable-files-weekly-review-public",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 0,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 5,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/yangran/fenz-skill-auditor",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 20,
+        "malicious_files": 0,
+        "suspicious_files": 0,
+        "safe_files": 7,
+        "verdict": "SAFE"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": true,
+        "has_legitimate_curl": false,
+        "recommendation": "降低风险"
+      },
+      "llm_analysis": {
+        "verdict": "SAFE",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SAFE",
+        "confidence": 80
+      }
+    },
+    {
+      "skill_path": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/simskii/tabussen",
+      "base_scan": {
+        "is_malicious": false,
+        "risk_score": 50,
+        "malicious_files": 0,
+        "suspicious_files": 1,
+        "safe_files": 3,
+        "verdict": "SUSPICIOUS"
+      },
+      "ast_analysis": {
+        "is_install_script": false,
+        "is_security_audit": false,
+        "has_legitimate_curl": false,
+        "recommendation": "保持原判定"
+      },
+      "llm_analysis": {
+        "verdict": "SUSPICIOUS",
+        "reason": "维持基础扫描判定",
+        "confidence": 90
+      },
+      "final_verdict": {
+        "verdict": "SUSPICIOUS",
+        "confidence": 80
+      }
+    }
+  ]
+}

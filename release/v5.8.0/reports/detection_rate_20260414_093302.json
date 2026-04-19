@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-04-14 09:33:02",
+  "config": {
+    "limit_per_type": 200,
+    "attack_types_tested": [
+      "common_pattern"
+    ]
+  },
+  "overall": {
+    "total_samples": 200,
+    "total_detected": 0,
+    "overall_detection_rate": 0.0
+  },
+  "by_attack_type": {
+    "common_pattern": {
+      "total": 200,
+      "detected": 0,
+      "missed": 200,
+      "detection_rate": 0.0,
+      "elapsed": 0.14502406120300293,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-79ab5e/payload.javascript",
+          "sample_id": "BEN-COP-79ab5e",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-daca08/payload.go",
+          "sample_id": "BEN-COP-daca08",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-5feadf/payload.go",
+          "sample_id": "BEN-COP-5feadf",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-c05d9c/payload.go",
+          "sample_id": "BEN-COP-c05d9c",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-997d24/payload.python",
+          "sample_id": "BEN-COP-997d24",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-4eb209/payload.python",
+          "sample_id": "BEN-COP-4eb209",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-c1563f/payload.go",
+          "sample_id": "BEN-COP-c1563f",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-7d0a9e/payload.bash",
+          "sample_id": "BEN-COP-7d0a9e",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-374751/payload.python",
+          "sample_id": "BEN-COP-374751",
+          "score": 18
+        },
+        {
+          "path": "samples/from-templates/common_pattern/BEN-COP-7d7b32/payload.javascript",
+          "sample_id": "BEN-COP-7d7b32",
+          "score": 18
+        }
+      ]
+    }
+  }
+}

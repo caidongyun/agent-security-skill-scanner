@@ -1,0 +1,1192 @@
+created_at: '2026-04-13T22:41:51.178485'
+patterns:
+- confidence: 85
+  description: Socket is not closed if shutdown fails. When socket.shutdown fails
+    on an OSError, socket.close is not called and the code fails to clean up the socket
+    and allow garbage collection to release the memor
+  id: V580-P0036
+  name: socket-shutdown-close
+  original_id: socket-shutdown-close
+  pattern: '\b[^)]*\.shutdown\(socket\.[^)]*\)\
+
+    [^)]*\.close\(\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Initializing a security context for Dask (`distributed`) without "require_encryption"
+    keyword argument may silently fail to provide security.
+  id: V580-P0037
+  name: require-encryption
+  original_id: require-encryption
+  pattern: '\bdistributed\.security\.Security\(\.\.\.,\ require_encryption=[^)]*,\
+    \.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: path for `$URL` is uselessly assigned twice
+  id: V580-P0038
+  name: duplicate-path-assignment
+  original_id: duplicate-path-assignment
+  pattern: '\b\[\.\.\.,\ django\.urls\.path\(''[^)]*'',\ [^)]*,\ \.\.\.\),\ \.\.\.,\
+    django\.urls\.path\(''[^)]*'',\ [^)]*,\ \.\.\.\),\ \.\.\.\]\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Use 'django.db.models.OneToOneField' instead of 'ForeignKey' with unique=True.
+    'OneToOneField' is used to create one-to-one relationships.
+  id: V580-P0039
+  name: use-onetoonefield
+  original_id: use-onetoonefield
+  pattern: \b[^)]*\ =\ django\.db\.models\.ForeignKey\(\.\.\.,\ unique=True,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Use JsonResponse instead
+  id: V580-P0040
+  name: use-json-response
+  original_id: use-json-response
+  pattern: '\b[^)]*\ =\ json\.dumps\(\.\.\.\)\
+
+    \.\.\.\
+
+    django\.http\.HttpResponse\([^)]*,\ \.\.\.\)\
+
+    '
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Found a FloatField used for variable $F. Use DecimalField for currency
+    fields to avoid float-rounding errors.
+  id: V580-P0041
+  name: use-decimalfield-for-money
+  original_id: use-decimalfield-for-money
+  pattern: \b[^)]*\ =\ django\.db\.models\.FloatField\(\.\.\.\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Detected a django model `$MODEL` is not calling super().save() inside
+    of the save method.
+  id: V580-P0042
+  name: django-db-model-save-super
+  original_id: django-db-model-save-super
+  pattern: '\bdef\ save\(self,\ \.\.\.\):\
+
+    \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: null=True should be set if blank=True is set on non-text fields.
+  id: V580-P0043
+  name: nontext-field-must-set-null-true
+  original_id: nontext-field-must-set-null-true
+  pattern: \b[^)]*\ =\ [^)]*\(\.\.\.,\ blank=True,\ \.\.\.\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: You should use ITEM.user_id rather than ITEM.user.id to prevent running
+    an extra query.
+  id: V580-P0044
+  name: access-foreign-keys
+  original_id: access-foreign-keys
+  pattern: \b[^)]*\.user\.id\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Manually-created forms in django templates should specify a csrf_token
+    to prevent CSRF attacks.
+  id: V580-P0045
+  name: django-no-csrf-token
+  original_id: django-no-csrf-token
+  pattern: \b<form\.\.\.>\.\.\.</form>\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The weak argument to django.dispatch.signals.Signal.disconnect() is
+    removed in Django 2.0.
+  id: V580-P0046
+  name: django-compat-2_0-signals-weak
+  original_id: django-compat-2_0-signals-weak
+  pattern: \bdjango\.dispatch\.signals\.Signal\.disconnect\(\.\.\.,\ weak=[^)]*,\
+    \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Django cookies should be handled securely by setting secure=True,
+    httponly=True, and samesite=''Lax'' in response.set_cookie(...). If your situation
+    calls for different settings, explicitly disable the '
+  id: V580-P0047
+  name: django-secure-set-cookie
+  original_id: django-secure-set-cookie
+  pattern: \bresponse\.set_cookie\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: QuerySet.extra' does not provide safeguards against SQL injection and
+    requires very careful use. SQL injection can lead to critical data being stolen
+    by attackers. Instead of using '.extra', use the D
+  id: V580-P0048
+  name: avoid-query-set-extra
+  original_id: avoid-query-set-extra
+  pattern: \b[^)]*\.extra\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected usage of @csrf_exempt, which indicates that there is no CSRF
+    token set for this route. This could lead to an attacker manipulating the user's
+    account and exfiltration of private data. Instead
+  id: V580-P0049
+  name: no-csrf-exempt
+  original_id: no-csrf-exempt
+  pattern: '\b@django\.views\.decorators\.csrf\.csrf_exempt\
+
+    def\ [^)]*\(\.\.\.\):\
+
+    \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Detected a Custom Expression ''''$EXPRESSION'''' calling ''''as_sql(...).''''
+    This could lead to SQL injection, which can result in attackers exfiltrating sensitive
+    data. Instead, ensure no user input enters '
+  id: V580-P0050
+  name: custom-expression-as-sql
+  original_id: custom-expression-as-sql
+  pattern: \b[^)]*\.as_sql\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The password on '$MODEL' is being set without validating the password.
+    Call django.contrib.auth.password_validation.validate_password() with validation
+    functions before setting the password. See https
+  id: V580-P0051
+  name: unvalidated-password
+  original_id: unvalidated-password
+  pattern: \b[^)]*\.set_password\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: '''mark_safe()'' is used to mark a string as "safe" for HTML output.
+    This disables escaping and could therefore subject the content to XSS attacks.
+    Use ''django.utils.html.format_html()'' to build HTML for'
+  id: V580-P0052
+  name: avoid-mark-safe
+  original_id: avoid-mark-safe
+  pattern: \bdjango\.utils\.safestring\.mark_safe\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected Django filters flagged with 'is_safe'. 'is_safe' tells Django
+    not to apply escaping on the value returned by this filter (although the input
+    is escaped). Used improperly, 'is_safe' could expo
+  id: V580-P0053
+  name: filter-with-is-safe
+  original_id: filter-with-is-safe
+  pattern: '\b@register\.filter\(\.\.\.,\ is_safe=True,\ \.\.\.\)\
+
+    def\ [^)]*\(\.\.\.\):\
+
+    \ \ \.\.\.'
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Autoescape is globally disbaled for this Django application. If you
+    are rendering any web pages, this exposes your application to cross-site scripting
+    (XSS) vulnerabilities. Remove ''autoescape: False'''
+  id: V580-P0054
+  name: global-autoescape-off
+  original_id: global-autoescape-off
+  pattern: '\b\{\.\.\.,\ ''BACKEND'':\ \.\.\.,\ ''OPTIONS'':\ \{\.\.\.,\ ''autoescape'':\
+    [^)]*,\ \.\.\.\},\ \.\.\.\}\
+
+    \b'
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The `__html__` method indicates to the Django template engine that
+    the value is 'safe' for rendering. This means that normal HTML escaping will not
+    be applied to the return value. This exposes your ap
+  id: V580-P0055
+  name: html-magic-method
+  original_id: html-magic-method
+  pattern: '\bdef\ __html__\(\.\.\.\):\
+
+    \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Django REST framework configuration is missing default rate- limiting
+    options. This could inadvertently allow resource starvation or Denial of Service
+    (DoS) attacks. Add 'DEFAULT_THROTTLE_CLASSES' and
+  id: V580-P0056
+  name: missing-throttle-config
+  original_id: missing-throttle-config
+  pattern: \bREST_FRAMEWORK\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Is "$FUNC" a function or an attribute? If it is a function, you may
+    have meant $X.$FUNC() because $X.$FUNC is always true.
+  id: V580-P0057
+  name: is-function-without-parentheses
+  original_id: is-function-without-parentheses
+  pattern: \b[^)]*\.[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: if block checks for the same condition on both branches (`$X`)
+  id: V580-P0058
+  name: useless-if-conditional
+  original_id: useless-if-conditional
+  pattern: '\bif\ [^)]*:\
+
+    \ \ \ \ \.\.\.\
+
+    elif\ [^)]*:\
+
+    \ \ \ \ \.\.\.\
+
+    \b'
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: code after return statement will not be executed
+  id: V580-P0059
+  name: code-after-unconditional-return
+  original_id: code-after-unconditional-return
+  pattern: '\breturn\ \.\.\.\
+
+    [^)]*\
+
+    \b'
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: '`$X` is uselessly assigned twice inside the creation of the set'
+  id: V580-P0060
+  name: useless-literal-set
+  original_id: useless-literal-set
+  pattern: '\bset\(\.\.\.,\ \([^)]*,\ [^)]*\),\ \.\.\.,\ \([^)]*,\ [^)]*\),\ \.\.\.\)\
+
+    '
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: 'This expression will evaluate to be ONLY value the of the `else` clause
+    if the condition `$EXPRESSION` is false. If you meant to do list concatenation,
+    put parentheses around the entire concatenation '
+  id: V580-P0061
+  name: improper-list-concat
+  original_id: improper-list-concat
+  pattern: \b\[\.\.\.\]\ \+\ \[\.\.\.\]\ if\ [^)]*\ else\ \[\.\.\.\]\b
+  severity: MEDIUM
+  source: semgrep
+- confidence: 85
+  description: function `$FF` is defined inside a function but never used
+  id: V580-P0062
+  name: useless-inner-function
+  original_id: useless-inner-function
+  pattern: '\bdef\ [^)]*\(\.\.\.\):\
+
+    \ \ \.\.\.\
+
+    '
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: '`pass` is the body of function $X. Consider removing this or raise
+    NotImplementedError() if this is a TODO'
+  id: V580-P0063
+  name: pass-body-fn
+  original_id: pass-body-fn
+  pattern: '\bdef\ [^)]*\(\.\.\.\):\
+
+    \ \ \ \ pass\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected hardcoded temp directory. Consider using 'tempfile.TemporaryFile'
+    instead.
+  id: V580-P0064
+  name: hardcoded-tmp-path
+  original_id: hardcoded-tmp-path
+  pattern: \bopen\("=\~/\^\\/tmp\.\*/",\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Class `$A` has defined `__eq__` which means it should also have defined
+    `__hash__`; '
+  id: V580-P0065
+  name: missing-hash-with-eq
+  original_id: missing-hash-with-eq
+  pattern: '\bclass\ A\(\.\.\.\):\
+
+    \ \ \.\.\.\
+
+    \ \ def\ __eq__\(self,\ [^)]*\):\ \.\.\.\
+
+    \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Synchronous time.sleep in async code will block the event loop and
+    not allow other tasks to execute. Use asyncio.sleep() instead.
+  id: V580-P0066
+  name: sync-sleep-in-async-code
+  original_id: sync-sleep-in-async-code
+  pattern: \btime\.sleep\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Class $C inherits from both `$A` and `$B` which both have a method
+    named `$F`; one of these methods will be overwritten.
+  id: V580-P0067
+  name: baseclass-attribute-override
+  original_id: baseclass-attribute-override
+  pattern: '\bclass\ [^)]*\(\.\.\.,\ [^)]*,\ \.\.\.,\ [^)]*,\ \.\.\.\):\
+
+    \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The file object '$FD' was opened in read mode, but is being written
+    to. This will cause a runtime error.
+  id: V580-P0068
+  name: writing-to-file-in-read-mode
+  original_id: writing-to-file-in-read-mode
+  pattern: \b[^)]*\.write\(\.\.\.\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: 'Values returned by thread pool map must be read in order to raise
+    exceptions. Consider using `for _ in $EXECUTOR.map(...): pass`.'
+  id: V580-P0069
+  name: uncaught-executor-exceptions
+  original_id: uncaught-executor-exceptions
+  pattern: \b\w+\.map\s*\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected a file object that is redefined and never closed. This could
+    leak file descriptors and unnecessarily consume system resources.
+  id: V580-P0070
+  name: file-object-redefined-before-close
+  original_id: file-object-redefined-before-close
+  pattern: '\b[^)]*\ =\ open\([^)]*,\ \.\.\.\)\
+
+    \.\.\.\
+
+    [^)]*\ =\ open\([^)]*,\ \.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected use of `exit`. Use `sys.exit` over the python shell `exit`
+    built-in. `exit` is a helper for the interactive shell and may not be available
+    on all Python implementations.
+  id: V580-P0071
+  name: use-sys-exit
+  original_id: use-sys-exit
+  pattern: \bexit\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Generators can only be consumed once, so in most cases, caching them
+    will cause an error when the already-consumed generator is retrieved from cache.
+  id: V580-P0072
+  name: cannot-cache-generators
+  original_id: cannot-cache-generators
+  pattern: \bfunctools\.lru_cache\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: snapshot.assert_match makes use of pathlib to create files. Patching
+    $METHOD may result in unexpected snapshot behavior
+  id: V580-P0073
+  name: pytest-assert_match-after-path-patch
+  original_id: pytest-assert_match-after-path-patch
+  pattern: \bsnapshot\.assert_match\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Comparison without assertion. The result of this comparison is not
+    used. Perhaps this expression is missing an `assert` keyword.
+  id: V580-P0074
+  name: test-is-missing-assert
+  original_id: test-is-missing-assert
+  pattern: \b[^)]*\ ==\ [^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: This is not checking the return value of this subprocess call; if it
+    fails no exception will be raised. Consider subprocess.check_call() instead
+  id: V580-P0075
+  name: unchecked-subprocess-call
+  original_id: unchecked-subprocess-call
+  pattern: \bsubprocess\.[^)]*\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The native Python `xml` library is vulnerable to XML External Entity
+    (XXE) attacks.  These attacks can leak confidential data and "XML bombs" can cause
+    denial of service. Do not use this library to pa
+  id: V580-P0076
+  name: use-defused-xml-parse
+  original_id: use-defused-xml-parse
+  pattern: \bxml\.etree\.ElementTree\.parse\(\$\.\.\.ARGS\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Detected the generation of a CSV file using the built-in `csv` module.
+    If user data is used to generate the data in this file, it is possible that an
+    attacker could inject a formula when the CSV is im
+  id: V580-P0077
+  name: use-defusedcsv
+  original_id: use-defusedcsv
+  pattern: \bcsv\.writer\(\.\.\.\)
+  severity: MEDIUM
+  source: semgrep
+- confidence: 85
+  description: Detected SHA1 hash algorithm which is considered insecure. SHA1 is
+    not collision resistant and is therefore not suitable as a cryptographic signature.
+    Use SHA256 or SHA3 instead.
+  id: V580-P0078
+  name: insecure-hash-algorithm-sha1
+  original_id: insecure-hash-algorithm-sha1
+  pattern: \bhashlib\.sha1\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'The Python documentation recommends using `defusedxml` instead of
+    `xml` because the native Python `xml` library is vulnerable to XML External Entity
+    (XXE) attacks. These attacks can leak confidential '
+  id: V580-P0079
+  name: use-defused-xml
+  original_id: use-defused-xml
+  pattern: \bimport\ xml\b
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Using UUID version 1 for UUID generation can lead to predictable UUIDs
+    based on system information (e.g., MAC address, timestamp). This may lead to security
+    risks such as the sandwich attack. Consider
+  id: V580-P0080
+  name: insecure-uuid-version
+  original_id: insecure-uuid-version
+  pattern: \buuid\.uuid1\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected MD5 hash algorithm which is considered insecure. MD5 is not
+    collision resistant and is therefore not suitable as a cryptographic signature.
+    Use SHA256 or SHA3 instead.
+  id: V580-P0081
+  name: insecure-hash-algorithm-md5
+  original_id: insecure-hash-algorithm-md5
+  pattern: \bhashlib\.md5\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: this function is only available on Python 3.6+
+  id: V580-P0082
+  name: python36-compatibility-ssl
+  original_id: python36-compatibility-ssl
+  pattern: \bssl\.get_ciphers\(\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: source_hash' is only available on Python 3.7+. This does not work in
+    lower versions, and therefore is not backwards compatible. Instead, use another
+    hash function.
+  id: V580-P0083
+  name: python37-compatibility-importlib
+  original_id: python37-compatibility-importlib
+  pattern: \bimportlib\.source_hash\(\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Avoid using `jsonpickle`, which is known to lead to code execution
+    vulnerabilities. When unpickling, the serialized data could be manipulated to
+    run arbitrary code. Instead, consider serializing the r
+  id: V580-P0084
+  name: avoid-jsonpickle
+  original_id: avoid-jsonpickle
+  pattern: '\bjsonpickle\.decode\([^)]*,\.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Untrusted user input in `importlib.import_module()` function allows
+    an attacker to load arbitrary code. Avoid dynamic values in `importlib.import_module()`
+    or use a whitelist to prevent running untrus
+  id: V580-P0085
+  name: non-literal-import
+  original_id: non-literal-import
+  pattern: '\bimportlib\.import_module\([^)]*,\ \.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Hardcoded password is used as a default argument to '$FUNC'. This could
+    be dangerous if a real password is not supplied.
+  id: V580-P0086
+  name: hardcoded-password-default-argument
+  original_id: hardcoded-password-default-argument
+  pattern: '\bdef\ [^)]*\(\.\.\.,\ password="\.\.\.",\ \.\.\.\):\
+
+    \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Annotations passed to `typing.get_type_hints` are evaluated in `globals`
+    and `locals` namespaces. Make sure that no arbitrary value can be written as the
+    annotation and passed to `typing.get_type_hint
+  id: V580-P0087
+  name: dangerous-annotations-usage
+  original_id: dangerous-annotations-usage
+  pattern: '\b[^)]*\.__annotations__\[[^)]*\]\ =\ [^)]*\
+
+    \b'
+  severity: MEDIUM
+  source: semgrep
+- confidence: 85
+  description: Telnet does not encrypt communications. Use SSH instead.
+  id: V580-P0088
+  name: telnetlib
+  original_id: telnetlib
+  pattern: \btelnetlib\.[^)]*\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected the use of exec(). exec() can be dangerous if used to evaluate
+    dynamic content. If this content can be input from outside the program, this may
+    be a code injection vulnerability. Ensure evalu
+  id: V580-P0089
+  name: exec-detected
+  original_id: exec-detected
+  pattern: \bexec\s*\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found dynamic content in `run_string`. This is dangerous if external
+    data can reach this function call because it allows a malicious actor to run arbitrary
+    Python code. Ensure no external data reaches
+  id: V580-P0090
+  name: dangerous-subinterpreters-run-string-audit
+  original_id: dangerous-subinterpreters-run-string-audit
+  pattern: '\b_xxsubinterpreters\.run_string\([^)]*,\ [^)]*,\ \.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: '''ssl.wrap_socket()'' is deprecated. This function creates an insecure
+    socket without server name indication or hostname matching. Instead, create an
+    SSL context using ''ssl.SSLContext()'' and use that to'
+  id: V580-P0091
+  name: ssl-wrap-socket-is-deprecated
+  original_id: ssl-wrap-socket-is-deprecated
+  pattern: \bssl\.wrap_socket\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found 'subprocess' function '$FUNC' with 'shell=True'. This is dangerous
+    because this call will spawn the command using a shell process. Doing so propagates
+    current shell settings and variables, which
+  id: V580-P0092
+  name: subprocess-shell-true
+  original_id: subprocess-shell-true
+  pattern: \bsubprocess\.[^)]*\(\.\.\.,\ shell=[^)]*,\ \.\.\.\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Mako templates do not provide a global HTML escaping mechanism. This
+    means you must escape all sensitive data in your templates using '| u' for URL
+    escaping or '| h' for HTML escaping. If you are usin
+  id: V580-P0093
+  name: mako-templates-detected
+  original_id: mako-templates-detected
+  pattern: \bmako\.template\.Template\(\.\.\.\)
+  severity: MEDIUM
+  source: semgrep
+- confidence: 85
+  description: Detected the use of eval(). eval() can be dangerous if used to evaluate
+    dynamic content. If this content can be input from outside the program, this may
+    be a code injection vulnerability. Ensure evalu
+  id: V580-P0094
+  name: eval-detected
+  original_id: eval-detected
+  pattern: \beval\s*\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected usage of re.compile with an inefficient regular expression.
+    This can lead to regular expression denial of service, which can result in service
+    down time. Instead, check all regexes or use saf
+  id: V580-P0095
+  name: regex_dos
+  original_id: regex_dos
+  pattern: '\b[^)]*\ =\ re\.compile\("[^)]*",\ \.\.\.\)\
+
+    \.\.\.\
+
+    [^)]*\.[^)]*\(\.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Unverified SSL context detected. This will permit insecure connections
+    without verifying SSL certificates. Use 'ssl.create_default_context()' instead.
+  id: V580-P0096
+  name: paramiko-exec-command
+  original_id: paramiko-exec-command
+  pattern: \b\w+\.exec_command\s*\([^)]*\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Detected a python logger call with a potential hardcoded secret $FORMAT_STRING
+    being logged. This may lead to secret credentials being exposed. Make sure that
+    the logger is not logging  sensitive info
+  id: V580-P0097
+  name: python-logger-credential-disclosure
+  original_id: python-logger-credential-disclosure
+  pattern: '\b[^)]*\.[^)]*\([^)]*,\.\.\.\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Because portions of the logging configuration are passed through eval(),
+    use of this function may open its users to a security risk. While the function
+    only binds to a socket on localhost, and so does
+  id: V580-P0098
+  name: listen-eval
+  original_id: listen-eval
+  pattern: \blogging\.config\.listen\s*\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The 'ssl' module disables insecure cipher suites by default. Therefore,
+    use of 'set_ciphers()' should only be used when you have very specialized requirements.
+    Otherwise, you risk lowering the securit
+  id: V580-P0099
+  name: no-set-ciphers
+  original_id: no-set-ciphers
+  pattern: \b[^)]*\.set_ciphers\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The 'FTP' class sends information unencrypted. Consider using the 'FTP_TLS'
+    class instead.
+  id: V580-P0100
+  name: use-ftp-tls
+  original_id: use-ftp-tls
+  pattern: \bftplib\.FTP\(\.\.\.\)
+  severity: MEDIUM
+  source: semgrep
+- confidence: 85
+  description: In Python 'X is not ...' is different from 'X is (not ...)'. In the
+    latter the 'not' converts the '...' directly to boolean.
+  id: V580-P0101
+  name: is-not-is-not
+  original_id: is-not-is-not
+  pattern: \b[^)]*\ is\ \(not\ \.\.\.\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Detected strings that are implicitly concatenated inside a list. Python
+    will implicitly concatenate strings when not explicitly delimited. Was this supposed
+    to be individual elements of the list?
+  id: V580-P0102
+  name: string-concat-in-list
+  original_id: string-concat-in-list
+  pattern: \b"\.\.\."\ "\.\.\."\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found identical comparison using is. Ensure this is what you intended.
+  id: V580-P0103
+  name: identical-is-comparison
+  original_id: identical-is-comparison
+  pattern: \b[^)]*\ is\ [^)]*\b
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: 'Use tempfile.NamedTemporaryFile instead. From the official Python
+    documentation: THIS FUNCTION IS UNSAFE AND SHOULD NOT BE USED. The file name may
+    refer to a file that did not exist at some point, but'
+  id: V580-P0104
+  name: tempfile-insecure
+  original_id: tempfile-insecure
+  pattern: \btempfile\.mktemp\(\.\.\.\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: .delete().where(...) results in a no-op in SQLAlchemy unless the command
+    is executed, use .filter(...).delete() instead.
+  id: V580-P0105
+  name: delete-where-no-execute
+  original_id: delete-where-no-execute
+  pattern: \b\w+\.delete\s*\(\s*\)\s*\.where\s*\([^)]*\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Using QUERY.count() instead of len(QUERY.all()) sends less data to
+    the client since the SQLAlchemy method is performed server-side.
+  id: V580-P0106
+  name: len-all-count
+  original_id: len-all-count
+  pattern: \blen\([^)]*\.all\(\)\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Hardcoded JWT secret or private key is used. This is a Insufficiently
+    Protected Credentials weakness: https://cwe.mitre.org/data/definitions/522.html
+    Consider using an appropriate security mechanism t'
+  id: V580-P0107
+  name: jwt-python-hardcoded-secret
+  original_id: jwt-python-hardcoded-secret
+  pattern: '\bjwt\.encode\([^)]*,\ "\.\.\.",\ \.\.\.\)\
+
+    '
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: The object is passed strictly to jwt.encode(...) Make sure that sensitive
+    information is not exposed through JWT token payload.
+  id: V580-P0108
+  name: jwt-python-exposed-data
+  original_id: jwt-python-exposed-data
+  pattern: \bjwt\.encode\([^)]*,\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected a Jinja2 environment with 'autoescaping' disabled. This is
+    dangerous if you are rendering to a browser because this allows for cross-site
+    scripting (XSS) attacks. If you are in a web context,
+  id: V580-P0109
+  name: incorrect-autoescape-disabled
+  original_id: incorrect-autoescape-disabled
+  pattern: \bjinja2\.Environment\(\.\.\.\ ,\ autoescape=[^)]*,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected a Jinja2 environment without autoescaping. Jinja2 does not
+    autoescape by default. This is dangerous if you are rendering to a browser because
+    this allows for cross-site scripting (XSS) attack
+  id: V580-P0110
+  name: missing-autoescape-disabled
+  original_id: missing-autoescape-disabled
+  pattern: \bjinja2\.Environment\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'IDEA (International Data Encryption Algorithm) is a block cipher created
+    in 1991.  It is an optional component of the OpenPGP standard. This cipher is
+    susceptible to attacks when using weak keys.  It '
+  id: V580-P0111
+  name: insecure-cipher-algorithm-idea
+  original_id: insecure-cipher-algorithm-idea
+  pattern: \bcryptography\.hazmat\.primitives\.ciphers\.algorithms\.[^)]*\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Potential empty AES encryption key. Using an empty key in AES encryption
+    can result in weak encryption and may allow attackers to easily decrypt sensitive
+    data. Ensure that a strong, non-empty key is '
+  id: V580-P0112
+  name: empty-aes-key
+  original_id: empty-aes-key
+  pattern: \bAES\.new\("",\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: ARC4 (Alleged RC4) is a stream cipher with serious weaknesses in its
+    initial stream output.  Its use is strongly discouraged. ARC4 does not use mode
+    constructions. Use a strong symmetric cipher such a
+  id: V580-P0113
+  name: insecure-cipher-algorithm-arc4
+  original_id: insecure-cipher-algorithm-arc4
+  pattern: \bcryptography\.hazmat\.primitives\.ciphers\.algorithms\.[^)]*4\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Blowfish is a block cipher developed by Bruce Schneier. It is known
+    to be susceptible to attacks when using weak keys.  The author has recommended
+    that users of Blowfish move to newer algorithms such '
+  id: V580-P0114
+  name: insecure-cipher-algorithm-blowfish
+  original_id: insecure-cipher-algorithm-blowfish
+  pattern: \bcryptography\.hazmat\.primitives\.ciphers\.algorithms\.[^)]*\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected an insufficient curve size for EC. NIST recommends a key size
+    of 224 or higher. For example, use 'ec.SECP256R1'.
+  id: V580-P0115
+  name: insufficient-ec-key-size
+  original_id: insufficient-ec-key-size
+  pattern: \bcryptography\.hazmat\.primitives\.asymmetric\.ec\.[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected SHA1 hash algorithm which is considered insecure. SHA1 is
+    not collision resistant and is therefore not suitable as a cryptographic signature.
+    Use SHA256 or SHA3 instead.
+  id: V580-P0116
+  name: insecure-hash-algorithm-sha1
+  original_id: insecure-hash-algorithm-sha1
+  pattern: \bcryptography\.hazmat\.primitives\.hashes\.[^)]*\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: ECB (Electronic Code Book) is the simplest mode of operation for block
+    ciphers.  Each block of data is encrypted in the same way.  This means identical
+    plaintext blocks will always result in identical
+  id: V580-P0117
+  name: insecure-cipher-mode-ecb
+  original_id: insecure-cipher-mode-ecb
+  pattern: \bcryptography\.hazmat\.primitives\.ciphers\.modes\.ECB\([^)]*\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected MD5 hash algorithm which is considered insecure. MD5 is not
+    collision resistant and is therefore not suitable as a cryptographic signature.
+    Use SHA256 or SHA3 instead.
+  id: V580-P0118
+  name: insecure-hash-algorithm-md5
+  original_id: insecure-hash-algorithm-md5
+  pattern: \bcryptography\.hazmat\.primitives\.hashes\.[^)]*5\(\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Automatic check of cross-site request forgery tokens has been explicitly
+    disabled globally, which might leave views unprotected. Use 'pyramid.config.Configurator.set_default_csrf_options(require_csrf=
+  id: V580-P0119
+  name: pyramid-csrf-check-disabled-globally
+  original_id: pyramid-csrf-check-disabled-globally
+  pattern: \b[^)]*\b
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie without the samesite option correctly set. Pyramid
+    cookies should be handled securely by setting samesite='Lax' in response.set_cookie(...).
+    If this parameter is not properly se
+  id: V580-P0120
+  name: pyramid-set-cookie-samesite-unsafe-value
+  original_id: pyramid-set-cookie-samesite-unsafe-value
+  pattern: \b[^)]*\.set_cookie\(\.\.\.,\ samesite=[^)]*,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie without the samesite option correctly set. Pyramid
+    cookies should be handled securely by setting samesite='Lax' in response.set_cookie(...).
+    If this parameter is not properly se
+  id: V580-P0121
+  name: pyramid-set-cookie-samesite-unsafe-value
+  original_id: pyramid-set-cookie-samesite-unsafe-value
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid Authentication Ticket cookie without the httponly option
+    correctly set. Pyramid cookies should be handled securely by setting httponly=True.
+    If this parameter is not properly set, your
+  id: V580-P0122
+  name: pyramid-authtkt-cookie-httponly-unsafe-value
+  original_id: pyramid-authtkt-cookie-httponly-unsafe-value
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie without the httponly option correctly set. Pyramid
+    cookies should be handled securely by setting httponly=True in response.set_cookie(...).
+    If this parameter is not properly set
+  id: V580-P0123
+  name: pyramid-set-cookie-httponly-unsafe-value
+  original_id: pyramid-set-cookie-httponly-unsafe-value
+  pattern: \b[^)]*\.set_cookie\(\.\.\.,\ httponly=[^)]*,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie without the httponly option correctly set. Pyramid
+    cookies should be handled securely by setting httponly=True in response.set_cookie(...).
+    If this parameter is not properly set
+  id: V580-P0124
+  name: pyramid-set-cookie-httponly-unsafe-value
+  original_id: pyramid-set-cookie-httponly-unsafe-value
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid Authentication Ticket cookie without the httponly option
+    correctly set. Pyramid cookies should be handled securely by setting httponly=True.
+    If this parameter is not properly set, your
+  id: V580-P0125
+  name: pyramid-authtkt-cookie-httponly-unsafe-default
+  original_id: pyramid-authtkt-cookie-httponly-unsafe-default
+  pattern: \bpyramid\.authentication\.[^)]*\(\$\.\.\.PARAMS\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie using an unsafe value for the samesite option.
+    Pyramid cookies should be handled securely by setting samesite='Lax' in response.set_cookie(...).
+    If this parameter is not properl
+  id: V580-P0126
+  name: pyramid-set-cookie-samesite-unsafe-default
+  original_id: pyramid-set-cookie-samesite-unsafe-default
+  pattern: \b[^)]*\.set_cookie\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie using an unsafe default for the secure option.
+    Pyramid cookies should be handled securely by setting secure=True in response.set_cookie(...).
+    If this parameter is not properly s
+  id: V580-P0127
+  name: pyramid-set-cookie-secure-unsafe-default
+  original_id: pyramid-set-cookie-secure-unsafe-default
+  pattern: \b[^)]*\.set_cookie\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: CSRF protection is disabled for this view. This is a security risk.
+  id: V580-P0128
+  name: pyramid-csrf-check-disabled
+  original_id: pyramid-csrf-check-disabled
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie using an unsafe default for the httponly option.
+    Pyramid cookies should be handled securely by setting httponly=True in response.set_cookie(...).
+    If this parameter is not proper
+  id: V580-P0129
+  name: pyramid-set-cookie-httponly-unsafe-default
+  original_id: pyramid-set-cookie-httponly-unsafe-default
+  pattern: \b[^)]*\.set_cookie\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid Authentication Ticket without the samesite option correctly
+    set. Pyramid cookies should be handled securely by setting samesite='Lax'. If
+    this parameter is not properly set, your cooki
+  id: V580-P0130
+  name: pyramid-authtkt-cookie-samesite
+  original_id: pyramid-authtkt-cookie-samesite
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie without the secure option correctly set. Pyramid
+    cookies should be handled securely by setting secure=True in response.set_cookie(...).
+    If this parameter is not properly set, yo
+  id: V580-P0131
+  name: pyramid-set-cookie-secure-unsafe-value
+  original_id: pyramid-set-cookie-secure-unsafe-value
+  pattern: \b[^)]*\.set_cookie\(\.\.\.,\ secure=[^)]*,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid cookie without the secure option correctly set. Pyramid
+    cookies should be handled securely by setting secure=True in response.set_cookie(...).
+    If this parameter is not properly set, yo
+  id: V580-P0132
+  name: pyramid-set-cookie-secure-unsafe-value
+  original_id: pyramid-set-cookie-secure-unsafe-value
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Origin check for the CSRF token is disabled for this view. This might
+    represent a security risk if the CSRF storage policy is not known to be secure.
+  id: V580-P0133
+  name: pyramid-csrf-origin-check-disabled
+  original_id: pyramid-csrf-origin-check-disabled
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Automatic check of the referrer for cross-site request forgery tokens
+    has been explicitly disabled globally, which might leave views unprotected when
+    an unsafe CSRF storage policy is used. Use 'pyrami
+  id: V580-P0134
+  name: pyramid-csrf-origin-check-disabled-globally
+  original_id: pyramid-csrf-origin-check-disabled-globally
+  pattern: \b[^)]*\b
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Found a Pyramid Authentication Ticket cookie without the secure option
+    correctly set. Pyramid cookies should be handled securely by setting secure=True.
+    If this parameter is not properly set, your coo
+  id: V580-P0135
+  name: pyramid-authtkt-cookie-secure-unsafe-value
+  original_id: pyramid-authtkt-cookie-secure-unsafe-value
+  pattern: \b[^)]*\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Use `click.secho($X)` instead. It combines click.echo() and click.style().
+  id: V580-P0136
+  name: use-click-secho
+  original_id: use-click-secho
+  pattern: \bclick\.echo\(click\.style\([^)]*,\ \.\.\.\)\)
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: flask.jsonify() is a Flask helper method which handles the correct  settings
+    for returning JSON from Flask routes
+  id: V580-P0137
+  name: use-jsonify
+  original_id: use-jsonify
+  pattern: \b[^)]*\b
+  severity: CRITICAL
+  source: semgrep
+- confidence: 85
+  description: Looks like `$R` is a flask function handler that registered to two
+    different routes. This will cause a runtime error
+  id: V580-P0138
+  name: flask-duplicate-handler-name
+  original_id: flask-duplicate-handler-name
+  pattern: '\b@app\.route\("\.\.\.",\ \.\.\.\)\
+
+    def\ [^)]*\(\.\.\.\):\
+
+    \ \ \ \ \.\.\.\
+
+    \.\.\.\
+
+    @app\.route\("\.\.\.",\ \.\.\.\)\
+
+    def\ [^)]*\(\.\.\.\):\
+
+    \ \ \ \ \.\.\.\
+
+    '
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Detected a user-controlled `filename` that could flow to `flask.send_file()`
+    function. This could lead to an attacker reading arbitrary file from the system,
+    leaking private information. Make sure to '
+  id: V580-P0139
+  name: avoid_send_file_without_path_sanitization
+  original_id: avoid_send_file_without_path_sanitization
+  pattern: \bflask\.send_file\(filename,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Detected Flask app with debug=True. Do not deploy to production with
+    this flag enabled as it will leak sensitive information. Instead, consider using
+    Flask configuration variables or setting 'debug' u
+  id: V580-P0140
+  name: debug-enabled
+  original_id: debug-enabled
+  pattern: \b[^)]*\.run\(\.\.\.,\ debug=True,\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: top-level app.run(...) is ignored by flask. Consider putting app.run(...)
+    behind a guard, like inside a function
+  id: V580-P0141
+  name: avoid_using_app_run_directly
+  original_id: avoid_using_app_run_directly
+  pattern: \bapp\.run\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a template created with string formatting. This is susceptible
+    to server-side template injection and cross-site scripting attacks.
+  id: V580-P0142
+  name: render-template-string
+  original_id: render-template-string
+  pattern: \bflask\.render_template_string\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Found a Flask cookie with insecurely configured properties.  By default
+    the secure, httponly and samesite ar configured insecurely. cookies should be
+    handled securely by setting `secure=True`, `httpon
+  id: V580-P0143
+  name: secure-set-cookie
+  original_id: secure-set-cookie
+  pattern: \b[^)]*\.set_cookie\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Be careful with `flask.make_response()`. If this response is rendered
+    onto a webpage, this could create a cross-site scripting (XSS) vulnerability.
+    `flask.make_response()` will not autoescape HTML. If
+  id: V580-P0144
+  name: make-response-with-unknown-content
+  original_id: make-response-with-unknown-content
+  pattern: \bflask\.make_response\(\.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: 'Detected a unquoted template variable as an attribute. If unquoted,
+    a malicious actor could inject custom JavaScript handlers. To fix this, add quotes
+    around the template expression, like this: "{{ $.'
+  id: V580-P0145
+  name: template-unquoted-attribute-var
+  original_id: template-unquoted-attribute-var
+  pattern: \b=\{\{\$\.\.\.VAR\}\}\b
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The requests library has a convenient shortcut for reading JSON responses,
+    which lets you stop worrying about deserializing the response yourself.
+  id: V580-P0146
+  name: python.requests.best-practice.use-response-json-sh
+  original_id: python.requests.best-practice.use-response-json-shortcut
+  pattern: \bjson\.loads\([^)]*\.text\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: The requests library has a convenient shortcut for sending JSON requests,
+    which lets you stop worrying about serializing the body yourself. To use it, replace
+    `body=json.dumps(...)` with `json=...`.
+  id: V580-P0147
+  name: python.requests.best-practice.use-request-json-sho
+  original_id: python.requests.best-practice.use-request-json-shortcut
+  pattern: \brequests\.[^)]*\(\.\.\.,\ body=json\.dumps\([^)]*\),\ \.\.\.\)
+  severity: HIGH
+  source: semgrep
+- confidence: 85
+  description: Warning MONGODB-CR was deprecated with the release of MongoDB 3.6 and
+    is no longer supported by MongoDB 4.0 (see https://api.mongodb.com/python/current/examples/authentication.html
+    for details).
+  id: V580-P0148
+  name: mongo-client-bad-auth
+  original_id: mongo-client-bad-auth
+  pattern: '\bpymongo\.MongoClient\(\.\.\.,\ authMechanism=''MONGODB\-CR''\)\
+
+    '
+  severity: HIGH
+  source: semgrep
+source: Semgrep
+total_patterns: 113
+version: v5.8.0-Enhanced

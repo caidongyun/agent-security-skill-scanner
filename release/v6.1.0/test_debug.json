@@ -1,0 +1,4242 @@
+{
+  "summary": {
+    "total_files": 90,
+    "detected": 83,
+    "safe": 7,
+    "detection_rate": 92.22222222222223,
+    "scan_time": "2026-04-16T14:28:53.563891"
+  },
+  "config": {
+    "version": "6.1.0",
+    "rules_count": 609,
+    "extensions": ".py,.js,.sh,.ps1,.yaml,.json",
+    "max_files": 1000,
+    "llm_enabled": false,
+    "llm_model": null
+  },
+  "risk_distribution": {
+    "CRITICAL": 38,
+    "HIGH": 45,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "SAFE": 7
+  },
+  "llm_stats": null,
+  "results": [
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_001.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-侦察/-098",
+        "OFFICIAL-横向移-061",
+        "OFFICIAL-侦察/-099",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.ssh/",
+            40
+          ],
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "credentials",
+            35
+          ]
+        ],
+        "max_weight": 40,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-横向移-061",
+            "credential_theft",
+            60,
+            "官方：横向移动 - ssh "
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-098",
+            "credential_theft",
+            60,
+            "官方：侦察/发现 - hostname"
+          ],
+          [
+            "OFFICIAL-侦察/-099",
+            "credential_theft",
+            60,
+            "官方：侦察/发现 - uname"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OFFICIAL-通用恶-109",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - c2"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-001",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: requests\\.post"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_004.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-101",
+        "OFFICIAL-资源下-087",
+        "OPT-SUP-003",
+        "BANDIT-601",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-101",
+            "arbitrary_execution",
+            95,
+            "Exec Used"
+          ],
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-018",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: exec\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "JS-001",
+            "code_execution",
+            50,
+            "JavaScript 代码执行检测"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "code_execution",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 8,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_001.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 14,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-603",
+        "OFFICIAL-资源下-087",
+        "OPT-REX-003",
+        "OFFICIAL-命令执-008",
+        "BANDIT-602"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-097",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - network"
+          ],
+          [
+            "OFFICIAL-收集-104",
+            "resource_exhaustion",
+            60,
+            "官方：收集 - capture"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "reconnaissance",
+          "remote_code_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 14,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_002.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-101",
+        "OFFICIAL-资源下-087",
+        "OPT-SUP-003",
+        "BANDIT-601",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-101",
+            "arbitrary_execution",
+            95,
+            "Exec Used"
+          ],
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-018",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: exec\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "JS-001",
+            "code_execution",
+            50,
+            "JavaScript 代码执行检测"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "code_execution",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 8,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_003.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_003.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 5,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-凭据窃-036",
+        "OPT-FP-005",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.netrc",
+            50
+          ],
+          [
+            "credential_theft",
+            "/etc/shadow",
+            55
+          ]
+        ],
+        "max_weight": 55,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-凭据窃-036",
+            "credential_theft",
+            60,
+            "官方：凭据窃取 - /etc/shadow"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 5,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_000.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 14,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-603",
+        "OFFICIAL-资源下-087",
+        "OPT-REX-003",
+        "OFFICIAL-命令执-008",
+        "BANDIT-602"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-097",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - network"
+          ],
+          [
+            "OFFICIAL-收集-104",
+            "resource_exhaustion",
+            60,
+            "官方：收集 - capture"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "reconnaissance",
+          "remote_code_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 14,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_003.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-持久化-028",
+        "OFFICIAL-持久化-029",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-109",
+        "OFFICIAL-横向移-061"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OFFICIAL-持久化-028",
+            "unknown",
+            60,
+            "官方：持久化 - persistence"
+          ],
+          [
+            "OFFICIAL-持久化-029",
+            "unknown",
+            60,
+            "官方：持久化 - backdoor"
+          ],
+          [
+            "OFFICIAL-横向移-061",
+            "unknown",
+            60,
+            "官方：横向移动 - ssh "
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-109",
+            "unknown",
+            60,
+            "官方：通用恶意特征 - c2"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "unknown",
+          "supply_chain_attack"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_004.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 14,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-603",
+        "OFFICIAL-资源下-087",
+        "OPT-REX-003",
+        "OFFICIAL-命令执-008",
+        "BANDIT-602"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-097",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - network"
+          ],
+          [
+            "OFFICIAL-收集-104",
+            "resource_exhaustion",
+            60,
+            "官方：收集 - capture"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "reconnaissance",
+          "remote_code_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 14,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_004.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 9,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002",
+        "OFFICIAL-通用恶-108"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "obfuscation",
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-003",
+            "credential_theft",
+            80,
+            "隐蔽数据外传"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ],
+          [
+            "SKILLFORTIFY-DAT-008",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: base64\\.b64encode"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 9,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_004.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-SUP-001",
+        "AI-016",
+        "SKILLFORTIFY-PRI-020",
+        "OFFICIAL-资源下-087",
+        "AI-015-ML"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-SUP-001",
+            "supply_chain_attack",
+            95,
+            "供应链攻击 - 恶意包安装"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "SKILLFORTIFY-PRI-020",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: __import__\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "AI-016",
+            "multi_stage_attack",
+            50,
+            "Multi-Stage Attack Detection"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "reconnaissance",
+          "unknown",
+          "multi_stage_attack",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_002.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "SKILLFORTIFY-PRI-015",
+        "SKILLFORTIFY-PRI-011",
+        "BASH-006",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "privilege_escalation",
+            "sudoers",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "NOPASSWD",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "chmod.*4755",
+            55
+          ]
+        ],
+        "max_weight": 60,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "SKILLFORTIFY-PRI-011",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: sudo\\b"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "BASH-006",
+            "privilege_escalation",
+            50,
+            "Bash 权限提升"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 4,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_002.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "ATLAS-PAT-009",
+        "OPT-REX-003",
+        "OPT-REX-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "resource_exhaustion",
+            "subprocess\\.Popen",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "ATLAS-PAT-009",
+            "resource_exhaustion",
+            85,
+            "AI 资源滥用"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 4,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_003.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_001.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_004.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-通用恶-112",
+        "OFFICIAL-持久化-028",
+        "OFFICIAL-持久化-019",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OFFICIAL-持久化-019",
+            "persistence",
+            60,
+            "官方：持久化 - crontab"
+          ],
+          [
+            "OFFICIAL-持久化-028",
+            "persistence",
+            60,
+            "官方：持久化 - persistence"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "persistence",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-112",
+            "persistence",
+            60,
+            "官方：通用恶意特征 - malware"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "persistence",
+          "remote_code_execution",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_001.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "SKILLFORTIFY-PRI-015",
+        "SKILLFORTIFY-PRI-011",
+        "BASH-006",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "privilege_escalation",
+            "sudoers",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "NOPASSWD",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "chmod.*4755",
+            55
+          ]
+        ],
+        "max_weight": 60,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "SKILLFORTIFY-PRI-011",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: sudo\\b"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "BASH-006",
+            "privilege_escalation",
+            50,
+            "Bash 权限提升"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 4,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_001.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_001.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "ATLAS-PAT-009",
+        "OPT-REX-003",
+        "OPT-REX-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "resource_exhaustion",
+            "subprocess\\.Popen",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "ATLAS-PAT-009",
+            "resource_exhaustion",
+            85,
+            "AI 资源滥用"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 4,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_003.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 14,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-603",
+        "OFFICIAL-资源下-087",
+        "OPT-REX-003",
+        "OFFICIAL-命令执-008",
+        "BANDIT-602"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-097",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - network"
+          ],
+          [
+            "OFFICIAL-收集-104",
+            "resource_exhaustion",
+            60,
+            "官方：收集 - capture"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "reconnaissance",
+          "remote_code_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 14,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_003.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-侦察/-098",
+        "OFFICIAL-横向移-061",
+        "OFFICIAL-侦察/-099",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.ssh/",
+            40
+          ],
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "credentials",
+            35
+          ]
+        ],
+        "max_weight": 40,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-横向移-061",
+            "credential_theft",
+            60,
+            "官方：横向移动 - ssh "
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-098",
+            "credential_theft",
+            60,
+            "官方：侦察/发现 - hostname"
+          ],
+          [
+            "OFFICIAL-侦察/-099",
+            "credential_theft",
+            60,
+            "官方：侦察/发现 - uname"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OFFICIAL-通用恶-109",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - c2"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-001",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: requests\\.post"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_000.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-通用恶-112",
+        "OFFICIAL-持久化-028",
+        "OFFICIAL-持久化-019",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OFFICIAL-持久化-019",
+            "persistence",
+            60,
+            "官方：持久化 - crontab"
+          ],
+          [
+            "OFFICIAL-持久化-028",
+            "persistence",
+            60,
+            "官方：持久化 - persistence"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "persistence",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-112",
+            "persistence",
+            60,
+            "官方：通用恶意特征 - malware"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "persistence",
+          "remote_code_execution",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_003.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "ATLAS-PAT-009",
+        "OPT-REX-003",
+        "OPT-REX-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "resource_exhaustion",
+            "subprocess\\.Popen",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "ATLAS-PAT-009",
+            "resource_exhaustion",
+            85,
+            "AI 资源滥用"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 4,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_000.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "SKILLFORTIFY-PRI-015",
+        "SKILLFORTIFY-PRI-011",
+        "BASH-006",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "privilege_escalation",
+            "sudoers",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "NOPASSWD",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "chmod.*4755",
+            55
+          ]
+        ],
+        "max_weight": 60,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "SKILLFORTIFY-PRI-011",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: sudo\\b"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "BASH-006",
+            "privilege_escalation",
+            50,
+            "Bash 权限提升"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 4,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_002.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 14,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-603",
+        "OFFICIAL-资源下-087",
+        "OPT-REX-003",
+        "OFFICIAL-命令执-008",
+        "BANDIT-602"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-097",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - network"
+          ],
+          [
+            "OFFICIAL-收集-104",
+            "resource_exhaustion",
+            60,
+            "官方：收集 - capture"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "reconnaissance",
+          "remote_code_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 14,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_000.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_000.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-SUP-001",
+        "AI-016",
+        "SKILLFORTIFY-PRI-020",
+        "OFFICIAL-资源下-087",
+        "AI-015-ML"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-SUP-001",
+            "supply_chain_attack",
+            95,
+            "供应链攻击 - 恶意包安装"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "SKILLFORTIFY-PRI-020",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: __import__\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "AI-016",
+            "multi_stage_attack",
+            50,
+            "Multi-Stage Attack Detection"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "reconnaissance",
+          "unknown",
+          "multi_stage_attack",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_002.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-通用恶-112",
+        "OFFICIAL-持久化-028",
+        "OFFICIAL-持久化-019",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OFFICIAL-持久化-019",
+            "persistence",
+            60,
+            "官方：持久化 - crontab"
+          ],
+          [
+            "OFFICIAL-持久化-028",
+            "persistence",
+            60,
+            "官方：持久化 - persistence"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "persistence",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-112",
+            "persistence",
+            60,
+            "官方：通用恶意特征 - malware"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "persistence",
+          "remote_code_execution",
+          "privilege_escalation",
+          "credential_theft"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_001.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 5,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-凭据窃-036",
+        "OPT-FP-005",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.netrc",
+            50
+          ],
+          [
+            "credential_theft",
+            "/etc/shadow",
+            55
+          ]
+        ],
+        "max_weight": 55,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-凭据窃-036",
+            "credential_theft",
+            60,
+            "官方：凭据窃取 - /etc/shadow"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 5,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_002.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_004.py",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_000.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 5,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-凭据窃-036",
+        "OPT-FP-005",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.netrc",
+            50
+          ],
+          [
+            "credential_theft",
+            "/etc/shadow",
+            55
+          ]
+        ],
+        "max_weight": 55,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-凭据窃-036",
+            "credential_theft",
+            60,
+            "官方：凭据窃取 - /etc/shadow"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 5,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_004.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "ATLAS-PAT-009",
+        "OPT-REX-003",
+        "OPT-REX-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "resource_exhaustion",
+            "subprocess\\.Popen",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "ATLAS-PAT-009",
+            "resource_exhaustion",
+            85,
+            "AI 资源滥用"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 4,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_001.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-持久化-028",
+        "OFFICIAL-持久化-029",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-109",
+        "OFFICIAL-横向移-061"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OFFICIAL-持久化-028",
+            "unknown",
+            60,
+            "官方：持久化 - persistence"
+          ],
+          [
+            "OFFICIAL-持久化-029",
+            "unknown",
+            60,
+            "官方：持久化 - backdoor"
+          ],
+          [
+            "OFFICIAL-横向移-061",
+            "unknown",
+            60,
+            "官方：横向移动 - ssh "
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-109",
+            "unknown",
+            60,
+            "官方：通用恶意特征 - c2"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "unknown",
+          "supply_chain_attack"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_002.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 5,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-凭据窃-036",
+        "OPT-FP-005",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.netrc",
+            50
+          ],
+          [
+            "credential_theft",
+            "/etc/shadow",
+            55
+          ]
+        ],
+        "max_weight": 55,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-凭据窃-036",
+            "credential_theft",
+            60,
+            "官方：凭据窃取 - /etc/shadow"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 5,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_004.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 5,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-凭据窃-036",
+        "OPT-FP-005",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "credential_theft",
+            "\\.netrc",
+            50
+          ],
+          [
+            "credential_theft",
+            "/etc/shadow",
+            55
+          ]
+        ],
+        "max_weight": 55,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-凭据窃-036",
+            "credential_theft",
+            60,
+            "官方：凭据窃取 - /etc/shadow"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft"
+        ],
+        "hit_count": 5,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_002.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-SUP-001",
+        "AI-016",
+        "SKILLFORTIFY-PRI-020",
+        "OFFICIAL-资源下-087",
+        "AI-015-ML"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-SUP-001",
+            "supply_chain_attack",
+            95,
+            "供应链攻击 - 恶意包安装"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "SKILLFORTIFY-PRI-020",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: __import__\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "AI-016",
+            "multi_stage_attack",
+            50,
+            "Multi-Stage Attack Detection"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "reconnaissance",
+          "unknown",
+          "multi_stage_attack",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_004.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "SKILLFORTIFY-PRI-015",
+        "SKILLFORTIFY-PRI-011",
+        "BASH-006",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "privilege_escalation",
+            "sudoers",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "NOPASSWD",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "chmod.*4755",
+            55
+          ]
+        ],
+        "max_weight": 60,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "SKILLFORTIFY-PRI-011",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: sudo\\b"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "BASH-006",
+            "privilege_escalation",
+            50,
+            "Bash 权限提升"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 4,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_003.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-SUP-001",
+        "AI-016",
+        "SKILLFORTIFY-PRI-020",
+        "OFFICIAL-资源下-087",
+        "AI-015-ML"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-SUP-001",
+            "supply_chain_attack",
+            95,
+            "供应链攻击 - 恶意包安装"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "SKILLFORTIFY-PRI-020",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: __import__\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "AI-016",
+            "multi_stage_attack",
+            50,
+            "Multi-Stage Attack Detection"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "reconnaissance",
+          "unknown",
+          "multi_stage_attack",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_supply_chain_001.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 6,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-SUP-001",
+        "AI-016",
+        "SKILLFORTIFY-PRI-020",
+        "OFFICIAL-资源下-087",
+        "AI-015-ML"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-SUP-001",
+            "supply_chain_attack",
+            95,
+            "供应链攻击 - 恶意包安装"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "SKILLFORTIFY-PRI-020",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: __import__\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "AI-016",
+            "multi_stage_attack",
+            50,
+            "Multi-Stage Attack Detection"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "reconnaissance",
+          "unknown",
+          "multi_stage_attack",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 6,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_resource_exhaustion_000.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "ATLAS-PAT-009",
+        "OPT-REX-003",
+        "OPT-REX-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "resource_exhaustion",
+            "subprocess\\.Popen",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-REX-003",
+            "resource_exhaustion",
+            80,
+            "资源耗尽 - 无限循环"
+          ],
+          [
+            "ATLAS-PAT-009",
+            "resource_exhaustion",
+            85,
+            "AI 资源滥用"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-REX-002",
+            "resource_exhaustion",
+            80,
+            "无限进程配置"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "resource_exhaustion"
+        ],
+        "hit_count": 4,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_003.py",
+      "detected": true,
+      "score": 90,
+      "findings_count": 4,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "SKILLFORTIFY-PRI-015",
+        "SKILLFORTIFY-PRI-011",
+        "BASH-006",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "privilege_escalation",
+            "sudoers",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "NOPASSWD",
+            60
+          ],
+          [
+            "privilege_escalation",
+            "chmod.*4755",
+            55
+          ]
+        ],
+        "max_weight": 60,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "SKILLFORTIFY-PRI-011",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: sudo\\b"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "BASH-006",
+            "privilege_escalation",
+            50,
+            "Bash 权限提升"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "privilege_escalation"
+        ],
+        "hit_count": 4,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_network_call_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_002.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 9,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002",
+        "OFFICIAL-通用恶-108"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "obfuscation",
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-003",
+            "credential_theft",
+            80,
+            "隐蔽数据外传"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ],
+          [
+            "SKILLFORTIFY-DAT-008",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: base64\\.b64encode"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 9,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_obfuscation_000.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_privilege_escalation_004.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_credential_theft_001.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_002.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_persistence_003.json",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_data_exfil_000.py",
+      "detected": true,
+      "score": 85,
+      "findings_count": 9,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-资源下-087",
+        "OPT-FP-002",
+        "OFFICIAL-通用恶-108"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "obfuscation",
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-108",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - attacker"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-003",
+            "credential_theft",
+            80,
+            "隐蔽数据外传"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ],
+          [
+            "SKILLFORTIFY-DAT-008",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: base64\\.b64encode"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "data_exfiltration",
+          "credential_theft"
+        ],
+        "hit_count": 9,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/.openclaw/workspace/agent-security-skill-scanner-master/benchmark_samples/malicious/python/python_code_execution_000.py",
+      "detected": true,
+      "score": 95,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-101",
+        "OFFICIAL-资源下-087",
+        "OPT-SUP-003",
+        "BANDIT-601",
+        "SKILLFORTIFY-PRI-014"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-101",
+            "arbitrary_execution",
+            95,
+            "Exec Used"
+          ],
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "SKILLFORTIFY-PRI-018",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: exec\\s*\\("
+          ],
+          [
+            "AI-015-ML",
+            "remote_code_execution",
+            50,
+            "Remote Code Execution Detection (Multi-Language)"
+          ],
+          [
+            "JS-001",
+            "code_execution",
+            50,
+            "JavaScript 代码执行检测"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "supply_chain_attack",
+          "arbitrary_execution",
+          "code_execution",
+          "remote_code_execution",
+          "privilege_escalation"
+        ],
+        "hit_count": 8,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    }
+  ]
+}

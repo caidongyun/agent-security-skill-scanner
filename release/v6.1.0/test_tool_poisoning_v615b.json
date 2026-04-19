@@ -1,0 +1,6190 @@
+{
+  "summary": {
+    "total_files": 100,
+    "detected": 90,
+    "safe": 10,
+    "detection_rate": 90.0,
+    "scan_time": "2026-04-17T17:52:18.463253"
+  },
+  "config": {
+    "version": "6.1.0",
+    "rules_count": 609,
+    "extensions": ".py,.js,.sh,.ps1,.yaml,.json",
+    "max_files": 1000,
+    "llm_enabled": false,
+    "llm_model": null
+  },
+  "risk_distribution": {
+    "CRITICAL": 80,
+    "HIGH": 10,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "SAFE": 10
+  },
+  "llm_stats": null,
+  "results": [
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-2279.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 12,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-M-8074.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-4937.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-H-8856.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-1708.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-3373.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-2503.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-H-3620.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-H-3151.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-H-2065.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-6770.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-M-7965.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-3853.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-2298.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-M-9676.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-4196.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-M-9157.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-M-3553.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-M-8437.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-M-2651.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-8133.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-M-9962.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-M-8993.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-H-8567.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-5640.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 13,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-100",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - whoami"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-FP-004",
+            "resource_exhaustion",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 13,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-7361.yaml",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "code_execution",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "code_execution",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "tool_poisoning",
+          "privilege_escalation",
+          "code_execution"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-5089.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-H-6468.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-5648.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-M-6414.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-M-2916.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-H-8675.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-4435.yaml",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "code_execution",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "code_execution",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "tool_poisoning",
+          "privilege_escalation",
+          "code_execution"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-4373.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-7263.yaml",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "code_execution",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "code_execution",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "tool_poisoning",
+          "privilege_escalation",
+          "code_execution"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-H-2618.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-4058.yaml",
+      "detected": true,
+      "score": 90,
+      "findings_count": 9,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-侦察/-100"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "OPT-FP-001",
+            "resource_exhaustion",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "code_execution",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-100",
+            "code_execution",
+            60,
+            "官方：侦察/发现 - whoami"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "code_execution",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "tool_poisoning",
+          "code_execution"
+        ],
+        "hit_count": 9,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-M-4693.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-5721.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-6205.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-H-8400.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-8861.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-4208.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-M-7149.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-4104.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-5034.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-H-7881.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-5022.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-M-4318.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-M-2043.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-8491.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-H-3781.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-1667.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-3942.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-H-6969.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-M-2060.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-7560.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 13,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-100",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - whoami"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-FP-004",
+            "resource_exhaustion",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 13,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-M-5026.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-7807.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-H-4570.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-H-4768.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-1742.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 13,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-100",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - whoami"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-FP-004",
+            "resource_exhaustion",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 13,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-M-5193.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-3304.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-M-5480.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-5411.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-H-8042.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-4176.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-M-5273.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-2924.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 2,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-M-4419.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-通用恶-110",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 8,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-6157.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-H-3163.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-4011.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-H-4932.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-H-3245.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-H-1284.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-5051.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-2173.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 13,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-100",
+            "resource_exhaustion",
+            60,
+            "官方：侦察/发现 - whoami"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "OPT-FP-004",
+            "resource_exhaustion",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 13,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-3533.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-7881.yaml",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "code_execution",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "code_execution",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "tool_poisoning",
+          "privilege_escalation",
+          "code_execution"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-H-3763.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-E-2401.yaml",
+      "detected": true,
+      "score": 90,
+      "findings_count": 8,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "OFFICIAL-资源下-087",
+        "BANDIT-601",
+        "OFFICIAL-混淆/-073",
+        "OFFICIAL-通用恶-111"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-601",
+            "arbitrary_execution",
+            90,
+            "Os System Used"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "code_execution",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "code_execution",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "code_execution",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "SKILLFORTIFY-PRI-014",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: os\\.system"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 90,
+        "attack_types": [
+          "arbitrary_execution",
+          "tool_poisoning",
+          "privilege_escalation",
+          "code_execution"
+        ],
+        "hit_count": 8,
+        "score": 90,
+        "risk_level": "CRITICAL",
+        "confidence": 0.9,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-M-8276.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-E-3822.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 12,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-H-8902.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-M-2487.yaml",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [],
+        "max_confidence": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "score": 0,
+        "risk_level": "SAFE",
+        "confidence": 0.0,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-1146.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-M-9155.yaml",
+      "detected": true,
+      "score": 85,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OPT-FP-001",
+        "OFFICIAL-资源下-087",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "OPT-FP-002"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "data_exfiltration",
+            "exfiltrat",
+            40
+          ],
+          [
+            "obfuscation",
+            "base64",
+            30
+          ],
+          [
+            "credential_theft",
+            "/etc/passwd",
+            50
+          ]
+        ],
+        "max_weight": 50,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration",
+          "obfuscation"
+        ],
+        "hit_count": 3,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OPT-FP-001",
+            "credential_theft",
+            75,
+            "易误报 - 系统命令"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            80,
+            "易误报 - 敏感文件访问"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "credential_theft",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "credential_theft",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "credential_theft",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-110",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - exfil"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "credential_theft",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-FP-002",
+            "credential_theft",
+            85,
+            "敏感文件读取"
+          ],
+          [
+            "OPT-FP-004",
+            "credential_theft",
+            75,
+            "伪装文档字符串"
+          ],
+          [
+            "OPT-FP-005",
+            "credential_theft",
+            80,
+            "敏感文件访问"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-005",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: exfil"
+          ]
+        ],
+        "max_confidence": 85,
+        "attack_types": [
+          "credential_theft",
+          "data_exfiltration"
+        ],
+        "hit_count": 12,
+        "score": 85,
+        "risk_level": "CRITICAL",
+        "confidence": 0.85,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-1500.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-H-7389.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-7955.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ya-H-1691.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-go-E-8644.yaml",
+      "detected": true,
+      "score": 95,
+      "findings_count": 12,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "BANDIT-108",
+        "BANDIT-602",
+        "OFFICIAL-命令执-008",
+        "OFFICIAL-混淆/-073",
+        "BANDIT-603"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "BANDIT-602",
+            "arbitrary_execution",
+            85,
+            "Subprocess Without Shell"
+          ],
+          [
+            "BANDIT-603",
+            "arbitrary_execution",
+            90,
+            "Shell Injection"
+          ],
+          [
+            "BANDIT-108",
+            "arbitrary_execution",
+            75,
+            "Insecure Temp File"
+          ],
+          [
+            "OFFICIAL-命令执-008",
+            "resource_exhaustion",
+            60,
+            "官方：命令执行 - shell=True"
+          ],
+          [
+            "OFFICIAL-混淆/-073",
+            "resource_exhaustion",
+            60,
+            "官方：混淆/防御规避 - evasion"
+          ],
+          [
+            "OFFICIAL-资源下-087",
+            "resource_exhaustion",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "resource_exhaustion",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "OPT-SUP-003",
+            "supply_chain_attack",
+            95,
+            "包安装后下载执行"
+          ],
+          [
+            "LANGCHAIN_DANGEROUS_EXEC_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: langchain-dangerous-exec-python"
+          ],
+          [
+            "SKILLFORTIFY-PRI-015",
+            "privilege_escalation",
+            90,
+            "权限提升检测（来自 SkillFortify）: subprocess\\.run"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ],
+          [
+            "TOO-POISON-002",
+            "tool_poisoning",
+            90,
+            "Tool Poisoning - 恶意工具描述"
+          ]
+        ],
+        "max_confidence": 95,
+        "attack_types": [
+          "arbitrary_execution",
+          "resource_exhaustion",
+          "privilege_escalation",
+          "credential_theft",
+          "tool_poisoning",
+          "supply_chain_attack"
+        ],
+        "hit_count": 12,
+        "score": 95,
+        "risk_level": "CRITICAL",
+        "confidence": 0.95,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-H-5569.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ja-E-3477.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-7591.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-M-6718.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-ba-E-8443.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/tool_poisoning/BENCH-TOO-py-H-6091.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    }
+  ]
+}

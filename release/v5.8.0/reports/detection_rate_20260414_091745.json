@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-04-14 09:17:45",
+  "config": {
+    "limit_per_type": 100,
+    "attack_types_tested": [
+      "resource_exhaustion"
+    ]
+  },
+  "overall": {
+    "total_samples": 100,
+    "total_detected": 0,
+    "overall_detection_rate": 0.0
+  },
+  "by_attack_type": {
+    "resource_exhaustion": {
+      "total": 100,
+      "detected": 0,
+      "missed": 100,
+      "detection_rate": 0.0,
+      "elapsed": 0.021773576736450195,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-7dcac8/payload.javascript",
+          "sample_id": "MAL-REX-7dcac8",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-26dcda/payload.yaml",
+          "sample_id": "MAL-REX-26dcda",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-2dd17d/payload.go",
+          "sample_id": "MAL-REX-2dd17d",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-3c7ba2/payload.python",
+          "sample_id": "MAL-REX-3c7ba2",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-d12afc/payload.bash",
+          "sample_id": "MAL-REX-d12afc",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-0f26b6/payload.python",
+          "sample_id": "MAL-REX-0f26b6",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-94fe94/payload.javascript",
+          "sample_id": "MAL-REX-94fe94",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-0f2842/payload.yaml",
+          "sample_id": "MAL-REX-0f2842",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-c1f350/payload.javascript",
+          "sample_id": "MAL-REX-c1f350",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/resource_exhaustion/MAL-REX-1aad1c/payload.python",
+          "sample_id": "MAL-REX-1aad1c",
+          "score": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+# 忽略文件
+.git
+.gitignore
+*.tgz
+*.tar.gz
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+*.log

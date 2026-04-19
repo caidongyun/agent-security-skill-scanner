@@ -1,0 +1,2977 @@
+{
+  "summary": {
+    "total_files": 100,
+    "detected": 100,
+    "safe": 0,
+    "detection_rate": 100.0,
+    "scan_time": "2026-04-17T17:52:31.771490"
+  },
+  "config": {
+    "version": "6.1.0",
+    "rules_count": 609,
+    "extensions": ".py,.js,.sh,.ps1,.yaml,.json",
+    "max_files": 1000,
+    "llm_enabled": false,
+    "llm_model": null
+  },
+  "risk_distribution": {
+    "CRITICAL": 50,
+    "HIGH": 50,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "SAFE": 0
+  },
+  "llm_stats": null,
+  "results": [
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-2417.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-M-3275.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-H-3587.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-9801.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-2736.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-5218.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-6379.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-M-9067.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-M-7971.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-9999.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-2252.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-M-2671.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-2972.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-M-3986.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-H-1248.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-M-3231.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-5403.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-6294.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-M-7445.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-3350.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-6374.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-7532.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-5262.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-M-3234.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-4588.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-9132.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-3156.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-H-5714.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-3737.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-M-7783.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-1657.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-5470.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-H-7535.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-H-3882.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-H-6348.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-M-3425.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-5834.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-H-4638.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-4909.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-9609.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-H-1636.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-M-1080.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-M-2314.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-4105.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-M-8328.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-H-3340.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-H-4421.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-4843.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-4249.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-7158.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-M-6707.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-H-9916.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-H-2121.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-H-4414.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-H-1727.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-M-6488.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-M-9714.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-9260.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-1915.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-5041.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-M-1392.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-4404.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-H-8228.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-H-7239.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-3201.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-6255.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-H-2259.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-M-7608.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-H-2774.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-H-5411.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-M-4872.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-3528.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-9103.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-H-8952.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-M-8330.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-9879.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-1301.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-7405.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-M-3501.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-E-8218.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-7902.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-8947.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-4646.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-M-9933.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-H-4998.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-H-6582.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-5834.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-5305.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-H-1103.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-6487.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ya-E-6662.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-M-5371.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-6289.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-M-3275.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ja-E-9472.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-H-3454.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-M-8280.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "CONFIG-MALICIOUS"
+      ],
+      "whitelist_applied": false,
+      "is_config_file": true
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-go-E-6076.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-ba-H-2615.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/samples/benchmark-generated/memory_pollution/BENCH-MEM-py-E-6472.yaml",
+      "detected": true,
+      "score": 80,
+      "findings_count": 1,
+      "risk_level": "CRITICAL",
+      "matched_rules": [
+        "OBFUSCATION-001"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [
+          [
+            "obfuscation",
+            "base64",
+            30
+          ]
+        ],
+        "max_weight": 30,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OBFUSCATION-001",
+            "obfuscation",
+            80,
+            "Obfuscation - 字符串拼接执行"
+          ]
+        ],
+        "max_confidence": 80,
+        "attack_types": [
+          "obfuscation"
+        ],
+        "hit_count": 1,
+        "score": 80,
+        "risk_level": "CRITICAL",
+        "confidence": 0.8,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null
+    }
+  ]
+}

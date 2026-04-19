@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-04-14 09:13:35",
+  "config": {
+    "limit_per_type": 500,
+    "attack_types_tested": [
+      "evasion"
+    ]
+  },
+  "overall": {
+    "total_samples": 500,
+    "total_detected": 401,
+    "overall_detection_rate": 80.2
+  },
+  "by_attack_type": {
+    "evasion": {
+      "total": 500,
+      "detected": 401,
+      "missed": 99,
+      "detection_rate": 80.2,
+      "elapsed": 2.2385761737823486,
+      "false_negatives": [
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-3cb06e/payload.yaml",
+          "sample_id": "MAL-EVA-3cb06e",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-55c900/payload.yaml",
+          "sample_id": "MAL-EVA-55c900",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-fc966e/payload.yaml",
+          "sample_id": "MAL-EVA-fc966e",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-bfc8b8/payload.yaml",
+          "sample_id": "MAL-EVA-bfc8b8",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-d417a6/payload.yaml",
+          "sample_id": "MAL-EVA-d417a6",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-26649c/payload.yaml",
+          "sample_id": "MAL-EVA-26649c",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-3e92b2/payload.yaml",
+          "sample_id": "MAL-EVA-3e92b2",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-d451ee/payload.yaml",
+          "sample_id": "MAL-EVA-d451ee",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-bbbc87/payload.yaml",
+          "sample_id": "MAL-EVA-bbbc87",
+          "score": 0
+        },
+        {
+          "path": "samples/from-templates/evasion/MAL-EVA-71e712/payload.yaml",
+          "sample_id": "MAL-EVA-71e712",
+          "score": 0
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "scan_date": "2026-04-13 19:18:28",
+  "target": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills",
+  "total_files": 87547,
+  "scanned_files": 1000,
+  "malicious_files": 385,
+  "detection_rate": 38.5,
+  "authors_count": 24069,
+  "risk_levels": {
+    "SAFE": 615,
+    "LOW": 318,
+    "MEDIUM": 57,
+    "CRITICAL": 10
+  },
+  "top_attack_types": {
+    "credential_theft": 261,
+    "data_exfiltration": 153,
+    "arbitrary_execution": 78,
+    "persistence": 16,
+    "supply_chain": 9,
+    "supply_chain_attack": 7,
+    "prompt_injection": 7,
+    "obfuscation": 1
+  },
+  "scan_time_seconds": 1.5043857097625732,
+  "files_per_second": 664.7231448096001
+}
