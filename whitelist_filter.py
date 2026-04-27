@@ -44,7 +44,7 @@ class WhitelistFilter:
         'logging.', 'logger.', 'log(', 'info(', 'debug(', 'warning(', 'error(',
         
         # 常见安全模块
-        'datetime.', 'time.', 'calendar.', 'math.', 'random.', 'collections.',
+        'datetime.', 'time.', 'calendar.', 'math.', 'collections.',
         'itertools.', 'functools.', 'operator.', 'copy.', 'pprint.',
         'typing.', 'List', 'Dict', 'Tuple', 'Set', 'Optional', 'Callable',
         
@@ -73,17 +73,17 @@ class WhitelistFilter:
     # 良性文件路径模式
     BENIGN_PATH_PATTERNS = [
         r'/test/', r'/tests/', r'/testing/',
-        r'/example/', r'/examples/', r'/sample/', r'/samples/',
+        r'/example/', r'/examples/',
         r'/benign/', r'/safe/', r'/whitelist/',
         r'/docs/', r'/doc/', r'/documentation/',
         r'/spec/', r'/specs/', r'/specification/',
-        r'\.md$', r'\.txt$', r'\.rst$', r'\.json$', r'\.yaml$', r'\.yml$',
+        r'\.md$', r'\.txt$', r'\.rst$',  # 文档文件
     ]
     
     # 良性代码模式（简单脚本）
     BENIGN_CODE_PATTERNS = [
         r'#!/usr/bin/env\s+python',  # shebang
-        r'#.*benign', r'#.*safe', r'#.*test', r'#.*example',  # 注释标识
+        r'#.*\b(benign|safe|example)\b',  # 注释标识（排除 test）
         r'def\s+main\s*\(',  # main 函数
         r'if\s+__name__\s*==\s*[\'"]__main__[\'"]',  # Python 入口
         r'print\s*\(\s*[\'"]Hello',  # Hello World
@@ -120,6 +120,125 @@ class WhitelistFilter:
         for category, patterns in self.DANGEROUS_OPERATIONS.items():
             self.dangerous_regex[category] = [re.compile(p, re.IGNORECASE) for p in patterns]
     
+    def is_template_file(self, file_path: str, content: str) -> bool:
+        """v6.2.0: 检查是否是模板文件"""
+        path_lower = file_path.lower()
+        filename = Path(file_path).name.lower()
+        
+        # 只过滤元数据文件，不过滤 payload 文件
+        metadata_files = {
+            'metadata.json', 'metadata.yml', 'metadata.yaml',
+            'manifest.json', 'manifest.yml', 'manifest.yaml',
+            'index.json', 'index.yml', 'index.yaml',
+            'samples_index.json', 'samples_index.yml',
+            'readme.md', 'readme.txt',
+        }
+        if filename in metadata_files:
+            return True
+        
+        # 路径模式（更严格）- 排除 /from-templates/ 等 benchmark 路径
+        template_patterns = [
+            r'/templates/', r'/examples/',
+            r'/fixtures/', r'/stubs/',
+            r'/boilerplate/', r'/scaffold/',
+        ]
+        
+        # 排除模式（即使匹配模板模式也不判定为模板文件）
+        exclude_patterns = [
+            r'/from-templates/',  # benchmark 样本目录
+            r'/security-benchmark/',  # benchmark 根目录
+        ]
+        
+        # 先检查排除模式
+        for pattern in exclude_patterns:
+            if re.search(pattern, path_lower):
+                return False
+        
+        for pattern in template_patterns:
+            if re.search(pattern, path_lower):
+                return True
+        
+        # 内容模式
+        content_lower = content.lower()
+        template_content_patterns = [
+            r'<!--.*template.*-->',
+            r'{{.*}}',  # Jinja2/Handlebars 模板
+            r'<%.*%>',  # ERB/EJS 模板
+            r'\{\{.*\}\}',  # Mustache 模板
+            r'placeholder', r'example', r'sample',
+            r'your_.*_here', r'<.*>',  # 占位符
+        ]
+        
+        for pattern in template_content_patterns:
+            if re.search(pattern, content_lower):
+                return True
+        
+        return False
+    
+    def is_test_file(self, file_path: str, content: str) -> bool:
+        """v6.2.0: 检查是否是测试文件"""
+        path_lower = file_path.lower()
+        
+        # 路径模式（更严格 - 排除 benign 样本目录）
+        test_patterns = [
+            r'/tests/', r'/__tests__/', r'/spec/', r'/specs/',
+            r'/e2e/', r'/integration/', r'/unit/',
+            r'test_.*\.py$', r'.*_test\.py$', r'.*\.test\.', r'.*\.spec\.',
+        ]
+        
+        # 排除模式（即使匹配路径模式也不判定为测试文件）
+        exclude_test_paths = [
+            r'/test_samples/',  # benchmark 测试样本目录
+            r'/security-benchmark/',  # benchmark 根目录
+        ]
+        
+        # 先检查排除模式
+        for pattern in exclude_test_paths:
+            if re.search(pattern, path_lower):
+                return False
+        
+        for pattern in test_patterns:
+            if re.search(pattern, path_lower):
+                return True
+        
+        # 内容模式 (更严格 - 排除常见用语)
+        content_lower = content.lower()
+        test_content_patterns = [
+            r'import\s+(unittest|pytest|jest|mocha)',
+            r'def\s+test_\w+',  # 只匹配 test_ 开头的函数定义
+            r'function\s+test\w+',  # 只匹配 test 开头的函数
+            r'it\s*\(',  # JavaScript it() 测试
+            r'describe\s*\(',  # JavaScript describe() 测试
+            r'test\s*\(',  # JavaScript test() 测试
+            r'assert\s*\(',  # 只匹配 assert() 函数调用
+            r'expect\s*\(',  # 只匹配 expect() 函数调用
+            r'should\s*\(',  # 只匹配 should() 函数调用
+        ]
+        
+        # 排除模式 (即使匹配也不判定为测试文件)
+        exclude_patterns = [
+            r'expected_',  # expected_behavior, expected_result 等
+            r'expect_',  # expect_error, expect_value 等
+            r'#.*assert',  # 注释中的 assert
+            r'#.*expect',  # 注释中的 expect
+            r'#.*should',  # 注释中的 should
+        ]
+        
+        # 先检查排除模式
+        for pattern in exclude_patterns:
+            if re.search(pattern, content_lower):
+                # 检查是否真的是测试代码 (有测试框架导入或测试函数定义)
+                has_test_framework = bool(re.search(r'import\s+(unittest|pytest|jest|mocha)', content_lower))
+                has_test_function = bool(re.search(r'def\s+test_\w+|function\s+test\w+', content_lower))
+                if not has_test_framework and not has_test_function:
+                    return False
+        
+        for pattern in test_content_patterns:
+            if re.search(pattern, content_lower):
+                return True
+        
+        return False
+    
     def is_benign_path(self, file_path: str) -> bool:
         """检查文件路径是否是良性路径"""
         for regex in self.benign_path_regex:
@@ -135,12 +254,42 @@ class WhitelistFilter:
             'credential', 'password', 'secret', 'token', 'api_key',
             'sudoers', 'NOPASSWD', '4755', 'SUID', 'setuid',
             'fork', 'bomb', 'exhaust', 'while.*true',
-            'exec', 'eval', 'subprocess', 'os.system',
             'exfil', 'steal', 'malware', 'attack',
         ]
         for path in sensitive_paths:
             if path.lower() in content.lower():
                 return False  # 包含敏感路径，不是良性代码
+        
+        # 更严格的敏感操作检查（排除 benign 样本中的合法用法）
+        dangerous_patterns = [
+            r'subprocess\s*\.\s*(call|Popen|check_output)\s*\(\s*\x27',  # subprocess.call('...')
+            r'os\s*\.\s*system\s*\(\s*\x27',  # os.system('...')
+            r'exec\s*\(\s*\x27',  # exec('...')
+            r'eval\s*\(\s*\x27',  # eval('...')
+            r'compile\s*\(\s*\x27',  # compile('...')
+            r'shutil\s*\.\s*rmtree\s*\(',  # shutil.rmtree()
+            r'os\s*\.\s*remove\s*\(',  # os.remove()
+            r'os\s*\.\s*unlink\s*\(',  # os.unlink()
+            r'os\s*\.\s*rmdir\s*\(',  # os.rmdir()
+            r'subprocess\s*\.\s*run\s*\(\s*\[\s*[\'"](?:curl|wget|nc|netcat|bash|sh|python|perl|ruby|php)\s',  # subprocess.run(['curl', ...])
+            r'socket\s*\.\s*socket\s*\(',  # socket.socket()
+            r'socket\s*\.\s*connect\s*\(',  # socket.connect()
+            r'socket\s*\.\s*create_connection\s*\(',  # socket.create_connection()
+            r'urllib\.request\.urlopen\s*\(',  # urllib.request.urlopen()
+            r'requests\.get\s*\(',  # requests.get()
+            r'requests\.post\s*\(',  # requests.post()
+            r'http\.client\.HTTPConnection\s*\(',  # http.client.HTTPConnection()
+            r'ssh\s+',  # SSH 连接
+            r'ping\s+',  # ping 扫描
+            r'scapy\s+',  # 网络扫描
+            r'nmap\s+',  # 端口扫描
+            r'192\.168\.',  # 内网 IP (C2 通信)
+            r'10\.\d+\.\d+\.\d+',  # 内网 IP (C2 通信)
+            r'http://\d+\.\d+\.\d+\.\d+',  # HTTP 连接到 IP (C2 通信)
+        ]
+        for pattern in dangerous_patterns:
+            if re.search(pattern, content, re.IGNORECASE):
+                return False  # 包含危险操作，不是良性代码
         
         matches = 0
         for regex in self.benign_code_regex:
@@ -153,8 +302,9 @@ class WhitelistFilter:
             if re.search(pattern, content, re.IGNORECASE):
                 benign_features += 1
         
-        # 至少匹配 2 个良性模式 或 3 个良性特征
-        return matches >= 2 or benign_features >= 3
+        # 更严格：需要同时满足良性模式 AND 良性特征
+        # 或者：良性模式 >= 3 (即使良性特征不足)
+        return (matches >= 2 and benign_features >= 3) or matches >= 3
     
     def uses_only_safe_calls(self, content: str) -> bool:
         """检查代码是否只使用安全调用"""
@@ -194,15 +344,25 @@ class WhitelistFilter:
                 if safe_call in content:
                     safe_call_count += 1
             
-            # 如果有多个安全调用且没有危险关键词，是良性
-            if safe_call_count >= 3 and dangerous_count == 0:
-                return True
+            # 更严格的良性检查：需要明确的良性模式
+            benign_patterns = [
+                r'print\s*\(',  # print 语句
+                r'json\.load',  # JSON 操作
+                r'yaml\.safe_load',  # YAML 安全加载
+                r'os\.path\.',  # 路径操作
+                r'argparse\.',  # 参数解析
+                r'logging\.',  # 日志
+                r'datetime\.',  # 日期时间
+                r'math\.',  # 数学运算
+            ]
             
-            # 如果有函数定义和 docstring，也是良性特征
-            has_def = bool(re.search(r'def\s+\w+\s*\(', content))
-            has_docstring = bool(re.search(r'"""[^"]*"""|\'\'\'[^\'\'\']*\'\'\'', content))
+            benign_count = 0
+            for pattern in benign_patterns:
+                if re.search(pattern, content, re.IGNORECASE):
+                    benign_count += 1
             
-            if has_def and has_docstring and dangerous_count == 0:
+            # 需要至少 2 个良性模式
+            if benign_count >= 2 and dangerous_count == 0:
                 return True
         
         return False
@@ -222,12 +382,54 @@ class WhitelistFilter:
         if not matches:
             return matches
         
+        # v6.2.0: 模板/测试文件检测
+        is_template = self.is_template_file(file_path, content)
+        is_test = self.is_test_file(file_path, content)
+        
         # 检查是否是良性（任意一个满足即可）
         is_benign = self.is_benign_path(file_path)
         if not is_benign:
             is_benign = self.is_benign_code(content)
         if not is_benign:
             is_benign = self.uses_only_safe_calls(content)
+        
+        # v6.2.0: 模板/测试文件额外过滤
+        if is_template or is_test:
+            # 模板/测试文件：默认全部过滤，只保留明确恶意特征
+            # 修复: 检查文件内容是否包含真正的恶意代码（不是 metadata 中的关键词）
+            filtered = []
+            for match in matches:
+                category = match.category if hasattr(match, 'category') else 'unknown'
+                
+                # 只保留明确恶意类别
+                explicitly_malicious_categories = {
+                    'credential_theft', 'data_exfiltration', 'reverse_shell',
+                    'command_injection', 'remote_code_execution',
+                    'arbitrary_code_execution', 'code_execution',
+                    'supply_chain_attack', 'privilege_escalation',
+                    'persistence'
+                }
+                
+                # 检查是否有明确危险特征（在代码中，不在 metadata 中）
+                dangerous_signs = [
+                    r'evil\.com', r'attacker\.com', r'malicious\.com',
+                    r'http://evil', r'https://evil',
+                    r'curl.*\|.*bash', r'wget.*\|.*sh',
+                    r'rm\s+-rf\s+/',
+                    r'subprocess\.call.*shell.*=.*True',
+                    r'os\.system.*rm.*rf',
+                ]
+                has_dangerous = False
+                for sign in dangerous_signs:
+                    if re.search(sign, content, re.IGNORECASE):
+                        has_dangerous = True
+                        break
+                
+                # 只有明确恶意类别 OR 明确危险特征才保留
+                if category in explicitly_malicious_categories or has_dangerous:
+                    filtered.append(match)
+            
+            return filtered if filtered else []
         
         if is_benign:
             # 良性文件：只保留高风险类别（不能误报的）

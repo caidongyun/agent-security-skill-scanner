@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Agent Security Scanner - npm CLI Entry Point
+ * Agent Security Scanner - npm CLI Entry Point (v6.2.0)
  * 
  * Wraps the Python scanner for npm users
  */
