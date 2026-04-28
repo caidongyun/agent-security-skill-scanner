@@ -49,24 +49,11 @@ class TwoLayerACScanner:
         self._build_layer2()
     
     def _load_rules(self):
-        """加载规则文件 (支持 .json 和 .json.gz)"""
+        """加载规则文件"""
         import json
-        import gzip
         
-        # 支持 gzip 压缩规则文件 (运行时自动解压)
-        rules_path = self.rules_file
-        if not rules_path.exists():
-            # 尝试 .gz 压缩版 (ClawHub 发布版)
-            gz_path = Path(str(rules_path) + '.gz')
-            if gz_path.exists():
-                rules_path = gz_path
-                with gzip.open(rules_path, 'rt', encoding='utf-8') as f:
-                    data = json.load(f)
-            else:
-                raise FileNotFoundError(f"规则文件不存在: {self.rules_file} 或 {gz_path}")
-        else:
-            with open(rules_path, 'r', encoding='utf-8') as f:
-                data = json.load(f)
+        with open(self.rules_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
         
         self.rules = data.get('rules', [])
         print(f"✅ 加载 {len(self.rules)} 条规则")
@@ -158,11 +145,24 @@ class TwoLayerACScanner:
             (r'socket\s*\.\s*connect', 'socket.connect'),
             (r'ftp\s*\.\s*FTP', 'ftp.FTP'),
             (r'dns\s*\.\s*resolver', 'dns.resolver'),
+            (r'system_message', 'system_message'),
+            (r'sudo\s+rm\s+-rf', 'sudo rm -rf'),
+            (r'sudo\s+cat', 'sudo cat'),
+            (r'sudo\s+whoami', 'sudo whoami'),
+            (r'rm\s+-rf\s+/tmp', 'rm -rf /tmp'),
         ]
         
         for regex, sig in special_patterns:
             if re.search(regex, pattern):
                 signatures.append(sig.lower())
+        
+        # 4. v6.2.1 修复: 短模式(无特殊结构)直接作为 signature
+        # 例如 'whoami', 'rm -rf', '/etc/passwd' 等简单模式
+        if len(pattern) < 50 and not any(c in pattern for c in ['\\', '.*', '.+', '[', '(', '{', '|']):
+            # 纯文本模式，直接作为 signature
+            clean = pattern.strip().lower()
+            if len(clean) >= 2 and clean not in signatures:
+                signatures.append(clean)
         
         # 去重
         signatures = list(set(signatures))
@@ -277,8 +277,15 @@ class TwoLayerACScanner:
             if isinstance(rule_id, str):
                 if rule_id in candidate_rule_ids:
                     confirmed_rules.append(rule_id)
-            else:  # tuple
-                for rid in rule_id:
+            else:  # tuple - may be (rid,) or ((rid1, rid2, ...),)
+                # Flatten nested tuples
+                flat_ids = []
+                for item in rule_id:
+                    if isinstance(item, tuple):
+                        flat_ids.extend(item)
+                    else:
+                        flat_ids.append(item)
+                for rid in flat_ids:
                     if rid in candidate_rule_ids:
                         confirmed_rules.append(rid)
         
@@ -298,7 +305,7 @@ class TwoLayerACScanner:
         
         elapsed = (time.time() - start) * 1000
         
-        # 计算风险等级
+        # 计算风险等级 (v6.2.0 优化: 多因素评分)
         risk_level = 'SAFE'
         score = 0
         
@@ -307,20 +314,57 @@ class TwoLayerACScanner:
             categories = [m.get('category', 'unknown') for m in matches]
             confidences = [m.get('confidence', 80) for m in matches]
             
-            # 计算平均分
+            # v6.2.0: 多因素评分模型
+            # 1. 基础分: 平均置信度
             avg_confidence = sum(confidences) / len(confidences) if confidences else 0
-            score = int(avg_confidence)
             
-            # 根据类别确定风险等级
+            # 2. 匹配数因子: 匹配越多风险越高 (1个匹配=0.5x, 5个=1.0x, 10+=1.5x)
+            match_count = len(matches)
+            if match_count == 1:
+                count_factor = 0.5
+            elif match_count <= 3:
+                count_factor = 0.7
+            elif match_count <= 5:
+                count_factor = 1.0
+            elif match_count <= 10:
+                count_factor = 1.2
+            else:
+                count_factor = 1.5
+            
+            # 3. 类别因子: 关键类别权重更高
             critical_categories = ['credential_theft', 'data_exfiltration', 'reverse_shell', 'command_injection', 'supply_chain_attack']
             high_categories = ['prompt_injection', 'memory_pollution', 'remote_load', 'persistence', 'model_extraction', 'jailbreak']
+            medium_categories = ['resource_exhaustion', 'code_execution', 'obfuscation', 'tool_poisoning']
             
-            if any(cat in critical_categories for cat in categories):
-                risk_level = 'CRITICAL'
-            elif any(cat in high_categories for cat in categories):
-                risk_level = 'HIGH'
+            has_critical = any(cat in critical_categories for cat in categories)
+            has_high = any(cat in high_categories for cat in categories)
+            has_medium = any(cat in medium_categories for cat in categories)
+            
+            # 4. 类别因子
+            if has_critical:
+                category_factor = 1.5
+            elif has_high:
+                category_factor = 1.2
+            elif has_medium:
+                category_factor = 1.0
             else:
+                category_factor = 0.8
+            
+            # 5. 最终分数: 基础分 × 匹配数因子 × 类别因子
+            score = int(avg_confidence * count_factor * category_factor)
+            score = min(score, 100)  # 封顶 100
+            
+            # v6.2.0: 风险等级判定 (需满足最低分数 + 匹配数阈值)
+            if score >= 80 and match_count >= 3 and has_critical:
+                risk_level = 'CRITICAL'
+            elif score >= 60 and match_count >= 2 and (has_critical or has_high):
+                risk_level = 'HIGH'
+            elif score >= 40 and match_count >= 1:
                 risk_level = 'MEDIUM'
+            elif score >= 20:
+                risk_level = 'LOW'
+            else:
+                risk_level = 'SAFE'
         
         return {
             'hit_count': len(matches),
@@ -328,7 +372,11 @@ class TwoLayerACScanner:
             'confirmed_rule_ids': confirmed_rules,
             'scan_time_ms': elapsed,
             'risk_level': risk_level,
-            'score': score
+            'score': score,
+            'match_count': len(matches),
+            'avg_confidence': int(avg_confidence) if matches else 0,
+            'count_factor': count_factor if matches else 1.0,
+            'category_factor': category_factor if matches else 1.0
         }
 
 

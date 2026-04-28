@@ -2,13 +2,13 @@
 """
 Agent Security Scanner CLI
 
-快速启动扫描器的命令行工具
+Quick launch scanner command line tool
 """
 
 import sys
 from pathlib import Path
 
-# 添加当前目录到路径
+# Add current directory to path
 sys.path.insert(0, str(Path(__file__).parent))
 
 from scanner import main

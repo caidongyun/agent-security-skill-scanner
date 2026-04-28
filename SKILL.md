@@ -1,295 +1,97 @@
 ---
 name: agent-security-skill-scanner
 title: Agent Security Scanner
-description: Scan AI agent skills for security threats - detects prompt injection, credential theft, data exfiltration, command injection, and 616+ attack patterns. 100% detection rate across PowerShell, Python, JavaScript, and Bash.
-version: 6.2.1
+description: Enterprise AI Agent Security Scanner - 846 rules, three-layer detection architecture, risk tier classification. Detects prompt injection, credential theft, data exfiltration, and attack chains.
+version: 6.2.0
 ---
 
-# Agent Security Skill Scanner v6.1.3
+# AI Agent Security Scanner v6.2.0
 
-Multi-language security scanner for AI agent skills - detects malware, supply chain attacks, and malicious code patterns with **100% detection rate**.
+企业级 AI Agent 安全扫描工具，检测恶意代码、供应链攻击、凭据窃取和攻击链。
 
-## 🎯 Capabilities
+## 🎯 核心指标
 
-### Core Features
-- **616 Detection Rules** - Covering 10+ attack categories
-- **100% Detection Rate** - All languages (PowerShell/Python/JavaScript/Bash)
-- **0% False Positive Rate** - Intelligent whitelist filtering
-- **7 Languages Support** - Python, JavaScript, Bash, PowerShell, Go, YAML, JSON
-- **High Performance** - ~300,000 files/second scanning speed
+| 指标 | v6.2.0 |
+|------|--------|
+| 规则数 | 846 |
+| 检测架构 | 三层 (PatternEngine → HybridRuleEngine → LLMEngine) |
+| 扫描速度 | ~385 文件/秒 |
+| 风险分级 | 5 级 (CRITICAL/HIGH/MEDIUM/LOW/INFO) |
 
-### Attack Detection
-| Attack Type | Rules | Detection Rate |
-|------------|-------|---------------|
-| **Credential Theft** | 338 | 100% ✅ |
-| **Data Exfiltration** | 13 | 100% ✅ |
-| **Privilege Escalation** | 12 | 100% ✅ |
-| **Obfuscation** | 9 | 100% ✅ |
-| **Supply Chain Attack** | 8 | 100% ✅ |
-| **Resource Exhaustion** | 8 | 100% ✅ |
-| **Code Execution** | 7 | 100% ✅ |
-| **Memory Pollution** | 8 | 100% ✅ |
-| **Persistence** | 6 | 100% ✅ |
+## 🔥 v6.2.0 新特性
 
-### Performance Metrics
-| Metric | Value | Description |
-|--------|-------|-------------|
-| **Scan Speed** | ~300,000 it/s | Aho-Corasick automaton |
-| **Rules Count** | 616 | Gitleaks+Official+Custom |
-| **Patterns** | 50+ | Fast pre-filtering |
-| **False Positive Rate** | 0.0% | Three-layer whitelist |
-| **Memory Usage** | ~80MB | Optimized |
+### 风险分级体系
+- **Curl 风险分级**: 白名单域名 + 敏感参数检测
+- **凭据窃取检测**: 攻击链识别 (诱导→混淆→外传)
+- **5 级风险体系**: CRITICAL/HIGH/MEDIUM/LOW/INFO
 
----
+### 单 Skill 熔断机制
+- 默认阈值: 500 文件/目录
+- 防止恶意软件塞入大量文件拖慢扫描
 
-## 🏗️ Architecture
+### 规则库优化
+- 去重 88 条规则 (928 → 846)
+- 新增 6 条凭据攻击链规则 (CRED-CHAIN-001~006)
+- 419 条 severity 统一为大写
 
-### Three-Layer Detection
+## 💻 使用
 
-```
-Layer 1: Pattern Engine
-├─ 50+ Fast Patterns
-├─ Aho-Corasick Automaton (O(n) complexity)
-├─ Candidate Attack Type Extraction
-└─ Speed: ~300,000 it/s
-
-Layer 2: Rule Engine
-├─ 616 Deep Rules
-├─ Category Inference
-├─ Confidence Scoring (0-100)
-└─ Risk Levels: CRITICAL/HIGH/MEDIUM/LOW/SAFE
-
-Layer 3: LLM Engine (Optional)
-├─ Semantic Analysis
-├─ Context Understanding
-├─ False Positive Reduction
-└─ Supports: MiniMax/Qwen/OpenAI
-```
-
-### Core Components
-| Component | File | Function |
-|-----------|------|----------|
-| **Main Scanner** | `scanner.py` | CLI entry, three-layer scheduling |
-| **Pattern Engine** | `src/engines/pattern_engine.py` | Fast pattern matching |
-| **Rule Engine** | `src/engines/rule_engine.py` | Deep rule matching + Category inference |
-| **AC Automaton** | `src/engines/aho_corasick_scanner.py` | O(n) multi-pattern matching |
-| **Whitelist Filter** | `whitelist_filter.py` | Three-layer whitelist, reduce false positives |
-| **Config Detector** | `config_detector.py` | JSON/YAML config file recognition |
-| **LLM Engine** | `src/engines/llm_engine.py` | Semantic analysis (optional) |
-
----
-
-## 💻 Usage
-
-### Command Line
+### 命令行
 ```bash
-# Scan a single file
-python3 scanner.py /path/to/skill.py
-
-# Scan a directory
+# 扫描目录
 python3 scanner.py /path/to/skills/
 
-# Specify file extensions
-python3 scanner.py /path/to/project/ --extensions .py,.js,.sh
-
-# Batch scan (8 workers)
+# 并发扫描 (8 worker)
 python3 scanner.py /path/to/skills/ --workers 8
 
-# JSON output
+# 输出 JSON 报告
 python3 scanner.py /path/to/skills/ --output json --output-file report.json
+
+# 单 Skill 熔断阈值
+python3 scanner.py /path/to/skills/ --skill-max-files 500
 ```
 
-### LLM Deep Analysis (Optional)
+### npm
 ```bash
-# Enable LLM (MiniMax)
-python3 scanner.py /path/to/skills/ --llm --llm-model minimax
-
-# Use Qwen
-python3 scanner.py /path/to/skills/ --llm --llm-model qwen
-
-# Set threshold
-python3 scanner.py /path/to/skills/ --llm --llm-threshold 0.5
+npm install -g @caidongyun/security-scanner
+agent-scanner /path/to/skills/
 ```
 
-### npm Usage
+## 📦 安装
+
 ```bash
-# After global install
-security-scanner /path/to/skills/
-
-# Or use npx
-npx @openclaw/security-scanner /path/to/skills/
-```
-
-### Within OpenClaw
-```
-"Scan the skill folder using security-scanner"
-"Use agent-security-skill-scanner to check for vulnerabilities"
-"Run a security audit on the new skill"
-```
-
----
-
-## 📊 Test Results
-
-### Benchmark Results
-
-| Language | Samples | Detected | Missed | Rate | FP Rate |
-|----------|---------|----------|--------|------|---------|
-| **PowerShell** | 30 | 30 | 0 | **100.0%** | 0.0% |
-| **Python** | 90 | 90 | 0 | **100.0%** | 0.0% |
-| **JavaScript** | 30 | 30 | 0 | **100.0%** | 0.0% |
-| **Bash** | 40 | 40 | 0 | **100.0%** | 0.0% |
-| **Total** | 190 | 190 | 0 | **100.0%** | 0.0% |
-
-### Detection Rate History
-
-| Version | PowerShell | Python | JavaScript | Bash | Total |
-|---------|-----------|--------|-----------|------|-------|
-| **v6.0.0** | 33.3% | 61.1% | 66.7% | 62.5% | 65.8% |
-| **v6.1.1** | 100.0% | 92.2% | 100.0% | 100.0% | 97.8% |
-| **v6.1.2** | **100.0%** | **100.0%** | **100.0%** | **100.0%** | **100.0%** |
-
-### Performance Test
-```bash
-# Test command
-time python3 scanner.py /path/to/large_dataset/ --workers 8
-
-# Example result
-Scanned files: 10,000
-Total time: 33 seconds
-Scan speed: ~300,000 it/s
-Memory usage: ~80MB
-```
-
----
-
-## 📦 Installation
-
-### npm (Recommended)
-```bash
-npm install -g @openclaw/security-scanner
-```
-
-### pip
-```bash
+# pip
 pip install -r requirements.txt
+
+# npm
+npm install -g @caidongyun/security-scanner
 ```
 
-### From Source
-```bash
-git clone https://gitee.com/caidongyun/agent-security-skill-scanner.git
-cd agent-security-skill-scanner-master/release/v6.1.2publish
-pip install -r requirements.txt
-```
-
----
-
-## 🔧 Configuration
-
-### Whitelist Configuration
-```python
-# Automatic recognition in whitelist_filter.py
-- Test directories: /test/, /tests/, /examples/
-- Documentation files: *.md, *.txt, *.rst
-- Safe calls: print(), json.load(), logging, etc.
-```
-
-### Config File Detection
-```python
-# Automatic recognition in config_detector.py
-- JSON config: *.json
-- YAML config: *.yaml, *.yml
-- TOML config: *.toml
-- INI config: *.ini, *.cfg, *.conf
-```
-
----
-
-## 📁 File Structure
+## 📁 文件结构
 
 ```
-v6.1.2publish/
-├── scanner.py                  # Main scanner
-├── whitelist_filter.py         # Whitelist filter
-├── config_detector.py          # Config file detector
-├── scan                        # CLI entry
-├── src/
-│   └── engines/
-│       ├── __init__.py         # Three-layer architecture
-│       ├── aho_corasick_scanner.py  # AC automaton
-│       ├── pattern_engine.py   # Pattern engine
-│       ├── rule_engine.py      # Rule engine
-│       ├── llm_engine.py       # LLM engine
-│       └── ...
-├── rules/
-│   ├── dist/
-│   │   └── all_rules.json      # 616 merged rules
-│   ├── powershell_rules.json   # 15 PowerShell rules
-│   ├── javascript_rules.json   # 12 JavaScript rules
-│   ├── bash_rules.json         # 12 Bash rules
-│   └── python_advanced_rules.json  # 5 Python rules
-├── package.json                # npm config
-├── index.js                    # npm entry
-├── index.d.ts                  # TypeScript declarations
-├── requirements.txt            # Python dependencies
-├── README.md                   # This document
-├── SKILL.md                    # ClawHub skill spec
-└── RELEASE_NOTES.md            # Release notes
+├── scanner.py                  # 主扫描器
+├── whitelist_filter.py         # 白名单过滤
+├── config_detector.py          # 配置文件检测
+├── context_aware_filter.py     # 上下文感知过滤
+├── credential_theft_classifier.py  # 凭据窃取攻击链检测
+├── curl_risk_classifier.py     # Curl 风险分级
+├── risk_tier_classifier.py     # 5 级风险体系
+├── security_tool_detector.py   # 安全工具识别
+├── scan                        # CLI 入口
+├── src/engines/                # 8 个检测引擎
+├── rules/dist/all_rules.json   # 846 条规则
+├── package.json                # npm 配置
+├── README.md                   # 使用文档
+└── RELEASE_NOTES.md            # 发布说明
 ```
 
----
-
-## 🚀 Best Practices
-
-### 1. CI/CD Integration
-```yaml
-# GitHub Actions example
-- name: Security Scan
-  run: |
-    pip install -r requirements.txt
-    python3 scanner.py skills/ --output json --output-file scan_report.json
-```
-
-### 2. Batch Scanning
-```bash
-# Scan all Skills
-python3 scanner.py ~/.openclaw/workspace/skills/ \
-  --workers 8 \
-  --max-files 10000 \
-  --output json \
-  --output-file security_report.json
-```
-
-### 3. Threshold Tuning
-```bash
-# Strict mode (high detection rate)
-python3 scanner.py /path/to/skills/ --llm-threshold 0.3
-
-# Loose mode (low false positive rate)
-python3 scanner.py /path/to/skills/ --llm-threshold 0.8
-```
-
----
-
-## 🔗 Links
+## 🔗 链接
 
 - **Gitee**: https://gitee.com/caidongyun/agent-security-skill-scanner
-- **npm**: https://www.npmjs.com/package/@openclaw/security-scanner
-- **Issues**: https://gitee.com/caidongyun/agent-security-skill-scanner/issues
-- **ClawHub**: https://clawhub.ai
+- **GitHub**: https://github.com/caidongyun/agent-security-skill-scanner
+- **NPM**: @caidongyun/security-scanner@6.2.0
 
 ---
 
-## 📄 License
-
-MIT License - See LICENSE file for details
-
----
-
-## 🙏 Acknowledgments
-
-Thanks to all contributors and testers!
-
----
-
-**v6.1.2** | **Detection Rate 100%** | **FP Rate 0%** | **Speed ~300k it/s**
+**v6.2.0** | **846 Rules** | **Three-Layer Detection** | **Risk Tier Classification** | **Attack Chain Detection**
