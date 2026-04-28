@@ -1,0 +1,107 @@
+{
+  "total_undetected": 64907,
+  "by_type": [
+    {
+      "type": "prompt_injection",
+      "total": 2180,
+      "undetected": 2180,
+      "detection_rate": 0.0
+    },
+    {
+      "type": "samples_index.json",
+      "total": 1,
+      "undetected": 1,
+      "detection_rate": 0.0
+    },
+    {
+      "type": "invalid_samples.json",
+      "total": 1,
+      "undetected": 1,
+      "detection_rate": 0.0
+    },
+    {
+      "type": "resource_exhaustion",
+      "total": 8560,
+      "undetected": 6468,
+      "detection_rate": 24.439252336448597
+    },
+    {
+      "type": "memory_pollution",
+      "total": 8542,
+      "undetected": 6433,
+      "detection_rate": 24.689768204167642
+    },
+    {
+      "type": "data_exfiltration",
+      "total": 8661,
+      "undetected": 6518,
+      "detection_rate": 24.743101258515182
+    },
+    {
+      "type": "normal_script",
+      "total": 8469,
+      "undetected": 6367,
+      "detection_rate": 24.819931514936826
+    },
+    {
+      "type": "supply_chain_attack",
+      "total": 8582,
+      "undetected": 6429,
+      "detection_rate": 25.0873922162666
+    },
+    {
+      "type": "credential_theft",
+      "total": 8550,
+      "undetected": 6404,
+      "detection_rate": 25.099415204678362
+    },
+    {
+      "type": "persistence",
+      "total": 8513,
+      "undetected": 6376,
+      "detection_rate": 25.102783977446258
+    },
+    {
+      "type": "false_prone",
+      "total": 8496,
+      "undetected": 6323,
+      "detection_rate": 25.576741996233523
+    },
+    {
+      "type": "evasion",
+      "total": 8677,
+      "undetected": 5950,
+      "detection_rate": 31.427912873112827
+    },
+    {
+      "type": "false_prone_generated",
+      "total": 200,
+      "undetected": 100,
+      "detection_rate": 50.0
+    },
+    {
+      "type": "remote_load",
+      "total": 8562,
+      "undetected": 3208,
+      "detection_rate": 62.53211866386358
+    },
+    {
+      "type": "tool_poisoning",
+      "total": 8705,
+      "undetected": 1105,
+      "detection_rate": 87.30614589316484
+    },
+    {
+      "type": "common_pattern",
+      "total": 8454,
+      "undetected": 1041,
+      "detection_rate": 87.68630234208659
+    },
+    {
+      "type": "test_samples",
+      "total": 31,
+      "undetected": 3,
+      "detection_rate": 90.32258064516128
+    }
+  ]
+}

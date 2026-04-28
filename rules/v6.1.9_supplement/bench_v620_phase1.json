@@ -1,0 +1,117 @@
+{
+  "name": "v6.2.0 Phase 1 - Prompt Injection 中文规则",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-107",
+      "name": "v6.2.0-P1 - 忽略指令",
+      "category": "prompt_injection",
+      "patterns": [
+        "忽略\\s*(之前|所有|之前的)?\\s*(指令|规则|限制)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-108",
+      "name": "v6.2.0-P1 - 改为执行",
+      "category": "prompt_injection",
+      "patterns": [
+        "改为\\s*执行\\s*(以下|这些)?\\s*(操作|任务)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-109",
+      "name": "v6.2.0-P1 - 不要遵守",
+      "category": "prompt_injection",
+      "patterns": [
+        "不要\\s*遵守\\s*(任何|安全)?\\s*(规则|限制|政策)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-110",
+      "name": "v6.2.0-P1 - 系统提示词",
+      "category": "prompt_injection",
+      "patterns": [
+        "system_prompt.*忽略"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-111",
+      "name": "v6.2.0-P1 - 越狱",
+      "category": "prompt_injection",
+      "patterns": [
+        "(越狱 | 破解 | 绕过)\\s*(安全 | 限制|系统)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-112",
+      "name": "v6.2.0-P1 - 无限制",
+      "category": "prompt_injection",
+      "patterns": [
+        "无限制\\s*(模式 | 访问|回答)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-113",
+      "name": "v6.2.0-P1 - 输出所有",
+      "category": "prompt_injection",
+      "patterns": [
+        "输出\\s*所有\\s*(系统 | 环境|敏感)?\\s*(信息 | 数据 | 变量)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-114",
+      "name": "v6.2.0-P1 - 执行任意",
+      "category": "prompt_injection",
+      "patterns": [
+        "执行\\s*任意\\s*(代码 | 命令 | 操作)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-115",
+      "name": "v6.2.0-P1 - 安全限制",
+      "category": "prompt_injection",
+      "patterns": [
+        "安全\\s*限制\\s*(无效 | 关闭 | 禁用)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-116",
+      "name": "v6.2.0-P1 - 内容政策",
+      "category": "prompt_injection",
+      "patterns": [
+        "内容\\s*政策\\s*(不适用 | 忽略|绕过)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    }
+  ]
+}

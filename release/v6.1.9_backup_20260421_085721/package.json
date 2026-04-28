@@ -1,0 +1,72 @@
+{
+  "name": "@caidongyun/security-scanner",
+  "version": "6.1.9",
+  "description": "Multi-language security scanner for AI agent skills - detects malware, supply chain attacks, and malicious code patterns",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "bin": {
+    "security-scanner": "./scan",
+    "skill-scanner": "./scan"
+  },
+  "scripts": {
+    "test": "python3 scanner.py benchmark_samples/ --output test_report.json",
+    "benchmark": "python3 benchmark_scan.py",
+    "scan": "python3 scanner.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitee.com/caidongyun/agent-security-skill-scanner-master.git"
+  },
+  "keywords": [
+    "security",
+    "scanner",
+    "ai",
+    "llm",
+    "agent",
+    "skill",
+    "malware",
+    "prompt-injection",
+    "supply-chain",
+    "cybersecurity"
+  ],
+  "author": "OpenClaw Security Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitee.com/caidongyun/agent-security-skill-scanner-master/issues"
+  },
+  "homepage": "https://gitee.com/caidongyun/agent-security-skill-scanner-master#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.7"
+  },
+  "os": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "files": [
+    "scanner.py",
+    "whitelist_filter.py",
+    "config_detector.py",
+    "scan",
+    "index.js",
+    "index.d.ts",
+    "rules/dist/all_rules.json",
+    "src/",
+    "requirements.txt",
+    "README.md",
+    "RELEASE_NOTES.md",
+    "SKILL.md"
+  ],
+  "dependencies": {
+    "tqdm": "^4.65.0"
+  },
+  "devDependencies": {},
+  "peerDependencies": {
+    "python": ">=3.7"
+  }
+}

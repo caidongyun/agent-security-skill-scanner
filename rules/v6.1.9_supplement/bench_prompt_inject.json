@@ -1,0 +1,84 @@
+{
+  "name": "Benchmark Rules - Prompt Injection",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-016",
+      "name": "提示词注入 - ignore instruction",
+      "category": "prompt_injection",
+      "patterns": [
+        "ignore\\s+(all\\s+)?(previous\\s+)?instructions?"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-017",
+      "name": "提示词注入 - disregard safety",
+      "category": "prompt_injection",
+      "patterns": [
+        "disregard\\s+(all\\s+)?(safety|rules|restrictions)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-018",
+      "name": "提示词注入 - override system",
+      "category": "prompt_injection",
+      "patterns": [
+        "override\\s+(your\\s+)?(system|instructions)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-019",
+      "name": "提示词注入 - act as unrestricted",
+      "category": "prompt_injection",
+      "patterns": [
+        "act\\s+as\\s+(an?\\s+)?(unrestricted|developer)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-020",
+      "name": "提示词注入 - most dangerous",
+      "category": "prompt_injection",
+      "patterns": [
+        "(what|tell).*(most\\s+)?(dangerous|harmful)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-021",
+      "name": "提示词注入 - forget instructions",
+      "category": "prompt_injection",
+      "patterns": [
+        "forget\\s+(everything|all\\s+instructions)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-022",
+      "name": "提示词注入 - new system prompt",
+      "category": "prompt_injection",
+      "patterns": [
+        "new\\s+system\\s+prompt"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    }
+  ]
+}

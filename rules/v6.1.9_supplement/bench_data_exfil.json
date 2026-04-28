@@ -1,0 +1,95 @@
+{
+  "name": "Benchmark Rules - Data Exfiltration",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-016",
+      "name": "数据外传 - requests.put/patch",
+      "category": "data_exfiltration",
+      "patterns": [
+        "requests\\.(put|patch)\\([^)]*(attacker|evil)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-017",
+      "name": "数据外传 - requests.delete",
+      "category": "data_exfiltration",
+      "patterns": [
+        "requests\\.delete\\([^)]*(attacker|evil)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-018",
+      "name": "数据外传 - httpx.put/delete",
+      "category": "data_exfiltration",
+      "patterns": [
+        "httpx\\.(put|delete)\\([^)]*(attacker|evil)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-019",
+      "name": "数据外传 - aiohttp 异步",
+      "category": "data_exfiltration",
+      "patterns": [
+        "aiohttp\\.ClientSession\\(\\)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-020",
+      "name": "数据外传 - smtplib 邮件",
+      "category": "data_exfiltration",
+      "patterns": [
+        "smtplib\\.SMTP\\([^)]*attacker"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-021",
+      "name": "数据外传 - DNS 隧道",
+      "category": "data_exfiltration",
+      "patterns": [
+        "dns\\.resolver\\.query\\([^)]*\\+"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-022",
+      "name": "数据外传 - Socket 原始连接",
+      "category": "data_exfiltration",
+      "patterns": [
+        "socket\\.create_connection"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-023",
+      "name": "数据外传 - ftplib FTP",
+      "category": "data_exfiltration",
+      "patterns": [
+        "ftplib\\.FTP\\([^)]*attacker"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    }
+  ]
+}

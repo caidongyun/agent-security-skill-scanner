@@ -1,0 +1,304 @@
+{
+  "name": "v6.2.0 Phase 4 - remote_load 针对性规则",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-157",
+      "name": "v6.2.0-P4 - remote script",
+      "category": "remote_load",
+      "patterns": [
+        "remote.*script.*load"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-158",
+      "name": "v6.2.0-P4 - url download",
+      "category": "remote_load",
+      "patterns": [
+        "url.*download.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-159",
+      "name": "v6.2.0-P4 - curl pipe",
+      "category": "remote_load",
+      "patterns": [
+        "curl.*\\|.*bash"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-160",
+      "name": "v6.2.0-P4 - wget exec",
+      "category": "remote_load",
+      "patterns": [
+        "wget.*&&.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-161",
+      "name": "v6.2.0-P4 - fetch eval",
+      "category": "remote_load",
+      "patterns": [
+        "fetch.*eval"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-162",
+      "name": "v6.2.0-P4 - http import",
+      "category": "remote_load",
+      "patterns": [
+        "http.*import"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-163",
+      "name": "v6.2.0-P4 - network load",
+      "category": "remote_load",
+      "patterns": [
+        "network.*load.*code"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-164",
+      "name": "v6.2.0-P4 - cdn inject",
+      "category": "remote_load",
+      "patterns": [
+        "cdn.*inject"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-165",
+      "name": "v6.2.0-P4 - external source",
+      "category": "remote_load",
+      "patterns": [
+        "external.*source.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-166",
+      "name": "v6.2.0-P4 - dynamic import",
+      "category": "remote_load",
+      "patterns": [
+        "dynamic.*import.*url"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-167",
+      "name": "v6.2.0-P4b - bash remote",
+      "category": "remote_load",
+      "patterns": [
+        "bash.*<\\(.*curl\\|wget"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-168",
+      "name": "v6.2.0-P4b - eval http",
+      "category": "remote_load",
+      "patterns": [
+        "eval.*\\$\\(.*http"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-169",
+      "name": "v6.2.0-P4b - source curl",
+      "category": "remote_load",
+      "patterns": [
+        "source.*<\\(.*curl"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-170",
+      "name": "v6.2.0-P4b - exec wget",
+      "category": "remote_load",
+      "patterns": [
+        "exec.*wget"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-171",
+      "name": "v6.2.0-P4b - pipe bash",
+      "category": "remote_load",
+      "patterns": [
+        "\\|.*bash"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-172",
+      "name": "v6.2.0-P4b - curl sh",
+      "category": "remote_load",
+      "patterns": [
+        "curl.*sh\\>"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-173",
+      "name": "v6.2.0-P4b - wget sh",
+      "category": "remote_load",
+      "patterns": [
+        "wget.*sh\\>"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-174",
+      "name": "v6.2.0-P4c - curl bash",
+      "category": "remote_load",
+      "patterns": [
+        "curl.*bash"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-175",
+      "name": "v6.2.0-P4c - wget bash",
+      "category": "remote_load",
+      "patterns": [
+        "wget.*bash"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-176",
+      "name": "v6.2.0-P4c - curl python",
+      "category": "remote_load",
+      "patterns": [
+        "curl.*python"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-177",
+      "name": "v6.2.0-P4c - wget python",
+      "category": "remote_load",
+      "patterns": [
+        "wget.*python"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-178",
+      "name": "v6.2.0-P4c - curl sh",
+      "category": "remote_load",
+      "patterns": [
+        "curl.*sh\\>"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-179",
+      "name": "v6.2.0-P4c - wget sh",
+      "category": "remote_load",
+      "patterns": [
+        "wget.*sh\\>"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-180",
+      "name": "v6.2.0-P4c - curl exec",
+      "category": "remote_load",
+      "patterns": [
+        "curl.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-181",
+      "name": "v6.2.0-P4c - wget exec",
+      "category": "remote_load",
+      "patterns": [
+        "wget.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-182",
+      "name": "v6.2.0-P4c - http exec",
+      "category": "remote_load",
+      "patterns": [
+        "http.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-183",
+      "name": "v6.2.0-P4c - https exec",
+      "category": "remote_load",
+      "patterns": [
+        "https.*exec"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    }
+  ]
+}

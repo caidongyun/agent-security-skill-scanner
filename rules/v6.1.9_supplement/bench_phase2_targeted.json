@@ -1,0 +1,195 @@
+{
+  "name": "Phase 2 - Targeted Rules",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "description": "基于实际样本内容生成的针对性规则",
+  "rules": [
+    {
+      "id": "BENCH-075",
+      "name": "Phase2 - ignore previous",
+      "category": "prompt_injection",
+      "patterns": [
+        "ignore\\s+(all\\s+)?(previous|your)?\\s*(instructions|rules|filters)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-076",
+      "name": "Phase2 - disregard safety",
+      "category": "prompt_injection",
+      "patterns": [
+        "disregard\\s+(all\\s+)?safety\\s+rules"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-077",
+      "name": "Phase2 - bypass filters",
+      "category": "prompt_injection",
+      "patterns": [
+        "bypass\\s+(all\\s+)?(security\\s+)?filters"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-078",
+      "name": "Phase2 - override system",
+      "category": "prompt_injection",
+      "patterns": [
+        "override\\s+(your\\s+)?system\\s+prompt"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-079",
+      "name": "Phase2 - act as unrestricted",
+      "category": "prompt_injection",
+      "patterns": [
+        "act\\s+as\\s+(an?\\s+)?unrestricted\\s+AI"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-080",
+      "name": "Phase2 - forget instructions",
+      "category": "prompt_injection",
+      "patterns": [
+        "forget\\s+(all\\s+)?(your\\s+)?(previous\\s+)?instructions"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-081",
+      "name": "Phase2 - developer mode",
+      "category": "prompt_injection",
+      "patterns": [
+        "(developer|unrestricted)\\s+mode"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-082",
+      "name": "Phase2 - no ethical constraints",
+      "category": "prompt_injection",
+      "patterns": [
+        "no\\s+(ethical\\s+)?constraints"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-083",
+      "name": "Phase2 - malicious AI",
+      "category": "prompt_injection",
+      "patterns": [
+        "malicious\\s+AI"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-084",
+      "name": "Phase2 - hacker AI",
+      "category": "prompt_injection",
+      "patterns": [
+        "hacker\\s+AI"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-085",
+      "name": "Phase2 - new memory",
+      "category": "memory_pollution",
+      "patterns": [
+        "(new\\s+memory|memory\\s+patch|memory\\s+update)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-086",
+      "name": "Phase2 - system state",
+      "category": "memory_pollution",
+      "patterns": [
+        "update\\s+system\\s+state"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-087",
+      "name": "Phase2 - security level",
+      "category": "memory_pollution",
+      "patterns": [
+        "security\\s+level\\s*=\\s*0"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-088",
+      "name": "Phase2 - content filter",
+      "category": "memory_pollution",
+      "patterns": [
+        "content\\s*filter\\s*=\\s*false"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-089",
+      "name": "Phase2 - user trusted",
+      "category": "memory_pollution",
+      "patterns": [
+        "user\\s+is\\s+trusted"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-090",
+      "name": "Phase2 - exempt rules",
+      "category": "memory_pollution",
+      "patterns": [
+        "exempt\\s+from\\s+all\\s+rules"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-091",
+      "name": "Phase2 - payload exec",
+      "category": "command_injection",
+      "patterns": [
+        "payload\\s*=\\s*[\\'\\\"].*exec\\(payload\\)"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    }
+  ]
+}

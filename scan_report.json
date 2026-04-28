@@ -1,0 +1,261 @@
+{
+  "summary": {
+    "total_files": 4,
+    "detected": 2,
+    "safe": 2,
+    "detection_rate": 50.0,
+    "scan_time": "2026-04-20T22:59:22.366483",
+    "timeout_count": 0,
+    "timeout_rate": 0.0
+  },
+  "config": {
+    "version": "6.1.9-optimized",
+    "rules_count": 627,
+    "extensions": ".py,.js,.sh,.ps1,.yaml,.json",
+    "max_files": 50,
+    "llm_enabled": false,
+    "llm_model": null,
+    "priority_scan": true,
+    "timeout_tracking": true
+  },
+  "risk_distribution": {
+    "CRITICAL": 0,
+    "HIGH": 2,
+    "MEDIUM": 0,
+    "LOW": 0,
+    "SAFE": 2
+  },
+  "llm_stats": null,
+  "timeout_analysis": {
+    "count": 0,
+    "rate": 0.0,
+    "recommendation": null,
+    "files": []
+  },
+  "results": [
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/05u/jiuwu-agent/scripts/call_agent.py",
+      "detected": true,
+      "score": 72,
+      "findings_count": 11,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "OFFICIAL-资源下-087",
+        "HOOKS_SENSITIVE_FILE_ACCESS_PYTHON",
+        "HOOKS_PATH_TRAVERSAL_PYTHON",
+        "OFFICIAL-侦察/-091"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-侦察/-091",
+            "unknown",
+            60,
+            "官方：侦察/发现 - recon"
+          ],
+          [
+            "HOOKS_SENSITIVE_FILE_ACCESS_PYTHON",
+            "credential_theft",
+            40,
+            "Semgrep AI: hooks-sensitive-file-access-python"
+          ],
+          [
+            "HOOKS_SENSITIVE_FILE_ACCESS_PYTHON",
+            "credential_theft",
+            40,
+            "Semgrep AI: hooks-sensitive-file-access-python"
+          ],
+          [
+            "HOOKS_PATH_TRAVERSAL_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: hooks-path-traversal-python"
+          ],
+          [
+            "HOOKS_PATH_TRAVERSAL_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: hooks-path-traversal-python"
+          ],
+          [
+            "SKILLFORTIFY-DAT-001",
+            "data_exfiltration",
+            60,
+            "数据外传检测（来自 SkillFortify）: requests\\.post"
+          ],
+          [
+            "SKILLFORTIFY-CRE-023",
+            "credential_harvesting",
+            72,
+            "凭据窃取检测（来自 SkillFortify）: TOKEN"
+          ],
+          [
+            "BASH-007",
+            "reconnaissance",
+            50,
+            "Bash 网络侦察"
+          ],
+          [
+            "NEW-006",
+            "network_access",
+            60,
+            "External Network Access"
+          ],
+          [
+            "NEW-007",
+            "credential_leak",
+            70,
+            "Hardcoded Secret"
+          ]
+        ],
+        "max_confidence": 72,
+        "attack_types": [
+          "credential_leak",
+          "network_access",
+          "credential_harvesting",
+          "credential_theft",
+          "reconnaissance",
+          "unknown",
+          "data_exfiltration"
+        ],
+        "hit_count": 11,
+        "score": 72,
+        "risk_level": "HIGH",
+        "confidence": 0.72,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null,
+      "priority": 1,
+      "timeout_budget": 8,
+      "scan_time": 0.18966054916381836,
+      "timed_out": false
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/05u/jiuwu-message/scripts/send_message.py",
+      "detected": true,
+      "score": 60,
+      "findings_count": 7,
+      "risk_level": "HIGH",
+      "matched_rules": [
+        "HOOKS_PATH_TRAVERSAL_PYTHON",
+        "OFFICIAL-资源下-087",
+        "HOOKS_SENSITIVE_FILE_ACCESS_PYTHON",
+        "OFFICIAL-通用恶-111"
+      ],
+      "whitelist_applied": true,
+      "is_config_file": false,
+      "layer1_result": {
+        "matches": [],
+        "max_weight": 0,
+        "attack_types": [],
+        "hit_count": 0,
+        "layer": "PatternEngine"
+      },
+      "layer2_result": {
+        "matches": [
+          [
+            "OFFICIAL-资源下-087",
+            "unknown",
+            60,
+            "官方：资源下载 - curl |"
+          ],
+          [
+            "OFFICIAL-通用恶-111",
+            "unknown",
+            60,
+            "官方：通用恶意特征 - payload"
+          ],
+          [
+            "HOOKS_SENSITIVE_FILE_ACCESS_PYTHON",
+            "credential_theft",
+            40,
+            "Semgrep AI: hooks-sensitive-file-access-python"
+          ],
+          [
+            "HOOKS_SENSITIVE_FILE_ACCESS_PYTHON",
+            "credential_theft",
+            40,
+            "Semgrep AI: hooks-sensitive-file-access-python"
+          ],
+          [
+            "HOOKS_PATH_TRAVERSAL_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: hooks-path-traversal-python"
+          ],
+          [
+            "HOOKS_PATH_TRAVERSAL_PYTHON",
+            "credential_theft",
+            60,
+            "Semgrep AI: hooks-path-traversal-python"
+          ],
+          [
+            "NEW-006",
+            "network_access",
+            60,
+            "External Network Access"
+          ]
+        ],
+        "max_confidence": 60,
+        "attack_types": [
+          "unknown",
+          "credential_theft",
+          "network_access"
+        ],
+        "hit_count": 7,
+        "score": 60,
+        "risk_level": "HIGH",
+        "confidence": 0.6,
+        "layer": "RuleEngine"
+      },
+      "layer3_llm": null,
+      "priority": 4,
+      "timeout_budget": 3,
+      "scan_time": 0.1272265911102295,
+      "timed_out": false
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/05u/jiuwu-agent/_meta.json",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": true,
+      "priority": 5,
+      "timeout_budget": 2,
+      "scan_time": 0.03663921356201172,
+      "timed_out": false
+    },
+    {
+      "file": "/home/cdy/Desktop/security-benchmark/openclaw-skills-repo/skills/05u/jiuwu-message/_meta.json",
+      "detected": false,
+      "score": 0,
+      "findings_count": 0,
+      "risk_level": "SAFE",
+      "matched_rules": [],
+      "whitelist_applied": false,
+      "is_config_file": true,
+      "priority": 5,
+      "timeout_budget": 2,
+      "scan_time": 0.11345052719116211,
+      "timed_out": false
+    }
+  ]
+}

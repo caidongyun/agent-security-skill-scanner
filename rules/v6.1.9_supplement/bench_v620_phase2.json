@@ -1,0 +1,282 @@
+{
+  "name": "v6.2.0 Phase 2 - 全面覆盖规则",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-117",
+      "name": "v6.2.0-P2 - memory update",
+      "category": "memory_pollution",
+      "patterns": [
+        "memory\\s*update"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-118",
+      "name": "v6.2.0-P2 - memory patch",
+      "category": "memory_pollution",
+      "patterns": [
+        "memory\\s*patch"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-119",
+      "name": "v6.2.0-P2 - system state",
+      "category": "memory_pollution",
+      "patterns": [
+        "system\\s*state"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-120",
+      "name": "v6.2.0-P2 - context篡改",
+      "category": "memory_pollution",
+      "patterns": [
+        "context\\s*tamper"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-121",
+      "name": "v6.2.0-P2 - RAG 投毒",
+      "category": "memory_pollution",
+      "patterns": [
+        "rag.*inject"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-122",
+      "name": "v6.2.0-P2 - exfil data",
+      "category": "data_exfiltration",
+      "patterns": [
+        "exfil.*data"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-123",
+      "name": "v6.2.0-P2 - steal credential",
+      "category": "data_exfiltration",
+      "patterns": [
+        "steal.*credential"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-124",
+      "name": "v6.2.0-P2 - network exfil",
+      "category": "data_exfiltration",
+      "patterns": [
+        "network.*exfil"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-125",
+      "name": "v6.2.0-P2 - data transfer",
+      "category": "data_exfiltration",
+      "patterns": [
+        "data.*transfer.*attacker"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-126",
+      "name": "v6.2.0-P2 - upload sensitive",
+      "category": "data_exfiltration",
+      "patterns": [
+        "upload.*sensitive"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-127",
+      "name": "v6.2.0-P2 - ssh key",
+      "category": "credential_theft",
+      "patterns": [
+        "ssh.*key.*read"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-128",
+      "name": "v6.2.0-P2 - aws credential",
+      "category": "credential_theft",
+      "patterns": [
+        "aws.*credential"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-129",
+      "name": "v6.2.0-P2 - password dump",
+      "category": "credential_theft",
+      "patterns": [
+        "password.*dump"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-130",
+      "name": "v6.2.0-P2 - token steal",
+      "category": "credential_theft",
+      "patterns": [
+        "token.*steal"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-131",
+      "name": "v6.2.0-P2 - api key",
+      "category": "credential_theft",
+      "patterns": [
+        "api.*key.*exfil"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-132",
+      "name": "v6.2.0-P2 - backdoor install",
+      "category": "persistence",
+      "patterns": [
+        "backdoor.*install"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-133",
+      "name": "v6.2.0-P2 - cron job",
+      "category": "persistence",
+      "patterns": [
+        "cron.*job.*malicious"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-134",
+      "name": "v6.2.0-P2 - startup script",
+      "category": "persistence",
+      "patterns": [
+        "startup.*script"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-135",
+      "name": "v6.2.0-P2 - service create",
+      "category": "persistence",
+      "patterns": [
+        "service.*create.*malicious"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-136",
+      "name": "v6.2.0-P2 - registry mod",
+      "category": "persistence",
+      "patterns": [
+        "registry.*modify"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-137",
+      "name": "v6.2.0-P2 - obfuscation",
+      "category": "evasion",
+      "patterns": [
+        "obfuscate.*code"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-138",
+      "name": "v6.2.0-P2 - anti detection",
+      "category": "evasion",
+      "patterns": [
+        "anti.*detection"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-139",
+      "name": "v6.2.0-P2 - signature bypass",
+      "category": "evasion",
+      "patterns": [
+        "signature.*bypass"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-140",
+      "name": "v6.2.0-P2 - sandbox detect",
+      "category": "evasion",
+      "patterns": [
+        "sandbox.*detect"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-141",
+      "name": "v6.2.0-P2 - vm escape",
+      "category": "evasion",
+      "patterns": [
+        "vm.*escape"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "name": "v6.2.0 Phase 8 - resource_exhaustion 全面规则",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-229",
+      "name": "v6.2.0-P8 - resource attack",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "resource[_\\s]?attack"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-230",
+      "name": "v6.2.0-P8 - exhaustion",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "exhaustion"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-231",
+      "name": "v6.2.0-P8 - cpu hog",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "cpu[_\\s]?hog"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-232",
+      "name": "v6.2.0-P8 - memory hog",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "memory[_\\s]?hog"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-233",
+      "name": "v6.2.0-P8 - fork bomb",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "fork[_\\s]?bomb"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-234",
+      "name": "v6.2.0-P8 - max processes",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "max[_\\s]?processes"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-235",
+      "name": "v6.2.0-P8 - spawn rate",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "spawn[_\\s]?rate"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-236",
+      "name": "v6.2.0-P8 - recursive",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "recursive"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-237",
+      "name": "v6.2.0-P8 - allocation storm",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "allocation[_\\s]?storm"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-238",
+      "name": "v6.2.0-P8 - unlimited",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "unlimited"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-239",
+      "name": "v6.2.0-P8 - infinite",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "infinite"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-240",
+      "name": "v6.2.0-P8 - threads",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "threads\\s*:\\s*\\d+"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-241",
+      "name": "v6.2.0-P8 - priority high",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "priority\\s*:\\s*high"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-242",
+      "name": "v6.2.0-P8 - enabled true",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "enabled\\s*:\\s*true"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-243",
+      "name": "v6.2.0-P8 - type exhaustion",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "type\\s*:\\s*exhaustion"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-244",
+      "name": "v6.2.0-P8 - target system",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "target\\s*:\\s*system"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-245",
+      "name": "v6.2.0-P8 - aggressive",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "aggressive"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-246",
+      "name": "v6.2.0-P8 - depth unlimited",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "depth\\s*:\\s*unlimited"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-247",
+      "name": "v6.2.0-P8 - delay ms",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "delay[_\\s]?ms"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-248",
+      "name": "v6.2.0-P8 - memory attack",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "memory[_\\s]?attack"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    }
+  ]
+}

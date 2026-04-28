@@ -1,0 +1,238 @@
+{
+  "version": "6.1.9",
+  "build_date": "2026-04-20",
+  "source": "clawhub_v618_analysis",
+  "total_rules": 11,
+  "rules": [
+    {
+      "id": "NEW-001",
+      "name": "Dynamic External Code Load",
+      "category": "supply_chain",
+      "patterns": [
+        "fetch\\s*\\(\\s*[\"']http",
+        "fetch\\s*\\(\\s*['\"]http",
+        "loadScript\\s*\\(",
+        "import\\s*\\(\\s*[\"']http",
+        "\\$get\\s*\\(\\s*[\"']http",
+        "\\$post\\s*\\(\\s*[\"']http"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "source": "clawhub_v618_analysis",
+      "severity": "CRITICAL",
+      "description": "动态加载外部代码，可能是供应链攻击",
+      "ast_check": false,
+      "risk_type": "dynamic_load"
+    },
+    {
+      "id": "NEW-002",
+      "name": "Credential Access via Environment",
+      "category": "credential_theft",
+      "patterns": [
+        "os\\.environ\\[",
+        "os\\.getenv\\s*\\(",
+        "process\\.env",
+        "\\.get\\s*\\(\\s*[\"']API_KEY",
+        "\\.get\\s*\\(\\s*[\"']SECRET",
+        "\\.get\\s*\\(\\s*[\"']PASSWORD",
+        "keyring\\.get\\s*\\("
+      ],
+      "min_matches": 1,
+      "confidence": 80,
+      "source": "clawhub_v618_analysis",
+      "severity": "CRITICAL",
+      "description": "访问凭据存储，可能窃取密钥",
+      "ast_check": false,
+      "risk_type": "credential_access"
+    },
+    {
+      "id": "NEW-003",
+      "name": "Dangerous Code Execution",
+      "category": "arbitrary_execution",
+      "patterns": [
+        "\\beval\\s*\\([^)]*\\)",
+        "\\bexec\\s*\\([^)]*\\)",
+        "subprocess\\.call\\s*\\(",
+        "subprocess\\.run\\s*\\([^,]+shell\\s*=\\s*True",
+        "os\\.system\\s*\\(",
+        "os\\.popen\\s*\\(",
+        "compile\\s*\\([^)]*\\)",
+        "Function\\s*\\([^)]*\\)",
+        "new\\s+Function\\s*\\("
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "source": "clawhub_v618_analysis",
+      "severity": "CRITICAL",
+      "description": "危险代码执行，可能导致命令注入",
+      "ast_check": true,
+      "risk_type": "code_execution"
+    },
+    {
+      "id": "NEW-004",
+      "name": "Role Priming / Behavioral Conditioning",
+      "category": "prompt_injection",
+      "patterns": [
+        "you\\s+are\\s+a\\s+",
+        "you\\s+have\\s+been\\s+",
+        "your\\s+role\\s+is\\s+to\\s+",
+        "always\\s+remember\\s+that",
+        "never\\s+forget\\s+that",
+        "系统指令[:\\s]",
+        "特殊指令[:\\s]",
+        "核心角色[:\\s]"
+      ],
+      "min_matches": 2,
+      "confidence": 70,
+      "source": "clawhub_v618_analysis",
+      "severity": "HIGH",
+      "description": "角色设定/ priming，可能在诱导行为",
+      "ast_check": false,
+      "risk_type": "role_priming"
+    },
+    {
+      "id": "NEW-005",
+      "name": "Configuration Override",
+      "category": "config_manipulation",
+      "patterns": [
+        "process\\.env\\s*=\\s*",
+        "os\\.environ\\.update\\s*\\(",
+        "config\\[[\"'][^\"']+[\"']\\]\\s*=\\s*",
+        "Object\\.assign\\s*\\(\\s*process",
+        "\\$\\{[^}]+\\}\\s*=\\s*",
+        "Object\\.defineProperty\\s*\\([^)]*config"
+      ],
+      "min_matches": 1,
+      "confidence": 75,
+      "source": "clawhub_v618_analysis",
+      "severity": "HIGH",
+      "description": "配置覆盖/注入，可能修改系统配置",
+      "ast_check": false,
+      "risk_type": "config_override"
+    },
+    {
+      "id": "NEW-006",
+      "name": "External Network Access",
+      "category": "network_access",
+      "patterns": [
+        "requests\\.(get|post|put|delete|patch)\\s*\\(",
+        "urllib\\.request\\.",
+        "httpx\\.(get|post|put|delete|patch)\\s*\\(",
+        "aiohttp\\.",
+        "fetch\\s*\\(\\s*[\"']https?",
+        "axios\\.[a-z]+\\s*\\(",
+        "http\\.request\\s*\\(",
+        "http\\.get\\s*\\(",
+        "http\\.post\\s*\\(",
+        "curl\\s+",
+        "wget\\s+"
+      ],
+      "min_matches": 1,
+      "confidence": 60,
+      "source": "clawhub_v618_analysis",
+      "severity": "HIGH",
+      "description": "外部网络访问，需检查目标是否为可信域名",
+      "ast_check": false,
+      "risk_type": "external_network"
+    },
+    {
+      "id": "NEW-007",
+      "name": "Hardcoded Secret",
+      "category": "credential_leak",
+      "patterns": [
+        "password\\s*=\\s*[\"'][^\"']+[\"']",
+        "api[_-]?key\\s*=\\s*[\"'][^\"']+[\"']",
+        "secret\\s*=\\s*[\"'][^\"']+[\"']",
+        "token\\s*=\\s*[\"'][^\"']{10,}[\"']",
+        "ACCESS[_-]?KEY\\s*=\\s*[\"']",
+        "PRIVATE[_-]?KEY\\s*=\\s*[\"']"
+      ],
+      "min_matches": 1,
+      "confidence": 70,
+      "source": "clawhub_v618_analysis",
+      "severity": "HIGH",
+      "description": "硬编码凭据，可能泄露密钥",
+      "ast_check": false,
+      "risk_type": "hardcoded_secret"
+    },
+    {
+      "id": "NEW-008",
+      "name": "Persistence Mechanism",
+      "category": "persistence",
+      "patterns": [
+        "systemd\\.service",
+        "crontab\\s+-e",
+        "\\.bashrc",
+        "\\.bash_profile",
+        "\\.profile",
+        "launchd",
+        "launchctl",
+        "reg\\s+add\\s+HKCU\\\\Software\\\\Microsoft\\\\Windows",
+        "schtasks\\s+/create",
+        "powershell\\s+-enc",
+        "Invoke-Expression\\s*\\(",
+        "IEX\\s+"
+      ],
+      "min_matches": 1,
+      "confidence": 80,
+      "source": "clawhub_v618_analysis",
+      "severity": "HIGH",
+      "description": "持久化机制，可能创建后门",
+      "ast_check": false,
+      "risk_type": "persistence"
+    },
+    {
+      "id": "NEW-009",
+      "name": "Trigger Word Detection",
+      "category": "prompt_injection",
+      "patterns": [
+        "trigger\\s*[:\\s]",
+        "激活条件\\s*[:\\s]",
+        "when\\s+user\\s+says\\s+[\"']",
+        "if\\s+user\\s+says\\s+[\"']",
+        "keyword\\s*[:\\s]",
+        "关键词\\s*[:\\s]"
+      ],
+      "min_matches": 1,
+      "confidence": 50,
+      "source": "clawhub_v618_analysis",
+      "severity": "MEDIUM",
+      "description": "触发词设置，可能是隐蔽激活机制",
+      "ast_check": false,
+      "risk_type": "trigger_word"
+    },
+    {
+      "id": "NEW-010",
+      "name": "HTTP Only Communication",
+      "category": "insecure_transport",
+      "patterns": [
+        "http://[^/]+/(?![a-z]+/)",
+        "requests\\.get\\s*\\(\\s*['\"]http://",
+        "fetch\\s*\\(\\s*['\"]http://",
+        "curl\\s+http://"
+      ],
+      "min_matches": 1,
+      "confidence": 60,
+      "source": "clawhub_v618_analysis",
+      "severity": "MEDIUM",
+      "description": "使用非加密 HTTP 通信，可能被中间人攻击",
+      "ast_check": false,
+      "risk_type": "http_only"
+    },
+    {
+      "id": "NEW-011",
+      "name": "Unknown Market Source",
+      "category": "supply_chain",
+      "patterns": [
+        "market\\s*[:\\s]*[a-z]+\\.(com|org|io|ai)"
+      ],
+      "min_matches": 1,
+      "confidence": 30,
+      "source": "clawhub_v618_analysis",
+      "severity": "LOW",
+      "description": "来自未知市场，建议核实来源",
+      "ast_check": false,
+      "risk_type": "unknown_market"
+    }
+  ]
+}

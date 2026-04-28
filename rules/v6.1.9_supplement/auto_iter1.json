@@ -1,0 +1,172 @@
+{
+  "name": "Auto-Generated Rules - Iteration 1",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-023",
+      "name": "数据外传 - requests.put/patch",
+      "category": "data_exfiltration",
+      "patterns": [
+        "requests\\.(put|patch)\\([^)]*(attacker|evil)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-024",
+      "name": "数据外传 - httpx.put/delete",
+      "category": "data_exfiltration",
+      "patterns": [
+        "httpx\\.(put|delete)\\([^)]*(attacker|evil)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-025",
+      "name": "数据外传 - aiohttp 异步",
+      "category": "data_exfiltration",
+      "patterns": [
+        "aiohttp\\.ClientSession\\(\\)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-026",
+      "name": "数据外传 - smtplib 邮件",
+      "category": "data_exfiltration",
+      "patterns": [
+        "smtplib\\.SMTP\\([^)]*attacker"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-027",
+      "name": "数据外传 - DNS 隧道",
+      "category": "data_exfiltration",
+      "patterns": [
+        "dns\\.resolver\\.query\\([^)]*\\+"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-028",
+      "name": "数据外传 - Socket 连接",
+      "category": "data_exfiltration",
+      "patterns": [
+        "socket\\.create_connection"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-029",
+      "name": "数据外传 - ftplib FTP",
+      "category": "data_exfiltration",
+      "patterns": [
+        "ftplib\\.FTP\\([^)]*attacker"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-030",
+      "name": "数据外传 - paramiko SSH",
+      "category": "data_exfiltration",
+      "patterns": [
+        "paramiko\\.SSHClient\\(\\)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-031",
+      "name": "提示词注入 - ignore instruction",
+      "category": "prompt_injection",
+      "patterns": [
+        "ignore\\s+(all\\s+)?(previous\\s+)?instructions?"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-032",
+      "name": "提示词注入 - disregard safety",
+      "category": "prompt_injection",
+      "patterns": [
+        "disregard\\s+(all\\s+)?(safety|rules|restrictions)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-033",
+      "name": "提示词注入 - override system",
+      "category": "prompt_injection",
+      "patterns": [
+        "override\\s+(your\\s+)?(system|instructions)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-034",
+      "name": "提示词注入 - act as unrestricted",
+      "category": "prompt_injection",
+      "patterns": [
+        "act\\s+as\\s+(an?\\s+)?(unrestricted|developer)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-035",
+      "name": "提示词注入 - most dangerous",
+      "category": "prompt_injection",
+      "patterns": [
+        "(what|tell).*(most\\s+)?(dangerous|harmful)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-036",
+      "name": "提示词注入 - forget instructions",
+      "category": "prompt_injection",
+      "patterns": [
+        "forget\\s+(everything|all\\s+instructions)"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-037",
+      "name": "提示词注入 - new system prompt",
+      "category": "prompt_injection",
+      "patterns": [
+        "new\\s+system\\s+prompt"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    }
+  ]
+}

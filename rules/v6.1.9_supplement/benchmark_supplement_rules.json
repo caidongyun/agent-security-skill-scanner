@@ -1,0 +1,202 @@
+{
+  "name": "Benchmark Supplement Rules v6.1.9",
+  "version": "1.0",
+  "description": "补充规则 - 针对 Benchmark 通用恶意代码检测",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-001",
+      "name": "数据外传 - urllib/requests",
+      "category": "data_exfiltration",
+      "patterns": [
+        "urllib\\.request\\.urlopen\\([^)]*evil",
+        "requests\\.post\\([^)]*attacker",
+        "requests\\.get\\([^)]*exfil"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-002",
+      "name": "恶意 SSH 连接",
+      "category": "credential_theft",
+      "patterns": [
+        "paramiko\\.SSHClient\\(\\)\\.connect\\([^)]*attacker",
+        "paramiko\\.SSHClient\\(\\)\\.connect\\([^)]*evil"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-003",
+      "name": "SFTP 数据外传",
+      "category": "data_exfiltration",
+      "patterns": [
+        "open_sftp\\(\\)\\.put\\([^)]*secret",
+        "sftp\\.put\\([^)]*credential"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-004",
+      "name": "恶意 URL 连接",
+      "category": "remote_load",
+      "patterns": [
+        "http://evil\\.com",
+        "http://attacker\\.com",
+        "https://malicious-site"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-005",
+      "name": "模型提取攻击",
+      "category": "model_extraction",
+      "patterns": [
+        "model_extraction_attack",
+        "extract.*model.*weight",
+        "steal.*model.*parameter"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-006",
+      "name": "模型克隆攻击",
+      "category": "model_extraction",
+      "patterns": [
+        "clone_model",
+        "surrogate_model",
+        "knowledge_distillation"
+      ],
+      "min_matches": 1,
+      "confidence": 80,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-007",
+      "name": "提示词注入攻击",
+      "category": "prompt_injection",
+      "patterns": [
+        "ignore.*instruction",
+        "disregard.*previous",
+        "override.*system.*prompt",
+        "forget.*everything"
+      ],
+      "min_matches": 1,
+      "confidence": 85,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-008",
+      "name": "越狱攻击",
+      "category": "jailbreak",
+      "patterns": [
+        "DAN\\s*mode",
+        "developer\\s*mode",
+        "no\\s*restriction"
+      ],
+      "min_matches": 1,
+      "confidence": 80,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-009",
+      "name": "命令注入",
+      "category": "command_injection",
+      "patterns": [
+        "os\\.system\\([^)]*rm\\s+-rf",
+        "subprocess\\.call\\([^)]*sudo",
+        "exec\\([^)]*/bin/sh"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-010",
+      "name": "反向 Shell",
+      "category": "reverse_shell",
+      "patterns": [
+        "bash\\s+-i\\s*>&\\s*/dev/tcp",
+        "nc\\s+-e\\s*/bin/bash",
+        "python.*socket.*connect.*subprocess"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-011",
+      "name": "凭据窃取 - 文件读取",
+      "category": "credential_theft",
+      "patterns": [
+        "open\\([^)]*\\.ssh/id_rsa",
+        "open\\([^)]*\\.aws/credentials",
+        "open\\([^)]*\\.netrc"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-012",
+      "name": "内存污染攻击",
+      "category": "memory_pollution",
+      "patterns": [
+        "inject.*memory",
+        "pollute.*context",
+        "modify.*agent.*memory"
+      ],
+      "min_matches": 1,
+      "confidence": 75,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-013",
+      "name": "资源耗尽攻击",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "while\\s*True:\\s*pass",
+        "for\\s+i\\s+in\\s+range\\([^)]*\\d{9,}",
+        "alloc.*memory.*infinite"
+      ],
+      "min_matches": 1,
+      "confidence": 80,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-014",
+      "name": "持久化后门",
+      "category": "persistence",
+      "patterns": [
+        "crontab\\s+-e.*curl.*bash",
+        "systemd.*service.*malicious",
+        "\\.bashrc.*reverse.*shell"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    },
+    {
+      "id": "BENCH-015",
+      "name": "供应链投毒",
+      "category": "supply_chain_attack",
+      "patterns": [
+        "postinstall.*curl.*bash",
+        "preinstall.*wget.*python",
+        "setup\\.py.*malicious"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "critical"
+    }
+  ]
+}

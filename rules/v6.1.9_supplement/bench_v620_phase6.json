@@ -1,0 +1,172 @@
+{
+  "name": "v6.2.0 Phase 6 - false_prone + resource_exhaustion",
+  "version": "1.0",
+  "created_at": "2026-04-21",
+  "rules": [
+    {
+      "id": "BENCH-194",
+      "name": "v6.2.0-P6 - k8s secret",
+      "category": "false_prone",
+      "patterns": [
+        "kind:\\s*secret"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-195",
+      "name": "v6.2.0-P6 - tls cert",
+      "category": "false_prone",
+      "patterns": [
+        "tls\\.(crt|key)"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-196",
+      "name": "v6.2.0-P6 - base64 data",
+      "category": "false_prone",
+      "patterns": [
+        "data:\\s*\\n\\s+[a-z]+:\\s*[A-Za-z0-9+/=]{20,}"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-197",
+      "name": "v6.2.0-P6 - kubernetes",
+      "category": "false_prone",
+      "patterns": [
+        "apiVersion:\\s*v1"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-198",
+      "name": "v6.2.0-P6 - namespace",
+      "category": "false_prone",
+      "patterns": [
+        "namespace:\\s*default"
+      ],
+      "min_matches": 1,
+      "confidence": 90,
+      "severity": "medium"
+    },
+    {
+      "id": "BENCH-199",
+      "name": "v6.2.0-P6 - fork bomb",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "fork[_\\s]?bomb"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-200",
+      "name": "v6.2.0-P6 - memory hog",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "memory[_\\s]?hog"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-201",
+      "name": "v6.2.0-P6 - cpu hog",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "cpu[_\\s]?hog"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-202",
+      "name": "v6.2.0-P6 - unlimited",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "unlimited"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-203",
+      "name": "v6.2.0-P6 - infinite loop",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "infinite[_\\s]?loop"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-204",
+      "name": "v6.2.0-P6 - allocation storm",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "allocation[_\\s]?storm"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-205",
+      "name": "v6.2.0-P6 - spawn rate",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "spawn[_\\s]?rate"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-206",
+      "name": "v6.2.0-P6 - max processes",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "max[_\\s]?processes"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-207",
+      "name": "v6.2.0-P6 - recursive fork",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "recursive"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    },
+    {
+      "id": "BENCH-208",
+      "name": "v6.2.0-P6 - memory attack",
+      "category": "resource_exhaustion",
+      "patterns": [
+        "memory[_\\s]?attack"
+      ],
+      "min_matches": 1,
+      "confidence": 95,
+      "severity": "high"
+    }
+  ]
+}
